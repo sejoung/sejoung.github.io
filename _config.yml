@@ -1,10 +1,10 @@
 # Jekyll configuration
 
 name: sejoung
-description: 잘정]리하자
+description: 잘정리하자
 
 # url is currently only used only for the RSS feed in feed.xml
-url: https://scotte.github.io/jekyll-clean
+url: https://sejoung.github.io
 
 # baseurl will often be '', but for a project page on gh-pages, it needs to
 # be the project name.
