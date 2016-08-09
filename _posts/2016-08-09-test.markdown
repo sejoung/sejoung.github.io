@@ -1,8 +1,0 @@
----
-layout: post
-title:  "test"
-date:   2016-08-09 10:49:43 +0900
-categories: jekyll update
----
-
-테스트 포스트
