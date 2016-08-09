@@ -21,7 +21,7 @@ Event Processing Mode는 Stream
 
 Knowledge Sessions는 새로 추가후에 type="stateful" default="true" clockType="realtime" 으로 선택
 
-```
+```xml
   <kmodule xmlns="http://jboss.org/kie/6.0.0/kmodule" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
  <kbase name="mykbase" default="true" eventProcessingMode="stream" equalsBehavior="identity">
     <ksession name="mykasession" type="stateful" default="true" clockType="realtime">
