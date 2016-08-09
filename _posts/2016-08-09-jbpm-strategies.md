@@ -23,7 +23,9 @@ KieSession 및 TaskService의 단일 인스턴스를 유지 합니다. 동기화
     - jboss.server.data.dir
     - java.io.tmpdir
 
-#Per request strategy
+Per request strategy
+==============
+
 모든 요청에 대해 RuntimeEngine의 새로운 객체를 제공합니다. 요청이 완료되면 RuntimeEngine이 영구적으로 제거 됩니다. 
 - KieSession 정보가 DB에서 제거됨.
 아래와 같은 특징을 제공합니다
@@ -33,6 +35,8 @@ KieSession 및 TaskService의 단일 인스턴스를 유지 합니다. 동기화
 - KieSession 요청의 수명 시간 동안 만 사용할 수 있음.
 
 Per process instance strategy
+==============
+
 KieSession과 ProecssInstance사이의 엄격환 관계를 유지합니다. 이 전력은 최대의 성능 및 가장 유연한 접근 방식을 제공.
 아래와 같은 특징을 제공합니다.
 
