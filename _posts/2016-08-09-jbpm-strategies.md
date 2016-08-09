@@ -5,7 +5,7 @@ date: 2016-08-09 16:41:00 +0900
 comments: false
 ---
 
-jbpm Runtime strategy 
+* jbpm Runtime strategy 
 총 3가지가 있는데 디폴트는 Singleton이다 
 성능테스트시에 was 쪽에 병목 현상이 일어나서 확인해본결과 아래의 내용대로 실행전략을 잘짜야겠다는 생각을 했다.
 성능테스트를 위해 Per request로 모두 수정하여 테스트를 진행하였다.
