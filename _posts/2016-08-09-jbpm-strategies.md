@@ -16,6 +16,7 @@ Singleton stratege
 =====================
 
 KieSession 및 TaskService의 단일 인스턴스를 유지 합니다. 동기화로 인해서 성능이 저하되어 있긴 하지만 Thread safe하고 엑세스를 동기화 합니다. 아래와 같은 특징을 제공합니다.
+
 - RuntimeEngine 및 taskService의 단일 인스턴스.
 - 간단한 디자인과 컴팩트.
 - 동기화 액세스 하는 프로세스 엔진중 괜챃음
