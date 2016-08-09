@@ -20,6 +20,7 @@ Equals Behavior는 Identity
 Event Processing Mode는 Stream
 
 Knowledge Sessions는 새로 추가후에 type="stateful" default="true" clockType="realtime" 으로 선택
+
 ```
   <kmodule xmlns="http://jboss.org/kie/6.0.0/kmodule" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
  <kbase name="mykbase" default="true" eventProcessingMode="stream" equalsBehavior="identity">
@@ -42,14 +43,11 @@ WorkDefinitions.wid를 클릭해서 아래 내욜을 추가
     "icon" : "defaultservicenodeicon.png"
   ] 
   
-  
-  이제 bpmn을 생성시켜서 확인 
+이제 bpmn을 생성시켜서 확인 
 
-이내용은 이블로그를 참고(http://fxapps.blogspot.kr/2015/04/creating-custom-work-item-handler-in.html)
+이내용은 이블로그를 참고[여기](http://fxapps.blogspot.kr/2015/04/creating-custom-work-item-handler-in.html)
 
-위에 내용으로 구현한 소스는 아래의 저장소에 있다.
-
-https://github.com/sejoung/jbpmCustomWorkItemHandler
+위에 내용으로 구현한 소스는 아래의 저장소에 있다. [github](https://github.com/sejoung/jbpmCustomWorkItemHandler).
 
 
 
