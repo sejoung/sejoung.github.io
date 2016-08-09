@@ -28,3 +28,23 @@ jboss EAP 디플로이 된 폴더에서 jbpm-console.war/org.kie.workbench.KIEWe
 ```
 <storesvgonsave enabled="true"/>
 ```
+아래는 jqurey로 rest api 호출 한 것이다.
+
+```
+	var getSvgProcessImg = function() {
+		$.ajax({
+			method : "GET",
+			async : false,
+			url : '/rest/runtime/{deploymentId}/process/{processDefId}/image/{procInstId}',
+			beforeSend : function(xhr) {					
+			        //btoa(사용자ID + ":" + 패스워드)
+			        xhr.setRequestHeader('Authorization', 'Basic '+ btoa("jboss" + ":" + "1234"));
+			},
+			complete : function(response) {
+				$('#output').html(response.responseText);
+			},
+			error : function() {
+			        $('#output').html('Bummer: there was an error!');
+			}
+	});
+```
