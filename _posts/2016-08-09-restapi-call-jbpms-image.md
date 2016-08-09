@@ -48,6 +48,6 @@ var getSvgProcessImg = function() {
 		}
 });
 ```
-참고 url :
-	(https://developer.jboss.org/thread/263215?start=0&tstart=0)
-	(https://developer.jboss.org/thread/262604?start=0&tstart=0
+아래의 쓰레드를 참조 함
+	[여기](https://developer.jboss.org/thread/263215?start=0&tstart=0)
+	[여기](https://developer.jboss.org/thread/262604?start=0&tstart=0)
