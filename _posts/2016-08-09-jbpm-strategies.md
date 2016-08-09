@@ -1,13 +1,15 @@
 ---
 layout: post
-title: "jbpm 프로세스 진행상태 조회 rest api"
+title: "jbpm 실행전략"
 date: 2016-08-09 16:41:00 +0900
 comments: false
 ---
 
 jbpm Runtime strategy 
 
-총 3가지가 있는데 아래의 내용이다. 
+총 3가지가 있는데 디폴트는 Singleton이다 
+성능테스트시에 was 쪽에 병목 현상이 일어나서 확인해본결과 아래의 내용대로 실행전략을 잘짜야겠다는 생각을 했다.
+성능테스트를 위해 Per request로 모두 수정하여 테스트를 진행하였다.
 
 Singleton stratege
 KieSession 및 TaskService의 단일 인스턴스를 유지 합니다. 동기화로 인해서 성능이 저하되어 있긴 하지만 Thread safe하고 엑세스를 동기화 합니다.
