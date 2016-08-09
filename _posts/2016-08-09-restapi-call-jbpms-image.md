@@ -19,32 +19,32 @@ jbpm에서는 해당 정보를 가지고 오기위해 아래의 rest api를 제�
 
 jboss EAP 디플로이 된 폴더에서 jbpm-console.war/org.kie.workbench.KIEWebapp/profiles/jbpm.xml을 열고
 
-```
+```xml
 <storesvgonsave enabled="false"/> 
 ```
 
 위에 내용을 아래의 내용으로 수정후에 서버 재기동 후 호출하면 정상적으로 나올것이다.
 
-```
+```xml
 <storesvgonsave enabled="true"/>
 ```
 아래는 jqurey로 rest api 호출 한 것이다.
 
-```
-	var getSvgProcessImg = function() {
-		$.ajax({
-			method : "GET",
-			async : false,
-			url : '/rest/runtime/{deploymentId}/process/{processDefId}/image/{procInstId}',
-			beforeSend : function(xhr) {					
-			        //btoa(사용자ID + ":" + 패스워드)
-			        xhr.setRequestHeader('Authorization', 'Basic '+ btoa("jboss" + ":" + "1234"));
-			},
-			complete : function(response) {
-				$('#output').html(response.responseText);
-			},
-			error : function() {
-			        $('#output').html('Bummer: there was an error!');
-			}
-	});
+```javascript
+var getSvgProcessImg = function() {
+	$.ajax({
+		method : "GET",
+		async : false,
+		url : '/rest/runtime/{deploymentId}/process/{processDefId}/image/{procInstId}',
+		beforeSend : function(xhr) {					
+		        //btoa(사용자ID + ":" + 패스워드)
+		        xhr.setRequestHeader('Authorization', 'Basic '+ btoa("jboss" + ":" + "1234"));
+		},
+		complete : function(response) {
+			$('#output').html(response.responseText);
+		},
+		error : function() {
+		        $('#output').html('Bummer: there was an error!');
+		}
+});
 ```
