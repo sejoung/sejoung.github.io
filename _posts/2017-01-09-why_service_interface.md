@@ -12,7 +12,7 @@ comments: false
  ** 강제로 CGLIB 통한 프록시객체 생성방법
  *** aop:config 태그에 다음 속성 추가 : proxy-target-class="true"
  *** 어노테이션의 경우
- ''' xml
+ '''xml
  <aop:aspectj-autoproxy proxy-target-class="true" />
  '''
  ** [egovframe의 답변](http://open.egovframe.go.kr/cop/bbs/selectBoardArticle.do?bbsId=BBSMSTR_000000000013&nttId=12689)
