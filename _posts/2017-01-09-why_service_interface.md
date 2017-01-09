@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "왜 Business Layer에 Interface를 만들어야 할까?"
+title: "왜 Spring service에 Interface를 만들어야 할까?"
 date: 2017-01-09 10:40:00 +0900
 comments: false
 ---
