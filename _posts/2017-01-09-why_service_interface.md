@@ -1,0 +1,14 @@
+왜 Business Layer에 Interface를 만들어야 할까?
+
+
+
+
+
+http://okky.kr/article/259740
+
+http://wiki.javajigi.net/pages/viewpage.action?pageId=1065
+
+https://slipp.net/questions/55
+
+
+https://slipp.net/questions/19
