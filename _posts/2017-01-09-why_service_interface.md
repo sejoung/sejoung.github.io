@@ -26,6 +26,20 @@ comments: false
 
 -----
 
+# Business Layer에 Interface를 만들어야 할까?
+
+-----
+
+
+-----
+
+# interface는 어느 시점에 생성하는 것이 적절한가?
+
+-----
+
+
+
+https://slipp.net/questions/19
 
 
 
