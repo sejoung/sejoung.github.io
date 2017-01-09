@@ -24,7 +24,7 @@ comments: false
  
  * [자바지기님의 사이트 성능측정 내용](http://wiki.javajigi.net/pages/viewpage.action?pageId=1065)
 
-====
+-----
 
 
 
