@@ -12,7 +12,7 @@ comments: false
  Spring AOP는 두가지 Type의 Proxy를 지원 그 첫번째는 JDK의 Proxy 기능을 이용 두번째 방법은 CGLIB의 Enhancer 클래스를 이용
  JDK Proxy는 인터페이스에 대한 Proxy만을 지원 CGLIB의 Enhancer 클래스를 사용해서 만들면 되는것 그래서 위의 이유로는 설명이 안됨
  [egovframe의 답변](http://open.egovframe.go.kr/cop/bbs/selectBoardArticle.do?bbsId=BBSMSTR_000000000013&nttId=12689)
-
+ [자바지기님의 사이트 성능측정 내용](http://wiki.javajigi.net/pages/viewpage.action?pageId=1065)
 
 http://okky.kr/article/259740
 
