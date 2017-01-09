@@ -38,6 +38,10 @@ comments: false
 # interface는 어느 시점에 생성하는 것이 적절한가?
 
 -----
+"interface를 만드는 것에 대한 거부감은 스프링이 등장하면서 지식을 전파할 때 대부분의 책과 관련 문서에서 Service와 Dao에는 interface를 반드시 만드는 방식으로 예제 소스를 만들다보니 현재 대부분의 프로젝트에서 interface를 왜 만들어야 되는지도 모르는 상태에서 interface를 만드는 상황이 생기다 보니 발생한 것"
+
+자바지기님의 글에서 보듯이 나도 아무 생각없이 만들어서 이용을 했었던것
+
 
 * [자바지기님의 포스팅](https://slipp.net/questions/55)
 
