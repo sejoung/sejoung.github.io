@@ -31,6 +31,8 @@ comments: false
 -----
 
 
+ * [자바지기님의 포스팅](https://slipp.net/questions/19)
+
 -----
 
 # interface는 어느 시점에 생성하는 것이 적절한가?
