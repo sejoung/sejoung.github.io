@@ -7,13 +7,13 @@ comments: false
 
 톰캣이 시작할때 아래 같이 부모 자식 관계로 구성되는 클래스로더 집합을 생성합니다. 
 
-      Bootstrap
-          |
-       System
-          |
-       Common
-       /     \
-  Webapp1   Webapp2 ...
+"      Bootstrap        "
+"          |            "
+"       System          "
+"          |            "
+"       Common          "
+"	   /     \          "
+"  Webapp1   Webapp2 ..."
 
 각각의 클래스로더에 대해서 설명을 하면 
 
