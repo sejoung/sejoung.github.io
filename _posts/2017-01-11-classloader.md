@@ -37,7 +37,7 @@ comments: false
 
 * JVM초기화 과정이 끝나면 java는 java.lang.ClassLoader를 통해서 어플리케이션 클래스들을 로딩한다. System.getProperty("java.class.path")에서 값을 확인할 수 있다.
 
-참조 
+# 참조 
 -----
 
 * [tomcat 8.5 class-loader-howto](http://tomcat.apache.org/tomcat-8.5-doc/class-loader-howto.html)
