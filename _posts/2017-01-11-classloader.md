@@ -6,15 +6,17 @@ comments: false
 ---
 
 톰캣이 시작할때 아래 같이 부모 자식 관계로 구성되는 클래스로더 집합을 생성합니다. 
+```
 
-"      Bootstrap        "
-"          |            "
-"       System          "
-"          |            "
-"       Common          "
-"	   /     \          "
-"  Webapp1   Webapp2 ..."
-
+      Bootstrap
+          |
+       System
+          |
+       Common
+	   /     \
+  Webapp1   Webapp2 ...
+  
+```
 각각의 클래스로더에 대해서 설명을 하면 
 
 1. Bootstrap - JVM에서 제공되는 클래스들과 $JAVA_HOME/jre/lib/ext 에 존재 하는 JAR 파일 및 클래스가 포함되어 있습니다.
