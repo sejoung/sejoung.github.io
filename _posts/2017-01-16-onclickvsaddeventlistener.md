@@ -35,7 +35,7 @@ html에서 onclick 이벤트와 addeventlistener를 사용하는것중 어떤것
 
 그럼 onclick 에서 이벤트를 주는것과 addeventlistener를 사용하는것에 차이점에 대해서 보면
 
-먼저 간단한 예제 소스를 만들어 보겠다. [https://jsfiddle.net/1gb0q135](https://jsfiddle.net/1gb0q135)
+먼저 간단한 예제 소스를 만들어 보겠다. [https://jsfiddle.net/1gb0q135](https://jsfiddle.net/1gb0q135/1)
   
 ```html
 
