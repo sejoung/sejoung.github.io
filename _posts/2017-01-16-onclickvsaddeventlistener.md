@@ -62,6 +62,8 @@ btn.addEventListener('click', function() {
 
 onclick은 해당 기능을 update 하는 반면에 addEventListener는 add 하는 방식으로 진행이 됩니다.(위에 콘솔로그를 확인해보시면 이해가 되실것입니다.)
 
+참고로 ie는 다른 메소드를 사용합니다.(attachEvent)
+
 # 참조 
 -----
 
