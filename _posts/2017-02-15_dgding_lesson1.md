@@ -82,9 +82,9 @@ css는 declaration block과 selector로 구성된것을 rule이라고 부름 옆
 
 sheet는 rule집합 -> cascade는 계단식 상속 -> 그래서 cascading style sheets 
 
-위에서 설명한 모든 내용이 css 표준에 나오고 있다.(https://www.w3.org/TR/2008/REC-CSS1-20080411/)
+위에서 설명한 모든 내용이 css 표준에 나오고 있다.[CSS1](https://www.w3.org/TR/2008/REC-CSS1-20080411/)
 
-html에도 default stylesheet가 있다 표준링크(https://www.w3.org/TR/CSS2/sample.html)
+html에도 default stylesheet가 있다 표준링크[CSS2](https://www.w3.org/TR/CSS2/sample.html)
 
 첫번째 수업때 block과 inline도 배웠는데 이것에 대한 상세 설명은 두번째 수업때 있어서 생략한다
 
