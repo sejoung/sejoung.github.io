@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "디기링 첫번째 수업"
+title: "dgding_lesson1"
 date: 2017-02-15 08:53:00 +0900
 comments: false
 ---
