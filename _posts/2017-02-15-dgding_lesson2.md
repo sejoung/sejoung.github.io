@@ -10,8 +10,8 @@ html이 그림을 그리는 방법은 [css specs](https://www.w3.org/Style/CSS/s
 왜그렇게 되는지가 중요함 
 
 이번시간 배울것 
+
 ---
-#목차
 
 1. box model
 
@@ -45,21 +45,7 @@ block을 만들면 inline formatting 발동 이런것을 layering이라도 부�
 [Containing blocks](https://www.w3.org/TR/CSS2/visuren.html#containing-block)
 [Containing blocks details](https://www.w3.org/TR/CSS2/visudet.html#containing-block-details)
 
-그리고 보여주신 예제[링크](https://jsfiddle.net/sanaes/e6jq9zp5/) 
-
-위에 예제에서 div가 저렇게 보이는 이유는 bfc가 발동 그럼 bfc에 발동 조건은 [mozilla Block_formatting_context](https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Block_formatting_context)
-
-* the root element or something that contains it
-* floats (elements where float is not none)
-* absolutely positioned elements (elements where position is absolute or fixed)
-* inline-blocks (elements with display: inline-block)
-* table cells (elements with display: table-cell, which is the default for HTML table cells)
-* table captions (elements with display: table-caption, which is the default for HTML table captions)
-* block elements where overflow has a value other than visible
-* flex boxes (elements with display: flex or inline-flex)
-* display: flow-root
-
-그중에 overflow value가 visible아니라서 아래에 overflow:hidden;으로 셋팅
+그리고 보여주신 예제 [링크](https://jsfiddle.net/sanaes/e6jq9zp5/) 
 
 ```html
 
@@ -81,6 +67,20 @@ block을 만들면 inline formatting 발동 이런것을 layering이라도 부�
 
 
 ```
+
+위에 예제에서 div가 저렇게 보이는 이유는 bfc가 발동 그럼 bfc에 발동 조건은 [mozilla Block_formatting_context](https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Block_formatting_context)
+
+* the root element or something that contains it
+* floats (elements where float is not none)
+* absolutely positioned elements (elements where position is absolute or fixed)
+* inline-blocks (elements with display: inline-block)
+* table cells (elements with display: table-cell, which is the default for HTML table cells)
+* table captions (elements with display: table-caption, which is the default for HTML table captions)
+* block elements where overflow has a value other than visible
+* flex boxes (elements with display: flex or inline-flex)
+* display: flow-root
+
+그중에 overflow value가 visible아니라서 아래에 overflow:hidden;으로 셋팅
 
 [display](https://www.w3.org/TR/css-display-3/)
 
