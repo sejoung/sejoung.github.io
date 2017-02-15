@@ -21,7 +21,7 @@ html이 그림을 그리는 방법은 [css specs](https://www.w3.org/Style/CSS/s
 
 ---
 
-1. box model : 크롬 개발자 도구 element 탭에서 computed 보면 나옴 [w3schools box model](http://www.w3schools.com/css/css_boxmodel.asp)
+* box model : 크롬 개발자 도구 element 탭에서 computed 보면 나옴 [w3schools box model](http://www.w3schools.com/css/css_boxmodel.asp)
 
 margin -> border -> padding -> contents
 
@@ -29,7 +29,7 @@ margin -> border -> padding -> contents
 
 css3에서는 box-sizing: content-box|border-box|initial|inherit; 지금 제안중이다 [w3schools box sizing](http://www.w3schools.com/cssref/css3_pr_box-sizing.asp)
 
-2. normal flow : html이 랜더링을 할때 element에 position이 있는데 디폴트는 static position 이다. 표준문서에 9.3 Positioning schemes 에 나와있다. [w3 visuren](https://www.w3.org/TR/CSS2/visuren.html)
+* normal flow : html이 랜더링을 할때 element에 position이 있는데 디폴트는 static position 이다. 표준문서에 9.3 Positioning schemes 에 나와있다. [w3 visuren](https://www.w3.org/TR/CSS2/visuren.html)
 
 block or inline을 선택해서 사용가능 둘다는 안됨[w3 normal flow](https://www.w3.org/TR/CSS2/visuren.html#normal-flow)
 
