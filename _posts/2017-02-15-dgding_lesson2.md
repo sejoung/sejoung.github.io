@@ -166,3 +166,10 @@ css3에서는 이런것도 있다. [Pseudo-elements](https://developer.mozilla.o
 
 css에 소스점은 몇자리까지 가능?
 브라우져 마다 틀림 (최신은 길게 가능) 예) 비율로 줄때 33.3333% 보다 33.333333333333333333333%가 좋음(레티나 디스플레이를 생각하면 됨)
+
+
+# 참조 
+-----
+
+* [강의자료](https://1drv.ms/b/s!As25AGJ08guuga501N3vJ6AckBxV_A)
+
