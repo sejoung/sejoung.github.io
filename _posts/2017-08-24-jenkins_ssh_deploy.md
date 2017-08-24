@@ -24,7 +24,7 @@ case $1 in
     start)
         echo "Starting $SERVICE_NAME ..."
         if [ ! -f $PID_PATH_NAME ]; then
-            /usr/local/jdk1.8.0_121/bin/java -jar -Dserver.port=$2 $PATH_TO_JAR /tmp 2>> /dev/null >> /dev/null &
+            /usr/local/jdk1.8.0_121/bin/java -jar -Dspring.profiles.active=dev -Dserver.port=$2 -Dscouter.config=/data/scouter/agent.java/conf/scouter.conf -javaagent:/data/scouter/agent.java/scouter.agent.jar -Xms2048m -Xmx3072m -XX:NewSize=256m -XX:MaxNewSize=256m -XX:PermSize=256m -XX:MaxPermSize=256m -XX:+DisableExplicitGC $PATH_TO_JAR /tmp 2>> /dev/null >> /dev/null &
                         echo $! > $PID_PATH_NAME
             echo "$SERVICE_NAME started ..."
         else
@@ -54,7 +54,7 @@ case $1 in
             sudo rm $PID_PATH_NAME
             sudo rm -rf /tmp/tomcat.*
             echo "$SERVICE_NAME starting ..."
-            /usr/local/jdk1.8.0_121/bin/java -jar -Dserver.port=$2 $PATH_TO_JAR /tmp 2>> /dev/null >> /dev/null &
+            /usr/local/jdk1.8.0_121/bin/java -jar -Dspring.profiles.active=dev -Dserver.port=$2 -Dscouter.config=/data/scouter/agent.java/conf/scouter.conf -javaagent:/data/scouter/agent.java/scouter.agent.jar -Xms2048m -Xmx3072m -XX:NewSize=256m -XX:MaxNewSize=256m -XX:PermSize=256m -XX:MaxPermSize=256m -XX:+DisableExplicitGC $PATH_TO_JAR /tmp 2>> /dev/null >> /dev/null &
                         echo $! > $PID_PATH_NAME
             echo "$SERVICE_NAME started ..."
         else
