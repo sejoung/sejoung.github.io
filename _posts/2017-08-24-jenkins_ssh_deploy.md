@@ -5,10 +5,14 @@ date: 2017-08-24 14:00:00 +0900
 comments: false
 ---
 
+
+```
 sh /data/recommend/spring-boot.sh stop
 rm -rf /data/recommend/recommend.jar
 cp /data/recommend/$BUILD_ID/recommend.jar /data/recommend/
 sh /data/recommend/spring-boot.sh start 8080
+
+```
 
 ```
 
@@ -59,6 +63,7 @@ case $1 in
     ;;
 esac
 
-
-
 ```
+
+#참고자료
+http://hreeman.tistory.com/m/136
