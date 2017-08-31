@@ -19,12 +19,12 @@ sh /data/recommend/spring-boot.sh start 8080
 #!/bin/sh
 SERVICE_NAME=recommend
 PATH_TO_JAR=/data/recommend/recommend.jar
-PID_PATH_NAME=/tmp/recommend-pid
+PID_PATH_NAME=/tmp/recommend-pid_$2
 case $1 in
     start)
         echo "Starting $SERVICE_NAME ..."
         if [ ! -f $PID_PATH_NAME ]; then
-            /usr/local/jdk1.8.0_121/bin/java -jar -Dspring.profiles.active=dev -Dserver.port=$2 -Dscouter.config=/data/scouter/agent.java/conf/scouter.conf -javaagent:/data/scouter/agent.java/scouter.agent.jar -Xms2048m -Xmx3072m -XX:NewSize=256m -XX:MaxNewSize=256m -XX:PermSize=256m -XX:MaxPermSize=256m -XX:+DisableExplicitGC $PATH_TO_JAR /tmp 2>> /dev/null >> /dev/null &
+            /usr/local/jdk1.8.0_121/bin/java -jar -Dspring.profiles.active=$3 -Dserver.port=$2 -Dscouter.config=/data/scouter/agent.java/conf/scouter.conf -Dobj_name=recommend_$2 -javaagent:/data/scouter/agent.java/scouter.agent.jar -Xms2048m -Xmx3072m -XX:NewSize=256m -XX:MaxNewSize=256m -XX:PermSize=256m -XX:MaxPermSize=256m -XX:+DisableExplicitGC $PATH_TO_JAR /tmp 2>> /dev/null >> /dev/null &
                         echo $! > $PID_PATH_NAME
             echo "$SERVICE_NAME started ..."
         else
@@ -38,8 +38,7 @@ case $1 in
             kill $PID;
             echo "$SERVICE_NAME stopped ..."
             rm $PID_PATH_NAME
-            rm -rf /tmp/tomcat.*
-            rm -rf /tmp/spring.log
+            rm -rf /tmp/*.$2
 
         else
             echo "$SERVICE_NAME is not running ..."
@@ -52,9 +51,9 @@ case $1 in
             sudo kill $PID;
             echo "$SERVICE_NAME stopped ...";
             sudo rm $PID_PATH_NAME
-            sudo rm -rf /tmp/tomcat.*
+            sudo rm -rf /tmp/*.$2
             echo "$SERVICE_NAME starting ..."
-            /usr/local/jdk1.8.0_121/bin/java -jar -Dspring.profiles.active=dev -Dserver.port=$2 -Dscouter.config=/data/scouter/agent.java/conf/scouter.conf -javaagent:/data/scouter/agent.java/scouter.agent.jar -Xms2048m -Xmx3072m -XX:NewSize=256m -XX:MaxNewSize=256m -XX:PermSize=256m -XX:MaxPermSize=256m -XX:+DisableExplicitGC $PATH_TO_JAR /tmp 2>> /dev/null >> /dev/null &
+            /usr/local/jdk1.8.0_121/bin/java -jar -Dspring.profiles.active=$3 -Dserver.port=$2 -Dscouter.config=/data/scouter/agent.java/conf/scouter.conf -Dobj_name=recommend_$2 -javaagent:/data/scouter/agent.java/scouter.agent.jar -Xms2048m -Xmx3072m -XX:NewSize=256m -XX:MaxNewSize=256m -XX:PermSize=256m -XX:MaxPermSize=256m -XX:+DisableExplicitGC $PATH_TO_JAR /tmp 2>> /dev/null >> /dev/null &
                         echo $! > $PID_PATH_NAME
             echo "$SERVICE_NAME started ..."
         else
