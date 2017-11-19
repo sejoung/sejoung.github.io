@@ -11,6 +11,9 @@ comments: false
 오라클은 스티커 안이쁨 구글스티커는 맘에 들어서 컴터에 마구닥 붙힘
 후드티와 장패드가 선물로....
 CSS와 BEM 듣고 싶었는데 자리가 없어서....
+https://en.bem.info/
+http://getbem.com/
+https://en.bem.info/methodology/filestructure/
 
 # Why Typescript with Clean Architecture
 정유진 (레이니스트)
@@ -78,6 +81,7 @@ FLUX 패턴
 
 # 1시간만에 만드는 음성인식 인공지능 챗봇
 정명훈
+
 챗봇은 한시간은 더걸린다.
 
 챗봇
@@ -111,3 +115,64 @@ FLUX 패턴
 데이터 가공 및 정재
  google dataPrep을 활용
  google natural language API 사용
+
+https://github.com/javalove93/dialogflowdemo
+
+# 리액트와 장고로 만드는 Progressive Web App: 빠르고 단단한 웹사이트 제작하기
+진유림(스마트스터디)
+
+PWA
+https://developers.google.com/web/fundamentals/codelabs/your-first-pwapp/?hl=ko
+http://www.bloter.net/archives/274549
+
+커머스팀에선 재고 관리 납품, 마감 등 복잡한 계산을 해야해요(개발자 2명)
+
+생산성으로 장고
+복잡한프런트앤드 리엑트
+웹앱은 PWA
+ 프로그레시브 하다
+ 반응형을 지원
+ 따로 네이티브 앱을 구현필요 없음
+ PWA는 업데이트버튼을 누를 필요없다
+
+boxture 진화
+ 모바일 접근성 향상
+  캐싱을 통해 빠른 로딩
+  캐싱은 Service Worker가 담당
+  캐시 우선으로 확인 후 최신버전인지 확인함
+
+https://jakearchibald.github.io/isserviceworkerready/
+
+서비스 워크 사용은 크롬을 사용하는게 좋을것 같다 지금 상태에선....
+
+web push
+ 파이어 베이스 사용해서 한다.
+
+포어그라운드 푸쉬
+백그라운드 푸쉬
+서비스 워커에서 각각 구현해야 됨
+
+pyfcm을 사용
+
+눈물의 후기
+ 희망편
+  생각보다 간단
+
+ 삽질 그리고 깨달음
+  왜 서버 업데이트 하고 새로고침을 눌러야만되지?
+   강제 새로고침이 필요함(feature)
+  sw-precache
+   2mb가 기본이라서 캐싱에서 제외
+  왜 이 자원은 캐시가 안되지?
+   서비스 워커는 url로 캐싱함
+
+ PWA를 사용할 명확한 이유가 있나요?
+ 서비스워커에 라이플사이클을 이해하세요
+ 토이프로젝트/사내 서비스에 선 적용 해보세요
+
+그래도 PWA는 미래다.
+
+https://github.com/milooy
+
+
+# Github와 CloudFlare를 이용한 무료 고성능 웹 어플리케이션 호스팅
