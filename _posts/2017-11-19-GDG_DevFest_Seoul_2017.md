@@ -176,3 +176,24 @@ https://github.com/milooy
 
 
 # Github와 CloudFlare를 이용한 무료 고성능 웹 어플리케이션 호스팅
+박병진 (소프트웨어 아키텍트)
+https://posquit0.github.io/
+
+웹의 발전
+ html 1993년에 첫 릴리즈
+ css 1996년에 첫 릴리즈
+ javascript 1995년에 첫 릴리즈(10일만에 만들었다고 함...) ECMA 표준 1997년 발표
+ WAS 데이터베이스와 함께 3tier 웹 아키텍쳐의 일반화
+ SPA 단일페이지에서 동작 클라이언트의 디바이스가 성능이 좋아짐 (분산처리 아키텍쳐)
+
+JAMstack
+ javascript + API + Markup
+ https://jamstack.org/
+ https://www.staticgen.com/
+ 성능이 좋다 왜? CDN을 통해서 배포 할수있다.
+
+GithubPages + CloudFlare 사용 무료 개인도메인을 소유해야 됨
+netlify 사용 무료 개인도메인을 소유해야 됨
+AWS S3 + CloudFlare 유료
+
+나머진 데모로 보여줌
