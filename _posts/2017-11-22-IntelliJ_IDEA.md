@@ -7,7 +7,8 @@ comments: false
 
 # 인텔리제이 설정
 
------
+```
+
 플러그인
 
 key promoter : 단축키를 보여주는 플러그인
@@ -54,6 +55,8 @@ VM 파라미터
 -Djava.net.preferIPv4Stack=true
 -XX:+HeapDumpOnOutOfMemoryError
 -XX:-OmitStackTraceInFastThrow
+
+```
 -----
 # 참조 
 -----
