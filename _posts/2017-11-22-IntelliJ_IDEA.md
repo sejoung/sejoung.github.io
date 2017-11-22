@@ -56,6 +56,15 @@ VM 파라미터
 -XX:+HeapDumpOnOutOfMemoryError
 -XX:-OmitStackTraceInFastThrow
 
+-----
+TOMCAT VM 파라미터
+-----
+
+-Dfile.encoding=UTF-8
+-Dfile.client.encoding=UTF-8
+-Dfile.encoding.override=UTF-8
+
+
 ```
 -----
 # 참조 
