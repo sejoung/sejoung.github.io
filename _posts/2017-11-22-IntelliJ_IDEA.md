@@ -12,6 +12,7 @@ comments: false
 플러그인
 
 key promoter : 단축키를 보여주는 플러그인
+--> 별로임 삭제 함
 
 Camelcase : 카멜케이스 변환 플러그인
 
@@ -63,6 +64,22 @@ TOMCAT VM 파라미터
 -Dfile.encoding=UTF-8
 -Dfile.client.encoding=UTF-8
 -Dfile.encoding.override=UTF-8
+
+-----
+TOMCAT SSL 설정
+-----
+
+.IntelliJIdea2017.2\system\tomcat\
+
+위에 폴더에 톰캣 설정 파일이 떨어진다.
+
+그곳에 있는 server.xml을 수정하니 계속 설정을 다시 초기화 시켜서 수정이 되지 않는다
+
+옵션에 있는 https 포트 설정은 왜 만들어 져있는지 모르겠다.
+
+그럼 톰캣 실제 서버파일에 있는 server.xml을 수정해서 ssl 설정을 마무리 지었다.
+
+
 
 
 ```
