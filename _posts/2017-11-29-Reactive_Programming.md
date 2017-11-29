@@ -187,5 +187,4 @@ public class PubSub {
 
 * [reactivex](http://reactivex.io/)
 
-
-* [400,000 GitHub repositories, 1 billion files, 14 terabytes of code: Spaces or Tabs?](https://medium.com/@hoffa/400-000-github-repositories-1-billion-files-14-terabytes-of-code-spaces-or-tabs-7cfe0b5dd7fd)
+* [grpc](https://grpc.io/)
