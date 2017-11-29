@@ -177,6 +177,25 @@ public class PubSub {
 
 ```
 
+쌍대성
+
+```
+
+대충 두 구조가 있고 한쪽 구조에서 성립하는 모든 관계가 자동으로 다른 구조에서도 성립하고..
+한쪽 구조를 다른쪽 구조로 변환하는 일관된 규칙이 있고..
+뭐 그러면 서로를 dual 관계라고 하는데.. 자세한 수학적 정의는 공부를 열심히 안해서 ^^;;
+대표적인게   비트 and <-> or
+1을 0으로, 0을 1로 바꾸면 and의 세계와 or의 세계는 서로 똑같죠..
+전자과에선  저항 <-> 컨덴서,
+직렬 병렬이 뒤집히고, 전압과 전류가 서로 대응하던가... 뭐 그런..
+여기 있는 쌍대성은 informal하게
+방향을 뒤집고
+합성 방향도 뒤집자는거니까요.
+
+오현석님의 말을 가지고 왔습니다.
+
+```
+
 
 # 참조 
 -----
@@ -188,3 +207,15 @@ public class PubSub {
 * [reactivex](http://reactivex.io/)
 
 * [grpc](https://grpc.io/)
+
+* [Subject/Observer is Dual to Iterator](http://csl.stanford.edu/~christos/pldi2010.fit/meijer.duality.pdf)
+
+* [reactivemanifesto](https://www.reactivemanifesto.org/)
+
+* [에릭마이어 리엑티브 강의](https://channel9.msdn.com/Events/Lang-NEXT/Lang-NEXT-2014/Keynote-Duality)
+
+* [category theory](https://en.wikipedia.org/wiki/Dual_(category_theory))
+
+* [쌍대성](http://www.wikiwand.com/ko/%EC%8C%8D%EB%8C%80%EC%84%B1)
+
+* [[Reactive] Reactive Programming 배우는 방법](http://mobicon.tistory.com/m/467)
