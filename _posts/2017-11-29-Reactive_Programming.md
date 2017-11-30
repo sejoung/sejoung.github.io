@@ -219,3 +219,5 @@ public class PubSub {
 * [쌍대성](http://www.wikiwand.com/ko/%EC%8C%8D%EB%8C%80%EC%84%B1)
 
 * [[Reactive] Reactive Programming 배우는 방법](http://mobicon.tistory.com/m/467)
+
+* [NDC14 - Rx와 Functional Reactive Programming으로 고성능 서버 만들기](https://www.slideshare.net/jongwookkim/ndc14-rx-functional-reactive-programming)
