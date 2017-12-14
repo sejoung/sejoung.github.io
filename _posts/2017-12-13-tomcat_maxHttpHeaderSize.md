@@ -37,7 +37,7 @@ Used to send cookies from the server to the user agent, but has been obsoleted b
 먼저 tomcat에 헤더 사이즈를 늘려서 호출 해보았다. 아래는 테스트 코드 spring을 사용하고 있어서 RestTemplate으로 테스트 코드를 작성해보았다.
 
 
-```
+```java
 
 package com.github.sejoung.reactive.cookies;
 
