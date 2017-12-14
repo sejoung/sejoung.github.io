@@ -68,7 +68,7 @@ public class CookiesTest {
 
 여기는 서버 프로그램 
 
-```
+```java
 
 package com.github.sejoung.reactive.cookies;
 
@@ -128,7 +128,7 @@ Tomcat: version별로 틀리다, 8K - 48K (?!)
 Connector에 maxHttpHeaderSize를 추가해서 정보를 설정 할수 있다. 아래 참조
 
 
-```
+```xml
 
 <Connector  connectionTimeout="20000" 
        port="8080" 
