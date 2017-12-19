@@ -103,3 +103,4 @@ nginx에서는 지원하지 않기 때문이다
 
 * [nginx if statements](http://nginx.org/en/docs/http/ngx_http_rewrite_module.html#if)
 
+* [if is evil](https://www.nginx.com/resources/wiki/start/topics/depth/ifisevil/)
