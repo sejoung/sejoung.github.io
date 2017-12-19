@@ -84,9 +84,6 @@ nginx에서는 지원하지 않기 때문이다
 
 
 ```
-
-
-
         if ($subdomain ~ test) {
                 proxy_pass http://tomcat1;
         }
