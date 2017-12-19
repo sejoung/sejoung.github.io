@@ -78,6 +78,25 @@ server {
 
 ```
 
+위에서 if문에서  이런식으로 처리 하지 않는 이유는 
+
+nginx에서는 지원하지 않기 때문이다
+
+
+```
+
+
+
+        if ($subdomain ~ test) {
+                proxy_pass http://tomcat1;
+        }
+
+        if ($subdomain ~ dev) {
+                proxy_pass http://tomcat2;
+        }
+
+```
+
 
 # 참조 
 -----
@@ -85,4 +104,5 @@ server {
 
 * [The Apache Tomcat Connectors](http://tomcat.apache.org/connectors-doc/)
 
+* [nginx if statements](http://nginx.org/en/docs/http/ngx_http_rewrite_module.html#if)
 
