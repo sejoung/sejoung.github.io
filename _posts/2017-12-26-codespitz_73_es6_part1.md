@@ -33,6 +33,7 @@ comments: false
 
 #### 식문
 3-4;
+
 3;2;1;
 
 #### 연산식
@@ -49,7 +50,9 @@ comments: false
 #### 연산자 우선순위 
 수학적 지식을 기반으로 오판하는 코드를 만들지 말아라
 3*5/2*4
+
 ((3*5)/2)*4
+
 (3*5)/(2*4)
 
 #### 루틴(Routine) vs 코루틴(Coroutine)
@@ -68,4 +71,4 @@ comments: false
 -----
 * [코드스피츠73_ES6](https://www.youtube.com/watch?v=kG87PONfqkg)
 * [The ABC Programming Language: a short introduction](https://homepages.cwi.nl/~steven/abc/)
-*[implementing-coroutines-in-java](https://stackoverflow.com/questions/2846664/implementing-coroutines-in-java)
+* [implementing-coroutines-in-java](https://stackoverflow.com/questions/2846664/implementing-coroutines-in-java)
