@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "the_principles_of_programming_part1"
+title: "POP_part1"
 date: 2017-12-20 09:00:00 +0900
 comments: false
 ---
