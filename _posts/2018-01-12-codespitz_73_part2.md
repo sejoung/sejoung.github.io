@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "codespitz73_part2"
+title: "codespitz73part2"
 date: 2017-01-12 01:30:00 +0900
 comments: false
 ---
@@ -62,8 +62,8 @@ abc: {
 }
 log('c');
 
-
 ```
+
 ##### function scope
 
 클로저에 대한 설명
@@ -188,7 +188,9 @@ if( c === 1){
 }  
 
 ```
+
 else 문 후방결합에 따라서 아래 방식대로 사용가능하다.
+
 
 ```javascript
 
@@ -257,7 +259,8 @@ do {
 }while ()
 
 ```
-
+ 쉬운 문장
+ 
 ```javascript
 
 var a = -1;
@@ -285,6 +288,7 @@ while (act.method().c){
 
 
 ```
+
 이런식으로 보이게 만들어라 
 
 ```javascript
@@ -308,7 +312,6 @@ while (a) {
     a = act.method().c;
     if(r === 'abc') a = false;
 }
-
 
 ```
 
