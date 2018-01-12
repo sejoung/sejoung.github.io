@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "codespitz73part2"
+title: "codespitz73part2-1"
 date: 2017-01-12 01:30:00 +0900
 comments: false
 ---
