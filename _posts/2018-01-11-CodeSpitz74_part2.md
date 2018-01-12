@@ -97,6 +97,8 @@ co routine(여러번 진입하고 반환하는 것)
 
 메모리 지속을 위해서 코루틴을 사용.
 
+절차가 중요한것에서 사용함 
+
 ```javascript
 
 const generator = function*(a) {
@@ -106,15 +108,15 @@ const generator = function*(a) {
   yield a;
   a++;
   yield a;
-}
+};
 
 const coroutine = generator(3);
 let result = 0;
-result+= coroutine().value;
+result+= coroutine.next().value;
 console.log(result);
-result+= coroutine().value;
+result+= coroutine.next().value;
 console.log(result);
-result+= coroutine().value;
+result+= coroutine.next().value;
 console.log(result);
 
 //축약을 위해 아래처럼 사용되기도 함
