@@ -311,6 +311,8 @@ while (a) {
 
 ```
 
+어렵다. 오늘도...
+
 # 참조 
 -----
 * [코드스피츠73_part2-1](https://www.youtube.com/watch?v=q9j6XLOQYeA)
