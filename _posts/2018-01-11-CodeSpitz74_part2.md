@@ -168,3 +168,5 @@ console.log(a.length);
 * [ES6 Class는 단지 prototype 상속의 문법설탕일 뿐인가?](https://gomugom.github.io/is-class-only-a-syntactic-sugar/)
 * [ecma-262](http://www.ecma-international.org/ecma-262/6.0/#sec-class-definitions)
 * [es6 class문은 특별할까?](http://www.bsidesoft.com/?p=5370)
+* [Subclassing builtins in ECMAScript 6](http://2ality.com/2013/03/subclassing-builtins-es6.html)
+
