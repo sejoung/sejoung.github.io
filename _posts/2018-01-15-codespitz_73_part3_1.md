@@ -5,7 +5,7 @@ date: 2018-01-15 19:30:00 +0900
 comments: false
 ---
 
-### 코드스피츠73 part2
+### 코드스피츠73 part3_1
 
 #### ITERATION & GENERATOR
 
@@ -216,5 +216,5 @@ function a() {
 -----
 * [코드스피츠73_part3](https://www.youtube.com/watch?v=GhAkc00TvZs)
 * [iterator-interface](http://www.ecma-international.org/ecma-262/6.0/#sec-iterator-interface)
-* [iterator-interface](http://www.ecma-international.org/ecma-262/6.0/#sec-iterable-interface)
+* [iterable-interface](http://www.ecma-international.org/ecma-262/6.0/#sec-iterable-interface)
 
