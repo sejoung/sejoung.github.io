@@ -106,8 +106,20 @@ org.apache.commons.pool2.impl.GenericObjectPool.borrowObject의 코드를 찾아
     poolConfig.setTestOnBorrow(true);
 
 ```
+ 쓰레드 상태
  
+| 상태  | 코드 | 
+| --- |  --- | 
+| 객체생성 | NEW |  
+| 실행대기 | RUNNABLE | 
+| 일시정지 | WAITING | 
+| 일시정지 | TIMED_WAITING | 
+| 일시정지 | BLOCKED | 
+| 종료 | TERMINATED |
 
+ 
 # 참조 
 -----
 * [LockSupport](https://docs.oracle.com/javase/7/docs/api/java/util/concurrent/locks/LockSupport.html)
+* [Difference Between BLOCKED, WAITING, And TIMED_WAITING? - explained through real-life examples](https://dzone.com/articles/difference-between-blocked-waiting-timed-waiting-e)
+
