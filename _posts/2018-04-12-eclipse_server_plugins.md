@@ -73,3 +73,5 @@ conf폴더에 server.xml을 보면 아래 처럼 설정이 된다.
 # 참조 
 -----
 * [eclipse code Tomcat85PublishModuleVisitor](http://git.eclipse.org/c/gerrit/servertools/webtools.servertools.git/tree/plugins/org.eclipse.jst.server.tomcat.core/tomcatcore/org/eclipse/jst/server/tomcat/core/internal/Tomcat85PublishModuleVisitor.java)
+* [tomcat-options-Serve-modules-without-publishing-이란](http://reimaginer.tistory.com/entry/tomcat-options-Serve-modules-without-publishing-%EC%9D%B4%EB%9E%80)
+
