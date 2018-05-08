@@ -23,10 +23,11 @@ parseIwh, adjustTypes, requestCrawling
 
  ```java
  
+ public class AdBanner extends HttpServlet {
 	private ImageSize parseIwh(String sIwh) {
         ...
     } // parseIwh()
-	
+
 	private String adjustTypes(String sTypes, String sDefault) {
         ...
 	} // adjustTypes()
@@ -34,8 +35,11 @@ parseIwh, adjustTypes, requestCrawling
 	private void requestCrawling(String mediaReferer, String sKeyword) {
         ...
 	}
+}
 
 ```
 
-심지어 requestCrawling 같은 메소드가 여러군데 생성되 있었다. 코드 수정 필요
+심지어 requestCrawling 같은 메소드가 여러군데 생성되 있었다. 
+
+코드 수정 필요
 
