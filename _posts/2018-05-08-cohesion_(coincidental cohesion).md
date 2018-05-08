@@ -26,7 +26,7 @@ parseIwh, adjustTypes, requestCrawling
  public class AdBanner extends HttpServlet {
 	private ImageSize parseIwh(String sIwh) {
         ...
-    } // parseIwh()
+	} // parseIwh()
 
 	private String adjustTypes(String sTypes, String sDefault) {
         ...
