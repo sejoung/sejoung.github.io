@@ -17,6 +17,9 @@ comments: false
 
 아래의 코드를 보시면 Builder class에 userAbInfoList를 AbCampaignSelector 에서 직접 참조 하고 있습니다.
 
+내용 결합은 캡슐화에 따라 제거 할 수 있습니다.
+
+
  ```java
  
 
