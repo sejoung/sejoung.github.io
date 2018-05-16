@@ -19,7 +19,6 @@ comments: false
 상위 계층으로 넘어온 제어 플래그는 하위 모듈이 상위 모듈의 제어 흐름에 영향을 미치도록합니다
 (하위 모듈은 제어하지 않는 모듈에 영향을줍니다). 
 
-
 ```java
 
 package com.github.sejoung.reactive.test;
@@ -84,5 +83,32 @@ public class ControlTest {
         System.out.println(go.gogosing());
     }
 }
+
+```
+
+```java
+
+package com.github.sejoung.reactive.test;
+
+public class GoControl2 {
+    private Control control;
+    public GoControl2(Control control){
+        this.control = control;
+    }
+
+    public String gogo(int i) throws Exception {
+        if("A".equals(this.control.process(i))){
+            return "A";
+        }else if("B".equals(this.control.process(i))){
+            return "B";
+        }else if("C".equals(this.control.process(i))){
+            return "C";
+        }else{
+            throw new Exception("에러닷");
+        }
+    }
+
+}
+
 
 ```
