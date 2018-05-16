@@ -29,6 +29,7 @@ comments: false
 
 공통 결합은 추상화를 도입하여 해결할 수 있습니다. 디자인 패턴은 훌륭한 아키텍처를 달성하는 데 유용 할 수 있습니다.
 
+Static Factory Methods 이것도 이야기 하고 싶어 지는데 이것도 Thread safe 하지 않은 코드이다.
  
 ```java
 
