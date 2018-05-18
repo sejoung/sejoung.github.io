@@ -65,6 +65,24 @@ public class StampCode {
 
 ```
 
+```java
+
+package com.github.sejoung.reactive.test;
+
+public class StampTest {
+
+    public static void main(String[] args) {
+        Data data = new Data();
+        data.setAge(1);
+        data.setName("zolla");
+        StampCode.printAge(data);
+        StampCode.printName(data);
+    }
+}
+
+
+```
+
 위에 printAge 와 printName 은 스템프 Data 로  스템프 결합이 일어난다.
 
 저기서 값은 age와 data만 사용하지 않으니 메소드를 아래처럼 바꿔도 된다. 그렇게 되면 더이상 스템프 결합은 일어나지 않는다.
