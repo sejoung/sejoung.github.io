@@ -20,6 +20,7 @@ comments: false
         if(isLogin()) duplicationLogin();
         else{ 
             User user = newLogin();
+            // 여기 아래 두줄이 절차적 응집
             userCookie(user);
             userData(user);
         }
