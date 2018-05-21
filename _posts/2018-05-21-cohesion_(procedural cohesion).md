@@ -18,10 +18,11 @@ comments: false
     public void login()  {
 		
         if(isLogin()) duplicationLogin();
-        User user = newLogin();
-        userCookie(user);
-        userData(user);
-        
+        else{ 
+            User user = newLogin();
+            userCookie(user);
+            userData(user);
+        }
 	}
 
 
