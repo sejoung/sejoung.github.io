@@ -22,7 +22,6 @@ comments: false
         loadPropertiesData();
         loadFrameData();
         loadXmlData();
-        MongoManager.load();
 	}
 
 ```
