@@ -18,8 +18,9 @@ comments: false
     public void login()  {
 		
         if(isLogin()) duplicationLogin();
-        updateCookie();
-        updateMongo();
+        User user = newLogin();
+        userCookie(user);
+        userData(user);
         
 	}
 
