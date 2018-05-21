@@ -12,18 +12,63 @@ comments: false
 약결합
 
 data coupling은 모듈이 매개 변수를 통해 데이터를 공유 할 때 발생합니다.
-각 데이텀은 기본 요소이며 공유 된 유일한 데이터입니다.
-아래는 BigDecimal 클래스에 longCompareMagnitude 메소드 입니다. 
-
 
 ```java
 
-private static int longCompareMagnitude(long x, long y) {
-        if (x < 0)
-            x = -x;
-        if (y < 0)
-            y = -y;
-        return (x < y) ? -1 : ((x == y) ? 0 : 1);
+package com.github.sejoung.reactive.test;
+
+public class DataCode {
+
+    public int count(int i){
+        return ++i;
     }
+
+}
+
+
+```
+
+```java
+
+package com.github.sejoung.reactive.test;
+
+public class DataCode2 {
+    private DataCode dataCode;
+
+    private int counter;
+
+    public DataCode2(DataCode dataCode){
+        this.dataCode = dataCode;
+        this.counter = 0;
+    }
+
+    public void count(){
+        this.counter = this.dataCode.count(this.counter);
+    }
+
+    public int getCounter(){
+        return this.counter;
+    }
+}
+
+
+```
+실행 소스 
+
+```java
+
+package com.github.sejoung.reactive.test;
+
+public class DataCodeTest {
+    public static void main(String[] args) {
+        DataCode2 dc = new DataCode2(new DataCode());
+
+        dc.count();
+        dc.count();
+
+        System.out.println(dc.getCounter());
+    }
+}
+
 
 ```
