@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "codespitz73_part5_2"
+title: "codespitz_73_part6"
 date: 2018-06-12 10:30:00 +0900
 comments: false
 ---
