@@ -3,6 +3,9 @@ layout: post
 title: "oracle_meetup"
 date: 2017-11-18 12:30:00 +0900
 comments: false
+sitemap :
+  changefreq : daily
+  priority : 1.0
 ---
 #오라클 밋업
 10분에 아셈에 도착해서 15층에서 행사관련 등록후에 입장 했지만 카페에서 20분 이상 대기후에 30분이 넘은후 회의실에 도착

@@ -3,6 +3,9 @@ layout: post
 title: "Bean Validation"
 date: 2018-01-05 12:00:00 +0900
 comments: false
+sitemap :
+  changefreq : daily
+  priority : 1.0
 ---
 
 ## Bean Validation

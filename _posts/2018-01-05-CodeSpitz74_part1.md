@@ -3,6 +3,9 @@ layout: post
 title: "CodeSpitz74_Part1"
 date: 2018-01-05 09:00:00 +0900
 comments: false
+sitemap :
+  changefreq : daily
+  priority : 1.0
 ---
 
 ### 코드스피츠 74 1회차

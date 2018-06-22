@@ -3,6 +3,9 @@ layout: post
 title: "java static"
 date: 2017-12-05 14:47:00 +0900
 comments: false
+sitemap :
+  changefreq : daily
+  priority : 1.0
 ---
 
 # java static thread safe

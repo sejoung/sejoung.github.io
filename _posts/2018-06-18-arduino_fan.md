@@ -3,6 +3,9 @@ layout: post
 title: "arduino_fan"
 date: 2018-06-18 09:00:00 +0900
 comments: false
+sitemap :
+  changefreq : daily
+  priority : 1.0
 ---
 
 ### 아두이노 선풍기 만들기

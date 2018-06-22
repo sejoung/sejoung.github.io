@@ -3,6 +3,9 @@ layout: post
 title: "GCE_TIMEZONE"
 date: 2018-03-24 18:29:00 +0900
 comments: false
+sitemap :
+  changefreq : daily
+  priority : 1.0
 ---
 
 ## GCE_TIMEZONE

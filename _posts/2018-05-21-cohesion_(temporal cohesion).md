@@ -3,6 +3,9 @@ layout: post
 title: "cohesion_(logical cohesion)"
 date: 2018-05-21 14:46:00 +0900
 comments: false
+sitemap :
+  changefreq : daily
+  priority : 1.0
 ---
 
 ### 응집도 (cohesion)

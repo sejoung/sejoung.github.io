@@ -3,6 +3,9 @@ layout: post
 title: "codespitz73_part5_2"
 date: 2018-04-06 10:30:00 +0900
 comments: false
+sitemap :
+  changefreq : daily
+  priority : 1.0
 ---
 
 ### 코드스피츠73 part5

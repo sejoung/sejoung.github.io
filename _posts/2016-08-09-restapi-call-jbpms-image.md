@@ -3,6 +3,9 @@ layout: post
 title: "jbpm 프로세스 진행상태 조회 rest api"
 date: 2016-08-09 13:29:00 +0900
 comments: false
+sitemap :
+  changefreq : daily
+  priority : 1.0
 ---
 
 jbpm에서는 해당 정보를 가지고 오기위해 아래의 rest api를 제공하고 있다.

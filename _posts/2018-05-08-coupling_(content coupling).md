@@ -3,6 +3,9 @@ layout: post
 title: "coupling_(content coupling)"
 date: 2018-05-08 18:25:00 +0900
 comments: false
+sitemap :
+  changefreq : daily
+  priority : 1.0
 ---
 
 ### 결합도 (coupling)

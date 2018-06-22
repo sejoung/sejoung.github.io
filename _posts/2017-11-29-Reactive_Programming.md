@@ -3,6 +3,9 @@ layout: post
 title: "Reactive Programming"
 date: 2017-11-29 14:26:00 +0900
 comments: false
+sitemap :
+  changefreq : daily
+  priority : 1.0
 ---
 
 # Iterable(PULL) vs Observable(PUSH)

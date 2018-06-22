@@ -3,6 +3,9 @@ layout: post
 title: "IntelliJ_IDEA"
 date: 2017-11-22 14:08:00 +0900
 comments: false
+sitemap :
+  changefreq : daily
+  priority : 1.0
 ---
 
 # 인텔리제이 설정

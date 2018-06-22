@@ -3,6 +3,9 @@ layout: post
 title: "coupling_(common coupling)"
 date: 2018-05-09 11:00:00 +0900
 comments: false
+sitemap :
+  changefreq : daily
+  priority : 1.0
 ---
 
 ### 결합도 (coupling)

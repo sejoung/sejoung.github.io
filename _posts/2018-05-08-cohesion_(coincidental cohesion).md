@@ -3,6 +3,9 @@ layout: post
 title: "cohesion_(coincidental cohesion)"
 date: 2018-05-08 15:38:00 +0900
 comments: false
+sitemap :
+  changefreq : daily
+  priority : 1.0
 ---
 
 ### 응집도 (cohesion)

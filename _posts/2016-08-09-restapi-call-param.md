@@ -3,6 +3,9 @@ layout: post
 title: "jbpm rest api 파라미터 전달"
 date: 2016-08-09 14:06:00 +0900
 comments: false
+sitemap :
+  changefreq : daily
+  priority : 1.0
 ---
 
 jbpm rest api 호출시 파라미터 전달 방법

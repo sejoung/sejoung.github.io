@@ -3,6 +3,9 @@ layout: post
 title: "contentWindow"
 date: 2018-01-04 19:54:00 +0900
 comments: false
+sitemap :
+  changefreq : daily
+  priority : 1.0
 ---
 
 ## IFrame contentWindow Property

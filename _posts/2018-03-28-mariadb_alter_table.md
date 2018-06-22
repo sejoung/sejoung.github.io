@@ -3,6 +3,9 @@ layout: post
 title: "mariadb_alter_table"
 date: 2018-03-28 09:00:00 +0900
 comments: false
+sitemap :
+  changefreq : daily
+  priority : 1.0
 ---
 
 ## ALTER TABLE ADD PARTITION 시에 장애 

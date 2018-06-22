@@ -3,6 +3,9 @@ layout: post
 title: "Details_of_the_Object_Model[1]"
 date: 2017-01-24 15:29:00 +0900
 comments: false
+sitemap :
+  changefreq : daily
+  priority : 1.0
 ---
 
 

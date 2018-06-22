@@ -3,6 +3,9 @@ layout: post
 title: "jbpm 실행전략"
 date: 2016-08-09 16:41:00 +0900
 comments: false
+sitemap :
+  changefreq : daily
+  priority : 1.0
 ---
 
 ## jbpm Runtime strategy

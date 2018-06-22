@@ -3,6 +3,9 @@ layout: post
 title: "dgding javascript lesson2"
 date: 2017-07-21 14:00:00 +0900
 comments: false
+sitemap :
+  changefreq : daily
+  priority : 1.0
 ---
 
 Data type?

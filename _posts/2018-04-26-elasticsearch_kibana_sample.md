@@ -3,6 +3,9 @@ layout: post
 title: "elasticsearch_kibana_sample"
 date: 2018-04-26 14:00:00 +0900
 comments: false
+sitemap :
+  changefreq : daily
+  priority : 1.0
 ---
 
 ### elasticsearch_kibana_sample

@@ -3,6 +3,9 @@ layout: post
 title: "dgding javascript lesson"
 date: 2017-04-12 10:02:00 +0900
 comments: false
+sitemap :
+  changefreq : daily
+  priority : 1.0
 ---
 
 programming이란?

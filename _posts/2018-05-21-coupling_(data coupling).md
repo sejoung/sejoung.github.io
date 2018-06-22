@@ -3,6 +3,9 @@ layout: post
 title: "coupling_(data coupling)"
 date: 2018-05-21 09:30:00 +0900
 comments: false
+sitemap :
+  changefreq : daily
+  priority : 1.0
 ---
 
 ### 결합도 (coupling)

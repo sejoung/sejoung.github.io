@@ -3,6 +3,9 @@ layout: post
 title: "Apache_Kafka_GETTING_STARTED"
 date: 2017-12-18 16:46:00 +0900
 comments: false
+sitemap :
+  changefreq : daily
+  priority : 1.0
 ---
 
 # Apache Kafka GETTING STARTED

@@ -3,6 +3,9 @@ layout: post
 title: "dev_seminar_career"
 date: 2018-05-12 14:00:00 +0900
 comments: false
+sitemap :
+  changefreq : daily
+  priority : 1.0
 ---
 
 ### 개발자 커리어 컨퍼런스

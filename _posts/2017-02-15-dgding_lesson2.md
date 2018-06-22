@@ -3,6 +3,9 @@ layout: post
 title: "dgding lesson2"
 date: 2017-02-15 11:22:00 +0900
 comments: false
+sitemap :
+  changefreq : daily
+  priority : 1.0
 ---
 
 html이 그림을 그리는 방법은 [css specs](https://www.w3.org/Style/CSS/specs.en.html)

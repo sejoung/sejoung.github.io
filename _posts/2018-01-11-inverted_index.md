@@ -3,6 +3,9 @@ layout: post
 title: "_termvectors"
 date: 2018-01-11 14:00:00 +0900
 comments: false
+sitemap :
+  changefreq : daily
+  priority : 1.0
 ---
 
 ### inverted index

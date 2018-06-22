@@ -3,6 +3,9 @@ layout: post
 title: "singleton_pattern"
 date: 2018-04-17 16:30:00 +0900
 comments: false
+sitemap :
+  changefreq : daily
+  priority : 1.0
 ---
 
 ### singleton_pattern

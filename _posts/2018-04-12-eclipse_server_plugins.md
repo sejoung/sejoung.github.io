@@ -3,6 +3,9 @@ layout: post
 title: "eclipse_server_plugins"
 date: 2018-04-12 11:30:00 +0900
 comments: false
+sitemap :
+  changefreq : daily
+  priority : 1.0
 ---
 
 ### 이클립스 SERVER 플러그인

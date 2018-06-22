@@ -3,6 +3,9 @@ layout: post
 title: "dgding lesson1"
 date: 2017-02-15 08:53:00 +0900
 comments: false
+sitemap :
+  changefreq : daily
+  priority : 1.0
 ---
 
 그래픽 시스템

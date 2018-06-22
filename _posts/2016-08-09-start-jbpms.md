@@ -3,6 +3,9 @@ layout: post
 title: "jbpm CustomWorkItemHandler 만드는 방법"
 date: 2016-08-09 11:28:00 +0900
 comments: false
+sitemap :
+  changefreq : daily
+  priority : 1.0
 ---
 사용법 
 

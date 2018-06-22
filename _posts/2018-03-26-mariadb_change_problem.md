@@ -3,6 +3,9 @@ layout: post
 title: "mariadb_change_problem"
 date: 2018-03-26 09:00:00 +0900
 comments: false
+sitemap :
+  changefreq : daily
+  priority : 1.0
 ---
 
 ## 마리아 DB 교체후 장애 사항 대처

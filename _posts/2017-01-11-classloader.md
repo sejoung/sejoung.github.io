@@ -3,6 +3,9 @@ layout: post
 title: "Tomcat의 Class Loader HOW-TO"
 date: 2017-01-11 10:20:00 +0900
 comments: false
+sitemap :
+  changefreq : daily
+  priority : 1.0
 ---
 
 톰캣이 시작할때 아래 같이 부모 자식 관계로 구성되는 클래스로더 집합을 생성합니다. 

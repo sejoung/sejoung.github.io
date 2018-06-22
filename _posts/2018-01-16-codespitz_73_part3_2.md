@@ -3,6 +3,9 @@ layout: post
 title: "codespitz73_part3_2"
 date: 2018-01-16 09:00:00 +0900
 comments: false
+sitemap :
+  changefreq : daily
+  priority : 1.0
 ---
 
 ### 코드스피츠73 part3_2

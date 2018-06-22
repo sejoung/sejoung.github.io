@@ -3,6 +3,9 @@ layout: post
 title: "circuit-breaker"
 date: 2017-12-20 13:30:00 +0900
 comments: false
+sitemap :
+  changefreq : daily
+  priority : 1.0
 ---
 
 # circuit-breaker

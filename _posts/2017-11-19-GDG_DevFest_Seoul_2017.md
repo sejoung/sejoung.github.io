@@ -3,6 +3,9 @@ layout: post
 title: "GDG_DevFest_Seoul_2017"
 date: 2017-11-19 01:00:00 +0900
 comments: false
+sitemap :
+  changefreq : daily
+  priority : 1.0
 ---
 
 # GDG_DevFest_Seoul_2017

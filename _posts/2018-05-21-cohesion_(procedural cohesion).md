@@ -3,6 +3,9 @@ layout: post
 title: "cohesion_(procedural cohesion)"
 date: 2018-05-21 15:42:00 +0900
 comments: false
+sitemap :
+  changefreq : daily
+  priority : 1.0
 ---
 
 ### 응집도 (cohesion)

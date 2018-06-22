@@ -3,6 +3,9 @@ layout: post
 title: "coupling_(stamp coupling)"
 date: 2018-05-18 09:30:00 +0900
 comments: false
+sitemap :
+  changefreq : daily
+  priority : 1.0
 ---
 
 ### 결합도 (coupling)
