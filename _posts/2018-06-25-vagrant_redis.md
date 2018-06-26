@@ -54,6 +54,9 @@ dir /var/redis/
 # 외부접속을 위해 
 protected-mode no
 
+# 백그라운드 실행을 위해
+daemonize yes
+
 ```
 실행 고고 씽
 
