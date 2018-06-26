@@ -3,6 +3,9 @@ layout: post
 title: "vagrant_GettingStarted"
 date: 2018-06-25 11:30:00 +0900
 comments: false
+sitemap :
+  changefreq : daily
+  priority : 1.0
 ---
 
 ### vagrant 처음 사용해 보기
