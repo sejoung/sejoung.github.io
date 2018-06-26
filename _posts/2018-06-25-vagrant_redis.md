@@ -87,6 +87,23 @@ $ vagrant destroy
 
 위에 파일은 아래의 깃허브에 저장했다.
 
+여기서 부연 설명을 더 해야겠다.
+일단 vagrant는 provider는 virtualbox 기준으로 설명하겠다.
+
+먼저 box 이미지는 네트워크 어댑터가 nat 설정을 기준으로 셋팅 되어 있다
+그래서 외부 접근이 되지 않는다. 그걸 하기 위해 포트 포워딩을 하는데 
+
+virtualbox UI 기준으로 아래 보면 
+
+설정을 클릭하면 네트워크 탭에 들어가면 아래 와 같은 이미지가 나온다.
+
+![virtualbox UI1](https://sejoung.github.io/images/2018_06_26_01.jpg)
+
+거기서 고급을 클릭하면 위애 포트포워딩 그것을 누르면 아래와 같이 설정된 정보를 볼수 있다.
+
+![virtualbox UI2](https://sejoung.github.io/images/2018_06_26_02.jpg)
+ 
+
 # 참조 
 -----
 * [vagrant](https://www.vagrantup.com)
