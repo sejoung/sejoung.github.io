@@ -54,3 +54,8 @@ body {
 .author a {
     color: #ee4444;
 }
+
+.center {
+    display: block;
+    margin: auto;
+}

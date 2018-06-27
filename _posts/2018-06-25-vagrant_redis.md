@@ -100,11 +100,11 @@ virtualbox UI 기준으로 아래 보면
 
 설정을 클릭하면 네트워크 탭에 들어가면 아래 와 같은 이미지가 나온다.
 
-![virtualbox UI1](https://sejoung.github.io/images/2018_06_26_01.jpg)
+![virtualbox UI1](https://sejoung.github.io/images/2018_06_26_01.jpg){: width="95%"}{: .center}
 
 거기서 고급을 클릭하면 위애 포트포워딩 그것을 누르면 아래와 같이 설정된 정보를 볼수 있다.
 
-![virtualbox UI2](https://sejoung.github.io/images/2018_06_26_02.jpg)
+![virtualbox UI2](https://sejoung.github.io/images/2018_06_26_02.jpg){: width="95%"}{: .center}
  
 
 # 참조 
