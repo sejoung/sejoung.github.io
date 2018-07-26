@@ -70,6 +70,14 @@ gpg: signing failed: No secret key
 
 아 그리고 배포는 먼저 SNAPSHOP을 등록 후에 릴리스 서버에 배포가 가능하다.
 
+--------------------------
+
+위에 문제 사항이 키를 만들때 id랑 이메일까지 똑같으니 서버에 등록이 되지 않았다. 아이디 바꾸고 다시 만듬
+
+
+
+
+
 # 참조 
 -----
 * [메이븐 중앙 저장소에 아티팩트 업로딩](https://www.lesstif.com/pages/viewpage.action?pageId=30277671)
