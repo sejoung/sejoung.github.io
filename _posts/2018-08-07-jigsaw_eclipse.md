@@ -8,7 +8,7 @@ sitemap :
   priority : 1.0
 ---
 
-### 이클립스에서 jigsaw 코딩하기
+### 이클립스에서 jigsaw 코딩 준비하기
 
 프로젝트 직쏘란?
 
