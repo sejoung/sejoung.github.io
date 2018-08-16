@@ -10,9 +10,9 @@ sitemap :
 
 ### projectlombok 사용에 대한 의견
 
-저도 권남님에 포스티에 대한 의견 처럼 제한적으로 사용하는것이 좋을것 같습니다. 
+저도 권남님에 포스팅에 대한 의견 처럼 제한적으로 사용하는것이 좋을것 같습니다. 
 
-거기서 사용할 몇가지 사용법에대해서 포스팅 합니다.
+거기서 사용할 몇가지 사용법에 대해서 포스팅 합니다.
 
 @Getter and @Setter [GetterSetter](https://projectlombok.org/features/GetterSetter)
 
