@@ -61,6 +61,7 @@ sitemap :
 http://americanbilliardclub.com/about/history/
 
 ```
+그리고 굳이 스크립트에서 ajax로 통신을 할때 http와 https를 동시에 사용 가능하다면 보안을 위해 https를 사용하는것이 좋지 않을까요?
 
 위에 내용 URL 표준에는 없지만 Uniform Resource Identifier (URI) 표준인 [rfc3986#section-4.2](https://tools.ietf.org/html/rfc3986#section-4.2)에서 명시하고 있습니다.
 
