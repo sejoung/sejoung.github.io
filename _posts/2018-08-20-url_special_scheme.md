@@ -62,7 +62,11 @@ http://americanbilliardclub.com/about/history/
 
 ```
 
-그래서 저는 명시적으로 프로토콜을 표현하는게 나중에 브라우져에서 대응하지 않거나 되지 않는 브라우져가 나왔을때 에러를 최소화 하는 방법이라고 생각이 듭니다.
+위에 내용 URL 표준에는 없지만 Uniform Resource Identifier (URI) 표준인 [rfc3986#section-4.2](https://tools.ietf.org/html/rfc3986#section-4.2)에서 명시하고 있습니다.
+
+위에 내용은 잘 찾아 보지 못하고 작성한것 입니다.
+
+하지만 위에 내용처럼 여러가지 문제를 발생시킬수 있어서 명시하는것이 좋을것 같습니다.
 
 
 # 참조 
@@ -71,3 +75,4 @@ http://americanbilliardclub.com/about/history/
 * [Protocol-relative_URL](https://en.wikipedia.org/wiki/Wikipedia:Protocol-relative_URL)
 * [jsfiddle sample](http://jsfiddle.net/sanaes/zrad4sn0/)
 * [stop-using-the-protocol-relative-url](https://www.jeremywagner.me/blog/stop-using-the-protocol-relative-url/)
+* [rfc3986#section-4.2](https://tools.ietf.org/html/rfc3986#section-4.2)
