@@ -69,6 +69,26 @@ This is a message
 This is another message
 ```
 
+```
+{test=LEADER_NOT_AVAILABLE} (org.apache.kafka.clients.NetworkClient)
+org.apache.kafka.common.KafkaException: Producer closed while send in progress
+
+```
+
+위에 메시지를 입력할때 위에 로그처럼 에러 메시지가 나옴 처음에 kafka서버를 로드 할때 localhost:9092로 서버가 기동 되는게 아니였다
+아래의 로그는 카프카 서버를 기동했을때 나오는 메시지 였다 설정을 하지 않으면 DESKTOP-EHS95QM:9092  처럼 컴퓨터 이름으로 셋팅되는데
+원도우에서는 host에 선언 되있지 않았다.
+
+```
+WARN [KafkaServer id=0] Error during controlled shutdown, possibly because leader movement took longer than the configured controller.socket.timeout.ms and/or request.timeout.ms: Connection to DESKTOP-EHS95QM:9092 (id: 0 rack: null) failed. (kafka.server.KafkaServer)
+```
+
+그래서 server.properties 에 설정에 보면 아래의 설정이 주석 되있는데 메시지를 풀었다
+
+```
+advertised.listeners=PLAINTEXT://localhost:9092
+```
+
 ### 5단계 : 컨슈머 시작
 
 Kafka는 표준 출력으로 메시지를 덤프하는 명령 행 사용자도 있습니다.
@@ -162,6 +182,7 @@ my test message 2
 ^C
 ```
 이제 이러한 메시지를 사용합시다.
+
 
 ```
 > bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --from-beginning --topic my-replicated-topic
