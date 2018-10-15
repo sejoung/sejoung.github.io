@@ -37,6 +37,48 @@ pip install pyserial
 esptool.py write_flash 0 odorid-go-firmware-20180915.img
 
 ```
+
+아래의 메시지는 전원을 안켜서 나옴 전원을 꼭 키고 해야 됨
+
+```
+C:\Users\sjkim3\Downloads\odroid-go-firmware-20181001\tools\esp32img>esptool.py write_flash 0 odroid-go-firmware-20181001.img
+esptool.py v2.5.1-dev
+Found 1 serial ports
+Serial port COM3
+Connecting........_____....._____....._____....._____....._____....._____....._____
+COM3 failed to connect: Failed to connect to Espressif device: Timed out waiting for packet header
+
+A fatal error occurred: All of the 1 available serial ports could not connect to a Espressif device.
+
+```
+
+정상 메시지
+
+```
+
+C:\Users\sjkim3\Downloads\odroid-go-firmware-20181001\tools\esp32img>esptool.py write_flash 0 odroid-go-firmware-20181001.img
+esptool.py v2.5.1-dev
+Found 1 serial ports
+Serial port COM3
+Connecting....
+Detecting chip type... ESP32
+Chip is ESP32D0WDQ5 (revision 1)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse
+MAC: 30:ae:a4:c3:e4:38
+Uploading stub...
+Running stub...
+Stub running...
+Configuring flash size...
+Auto-detected Flash size: 16MB
+Compressed 301920 bytes to 146523...
+Wrote 301920 bytes (146523 compressed) at 0x00000000 in 13.0 seconds (effective 185.8 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...
+
+```
+
 # 참조 
 -----
 * [wiki.odroid firmware_update](https://wiki.odroid.com/odroid_go/firmware_update)
