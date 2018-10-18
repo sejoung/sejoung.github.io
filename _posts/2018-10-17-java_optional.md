@@ -18,24 +18,54 @@ Java에서는 참조 유형을 사용하여 객체에 액세스하고 참조 점
 
 ```java
 
-public static Fruit find(String name, List<Fruit> fruits) {
-   for(Fruit fruit : fruits) {
-      if(fruit.getName().equals(name)) {
-         return fruit;
-      }
-   }
-   return null;
+package com.github.sejoung.codetest.optional;
+
+import lombok.Getter;
+
+public class Fruit {
+
+    @Getter
+    private String name;
+
+    public Fruit(String name) {
+        this.name = name;
+    }
 }
 
-public static void main(String[] args) {
-        
-    List<Fruit> fruits = asList(new Fruit("apple"),
-                                new Fruit("grape"),
-                                new Fruit("orange"));
+
+```
+
+```java
+
+
+package com.github.sejoung.codetest.optional;
+
+import java.util.Arrays;
+import java.util.List;
+
+public class OptionalNon {
     
-    Fruit found = find("lemon", fruits);
-    String name = found.getName(); //NPE 발생
+    public static Fruit find(String name, List<Fruit> fruits) {
+        for (Fruit fruit : fruits) {
+            if (fruit.getName().equals(name)) {
+                return fruit;
+            }
+        }
+        return null;
+    }
+
+    public static void main(String[] args) {
+
+        List<Fruit> fruits = Arrays.asList(new Fruit("apple"), new Fruit("grape"), new Fruit("orange"));
+
+        Fruit found = find("lemon", fruits);
+        String name = found.getName(); // NPE 발생
+    
+    
+    }
+
 }
+
 ```
 
 위에 코드에서는 간단하게 감지 할수 있는 오류 코드가 없습니다. 보면 개발자는 위에서 자신이 null을 억세스 한다는 시나리오를 인지 하지 못했을 뿐입니다.
@@ -47,15 +77,18 @@ functional programming paradigm 언어에서는 null이 참조 해제 될때가�
 
 ```java
 
-List<Fruit> fruits = asList(new Fruit("apple"),
-                            new Fruit("grape"),
-                            new Fruit("orange"));
+    public static void main(String[] args) {
 
-Fruit found = find("lemon", fruits);
+        List<Fruit> fruits = Arrays.asList(new Fruit("apple"), new Fruit("grape"), new Fruit("orange"));
 
-if(found != null){
-    String name = found.getName(); //NPE 발생
-}
+        Fruit found = find("lemon", fruits);
+
+        // String name = found.getName(); // NPE 발생
+
+        if (found != null) {
+            String name = found.getName();
+        }
+    }
 
 ```
 
@@ -65,27 +98,42 @@ java8 에서 functional programming paradigm 언어에서 와 비슷한 구문�
 
 ```java
 
-public static Optional<Fruit> find(String name, List<Fruit> fruits) {
-   for(Fruit fruit : fruits) {
-      if(fruit.getName().equals(name)) {
-         return Optional.of(fruit);
-      }
-   }
-   return Optional.empty();
-}
+package com.github.sejoung.codetest.optional;
 
-public static void main(String[] args) {
-    
-    List<Fruit> fruits = asList(new Fruit("apple"),
-                                new Fruit("grape"),
-                                new Fruit("orange"));
-    
-    Optional<Fruit> found = find("lemon", fruits);
-    if(found.isPresent()) {
-       Fruit fruit = found.get();
-       String name = fruit.getName();
+import java.util.Arrays;
+import java.util.List;
+import java.util.Optional;
+
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
+public class OptionalTest {
+
+    public static Optional<Fruit> find(String name, List<Fruit> fruits) {
+        for (Fruit fruit : fruits) {
+            if (fruit.getName().equals(name)) {
+                return Optional.of(fruit);
+            }
+        }
+        return Optional.empty();
+    }
+
+    public static void main(String[] args) {
+
+        List<Fruit> fruits = Arrays.asList(new Fruit("apple"), new Fruit("grape"), new Fruit("orange"));
+
+        Optional<Fruit> found = find("lemon", fruits);
+
+        if (found.isPresent()) {
+            Fruit fruit = found.get();
+            log.info(fruit.getName());
+        }
+        
+        
     }
 }
+
+
 
 ```
 
@@ -95,8 +143,8 @@ orElse로 위에 코드를 변경 해보겠다. 값이 있으면 위에 값을 �
 
 ```java
 
-Optional<Fruit> found = find("lemon", fruits);
-String name = found.orElse(new Fruit("Kiwi")).getName();
+        log.info(found.orElse(new Fruit("Kiwi")).getName());
+
 
 ```
 
@@ -104,8 +152,8 @@ ifPresent 를 사용하여 변경 값이 있을때 함수형 인터페이스를 
 
 ```java
 
-Optional<Fruit> found = find("lemon", fruits);
-found.ifPresent(f -> { System.out.println(f.getName()); });
+        found.ifPresent(f -> { log.info(f.getName()); });
+
 
 ```
 
@@ -113,8 +161,8 @@ orElseGet을 사용하여 변경 값이 없을때 레몬 객체를 반환
 
 ```java
 
-Optional<Fruit> found = find("lemon", fruits);
-Fruit fruit = found.orElseGet(() -> new Fruit("Lemon"));
+        log.info(found.orElseGet(() -> new Fruit("Lemon")).getName());
+
 
 ```
 
@@ -153,30 +201,6 @@ if (nonOptional != null) {
 
 위처럼 여러가지 이유로 옵셔널에 대해 부정적인 관점도 존재 한다.
 
-아래는 옵셔널에서 Stream API에 대해서 알아 보겠다.
-
-
-```java
-
-Stream<Fruit> fruits = asList(new Fruit("apple"),
-                              new Fruit("grape")).stream();
-Optional<Fruit> max = fruits.max(comparing(Fruit::getName));
-if(max.isPresent()) {
-   String fruitName = max.get().getName(); //grape
-}
-
-```
- 
-```java
-
-Stream<Fruit> fruits = asList(new Fruit("apple"),
-                              new Fruit("grape")).stream();
-Optional<Fruit> first = fruits.findFirst();
-if(first.isPresent()) {
-   String fruitName = first.get().getName(); //apple
-}
-
-```
  
 # 참조 
 -----
