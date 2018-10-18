@@ -24,8 +24,6 @@ sitemap :
 
 해결 해야될것 같다.....
 
-scouter로는 정상처리 되는것 처럼 보이는데 딜레이가 걸리고 있다. 좀 더 봐야 될것 같다.
-
 ```java
 
   private static AtomicInteger ai = new AtomicInteger();
