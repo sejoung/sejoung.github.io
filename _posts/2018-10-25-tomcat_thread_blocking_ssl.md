@@ -74,11 +74,12 @@ https 매체가 늘어나서 자주 생김
 
 잘된다 좀더 모니터링 해봐야겠지만 Http11NioProtocol가는것이 좋은것 같다.
 
+Java Non Blocking Connector는 SSL Handshake을 Non blocking 지원해서 잘되는것 같다.
 
 
- 
 # 참조 
 -----
 * [understanding-tomcat-nio](https://dzone.com/articles/understanding-tomcat-nio)
 * [apache bugzilla](https://bz.apache.org/bugzilla/show_bug.cgi?id=45516)
 * [is-an-outputstream-in-java-blocking-sockets](https://stackoverflow.com/questions/10574596/is-an-outputstream-in-java-blocking-sockets)
+* [tomcat http](https://tomcat.apache.org/tomcat-7.0-doc/config/http.html)
