@@ -76,6 +76,16 @@ https 매체가 늘어나서 자주 생김
 
 Java Non Blocking Connector는 SSL Handshake을 Non blocking 지원해서 잘되는것 같다.
 
+참고로 톰캣에서 protocol을 설정하지 않으면 아래의 2가지 connector를 자동으로 스위칭 한다. tomcat 7 기준
+
+```
+
+blocking Java connector - org.apache.coyote.http11.Http11Protocol
+
+the APR/native connector - org.apache.coyote.http11.Http11AprProtocol
+
+```
+
 
 # 참조 
 -----
