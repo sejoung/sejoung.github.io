@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "cohesion_(logical cohesion)"
+title: "cohesion_(temporal cohesion)"
 date: 2018-05-21 14:46:00 +0900
 comments: false
 sitemap :
