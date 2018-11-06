@@ -308,8 +308,19 @@ public static synchronized void registerDriver(java.sql.Driver driver,
 
 #### 단점.2 정적 팩터리 매서드는 프로그래머가 찾기 어렵다.
 
-생성자는 java doc에서 자세히 설명 하지만 팩터리 메서드는 프로그래머가 찾기 힘들다.(상세 설명이 잘 나오지 않는다.)
+생성자는 java doc에서 자세히 설명 하지만 팩터리 메서드는 프로그래머가 찾기 힘들다.(상세 설명이 잘 나오지 않는다.) 
+
+아래 이미지를 보면 생성자에 대한 설명이 나와 있다
+
+![java doc](https://sejoung.github.io/images/2018_11_05_01.jpg){: width="100%"}{: .center}
+
 그래서 설명을 잘 해줘야 하고 널리 알려진 이름으로 이름을 정하는게 좋다. 문서화를 잘할수 있는 방법이 나오면 좋겠다.
+
+아래는 spring boot에서 정적팩토리 패턴을 설명하고 있는 doc이다 이렇게 자세히 달아야 되고 위 생성자 처럼 따로 써머리 되어서 
+볼수 있음 좋겠다.
+
+![spring doc](https://sejoung.github.io/images/2018_11_05_02.jpg){: width="100%"}{: .center}
+
 
 #### 정적 팩터리 매서드 패턴에서 흔히 사용하는 명명규칙
 
