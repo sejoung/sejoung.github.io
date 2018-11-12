@@ -261,7 +261,7 @@ public class AudienceStats {
             return this;
         }
 
-        public AudienceStats Builder(){
+        public AudienceStats build(){
             return new AudienceStats(this);
         }
 
@@ -291,7 +291,7 @@ public class Test {
 
     public static void main(String[] args) {
 
-        AudienceStats as = new AudienceStats.Builder("20181106").totEprsCnt(2).parEprsCnt(1).Builder();
+        AudienceStats as = new AudienceStats.Builder("20181106").totEprsCnt(2).parEprsCnt(1).build();
 
     }
 
