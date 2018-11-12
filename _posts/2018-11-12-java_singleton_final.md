@@ -39,6 +39,7 @@ class OldSingleton implements Serializable {
 ```
 위에 코드는 기본적으로 final 키워드로 싱글톤임을 보장한다. 
 
+#### 정적 팩토리 패턴으로 싱글턴임을 보장 
 
 ```java
 
@@ -393,6 +394,8 @@ Process finished with exit code 1
 
 ```
 처음 생성자는 정상인데 두번째 부터 익셉션을 만든다.
+
+#### enum으로 싱글톤을 보장
 
 이모든 작업을 하기 어려워서 3번째 enum 클래스를 생성해서 하는게 위에서 말한 코드를 가장 편하게 방어 할수있는 코드이다.
 
