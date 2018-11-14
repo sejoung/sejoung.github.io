@@ -420,4 +420,4 @@ extends는 안되고 implements는 가능함
 -----
 * [Object Input Classes jdk 8 doc](https://docs.oracle.com/javase/8/docs/platform/serialization/spec/input.html)
 * [java-serialization-readobject-vs-readresolve](https://stackoverflow.com/questions/1168348/java-serialization-readobject-vs-readresolve)
-
+* [[이팩티브 자바] #3 싱글톤을 만드는 여러가지 방법 그중에 최선은?](https://www.youtube.com/watch?v=xBVPChbtUhM)
