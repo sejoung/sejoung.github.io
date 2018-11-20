@@ -93,6 +93,6 @@ public class Stack {
 
 # 참조
 -----
-[[이팩티브 자바] #7 불필요한 객체 레퍼런스를 정리하자](https://www.youtube.com/watch?v=YijcBaS4cu8)
-[Java Reference와 GC](https://d2.naver.com/helloworld/329631)
-[Java Garbage Collection](https://d2.naver.com/helloworld/1329)
+* [[이팩티브 자바] #7 불필요한 객체 레퍼런스를 정리하자](https://www.youtube.com/watch?v=YijcBaS4cu8)
+* [Java Reference와 GC](https://d2.naver.com/helloworld/329631)
+* [Java Garbage Collection](https://d2.naver.com/helloworld/1329)
