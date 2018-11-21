@@ -235,7 +235,7 @@ public class Room implements AutoCloseable {
 
         // close 메서드나 cleaner가 호출한다.
         @Override public void run() {
-            System.out.println("Cleaning room");
+            System.out.println("Cleaning room "+ numJunkPiles);
             numJunkPiles = 0;
         }
     }
@@ -255,8 +255,82 @@ public class Room implements AutoCloseable {
         cleanable.clean();
     }
 }
+```
+
+잘된 코드
+
+```java
+
+package com.github.sejoung.codetest.object;
+
+public class RoomTest {
+    public static void main(String[] args) {
+        try (Room myRoom = new Room(7)) {
+            System.out.println("안녕~");
+        }
+    }
+}
+
 
 ```
+
+실행결과
+
+```
+안녕~
+Cleaning room 7
+
+Process finished with exit code 0
+```
+
+잘못된코드 
+
+```java
+
+package com.github.sejoung.codetest.object;
+
+public class RoomTest {
+    public static void main(String[] args) {
+        new Room(99);
+        System.out.println("안되~");
+    }
+}
+
+```
+실행결과
+
+```
+안되~
+
+Process finished with exit code 0
+```
+
+위에서는 close가 안되었지만 나중에 gc가 될때 자원회수가 된다. 그것을 보기 위해 System.gc();를 추가
+
+```java
+
+package com.github.sejoung.codetest.object;
+
+public class RoomTest {
+    public static void main(String[] args) {
+        new Room(99);
+        System.gc();
+        System.out.println("안되~");
+    }
+}
+
+
+```
+
+실행결과
+
+```
+
+안되~
+Cleaning room 99
+
+```
+
 
 # 참조
 -----
