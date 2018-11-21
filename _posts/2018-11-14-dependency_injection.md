@@ -8,7 +8,9 @@ sitemap :
   priority : 1.0
 ---
 
-### 자원을 직접 명시 하지 말고 의존성 객체 주입(dependency injection)을 사용하라
+## 이펙티브 자바 
+
+### 아이템 5. 자원을 직접 명시 하지 말고 의존성 객체 주입(dependency injection)을 사용하라
 
 지금 대부분 자바 개발자들은 spring 프레임워크를 쓰면서 의존성 주입에 대한 이견은 없을 것입니다.
 
