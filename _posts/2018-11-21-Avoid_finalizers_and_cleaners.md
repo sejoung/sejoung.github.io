@@ -9,7 +9,7 @@ sitemap :
 ---
 ## 이펙티브 자바
 
-### 아이템 7. Finalizer와 Cleaner의 사용은 피하라
+### 아이템 8. Finalizer와 Cleaner의 사용은 피하라
 
 finalize() 메소드에 대한 설명
 
