@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Avoid_finalizers_and_cleaners"
+title: "memorymanagement-whitepaper"
 date: 2018-11-21 10:37 +0900
 comments: false
 sitemap :
