@@ -129,4 +129,5 @@ public class ChunkBatchConfiguration {
 -----
 * [12factor](https://12factor.net/ko/)
 * [JSR 352: Batch Applications for the Java Platform](https://jcp.org/en/jsr/detail?id=352)
+* [spring-batch](https://spring.io/projects/spring-batch)
 * [spring-boot-batch-mybatis 예제코드](https://github.com/sejoung/spring-boot-batch-mybatis)
