@@ -29,9 +29,9 @@ JSR 352는 일괄 처리 비즈니스 로직을 구현할 수있는 수많은 �
 
 Reader-Processor-Writer 패턴은 기본 패턴 이며 청크 지향 처리 라고 합니다.
 
-* <job>에는 작업의 논리적 이름 을 정의하고 식별 목적으로 사용되는 "id"속성이 있습니다.
-* 각 <job>은 여러 <step> 할 수 있습니다. 각  <step>은 작업 단계와 특성을 나타냅니다. 각 <step>에는 작업 의 논리적 이름 을 정의하고 식별 목적으로 사용되는 "id"속성이 있습니다.
-* <step>은 <chunk> 또는 <tasklet> 요소를 가질 수 있습니다 .이 <step>에는 <chunk>가 있습니다. <chunk> 는  chunk type step을 식별하고 reader-processor-writer pattern을 구현합니다 .
+* job에는 작업의 논리적 이름 을 정의하고 식별 목적으로 사용되는 "id"속성이 있습니다.
+* 각 job은 여러 step 할 수 있습니다. 각  step은 작업 단계와 특성을 나타냅니다. 각 step에는 작업 의 논리적 이름 을 정의하고 식별 목적으로 사용되는 "id"속성이 있습니다.
+* step은 chunk 또는 tasklet 요소를 가질 수 있습니다 .이 step에는 chunk가 있습니다. chunk 는  chunk type step을 식별하고 reader-processor-writer pattern을 구현합니다 .
 
 위에 내용을 기반으로 reader-processor-writer pattern을 구현한 간단한 어플리케이션을 구현하겠습니다.
 
