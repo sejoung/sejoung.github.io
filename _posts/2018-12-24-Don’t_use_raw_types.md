@@ -201,6 +201,71 @@ List.class, String[].class 는 허용하지만 List<String>.class, List<?>.class
 
 ```
 
+Object 와 ?의 차이점
+
+```java
+
+package com.github.sejoung.codetest.generics;
+
+import java.util.Arrays;
+import java.util.List;
+
+public class Generics {
+
+    static void printList(List<Object> list){
+        list.forEach(s-> System.out.println(s));
+    }
+
+    static void printList2(List<?> list){
+        list.forEach(s-> System.out.println(s));
+    }
+
+    public static void main(String[] args) {
+
+
+        List<Integer> list = Arrays.asList(1,2,3,4,5);
+        printList(list); // 에러가 남
+        printList2(list);
+        
+    }
+}
+
+
+```
+
+위에 코드에서는 원소관계의 계층관계를 허용하지 않아서 그렇게 됨
+
+
+```java
+
+package com.github.sejoung.codetest.generics;
+
+import java.util.Arrays;
+import java.util.List;
+
+public class Generics {
+
+    static void printList(List<Object> list){
+        list.forEach(s-> System.out.println(s));
+    }
+
+    static void printList2(List<?> list){
+        list.forEach(s-> System.out.println(s));
+    }
+
+    public static void main(String[] args) {
+
+
+        printList(Arrays.asList(1,2,3,4,5)); 
+        printList2(Arrays.asList(1,2,3,4,5));
+        
+    }
+}
+
+
+```
+
+이 코드는 에러가 없이 정상 동작함 
 
 
 # 참조
