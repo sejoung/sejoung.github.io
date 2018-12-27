@@ -38,7 +38,6 @@ ArrayList에 toArray 메소드를 보면 jdk 11 기준
  
  ```java
 
-    @SuppressWarnings("unchecked")
     public <T> T[] toArray(T[] a) {
         if (a.length < size)
             // Make a new array of a's runtime type, but my contents:
