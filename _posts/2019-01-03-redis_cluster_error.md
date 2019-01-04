@@ -216,9 +216,22 @@ http://localhost:9090/select
 
 ```
 
-안됨 두둥 내일 계속 해야겠다.......
+master-slave set의 단인 앤드포인트는 다양한 방법으로 서비스 될수있는데  virtual IP를 통해 다시 재맵핑을 하는 방법을 사용 해야 될것같다.
 
 
+그럼 클러스터 failover 되었을때 테스트 진행
+
+```
+
+redis-cli -p 7004 
+
+cluster nodes
+
+cluster failover
+
+cluster nodes
+
+```
 
 # 참조
 -----
@@ -227,7 +240,7 @@ http://localhost:9090/select
 * [테스트 코드](https://github.com/sejoung/vagrant-redis-cluster)
 * [spring-boot redis doc](https://docs.spring.io/spring-boot/docs/current/reference/html/boot-features-nosql.html#boot-features-redis)
 * [lettuce](https://github.com/lettuce-io/lettuce-core/)
-* [vagrant-redis-cluster](https://github.com/72squared/vagrant-redis-cluster)
+* [vagrant-redis-cluster](https://github.com/sejoung/vagrant-redis-cluster)
 * [vagrant 처음 사용해 보기](https://sejoung.github.io/2018/06/vagrant_GettingStarted)
 * [virtualbox Downloads](https://www.virtualbox.org/wiki/Downloads)
-
+* [high-availability-with-redis-sentinels-connecting](https://dzone.com/articles/high-availability-with-redis-sentinels-connecting)
