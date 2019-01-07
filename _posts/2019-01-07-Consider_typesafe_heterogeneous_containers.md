@@ -275,9 +275,12 @@ public class Favorites {
 
 Process finished with exit code 0
 ```
+
 Favorites 코드를 위에 처럼 변환 시켜야 된다.
 
+어렵다 토비님이 강의내용이 아주 좋았다.
 
+비사이드 소프트에서 정리한 내용도 많은 도움이 되었습니다.
 
 # 참조
 -----
