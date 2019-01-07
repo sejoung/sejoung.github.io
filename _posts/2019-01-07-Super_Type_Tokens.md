@@ -155,9 +155,6 @@ public abstract class TypeReference<T> {
     public static void main(String[] args) throws Exception {
         List<String> l1 = new TypeReference<ArrayList<String>>(){}.newInstance();
         List l2 = new TypeReference<ArrayList>() {}.newInstance();
-        l1.forEach((s)->{
-            System.out.println(s);
-        });
     }
 }
 
