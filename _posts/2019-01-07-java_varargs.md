@@ -323,7 +323,7 @@ public class Demo {
 
 # 참조
 -----
-* [varargs](https://www.programiz.com/java-programming/varargs)
-
+* [varargs programiz](https://www.programiz.com/java-programming/varargs)
+* [varargs](https://docs.oracle.com/javase/8/docs/technotes/guides/language/varargs.html)
 
 
