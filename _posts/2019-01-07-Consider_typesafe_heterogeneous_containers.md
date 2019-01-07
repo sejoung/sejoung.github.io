@@ -287,5 +287,6 @@ Favorites 코드를 위에 처럼 변환 시켜야 된다.
 * [Variables of Reference Type](https://docs.oracle.com/javase/specs/jls/se8/html/jls-4.html#jls-4.12.2)
 * [토비의 봄 TV 2회 - 수퍼 타입 토큰](https://www.youtube.com/watch?v=01sdXvZSjcI)
 * [[java] 토비의 봄 TV라이브 #2](https://www.bsidesoft.com/?p=2903)
+* [클래스 리터럴, 타입 토큰, 수퍼 타입 토큰](https://homoefficio.github.io/2016/11/30/%ED%81%B4%EB%9E%98%EC%8A%A4-%EB%A6%AC%ED%84%B0%EB%9F%B4-%ED%83%80%EC%9E%85-%ED%86%A0%ED%81%B0-%EC%88%98%ED%8D%BC-%ED%83%80%EC%9E%85-%ED%86%A0%ED%81%B0/)
 
 
