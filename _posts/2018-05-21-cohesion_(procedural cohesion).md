@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "cohesion_(procedural cohesion)"
+title: "응집도_(procedural cohesion)"
 date: 2018-05-21 15:42:00 +0900
 comments: false
 sitemap :

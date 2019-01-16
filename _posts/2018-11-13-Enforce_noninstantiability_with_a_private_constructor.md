@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Enforce_noninstantiability_with_a_private_constructor"
+title: "아이템 4. 인스턴스화를 막으려면 private 생성자를 사용하라"
 date: 2018-11-13 10:41 +0900
 comments: false
 sitemap :

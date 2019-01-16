@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Favor composition over inheritance"
+title: "아이템 18. 상속보단 컴포지션을 사용하라"
 date: 2018-12-10 10:33 +0900
 comments: false
 sitemap :

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "CodeSpitz74_Part4"
+title: "CodeSpitz74_Part4(권한과 책임)"
 date: 2018-02-19 19:45:00 +0900
 comments: false
 sitemap :

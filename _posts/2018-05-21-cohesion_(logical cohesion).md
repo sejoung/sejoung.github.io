@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "cohesion_(logical cohesion)"
+title: "응집도_(logical cohesion)"
 date: 2018-05-21 14:00:00 +0900
 comments: false
 sitemap :

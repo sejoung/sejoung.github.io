@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Style_Guidelines_JEP_286"
+title: "Style Guidelines for Local Variable Type Inference in Java"
 date: 2018-11-02 11:46 +0900
 comments: false
 sitemap :

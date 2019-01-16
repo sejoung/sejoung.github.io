@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "cohesion_(temporal cohesion)"
+title: "응집도_(temporal cohesion)"
 date: 2018-05-21 14:46:00 +0900
 comments: false
 sitemap :

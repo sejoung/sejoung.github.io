@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "coupling_(control coupling)"
+title: "결합도_(control coupling)"
 date: 2018-05-16 14:00:00 +0900
 comments: false
 sitemap :

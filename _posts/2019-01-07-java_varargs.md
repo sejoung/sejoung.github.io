@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "java_varargs"
+title: "java_가변인수(varargs)"
 date: 2019-01-07 10:11 +0900
 comments: false
 sitemap :

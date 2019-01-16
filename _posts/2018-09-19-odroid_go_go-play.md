@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "odroid_go_go-play"
+title: "오드로이드 고"
 date: 2018-09-19 12:23 +0900
 comments: false
 sitemap :

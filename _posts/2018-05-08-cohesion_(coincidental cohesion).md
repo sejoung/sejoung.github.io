@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "cohesion_(coincidental cohesion)"
+title: "응집도_(coincidental cohesion)"
 date: 2018-05-08 15:38:00 +0900
 comments: false
 sitemap :

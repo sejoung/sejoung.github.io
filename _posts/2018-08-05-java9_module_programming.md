@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "java9_module_programming"
+title: "Java9 모듈 프로그래밍(유동환) - 비긴 메이트"
 date: 2018-08-05 13:00:00 +0900
 comments: false
 sitemap :

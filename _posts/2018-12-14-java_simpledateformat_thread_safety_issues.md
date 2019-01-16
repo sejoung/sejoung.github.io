@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "java-simpledateformat-thread-safety-issues"
+title: "Java의 SimpleDateFormat은 thread-safe 하지 않다. multi-threaded 환경에서 조심히 사용하자"
 date: 2018-12-14 10:58 +0900
 comments: false
 sitemap :

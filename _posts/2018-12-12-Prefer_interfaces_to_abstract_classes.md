@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Prefer interfaces to abstract classes"
+title: "아이템 20. 추상 클래스 보다는 인터페이스를 우선하라"
 date: 2018-12-12 12:01 +0900
 comments: false
 sitemap :

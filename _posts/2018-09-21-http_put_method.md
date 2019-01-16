@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "http_put_method"
+title: "HTTP PUT 메소드"
 date: 2018-09-21 10:51 +0900
 comments: false
 sitemap :

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Always override hashCode when you override equals"
+title: "아이템 11. equals를 재정의 하려면 hashcode도 재정의 하라"
 date: 2018-11-27 09:10 +0900
 comments: false
 sitemap :

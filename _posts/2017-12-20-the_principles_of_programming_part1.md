@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "POP_part1"
+title: "POP_part1(전제 프로그래밍 불변사실)"
 date: 2017-12-20 09:00:00 +0900
 comments: false
 sitemap :

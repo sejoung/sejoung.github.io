@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "coupling_(data coupling)"
+title: "결합도_(data coupling)"
 date: 2018-05-21 09:30:00 +0900
 comments: false
 sitemap :

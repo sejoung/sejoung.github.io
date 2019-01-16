@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "codespitz73_part5_1"
+title: "코드스피츠73 part5_1(BLOCK, NONBLOCK)"
 date: 2018-04-04 09:00:00 +0900
 comments: false
 sitemap :

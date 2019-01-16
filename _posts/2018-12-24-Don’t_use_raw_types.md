@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Don’t use raw types"
+title: "아이템 26. raw 타입은 사용하지 말자."
 date: 2018-12-24 09:10 +0900
 comments: false
 sitemap :

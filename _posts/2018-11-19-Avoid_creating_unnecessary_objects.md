@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Avoid_creating_unnecessary_objects"
+title: "아이템 6. 불필요한 객체생성을 피하라"
 date: 2018-11-19 09:49 +0900
 comments: false
 sitemap :

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "java static"
+title: "java static thread safe"
 date: 2017-12-05 14:47:00 +0900
 comments: false
 sitemap :

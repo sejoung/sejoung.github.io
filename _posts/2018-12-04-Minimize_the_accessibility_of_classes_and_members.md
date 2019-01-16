@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Minimize the accessibility of classes and members"
+title: "아이템 15. 클래스와 맴버의 접근권한을 최소화 하라."
 date: 2018-12-04 13:30 +0900
 comments: false
 sitemap :

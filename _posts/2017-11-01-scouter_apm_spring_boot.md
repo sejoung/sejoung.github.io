@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "scouter_apm_spring_boot"
+title: "스프링 부트에서 스카우트 APM 사용법"
 date: 2017-11-01 17:00:00 +0900
 comments: false
 sitemap :

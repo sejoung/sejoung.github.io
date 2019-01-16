@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Favor generic types"
+title: "아이템 29. 이왕이면 제네릭타입으로 만들어라"
 date: 2018-12-28 13:43 +0900
 comments: false
 sitemap :

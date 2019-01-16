@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "vagrant_redis"
+title: "vagrant로 레디스 설치하기 "
 date: 2018-06-25 15:30:00 +0900
 comments: false
 sitemap :

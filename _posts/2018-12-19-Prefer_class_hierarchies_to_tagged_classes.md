@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Prefer class hierarchies to tagged classes"
+title: "아이템 23. 테그달린 클래스보다 클래스 계층구조를 활용하라."
 date: 2018-12-19 11:48 +0900
 comments: false
 sitemap :

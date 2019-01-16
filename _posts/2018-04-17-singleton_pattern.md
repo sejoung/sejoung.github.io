@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "singleton_pattern"
+title: "싱글턴 패턴은 안티패턴?"
 date: 2018-04-17 16:30:00 +0900
 comments: false
 sitemap :

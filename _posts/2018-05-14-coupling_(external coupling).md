@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "coupling_(external coupling)"
+title: "결합도_(external coupling)"
 date: 2018-05-14 11:00:00 +0900
 comments: false
 sitemap :

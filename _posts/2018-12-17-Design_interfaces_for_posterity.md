@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Design interfaces for posterity"
+title: "아이템 21. 인터페이스를 구현하는 쪽을 생각해 설계하라."
 date: 2018-12-17 10:33 +0900
 comments: false
 sitemap :

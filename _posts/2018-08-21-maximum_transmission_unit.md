@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "maximum_transmission_unit"
+title: "OS 파라미터 maximum_transmission_unit"
 date: 2018-08-21 15:36 +0900
 comments: false
 sitemap :
@@ -8,7 +8,7 @@ sitemap :
   priority : 1.0
 ---
 
-### maximum_transmission_unit
+### OS 파라미터 maximum_transmission_unit
 
 os를 설치하고 처음 OS 파라미터들을 셋팅 할때 필요한것을 하나씩 정리 해 나갈려고 한다. 
 

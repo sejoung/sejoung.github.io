@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "spring_boot_tomcatDatasource_minidle"
+title: "톰캣 데이터 소스 min-idle"
 date: 2018-09-20 14:31 +0900
 comments: false
 sitemap :

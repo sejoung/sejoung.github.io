@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "smart_phone_debug"
+title: "fiddler remote debuger 방법"
 date: 2018-07-26 19:26:00 +0900
 comments: false
 sitemap :

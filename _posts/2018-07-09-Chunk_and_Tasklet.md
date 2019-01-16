@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Chunk_and_Tasklet"
+title: "스프링 배치 Step 에 Chunk 처리와 Tasklet 처리의 차이"
 date: 2018-07-09 10:55:00 +0900
 comments: false
 sitemap :

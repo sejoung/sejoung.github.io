@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "coupling_(content coupling)"
+title: "결합도_(content coupling)"
 date: 2018-05-08 18:25:00 +0900
 comments: false
 sitemap :

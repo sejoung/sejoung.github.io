@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Minimize mutability"
+title: "아이템 17. 변경가능성을 최소화하라."
 date: 2018-12-07 10:33 +0900
 comments: false
 sitemap :

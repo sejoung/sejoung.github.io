@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "codespitz73_part4"
+title: "codespitz73_part4(ABSTRACT LOOP & LAZY EXECUTION)"
 date: 2018-01-17 09:00:00 +0900
 comments: false
 sitemap :

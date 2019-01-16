@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "coupling_(stamp coupling)"
+title: "결합도_(stamp coupling)"
 date: 2018-05-18 09:30:00 +0900
 comments: false
 sitemap :

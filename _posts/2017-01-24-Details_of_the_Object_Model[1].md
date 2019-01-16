@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Details_of_the_Object_Model[1]"
+title: "클래스 기반 언어와 프로토 타입 기반 언어(Class-based vs. prototype-based languages)"
 date: 2017-01-24 15:29:00 +0900
 comments: false
 sitemap :

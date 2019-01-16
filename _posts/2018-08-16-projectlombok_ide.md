@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "projectlombok_ide"
+title: "projectlombok IDE에 설치 방법"
 date: 2018-08-16 10:46 +0900
 comments: false
 sitemap :

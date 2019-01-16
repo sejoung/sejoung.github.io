@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "jigsaw_eclipse"
+title: "이클립스에서 jigsaw 코딩 준비하기"
 date: 2018-08-07 09:13:00 +0900
 comments: false
 sitemap :

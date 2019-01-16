@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "projectlombok_use"
+title: "projectlombok 사용에 대한 의견"
 date: 2018-08-16 11:10 +0900
 comments: false
 sitemap :

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Use bounded wildcards to increase API flexibility"
+title: "아이템 31. 한정적 와일드카드를 사용해 API의 유연성을 높혀라."
 date: 2019-01-02 14:59 +0900
 comments: false
 sitemap :

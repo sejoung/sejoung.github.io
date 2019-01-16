@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "cohesion_(sequential cohesion)"
+title: "응집도_(sequential cohesion)"
 date: 2018-05-21 16:34:00 +0900
 comments: false
 sitemap :

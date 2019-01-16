@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "code review"
+title: "코드리뷰(code review)"
 date: 2018-12-24 12:03 +0900
 comments: false
 sitemap :

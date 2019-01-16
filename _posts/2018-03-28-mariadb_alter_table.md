@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "mariadb_alter_table"
+title: "ALTER TABLE ADD PARTITION 시에 장애"
 date: 2018-03-28 09:00:00 +0900
 comments: false
 sitemap :

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Combine generics and varargs judiciously"
+title: "아이템 32. 제네릭과 가변인수를 함께 쓸 때는 신중하라."
 date: 2019-01-07 11:25 +0900
 comments: false
 sitemap :

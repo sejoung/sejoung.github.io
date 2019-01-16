@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "url_special_scheme.md"
+title: "url special scheme"
 date: 2018-08-20 17:36 +0900
 comments: false
 sitemap :

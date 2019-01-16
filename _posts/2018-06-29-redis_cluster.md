@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "redis_cluster"
+title: "Redis cluster 란"
 date: 2018-06-29 09:00:00 +0900
 comments: false
 sitemap :
@@ -8,7 +8,7 @@ sitemap :
   priority : 1.0
 ---
 
-### Redis cluster
+### Redis cluster 란
 
 Redis Cluster는 레디스 버전 3.0 이상에서만 동작 합니다.
 

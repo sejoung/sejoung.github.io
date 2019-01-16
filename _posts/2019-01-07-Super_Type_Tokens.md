@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Super Type Tokens"
+title: "Neal Gafter's Super Type Tokens"
 date: 2019-01-07 13:44 +0900
 comments: false
 sitemap :

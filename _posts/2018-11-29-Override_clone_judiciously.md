@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Override clone judiciously"
+title: "아이템 13. clone 재정의는 주의해서 진행하라."
 date: 2018-11-29 13:54 +0900
 comments: false
 sitemap :

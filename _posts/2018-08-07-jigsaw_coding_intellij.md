@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "jigsaw_intellij_coding"
+title: "인텔리제이에서 jigsaw 코딩하기"
 date: 2018-08-07 11:46:00 +0900
 comments: false
 sitemap :

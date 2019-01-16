@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Prefer_try-with-resources_to_try-finally"
+title: "아이템 9. try-finally 보다 try-with-resources 블럭을 사용하세요 "
 date: 2018-11-23 16:18 +0900
 comments: false
 sitemap :

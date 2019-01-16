@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "eclipse_server_plugins"
+title: "이클립스 SERVER 플러그인"
 date: 2018-04-12 11:30:00 +0900
 comments: false
 sitemap :

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "linux_java_home"
+title: "리눅스에서 java_home 셋팅"
 date: 2018-10-29 11:53 +0900
 comments: false
 sitemap :
@@ -8,7 +8,7 @@ sitemap :
   priority : 1.0
 ---
 
-### linux_java_home
+### 리눅스에서 java_home 셋팅
 
 
 리눅스에서 java_home 셋팅

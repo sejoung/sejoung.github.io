@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "codespitz73_part3_1"
+title: "codespitz73_part3_1(ITERATION & GENERATOR)"
 date: 2018-01-15 19:30:00 +0900
 comments: false
 sitemap :

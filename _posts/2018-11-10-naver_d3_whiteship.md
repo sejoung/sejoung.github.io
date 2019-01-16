@@ -1,7 +1,7 @@
 
 ---
 layout: post
-title: "naver_d3_whiteship"
+title: "스프링 기반의 REST API 개발"
 date: 2018-11-10 08:55 +0900
 comments: false
 sitemap :

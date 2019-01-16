@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "In public classes, use accessor methods, not public fields"
+title: "아이템 16. public classes에는 public fields를 사용하지 말고 접근 메소드를 사용해라."
 date: 2018-12-06 17:04 +0900
 comments: false
 sitemap :

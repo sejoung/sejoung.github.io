@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "anet_a8_print_info"
+title: "3d 프린터 사용하기(anet a8)"
 date: 2018-08-22 14:46 +0900
 comments: false
 sitemap :
@@ -8,7 +8,7 @@ sitemap :
   priority : 1.0
 ---
 
-### 3d 프린터 사용하기
+### 3d 프린터 사용하기(anet a8)
 
 회사에서 동호회를 하고 있는데 동호회비로 가성비(?) 좋은 3d 프린터를 구입했습니다 그것이 anet사에 A8입니다.
 

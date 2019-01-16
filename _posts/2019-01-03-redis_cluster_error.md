@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "redis_cluster_error"
+title: "레디스 클러스터 에러"
 date: 2019-01-03 10:49 +0900
 comments: false
 sitemap :

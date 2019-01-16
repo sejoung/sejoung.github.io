@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Limit source files to a single top-level class"
+title: "아이템 25. 톱레벨 클래스는 한 파일에 하나만 담으라"
 date: 2018-12-21 10:55 +0900
 comments: false
 sitemap :

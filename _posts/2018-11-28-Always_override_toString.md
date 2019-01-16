@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Always override toString"
+title: "아이템 12. toString은 항상 재정의 하라."
 date: 2018-11-28 10:00 +0900
 comments: false
 sitemap :

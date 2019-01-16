@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "anet_a8_print_marlin_firmware"
+title: "anet a8 print marlin firmware 업데이트"
 date: 2018-09-12 11:35 +0900
 comments: false
 sitemap :

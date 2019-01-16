@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "10year_old_developer_way"
+title: "10년 이상 프로그래머"
 date: 2018-08-08 09:10:00 +0900
 comments: false
 sitemap :

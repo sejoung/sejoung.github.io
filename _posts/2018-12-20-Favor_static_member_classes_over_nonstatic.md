@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Favor static member classes over nonstatic"
+title: "아이템 24. 맴버클래스는 되도록 static으로 만들자"
 date: 2018-12-20 10:53 +0900
 comments: false
 sitemap :

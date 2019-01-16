@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "coupling_(common coupling)"
+title: "결합도_(common coupling)"
 date: 2018-05-09 11:00:00 +0900
 comments: false
 sitemap :

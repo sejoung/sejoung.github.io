@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Emulate extensible enums with interfaces"
+title: "아이템 38. 확장할수있는 열거 타입이 필요하면 인터페이스를 사용하라."
 date: 2019-01-11 10:26 +0900
 comments: false
 sitemap :

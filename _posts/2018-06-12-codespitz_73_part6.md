@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "codespitz_73_part6"
+title: "codespitz_73_part6(generator, promise, async/await)"
 date: 2018-06-12 10:30:00 +0900
 comments: false
 sitemap :
@@ -8,9 +8,9 @@ sitemap :
   priority : 1.0
 ---
 
-### 코드스피츠73 part6
+## 코드스피츠73 part6
 
-#### generator, promise, async/await
+### generator, promise, async/await
 
 #### generator
 

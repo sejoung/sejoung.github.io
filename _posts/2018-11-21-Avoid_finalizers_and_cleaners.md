@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Avoid_finalizers_and_cleaners"
+title: "아이템 8. Finalizer와 Cleaner의 사용은 피하라"
 date: 2018-11-21 14:05 +0900
 comments: false
 sitemap :

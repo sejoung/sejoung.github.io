@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Use EnumSet instead of bit fields"
+title: "아이템 36. 비트필드 대신 EnumSet을 사용하라"
 date: 2019-01-09 10:55 +0900
 comments: false
 sitemap :

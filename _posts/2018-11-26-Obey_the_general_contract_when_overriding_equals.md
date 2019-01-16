@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Obey the general contract when overriding equals"
+title: "아이템 10. equals는 일반규약을 지켜서 재정의 하라"
 date: 2018-11-26 14:34 +0900
 comments: false
 sitemap :

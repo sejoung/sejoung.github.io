@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Consider implementing Comparable"
+title: "아이템 14. Comparable을 구현할지 고려하라."
 date: 2018-12-03 10:43 +0900
 comments: false
 sitemap :

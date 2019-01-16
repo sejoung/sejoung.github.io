@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Consider typesafe heterogeneous containers"
+title: "아이템 33. 타입안전 이종컨테이너를 고려하라."
 date: 2019-01-07 14:17 +0900
 comments: false
 sitemap :

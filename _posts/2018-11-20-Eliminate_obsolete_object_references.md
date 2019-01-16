@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Eliminate obsolete object references"
+title: "아이템 7. 다쓴 객체의 참조를 해제하라"
 date: 2018-11-20 10:30 +0900
 comments: false
 sitemap :

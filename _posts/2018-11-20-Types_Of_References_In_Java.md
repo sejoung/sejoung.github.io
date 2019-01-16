@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Types_Of_References_In_Java"
+title: "자바의 레퍼런스 타입"
 date: 2018-11-20 14:16 +0900
 comments: false
 sitemap :

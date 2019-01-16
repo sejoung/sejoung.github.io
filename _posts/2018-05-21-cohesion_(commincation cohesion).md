@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "cohesion_(commincation cohesion)"
+title: "응집도_(commincation cohesion)"
 date: 2018-05-21 16:34:00 +0900
 comments: false
 sitemap :

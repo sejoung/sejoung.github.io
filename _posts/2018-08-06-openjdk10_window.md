@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "openjdk10_window"
+title: "openjdk10 설치(window)"
 date: 2018-08-06 14:12:00 +0900
 comments: false
 sitemap :

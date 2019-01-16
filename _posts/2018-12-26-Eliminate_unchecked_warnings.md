@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Eliminate unchecked warnings"
+title: "아이템 27. 비검사 경고를 제거하라 "
 date: 2018-12-26 11:53 +0900
 comments: false
 sitemap :

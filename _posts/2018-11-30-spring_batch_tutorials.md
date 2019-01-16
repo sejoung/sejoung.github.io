@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "spring_batch_tutorials"
+title: "스프링 배치 처음 따라하기 튜토리얼"
 date: 2018-11-30 09:56 +0900
 comments: false
 sitemap :

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Use enums instead of int constants"
+title: "아이템 34. int 상수 대신 열거 타입을 사용하라."
 date: 2019-01-08 15:22 +0900
 comments: false
 sitemap :

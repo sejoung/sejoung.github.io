@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "working-with-hashcode-and-equals-in-java"
+title: "hashcode () 및 equals ()를 사용한 작업"
 date: 2018-11-26 10:56 +0900
 comments: false
 sitemap :

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Use EnumMap instead of ordinal indexing"
+title: "아이템 37. ordinal indexing 대신 EnumMap을 사용하라."
 date: 2019-01-10 13:30 +0900
 comments: false
 sitemap :

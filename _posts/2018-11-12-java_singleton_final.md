@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "java_singleton_final"
+title: "아이템 3. private 생성자나 열거 타입으로 싱글턴임을 보장하라"
 date: 2018-11-12 11:55 +0900
 comments: false
 sitemap :

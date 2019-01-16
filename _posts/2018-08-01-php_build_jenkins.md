@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "php_build_jenkins"
+title: "jenkins php 파일 배포 하기"
 date: 2018-08-01 09:30:00 +0900
 comments: false
 sitemap :

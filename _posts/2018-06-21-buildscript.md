@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "buildscript"
+title: "빌드스크립트 정리 후기"
 date: 2018-06-21 11:30:00 +0900
 comments: false
 sitemap :

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "binary gap"
+title: "코딜러티 문제(binary gap)"
 date: 2019-01-15 14:08 +0900
 comments: false
 sitemap :
   changefreq : daily
   priority : 1.0
 ---
-## binary gap
+## 코딜러티 문제(binary gap)
 
 코딜러티 문제를 풀어 봤는데요 전 자바 버전으로 풀었습니다.
 
@@ -81,7 +81,9 @@ public class Solution {
 
 스텍오버플로우에서 다른사람 풀이도 보니 다르게 푸는것을 보는 재미가 있었습니다.
 
+1과 1사이의 인덱스를 가지고 푼 예가 없어서 스텍오버플로에 답변으로 남겼습니다.
+
 # 참조
 -----
 * [codility binary_gap](https://app.codility.com/programmers/lessons/1-iterations/binary_gap/)
-
+* [stackoverflow binary_gap](https://stackoverflow.com/questions/35531747/solving-binary-gap-using-recursion)

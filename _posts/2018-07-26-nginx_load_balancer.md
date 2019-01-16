@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "nginx_load_balancer"
+title: "nginx HTTP load balancer 설정"
 date: 2018-07-26 20:21:00 +0900
 comments: false
 sitemap :
