@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "데이터 베이스 코드 테이블의 값을 Enum 으로 바꾸기"
-date: 2019-01-21 14:00 +0900
+date: 2019-01-21 14:15 +0900
 comments: false
 sitemap :
   changefreq : daily
