@@ -147,7 +147,7 @@ Process finished with exit code 0
 
 위 처럼 바꾸는것이 좀더 깔끔 할것 같다.
 
-아래 sql은 concat으로 enmu을 만들어서 복붙하려고 한번 해보았다. 비슷하게 하면 코드를 안해도 복붙가능하다.
+아래 sql은 concat으로 enum을 만들어서 복붙하려고 한번 해보았다. 비슷하게 하면 코드를 안해도 복붙가능하다.
 
 ```sql
 
