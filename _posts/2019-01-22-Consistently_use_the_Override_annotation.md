@@ -162,8 +162,66 @@ Process finished with exit code 0
 위와 같이 일괄적으로  @Override를 달자 
 
 예외는 하나만 존재하는데 구체클래스에서 추상메소드를 구현할때는 달지 안아도 된다. 
-이것은 구현하지 않으면 컴파일러에서 자동으로 알려줘서 이다.
+이것은 구현하지 않으면 컴파일러에서 자동으로 알려줘서 이다. 
 
+아래는 예제
+
+```java
+
+package com.github.sejoung.codetest.override;
+
+public abstract class Test {
+
+    public abstract void test();
+
+}
+
+
+```
+
+```java
+
+package com.github.sejoung.codetest.override;
+
+public class TestImpl extends Test {
+
+    public void test(String a) {
+
+    }
+
+
+}
+
+
+```
+컴파일 메시지
+```
+
+Error:(3, 31) java: cannot find symbol
+  symbol: class Test
+
+```
+위에 처럼 잘못 오버라이딩 하면 컴파일러가 알려준다 그래서 @Override를 안해줘도 되지만 해도 무방하다.
+
+```java
+
+package com.github.sejoung.codetest.override;
+
+public class TestImpl extends Test {
+
+    public void test(String a) {
+
+    }
+
+
+    @Override
+    public void test() {
+        
+    }
+}
+
+
+```
 
 
 # 참조
