@@ -31,6 +31,7 @@ Resource 설정
           maxActive="100"
           maxIdle="30"
           maxWait="10000"
+          secretKey="key"
           username="808233982b9c435fb8a3331634a3c48b"
           password="3b8dcdcf348d8b466915f66c30003e95"
           driverClassName="org.mariadb.jdbc.Driver"
@@ -49,6 +50,7 @@ Resource 설정
           maxActive="100"
           maxIdle="30"
           maxWait="10000"
+          secretKey="key"
           username="808233982b9c435fb8a3331634a3c48b"
           password="3b8dcdcf348d8b466915f66c30003e95"
           driverClassName="org.mariadb.jdbc.Driver"
@@ -63,7 +65,7 @@ pom.xml에 추가후에 위에 처럼 사용가능
 <dependency>
     <groupId>com.github.sejoung</groupId>
     <artifactId>tomcat-jdbc-encrypt</artifactId>
-    <version>1.4</version>
+    <version>1.5</version>
 </dependency>
 
 ```
@@ -77,9 +79,9 @@ USAGE: java -jar tomcat-jdbc-encrypt-[version].jar [encrypt,decrypt] [secretKey]
 ```
 
 ```
-java -jar tomcat-jdbc-encrypt-1.4.jar encrypt key 1
+java -jar tomcat-jdbc-encrypt-1.5.jar encrypt key 1
 
-java -jar tomcat-jdbc-encrypt-1.4.jar decrypt key eb77d942479a6b2e44841d653175e8a3
+java -jar tomcat-jdbc-encrypt-1.5.jar decrypt key eb77d942479a6b2e44841d653175e8a3
 
 ```
 
