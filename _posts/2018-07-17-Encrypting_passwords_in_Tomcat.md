@@ -67,9 +67,21 @@ pom.xml에 추가후에 위에 처럼 사용가능
 </dependency>
 
 ```
-
 [mvnrepository tomcat-jdbc-encrypt](https://mvnrepository.com/artifact/com.github.sejoung/tomcat-jdbc-encrypt) 링크의 최신 버전을 쓰시면 됩니다.
 
+사용법
+
+```
+USAGE: java -jar tomcat-jdbc-encrypt-[version].jar [encrypt,decrypt] [secretKey] [string-to-encrypt,string-to-decrypt]
+
+```
+
+```
+java -jar tomcat-jdbc-encrypt-1.4.jar encrypt key 1
+
+java -jar tomcat-jdbc-encrypt-1.4.jar decrypt key eb77d942479a6b2e44841d653175e8a3
+
+```
 
 # 참조 
 -----
