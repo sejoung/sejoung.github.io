@@ -63,14 +63,16 @@ pom.xml에 추가후에 위에 처럼 사용가능
 <dependency>
     <groupId>com.github.sejoung</groupId>
     <artifactId>tomcat-jdbc-encrypt</artifactId>
-    <version>1.0</version>
+    <version>1.4</version>
 </dependency>
 
 ```
 
+[mvnrepository tomcat-jdbc-encrypt](https://mvnrepository.com/artifact/com.github.sejoung/tomcat-jdbc-encrypt) 링크의 최신 버전을 쓰시면 됩니다.
 
 
 # 참조 
 -----
 * [encrypting-passwords-in-tomcat](http://www.jdev.it/encrypting-passwords-in-tomcat)
 * [tomcat-jdbc-encrypt 소스](https://github.com/sejoung/tomcat-jdbc-encrypt)
+* [mvnrepository tomcat-jdbc-encrypt](https://mvnrepository.com/artifact/com.github.sejoung/tomcat-jdbc-encrypt)
