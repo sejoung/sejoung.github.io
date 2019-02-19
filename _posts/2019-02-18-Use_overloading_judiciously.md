@@ -309,29 +309,11 @@ String 클래스를 보면 contentEquals 메소드는 forward 시켜 버리는 �
 
 ```java
 
-/**
-     * Returns the string representation of the {@code Object} argument.
-     *
-     * @param   obj   an {@code Object}.
-     * @return  if the argument is {@code null}, then a string equal to
-     *          {@code "null"}; otherwise, the value of
-     *          {@code obj.toString()} is returned.
-     * @see     java.lang.Object#toString()
-     */
     public static String valueOf(Object obj) {
         return (obj == null) ? "null" : obj.toString();
     }
 
-    /**
-     * Returns the string representation of the {@code char} array
-     * argument. The contents of the character array are copied; subsequent
-     * modification of the character array does not affect the returned
-     * string.
-     *
-     * @param   data     the character array.
-     * @return  a {@code String} that contains the characters of the
-     *          character array.
-     */
+  
     public static String valueOf(char data[]) {
         return new String(data);
     }
