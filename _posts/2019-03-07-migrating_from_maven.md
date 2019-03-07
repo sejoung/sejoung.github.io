@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Apache Maven에서 빌드 마이그레이션하기"
-date: 2019-03-06 14:50 +0900
+date: 2019-03-07 14:50 +0900
 comments: false
 sitemap :
   changefreq : daily

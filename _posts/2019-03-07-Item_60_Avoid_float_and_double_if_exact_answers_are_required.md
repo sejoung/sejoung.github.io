@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "아이템 60. 정확한 답이 필요하면 float와 double 은 피하라 "
-date: 2019-03-06 10:40 +0900
+date: 2019-03-07 10:40 +0900
 comments: false
 sitemap :
   changefreq : daily
