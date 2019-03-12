@@ -30,49 +30,60 @@ Given-When-Then 공식은 User Story에 대한 수락 테스트 의 작성을 �
 
 ```java
 
-
 package com.github.sejoung.repositories;
 
+
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.hamcrest.CoreMatchers.is;
+
+
 import com.github.sejoung.domain.DomainTest;
+import javax.annotation.Resource;
 import lombok.extern.slf4j.Slf4j;
-import static org.junit.Assert.*;
-import static org.hamcrest.CoreMatchers.*;
+import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
+import org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManager;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import javax.annotation.Resource;
-
 @RunWith(SpringRunner.class)
-@SpringBootTest
+@DataJpaTest // the test slice
 @Slf4j
 public class TestRepositoryDomainDomainTest {
 
   @Resource
   private DomainTestRepository repository;
 
+  @Resource
+  private TestEntityManager testEntityManager;
+
   @Test
-  public void 저장테스트() {
+  public void 조회테스트() {
 
     // given
     var dt = DomainTest.builder().title("test").build();
-    var saveDt = repository.save(dt);
+    testEntityManager.persistAndFlush(dt);
 
     //when
-    var isData = repository.existsById(saveDt.getId());
+    var saveDt = repository.findById(dt.getId()).orElseThrow();
 
     //then
-    assertThat("같은 데이터를 가지고옴",isData,is(true));
+    assertThat(saveDt.getTitle()).as("타이틀이 저장된 값과 조회된 값이 같아야 된다.").isEqualTo("test");
+    assertThat(saveDt.getId()).as("id가 있어야 된다.").isNotNull();
+    assertThat(saveDt.getCreateDateTime().toLocalDate()).as("저장된 생성일자와 조회된 생성일자가 같아야 된다.")
+        .isEqualTo(dt.getCreateDateTime().toLocalDate());
 
-    //초기화
-    repository.delete(saveDt);
-
+    Assert.assertThat("타이틀이 저장된 값과 조회된 값이 같아야 된다.",saveDt.getTitle(), is("title"));
   }
 
 }
 
 ```
+
+위에 코드를 보면 hamcrest와 assertj를 썩어 써보았다. 
+
+제쪽엔 더 장점을 느끼는게 assertj가 코드 어시스턴트의 도움을 받을수 있어서 더 편한것 같다. 
 
 
 # 참조
@@ -84,3 +95,4 @@ public class TestRepositoryDomainDomainTest {
 * [Four-Phase Test](http://xunitpatterns.com/Four%20Phase%20Test.html)
 * [cucumber.io](https://cucumber.io/)
 * [코드리뷰 적응기(feat. 파일럿 프로젝트)](http://woowabros.github.io/experience/2019/02/28/pilot-project-settle.html)
+* [hamcrest vs AssertJ](https://dzone.com/articles/hamcrest-vs-assertj-assertion-frameworks-which-one)
