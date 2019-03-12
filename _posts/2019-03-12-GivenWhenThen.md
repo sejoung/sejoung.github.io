@@ -74,7 +74,7 @@ public class TestRepositoryDomainDomainTest {
     assertThat(saveDt.getCreateDateTime().toLocalDate()).as("저장된 생성일자와 조회된 생성일자가 같아야 된다.")
         .isEqualTo(dt.getCreateDateTime().toLocalDate());
 
-    Assert.assertThat("타이틀이 저장된 값과 조회된 값이 같아야 된다.",saveDt.getTitle(), is("title"));
+    Assert.assertThat("타이틀이 저장된 값과 조회된 값이 같아야 된다.",saveDt.getTitle(), is("test"));
   }
 
 }
