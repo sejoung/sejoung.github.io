@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "도커 처음 시작하기(오리엔테이션 및 설정)"
+title: "도커 처음 시작하기part1(오리엔테이션 및 설정)"
 date: 2019-03-13 14:02 +0900
 comments: false
 sitemap :
