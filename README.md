@@ -4,7 +4,17 @@
 
 ```
 npm install hexo-cli -g
+
 npm install hexo-renderer-jade hexo-renderer-stylus --save
+
+npm install hexo-autonofollow --save
+
+npm install hexo-auto-canonical --save 
+
+npm install hexo-generator-seo-friendly-sitemap --save
+
+npm install hexo-generator-feed --save
+
 ```
 파일제네레이터
 ```
