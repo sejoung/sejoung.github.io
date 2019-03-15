@@ -14,23 +14,23 @@ sitemap :
 
 그럼 자바 프로젝트 생성
 
-![jigsaw UI1](https://sejoung.github.io/images/2018_08_07_01.jpg){: width="100%"}{: .center}
+![jigsaw UI1](https://sejoung.github.io/images/2018_08_07_01.jpg)
 
 프로젝트명 입력하고
 
-![jigsaw UI2](https://sejoung.github.io/images/2018_08_07_02.jpg){: width="100%"}{: .center}
+![jigsaw UI2](https://sejoung.github.io/images/2018_08_07_02.jpg)
 
 아래 보면 create module-info.java file에 체크되어 있음 모듈프로그램에 기본인 module-info 생성
 
-![jigsaw UI3](https://sejoung.github.io/images/2018_08_07_03.jpg){: width="100%"}{: .center}
+![jigsaw UI3](https://sejoung.github.io/images/2018_08_07_03.jpg)
 
 모듈명 입력
 
-![jigsaw UI4](https://sejoung.github.io/images/2018_08_07_04.jpg){: width="100%"}{: .center}
+![jigsaw UI4](https://sejoung.github.io/images/2018_08_07_04.jpg)
 
 모듈 info가 생겼습니다.
 
-![jigsaw UI5](https://sejoung.github.io/images/2018_08_07_05.jpg){: width="100%"}{: .center}
+![jigsaw UI5](https://sejoung.github.io/images/2018_08_07_05.jpg)
 
 
 일단 그럼 두번째 second 프로젝트 생성시키고
@@ -91,23 +91,23 @@ module first {
 
 아래처럼 에러가남 
 
-![jigsaw UI6](https://sejoung.github.io/images/2018_08_07_06.jpg){: width="100%"}{: .center}
+![jigsaw UI6](https://sejoung.github.io/images/2018_08_07_06.jpg)
 
 아래 메뉴 클릭
 
-![jigsaw UI7](https://sejoung.github.io/images/2018_08_07_07.jpg){: width="100%"}{: .center}
+![jigsaw UI7](https://sejoung.github.io/images/2018_08_07_07.jpg)
 
 못보던 module path 생김 add 버튼 클릭
 
-![jigsaw UI8](https://sejoung.github.io/images/2018_08_07_08.jpg){: width="100%"}{: .center}
+![jigsaw UI8](https://sejoung.github.io/images/2018_08_07_08.jpg)
 
 second 프로젝트 체크박스 선택
 
-![jigsaw UI9](https://sejoung.github.io/images/2018_08_07_09.jpg){: width="100%"}{: .center}
+![jigsaw UI9](https://sejoung.github.io/images/2018_08_07_09.jpg)
 
 module path에 추가 완료 됨 에러가 사라짐
 
-![jigsaw UI10](https://sejoung.github.io/images/2018_08_07_10.jpg){: width="100%"}{: .center}
+![jigsaw UI10](https://sejoung.github.io/images/2018_08_07_10.jpg)
 
 나머지 코드는 first 프로젝트에 first 패키지에 아래 코드 생성후 테스트
 

@@ -21,44 +21,44 @@ x축과 y축이 맞지 않았습니다. 그리고 x축까지 알고 보았는데
 
 인스톨후에 실행 시킨후 아래에 절차를 따라서 셋팅 해줘야 됩니다. 
 
-![cura UI1](https://sejoung.github.io/images/2018_08_22_01.jpg){: width="100%"}{: .center}
+![cura UI1](https://sejoung.github.io/images/2018_08_22_01.jpg)
 
 일단 프린터를 진행하기 위해 프린터를 추가 할려고 합니다. 아래의 이미지를 보시면 setting -> printer -> add printer
 
-![cura UI2](https://sejoung.github.io/images/2018_08_22_02.jpg){: width="100%"}{: .center}
+![cura UI2](https://sejoung.github.io/images/2018_08_22_02.jpg)
 
 버튼을 누르면 아래의 팝업 창이 나타 납니다.
 
-![cura UI3](https://sejoung.github.io/images/2018_08_22_03.jpg){: width="100%"}{: .center}
+![cura UI3](https://sejoung.github.io/images/2018_08_22_03.jpg)
 
 거기서 other를 누르면 프린터 목록이 나타 납니다.
 
-![cura UI4](https://sejoung.github.io/images/2018_08_22_04.jpg){: width="100%"}{: .center}
+![cura UI4](https://sejoung.github.io/images/2018_08_22_04.jpg)
 
 그러면 거기서 prusa i3를 클릭 해서 add printer를 해주시면 됩니다.
 
-![cura UI5](https://sejoung.github.io/images/2018_08_22_05.jpg){: width="100%"}{: .center}
+![cura UI5](https://sejoung.github.io/images/2018_08_22_05.jpg)
 
 추가 되면 전 싱기버스에서 주사위를 하나 받았습니다. 주사위 파일을 로드 시키기 위해 아래의 이미지 처럼
 file -> open file 클릭
 
-![cura UI6](https://sejoung.github.io/images/2018_08_22_06.jpg){: width="100%"}{: .center}
+![cura UI6](https://sejoung.github.io/images/2018_08_22_06.jpg)
 
 다운 받은 stl 파일 위치로 이동
 
-![cura UI7](https://sejoung.github.io/images/2018_08_22_07.jpg){: width="100%"}{: .center}
+![cura UI7](https://sejoung.github.io/images/2018_08_22_07.jpg)
 
 로드 하면 아래의 화면이 나타납니다. 왼쪽에 여러가지 옵션을 컨트롤후 prepare 버튼을 누르면 시간이 계산되고 
 
-![cura UI8](https://sejoung.github.io/images/2018_08_22_08.jpg){: width="100%"}{: .center}
+![cura UI8](https://sejoung.github.io/images/2018_08_22_08.jpg)
 
 아래처럼 파일을 save 할수있는 버튼이 나온다.
 
-![cura UI9](https://sejoung.github.io/images/2018_08_22_09.jpg){: width="100%"}{: .center}
+![cura UI9](https://sejoung.github.io/images/2018_08_22_09.jpg)
 
 파일을 save 후에 sd카드에 담아서 프린터에서 프린트를 실행하면 프린터가 된다.
 
-![cura UI10](https://sejoung.github.io/images/2018_08_22_10.jpg){: width="100%"}{: .center}
+![cura UI10](https://sejoung.github.io/images/2018_08_22_10.jpg)
 
 
 

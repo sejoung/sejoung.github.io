@@ -18,7 +18,7 @@ spring boot 버전이 2.1이 릴리즈 되지 않아서 서버 셋팅을 1.8로 
 
 그래서 이클립스에서 jdk 11을 지원하는 방법에 대해서 포스팅 할려고 합니다.
 
-![eclipse UI1](https://sejoung.github.io/images/2018_10_31_01.jpg){: width="100%"}{: .center}
+![eclipse UI1](https://sejoung.github.io/images/2018_10_31_01.jpg)
 
 위에 이클립스 컴파일러 셋팅을 보면 10이 최고 버전으로 11을 깔아도 ide에서 지원하지 않아서 
 아래 처럼 maven에 java.version을 11 올려도 인식되지 않아 1.5버전으로 maven으로 셋팅 됨니다.
@@ -33,19 +33,19 @@ spring boot 버전이 2.1이 릴리즈 되지 않아서 서버 셋팅을 1.8로 
 
 ```  
 
-![eclipse UI2](https://sejoung.github.io/images/2018_10_31_02.jpg){: width="100%"}{: .center}
+![eclipse UI2](https://sejoung.github.io/images/2018_10_31_02.jpg)
 
 그래서 위에 플러그인을 설정해서 jdk11을 지원 할 수 있도록 만들고 있습니다.
 
-![eclipse UI3](https://sejoung.github.io/images/2018_10_31_03.jpg){: width="100%"}{: .center}
+![eclipse UI3](https://sejoung.github.io/images/2018_10_31_03.jpg)
 
 그럼 설정은 위에 이미지에 보시면 마켓플레이스 메뉴로 들어갑니다.
 
-![eclipse UI4](https://sejoung.github.io/images/2018_10_31_04.jpg){: width="100%"}{: .center}
+![eclipse UI4](https://sejoung.github.io/images/2018_10_31_04.jpg)
 
 거기서 java 11으로 검색하면 위에 플러그인이 나옵니다 install 버튼을 클릭하시면 인스톨이 되고 
 
-![eclipse UI5](https://sejoung.github.io/images/2018_10_31_05.jpg){: width="100%"}{: .center}
+![eclipse UI5](https://sejoung.github.io/images/2018_10_31_05.jpg)
 
 재시작을 하면 위에 처럼 jdk 11을 지원하기 시작합니다.
 

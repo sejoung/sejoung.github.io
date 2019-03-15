@@ -22,11 +22,11 @@ sitemap :
 
 먼저 상단 메뉴의 file을 클릭후애 setting으로 들어가면 아래의 메뉴에 존재 한다.
 
-![idea UI1](https://sejoung.github.io/images/2018_12_31_01.jpg){: width="100%"}{: .center}
+![idea UI1](https://sejoung.github.io/images/2018_12_31_01.jpg)
 
 위에 보면 추가된 위치에 추가 시켜 주면 아래의 메시지 창에서 확인 할수 있다.
 
-![idea UI2](https://sejoung.github.io/images/2018_12_31_02.jpg){: width="100%"}{: .center}
+![idea UI2](https://sejoung.github.io/images/2018_12_31_02.jpg)
 
 
 

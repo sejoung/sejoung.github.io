@@ -65,7 +65,7 @@ redis cluster 구성은 vagrant 할것이다. 아래의 git에서 설정파일�
 
 소스를 다운 받고 압축을 푼다 
 
-![redistest UI1](https://sejoung.github.io/images/2019_01_03_01.jpg){: width="100%"}{: .center}
+![redistest UI1](https://sejoung.github.io/images/2019_01_03_01.jpg)
 
 cmd 창을 열고 압축푼 폴더로 이동하고 아래의 명령어를 실행시킨다.
 
@@ -74,7 +74,7 @@ vagrant plugin install vagrant-vbguest
 
 ```
 
-![redistest UI2](https://sejoung.github.io/images/2019_01_03_02.jpg){: width="100%"}{: .center}
+![redistest UI2](https://sejoung.github.io/images/2019_01_03_02.jpg)
 
 실행이 다된후에 
 
@@ -84,7 +84,7 @@ vagrant up
 
 ```
 
-![redistest UI3](https://sejoung.github.io/images/2019_01_03_03.jpg){: width="100%"}{: .center}
+![redistest UI3](https://sejoung.github.io/images/2019_01_03_03.jpg)
 
 위 에러 나서 보면 버츄얼박스가 없다 다운로드후에 인스톨
 

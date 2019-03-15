@@ -14,7 +14,7 @@ sitemap :
 이클립스 WTP에 server 플러그인에서 아래 이미지 처럼  serve modules without publshing 설정을 체크 했을때 디플로이가 어떻게 되는지 찾아 보았다.
 
 
-![serve modules without publshing](https://sejoung.github.io/images/2018_04_12_01.jpg){: width="100%"}
+![serve modules without publshing](https://sejoung.github.io/images/2018_04_12_01.jpg)
 
 먼저 이클립스의 workspace 에서 server.xml에 아래 처럼 지정이 된다. 위치는 아래이다.
 

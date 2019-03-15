@@ -14,19 +14,19 @@ sitemap :
 
 먼저 프로젝트 생성후에 모듈 클릭
 
-![jigsaw UI11](https://sejoung.github.io/images/2018_08_07_11.jpg){: width="100%"}{: .center}
+![jigsaw UI11](https://sejoung.github.io/images/2018_08_07_11.jpg)
 
 next
 
-![jigsaw UI12](https://sejoung.github.io/images/2018_08_07_12.jpg){: width="100%"}{: .center}
+![jigsaw UI12](https://sejoung.github.io/images/2018_08_07_12.jpg)
 
 모듈명 입력 이클립스랑 똑같이 고고
 
-![jigsaw UI13](https://sejoung.github.io/images/2018_08_07_13.jpg){: width="100%"}{: .center}
+![jigsaw UI13](https://sejoung.github.io/images/2018_08_07_13.jpg)
 
 module-info.java 가 생김
 
-![jigsaw UI14](https://sejoung.github.io/images/2018_08_07_14.jpg){: width="100%"}{: .center}
+![jigsaw UI14](https://sejoung.github.io/images/2018_08_07_14.jpg)
 
 그럼 다시 2번째 모듈인 second를 생성
 
@@ -86,27 +86,27 @@ module first {
 
 아래처럼 에러가남 
 
-![jigsaw UI15](https://sejoung.github.io/images/2018_08_07_15.jpg){: width="100%"}{: .center}
+![jigsaw UI15](https://sejoung.github.io/images/2018_08_07_15.jpg)
 
 그럼 아래의 메뉴에 프로젝트 스트럭쳐 클릭
 
-![jigsaw UI16](https://sejoung.github.io/images/2018_08_07_16.jpg){: width="100%"}{: .center}
+![jigsaw UI16](https://sejoung.github.io/images/2018_08_07_16.jpg)
 
 그다음에 전 first에 의존성을 추가할꺼니 
 
-![jigsaw UI17](https://sejoung.github.io/images/2018_08_07_17.jpg){: width="100%"}{: .center}
+![jigsaw UI17](https://sejoung.github.io/images/2018_08_07_17.jpg)
 
 모듈 디펜던시 클릭
 
-![jigsaw UI18](https://sejoung.github.io/images/2018_08_07_18.jpg){: width="100%"}{: .center}
+![jigsaw UI18](https://sejoung.github.io/images/2018_08_07_18.jpg)
 
 난 second가 필요하니 클릭
 
-![jigsaw UI19](https://sejoung.github.io/images/2018_08_07_19.jpg){: width="100%"}{: .center}
+![jigsaw UI19](https://sejoung.github.io/images/2018_08_07_19.jpg)
 
 그럼 아래처럼 메뉴가 나온다
 
-![jigsaw UI20](https://sejoung.github.io/images/2018_08_07_20.jpg){: width="100%"}{: .center}
+![jigsaw UI20](https://sejoung.github.io/images/2018_08_07_20.jpg)
 
 이렇게 되면 에러가 사라지고 다시 이클립스에서 했던것 처럼
 

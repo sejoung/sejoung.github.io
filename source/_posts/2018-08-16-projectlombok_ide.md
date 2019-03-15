@@ -16,7 +16,7 @@ sitemap :
 
 [projectlombok download](https://projectlombok.org/download) 페이지에 가서 다운로드를 먼저 받음
 
-![projectlombok UI1](https://sejoung.github.io/images/2018_08_16_01.jpg){: width="100%"}{: .center}
+![projectlombok UI1](https://sejoung.github.io/images/2018_08_16_01.jpg)
 
 여기서 다룬 받은 lombok.jar를 실행 자바가 기본이면 클릭하면 실행 된다 안되면 cmd 창에서 아래의 명령어로 실행
 
@@ -26,11 +26,11 @@ java -jar lombok.jar
 
 ```
 
-![projectlombok UI2](https://sejoung.github.io/images/2018_08_16_02.jpg){: width="100%"}{: .center}
+![projectlombok UI2](https://sejoung.github.io/images/2018_08_16_02.jpg)
 
 위에 창에 나오면 기본적으로 이클립스를 인스톨러로 설치하시면 아래에 표시가 나오고 아니면 Specify location을 클릭해서 경로를 찾아서 선택해주면 된다
 
-![projectlombok UI3](https://sejoung.github.io/images/2018_08_16_03.jpg){: width="100%"}{: .center}
+![projectlombok UI3](https://sejoung.github.io/images/2018_08_16_03.jpg)
 
 그담엔 install/update 버튼 클릭
 
@@ -49,15 +49,15 @@ java -jar lombok.jar
 
 인텔리J는 실행후에 setting 
 
-![projectlombok UI4](https://sejoung.github.io/images/2018_08_16_04.jpg){: width="100%"}{: .center}
+![projectlombok UI4](https://sejoung.github.io/images/2018_08_16_04.jpg)
 
 그담에 플러그인 검색
 
-![projectlombok UI5](https://sejoung.github.io/images/2018_08_16_05.jpg){: width="100%"}{: .center}
+![projectlombok UI5](https://sejoung.github.io/images/2018_08_16_05.jpg)
 
 안나옴 그럼 repository 검색 링크 클릭 팝업이 뜨고 lombok 플러그인 install 버튼 클릭
 
-![projectlombok UI6](https://sejoung.github.io/images/2018_08_16_06.jpg){: width="100%"}{: .center}
+![projectlombok UI6](https://sejoung.github.io/images/2018_08_16_06.jpg)
 
 재기동 하면 끝
 

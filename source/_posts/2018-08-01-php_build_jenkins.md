@@ -26,15 +26,15 @@ sitemap :
 
 위 사항이 다되면 jenkins 로그인 첫화면
 
-![jenkins UI1](https://sejoung.github.io/images/2018_08_01_01.jpg){: width="100%"}{: .center}
+![jenkins UI1](https://sejoung.github.io/images/2018_08_01_01.jpg)
 
 젠킨스 관리 클릭 
 
-![jenkins UI2](https://sejoung.github.io/images/2018_08_01_02.jpg){: width="100%"}{: .center}
+![jenkins UI2](https://sejoung.github.io/images/2018_08_01_02.jpg)
 
 시스템 설정 클릭 Publish over SSH 설정 화면
 
-![jenkins UI3](https://sejoung.github.io/images/2018_08_01_03.jpg){: width="100%"}{: .center}
+![jenkins UI3](https://sejoung.github.io/images/2018_08_01_03.jpg)
 
 위에 처럼 Publish over SSH에서 사용할 서버정보를 입력한다. 
 
@@ -51,33 +51,33 @@ ftp를 사용하면 Publish over FTP에서 설정을 해도 무방함
 
 그럼 다시 아래의 첫화면에서 
 
-![jenkins UI1](https://sejoung.github.io/images/2018_08_01_01.jpg){: width="100%"}{: .center}
+![jenkins UI1](https://sejoung.github.io/images/2018_08_01_01.jpg)
 
 새로운 item 클릭 프로젝트 생성
 
-![jenkins UI4](https://sejoung.github.io/images/2018_08_01_04.jpg){: width="100%"}{: .center}
+![jenkins UI4](https://sejoung.github.io/images/2018_08_01_04.jpg)
 
 프로젝트 생성시에는 여러가지 타입이 있는데 적절한 타입으로 생성하면 도움이 된다.
 
 여기에선 프리스타일로 생성 생성후에 대쉬보드에서 해당 프로젝트 클릭
 
-![jenkins UI5](https://sejoung.github.io/images/2018_08_01_05.jpg){: width="100%"}{: .center}
+![jenkins UI5](https://sejoung.github.io/images/2018_08_01_05.jpg)
 
 여기에서 구성 클릭 
 
-![jenkins UI6](https://sejoung.github.io/images/2018_08_01_06.jpg){: width="100%"}{: .center}
+![jenkins UI6](https://sejoung.github.io/images/2018_08_01_06.jpg)
 
 소스코드 관리에서 git 선택 주소 입력 Credentials 추가 전 master 브런치만 빌드할꺼니 */master 입력
 
 아래로 내리면 빌드유발에서 Poll SCM 선택
 
-![jenkins UI7](https://sejoung.github.io/images/2018_08_01_07.jpg){: width="100%"}{: .center}
+![jenkins UI7](https://sejoung.github.io/images/2018_08_01_07.jpg)
 
 5분마다 polling 주기를 갖길 원했으니 H/5 * * * * 입력 해당 값이 의미 하는것은 옆에 ?를 클릭하면 상세 설명이 나옴
 
 아래로 스크롤 하면 빌드 후 조치 추가에서 Send build artifacts over SSH를 선택 
 
-![jenkins UI8](https://sejoung.github.io/images/2018_08_01_08.jpg){: width="100%"}{: .center}
+![jenkins UI8](https://sejoung.github.io/images/2018_08_01_08.jpg)
 
 위에처럼 설정 소스파일에 모든 파일 폴더를 업로드 하기 위해서 아래처럼 프리픽스를 줌
 

@@ -13,17 +13,17 @@ sitemap :
 이클립스와 인텔리제이의 인코딩에 따른 주석 코드에 변화가 있다. 
 아래를 보면 처음엔 이클립스에서 작성한 프로퍼티를 보면
 
-![UI1](https://sejoung.github.io/images/2019_01_23_01.jpg){: width="100%"}{: .center}
+![UI1](https://sejoung.github.io/images/2019_01_23_01.jpg)
 
 그 다음엔 인텔리제이로 수정을 하면
 
 
-![UI2](https://sejoung.github.io/images/2019_01_23_02.jpg){: width="100%"}{: .center}
+![UI2](https://sejoung.github.io/images/2019_01_23_02.jpg)
 
 위에 설정을 체크 하고 보면 수정됨 
 
 
-![UI3](https://sejoung.github.io/images/2019_01_23_03.jpg){: width="100%"}{: .center}
+![UI3](https://sejoung.github.io/images/2019_01_23_03.jpg)
 
 그렇게 되면 기존 과 코드가 틀리다
 
@@ -32,11 +32,11 @@ sitemap :
 
 이클립스
 
-![UI4](https://sejoung.github.io/images/2019_01_23_04.jpg){: width="100%"}{: .center}
+![UI4](https://sejoung.github.io/images/2019_01_23_04.jpg)
 
 위에 플러그인 기준으로 
 
-![UI5](https://sejoung.github.io/images/2019_01_23_05.jpg){: width="100%"}{: .center}
+![UI5](https://sejoung.github.io/images/2019_01_23_05.jpg)
 
 위에 설정화면에서 바꿀수 있다.
 

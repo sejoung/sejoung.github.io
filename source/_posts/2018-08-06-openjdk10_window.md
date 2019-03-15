@@ -35,19 +35,19 @@ C:\Program Files\Java\jdk-10.0.2
 
 JAVA_HOME 환경변수 셋팅하기
 
-![JAVA_HOME UI1](https://sejoung.github.io/images/2018_08_06_01.jpg){: width="100%"}{: .center}
+![JAVA_HOME UI1](https://sejoung.github.io/images/2018_08_06_01.jpg)
 
 탐색기에서 pc에서 속성 클릭
 
-![JAVA_HOME UI2](https://sejoung.github.io/images/2018_08_06_02.jpg){: width="100%"}{: .center}
+![JAVA_HOME UI2](https://sejoung.github.io/images/2018_08_06_02.jpg)
 
 고급시스템설정 클릭
 
-![JAVA_HOME UI3](https://sejoung.github.io/images/2018_08_06_03.jpg){: width="100%"}{: .center}
+![JAVA_HOME UI3](https://sejoung.github.io/images/2018_08_06_03.jpg)
 
 환경변수 버튼클릭
 
-![JAVA_HOME UI4](https://sejoung.github.io/images/2018_08_06_04.jpg){: width="100%"}{: .center}
+![JAVA_HOME UI4](https://sejoung.github.io/images/2018_08_06_04.jpg)
 
 시스템 변수에서 새로만들기
 
@@ -56,7 +56,7 @@ JAVA_HOME 환경변수 셋팅하기
 path : C:\Program Files\Java\jdk-10.0.2
 ```
 
-![JAVA_HOME UI5](https://sejoung.github.io/images/2018_08_06_05.jpg){: width="100%"}{: .center}
+![JAVA_HOME UI5](https://sejoung.github.io/images/2018_08_06_05.jpg)
 
 시스템 변수에 보면 path가 있음 거기에 JAVA_HOME 추가 하기 
 
@@ -66,7 +66,7 @@ path : C:\Program Files\Java\jdk-10.0.2
 
 ```
 
-![JAVA_HOME UI6](https://sejoung.github.io/images/2018_08_06_06.jpg){: width="100%"}{: .center}
+![JAVA_HOME UI6](https://sejoung.github.io/images/2018_08_06_06.jpg)
 
 cmd 창에서 아래의 명령어로 확인
 
