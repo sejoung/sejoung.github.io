@@ -1,41 +1,96 @@
-# Jekyll configuration
+# Hexo Configuration
+## Docs: https://hexo.io/docs/configuration.html
+## Source: https://github.com/hexojs/hexo/
 
-name: sejoung
+# Site
+title: 폭간의 기술블러그
+subtitle: sejoung
 description: 잘정리하자
+keywords:
+author: sejoung
+language: lang
+timezone: Asia/seoul
 
-# url is currently only used only for the RSS feed in feed.xml
+# URL
+## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
 url: https://sejoung.github.io
+root: /
+permalink: :year/:month/:day/:title/
+permalink_defaults:
 
-# baseurl will often be '', but for a project page on gh-pages, it needs to
-# be the project name.
-# *** IMPORTANT: If your local "jekyll serve" throws errors change this to '' or
-#     run it like so: jekyll serve --baseurl=''
-baseurl: '' 
+# Directory
+source_dir: source
+public_dir: public
+tag_dir: tags
+archive_dir: archives
+category_dir: categories
+code_dir: downloads/code
+i18n_dir: :lang
+skip_render:
 
-# This can be '' to hide the Github nav button
-github: 'sejoung'
+# Writing
+new_post_name: :title.md # File name of new posts
+default_layout: post
+titlecase: false # Transform title into titlecase
+external_link: true # Open external links in new tab
+filename_case: 0
+render_drafts: true
+post_asset_folder: true
+relative_link: true
+future: true
+highlight:
+  enable: true
+  line_number: true
+  auto_detect: false
+  tab_replace:
+  
+# Home page setting
+# path: Root path for your blogs index page. (default = '')
+# per_page: Posts displayed per page. (0 = disable pagination)
+# order_by: Posts order. (Order by date descending by default)
+index_generator:
+  path: ''
+  per_page: 10
+  order_by: -date
+  
+# Category & Tag
+default_category: uncategorized
+category_map:
+tag_map:
+home_posts_tag: true # show posts tags
 
-# Set this to your UA-# value, or '' to disable the block completely
-gaaccount: 'UA-87353572-1'
+# Date / Time format
+## Hexo uses Moment.js to parse and display date
+## You can customize the date format as defined in
+## http://momentjs.com/docs/#/displaying/format/
+date_format: YYYY-MM-DD
+time_format: HH:mm:ss
 
-# The 'comments' setting enables comments. You'll need to select either
-# disqus or isso below to choose a comment system. Individual posts can
-# override 'comments' to disable on a post-by-post basis.
-comments: true
+# Pagination
+## Set per_page to 0 to disable pagination
+per_page: 10
+pagination_dir: page
 
-# Set this to your public isso URL to enable comments via isso. Set to '' to disable isso.
-isso: ''
+# Extensions
+## Plugins: https://hexo.io/plugins/
+## Themes: https://hexo.io/themes/
+theme: melody
 
-# Set this to your disqus shortname to enable comments via disqus. Set to '' to disable disqus.
-disqus: ''
+# Deployment
+## Docs: https://hexo.io/docs/deployment.html
+deploy:
+  type: git
+  repository: https://github.com/sejoung/sejoung.github.io
+  branch: master
 
-permalink: /:year/:month/:title
-paginate: 3
+sitemap:
+  path: sitemap.xml
 
-highlighter: rouge
-markdown: kramdown
-gems: ['jekyll-paginate']
-
-exclude: ['README.md', 'LICENSE']
-
-theme: jekyll-theme-leap-day
+# rss feed auto generator
+feed:
+  # feed type (atom / rss2)
+  type: rss2
+  # feed path (Default: atom.xml / rss2.xml)
+  path: rss2.xml
+  # 최신 포스트의 갯수 설정. (0 또는 false 입력시 전체 포스트)
+  limit: 20
