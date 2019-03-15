@@ -118,10 +118,10 @@ cdn:
 # ---------------
 avatar: https://avatars0.githubusercontent.com/u/4936005?s=400&u=a679b941fe377418e7e4efcf916c6a636d7178ee&v=4
 
-top_img: true # false or url of img 
+top_img: true
 
 post_meta:
-  date_type: created # created or updated 
+  date_type: created
   categories: true
   tags: true
 
