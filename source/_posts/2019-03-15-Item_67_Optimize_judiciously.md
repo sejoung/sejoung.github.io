@@ -40,6 +40,6 @@ sitemap :
 
 # 참조
 -----
-* [아이템 50. 적시에 방어적 복사본을 만들어라.](https://sejoung.github.io/2019/02/Make_defensive_copies_when_needed)
-* [아이템 18. 상속보단 컴포지션을 사용하라](https://sejoung.github.io/2018/12/Favor_composition_over_inheritance)
-* [아이템 64. 객체는 인터페이스를 사용해 참조하라.](https://sejoung.github.io/2019/03/Item_64_Refer_to_objects_by_their_interfaces)
+* [아이템 50. 적시에 방어적 복사본을 만들어라.](https://sejoung.github.io/2019/02/2019-02-14-Make_defensive_copies_when_needed/)
+* [아이템 18. 상속보단 컴포지션을 사용하라](https://sejoung.github.io/2018/12/2018-12-10-Favor_composition_over_inheritance/)
+* [아이템 64. 객체는 인터페이스를 사용해 참조하라.](https://sejoung.github.io/2019/03/2019-03-13-Item_64_Refer_to_objects_by_their_interfaces/)
