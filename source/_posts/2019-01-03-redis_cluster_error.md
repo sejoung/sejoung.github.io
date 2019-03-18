@@ -2,7 +2,9 @@
 layout: post
 title: "레디스 클러스터 에러"
 date: 2019-01-03 10:49 +0900
-comments: false
+comments: true
+tags : ["redis","레디스 클러스터 에러"]
+categories : ["장애"]
 sitemap :
   changefreq : daily
   priority : 1.0

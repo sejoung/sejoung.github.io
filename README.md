@@ -15,6 +15,9 @@ npm install hexo-generator-seo-friendly-sitemap --save
 
 npm install hexo-generator-feed --save
 
+npm install hexo-deployer-git --save
+
+
 ```
 파일제네레이터
 ```

@@ -2,7 +2,9 @@
 layout: post
 title: "Java9 모듈 프로그래밍(유동환) - 비긴 메이트"
 date: 2018-08-05 13:00:00 +0900
-comments: false
+comments: true
+tags : ["Java9 모듈 프로그래밍"]
+categories : ["2018 세미나"]
 sitemap :
   changefreq : daily
   priority : 1.0

@@ -2,7 +2,9 @@
 layout: post
 title: "결합도_(content coupling)"
 date: 2018-05-08 18:25:00 +0900
-comments: false
+comments: true
+tags : ["결합도"]
+categories : ["study"]
 sitemap :
   changefreq : daily
   priority : 1.0

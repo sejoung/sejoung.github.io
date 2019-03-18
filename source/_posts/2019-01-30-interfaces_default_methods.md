@@ -2,7 +2,9 @@
 layout: post
 title: "인터페이스 default 메소드로 기존 인터페이스를 해치지 않게 확장 하기"
 date: 2019-01-30 10:25 +0900
-comments: false
+comments: true
+tags : ["interface default"]
+categories : ["java"]
 sitemap :
   changefreq : daily
   priority : 1.0

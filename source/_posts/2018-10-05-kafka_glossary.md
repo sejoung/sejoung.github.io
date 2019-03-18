@@ -2,7 +2,9 @@
 layout: post
 title: "카프카 용어사전(?)"
 date: 2018-10-05 10:55 +0900
-comments: false
+comments: true
+tags : ["Kafka","용어사전"]
+categories : ["Kafka"]
 sitemap :
   changefreq : daily
   priority : 1.0

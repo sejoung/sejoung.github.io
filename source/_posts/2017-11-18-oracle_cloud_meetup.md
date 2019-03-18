@@ -2,7 +2,9 @@
 layout: post
 title: "oracle_meetup"
 date: 2017-11-18 12:30:00 +0900
-comments: false
+comments: true
+tags : ["oracle cloud","k8s"]
+categories : ["2017 세미나"]
 sitemap :
   changefreq : daily
   priority : 1.0

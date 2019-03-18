@@ -2,7 +2,9 @@
 layout: post
 title: "코드스피츠73 part5_2(BLOCK, NONBLOCK)"
 date: 2018-04-06 10:30:00 +0900
-comments: false
+comments: true
+tags : ["javascript","BLOCK VS NONBLOCK"]
+categories : ["study"]
 sitemap :
   changefreq : daily
   priority : 1.0

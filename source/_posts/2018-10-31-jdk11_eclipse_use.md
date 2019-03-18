@@ -2,7 +2,9 @@
 layout: post
 title: "이클립스에서 java 11 사용하기"
 date: 2018-10-31 13:58 +0900
-comments: false
+comments: true
+tags : ["jdk 11","eclipse"]
+categories : ["IDE"]
 sitemap :
   changefreq : daily
   priority : 1.0

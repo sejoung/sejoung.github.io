@@ -2,7 +2,9 @@
 layout: post
 title: "도커 처음 시작하기part3(서비스)"
 date: 2019-03-14 10:49 +0900
-comments: false
+comments: true
+tags : ["Docker"]
+categories : ["tool"]
 sitemap :
   changefreq : daily
   priority : 1.0
@@ -12,8 +14,8 @@ sitemap :
 ### 전제조건
 
 * Docker 버전 1.13 이상을 설치하십시오.
-* [도커 처음 시작하기part1(오리엔테이션 및 설정)](https://sejoung.github.io/2019/03/docker-get-started(1)) 에서 방향을 읽으십시오 .
-* [도커 처음 시작하기part2(컨테이너)](https://sejoung.github.io/2019/03/docker-get-started(2)) 에서 컨테이너를 만드는 방법에 대해 알아보십시오 .
+* [도커 처음 시작하기part1(오리엔테이션 및 설정)](https://sejoung.github.io/2019/03/2019-03-13-docker-get-started(1)/) 에서 방향을 읽으십시오 .
+* [도커 처음 시작하기part2(컨테이너)](https://sejoung.github.io/2019/03/2019-03-13-docker-get-started(2)/) 에서 컨테이너를 만드는 방법에 대해 알아보십시오 .
 * friendlyhello 이미지를 레지스트리 로 푸시 하여 게시했는지 확인하십시오. 우리는 여기에 그 공유 된 이미지를 사용합니다.
 * 이미지가 배포 된 컨테이너로 작동하는지 확인하십시오. docker run -p 4000:80 username/repo:tag 이 명령을 실행 다음 방문 http://localhost:4000/.
   
@@ -301,7 +303,5 @@ docker swarm leave --force      # Take down a single node swarm from the manager
 # 참조
 -----
 * [docker-get-started](https://docs.docker.com/get-started/part3/)
-* [도커 처음 시작하기(오리엔테이션 및 설정)](https://sejoung.github.io/2019/03/docker-get-started(1))
-* [도커 처음 시작하기(컨테이너)](https://sejoung.github.io/2019/03/docker-get-started(2))
 * [Docker Compose 개요](https://sejoung.github.io/2019/03/Overview_of_Docker_Compose)
 

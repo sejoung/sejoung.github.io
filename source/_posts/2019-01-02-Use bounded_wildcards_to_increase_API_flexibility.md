@@ -2,7 +2,9 @@
 layout: post
 title: "아이템 31. 한정적 와일드카드를 사용해 API의 유연성을 높혀라."
 date: 2019-01-02 14:59 +0900
-comments: false
+comments: true
+tags : ["이팩티브자바"]
+categories : ["books"]
 sitemap :
   changefreq : daily
   priority : 1.0

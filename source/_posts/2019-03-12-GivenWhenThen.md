@@ -2,7 +2,9 @@
 layout: post
 title: "GivenWhenThen"
 date: 2019-03-12 14:20 +0900
-comments: false
+comments: true
+tags : ["tdd"]
+categories : ["java"]
 sitemap :
   changefreq : daily
   priority : 1.0

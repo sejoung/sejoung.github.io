@@ -2,7 +2,9 @@
 layout: post
 title: "10년 이상 프로그래머"
 date: 2018-08-08 09:10:00 +0900
-comments: false
+comments: true
+tags : ["10년 이상 프로그래머"]
+categories : ["생각"]
 sitemap :
   changefreq : daily
   priority : 1.0

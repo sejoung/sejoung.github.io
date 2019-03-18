@@ -2,7 +2,9 @@
 layout: post
 title: "아이템 55. 옵셔널 반환은 신중히 하라."
 date: 2019-02-25 10:36 +0900
-comments: false
+comments: true
+tags : ["이팩티브자바"]
+categories : ["books"]
 sitemap :
   changefreq : daily
   priority : 1.0

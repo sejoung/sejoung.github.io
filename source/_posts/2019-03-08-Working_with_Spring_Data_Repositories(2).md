@@ -2,7 +2,9 @@
 layout: post
 title: "spring data jpa repositorys로 작업하기(Repository Interfaces 정의)"
 date: 2019-03-08 14:36 +0900
-comments: false
+comments: true
+tags : ["spring","spring data jpa"]
+categories : ["java"]
 sitemap :
   changefreq : daily
   priority : 1.0

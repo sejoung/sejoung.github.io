@@ -2,7 +2,9 @@
 layout: post
 title: "Gradle vs Maven 비교"
 date: 2019-03-07 14:14 +0900
-comments: false
+comments: true
+tags : ["Gradle"]
+categories : ["tool"]
 sitemap :
   changefreq : daily
   priority : 1.0

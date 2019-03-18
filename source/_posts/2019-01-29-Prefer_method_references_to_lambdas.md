@@ -2,7 +2,9 @@
 layout: post
 title: "아이템 43. 람다보다 매서드 참조를 사용하라."
 date: 2019-01-29 10:16 +0900
-comments: false
+comments: true
+tags : ["이팩티브자바"]
+categories : ["books"]
 sitemap :
   changefreq : daily
   priority : 1.0

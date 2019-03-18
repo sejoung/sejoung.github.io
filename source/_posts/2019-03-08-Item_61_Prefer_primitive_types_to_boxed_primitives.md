@@ -2,7 +2,9 @@
 layout: post
 title: "아이템 61. 박싱된 기본타입 보단 기본타입을 사용하라."
 date: 2019-03-08 10:00 +0900
-comments: false
+comments: true
+tags : ["이팩티브자바"]
+categories : ["books"]
 sitemap :
   changefreq : daily
   priority : 1.0

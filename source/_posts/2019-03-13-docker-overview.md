@@ -2,7 +2,9 @@
 layout: post
 title: "도커 개요"
 date: 2019-03-13 11:29 +0900
-comments: false
+comments: true
+tags : ["Docker"]
+categories : ["tool"]
 sitemap :
   changefreq : daily
   priority : 1.0

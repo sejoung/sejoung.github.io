@@ -2,7 +2,9 @@
 layout: post
 title: "싱글턴 패턴은 안티패턴?"
 date: 2018-04-17 16:30:00 +0900
-comments: false
+comments: true
+tags : ["singleton pattern"]
+categories : ["architecture"]
 sitemap :
   changefreq : daily
   priority : 1.0

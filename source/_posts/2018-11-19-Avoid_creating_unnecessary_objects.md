@@ -2,7 +2,9 @@
 layout: post
 title: "아이템 6. 불필요한 객체생성을 피하라"
 date: 2018-11-19 09:49 +0900
-comments: false
+comments: true
+tags : ["이팩티브자바"]
+categories : ["books"]
 sitemap :
   changefreq : daily
   priority : 1.0

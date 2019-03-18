@@ -2,7 +2,9 @@
 layout: post
 title: "3d 프린터 사용하기(anet a8)"
 date: 2018-08-22 14:46 +0900
-comments: false
+comments: true
+tags : ["3D 프린터","anet a8"]
+categories : ["동호회"]
 sitemap :
   changefreq : daily
   priority : 1.0

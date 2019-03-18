@@ -2,7 +2,9 @@
 layout: post
 title: "아이템 45. 스트림은 주의해서 사용해라"
 date: 2019-02-07 13:37 +0900
-comments: false
+comments: true
+tags : ["이팩티브자바"]
+categories : ["books"]
 sitemap :
   changefreq : daily
   priority : 1.0

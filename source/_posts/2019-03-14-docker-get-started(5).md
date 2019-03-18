@@ -2,7 +2,9 @@
 layout: post
 title: "도커 처음 시작하기part5(Stacks)"
 date: 2019-03-14 16:21 +0900
-comments: false
+comments: true
+tags : ["Docker"]
+categories : ["tool"]
 sitemap :
   changefreq : daily
   priority : 1.0
@@ -12,15 +14,15 @@ sitemap :
 ### 전제조건
 
 * Docker 버전 1.13 이상을 설치하십시오.
-* [도커 처음 시작하기part1(오리엔테이션 및 설정)](https://sejoung.github.io/2019/03/docker-get-started(1)) 에서 방향을 읽으십시오 .
-* [도커 처음 시작하기part2(컨테이너)](https://sejoung.github.io/2019/03/docker-get-started(2)) 에서 컨테이너를 만드는 방법에 대해 알아보십시오.
-* [도커 처음 시작하기part3(서비스)](https://sejoung.github.io/2019/03/docker-get-started(3)) 에서 서비스를 만드는 방법에 대해 알아보십시오 .
+* [도커 처음 시작하기part1(오리엔테이션 및 설정)](https://sejoung.github.io/2019/03/2019-03-13-docker-get-started(1)/) 에서 방향을 읽으십시오 .
+* [도커 처음 시작하기part2(컨테이너)](https://sejoung.github.io/2019/03/2019-03-13-docker-get-started(2)/) 에서 컨테이너를 만드는 방법에 대해 알아보십시오.
+* [도커 처음 시작하기part3(서비스)](https://sejoung.github.io/2019/03/2019-03-14-docker-get-started(3)/) 에서 서비스를 만드는 방법에 대해 알아보십시오 .
 * friendlyhello 이미지를 레지스트리 로 푸시 하여 게시했는지 확인하십시오. 우리는 여기에 그 공유 된 이미지를 사용합니다.
 * 이미지가 배포 된 컨테이너로 작동하는지 확인하십시오. docker run -p 4000:80 username/repo:tag 이 명령을 실행 다음 방문 http://localhost:4000/.
 * 파트3 의 docker-compose.yml 파일을 가지고 있으면 편하다.
-* [도커 처음 시작하기part4(Stacks)](https://sejoung.github.io/2019/03/docker-get-started(4)) 에서 설정 한 기계 가 작동하고 준비 상태 인지 확인하십시오
+* [도커 처음 시작하기part4(Stacks)](https://sejoung.github.io/2019/03/2019-03-14-docker-get-started(4)/) 에서 설정 한 기계 가 작동하고 준비 상태 인지 확인하십시오
 이를 실행 docker-machine ls하여이를 확인하십시오. 시스템이 중지 된 경우, docker-machine start myvm1 관리자 를 부트 한 후 docker-machine start myvm2 작업자를 부트하십시오.
-* [도커 처음 시작하기part4(Stacks)](https://sejoung.github.io/2019/03/docker-get-started(4)) 에서 작성한 떼를 준비하고 준비하십시오.
+* [도커 처음 시작하기part4(Stacks)](https://sejoung.github.io/2019/03/2019-03-14-docker-get-started(4)/) 에서 작성한 Swarm를 준비하고 준비하십시오.
 이를 실행 docker-machine ssh myvm1 "docker node ls"하여이를 확인하십시오. 집단이 가동되면 두 노드 모두 ready상태를 보고합니다.
 그렇지 않으면 떼를 다시 초기화에 설명 된대로 근로자에 가입 하여 떼를 설정합니다.
 
@@ -270,9 +272,5 @@ b2tkyi7pce9x        getstartedlab_visualizer   replicated          1/1          
 # 참조
 -----
 * [docker-get-started](https://docs.docker.com/get-started/part4/)
-* [도커 처음 시작하기(오리엔테이션 및 설정)](https://sejoung.github.io/2019/03/docker-get-started(1))
-* [도커 처음 시작하기(컨테이너)](https://sejoung.github.io/2019/03/docker-get-started(2))
-* [도커 처음 시작하기(서비스)](https://sejoung.github.io/2019/03/docker-get-started(3))
-* [Docker Compose 개요](https://sejoung.github.io/2019/03/Overview_of_Docker_Compose)
 * [virtualbox Downloads](https://www.virtualbox.org/wiki/Downloads)
 

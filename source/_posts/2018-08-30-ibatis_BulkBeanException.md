@@ -2,7 +2,9 @@
 layout: post
 title: "ibatis_BulkBeanException"
 date: 2018-08-30 10:15 +0900
-comments: false
+comments: true
+tags : ["java","ibatis"]
+categories : ["장애"]
 sitemap :
   changefreq : daily
   priority : 1.0

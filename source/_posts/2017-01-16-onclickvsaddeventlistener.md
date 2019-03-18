@@ -2,7 +2,9 @@
 layout: post
 title: "html에서 onclick 이벤트와 addeventlistener를 사용하는것중 어떤것이 더 좋을까요?"
 date: 2017-01-16 10:39:00 +0900
-comments: false
+comments: true
+tags : ["event"]
+categories : ["javascript"]
 sitemap :
   changefreq : daily
   priority : 1.0

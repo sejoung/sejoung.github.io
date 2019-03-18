@@ -2,7 +2,9 @@
 layout: post
 title: "인텔리제이에서 jigsaw 코딩하기"
 date: 2018-08-07 11:46:00 +0900
-comments: false
+comments: true
+tags : ["intellij","jigsaw"]
+categories : ["java"]
 sitemap :
   changefreq : daily
   priority : 1.0

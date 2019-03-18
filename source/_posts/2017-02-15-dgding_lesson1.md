@@ -2,7 +2,9 @@
 layout: post
 title: "dgding lesson1(그래픽 시스템)"
 date: 2017-02-15 08:53:00 +0900
-comments: false
+comments: true
+tags : ["css","html","javascript"]
+categories : ["study"]
 sitemap :
   changefreq : daily
   priority : 1.0

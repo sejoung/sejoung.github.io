@@ -2,7 +2,9 @@
 layout: post
 title: "아이템 56. 공개된 API 요소에는 항상 문서화 주석을 작성하라."
 date: 2019-02-25 11:06 +0900
-comments: false
+comments: true
+tags : ["이팩티브자바"]
+categories : ["books"]
 sitemap :
   changefreq : daily
   priority : 1.0

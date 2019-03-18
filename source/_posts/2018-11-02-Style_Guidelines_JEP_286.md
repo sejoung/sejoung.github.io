@@ -2,7 +2,9 @@
 layout: post
 title: "Style Guidelines for Local Variable Type Inference in Java"
 date: 2018-11-02 11:46 +0900
-comments: false
+comments: true
+tags : ["jdk 10","JEP"]
+categories : ["java"]
 sitemap :
   changefreq : daily
   priority : 1.0

@@ -2,7 +2,9 @@
 layout: post
 title: "아이템 38. 확장할수있는 열거 타입이 필요하면 인터페이스를 사용하라."
 date: 2019-01-11 10:26 +0900
-comments: false
+comments: true
+tags : ["이팩티브자바"]
+categories : ["books"]
 sitemap :
   changefreq : daily
   priority : 1.0

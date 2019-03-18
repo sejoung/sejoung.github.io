@@ -2,7 +2,9 @@
 layout: post
 title: "아이템 8. Finalizer와 Cleaner의 사용은 피하라"
 date: 2018-11-21 14:05 +0900
-comments: false
+comments: true
+tags : ["이팩티브자바"]
+categories : ["books"]
 sitemap :
   changefreq : daily
   priority : 1.0

@@ -2,7 +2,9 @@
 layout: post
 title: "Neal Gafter's Super Type Tokens"
 date: 2019-01-07 13:44 +0900
-comments: false
+comments: true
+tags : ["Super Type Tokens"]
+categories : ["java"]
 sitemap :
   changefreq : daily
   priority : 1.0

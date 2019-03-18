@@ -2,7 +2,9 @@
 layout: post
 title: "java_annotations"
 date: 2019-01-14 10:45 +0900
-comments: false
+comments: true
+tags : ["java annotations"]
+categories : ["java"]
 sitemap :
   changefreq : daily
   priority : 1.0

@@ -2,7 +2,9 @@
 layout: post
 title: "아이템 5. 자원을 직접 명시 하지 말고 의존성 객체 주입(dependency injection)을 사용하라"
 date: 2018-11-14 09:53 +0900
-comments: false
+comments: true
+tags : ["이팩티브자바"]
+categories : ["books"]
 sitemap :
   changefreq : daily
   priority : 1.0

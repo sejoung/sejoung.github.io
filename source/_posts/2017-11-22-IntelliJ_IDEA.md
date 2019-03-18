@@ -2,7 +2,9 @@
 layout: post
 title: "IntelliJ_IDEA"
 date: 2017-11-22 14:08:00 +0900
-comments: false
+comments: true
+tags : ["IntelliJ","IDEA"]
+categories : ["IDE"]
 sitemap :
   changefreq : daily
   priority : 1.0

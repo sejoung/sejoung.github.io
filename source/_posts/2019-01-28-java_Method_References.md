@@ -2,7 +2,9 @@
 layout: post
 title: "메소드 레퍼런스(Method References)"
 date: 2019-01-28 10:24 +0900
-comments: false
+comments: true
+tags : ["Method References"]
+categories : ["java"]
 sitemap :
   changefreq : daily
   priority : 1.0

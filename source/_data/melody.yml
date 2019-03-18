@@ -259,3 +259,18 @@ busuanzi:
 #   enable: true
 #   url: ''
 #   text: ''
+
+follow:
+  enable: true
+  url: 'https://github.com/sejoung'
+  text: 'Follow Me'
+
+social:
+  github fa: https://github.com/sejoung
+  rss fa: https://sejoung.github.io/rss2.xml
+
+links_title: Links   # Set the links title
+links:
+  naverblog: https://blog.naver.com/sanaes
+  linkedin: https://www.linkedin.com/in/sanaes/
+  slideshare: https://www.slideshare.net/sejoung

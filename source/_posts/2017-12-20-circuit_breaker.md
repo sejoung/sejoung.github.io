@@ -2,7 +2,9 @@
 layout: post
 title: "circuit-breaker"
 date: 2017-12-20 13:30:00 +0900
-comments: false
+comments: true
+tags : ["patterns","circuit-breaker"]
+categories : ["architecture"]
 sitemap :
   changefreq : daily
   priority : 1.0

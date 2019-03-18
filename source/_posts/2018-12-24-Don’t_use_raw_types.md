@@ -2,7 +2,9 @@
 layout: post
 title: "아이템 26. raw 타입은 사용하지 말자."
 date: 2018-12-24 09:10 +0900
-comments: false
+comments: true
+tags : ["이팩티브자바"]
+categories : ["books"]
 sitemap :
   changefreq : daily
   priority : 1.0

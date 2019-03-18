@@ -2,7 +2,9 @@
 layout: post
 title: "아이템 57. 지역변수 범위를 최소화 하라."
 date: 2019-02-25 13:39 +0900
-comments: false
+comments: true
+tags : ["이팩티브자바"]
+categories : ["books"]
 sitemap :
   changefreq : daily
   priority : 1.0

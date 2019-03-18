@@ -2,7 +2,9 @@
 layout: post
 title: "JDK ArrayList는 왜 List를 implement를 하고 있나요?"
 date: 2019-01-17 14:40 +0900
-comments: false
+comments: true
+tags : ["설계"]
+categories : ["java"]
 sitemap :
   changefreq : daily
   priority : 1.0
@@ -141,7 +143,7 @@ AbstractList가 이미 그 구현을 선언했다면 List 인터페이스의 구
 
 # 참조
 -----
-* [아이템 20. 추상 클래스 보다는 인터페이스를 우선하라](https://sejoung.github.io/2018/12/Prefer_interfaces_to_abstract_classes)
+* [아이템 20. 추상 클래스 보다는 인터페이스를 우선하라](https://sejoung.github.io/2018/12/2018-12-12-Prefer_interfaces_to_abstract_classes/)
 * [stackoverflow why-does-arraylist-class-implement-list-as-well-as-extend-abstractlist](https://stackoverflow.com/questions/18558536/why-does-arraylist-class-implement-list-as-well-as-extend-abstractlist)
 
 

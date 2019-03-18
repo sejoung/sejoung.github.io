@@ -2,7 +2,9 @@
 layout: post
 title: "LockSupport.park()"
 date: 2018-02-23 20:00:00 +0900
-comments: false
+comments: true
+tags : ["LockSupport.park","Connection Pool"]
+categories : ["java"]
 sitemap :
   changefreq : daily
   priority : 1.0

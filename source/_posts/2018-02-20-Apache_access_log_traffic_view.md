@@ -2,7 +2,9 @@
 layout: post
 title: "access log 분석"
 date: 2018-02-20 11:07:00 +0900
-comments: false
+comments: true
+tags : ["access log count"]
+categories : ["shell script"]
 sitemap :
   changefreq : daily
   priority : 1.0

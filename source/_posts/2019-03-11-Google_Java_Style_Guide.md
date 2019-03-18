@@ -2,7 +2,9 @@
 layout: post
 title: "Google Java Style Guide"
 date: 2019-03-11 10:37 +0900
-comments: false
+comments: true
+tags : ["code style"]
+categories : ["java"]
 sitemap :
   changefreq : daily
   priority : 1.0

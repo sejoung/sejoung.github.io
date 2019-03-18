@@ -2,7 +2,9 @@
 layout: post
 title: "CodeSpitz74_Part3_1(HTML PARSER 만들기)"
 date: 2018-01-31 09:00:00 +0900
-comments: false
+comments: true
+tags : ["javascript","HTML PARSER"]
+categories : ["study"]
 sitemap :
   changefreq : daily
   priority : 1.0

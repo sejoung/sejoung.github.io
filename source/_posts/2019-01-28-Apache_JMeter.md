@@ -2,7 +2,9 @@
 layout: post
 title: "Apache JMeter로 부하테스트 하기"
 date: 2019-01-28 16:27 +0900
-comments: false
+comments: true
+tags : ["Apache JMeter"]
+categories : ["java"]
 sitemap :
   changefreq : daily
   priority : 1.0

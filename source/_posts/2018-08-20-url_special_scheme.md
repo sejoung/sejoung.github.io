@@ -2,7 +2,9 @@
 layout: post
 title: "url special scheme"
 date: 2018-08-20 17:36 +0900
-comments: false
+comments: true
+tags : ["javascript","url special scheme","protocol-relative-url"]
+categories : ["장애"]
 sitemap :
   changefreq : daily
   priority : 1.0

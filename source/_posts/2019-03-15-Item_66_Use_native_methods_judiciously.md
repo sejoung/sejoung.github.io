@@ -2,7 +2,9 @@
 layout: post
 title: "아이템 66. 네이티브 매서드는 신중히 사용하라."
 date: 2019-03-15 09:30 +0900
-comments: false
+comments: true
+tags : ["이팩티브자바"]
+categories : ["books"]
 sitemap :
   changefreq : daily
   priority : 1.0

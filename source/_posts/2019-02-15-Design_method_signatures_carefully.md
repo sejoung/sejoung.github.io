@@ -2,7 +2,9 @@
 layout: post
 title: "아이템 51. 메서드 시그니처를 신중하게 설계하라."
 date: 2019-02-15 09:25 +0900
-comments: false
+comments: true
+tags : ["이팩티브자바"]
+categories : ["books"]
 sitemap :
   changefreq : daily
   priority : 1.0

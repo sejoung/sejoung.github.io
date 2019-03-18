@@ -2,7 +2,9 @@
 layout: post
 title: "https에서 ajax 호출시에 cookies 정보가 않넘어와요 ㅜㅜ"
 date: 2018-08-21 16:54 +0900
-comments: false
+comments: true
+tags : ["javascript","jquery","https no cookies","withCredentials"]
+categories : ["장애"]
 sitemap :
   changefreq : daily
   priority : 1.0

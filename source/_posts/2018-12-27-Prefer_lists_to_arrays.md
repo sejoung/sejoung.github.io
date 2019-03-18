@@ -2,7 +2,9 @@
 layout: post
 title: "아이템 28. 배열보단 리스트를 사용하라"
 date: 2018-12-27 14:15 +0900
-comments: false
+comments: true
+tags : ["이팩티브자바"]
+categories : ["books"]
 sitemap :
   changefreq : daily
   priority : 1.0

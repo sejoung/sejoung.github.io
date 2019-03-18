@@ -2,7 +2,9 @@
 layout: post
 title: "codespitz73_part2(흐름제어)"
 date: 2018-01-12 01:30:00 +0900
-comments: false
+comments: true
+tags : ["javascript","흐름제어"]
+categories : ["study"]
 sitemap :
   changefreq : daily
   priority : 1.0

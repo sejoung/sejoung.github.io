@@ -2,7 +2,9 @@
 layout: post
 title: "IFrame contentWindow Property"
 date: 2018-01-04 19:54:00 +0900
-comments: false
+comments: true
+tags : ["javascript","iframe"]
+categories : ["html"]
 sitemap :
   changefreq : daily
   priority : 1.0

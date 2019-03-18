@@ -2,7 +2,9 @@
 layout: post
 title: "아이템 40. @Override 에너테이션을 일관성 있게 사용하라."
 date: 2019-01-22 09:44 +0900
-comments: false
+comments: true
+tags : ["이팩티브자바"]
+categories : ["books"]
 sitemap :
   changefreq : daily
   priority : 1.0
@@ -226,5 +228,5 @@ public class TestImpl extends Test {
 
 # 참조
 -----
-* [아이템 11. equals를 재정의 하려면 hashcode도 재정의 하라](https://sejoung.github.io/2018/11/Always_override_hashCode_when_you_override_equals)
+* [아이템 11. equals를 재정의 하려면 hashcode도 재정의 하라](https://sejoung.github.io/2018/11/2018-11-27-Always_override_hashCode_when_you_override_equals/)
 

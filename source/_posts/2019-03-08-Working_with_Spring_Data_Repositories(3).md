@@ -2,7 +2,9 @@
 layout: post
 title: "spring data jpa repositorys로 작업하기(Query Methods 정의)"
 date: 2019-03-08 16:52 +0900
-comments: false
+comments: true
+tags : ["spring","spring data jpa"]
+categories : ["java"]
 sitemap :
   changefreq : daily
   priority : 1.0

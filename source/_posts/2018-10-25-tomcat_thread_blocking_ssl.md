@@ -2,7 +2,9 @@
 layout: post
 title: "tomcat_thread_blocking_ssl"
 date: 2018-10-25 17:44 +0900
-comments: false
+comments: true
+tags : ["tomcat","tomcat thread blocking ssl"]
+categories : ["장애"]
 sitemap :
   changefreq : daily
   priority : 1.0

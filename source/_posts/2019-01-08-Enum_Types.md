@@ -2,7 +2,9 @@
 layout: post
 title: "Enum Types"
 date: 2019-01-08 10:16 +0900
-comments: false
+comments: true
+tags : ["Enum Types"]
+categories : ["java"]
 sitemap :
   changefreq : daily
   priority : 1.0

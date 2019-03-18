@@ -2,7 +2,9 @@
 layout: post
 title: "코드리뷰(code review)"
 date: 2018-12-24 12:03 +0900
-comments: false
+comments: true
+tags : ["코드리뷰"]
+categories : ["생각"]
 sitemap :
   changefreq : daily
   priority : 1.0

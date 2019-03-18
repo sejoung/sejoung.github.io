@@ -2,7 +2,9 @@
 layout: post
 title: "이클립스 SERVER 플러그인"
 date: 2018-04-12 11:30:00 +0900
-comments: false
+comments: true
+tags : ["eclipse","eclipse server plugin"]
+categories : ["IDE"]
 sitemap :
   changefreq : daily
   priority : 1.0

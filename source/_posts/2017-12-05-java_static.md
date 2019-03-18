@@ -2,7 +2,9 @@
 layout: post
 title: "java static thread safe"
 date: 2017-12-05 14:47:00 +0900
-comments: false
+comments: true
+tags : ["static thread safe"]
+categories : ["java"]
 sitemap :
   changefreq : daily
   priority : 1.0

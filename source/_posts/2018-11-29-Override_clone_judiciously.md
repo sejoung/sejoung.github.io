@@ -2,7 +2,9 @@
 layout: post
 title: "아이템 13. clone 재정의는 주의해서 진행하라."
 date: 2018-11-29 13:54 +0900
-comments: false
+comments: true
+tags : ["이팩티브자바"]
+categories : ["books"]
 sitemap :
   changefreq : daily
   priority : 1.0

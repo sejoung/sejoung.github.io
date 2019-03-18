@@ -2,7 +2,9 @@
 layout: post
 title: "아이템 52. 다중정의(overloading)는 신중히 사용하라."
 date: 2019-02-18 11:20 +0900
-comments: false
+comments: true
+tags : ["이팩티브자바"]
+categories : ["books"]
 sitemap :
   changefreq : daily
   priority : 1.0

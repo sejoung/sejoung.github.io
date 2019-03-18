@@ -2,7 +2,9 @@
 layout: post
 title: "아이템 33. 타입안전 이종컨테이너를 고려하라."
 date: 2019-01-07 14:17 +0900
-comments: false
+comments: true
+tags : ["이팩티브자바"]
+categories : ["books"]
 sitemap :
   changefreq : daily
   priority : 1.0

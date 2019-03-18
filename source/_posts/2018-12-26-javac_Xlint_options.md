@@ -2,7 +2,9 @@
 layout: post
 title: "java xlint 옵션에 대한 설명"
 date: 2018-12-26 10:33 +0900
-comments: false
+comments: true
+tags : ["java xlint"]
+categories : ["java"]
 sitemap :
   changefreq : daily
   priority : 1.0

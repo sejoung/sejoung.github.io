@@ -2,7 +2,9 @@
 layout: post
 title: "IDE 별 프로퍼티 인코딩에 따른 설정"
 date: 2019-01-23 11:40 +0900
-comments: false
+comments: true
+tags : ["encoding"]
+categories : ["IDE"]
 sitemap :
   changefreq : daily
   priority : 1.0

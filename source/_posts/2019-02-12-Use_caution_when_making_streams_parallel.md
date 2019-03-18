@@ -2,7 +2,9 @@
 layout: post
 title: "아이템 48. 스트림 병렬화는 주의해서 적용하라."
 date: 2019-02-12 14:24 +0900
-comments: false
+comments: true
+tags : ["이팩티브자바"]
+categories : ["books"]
 sitemap :
   changefreq : daily
   priority : 1.0

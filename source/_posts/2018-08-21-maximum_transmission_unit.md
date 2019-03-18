@@ -2,7 +2,9 @@
 layout: post
 title: "OS 파라미터 maximum_transmission_unit"
 date: 2018-08-21 15:36 +0900
-comments: false
+comments: true
+tags : ["maximum_transmission_unit", "os parameter"]
+categories : ["server"]
 sitemap :
   changefreq : daily
   priority : 1.0

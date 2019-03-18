@@ -2,7 +2,9 @@
 layout: post
 title: "아이템 58. 전통적인 for문 보다는 for-each문을 사용하라."
 date: 2019-02-25 15:02 +0900
-comments: false
+comments: true
+tags : ["이팩티브자바"]
+categories : ["books"]
 sitemap :
   changefreq : daily
   priority : 1.0

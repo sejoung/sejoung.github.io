@@ -2,7 +2,9 @@
 layout: post
 title: "응집도_(coincidental cohesion)"
 date: 2018-05-08 15:38:00 +0900
-comments: false
+comments: true
+tags : ["응집도"]
+categories : ["study"]
 sitemap :
   changefreq : daily
   priority : 1.0

@@ -2,7 +2,9 @@
 layout: post
 title: "GCE_TIMEZONE"
 date: 2018-03-24 18:29:00 +0900
-comments: false
+comments: true
+tags : ["GCP", "TIMEZONE 설정"]
+categories : ["cloud"]
 sitemap :
   changefreq : daily
   priority : 1.0

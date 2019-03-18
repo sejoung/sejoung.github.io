@@ -2,7 +2,9 @@
 layout: post
 title: "아이템 64. 객체는 인터페이스를 사용해 참조하라."
 date: 2019-03-13 09:30 +0900
-comments: false
+comments: true
+tags : ["이팩티브자바"]
+categories : ["books"]
 sitemap :
   changefreq : daily
   priority : 1.0

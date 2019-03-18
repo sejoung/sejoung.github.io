@@ -2,7 +2,9 @@
 layout: post
 title: "jenkins_ssh_deploy"
 date: 2017-08-24 14:00:00 +0900
-comments: false
+comments: true
+tags : ["jenkins","deploy"]
+categories : ["jenkins"]
 sitemap :
   changefreq : daily
   priority : 1.0

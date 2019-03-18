@@ -2,7 +2,9 @@
 layout: post
 title: "영상 관련 기술의 기초"
 date: 2019-03-05 17:31 +0900
-comments: false
+comments: true
+tags : ["영상 관련 기술의 기초"]
+categories : ["동영상"]
 sitemap :
   changefreq : daily
   priority : 1.0

@@ -2,7 +2,9 @@
 layout: post
 title: "톰캣 DataSource user 정보 암호화 시키기"
 date: 2018-07-17 10:55:00 +0900
-comments: false
+comments: true
+tags : ["tomcat","tomcat datasource"]
+categories : ["java"]
 sitemap :
   changefreq : daily
   priority : 1.0

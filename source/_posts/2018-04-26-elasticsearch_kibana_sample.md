@@ -2,7 +2,9 @@
 layout: post
 title: "elasticsearch_kibana_sample"
 date: 2018-04-26 14:00:00 +0900
-comments: false
+comments: true
+tags : ["elasticsearch"]
+categories : ["2018 세미나"]
 sitemap :
   changefreq : daily
   priority : 1.0

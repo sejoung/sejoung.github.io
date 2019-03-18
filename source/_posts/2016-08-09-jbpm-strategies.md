@@ -2,7 +2,9 @@
 layout: post
 title: "jbpm 실행전략"
 date: 2016-08-09 16:41:00 +0900
-comments: false
+comments: true
+tags : ["jbpm","bpm","soa","workflow"]
+categories : ["jbpm"]
 sitemap :
   changefreq : daily
   priority : 1.0

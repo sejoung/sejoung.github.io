@@ -2,7 +2,9 @@
 layout: post
 title: "CodeSpitz74_Part2(함수를 작성할때에 참조)"
 date: 2018-01-11 19:00:00 +0900
-comments: false
+comments: true
+tags : ["javascript","꼬리물기 최적화", "closure"]
+categories : ["study"]
 sitemap :
   changefreq : daily
   priority : 1.0

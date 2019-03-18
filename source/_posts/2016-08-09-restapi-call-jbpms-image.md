@@ -2,7 +2,9 @@
 layout: post
 title: "jbpm 프로세스 진행상태 조회 rest api"
 date: 2016-08-09 13:29:00 +0900
-comments: false
+comments: true
+tags : ["jbpm","bpm","soa","workflow"]
+categories : ["jbpm"]
 sitemap :
   changefreq : daily
   priority : 1.0

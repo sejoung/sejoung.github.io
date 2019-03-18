@@ -2,7 +2,9 @@
 layout: post
 title: "자바의 레퍼런스 타입"
 date: 2018-11-20 14:16 +0900
-comments: false
+comments: true
+tags : ["자바의 레퍼런스 타입"]
+categories : ["java"]
 sitemap :
   changefreq : daily
   priority : 1.0

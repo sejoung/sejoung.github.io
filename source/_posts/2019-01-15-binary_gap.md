@@ -2,7 +2,9 @@
 layout: post
 title: "코딜러티 문제(binary gap)"
 date: 2019-01-15 14:08 +0900
-comments: false
+comments: true
+tags : ["binary gap"]
+categories : ["java"]
 sitemap :
   changefreq : daily
   priority : 1.0

@@ -2,7 +2,9 @@
 layout: post
 title: "POP_part1(전제 프로그래밍 불변사실)"
 date: 2017-12-20 09:00:00 +0900
-comments: false
+comments: true
+tags : ["프로그래밍의 정석","전제 프로그래밍 불변사실","원칙 프로그래밍 가이드 라인"]
+categories : ["books"]
 sitemap :
   changefreq : daily
   priority : 1.0

@@ -2,7 +2,9 @@
 layout: post
 title: "java stream 예제"
 date: 2019-01-31 09:27 +0900
-comments: false
+comments: true
+tags : ["java stream"]
+categories : ["java"]
 sitemap :
   changefreq : daily
   priority : 1.0

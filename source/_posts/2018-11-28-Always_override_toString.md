@@ -2,7 +2,9 @@
 layout: post
 title: "아이템 12. toString은 항상 재정의 하라."
 date: 2018-11-28 10:00 +0900
-comments: false
+comments: true
+tags : ["이팩티브자바"]
+categories : ["books"]
 sitemap :
   changefreq : daily
   priority : 1.0

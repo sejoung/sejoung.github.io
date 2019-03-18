@@ -2,7 +2,9 @@
 layout: post
 title: "아이템 7. 다쓴 객체의 참조를 해제하라"
 date: 2018-11-20 10:30 +0900
-comments: false
+comments: true
+tags : ["이팩티브자바"]
+categories : ["books"]
 sitemap :
   changefreq : daily
   priority : 1.0

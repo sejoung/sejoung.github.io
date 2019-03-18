@@ -2,7 +2,9 @@
 layout: post
 title: "geting_start_nodemcu"
 date: 2017-11-07 21:00:00 +0900
-comments: false
+comments: true
+tags : ["nodemcu"]
+categories : ["iot"]
 sitemap :
   changefreq : daily
   priority : 1.0

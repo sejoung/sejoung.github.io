@@ -2,7 +2,9 @@
 layout: post
 title: "빌드스크립트 정리 후기"
 date: 2018-06-21 11:30:00 +0900
-comments: false
+comments: true
+tags : ["빌드스크립트", "maven"]
+categories : ["생각"]
 sitemap :
   changefreq : daily
   priority : 1.0

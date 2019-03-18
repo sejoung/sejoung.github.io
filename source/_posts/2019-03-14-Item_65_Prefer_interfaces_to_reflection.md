@@ -2,7 +2,9 @@
 layout: post
 title: "아이템 65. 리플렉션 보다 인터페이스를 사용하라."
 date: 2019-03-14 09:26 +0900
-comments: false
+comments: true
+tags : ["이팩티브자바"]
+categories : ["books"]
 sitemap :
   changefreq : daily
   priority : 1.0

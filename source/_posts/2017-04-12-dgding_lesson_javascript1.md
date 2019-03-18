@@ -2,7 +2,9 @@
 layout: post
 title: "dgding javascript lesson"
 date: 2017-04-12 10:02:00 +0900
-comments: false
+comments: true
+tags : ["css","html","javascript"]
+categories : ["study"]
 sitemap :
   changefreq : daily
   priority : 1.0

@@ -2,7 +2,9 @@
 layout: post
 title: "아이템 47. 반환타입으로 스트림보다 컬렉션이 낫다."
 date: 2019-02-08 14:30 +0900
-comments: false
+comments: true
+tags : ["이팩티브자바"]
+categories : ["books"]
 sitemap :
   changefreq : daily
   priority : 1.0

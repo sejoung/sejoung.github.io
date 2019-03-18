@@ -2,7 +2,9 @@
 layout: post
 title: "hashcode () 및 equals ()를 사용한 작업"
 date: 2018-11-26 10:56 +0900
-comments: false
+comments: true
+tags : ["이팩티브자바"]
+categories : ["books"]
 sitemap :
   changefreq : daily
   priority : 1.0

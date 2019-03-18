@@ -2,7 +2,9 @@
 layout: post
 title: "아이템 62. 다른타입이 적절하다면 문자열 사용을 피하라."
 date: 2019-03-11 09:43 +0900
-comments: false
+comments: true
+tags : ["이팩티브자바"]
+categories : ["books"]
 sitemap :
   changefreq : daily
   priority : 1.0

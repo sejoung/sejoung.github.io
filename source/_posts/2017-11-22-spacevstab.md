@@ -2,7 +2,9 @@
 layout: post
 title: "tab vs space bar"
 date: 2017-11-22 13:15:00 +0900
-comments: false
+comments: true
+tags : ["tab","space bar"]
+categories : ["code conventions"]
 sitemap :
   changefreq : daily
   priority : 1.0

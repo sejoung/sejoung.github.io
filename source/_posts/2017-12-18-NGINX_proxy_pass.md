@@ -2,7 +2,9 @@
 layout: post
 title: "NGINX_proxy_pass"
 date: 2017-12-18 16:46:00 +0900
-comments: false
+comments: true
+tags : ["nginx","proxy pass"]
+categories : ["nginx"]
 sitemap :
   changefreq : daily
   priority : 1.0

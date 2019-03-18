@@ -2,7 +2,9 @@
 layout: post
 title: "결합도_(control coupling)"
 date: 2018-05-16 14:00:00 +0900
-comments: false
+comments: true
+tags : ["결합도"]
+categories : ["study"]
 sitemap :
   changefreq : daily
   priority : 1.0

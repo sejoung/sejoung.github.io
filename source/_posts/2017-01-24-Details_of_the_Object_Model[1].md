@@ -2,7 +2,9 @@
 layout: post
 title: "클래스 기반 언어와 프로토 타입 기반 언어(Class-based vs. prototype-based languages)"
 date: 2017-01-24 15:29:00 +0900
-comments: false
+comments: true
+tags : ["Class-based","prototype-based","java","javascript"]
+categories : ["languages"]
 sitemap :
   changefreq : daily
   priority : 1.0

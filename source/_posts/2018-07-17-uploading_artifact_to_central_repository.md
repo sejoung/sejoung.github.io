@@ -2,7 +2,9 @@
 layout: post
 title: "메이븐 중앙 저장소에 업로드 하기"
 date: 2018-07-17 11:55:00 +0900
-comments: false
+comments: true
+tags : ["maven","maven upload"]
+categories : ["java"]
 sitemap :
   changefreq : daily
   priority : 1.0

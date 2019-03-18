@@ -2,7 +2,9 @@
 layout: post
 title: "anet a8 print marlin firmware 업데이트"
 date: 2018-09-12 11:35 +0900
-comments: false
+comments: true
+tags : ["3D 프린터","anet a8 firmware update"]
+categories : ["동호회"]
 sitemap :
   changefreq : daily
   priority : 1.0

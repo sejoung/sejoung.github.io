@@ -2,7 +2,9 @@
 layout: post
 title: "아이템 35. ordinals 메서드 대신 instance fields를 사용하라"
 date: 2019-01-09 10:01 +0900
-comments: false
+comments: true
+tags : ["이팩티브자바"]
+categories : ["books"]
 sitemap :
   changefreq : daily
   priority : 1.0

@@ -2,7 +2,9 @@
 layout: post
 title: "_termvectors"
 date: 2018-01-11 14:00:00 +0900
-comments: false
+comments: true
+tags : ["inverted index"]
+categories : ["elasticsearch"]
 sitemap :
   changefreq : daily
   priority : 1.0

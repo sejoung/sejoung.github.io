@@ -2,7 +2,9 @@
 layout: post
 title: "vagrant 처음 사용해 보기"
 date: 2018-06-25 11:30:00 +0900
-comments: false
+comments: true
+tags : ["GETTING STARTED"]
+categories : ["vagrant"]
 sitemap :
   changefreq : daily
   priority : 1.0

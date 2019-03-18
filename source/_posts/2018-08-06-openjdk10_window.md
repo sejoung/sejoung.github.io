@@ -2,7 +2,9 @@
 layout: post
 title: "openjdk10 설치(window)"
 date: 2018-08-06 14:12:00 +0900
-comments: false
+comments: true
+tags : ["openjdk10","jdk설치"]
+categories : ["java"]
 sitemap :
   changefreq : daily
   priority : 1.0

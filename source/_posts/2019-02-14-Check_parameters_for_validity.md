@@ -2,7 +2,9 @@
 layout: post
 title: "아이템 49. 매개변수가 유효한지 검사하라."
 date: 2019-02-14 09:53 +0900
-comments: false
+comments: true
+tags : ["이팩티브자바"]
+categories : ["books"]
 sitemap :
   changefreq : daily
   priority : 1.0

@@ -2,7 +2,9 @@
 layout: post
 title: "jbpm CustomWorkItemHandler 만드는 방법"
 date: 2016-08-09 11:28:00 +0900
-comments: false
+comments: true
+tags : ["jbpm","bpm","soa","workflow"]
+categories : ["jbpm"]
 sitemap :
   changefreq : daily
   priority : 1.0

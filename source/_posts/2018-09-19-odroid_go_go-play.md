@@ -2,7 +2,9 @@
 layout: post
 title: "오드로이드 고"
 date: 2018-09-19 12:23 +0900
-comments: false
+comments: true
+tags : ["오드로이드 고"]
+categories : ["동호회"]
 sitemap :
   changefreq : daily
   priority : 1.0

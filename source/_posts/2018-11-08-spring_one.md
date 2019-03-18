@@ -2,7 +2,9 @@
 layout: post
 title: "spring_one"
 date: 2018-11-08 08:50 +0900
-comments: false
+comments: true
+tags : ["spring_one"]
+categories : ["2018 세미나"]
 sitemap :
   changefreq : daily
   priority : 1.0

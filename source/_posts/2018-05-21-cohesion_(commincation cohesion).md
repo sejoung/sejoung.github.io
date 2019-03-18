@@ -2,7 +2,9 @@
 layout: post
 title: "응집도_(commincation cohesion)"
 date: 2018-05-21 16:34:00 +0900
-comments: false
+comments: true
+tags : ["응집도"]
+categories : ["study"]
 sitemap :
   changefreq : daily
   priority : 1.0

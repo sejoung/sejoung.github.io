@@ -2,7 +2,9 @@
 layout: post
 title: "compile-time_constant"
 date: 2018-10-18 15:20 +0900
-comments: false
+comments: true
+tags : ["compile-time_constant"]
+categories : ["java"]
 sitemap :
   changefreq : daily
   priority : 1.0

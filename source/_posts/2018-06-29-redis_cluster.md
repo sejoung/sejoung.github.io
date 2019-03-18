@@ -2,7 +2,9 @@
 layout: post
 title: "Redis cluster 란"
 date: 2018-06-29 09:00:00 +0900
-comments: false
+comments: true
+tags : ["redis","Redis cluster"]
+categories : ["nosql"]
 sitemap :
   changefreq : daily
   priority : 1.0

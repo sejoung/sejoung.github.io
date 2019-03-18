@@ -2,7 +2,9 @@
 layout: post
 title: "projectlombok IDE에 설치 방법"
 date: 2018-08-16 10:46 +0900
-comments: false
+comments: true
+tags : ["lombok IDE에 설치 방법","intellij","eclipse"]
+categories : ["java"]
 sitemap :
   changefreq : daily
   priority : 1.0

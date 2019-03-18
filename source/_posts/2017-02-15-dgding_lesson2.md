@@ -2,7 +2,9 @@
 layout: post
 title: "dgding lesson2(html이 그림을 그리는 방법은)"
 date: 2017-02-15 11:22:00 +0900
-comments: false
+comments: true
+tags : ["css","html","javascript"]
+categories : ["study"]
 sitemap :
   changefreq : daily
   priority : 1.0

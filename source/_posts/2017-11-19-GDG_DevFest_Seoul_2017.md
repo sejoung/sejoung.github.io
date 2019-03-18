@@ -2,7 +2,9 @@
 layout: post
 title: "GDG_DevFest_Seoul_2017"
 date: 2017-11-19 01:00:00 +0900
-comments: false
+comments: true
+tags : ["DevFest","google"]
+categories : ["2017 세미나"]
 sitemap :
   changefreq : daily
   priority : 1.0

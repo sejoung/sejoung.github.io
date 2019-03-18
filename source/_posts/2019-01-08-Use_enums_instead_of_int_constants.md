@@ -2,7 +2,9 @@
 layout: post
 title: "아이템 34. int 상수 대신 열거 타입을 사용하라."
 date: 2019-01-08 15:22 +0900
-comments: false
+comments: true
+tags : ["이팩티브자바"]
+categories : ["books"]
 sitemap :
   changefreq : daily
   priority : 1.0

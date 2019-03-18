@@ -2,7 +2,9 @@
 layout: post
 title: "아이템 63. 문자열 연결은 느리니 주의하라."
 date: 2019-03-12 09:43 +0900
-comments: false
+comments: true
+tags : ["이팩티브자바"]
+categories : ["books"]
 sitemap :
   changefreq : daily
   priority : 1.0

@@ -2,7 +2,9 @@
 layout: post
 title: "톰캣 데이터 소스 min-idle"
 date: 2018-09-20 14:31 +0900
-comments: false
+comments: true
+tags : ["spring","spring boot","tomcat"]
+categories : ["java"]
 sitemap :
   changefreq : daily
   priority : 1.0

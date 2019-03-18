@@ -2,7 +2,9 @@
 layout: post
 title: "아이템 41. 정의하려는 것이 타입이라면 마커 인터페이스를 사용하라."
 date: 2019-01-23 13:49 +0900
-comments: false
+comments: true
+tags : ["이팩티브자바"]
+categories : ["books"]
 sitemap :
   changefreq : daily
   priority : 1.0
@@ -155,7 +157,7 @@ Error:(14, 86) java: incompatible types: com.github.sejoung.codetest.annotation.
 # 참조
 -----
 * [jdk docs Serializable](https://docs.oracle.com/javase/8/docs/api/java/io/Serializable.html)
-*[아이템 39. 명명 패턴보다는 애너테이션을 사용하라](https://sejoung.github.io/2019/01/Prefer_annotations_to_naming_patterns)
+*[아이템 39. 명명 패턴보다는 애너테이션을 사용하라](https://sejoung.github.io/2019/01/2019-01-21-Prefer_annotations_to_naming_patterns/)
 
 
 

@@ -2,7 +2,9 @@
 layout: post
 title: "아이템 1. 생성자 대신 정적 팩토리 매소드 패턴(static factory method) 사용을 고려 해라"
 date: 2018-11-05 09:49 +0900
-comments: false
+comments: true
+tags : ["이팩티브자바"]
+categories : ["books"]
 sitemap :
   changefreq : daily
   priority : 1.0

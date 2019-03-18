@@ -2,7 +2,9 @@
 layout: post
 title: "아이템 60. 정확한 답이 필요하면 float와 double 은 피하라 "
 date: 2019-03-07 10:40 +0900
-comments: false
+comments: true
+tags : ["이팩티브자바"]
+categories : ["books"]
 sitemap :
   changefreq : daily
   priority : 1.0

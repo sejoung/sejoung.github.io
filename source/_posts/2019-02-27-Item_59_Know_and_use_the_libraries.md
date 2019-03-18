@@ -2,7 +2,9 @@
 layout: post
 title: "아이템 59. 라이브러리를 익히고 사용하라."
 date: 2019-02-27 10:54 +0900
-comments: false
+comments: true
+tags : ["이팩티브자바"]
+categories : ["books"]
 sitemap :
   changefreq : daily
   priority : 1.0

@@ -2,7 +2,9 @@
 layout: post
 title: "아이템 19. 상속을 고려하고 설계하고 문서화 하라 그렇지 않으면 상속을 금지하라"
 date: 2018-12-10 15:02 +0900
-comments: false
+comments: true
+tags : ["이팩티브자바"]
+categories : ["books"]
 sitemap :
   changefreq : daily
   priority : 1.0

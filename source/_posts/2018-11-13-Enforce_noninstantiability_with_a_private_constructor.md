@@ -2,7 +2,9 @@
 layout: post
 title: "아이템 4. 인스턴스화를 막으려면 private 생성자를 사용하라"
 date: 2018-11-13 10:41 +0900
-comments: false
+comments: true
+tags : ["이팩티브자바"]
+categories : ["books"]
 sitemap :
   changefreq : daily
   priority : 1.0

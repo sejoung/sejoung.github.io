@@ -2,7 +2,9 @@
 layout: post
 title: "아이템 10. equals는 일반규약을 지켜서 재정의 하라"
 date: 2018-11-26 14:34 +0900
-comments: false
+comments: true
+tags : ["이팩티브자바"]
+categories : ["books"]
 sitemap :
   changefreq : daily
   priority : 1.0

@@ -2,7 +2,9 @@
 layout: post
 title: "자바 컴파일러 옵션추가"
 date: 2018-12-31 15:45 +0900
-comments: false
+comments: true
+tags : ["intellij"]
+categories : ["IDE"]
 sitemap :
   changefreq : daily
   priority : 1.0

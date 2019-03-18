@@ -2,7 +2,9 @@
 layout: post
 title: "jenkins php 파일 배포 하기"
 date: 2018-08-01 09:30:00 +0900
-comments: false
+comments: true
+tags : ["jenkins","deploy"]
+categories : ["jenkins"]
 sitemap :
   changefreq : daily
   priority : 1.0

@@ -2,7 +2,9 @@
 layout: post
 title: "도커 처음 시작하기part2(컨테이너)"
 date: 2019-03-13 14:55 +0900
-comments: false
+comments: true
+tags : ["Docker"]
+categories : ["tool"]
 sitemap :
   changefreq : daily
   priority : 1.0
@@ -12,7 +14,7 @@ sitemap :
 ### 전제조건
 
 * Docker 버전 1.13 이상을 설치하십시오 .
-* [도커 처음 시작하기part1(오리엔테이션 및 설정)](https://sejoung.github.io/2019/03/docker-get-started(1))에서 사용방법을 익히세요
+* [도커 처음 시작하기part1(오리엔테이션 및 설정)](https://sejoung.github.io/2019/03/2019-03-13-docker-get-started(1)/)에서 사용방법을 익히세요
 * 환경을 신속하게 테스트 하여 모든 설정이 완료 되었는지 확인 
 
 `docker run hello-world`

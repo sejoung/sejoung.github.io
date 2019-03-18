@@ -2,7 +2,9 @@
 layout: post
 title: "아이템 50. 적시에 방어적 복사본을 만들어라."
 date: 2019-02-14 13:57 +0900
-comments: false
+comments: true
+tags : ["이팩티브자바"]
+categories : ["books"]
 sitemap :
   changefreq : daily
   priority : 1.0

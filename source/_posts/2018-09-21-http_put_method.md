@@ -2,7 +2,9 @@
 layout: post
 title: "HTTP PUT 메소드"
 date: 2018-09-21 10:51 +0900
-comments: false
+comments: true
+tags : ["spring","spring config"]
+categories : ["java"]
 sitemap :
   changefreq : daily
   priority : 1.0

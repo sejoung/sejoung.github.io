@@ -2,7 +2,9 @@
 layout: post
 title: "리눅스에서 java_home 셋팅"
 date: 2018-10-29 11:53 +0900
-comments: false
+comments: true
+tags : ["java_home"]
+categories : ["java"]
 sitemap :
   changefreq : daily
   priority : 1.0

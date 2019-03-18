@@ -2,7 +2,9 @@
 layout: post
 title: "아이템 39. 명명 패턴보다는 애너테이션을 사용하라"
 date: 2019-01-21 09:37 +0900
-comments: false
+comments: true
+tags : ["이팩티브자바"]
+categories : ["books"]
 sitemap :
   changefreq : daily
   priority : 1.0

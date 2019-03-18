@@ -2,7 +2,9 @@
 layout: post
 title: "스프링 배치 처음 따라하기 튜토리얼"
 date: 2018-11-30 09:56 +0900
-comments: false
+comments: true
+tags : ["spring","spring batch"]
+categories : ["java"]
 sitemap :
   changefreq : daily
   priority : 1.0

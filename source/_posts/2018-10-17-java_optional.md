@@ -2,7 +2,9 @@
 layout: post
 title: "java_optional"
 date: 2018-10-17 09:13 +0900
-comments: false
+comments: true
+tags : ["optional"]
+categories : ["java"]
 sitemap :
   changefreq : daily
   priority : 1.0

@@ -2,7 +2,9 @@
 layout: post
 title: "아이템 54. null이 아닌 빈컬렉션이나 배열을 반환하라."
 date: 2019-02-20 17:24 +0900
-comments: false
+comments: true
+tags : ["이팩티브자바"]
+categories : ["books"]
 sitemap :
   changefreq : daily
   priority : 1.0

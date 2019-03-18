@@ -2,7 +2,9 @@
 layout: post
 title: "아이템 21. 인터페이스를 구현하는 쪽을 생각해 설계하라."
 date: 2018-12-17 10:33 +0900
-comments: false
+comments: true
+tags : ["이팩티브자바"]
+categories : ["books"]
 sitemap :
   changefreq : daily
   priority : 1.0

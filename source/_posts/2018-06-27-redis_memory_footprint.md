@@ -2,7 +2,9 @@
 layout: post
 title: "Redis 용량산정을 위한 메모리 사용조사"
 date: 2018-06-27 11:43:00 +0900
-comments: false
+comments: true
+tags : ["redis","용량산정"]
+categories : ["nosql"]
 sitemap :
   changefreq : daily
   priority : 1.0

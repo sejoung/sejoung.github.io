@@ -2,7 +2,9 @@
 layout: post
 title: "nginx HTTP load balancer 설정"
 date: 2018-07-26 20:21:00 +0900
-comments: false
+comments: true
+tags : ["nginx","load balancer"]
+categories : ["nginx"]
 sitemap :
   changefreq : daily
   priority : 1.0

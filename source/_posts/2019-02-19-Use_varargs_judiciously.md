@@ -2,7 +2,9 @@
 layout: post
 title: "아이템 53. 가변인수(varargs)는 신중히 사용하라."
 date: 2019-02-19 09:24 +0900
-comments: false
+comments: true
+tags : ["이팩티브자바"]
+categories : ["books"]
 sitemap :
   changefreq : daily
   priority : 1.0

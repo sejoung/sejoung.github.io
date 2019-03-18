@@ -2,7 +2,9 @@
 layout: post
 title: "Reactive Programming"
 date: 2017-11-29 14:26:00 +0900
-comments: false
+comments: true
+tags : ["토비의 봄 TV 5회","Reactive","Iterable(PULL) vs Observable(PUSH)"]
+categories : ["study"]
 sitemap :
   changefreq : daily
   priority : 1.0

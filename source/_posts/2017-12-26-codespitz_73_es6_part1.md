@@ -2,7 +2,9 @@
 layout: post
 title: "codespitz73_part1"
 date: 2017-12-26 14:30:00 +0900
-comments: false
+comments: true
+tags : ["javascript"]
+categories : ["study"]
 sitemap :
   changefreq : daily
   priority : 1.0

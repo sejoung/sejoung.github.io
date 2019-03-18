@@ -2,7 +2,9 @@
 layout: post
 title: "아이템 46. 스트림에서는 부작용 없는 함수를 사용하라"
 date: 2019-02-08 11:23 +0900
-comments: false
+comments: true
+tags : ["이팩티브자바"]
+categories : ["books"]
 sitemap :
   changefreq : daily
   priority : 1.0

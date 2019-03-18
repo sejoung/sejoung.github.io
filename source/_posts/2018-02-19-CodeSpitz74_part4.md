@@ -2,7 +2,9 @@
 layout: post
 title: "CodeSpitz74_Part4(권한과 책임)"
 date: 2018-02-19 19:45:00 +0900
-comments: false
+comments: true
+tags : ["javascript","권한과 책임"]
+categories : ["study"]
 sitemap :
   changefreq : daily
   priority : 1.0

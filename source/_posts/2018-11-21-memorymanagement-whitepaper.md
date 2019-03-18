@@ -2,7 +2,9 @@
 layout: post
 title: "Memory Management in the Java HotSpot™ Virtual Machine(Sun Microsystems April 2006)"
 date: 2018-11-21 10:37 +0900
-comments: false
+comments: true
+tags : ["jvm"]
+categories : ["java"]
 sitemap :
   changefreq : daily
   priority : 1.0

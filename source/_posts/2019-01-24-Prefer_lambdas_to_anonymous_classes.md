@@ -2,7 +2,9 @@
 layout: post
 title: "아이템 42. 익명클래스 보다 람다를 사용하라."
 date: 2019-01-24 10:16 +0900
-comments: false
+comments: true
+tags : ["이팩티브자바"]
+categories : ["books"]
 sitemap :
   changefreq : daily
   priority : 1.0

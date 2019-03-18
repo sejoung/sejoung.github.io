@@ -3,7 +3,9 @@
 layout: post
 title: "스프링 기반의 REST API 개발"
 date: 2018-11-10 08:55 +0900
-comments: false
+comments: true
+tags : ["스프링 기반의 REST API 개발"]
+categories : ["2018 세미나"]
 sitemap :
   changefreq : daily
   priority : 1.0

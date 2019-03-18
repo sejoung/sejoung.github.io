@@ -2,7 +2,9 @@
 layout: post
 title: "아이템 9. try-finally 보다 try-with-resources 블럭을 사용하세요 "
 date: 2018-11-23 16:18 +0900
-comments: false
+comments: true
+tags : ["이팩티브자바"]
+categories : ["books"]
 sitemap :
   changefreq : daily
   priority : 1.0

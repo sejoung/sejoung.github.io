@@ -2,7 +2,9 @@
 layout: post
 title: "레디스 접속용 클라이언트"
 date: 2018-12-28 13:30 +0900
-comments: false
+comments: true
+tags : ["redis","RedisDesktopManager"]
+categories : ["tool"]
 sitemap :
   changefreq : daily
   priority : 1.0

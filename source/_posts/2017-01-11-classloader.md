@@ -2,7 +2,9 @@
 layout: post
 title: "Tomcat의 Class Loader HOW-TO"
 date: 2017-01-11 10:20:00 +0900
-comments: false
+comments: true
+tags : ["classloader","tomcat","java"]
+categories : ["java"]
 sitemap :
   changefreq : daily
   priority : 1.0

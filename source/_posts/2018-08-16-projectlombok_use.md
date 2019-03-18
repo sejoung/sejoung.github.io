@@ -2,7 +2,9 @@
 layout: post
 title: "projectlombok 사용에 대한 의견"
 date: 2018-08-16 11:10 +0900
-comments: false
+comments: true
+tags : ["lombok 사용에 대한 의견"]
+categories : ["java"]
 sitemap :
   changefreq : daily
   priority : 1.0

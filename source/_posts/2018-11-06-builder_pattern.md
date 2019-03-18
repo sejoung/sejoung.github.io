@@ -2,7 +2,9 @@
 layout: post
 title: "아이템 2. 생성자에 매개 변수가 많다면 빌더를 고려하자"
 date: 2018-11-06 09:40 +0900
-comments: false
+comments: true
+tags : ["이팩티브자바"]
+categories : ["books"]
 sitemap :
   changefreq : daily
   priority : 1.0

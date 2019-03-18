@@ -2,7 +2,9 @@
 layout: post
 title: "ALTER TABLE ADD PARTITION 시에 장애"
 date: 2018-03-28 09:00:00 +0900
-comments: false
+comments: true
+tags : ["mariadb", "ADD PARTITION"]
+categories : ["장애복구"]
 sitemap :
   changefreq : daily
   priority : 1.0

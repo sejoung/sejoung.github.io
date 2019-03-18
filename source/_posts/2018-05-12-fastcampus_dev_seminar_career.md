@@ -2,7 +2,9 @@
 layout: post
 title: "개발자 커리어 컨퍼런스"
 date: 2018-05-12 14:00:00 +0900
-comments: false
+comments: true
+tags : ["개발자 커리어 컨퍼런스"]
+categories : ["2018 세미나"]
 sitemap :
   changefreq : daily
   priority : 1.0

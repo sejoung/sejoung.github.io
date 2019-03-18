@@ -2,7 +2,9 @@
 layout: post
 title: "아이템 37. ordinal indexing 대신 EnumMap을 사용하라."
 date: 2019-01-10 13:30 +0900
-comments: false
+comments: true
+tags : ["이팩티브자바"]
+categories : ["books"]
 sitemap :
   changefreq : daily
   priority : 1.0

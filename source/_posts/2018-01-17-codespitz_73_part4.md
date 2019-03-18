@@ -2,7 +2,9 @@
 layout: post
 title: "codespitz73_part4(ABSTRACT LOOP & LAZY EXECUTION)"
 date: 2018-01-17 09:00:00 +0900
-comments: false
+comments: true
+tags : ["javascript","ABSTRACT LOOP", "LAZY EXECUTION"]
+categories : ["study"]
 sitemap :
   changefreq : daily
   priority : 1.0

@@ -2,7 +2,9 @@
 layout: post
 title: "아이템 30. 이왕이면 제네릭 메서드로 만들어라"
 date: 2018-12-31 16:18 +0900
-comments: false
+comments: true
+tags : ["이팩티브자바"]
+categories : ["books"]
 sitemap :
   changefreq : daily
   priority : 1.0

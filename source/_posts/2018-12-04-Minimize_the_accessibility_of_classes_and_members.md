@@ -2,7 +2,9 @@
 layout: post
 title: "아이템 15. 클래스와 맴버의 접근권한을 최소화 하라."
 date: 2018-12-04 13:30 +0900
-comments: false
+comments: true
+tags : ["이팩티브자바"]
+categories : ["books"]
 sitemap :
   changefreq : daily
   priority : 1.0
