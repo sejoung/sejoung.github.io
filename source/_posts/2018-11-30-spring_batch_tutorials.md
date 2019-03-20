@@ -25,7 +25,7 @@ sitemap :
 스프링 배치 프레임워크를 적용하기 위해서는 여러 설정이 있는데 
 설정보다 관례(CoC; Convention over Configuration) 패러다임에 맞춘 spring boot 프레임워크를 사용하려 한다.
 
-![spring batch UI1](https://sejoung.github.io/images/2018_11_30_01.png){: width="100%"}{: .center}
+![spring batch UI1](https://sejoung.github.io/images/2018_11_30_01.png)
 
 JSR 352는 일괄 처리 비즈니스 로직을 구현할 수있는 수많은 일괄 프로그래밍 API를 정의합니다. 이 중에서 일반적으로 사용되는 ItemReader, ItemProcessor 및 ItemWriter는 배치 단계의 데이터 항목을 읽고, 처리하고, 쓰는 기본 런타임 계약을 정의합니다.
 

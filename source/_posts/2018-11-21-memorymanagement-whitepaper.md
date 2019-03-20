@@ -203,7 +203,7 @@ Java 프로그래밍 언어를 포함한 여러 프로그래밍 언어로 작성
 젊은 세대 컬렉션은 상대적으로 빈번하게 발생하며 효율적이고 빠릅니다. 젊은 세대
 공간은 일반적으로 작으며 더 이상 참조되지 않는 많은 객체를 포함 할 가능성이 높습니다.
 
-![그림1](https://sejoung.github.io/images/2018_11_21_01.jpg){: width="100%"}{: .center}
+![그림1](https://sejoung.github.io/images/2018_11_21_01.jpg)
 
 일부 젊은 세대 컬렉션에서 생존하는 객체는 결국 컬렉션으로 승격되거나 종신됩니다.
 구세대. 그림 1을 보자.이 세대는 일반적으로 젊은 세대와 그 점유보다 크다.
@@ -237,7 +237,7 @@ JVM은 클래스와 메소드를 설명하는 객체와 같이 가비지 컬렉�
 구세대. 주어진 시간에 생존 공간 중 하나 (그림에서 From라고 표시됨)에는 이러한 객체가 저장되어 있으며,
 다른 하나는 비어 있고 다음 수집까지 사용되지 않은 채로 남아 있습니다.
 
-![그림2](https://sejoung.github.io/images/2018_11_21_02.jpg){: width="100%"}{: .center}
+![그림2](https://sejoung.github.io/images/2018_11_21_02.jpg)
 
 ##### Garbage Collection Types
 
@@ -293,13 +293,13 @@ Eden에 남아있는 객체 또는 실제 객체를 복사 한 후 From 공간�
 살아 있고 검사 할 필요가 없습니다. (이 쓰레기 개체는 그림에서 X로 표시되어 있습니다.
 사실 수집가는 이러한 객체를 검사하거나 표시하지 않습니다.)
 
-![그림3](https://sejoung.github.io/images/2018_11_21_03.jpg){: width="100%"}{: .center}
+![그림3](https://sejoung.github.io/images/2018_11_21_03.jpg)
 
 젊은 세대 컬렉션이 완료되면 에덴과 이전에 점령 된 생존자 공간은 모두
 비어 있고 오직 이전의 빈 생존자 공간 만이 살아있는 물체를 포함합니다. 이 시점에서, 생존자
 공백은 스왑 역할을합니다. 그림 4를 참조하십시오.
 
-![그림4](https://sejoung.github.io/images/2018_11_21_04.jpg){: width="100%"}{: .center}
+![그림4](https://sejoung.github.io/images/2018_11_21_04.jpg)
 
 ###### Old Generation Collection Using the Serial Collector
 
@@ -311,7 +311,7 @@ Eden에 남아있는 객체 또는 실제 객체를 복사 한 후 From 공간�
 그림 5. 압축을 통해 이전 또는 영구 세대에 대한 향후 할당이
 빠르고 범프 - 포인터 기법.
 
-![그림5](https://sejoung.github.io/images/2018_11_21_05.jpg){: width="100%"}{: .center}
+![그림5](https://sejoung.github.io/images/2018_11_21_05.jpg)
 
 ###### When to Use the Serial Collector
 
@@ -339,7 +339,7 @@ CPU가 유휴 상태를 유지하는 대신 가비지 수집 작업 만 수행�
 많은 CPU를 사용하여 병렬로 수집하면 가비지 콜렉션 오버 헤드가 줄어들어 애플리케이션 처리량이 증가합니다
 그림 6은 직렬 수집기와 병렬 젊은 세대를위한 수집가.
 
-![그림6](https://sejoung.github.io/images/2018_11_21_06.jpg){: width="100%"}{: .center}
+![그림6](https://sejoung.github.io/images/2018_11_21_06.jpg)
 
 ###### Old Generation Collection Using the Parallel Collector
 
@@ -446,7 +446,7 @@ CMS 수집기의 수집주기는 초기 표시라고하는 짧은 일시 중지�
 직렬 마크 - 스윕 - 콤팩트를 사용한 구 세대 컬렉션 간의 차이점
 수집기 및 CMS 수집기.
 
-![그림7](https://sejoung.github.io/images/2018_11_21_07.jpg){: width="100%"}{: .center}
+![그림7](https://sejoung.github.io/images/2018_11_21_07.jpg)
 
 발언 단계에서 객체를 다시 방문하는 것과 같은 일부 작업은 작업량을 증가시킵니다.
 컬렉터가해야 할 일은 오버 헤드가 증가하기 때문입니다. 이것은 대부분의 콜렉터에게 일반적인 트레이드 오프입니다.
@@ -455,7 +455,7 @@ CMS 수집기의 수집주기는 초기 표시라고하는 짧은 일시 중지�
 CMS 수집기는 압축되지 않는 유일한 수집기입니다. 즉, 공간이 확보 된 후
 죽은 물체가 점령 한 경우 살아있는 물체를 구세대의 한쪽 끝으로 이동시키지 않습니다. 그림 8을 참조하십시오.
 
-![그림8](https://sejoung.github.io/images/2018_11_21_08.jpg){: width="100%"}{: .center}
+![그림8](https://sejoung.github.io/images/2018_11_21_08.jpg)
 
 이렇게하면 시간이 절약되지만 여유 공간이 인접하지 않기 때문에 콜렉터는 더 이상 간단한 공간을 사용할 수 없습니다.
 포인터는 다음 객체가 할당 될 수있는 다음 자유 위치를 가리킨다. 대신 지금은

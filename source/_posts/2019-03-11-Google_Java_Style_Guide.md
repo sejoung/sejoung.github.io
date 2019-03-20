@@ -38,7 +38,7 @@ JavaScript Style Guide, AngularJS Style Guide, Common Lisp Style Guide, and Vims
 
 기본적으로 많이쓰는 인텔리제이와 이클립스에 설정파일이 나온다.
 
-![styleguide import UI1](https://sejoung.github.io/images/2019_03_11_01.jpg){: width="100%"}{: .center}
+![styleguide import UI1](https://sejoung.github.io/images/2019_03_11_01.jpg)
 
 위에 파일을 활용할것이다 그럼 인텔리제이를 실행시킨후에 Code Style 페이지로 들어갈것이다.
 
@@ -52,23 +52,23 @@ Ctrl+Alt+S | 단축키
 
 위에 단축키를 누르면 편하게 들어갈수있다. 
 
-![styleguide import UI2](https://sejoung.github.io/images/2019_03_11_02.jpg){: width="100%"}{: .center}
+![styleguide import UI2](https://sejoung.github.io/images/2019_03_11_02.jpg)
 
 위에서 톱니바퀴 모양의 버튼을 클릭 하면 설정이 나오는데 거기서 Import Scheme... 그다음엔 인텔리제이 코드스타일을 클릭한다.
 
-![styleguide import UI3](https://sejoung.github.io/images/2019_03_11_03.jpg){: width="100%"}{: .center}
+![styleguide import UI3](https://sejoung.github.io/images/2019_03_11_03.jpg)
 
 그 다음 다운로드 받은 파일을 선택하면 
 
-![styleguide import UI4](https://sejoung.github.io/images/2019_03_11_04.jpg){: width="100%"}{: .center}
+![styleguide import UI4](https://sejoung.github.io/images/2019_03_11_04.jpg)
 
 그리고 이름을 정하고 ok 버틀을 클릭
 
-![styleguide import UI5](https://sejoung.github.io/images/2019_03_11_05.jpg){: width="100%"}{: .center}
+![styleguide import UI5](https://sejoung.github.io/images/2019_03_11_05.jpg)
 
 그다음 google code로 선택후에 apply를 클릭하면 끝이 난다.
 
-![styleguide import UI6](https://sejoung.github.io/images/2019_03_11_06.jpg){: width="100%"}{: .center}
+![styleguide import UI6](https://sejoung.github.io/images/2019_03_11_06.jpg)
 
 
 # 참조

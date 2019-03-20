@@ -105,7 +105,7 @@ java.lang.NumberFormatException: multiple points
 
 그래서 java doc를 찾아 보았다 그랬더니 Synchronization 부분이 존재하는데 내용은 아래처럼 나와 있다.
 
-![java doc](https://sejoung.github.io/images/2018_12_14_01.jpg){: width="100%"}{: .center}
+![java doc](https://sejoung.github.io/images/2018_12_14_01.jpg)
 
 쓰레드마다 객체를 생성하거나 여러 쓰레드가 동시에 접근하는 경우는 외부에 synchronized 를 하는것이라고 나와있다.
 

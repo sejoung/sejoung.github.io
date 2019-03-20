@@ -20,9 +20,9 @@ sitemap :
 
 이부분은 문서화로 남아 있는데 자세히 보지 못했었다 java 8까지는 This implementation 라는 구분으로 javadoc에 명시 되있었다.
 
-![jdk 8](https://sejoung.github.io/images/2018_12_10_02.jpg){: width="100%"}{: .center}
+![jdk 8](https://sejoung.github.io/images/2018_12_10_02.jpg)
 
-![jdk 9](https://sejoung.github.io/images/2018_12_10_01.jpg){: width="100%"}{: .center}
+![jdk 9](https://sejoung.github.io/images/2018_12_10_01.jpg)
 
 
 위에 2개 이미지는 AbstractCollection에서 java 8 과 java 9의 doc를 캡쳐 한것이다.
@@ -35,7 +35,7 @@ sitemap :
 
 클래스의 내부 동작 과정 중간에 끼어들 수 있는 hook을 잘선별해 protected 메서드 형태로 공개 할수도 있어야 된다.
 
-![removeRange](https://sejoung.github.io/images/2018_12_10_03.jpg){: width="100%"}{: .center}
+![removeRange](https://sejoung.github.io/images/2018_12_10_03.jpg)
 
 위에 코드는 AbstractList 클래스의 removeRange 메소드이다.
 

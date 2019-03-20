@@ -92,7 +92,7 @@ public class Test {
 
 요즘엔 IDE가 좋아져서 아래 처럼 해당 정보를 보여주기도 한다.
 
-![인텔리제이](https://sejoung.github.io/images/2018_11_06_01.jpg){: width="100%"}{: .center}
+![인텔리제이](https://sejoung.github.io/images/2018_11_06_01.jpg)
 
 #### 자바빈즈 패턴(javaBeans pattern)
 

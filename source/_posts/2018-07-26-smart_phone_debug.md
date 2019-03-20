@@ -17,12 +17,12 @@ sitemap :
 먼저 [fiddler](https://www.telerik.com/fiddler)를 다운로드 받는다. 설치후에 피들러를 기동
 
 
-![fiddler UI1](https://sejoung.github.io/images/2018_07_50_01.jpg){: width="100%"}{: .center}
+![fiddler UI1](https://sejoung.github.io/images/2018_07_50_01.jpg)
 
 위에 처럼 Tool -> fiddler option 선택
 
 
-![fiddler UI2](https://sejoung.github.io/images/2018_07_50_02.jpg){: width="100%"}{: .center}
+![fiddler UI2](https://sejoung.github.io/images/2018_07_50_02.jpg)
 
 위에 처럼 화면에 팝업이 등장 connents 선택 
 
