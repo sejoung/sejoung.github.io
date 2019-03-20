@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "OutOfMemoryError Exception 의 이해"
+title: "Wowza IDE를 사용하여 Wowza 스트리밍 엔진 확장"
 date: 2019-03-20 15:58 +0900
 comments: true
 tags : ["wowza","streaming engine","wowza ide"]
