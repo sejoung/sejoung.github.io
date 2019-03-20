@@ -3,7 +3,7 @@ layout: post
 title: "Wowza IDE를 사용하여 Wowza 스트리밍 엔진 확장"
 date: 2019-03-20 15:58 +0900
 comments: true
-tags : ["wowza","streaming engine","wowza ide"]
+tags : ["wowza","streaming engine","wowza ide","와우자","와우자 개발환경"]
 categories : ["java"]
 sitemap :
   changefreq : daily
