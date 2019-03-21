@@ -3,7 +3,7 @@ layout: post
 title: "Wowza Streaming Engine Java API로 라이브 스트림 녹화를 시작하고 중지하십시오"
 date: 2019-03-21 17:00 +0900
 comments: true
-tags : ["wowza","streaming engine","wowza java api","와우자","와우자"]
+tags : ["wowza","streaming engine","wowza java api","와우자"]
 categories : ["java"]
 sitemap :
   changefreq : daily
