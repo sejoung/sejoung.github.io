@@ -45,6 +45,14 @@ sitemap :
 
 위에 코드에서 beginIndex 매개변수를 검사한것처럼 말이다.
 
+* 객체의 임시 복사본에서 작업을한 후에 성공시 원래 객체와 교환하는 방법이다.
+
+* 작업도중 실패를 가로채는 복구코드를 작성하여 작업전으로 돌리는것이다.
+
+모두 실패 원자성을 보장할수있는것은 아니다 여러쓰레드가 하나의 객체값을 수정했을떄 에러를 잡았다고 해서 객체의 원자성을 보장해줄수는 없다.
+
+Error는 복구 할 수가 없으므로 시도조차 할 필요 없다.
+
 # 참조
 -----
 * [what is “failure atomicity” used by J bloch and how its beneficial in terms of immutable object?](https://stackoverflow.com/questions/29842845/what-is-failure-atomicity-used-by-j-bloch-and-how-its-beneficial-in-terms-of-i)
