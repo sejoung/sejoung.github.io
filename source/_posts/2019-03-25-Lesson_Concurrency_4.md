@@ -3,7 +3,7 @@ layout: post
 title: "동시성(Concurrency) Liveness"
 date: 2019-03-25 14:11 +0900
 comments: true
-tags : ["동시성", "Concurrency", "Liveness"]
+tags : ["동시성", "Concurrency", "Liveness", "Deadlock", "Starvation and Livelock"]
 categories : ["java"]
 sitemap :
   changefreq : daily

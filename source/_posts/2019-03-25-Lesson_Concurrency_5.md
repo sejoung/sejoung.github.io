@@ -3,7 +3,7 @@ layout: post
 title: "동시성(Concurrency) Guarded Blocks"
 date: 2019-03-25 14:26 +0900
 comments: true
-tags : ["동시성", "Concurrency", "Guarded Blocks"]
+tags : ["동시성", "Concurrency", "Guarded Blocks", "보호된 블럭"]
 categories : ["java"]
 sitemap :
   changefreq : daily
