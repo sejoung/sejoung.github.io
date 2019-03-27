@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "아이템 85. 자바 직렬화의 대안을 찾으라."
-date: 2019-03-17 15:08 +0900
+date: 2019-03-27 15:08 +0900
 comments: true
 tags : ["이팩티브자바"]
 categories : ["books"]

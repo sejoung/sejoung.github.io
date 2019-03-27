@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "아이템 86. Serializable을 구현할지는 신중히 결정하라."
-date: 2019-03-17 15:28 +0900
+date: 2019-03-27 15:28 +0900
 comments: true
 tags : ["이팩티브자바"]
 categories : ["books"]

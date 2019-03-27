@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "아이템 87. 커스텀 직렬화 형태를 고혀해보라."
-date: 2019-03-17 15:36 +0900
+date: 2019-03-27 15:36 +0900
 comments: true
 tags : ["이팩티브자바"]
 categories : ["books"]
