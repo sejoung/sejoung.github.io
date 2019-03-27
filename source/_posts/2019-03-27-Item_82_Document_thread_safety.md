@@ -26,14 +26,25 @@ sitemap :
 * 스레드 적대적 : 이 클래스는 모든 메서드 호출은 외부 동기화로 감싸더라도 멀티스레드 환경에서 안전하지 않다.
 
 ```java
+public class MsLunch {
 
-  private final Object o1 = new Object();
+  private long c1 = 0;
+  private long c2 = 0;
+  private final Object lock1 = new Object();
+  private final Object lock2 = new Object();
 
-  public void test1() {
-    synchronized (o1) {
-      System.out.println("test1");
+  public void inc1() {
+    synchronized (lock1) {
+      c1++;
     }
   }
+
+  public void inc2() {
+    synchronized (lock2) {
+      c2++;
+    }
+  }
+}
 
 ```
 
