@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "아이템 84. 프로그램의 동작을 스레드 스케줄러에 기대하지 말라."
-date: 2019-03-27 11:08 +0900
+date: 2019-03-27 11:18 +0900
 comments: true
 tags : ["이팩티브자바"]
 categories : ["books"]
