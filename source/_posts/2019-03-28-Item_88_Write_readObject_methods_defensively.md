@@ -230,6 +230,6 @@ Process finished with exit code 0
 
 # 참조
 -----
-
+* [java serializable specification](https://docs.oracle.com/javase/7/docs/platform/serialization/spec/serialTOC.html)
 
 
