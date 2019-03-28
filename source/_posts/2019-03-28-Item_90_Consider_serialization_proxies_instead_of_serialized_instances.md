@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "아이템 90. 직렬화된 인스턴스 대신 직렬화 프록시 사용을 검토하라."
-date: 2019-03-28 15:39 +0900
+date: 2019-03-28 17:39 +0900
 comments: true
 tags : ["이팩티브자바"]
 categories : ["books"]
