@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "맥북에서 자바 개발 환경 셋팅"
+title: "Docker를 사용하여 SQL Server 컨테이너 이미지 실행"
 date: 2019-04-03 17:49 +0900
 comments: true
 tags : ["개발디비","mssql","docker"]
@@ -10,7 +10,7 @@ sitemap :
   priority : 1.0
 ---
 
-## Docker를 사용 하 여 SQL Server 컨테이너 이미지 실행
+## Docker를 사용하여 SQL Server 컨테이너 이미지 실행
 
 
 ```
