@@ -12,6 +12,22 @@ sitemap :
 
 ## 맥북에서 자바 개발 환경 셋팅
 
+### 파인더에 숨김파일 표시
+
+```
+
+defaults write com.apple.finder AppleShowAllFiles -bool true
+
+killall Finder
+
+```
+
+단축키(이것은 해당 폴더만 적용된다.)
+
+```
+shift +command + .
+```
+
 ### brew 설치 
 
 일단 처음에 받으니 brew도 설치가 안되있었다 이것부터 설치
