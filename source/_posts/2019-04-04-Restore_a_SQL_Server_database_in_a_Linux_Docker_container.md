@@ -66,6 +66,7 @@ docker stop sql1
 
 ```
 
+
 그 다음에 도커로 파일 복사
 
 ```
@@ -82,8 +83,10 @@ docker start sql1
 
 ### 삭제
 ```
-sudo docker stop sql1
-sudo docker rm sql1
+docker stop sql1
+docker rm sql1
+docker rmi -f $(docker images -a -q)
+docker volume rm $(docker volume ls -q)
 ```
 
 # 참조
