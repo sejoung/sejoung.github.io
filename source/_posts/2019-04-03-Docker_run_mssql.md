@@ -12,12 +12,14 @@ sitemap :
 
 ## Docker를 사용하여 SQL Server 컨테이너 이미지 실행
 
+### 다운로드
 
 ```
 sudo docker pull mcr.microsoft.com/mssql/server:2017-latest
 
 ```
 
+### 실행
 ```
 sudo docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=<YourStrong!Passw0rd>' \
    -p 1433:1433 --name sql1 \
@@ -29,9 +31,12 @@ sudo docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=<YourStrong!Passw0rd>' \
 sudo docker ps -a
 ```
 
+### 삭제
+```
+sudo docker stop sql1
+sudo docker rm sql1
+```
+
 # 참조
 -----
 * [quickstart-install-connect-docker](https://docs.microsoft.com/ko-kr/sql/linux/quickstart-install-connect-docker?view=sql-server-2017&pivots=cs1-bash)
-
-
-
