@@ -66,4 +66,4 @@ brew cask install adoptopenjdk8
 * [Homebrew](https://brew.sh/)
 * [Homebrew AdoptOpenJDK](https://github.com/AdoptOpenJDK/homebrew-openjdk)
 * [jenv](http://www.jenv.be/)
-
+* [appcleaner](https://freemacsoft.net/appcleaner/)
