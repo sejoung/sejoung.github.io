@@ -28,7 +28,7 @@ killall Finder
 shift +command + .
 ```
 
-### brew 설치 
+### brew 설치
 
 일단 처음에 받으니 brew도 설치가 안되있었다 이것부터 설치
 
@@ -36,9 +36,9 @@ shift +command + .
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
 
-### JDK 설치 
+### JDK 설치
 
-그리고 난 오픈JDK 배포판 중에 AdoptOpenJDK를 선택 해서 인스톨 할것이다. 
+그리고 난 오픈JDK 배포판 중에 AdoptOpenJDK를 선택 해서 인스톨 할것이다.
 
 지금 기준으로 jdk11을 설치 했는데 jdk8도 필요하게 됨
 
@@ -55,7 +55,24 @@ brew cask install adoptopenjdk8
 
 ```
 
-### jenv 설치 
+### jenv 설치
+
+
+```
+
+jenv add /Library/Java/JavaVirtualMachines/adoptopenjdk-11.0.2.jdk/Contents/Home adoptopenjdk11 added
+
+jenv add /Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home adoptopenjdk8 added
+
+```
+
+```
+
+jenv global 1.8
+
+jenv global 11.0
+
+```
 
 그담엔 환경을 왔다갔다 하기 편하게하는 툴인 jenv를 셋팅 홈페이지에 잘 설명이 되어 있다.
 
