@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "클린코드"
+title: "클린코드(의미 있는 이름)"
 date: 2019-04-12 11:00 +0900
 comments: true
 tags : ["클린코드","cleancode"]
@@ -14,7 +14,7 @@ sitemap :
 
 ### 의미 있는 이름
 
-#### 검색하기 좋은 이름을 사용하
+#### 검색하기 좋은 이름을 사용하라
 
 ```java
 
