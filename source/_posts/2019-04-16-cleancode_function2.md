@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "클린코드(함수)"
+title: "클린코드(함수)2"
 date: 2019-04-16 09:02 +0900
 comments: true
 tags : ["클린코드","cleancode"]
