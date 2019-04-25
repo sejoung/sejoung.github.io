@@ -17,6 +17,7 @@ npm install hexo-generator-feed --save
 
 npm install hexo-deployer-git --save
 
+npm audit fix
 
 ```
 파일제네레이터
