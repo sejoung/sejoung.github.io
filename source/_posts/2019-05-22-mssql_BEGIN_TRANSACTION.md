@@ -17,6 +17,8 @@ sitemap :
 명시적인 로컬 트랜잭션의 시작점을 표시합니다. 
 명시 적 트랜잭션은 BEGIN TRANSACTION 문으로 시작하고 COMMIT 또는 ROLLBACK 문으로 끝납니다.
 
+#### Syntax
+
 ```tsql
 
 --Applies to SQL Server and Azure SQL Database
