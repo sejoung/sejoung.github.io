@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "클린코드(Smells and Heuristics)-part2"
-date: 2019-05-25 10:00 +0900
+date: 2019-05-27 10:00 +0900
 comments: true
 tags : ["클린코드","cleancode"]
 categories : ["books"]
