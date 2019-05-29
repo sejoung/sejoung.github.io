@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "mssql TRY...CATCH"
+title: "mssql logins-and-jobs-for-availability-group-databases"
 date: 2019-05-29 10:45 +0900
 comments: true
 tags : ["mssql","logins-and-jobs-for-availability-group-databases"]
