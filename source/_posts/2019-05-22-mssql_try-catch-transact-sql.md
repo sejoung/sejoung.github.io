@@ -350,9 +350,6 @@ GO
 
 ```
 
-
-#####
-
 # 참조
 -----
 * [try-catch-transact-sql](https://docs.microsoft.com/en-us/sql/t-sql/language-elements/try-catch-transact-sql?view=sql-server-2017)
