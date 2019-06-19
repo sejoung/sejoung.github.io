@@ -163,7 +163,7 @@ JPA - 임피던스 불일치를 해결하기 위해서 나옴
 
 # 참조
 -----
-* [[KSUG Seminar] Growing Application - 2nd. 애플리케이션 아키텍처와 객체지향](https://www.youtube.com/watch?reload=9&v=26S4V`F`UWlJM)
+* [[KSUG Seminar] Growing Application - 2nd. 애플리케이션 아키텍처와 객체지향](https://www.youtube.com/watch?reload=9&v=26S4VFUWlJM)
 
 
 
