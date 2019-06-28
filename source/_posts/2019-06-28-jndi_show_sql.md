@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "log4jdbc 설정"
-date: 2019-06-27 11:25 +0900
+date: 2019-06-28 09:20 +0900
 comments: true
 tags : ["log4jdbc","log4jdbc 설정"]
 categories : ["java"]
