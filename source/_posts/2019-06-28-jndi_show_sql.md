@@ -37,7 +37,11 @@ jdbc:derby://localhost:1527//db-derby-10.2.2.0-bin/databases/MyDatabase
 jdbc:log4jdbc:derby://localhost:1527//db-derby-10.2.2.0-bin/databases/MyDatabase
 
 ```
+드라이버 클래스도 바꿔줘야 된다.
 
+```
+net.sf.log4jdbc.sql.jdbcapi.DriverSpy 
+```
 
 아래는 로거 설정임 
 
@@ -76,6 +80,8 @@ logging.level.jdbc.resultsettable=error
 ```
 
 위처럼 넣음 물론 logback 설정을 위에 xml 처럼 넣어도 됨 
+
+
 
 # 참조
 -----
