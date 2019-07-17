@@ -162,6 +162,6 @@ systemctl enable myapp.service
 # 참조
 -----
 * [spring-boot deployment-install](https://docs.spring.io/spring-boot/docs/current/reference/html/deployment-install.html)
-
+* [systemd.service](https://www.freedesktop.org/software/systemd/man/systemd.service.html)
 
 
