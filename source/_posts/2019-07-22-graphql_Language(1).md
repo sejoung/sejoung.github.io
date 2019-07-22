@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "GraphQL Language"
+title: "GraphQL Language(1)"
 date: 2019-07-22 21:34 +0900
 comments: true
 tags : ["GraphQL Language"]
@@ -10,7 +10,7 @@ sitemap :
   priority : 1.0
 ---
  
-## GraphQL Language
+## GraphQL Language(1)
 
 ### Language
 
