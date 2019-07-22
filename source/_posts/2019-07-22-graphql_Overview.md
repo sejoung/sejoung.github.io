@@ -4,7 +4,7 @@ title: "GraphQL Overview"
 date: 2019-07-22 09:14 +0900
 comments: true
 tags : ["GraphQL Overview"]
-categories : ["language"]
+categories : ["GraphQL"]
 sitemap :
   changefreq : daily
   priority : 1.0
