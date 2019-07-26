@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "spring EventListener"
-date: 2019-07-25 12:21 +0900
+date: 2019-07-26 18:27 +0900
 comments: true
 tags : ["spring"]
 categories : ["java"]
