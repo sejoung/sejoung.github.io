@@ -159,6 +159,22 @@ systemctl enable myapp.service
 
 ```
 
+```
+systemctl reenable myapp.service
+
+```
+
+```
+systemctl start myapp.service
+
+```
+
+```
+systemctl stop myapp.service
+
+```
+
+
 # 참조
 -----
 * [spring-boot deployment-install](https://docs.spring.io/spring-boot/docs/current/reference/html/deployment-install.html)
