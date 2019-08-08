@@ -32,3 +32,5 @@ DriverManagerDataSource는 아래처럼 내용이다.
 # 참조
 -----
 * [DriverManagerDataSource](https://docs.spring.io/spring/docs/5.0.5.RELEASE/javadoc-api/org/springframework/jdbc/datasource/DriverManagerDataSource.html)
+* [closewait-timewait](http://tech.kakao.com/2016/04/21/closewait-timewait/)
+* [리눅스 서버의 TCP 네트워크 성능을 결정짓는 커널 파라미터 이야기](https://meetup.toast.com/posts/53)
