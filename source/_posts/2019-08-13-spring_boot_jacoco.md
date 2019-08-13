@@ -41,8 +41,8 @@ sitemap :
 위에 플러그인만 잘 등록하자
 
 # 참조
------
-
+----- 
+* [code-coverage-and-source-quality-analysis-with-spring-boot-docker-sonarqube-jacoco](https://springbootdev.com/2018/01/10/code-coverage-and-source-quality-analysis-with-spring-boot-docker-sonarqube-jacoco/)
 
 
 
