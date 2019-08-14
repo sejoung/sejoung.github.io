@@ -20,7 +20,7 @@ Producers : 메시지를 생산해서 borker의 topic에게 전달하는 서버 
 Consumers : borker에 topic의 이름이로 저장된 메시지를 가져가는 서버 또는 어플리케이션
 offset : 파티션 내의 각 레코드를 고유하게 식별 하는 순차적 인 ID 번호
 Consumer Group : Consumer Instance를 대표하는 그룹
-
+Lag : Consumer 지연이 일어날때 Lag 가 쌓이게 됩니다.
 ```
 
 kafka.consumer.auto-offset-reset 설정
