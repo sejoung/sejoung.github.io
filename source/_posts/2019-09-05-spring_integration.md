@@ -14,13 +14,17 @@ sitemap :
 
 #### Component
 
-Message
-Message Channel
-Message Endpoints
+Message - 페이로드와 헤더로 구성
+
+Message Channel - 파이프 및 필터 아키텍쳐에서 파이프를 뜻 함
+
+Message Endpoints - 파이프 및 필터 아키텍쳐에서 필터를 뜻 함
 
 #### Message Send/Recieve
+
 Outbound
 Gateway ⇒ Message Channel ⇒ outbound-channel-adapter 
+
 Inbound
 inbound-channel-adapter ⇒ Message Channel ⇒ Service Activator
 
