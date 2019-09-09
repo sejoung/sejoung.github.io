@@ -46,3 +46,4 @@ kafka를 아주 잘 쓰고 있고 인상 깊었던것이 아직도 버전이 0.8
 * [kafka.kru](https://www.facebook.com/groups/kafka.kru/)
 * [kafka-monitoring](https://github.com/freepsw/kafka-monitoring)
 * [brooklin](https://github.com/linkedin/brooklin)
+* [발표자료](https://github.com/kafkakru/meetup/tree/master/mini-meetup3)
