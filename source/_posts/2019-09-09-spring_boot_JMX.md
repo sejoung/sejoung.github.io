@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "kafka meetup"
+title: "인텔리제이 spring-boot JMX 확인"
 date: 2019-09-09 15:49 +0900
 comments: true
 tags : ["spring boot JMX","모니터링","인텔리제이","@ManagedAttribute"]
