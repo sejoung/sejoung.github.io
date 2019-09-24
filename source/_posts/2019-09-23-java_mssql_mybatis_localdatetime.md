@@ -85,7 +85,6 @@ public class LocalDateTimeTypeHandler extends BaseTypeHandler<LocalDateTime> {
 
 ```
 
-
 위 처럼 `@MappedTypes(LocalDateTime.class)` 선언을 해주니 정상적으로 잘된다.
 
 
