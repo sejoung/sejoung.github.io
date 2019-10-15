@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "클린아키텍쳐"
+title: "클린아키텍쳐-설계와 아키텍쳐란?"
 date: 2019-10-14 09:00 +0900
 comments: true
-tags : ["클린아키텍쳐","Clean Architecture"]
+tags : ["클린아키텍쳐","Clean Architecture","설계와 아키텍쳐란?"]
 categories : ["books"]
 sitemap :
   changefreq : daily
