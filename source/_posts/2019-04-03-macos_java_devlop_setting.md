@@ -78,9 +78,49 @@ jenv global 11.0
 
 이부분은 좀 고민해도 되는것이 요즘엔 툴에서 환경을 바꿀수 있기때문에 굳이 안깔아도 될수도 먼저 셋팅해 보았다가 안하게 됨
 
+### zsh
+
+이번에 맥 업데이트 하면서 zsh이 기본 쉘로 바꼈다.
+
+```
+
+brew cask install iterm2
+
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
+open ~/.zshrc
+
+```
+난 테마를 바꿈
+
+```
+
+ZSH_THEME="agnoster"
+
+```
+
+명령줄에 sanaes@dev 를 제거 
+
+```
+DEFAULT_USER="sanaes"
+```
+
+
+```
+
+source ~/.zhrc
+
+```
+
+Solarized Dark color scheme를 사용
+
+
 # 참조
 -----
 * [Homebrew](https://brew.sh/)
 * [Homebrew AdoptOpenJDK](https://github.com/AdoptOpenJDK/homebrew-openjdk)
 * [jenv](http://www.jenv.be/)
 * [appcleaner](https://freemacsoft.net/appcleaner/)
+* [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh/wiki/Themes)
+* [how-to-configure-your-macos-terminal-with-zsh](https://www.freecodecamp.org/news/how-to-configure-your-macos-terminal-with-zsh-like-a-pro-c0ab3f3c1156/)
+
