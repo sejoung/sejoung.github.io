@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "클린아키텍쳐-단일책임원칙"
-date: 2019-10-23 09:08 +0900
+date: 2019-10-25 09:08 +0900
 comments: true
 tags : ["클린아키텍쳐","Clean Architecture","단일책임원칙"]
 categories : ["books"]
