@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "클린아키텍쳐-테스트 경계"
+title: "클린아키텍쳐-데이터베이스는 세부사항이다"
 date: 2019-12-10 10:57 +0900
 comments: true
 tags : ["클린아키텍쳐","Clean Architecture","데이터베이스는 세부사항이다."]
