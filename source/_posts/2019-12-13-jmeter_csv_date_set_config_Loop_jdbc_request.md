@@ -40,6 +40,9 @@ JDBC를 사용할 예정이니 JDBC 드라이버를 다운 받아서 lib 폴더�
 
 ![UI4](https://sejoung.github.io/images/2019_12_13_04.png)
 
+![UI8](https://sejoung.github.io/images/2019_12_13_08.png)
+
+
 ### 구성
 
 그러면 구성은 전 아래처럼 했습니다.
@@ -56,7 +59,7 @@ CSV Data Set Config 설정에서 Stop Thread on EOF true 로 설정하여 csv �
 
 위에 JDBC Connection Configuration 을 설정할때 설정했던 conettion properties 이름을 아래에 적어준다 ex) oracle
 
-![UI6](https://sejoung.github.io/images/2019_12_13_07.png)
+![UI7](https://sejoung.github.io/images/2019_12_13_07.png)
 
 
 
