@@ -12,8 +12,7 @@ sitemap :
 
 ## RestTemplate에 인터셉터 설정으로 데이터 확인하기
 
-아래 코드
-
+아래 코드를 통해서 인터셉터 설정을 할수 있다.
 ```java
 
 import java.io.IOException;
