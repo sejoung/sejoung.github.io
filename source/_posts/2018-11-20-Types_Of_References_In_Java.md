@@ -261,3 +261,5 @@ Process finished with exit code 0
 -----
 * [types-references-java](https://www.geeksforgeeks.org/types-references-java/)
 * [java-phantom-reference](https://www.baeldung.com/java-phantom-reference)
+추가함)
+* [understanding-type-of-references-in-java](https://dzone.com/articles/understanding-type-of-references-in-java)
