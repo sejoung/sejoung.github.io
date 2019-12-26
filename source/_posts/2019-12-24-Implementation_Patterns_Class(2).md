@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "켄트백의 구현패턴-클래스"
+title: "켄트백의 구현패턴-클래스(2)"
 date: 2019-12-24 15:20 +0900
 comments: true
 tags : ["켄트백의 구현패턴","Implementation Patterns","클래스"]
