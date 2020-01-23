@@ -3,7 +3,7 @@ layout: post
 title: "변경 의존성과 그에따른 설계진화"
 date: 2019-06-21 09:35 +0900
 comments: true
-tags : ["우아한테크세미나","우아한객체지향"]
+tags : ["우아한테크세미나","우아한객체지향","조영호님"]
 categories : ["2019 세미나"]
 sitemap :
   changefreq : daily
@@ -40,4 +40,4 @@ sitemap :
 * [1차 설계 소스](https://github.com/eternity-oop/Woowahan-OO-01-object-reference)
 * [2차 설계 소스](https://github.com/eternity-oop/Woowahan-OO-02-domain-service)
 * [3차 설계 소스](https://github.com/eternity-oop/Woowahan-OO-03-domain-event)
-
+* [변경 의존성과 그에따른 설계진화 ](https://www.youtube.com/watch?v=dJ5C4qRqAgA)
