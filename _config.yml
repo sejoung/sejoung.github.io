@@ -100,8 +100,4 @@ nofollow:
   exclude:
     - sejoung.github.io
 
-google_adsense:
-    enable: true
-    js: //pagead2.googlesyndication.com/pagead/js/adsbygoogle.js
-    client: ca-pub-5797832740504172
-    enable_page_level_ads: true
+
