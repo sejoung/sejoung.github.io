@@ -91,5 +91,5 @@ GC 모니터링 방법
 # 참조
 -----
 * [OutOfMemoryError Exception 의 이해](https://sejoung.github.io/2019/03/2019-03-20-Understand_the_OutOfMemoryError_Exception/)
-
+* [java-memory-leaks-solutions](https://stackify.com/java-memory-leaks-solutions/)
 
