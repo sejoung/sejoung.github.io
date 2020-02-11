@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "자바트러블슈팅-메모리 진단하기(4)"
-date: 2020-02-06 14:08 +0900
+date: 2020-02-07 13:08 +0900
 comments: true
 tags : ["자바트러블슈팅","메모리 진단하기","메모리 문제"]
 categories : ["books"]
