@@ -3,7 +3,7 @@ layout: post
 title: "자바트러블슈팅-리눅스 진단하기(1)"
 date: 2020-02-12 17:36 +0900
 comments: true
-tags : ["자바트러블슈팅","리","리눅스 진단 도구"]
+tags : ["자바트러블슈팅","리눅스 진단 도구"]
 categories : ["books"]
 sitemap :
   changefreq : daily
