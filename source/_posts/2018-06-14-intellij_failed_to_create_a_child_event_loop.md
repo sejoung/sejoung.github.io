@@ -3,7 +3,7 @@ layout: post
 title: "intellij_failed_to_create_a_child_event_loop"
 date: 2018-06-14 19:00:00 +0900
 comments: true
-tags : ["IntelliJ","IDEA"]
+tags : ["intelliJ","IDEA"]
 categories : ["IDE"]
 sitemap :
   changefreq : daily

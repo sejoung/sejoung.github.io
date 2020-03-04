@@ -3,7 +3,7 @@ layout: post
 title: "도커 처음 시작하기part5(Stacks)"
 date: 2019-03-14 16:21 +0900
 comments: true
-tags : ["Docker"]
+tags : ["docker"]
 categories : ["tool"]
 sitemap :
   changefreq : daily
