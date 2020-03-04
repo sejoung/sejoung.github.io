@@ -3,7 +3,7 @@ layout: post
 title: "톰캣 리모트 디버깅 설정하기"
 date: 2020-02-21 13:44 +0900
 comments: true
-tags : ["톰캣 리모트 디버깅 설정하기","Java Platform Debugger Architecture","tomcat"]
+tags : ["톰캣 리모트 디버깅 설정하기","Java Platform Debugger Architecture","tomcat","remote","debug"]
 categories : ["java"]
 sitemap :
   changefreq : daily
