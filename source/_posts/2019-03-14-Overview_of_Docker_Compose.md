@@ -3,7 +3,7 @@ layout: post
 title: "Docker Compose 개요"
 date: 2019-03-14 10:29 +0900
 comments: true
-tags : ["Docker"]
+tags : ["docker"]
 categories : ["tool"]
 sitemap :
   changefreq : daily

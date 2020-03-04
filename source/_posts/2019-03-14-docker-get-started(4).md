@@ -3,7 +3,7 @@ layout: post
 title: "도커 처음 시작하기part4(Swarm)"
 date: 2019-03-14 14:07 +0900
 comments: true
-tags : ["Docker"]
+tags : ["docker"]
 categories : ["tool"]
 sitemap :
   changefreq : daily
