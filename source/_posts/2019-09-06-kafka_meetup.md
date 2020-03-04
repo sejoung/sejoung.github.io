@@ -3,7 +3,7 @@ layout: post
 title: "kafka meetup"
 date: 2019-09-06 10:58 +0900
 comments: true
-tags : ["kafka meetup","한국 카프카 사용자 그룹"]
+tags : ["kafka","kafka meetup","한국 카프카 사용자 그룹"]
 categories : ["java"]
 sitemap :
   changefreq : daily
