@@ -3,7 +3,7 @@ layout: post
 title: "DriverManagerDataSource"
 date: 2019-08-08 10:16 +0900
 comments: true
-tags : ["spring","DriverManagerDataSource","connection pool"]
+tags : ["spring","driverManagerDataSource","connectionPool"]
 categories : ["java"]
 sitemap :
   changefreq : daily
