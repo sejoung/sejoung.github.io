@@ -3,7 +3,7 @@ layout: post
 title: "카프카 Quickstart"
 date: 2018-09-11 15:38 +0900
 comments: true
-tags : ["Kafka","Quickstart"]
+tags : ["kafka","Quickstart"]
 categories : ["Kafka"]
 sitemap :
   changefreq : daily
