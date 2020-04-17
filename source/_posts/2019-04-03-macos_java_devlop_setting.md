@@ -97,6 +97,25 @@ jenv global 11.0
 
 이부분은 좀 고민해도 되는것이 요즘엔 툴에서 환경을 바꿀수 있기때문에 굳이 안깔아도 될수도 먼저 셋팅해 보았다가 안하게 됨
 
+```
+jenv doctor
+```
+위 명령어로 진단 가능
+
+```
+
+jenv enable-plugin export
+exec $SHELL -l
+echo ${JAVA_HOME}
+```
+위 명령어는 `JAVA_HOME`을 설정 하는 것이다. 잘안되면 `jenv disable-plugin export` 도 한번 해보고 하는게 좋다.
+
+
+```
+jenv versions
+```
+지금 사용중인 버전 확인
+
 ### zsh
 
 이번에 맥 업데이트 하면서 zsh이 기본 쉘로 바꼈다.
