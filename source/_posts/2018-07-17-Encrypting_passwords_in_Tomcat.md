@@ -67,7 +67,7 @@ pom.xml에 추가후에 위에 처럼 사용가능
 <dependency>
     <groupId>com.github.sejoung</groupId>
     <artifactId>tomcat-jdbc-encrypt</artifactId>
-    <version>1.5</version>
+    <version>1.6</version>
 </dependency>
 
 ```
@@ -81,9 +81,9 @@ USAGE: java -jar tomcat-jdbc-encrypt-[version].jar [encrypt,decrypt] [secretKey]
 ```
 
 ```
-java -jar tomcat-jdbc-encrypt-1.5.jar encrypt key 1
+java -jar tomcat-jdbc-encrypt-1.6.jar encrypt key 1
 
-java -jar tomcat-jdbc-encrypt-1.5.jar decrypt key eb77d942479a6b2e44841d653175e8a3
+java -jar tomcat-jdbc-encrypt-1.6.jar decrypt key eb77d942479a6b2e44841d653175e8a3
 
 ```
 
