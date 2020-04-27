@@ -128,5 +128,5 @@ sitemap :
 -----
 * [회계야학 4기](https://acc.yah.ac/)
 * [회계야학 1일차](https://opentutorials.org/module/3483)
-
+* [진도표](https://yah.ac/acc)
 
