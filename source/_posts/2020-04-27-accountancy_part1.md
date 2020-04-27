@@ -3,7 +3,7 @@ layout: post
 title: "회계야학 4기 1일차"
 date: 2020-04-27 11:15 +0900
 comments: true
-tags : ["accountancy","회계야학","IntelliJ"]
+tags : ["accountancy","회계야학"]
 categories : ["study"]
 sitemap :
   changefreq : daily
