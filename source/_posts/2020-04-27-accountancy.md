@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "회계야학 4기 1일차"
+title: "회계야학 4기"
 date: 2020-04-27 11:15 +0900
 comments: true
 tags : ["accountancy","회계야학"]
@@ -10,7 +10,7 @@ sitemap :
   priority : 1.0
 ---
 
-## 회계야학 4기 1일차(수업소개부터 손익계산까지)
+## 회계야학 4기
 
 ### 자산
 
