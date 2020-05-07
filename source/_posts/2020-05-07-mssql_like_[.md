@@ -3,7 +3,7 @@ layout: post
 title: "mssql like ["
 date: 2020-05-07 10:49 +0900
 comments: true
-tags : ["mssql 대괄호","mssql \[","mssql like \["]
+tags : ["mssql 대괄호"]
 categories : ["sql"]
 sitemap :
   changefreq : daily
