@@ -51,6 +51,7 @@ brew cask install adoptopenjdk
 ```
 
 brew tap AdoptOpenJDK/openjdk
+brew search openjdk
 brew cask install adoptopenjdk8
 
 ```
