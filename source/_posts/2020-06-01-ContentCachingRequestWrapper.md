@@ -191,7 +191,7 @@ public class ReusableRequestWrapper extends HttpServletRequestWrapper {
 
 # 참조 
 -----
-* [amqp-concepts](https://meetup.toast.com/posts/44)
+* [Spring Interceptor(혹은 Servlet Filter)에서 POST 방식으로 전달된 JSON 데이터 처리하기](https://meetup.toast.com/posts/44)
 * [tomcat Request](https://github.com/apache/tomcat/blob/master/java/org/apache/catalina/connector/Request.java)
 * [ContentCachingRequestWrapper allow reading request once](https://github.com/spring-projects/spring-boot/issues/10452)
 * [ContentCachingRequestWrapper cache input stream](https://github.com/spring-projects/spring-framework/issues/20577)
