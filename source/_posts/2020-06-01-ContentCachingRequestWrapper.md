@@ -114,7 +114,6 @@ import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
 import javax.servlet.ReadListener;
 import javax.servlet.ServletInputStream;
-import javax.servlet.ServletRequest;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletRequestWrapper;
 import org.apache.commons.io.IOUtils;
@@ -150,12 +149,6 @@ public class ReusableRequestWrapper extends HttpServletRequestWrapper {
         return new BufferedReader(new InputStreamReader(this.getInputStream(), this.encoding));
     }
 
-    @Override
-    public ServletRequest getRequest() {
-        return super.getRequest();
-    }
-
-
     private static class CachedServletInputStream extends ServletInputStream {
 
         private final ByteArrayInputStream buffer;
@@ -181,8 +174,9 @@ public class ReusableRequestWrapper extends HttpServletRequestWrapper {
 
         @Override
         public void setReadListener(ReadListener listener) {
-            throw new RuntimeException("Not implemented");
+            throw new UnsupportedOperationException("지원 하지 않은 기능 입니다.");
         }
+
     }
 
 }
