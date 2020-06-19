@@ -15,7 +15,7 @@ sitemap :
 
 위에 메뉴에서 옵션을 클릭후
 
-![SQL Server Management Studio isolation level 바꾸기1](https://sejoung.github.io/images/2020_06_18_02.png)
+![SQL Server Management Studio isolation level 바꾸기2](https://sejoung.github.io/images/2020_06_18_02.png)
 
 SQL Server -> 고급
 
