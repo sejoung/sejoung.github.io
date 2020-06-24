@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "인텔리제이에서 JPA: Cannot resolve Table 표시하지 않기"
-date: 2020-06-18 18:10 +0900
+date: 2020-06-24 17:54 +0900
 comments: true
 tags : ["JPA cannot resolve table","인텔리제이","JPA"]
 categories : ["intellij"]
