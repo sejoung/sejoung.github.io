@@ -33,3 +33,4 @@ OS 마다 기본 문자열 셋트가 틀리므로 아래의 JVM 옵션으로 통
 # 참조
 -----
 * [logback encoders](http://logback.qos.ch/manual/encoders.html)
+* [java-may-use-utf-8-as-its-default-charset](https://dzone.com/articles/java-may-use-utf-8-as-its-default-charset)
