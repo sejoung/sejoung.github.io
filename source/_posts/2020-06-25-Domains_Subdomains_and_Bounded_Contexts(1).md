@@ -3,7 +3,7 @@ layout: post
 title: "도메인 주도 설계 구현-도메인, 서브도메인, 바운디드 컨텍스트(1)"
 date: 2020-06-25 09:05 +0900
 comments: true
-tags : ["Implementing Domain-Driven Design"," 도메인 주도 설계 구현","DDD를 시작하며"]
+tags : ["Implementing Domain-Driven Design"," 도메인 주도 설계 구현","도메인, 서브도메인, 바운디드 컨텍스트"]
 categories : ["books"]
 sitemap :
   changefreq : daily
