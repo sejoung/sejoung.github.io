@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "도메인 주도 설계 구현-도메인, 컨텍스트 맵(2)"
+title: "도메인 주도 설계 구현-컨텍스트 맵(2)"
 date: 2020-07-02 09:09 +0900
 comments: true
 tags : ["Implementing Domain-Driven Design"," 도메인 주도 설계 구현","컨텍스트 맵"]
