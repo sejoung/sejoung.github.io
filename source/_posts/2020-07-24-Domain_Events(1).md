@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "도메인 주도 설계 구현-도메인 이벤트"
+title: "도메인 주도 설계 구현-도메인 이벤트(1)"
 date: 2020-07-24 17:59 +0900
 comments: true
 tags : ["Implementing Domain-Driven Design"," 도메인 주도 설계 구현","Domain Events","도메인 이벤트"]
