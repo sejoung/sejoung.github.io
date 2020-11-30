@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "mybatis에서 oneToMany 형태의 객체를 조회 할때 사용할수 있는 기능1"
+title: "mybatis에서 oneToMany 형태의 객체를 조회 할때 사용할수 있는 기능"
 date: 2020-11-27 13:00 +0900
 comments: true
 tags : ["mybatis","OneToMany","collection","JPA"]
