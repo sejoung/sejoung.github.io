@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "mybatis에서 N+1 문제 해결"
-date: 2020-11-27 13:00 +0900
+date: 2020-11-27 13:30 +0900
 comments: true
 tags : ["mybatis","OneToMany","collection","JPA","N+1"]
 categories : ["java"]
