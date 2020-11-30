@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "mybatis에서 oneToMany 형태의 객체를 조회 할때 사용할수 있는 기능2"
+title: "mybatis에서 N+1 문제 해결"
 date: 2020-11-27 13:00 +0900
 comments: true
 tags : ["mybatis","OneToMany","collection","JPA","N+1"]
@@ -10,7 +10,7 @@ sitemap :
   priority : 1.0
 ---
 
-## mybatis에서 oneToMany 형태의 객체를 조회 할때 사용할수 있는 기능 2
+## mybatis에서 N+1 문제 해결
 
 바로 직전처럼 Mybatis를 사용해서 oneToMany 상황에 설정해서 쓸수 있는 방법이 있습니다. 
 
