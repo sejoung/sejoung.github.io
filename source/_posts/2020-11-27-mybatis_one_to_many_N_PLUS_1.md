@@ -18,8 +18,12 @@ sitemap :
 
 먼저 mybatis xml 설정은 
 
-```
-<resultMap id="MemberDTOJoinResult" type="com.github.sejoung.test.sample.dto.MemberDTO">
+```xml
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.github.sejoung.test.sample.mapper.MemberMapper">
+  <resultMap id="MemberDTOJoinResult" type="com.github.sejoung.test.sample.dto.MemberDTO">
     <id property="memberId" column="memberId"/>
     <result property="name" column="name"/>
     <result property="createDate" column="createDate"/>
@@ -33,13 +37,13 @@ sitemap :
   <select id="selectMemberListJoinXML" resultMap="MemberDTOJoinResult">
         select M.member_id as memberId, M.name, M.create_dt as createDate, MD.member_detail_id as memberDetailId, MD.type, MD.description from MEMBER M inner join MEMBER_DETAIL MD on M.member_id = MD.member_id
   </select>
-
+</mapper>
 ```
 
 위처럼 조인 쿼리를 사용하면 한번에 쿼리에 필요한 데이터를 조회 할수 있습니다.
 
 
-```
+```java
 
   @Transactional
   @DisplayName("XML 설정 조인 쿼리")
