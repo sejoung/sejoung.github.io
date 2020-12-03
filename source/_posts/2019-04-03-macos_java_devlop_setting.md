@@ -56,10 +56,28 @@ brew cask install adoptopenjdk8
 
 ```
 
+삭제 방법
+
+```
+brew list
+brew remove adoptopenjdk12
+```
+
 ### jenv 설치
 
 ```
 brew install jenv
+
+```
+
+설치 버전 확인
+```
+jenv versions
+```
+
+삭제
+```
+jenv remove adoptopenjdk12
 
 ```
 
