@@ -98,6 +98,7 @@ namespace MvcMovie.Data
         {
             modelBuilder.Entity<Movie>().ToTable("Movie");
             modelBuilder.Entity<Movie>().Property(c=> c.Rating).HasConversion<string>();
+            modelBuilder.Entity<Movie>().Property(c => c.Rating).HasDefaultValue(MovieRating.G);
             base.OnModelCreating(modelBuilder);
         }
 
