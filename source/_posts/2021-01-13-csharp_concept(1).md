@@ -1,18 +1,18 @@
 ---
 layout: post
-title: "C# 개념 (1)"
+title: "C# 개념 (1)-네임스페이스,튜플,형식분해"
 date: 2021-01-13 15:47 +0900
 comments: true
-tags : ["c#","concept","dotnet","Visual Studio"]
+tags : ["c#","concept","dotnet","Visual Studio","namespace","tuples","Deconstructing","형식 분해","네임스페이스"]
 categories : ["c#"]
 sitemap :
   changefreq : daily
   priority : 1.0
 ---
 
-# C# 개념 (1)
+# C# 개념 (1)-네임스페이스,튜플,형식분해
 
-## 네임스페이스
+## 네임스페이스(namespace)
 
 ```C#
 System.Console.WriteLine("Hello World!");
@@ -46,7 +46,7 @@ namespace SampleNamespace
 
 고유한 네임스페이스를 선언하면 대규모 프로그래밍 프로젝트에서 클래스 및 메서드 이름에 범위를 지정할수 있습니다.
 
-## 튜플 및 형식분해
+## 튜플(tuples) 및 형식분해(Deconstructing)
 
 ```c#
 
