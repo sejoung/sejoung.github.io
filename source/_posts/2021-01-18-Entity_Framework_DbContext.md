@@ -81,6 +81,8 @@ public void UseProducts()
 예를 들어 SQL Server Compact를 사용 하는 경우 성능 향상을 위해 응용 프로그램의 수명 동안 데이터베이스에 대 한 별도의 열린 연결을 유지 하는 것이 좋습니다. 
 Connection 속성을 사용하여 이 프로세스를 수동으로 관리할 수 있습니다.
 
+
+# 참조
 -----
 * [working-with-dbcontext](https://docs.microsoft.com/ko-kr/ef/ef6/fundamentals/working-with-dbcontext)
 
