@@ -3,7 +3,7 @@ layout: post
 title: "LINQ(Language-Integrated Query) in C#"
 date: 2021-01-19 11:42 +0900
 comments: true
-tags : ["c#","LINQ","dotnet","Language-Integrated Query","링큐"]
+tags : ["c#","LINQ","dotnet","Language-Integrated Query","링큐","Query syntax","syntax","링큐 구문"]
 categories : ["c#"]
 sitemap :
   changefreq : daily
