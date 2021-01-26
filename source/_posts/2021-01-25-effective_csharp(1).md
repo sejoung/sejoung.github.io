@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "이펙티브 c#"
+title: "이펙티브 c# (1)"
 date: 2021-01-25 11:35 +0900
 comments: true
 tags : ["c#","Effective C#"]
