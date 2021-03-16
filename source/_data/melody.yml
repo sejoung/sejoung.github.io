@@ -120,7 +120,7 @@ cdn:
 # ---------------
 avatar: https://avatars0.githubusercontent.com/u/4936005?s=400&u=a679b941fe377418e7e4efcf916c6a636d7178ee&v=4
 
-top_img: true
+top_img: https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Van_Gogh_-_Terrasse_des_Caf%C3%A9s_an_der_Place_du_Forum_in_Arles_am_Abend1.jpeg/1024px-Van_Gogh_-_Terrasse_des_Caf%C3%A9s_an_der_Place_du_Forum_in_Arles_am_Abend1.jpeg
 
 post_meta:
   date_type: created
