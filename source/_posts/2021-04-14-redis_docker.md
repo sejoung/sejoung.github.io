@@ -21,6 +21,32 @@ docker run --name redis-stat --link test-redis:redis -p 8080:63790 -d insready/r
 
 ```
 
+```yaml
+version: "3.0"
+services:
+  redis:
+    image: redis:6.2-alpine
+    volumes:
+      - /Users/beni/redis:/log
+    container_name: test-redis
+    restart: always
+    ports:
+    - 6379:6379
+    command: redis-server --logfile /log/redis-server.log --save "" --appendonly no --databases 1 --maxmemory 4G --maxmemory-policy allkeys-lru
+
+  redis-stat:
+    image: insready/redis-stat:latest
+    container_name: redis-stat
+    restart: always
+    ports:
+    - 8080:63790
+    links:
+      - redis:redis
+    command: --server redis
+    depends_on:
+      - redis
+```
+
 ## docker-compose 실행
 
 ```
