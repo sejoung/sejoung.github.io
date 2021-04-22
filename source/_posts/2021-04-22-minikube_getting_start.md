@@ -78,9 +78,68 @@ minikube dashboard
 
 `http://127.0.0.1:62335/api/v1/namespaces/kubernetes-dashboard/services/http:kubernetes-dashboard:/proxy/#/overview?namespace=default` 접속 가능하다.
 
+## 배포
+샘플 배포를 만들고 포트 8080에 노출합니다.
 
+```shell
+kubectl create deployment hello-minikube --image=k8s.gcr.io/echoserver:1.4
+kubectl expose deployment hello-minikube --type=NodePort --port=8080
+```
 
+```shell
+kubectl get services hello-minikube
+```
 
+```shell
+minikube service hello-minikube
+```
+
+```shell
+kubectl port-forward service/hello-minikube 7080:8080
+```
+
+### LoadBalancer 배포
+
+```shell
+kubectl create deployment balanced --image=k8s.gcr.io/echoserver:1.4  
+kubectl expose deployment balanced --type=LoadBalancer --port=8080
+```
+
+```shell
+minikube tunnel
+```
+
+```shell
+kubectl get services balanced
+```
+
+## 클러스터 관리
+배포 된 애플리케이션에 영향을주지 않고 Kubernetes 일시 중지 :
+```shell
+minikube pause
+```
+클러스터를 중지
+```shell
+minikube stop
+```
+기본 메모리 제한 늘리기 (다시 시작해야 함) :
+
+```shell
+minikube config set memory 16384
+```
+쉽게 설치할 수있는 Kubernetes 서비스 카탈로그를 찾기
+```shell
+minikube addons list
+```
+이전 Kubernetes 릴리스를 실행하는 두 번째 클러스터를 만들기
+```shell
+minikube start -p aged --kubernetes-version=v1.16.1
+```
+모든 minikube 클러스터를 삭제합니다.
+
+```shell
+minikube delete --all
+```
 
 # 참고자료
 * [minikube github](https://github.com/kubernetes/minikube)
