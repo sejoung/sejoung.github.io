@@ -23,6 +23,18 @@ public class ApplicationTests {
 }
 
 ```
+## 별도의 DataSourceConfiguration 불러오기
+@Import 어너테이션을 사용해서 로드
+
+```java
+
+@DataJpaTest
+@AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE)
+@Import(DataSourceConfiguration.class)
+public class RepositoryTest {
+}
+
+```
 
 ## The dependencies of some of the beans in the application context form a cycle
 
@@ -32,7 +44,7 @@ public class ApplicationTests {
 
 
 @Configuration
-public class DataSourceConfigration {
+public class DataSourceConfiguration {
 
     @Bean
     @ConfigurationProperties(prefix = "test.datasource-read")
@@ -73,7 +85,7 @@ public class DataSourceConfigration {
 
 ## 테스트시에 실제 DB로 테스트 하기
 
-@AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE) 어너테이션을 활용하면 설정정보가 embaddeddb로 맴핑되는것을 방지할수있다.
+@AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE) 어너테이션을 활용하면 설정정보가 임베디드디비로 맴핑되는것을 방지할수있다.
 
 
 # 참고자료
