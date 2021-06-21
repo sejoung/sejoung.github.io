@@ -21,13 +21,14 @@ Host 이름
     HostName 서버 아이피
     User 계정명
     IdentityFile 인증서 경로
-    Port 포트
+    Port 포트(기본 22)
 
 예) 
 Host aws-ubuntu1
-    HostName 52.79.103.139
-    IdentityFile ~/.ssh/aws-seoul.pem
-    Port 22
+    HostName 11.132.9.67
+    User centos
+    IdentityFile ~/.ssh/test.pem
+    Port 101010
 
 ```
 
