@@ -3,7 +3,7 @@ layout: post
 title: "java 와 spring 을 이용한 헥사고날 아키텍처(hexagonal architecture)"
 date: 2021-06-24 11:36 +0900
 comments: true
-tags : ["hexagonal architecture","헥사고날","아키텍처","java","spring"]
+tags : ["hexagonal architecture","헥사고날","아키텍처","java","spring","clean architecture"]
 categories : ["java"]
 sitemap :
 changefreq : daily
