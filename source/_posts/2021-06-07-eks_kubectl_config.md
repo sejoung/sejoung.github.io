@@ -13,9 +13,19 @@ priority : 1.0
 
 먼저 [aws cli](https://sejoung.github.io/2021/06/2021-06-07-awscli_install/)를 설치해야 된다.
 
+```
+aws configure
+AWS Access Key ID [None]: 본인 Access Key
+AWS Secret Access Key [None]: 본인 Secret Access Key
+Default region name [None]: ap-northeast-2
+Default output format [None]: json
+
+```
 설치후에 eks 접속 권한이 있는 key와 secret을 설정해야 된다.
 
 ```shell
+aws eks --region $REGION update-kubeconfig --name $CLUSTER_NAME
+
 aws eks --region ap-northeast-2 update-kubeconfig --name test-eks
 ```
 위에 commend를 설정 하면 kubeconfig를 업데이트 하게 된다.
