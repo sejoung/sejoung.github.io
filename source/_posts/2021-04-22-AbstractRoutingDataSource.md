@@ -62,6 +62,19 @@ public class ReplicationRoutingDataSource extends AbstractRoutingDataSource {
 @Configuration
 public class DataSourceConfigration{
     @Bean
+    @ConfigurationProperties(prefix = "test.datasource-read")
+    public DataSource readDataSource() {
+        return DataSourceBuilder.create().type(HikariDataSource.class).build();
+    }
+
+    @Bean
+    @ConfigurationProperties(prefix = "test.datasource-write")
+    public DataSource writeDataSource() {
+        return DataSourceBuilder.create().type(HikariDataSource.class).build();
+    }
+
+    @DependsOn({"readDataSource","writeDataSource"})
+    @Bean
     public DataSource routingDataSource(DataSource writeDataSource, DataSource readDataSource) {
 
         var routingDataSource = new ReplicationRoutingDataSource();
@@ -72,6 +85,13 @@ public class DataSourceConfigration{
         routingDataSource.setDefaultTargetDataSource(readDataSource);
 
         return routingDataSource;
+    }
+    
+    @DependsOn("routingDataSource")
+    @Primary
+    @Bean
+    public DataSource dataSource(@Qualifier("routingDataSource") DataSource routingDataSource) {
+        return new LazyConnectionDataSourceProxy(routingDataSource);
     }
 }
 
