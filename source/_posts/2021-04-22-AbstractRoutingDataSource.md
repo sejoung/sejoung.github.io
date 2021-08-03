@@ -95,11 +95,58 @@ public class DataSourceConfigration{
     }
 }
 
+@Configuration
+public class JpaDataSourceConfigration {
+
+    @Bean
+    @ConfigurationProperties("spring.jpa")
+    public JpaProperties jpaProperties() {
+        return new JpaProperties();
+    }
+
+    @Bean
+    public EntityManagerFactory entityManagerFactory(DataSource dataSource,
+        JpaProperties jpaProperties) {
+
+        LocalContainerEntityManagerFactoryBean entityManagerFactory = new LocalContainerEntityManagerFactoryBean();
+        entityManagerFactory.setDataSource(dataSource);
+        entityManagerFactory.setPersistenceProvider(new HibernatePersistenceProvider());
+        entityManagerFactory.setPersistenceUnitName("entityManagerUnit");
+        entityManagerFactory.setPackagesToScan("io.lific.product.infrastructure.jpa");
+        HibernateJpaVendorAdapter jpaVendorAdapter = new HibernateJpaVendorAdapter();
+        jpaVendorAdapter.setGenerateDdl(jpaProperties.isGenerateDdl()); // test 용도 외에는 false로 해야 physical schemas에 영향도 X
+        jpaVendorAdapter.setShowSql(jpaProperties.isShowSql());
+        if (jpaProperties.getDatabase() != null) {
+            jpaVendorAdapter.setDatabase(jpaProperties.getDatabase());
+        }
+        if (jpaProperties.getDatabasePlatform() != null) {
+            jpaVendorAdapter.setDatabasePlatform(jpaProperties.getDatabasePlatform());
+        }
+        entityManagerFactory.setJpaVendorAdapter(jpaVendorAdapter);
+        entityManagerFactory.setJpaPropertyMap(jpaProperties.getProperties());
+        entityManagerFactory.afterPropertiesSet();
+
+        return entityManagerFactory.getObject();
+    }
+
+    @Bean
+    public PlatformTransactionManager transactionManager(EntityManagerFactory entityManagerFactory) {
+        JpaTransactionManager transactionManager = new JpaTransactionManager();
+        transactionManager.setEntityManagerFactory(entityManagerFactory);
+        return transactionManager;
+    }
+
+    @Bean
+    public PersistenceExceptionTranslationPostProcessor exceptionTranslationPostProcessor() {
+        return new PersistenceExceptionTranslationPostProcessor();
+    }
+}
+
 ```
 
 위와같은 방법으로도 처리를 할수있다.
 
-
+`LazyConnectionDataSourceProxy` 를 꼭 해줘야 `TransactionSynchronizationManager.isCurrentTransactionReadOnly()` 값을 정확하게 읽어 드릴수 있다.
 
 
 
