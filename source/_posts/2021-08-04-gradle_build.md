@@ -15,7 +15,27 @@ priority : 1.0
 
 gradle.properties
 ```
+# use gradle build caching
+
+org.gradle.caching=true
+
+
+
+# use gradle daemon
+
+org.gradle.configureondemand=true
+
+
+
+# use gradle parllel build
+
 org.gradle.parallel=true
+
+
+
+# set gradle java heap
+
+org.gradle.jvmargs=-Xmx2048m 
 ```
 위에 욥션을 주거나 명령줄에 --parallel을 주면 속도가 빨라진다.
 
