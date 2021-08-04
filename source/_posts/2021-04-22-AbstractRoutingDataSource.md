@@ -105,8 +105,14 @@ public class JpaDataSourceConfigration {
     }
 
     @Bean
-    public EntityManagerFactory entityManagerFactory(DataSource dataSource,
-        JpaProperties jpaProperties) {
+    @ConfigurationProperties("spring.jpa.hibernate")
+    public HibernateProperties hibernateProperties() {
+        return new HibernateProperties();
+    }
+
+    @Bean
+    public LocalContainerEntityManagerFactoryBean entityManagerFactory(DataSource dataSource,
+        JpaProperties jpaProperties, HibernateProperties hibernateProperties) {
 
         LocalContainerEntityManagerFactoryBean entityManagerFactory = new LocalContainerEntityManagerFactoryBean();
         entityManagerFactory.setDataSource(dataSource);
@@ -114,7 +120,7 @@ public class JpaDataSourceConfigration {
         entityManagerFactory.setPersistenceUnitName("entityManagerUnit");
         entityManagerFactory.setPackagesToScan("io.lific.product.infrastructure.jpa");
         HibernateJpaVendorAdapter jpaVendorAdapter = new HibernateJpaVendorAdapter();
-        jpaVendorAdapter.setGenerateDdl(jpaProperties.isGenerateDdl()); // test 용도 외에는 false로 해야 physical schemas에 영향도 X
+        jpaVendorAdapter.setGenerateDdl(jpaProperties.isGenerateDdl());
         jpaVendorAdapter.setShowSql(jpaProperties.isShowSql());
         if (jpaProperties.getDatabase() != null) {
             jpaVendorAdapter.setDatabase(jpaProperties.getDatabase());
@@ -122,11 +128,16 @@ public class JpaDataSourceConfigration {
         if (jpaProperties.getDatabasePlatform() != null) {
             jpaVendorAdapter.setDatabasePlatform(jpaProperties.getDatabasePlatform());
         }
+        var properties= jpaProperties.getProperties();
+        properties.put("hibernate.physical_naming_strategy", hibernateProperties.getNaming().getPhysicalStrategy());
+        properties.put("hibernate.implicit_naming_strategy", hibernateProperties.getNaming().getImplicitStrategy());
+        properties.put("hibernate.hbm2ddl.auto",hibernateProperties.getDdlAuto());
+        jpaProperties.setOpenInView(jpaProperties.getOpenInView());
         entityManagerFactory.setJpaVendorAdapter(jpaVendorAdapter);
-        entityManagerFactory.setJpaPropertyMap(jpaProperties.getProperties());
+        entityManagerFactory.setJpaPropertyMap(properties);
         entityManagerFactory.afterPropertiesSet();
 
-        return entityManagerFactory.getObject();
+        return entityManagerFactory;
     }
 
     @Bean
@@ -141,6 +152,7 @@ public class JpaDataSourceConfigration {
         return new PersistenceExceptionTranslationPostProcessor();
     }
 }
+
 
 ```
 
