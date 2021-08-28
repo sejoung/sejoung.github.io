@@ -80,7 +80,7 @@ theme: melody
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repository: https://github.com/sejoung/sejoung.github.io.git
+  repository: https://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@github.com/sejoung/sejoung.github.io.git
   branch: master
 
 sitemap:
