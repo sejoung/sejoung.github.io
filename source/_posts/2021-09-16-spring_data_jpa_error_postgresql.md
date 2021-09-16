@@ -3,7 +3,7 @@ layout: post
 title: "postgresql에서 jpa 자동 키 생성 오류"
 date: 2021-09-16 20:48 +0900
 comments: true
-tags : ["jpa","hibernate","postgresql","@Id","@GeneratedValue(strategy = GenerationType.IDENTITY)","SQL Error: 0, SQLState: 42P01","ERROR: relation"]
+tags : ["jpa","hibernate","postgresql","@Id","@GeneratedValue(strategy = GenerationType.IDENTITY)","SQL Error: 0, SQLState: 42P01","ERROR: relation","sequence name","serial"]
 categories : ["java"]
 sitemap :
 changefreq : daily
