@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "org.yaml.snakeyaml.error.YAMLException: java.io.IOException: Stream closed"
-date: 2021-09-16 20:48 +0900
+date: 2021-10-01 11:00 +0900
 comments: true
 tags : ["snakeyaml","Stream closed","postgresql"]
 categories : ["java"]
