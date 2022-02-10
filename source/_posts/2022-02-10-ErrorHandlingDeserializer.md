@@ -13,6 +13,18 @@ priority : 1.0
 
 poll() 시에 deserializer가 메시지를 deserialize하는 데 실패하면 반환 전에 발생하기 때문에 Spring은 문제를 처리할 방법이 없다.
 
+에러 메시지
+```
+java.lang.IllegalStateException: This error handler cannot process 'SerializationException's directly; please consider configuring an 'ErrorHandlingDeserializer' in the value and/or key deserializer
+	at org.springframework.kafka.listener.SeekUtils.seekOrRecover(SeekUtils.java:145)
+	at org.springframework.kafka.listener.SeekToCurrentErrorHandler.handle(SeekToCurrentErrorHandler.java:113)
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.handleConsumerException(KafkaMessageListenerContainer.java:1401)
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.run(KafkaMessageListenerContainer.java:1108)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+```
+
 ```java
 
 
