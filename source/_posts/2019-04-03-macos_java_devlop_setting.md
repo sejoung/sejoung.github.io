@@ -43,24 +43,25 @@ shift +command + .
 지금 기준으로 jdk11을 설치 했는데 jdk8도 필요하게 됨
 
 ```
-brew cask install adoptopenjdk
+brew cask install temurin
+
+brew install --cask temurin11
+
 ```
 
 위에 섩치가 있고 다른 버전을 설치 하려면 아래 처럼 하면 된다.
 
 ```
-
-brew tap AdoptOpenJDK/openjdk
-brew search openjdk
-brew cask install adoptopenjdk8
-
+brew tap homebrew/cask-versions
+brew search temurin
+brew cask install temurin11
 ```
 
 삭제 방법
 
 ```
 brew list
-brew remove adoptopenjdk12
+brew remove temurin11
 ```
 
 ### jenv 설치
@@ -77,7 +78,7 @@ jenv versions
 
 삭제
 ```
-jenv remove adoptopenjdk12
+jenv remove temurin11
 
 ```
 
@@ -98,17 +99,17 @@ echo 'eval "$(jenv init -)"' >> ~/.zshrc
 
 ```
 
-jenv add /Library/Java/JavaVirtualMachines/adoptopenjdk-11.0.2.jdk/Contents/Home adoptopenjdk11 added
+jenv add /Library/Java/JavaVirtualMachines/temurin-18.jdk/Contents/Home temurin18 added
 
-jenv add /Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home adoptopenjdk8 added
-
-```
+jenv add /Library/Java/JavaVirtualMachines/temurin-11.jdk/Contents/Home temurin11 added
 
 ```
 
-jenv global 1.8
+```
 
-jenv global 11.0
+jenv global 18
+
+jenv global 11
 
 ```
 
