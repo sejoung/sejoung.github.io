@@ -12,7 +12,7 @@ brew install node
 ```
 npm install hexo-cli -g
 
-npm install hexo-renderer-jade hexo-renderer-stylus --save
+npm install hexo-renderer-pug hexo-renderer-stylus
 
 npm install hexo-autonofollow --save
 
