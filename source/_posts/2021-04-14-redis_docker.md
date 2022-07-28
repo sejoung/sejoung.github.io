@@ -102,8 +102,8 @@ brew install redis-cli
 ### mac rdm 실행시 오류 처리 방법
 
 ```
-brew install python@3.7
-install_name_tool -change /usr/local/opt/python@3.7/Frameworks/Python.framework/Versions/3.7/Python /usr/local/opt/python@3.7/Frameworks/Python.framework/Versions/3.7/Python /Applications/RDM.app/Contents/MacOS/RDM
+brew install python@3.9
+install_name_tool -change /usr/local/opt/python@3.9/Frameworks/Python.framework/Versions/3.9/Python /Library/Frameworks/Python.framework/Versions/3.10/Python /Applications/RESP.app/Contents/MacOS/RESP
 
 ```
 
