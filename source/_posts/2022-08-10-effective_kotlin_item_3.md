@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "이펙티브 코틀린 아이템 3: 최대한 플랫폼 타입을 사용하지 말라
+title: "이펙티브 코틀린 아이템 3: 최대한 플랫폼 타입을 사용하지 말라"
 date: 2022-08-10 14:50 +0900
 comments: true
 tags : ["kotlin","Effective kotlin","이펙티브 코틀린"]
