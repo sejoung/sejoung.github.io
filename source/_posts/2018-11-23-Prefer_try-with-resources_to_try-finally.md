@@ -163,3 +163,4 @@ public class tryTest {
 # 참조
 -----
 * [[이팩티브 자바] #9 Try-with-Resource](https://www.youtube.com/watch?v=zqjZBSqHs0s)
+* [자바 예외 처리](https://www.scaler.com/topics/java/exception-handling-in-java/)
