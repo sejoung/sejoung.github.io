@@ -10,7 +10,7 @@ sitemap :
   priority : 1.0
 ---
 
-# 이펙티브 코틀린
+# 이펙티브 코틀린(안정성)
 ## 아이템 8: 적절하게 null을 처리하라
 
 null 은 값이 부족하다(lack of value)는 것을 나타낸다.

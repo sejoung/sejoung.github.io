@@ -10,7 +10,7 @@ sitemap :
   priority : 1.0
 ---
 
-# 이펙티브 코틀린
+# 이펙티브 코틀린(안정성)
 ## 아이템 6: 사용자 정의 오류보다는 표준 오류를 사용하라
 
 * IllegalArgumentException 과 IllegalStateException 는 require 와 check 를 사용해 throw 할수 있는 예외
