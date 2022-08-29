@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "이펙티브 코틀린 아이템 아이템 17: 이름 있는 아규먼트를 사용하라"
+title: "이펙티브 코틀린 아이템 17: 이름 있는 아규먼트를 사용하라"
 date: 2022-08-26 06:18 +0900
 comments: true
 tags : ["kotlin","Effective kotlin","이펙티브 코틀린"]
