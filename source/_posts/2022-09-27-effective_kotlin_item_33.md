@@ -74,7 +74,15 @@ size:Int,
 init: (index:Int)->T
 ): List<T> = MutableList(size,init)
 
+
+class Tree<T> {
+    companion object {
+        operator fun <T> invoke(size: Int, generator: (Int) -> T): Tree <T>
+    }
+}
+
 ```
+invoke 연산자를 갖는 companion 객체를 사용할 수도 있는데 추천 하지 않는 방식이다
 
 * 인터페이스를 위한 생성자를 만들고 싶을때
 * reified 타입 아규먼트를 갖게 하고 싶을때
