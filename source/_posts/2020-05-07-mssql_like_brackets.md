@@ -3,14 +3,14 @@ layout: post
 title: "mssql like ["
 date: 2020-05-07 10:49 +0900
 comments: true
-tags : ["mssql 대괄호"]
+tags : ["mssql 대괄호","brackets","like"]
 categories : ["sql"]
 sitemap :
   changefreq : daily
   priority : 1.0
 ---
 
-## mssql like [
+## mssql like brackets([)
 
 mssql 에서 like 검색을 하는데 키워드가 `[안녕]하하하`
 
