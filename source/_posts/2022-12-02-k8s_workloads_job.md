@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "이펙티브 코틀린 아이템 35: 복잡한 객체를 생성하기 위한 DSL을 정의하라"
-date: 2022-09-27 12:41 +0900
+title: "쿠버네티스 워크로드 잡 테스트"
+date: 2022-12-02 12:41 +0900
 comments: true
 tags : ["워크로드","쿠버네티스","잡","workloads","kubernetes","k8s","job"]
 categories : ["kubernetes","k8s"]
@@ -12,7 +12,7 @@ sitemap :
 
 # 쿠버네티스 워크로드 잡 테스트
 
-로컬에서 테스트 하기 위해 [마니쿠베](https://minikube.sigs.k8s.io/docs/start/) 를 인스톨 한다.
+로컬에서 테스트 하기 위해 [마니쿠베](https://minikube.sigs.k8s.io/docs/start/)를 인스톨 한다.
 
 ```yaml
 
