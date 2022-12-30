@@ -1,0 +1,95 @@
+<!DOCTYPE html><html lang="lang"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta name="description" content="JEP 390: Warnings for Value-Based Classes"><meta name="keywords" content="jdk 16,JEP 390,Warnings for Value-Based Classes"><meta name="author" content="sejoung"><meta name="copyright" content="sejoung"><title>JEP 390: Warnings for Value-Based Classes | 폭간의 기술블로그</title><link rel="shortcut icon" href="../../../my-favicon.ico"><link rel="stylesheet" href="../../../css/index.css?version=1.7.0"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css?version=1.7.0"><meta name="format-detection" content="telephone=no"><meta http-equiv="x-dns-prefetch-control" content="on"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="dns-prefetch" href="https://www.google-analytics.com"><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-87353572-1', 'auto');
+ga('send', 'pageview');</script><script async src="https://www.googletagmanager.com/gtag/js?id=G-NVRTGLD8RZ"></script><script>window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-NVRTGLD8RZ');</script><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"We didn't find any results for the search: ${query}"}},
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  }
+} </script><meta name="generator" content="Hexo 5.4.2"></head><body><i class="fa fa-arrow-right" id="toggle-sidebar" aria-hidden="true"></i><div id="sidebar" data-display="true"><div class="toggle-sidebar-info text-center"><span data-toggle="Toggle article">Toggle site</span><hr></div><div class="sidebar-toc"><div class="sidebar-toc__title">Catalog</div><div class="sidebar-toc__progress"><span class="progress-notice">You've read</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar"></div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#JEP-390-Warnings-for-Value-Based-Classes"><span class="toc-number">1.</span> <span class="toc-text">JEP 390: Warnings for Value-Based Classes</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Summary"><span class="toc-number">1.1.</span> <span class="toc-text">Summary</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Motivation"><span class="toc-number">1.2.</span> <span class="toc-text">Motivation</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Description"><span class="toc-number">1.3.</span> <span class="toc-text">Description</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Identifying-value-based-classes"><span class="toc-number">1.3.1.</span> <span class="toc-text">Identifying value-based classes</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Scope-of-changes"><span class="toc-number">1.3.2.</span> <span class="toc-text">Scope of changes</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Alternatives"><span class="toc-number">1.4.</span> <span class="toc-text">Alternatives</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Dependencies"><span class="toc-number">1.5.</span> <span class="toc-text">Dependencies</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%EC%B0%B8%EC%A1%B0"><span class="toc-number">2.</span> <span class="toc-text">참조</span></a></li></ol></div></div><div class="author-info hide"><div class="author-info__avatar text-center"><img src="https://avatars0.githubusercontent.com/u/4936005?s=400&amp;u=a679b941fe377418e7e4efcf916c6a636d7178ee&amp;v=4"></div><div class="author-info__name text-center">sejoung</div><div class="author-info__description text-center">잘정리하자</div><div class="follow-button"><a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/sejoung">Follow Me</a></div><hr><div class="author-info-articles"><a class="author-info-articles__archives article-meta" href="../../../archives"><span class="pull-left">Articles</span><span class="pull-right">653</span></a><a class="author-info-articles__tags article-meta" href="../../../tags"><span class="pull-left">Tags</span><span class="pull-right">727</span></a><a class="author-info-articles__categories article-meta" href="../../../categories"><span class="pull-left">Categories</span><span class="pull-right">64</span></a></div><hr><div class="author-info-links"><div class="author-info-links__title text-center">Links</div><a class="author-info-links__name text-center" target="_blank" rel="external nofollow noopener noreferrer" href="https://blog.naver.com/sanaes">naverblog</a><a class="author-info-links__name text-center" target="_blank" rel="external nofollow noopener noreferrer" href="https://www.linkedin.com/in/sanaes/">linkedin</a><a class="author-info-links__name text-center" target="_blank" rel="external nofollow noopener noreferrer" href="https://www.slideshare.net/sejoung">slideshare</a></div></div></div><div id="content-outer"><div id="top-container" style="background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Van_Gogh_-_Terrasse_des_Caf%C3%A9s_an_der_Place_du_Forum_in_Arles_am_Abend1.jpeg/1024px-Van_Gogh_-_Terrasse_des_Caf%C3%A9s_an_der_Place_du_Forum_in_Arles_am_Abend1.jpeg)"><div id="page-header"><span class="pull-left"> <a id="site-name" href="../../../index.html">폭간의 기술블로그</a></span><i class="fa fa-bars toggle-menu pull-right" aria-hidden="true"></i><span class="pull-right menus">   <a class="site-page" href="/">Home</a><a class="site-page" href="/archives">Archives</a><a class="site-page" href="/tags">Tags</a><a class="site-page" href="/categories">Categories</a></span><span class="pull-right"><a class="site-page social-icon search"><i class="fa fa-search"></i><span> Search</span></a></span></div><div id="post-info"><div id="post-title">JEP 390: Warnings for Value-Based Classes</div><div id="post-meta"><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2022-03-14</time><span class="post-meta__separator">|</span><i class="fa fa-inbox post-meta__icon" aria-hidden="true"></i><a class="post-meta__categories" href="../../../categories/java/">java</a><span class="post-meta__separator">|</span><i class="fa fa-comment-o post-meta__icon" aria-hidden="true"></i><a href="#disqus_thread"><span class="disqus-comment-count" data-disqus-identifier="2022/03/2022-03-14-JEP_390/"></span></a></div></div></div><div class="layout" id="content-inner"><article id="post"><div class="article-container" id="post-content"><h1 id="JEP-390-Warnings-for-Value-Based-Classes"><a href="#JEP-390-Warnings-for-Value-Based-Classes" class="headerlink" title="JEP 390: Warnings for Value-Based Classes"></a>JEP 390: Warnings for Value-Based Classes</h1><h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><p>기본 래퍼 클래스를 값 기반 으로 지정하고 제거를 위해 해당 생성자를 더 이상 사용하지 않으며, 새로운 사용 중단 경고가 표시됩니다.<br>Java 플랫폼에서 값 기반 클래스의 인스턴스에서 동기화하려는 부적절한 시도에 대한 경고를 제공합니다.</p>
+<h2 id="Motivation"><a href="#Motivation" class="headerlink" title="Motivation"></a>Motivation</h2><p>Valhalla 프로젝트 는 원시 클래스 의 형태로 Java 프로그래밍 모델에 대한 상당한 향상을 추구하고 있습니다.<br>이러한 클래스는 인스턴스가 ID가 없고 인라인 또는 평면화된 표현이 가능하다고 선언합니다.<br>여기서 인스턴스는 메모리 위치 간에 자유롭게 복사되고 인스턴스 필드의 값만 사용하여 인코딩될 수 있습니다.</p>
+<p>기본 클래스의 설계 및 구현은 충분히 성숙하여 Java 플랫폼의 특정 클래스를 향후 릴리스에서 기본 클래스가 되도록 마이그레이션할 수 있을 것입니다.</p>
+<p>마이그레이션 후보 는 API 사양에서 값 기반 클래스 로 비공식적으로 지정됩니다.<br>대체로 이것은 클래스의 동작에 중요하지 않은 ID를 가진 변경 불가능한 개체를 인코딩하고 각 호출에서 고유한 ID를 약속하는 공용 생성자와 같은 인스턴스 생성 메커니즘을 제공하지 않는다는 것을 의미합니다.</p>
+<p>기본 래퍼 클래스( java.lang.Integer, java.lang.Double, 등)도 기본 클래스가 되도록 의도되었습니다.<br>이러한 클래스는 더 이상 사용되지 않는(Java 9 이후) public 생성자 를 노출한다는 점을 제외하고 값 기반으로 지정해야 하는 대부분의 요구 사항을 충족합니다.<br>정의를 약간 조정하면 값 기반 클래스로도 간주될 수 있습니다.</p>
+<p>값 기반 클래스의 클라이언트는 이러한 클래스 사용에 대한 권장 사항을 위반하는 경우를 제외하고 일반적으로 기본 클래스 마이그레이션의 영향을 받지 않습니다.<br>특히 마이그레이션이 발생한 향후 Java 릴리스에서 실행할 때:</p>
+<ol>
+<li>이러한 클래스(per &#x3D;&#x3D;)의 인스턴스는 동일한(per equals) 것으로 간주 되어 올바른 동작을 위해 결과에 &#x3D;&#x3D;의존하는 프로그램을 잠재적으로 중단시킬 수 있습니다.!&#x3D;</li>
+<li>암시적 박싱이나 팩토리 메서드 호출이 아닌, 등 new Integer을 사용하여 래퍼 클래스 인스턴스를 만들려는 시도 는 s를 생성합니다.new Double valueOf LinkageError</li>
+<li>이러한 클래스의 인스턴스에서 동기화를 시도하면 예외가 발생합니다.</li>
+</ol>
+<p>이러한 변경 사항은 일부에게는 불편할 수 있지만 해결 방법은 간단합니다.<br>ID가 필요한 경우 다른 클래스를 사용합니다. 종종 스스로 정의하지만 적합 Object할 AtomicReference수도 있습니다.<br>더 나은 성능, 안정적인 평등 의미, 기본 및 클래스 통합과 같은 기본 클래스로 마이그레이션할 때의 이점은 불편을 감수할 가치가 있습니다.</p>
+<p>(1) 값 기반 클래스의 팩토리 메서드에서 고유한 ID에 대한 약속을 피함으로써 이미 낙담했습니다.<br>이러한 사양을 무시하고 현재 구현 동작에 의존하는 프로그램을 자동으로 감지하는 실용적인 방법은 없지만 그러한 경우는 거의 없을 것으로 예상합니다.</p>
+<p>제거를 위해 래퍼 클래스 생성자를 더 이상 사용하지 않음으로써 (2)를 억제할 수 있습니다.<br>그러면 이러한 생성자에 대한 호출을 컴파일할 때 발생하는 경고가 증폭됩니다.<br>기존 Java 프로젝트의 상당 부분(아마도 1%-10%)이 래퍼 클래스 생성자를 호출하지만 대부분의 경우 9 이전 Java 릴리스에서만 실행하려고 합니다.<br>많은 인기 있는 오픈 소스 프로젝트는 이미 소스에서 래퍼 생성자 호출을 제거하여 Java 9의 사용 중단 경고에 응답했으며<br>“deprecated for removal” 경고의 긴급성이 높아진 점을 감안할 때 더 많은 작업을 수행할 것으로 예상할 수 있습니다.<br>이 문제를 완화하기 위한 추가 기능은 종속성 섹션에 설명되어 있습니다.</p>
+<p>(3) 컴파일 시간과 런타임에 프로그래머에게 동기화 작업이 향후 릴리스에서 작동하지 않을 것임을 알리기 위해 경고를 구현하여 억제할 수 있습니다.</p>
+<h2 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h2><p>java.lang( Byte, Short, Integer, Long, Float, Double, Boolean및 ) 의 기본 래퍼 클래스는 Character값 기반으로 지정되었습니다.<br>값 기반 클래스 에 대한 설명은 더 이상 사용되지 않는 생성자 및 내부 팩토리를 허용하고 기본 클래스 마이그레이션 요구 사항과<br>더 잘 일치하도록 업데이트되었습니다(예: 값 기반 클래스는 인스턴스 필드를 상속해서는 안 됨).</p>
+<p>값 기반 클래스 인스턴스의 오용을 방지하려면:</p>
+<ul>
+<li><p>Java 9에서 원래 사용되지 않는 기본 래퍼 클래스 생성자는 제거를 위해 사용되지 않습니다. 생성자가 소스에서 호출될 때마다 javac 기본적으로 removal 경고가 생성됩니다.<br>이 jdeprscan도구는 바이너리에서 더 이상 사용되지 않는 API의 사용을 식별하는 데 사용할 수 있습니다.</p>
+</li>
+<li><p>javac값 기반 클래스 유형 또는 하위 유형이 모두 값 기반으로 지정된 유형의 피연산자를 synchronization사용하여 문의 사용을 식별 하는 새로운 경고 범주 를 구현합니다.<br>synchronized경고 범주는 기본적으로 켜져 있으며 를 사용하여 수동으로 선택할 수 있습니다 -Xlint:synchronization.</p>
+</li>
+<li><p>monitorenterHotSpot 은 값 기반 클래스 인스턴스에서 발생하는 런타임 감지를 구현 합니다.<br>명령줄 옵션 -XX:DiagnoseSyncOnValueBasedClasses&#x3D;1은 작업을 치명적인 오류로 처리합니다.<br>명령줄 옵션 -XX:DiagnoseSyncOnValueBasedClasses&#x3D;2 은 콘솔과 JDK Flight Recorder 이벤트를 통해 로깅을 켭니다.</p>
+</li>
+</ul>
+<p>컴파일 타임 동기화 경고는 정적 유형에 따라 달라지지만 런타임 경고는 Object.</p>
+<p>예를 들어:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Double d = 20.0;</span><br><span class="line">synchronized (d) &#123; ... &#125; // javac warning &amp; HotSpot warning</span><br><span class="line">Object o = d;</span><br><span class="line">synchronized (o) &#123; ... &#125; // HotSpot warning</span><br></pre></td></tr></table></figure>
+
+<p>monitorexit바이트 코드와 Object메서드 wait, notify및 메서드 는 notifyAll항상 문 또는 메서드 IllegalMonitorStateException외부에서 호출되는 if 를 throw했습니다.<br>synchronized따라서 이러한 작업에 대한 경고가 필요하지 않습니다.</p>
+<h3 id="Identifying-value-based-classes"><a href="#Identifying-value-based-classes" class="headerlink" title="Identifying value-based classes"></a>Identifying value-based classes</h3><p>JDK 내에서 @jdk.internal.ValueBased주석은 javac클래스가 값 기반이거나 추상 클래스 또는 인터페이스에 값 기반 하위 클래스가 필요하다는 신호를 HotSpot에 사용하는 데 사용됩니다.</p>
+<p>@ValueBasedJava Platform API 및 JDK의 다음 선언에 적용됩니다.</p>
+<ul>
+<li><p>java.lang 의 기본 래퍼 클래스</p>
+</li>
+<li><p>java.lang.Runtime.Version 클래스</p>
+</li>
+<li><p>The “optional” classes in java.util: Optional, OptionalInt, OptionalLong, and OptionalDouble;</p>
+</li>
+<li><p>java.time API: Instant, LocalDate, LocalTime, LocalDateTime, ZonedDateTime, ZoneId, OffsetTime,<br>OffsetDateTime, ZoneOffset, Duration, Period, Year, YearMonth, and MonthDay, and,<br>in java.time.chrono: MinguoDate, HijrahDate, JapaneseDate, and ThaiBuddhistDate;</p>
+</li>
+<li><p>The interface java.lang.ProcessHandle and its implementation classes;</p>
+</li>
+<li><p>java.util 에 있는 컬렉션 팩토리의 구현 클래스 : List.of, List.copyOf, Set.of, Set.copyOf, Map.of, Map.copyOf, Map.ofEntries, and Map.entry.</p>
+</li>
+</ul>
+<p>주석이 추상 클래스나 인터페이스에 적용될 때마다 JDK의 모든 하위 클래스에도 적용됩니다.</p>
+<p>일부 클래스와 인터페이스는 java.lang.constant값 jdk.incubator.foreign기반이라고 주장했지만 수정된 요구 사항을 충족하지 않습니다(예: 인스턴스 필드를 상속함).<br>따라서 기본 클래스로 마이그레이션할 수 없습니다. 이 경우 더 이상 가치 기반 클래스로 설명하는 것이 적절하지 않으며 사양이 수정되었습니다.</p>
+<h3 id="Scope-of-changes"><a href="#Scope-of-changes" class="headerlink" title="Scope of changes"></a>Scope of changes</h3><p>Java SE : 이 JEP는 원시 래퍼 클래스, 기존 값 기반 클래스, 관련 인터페이스 및 팩토리 메서드의 사양을 개선하여 Java SE를 수정합니다.<br>또한 기본 래퍼 클래스 생성자 제거에 대해 더 이상 사용되지 않습니다. Java 언어 또는 Java 가상 머신 사양을 변경 하지 않습니다 .</p>
+<p>JDKjavac : JDK에서 이 JEP는 또한 HotSpot 에 새로운 경고 및 로깅 기능을 추가합니다.<br>그리고 주석을 정의하고 @jdk.internal.ValueBased여러 JDK 클래스에 적용합니다.</p>
+<h2 id="Alternatives"><a href="#Alternatives" class="headerlink" title="Alternatives"></a>Alternatives</h2><p>이러한 클래스를 기본 클래스로 마이그레이션하려는 노력을 포기할 수 있습니다.<br>그러나 마이그레이션을 완료하면 개발자가 누릴 수 있는 상당한 이점이 있으며 문제가 있는 동작에 의존하는 개발자에 대한 상대적 영향은 적습니다.</p>
+<p>런타임 경고로 컴파일 시간 사용 중단 경고를 보완할 수 있습니다.<br>이것은 다른 JEP의 향후 작업으로 남겨집니다(아래 참조).</p>
+<p>API 클래스 및 와 같은 기능에 의해 생성된 클래스를 포함하여 기본 클래스로 마이그레이션될 수 있는 다른 클래스가 있을 수 있습니다 java.lang.invoke.LambdaMetafactory.<br>이 JEP는 이미 값 기반으로 지정된 래퍼 클래스 및 클래스로 제한됩니다. 다시 말하지만 향후 작업으로 추가 경고가 도입될 수 있습니다.</p>
+<h2 id="Dependencies"><a href="#Dependencies" class="headerlink" title="Dependencies"></a>Dependencies</h2><p>값 기반 클래스를 기본 클래스로 마이그레이션하려면 이러한 경고가 있는 적절한 리드 타임이 필요합니다.<br>가장 중요한 것은 래퍼 클래스를 기본 클래스로 만들기 위한 JEP는 이 JEP가 완료된 후 몇 가지 릴리스가 될 때까지 진행할 수 없다는 것입니다.</p>
+<p>래퍼 클래스를 기본 클래스로 만들기 위한 또 다른 전제 조건은 생성자의 레거시 사용을 식별하고 해결하기 위한 충분한 도구입니다. 두 가지 후속 기능은 별도의 JEP에서 조사됩니다.</p>
+<ul>
+<li>래퍼 클래스 생성자를 포함하여 더 이상 사용되지 않는 API 사용에 대한 HotSpot 런타임 경고. 이것은 javac및 에 의해 생성된 경고를 보완합니다 jdeprscan.</li>
+<li>래퍼 클래스 생성자의 사용법을 업데이트할 수 없는 바이너리 실행을 지원하는 도구입니다.<br>valueOf예를 들어 이것은 프로그래머에게 팩토리 메서드 를 사용하기 위해 바이트 코드를 다시 작성할 수 있는 옵션을 제공할 수 있습니다.</li>
+</ul>
+<h1 id="참조"><a href="#참조" class="headerlink" title="참조"></a>참조</h1><hr>
+<ul>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="http://openjdk.java.net/jeps/390">JEP_387</a></li>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://openjdk.java.net/projects/valhalla/">valhalla project</a></li>
+</ul>
+</div></article><div class="post-meta__tag-list"><a class="post-meta__tags" href="../../../tags/jdk-16/">jdk 16</a><a class="post-meta__tags" href="../../../tags/JEP-390/">JEP 390</a><a class="post-meta__tags" href="../../../tags/Warnings-for-Value-Based-Classes/">Warnings for Value-Based Classes</a></div><nav id="pagination"><div class="prev-post pull-left"><a href="../2022-03-25-JEP_400/"><i class="fa fa-chevron-left">  </i><span>JEP 400: UTF-8 by Default</span></a></div><div class="next-post pull-right"><a href="../2022-03-13-JEP_387/"><span>JEP 387: Elastic Metaspace</span><i class="fa fa-chevron-right"></i></a></div></nav><div id="disqus_thread"></div><script>var unused = null;
+var disqus_config = function () {
+  this.page.url = 'https://sejoung.github.io/2022/03/2022-03-14-JEP_390/';
+  this.page.identifier = '2022/03/2022-03-14-JEP_390/';
+  this.page.title = 'JEP 390: Warnings for Value-Based Classes';
+}
+var d = document, s = d.createElement('script');
+s.src = "https://" + 'kimsejoung' +".disqus.com/embed.js";
+s.setAttribute('data-timestamp', '' + +new Date());
+(d.head || d.body).appendChild(s);</script><script id="dsq-count-scr" src="https://kimsejoung.disqus.com/count.js" async></script></div></div><footer class="footer-bg" style="background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Van_Gogh_-_Terrasse_des_Caf%C3%A9s_an_der_Place_du_Forum_in_Arles_am_Abend1.jpeg/1024px-Van_Gogh_-_Terrasse_des_Caf%C3%A9s_an_der_Place_du_Forum_in_Arles_am_Abend1.jpeg)"><div class="layout" id="footer"><div class="copyright">&copy;2017 - 2022 By sejoung</div><div class="framework-info"><span>Driven - </span><a target="_blank" rel="external nofollow noopener noreferrer" href="http://hexo.io"><span>Hexo</span></a><span class="footer-separator">|</span><span>Theme - </span><a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/Molunerfinn/hexo-theme-melody"><span>Melody</span></a></div><div class="busuanzi"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><span id="busuanzi_container_page_pv"><i class="fa fa-file-o"></i><span id="busuanzi_value_page_pv"></span><span></span></span></div></div></footer><i class="fa fa-arrow-up" id="go-up" aria-hidden="true"></i><script src="../../../js/third-party/anime.min.js"></script><script src="../../../js/third-party/jquery.min.js"></script><script src="../../../js/third-party/jquery.fancybox.min.js"></script><script src="../../../js/third-party/velocity.min.js"></script><script src="../../../js/third-party/velocity.ui.min.js"></script><script src="../../../js/utils.js?version=1.7.0"></script><script src="../../../js/fancybox.js?version=1.7.0"></script><script src="../../../js/sidebar.js?version=1.7.0"></script><script src="../../../js/copy.js?version=1.7.0"></script><script src="../../../js/fireworks.js?version=1.7.0"></script><script src="../../../js/transition.js?version=1.7.0"></script><script src="../../../js/scroll.js?version=1.7.0"></script><script src="../../../js/head.js?version=1.7.0"></script><script src="../../../js/search/local-search.js"></script><script>if(/Android|webOS|iPhone|iPod|iPad|BlackBerry/i.test(navigator.userAgent)) {
+  $('#nav').addClass('is-mobile')
+  $('footer').addClass('is-mobile')
+  $('#top-container').addClass('is-mobile')
+}</script><div class="search-dialog" id="local-search"><div class="search-dialog__title" id="local-search-title">Local search</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="Search for Posts"></div></div></div><hr><div id="local-search-results"><div id="local-hits"></div><div id="local-stats"><div class="local-search-stats__hr" id="hr"><span>Powered by</span> <a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/wzpan/hexo-generator-search" style="color:#49B1F5;">hexo-generator-search</a></div></div></div><span class="search-close-button"><i class="fa fa-times"></i></span></div><div class="search-mask"></div></body></html>

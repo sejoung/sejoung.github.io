@@ -1,0 +1,80 @@
+<!DOCTYPE html><html lang="lang"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta name="description" content="jenkins php 파일 배포 하기"><meta name="keywords" content="jenkins,deploy"><meta name="author" content="sejoung"><meta name="copyright" content="sejoung"><title>jenkins php 파일 배포 하기 | 폭간의 기술블로그</title><link rel="shortcut icon" href="../../../my-favicon.ico"><link rel="stylesheet" href="../../../css/index.css?version=1.7.0"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css?version=1.7.0"><meta name="format-detection" content="telephone=no"><meta http-equiv="x-dns-prefetch-control" content="on"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="dns-prefetch" href="https://www.google-analytics.com"><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-87353572-1', 'auto');
+ga('send', 'pageview');</script><script async src="https://www.googletagmanager.com/gtag/js?id=G-NVRTGLD8RZ"></script><script>window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-NVRTGLD8RZ');</script><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"We didn't find any results for the search: ${query}"}},
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  }
+} </script><meta name="generator" content="Hexo 5.4.2"></head><body><i class="fa fa-arrow-right" id="toggle-sidebar" aria-hidden="true"></i><div id="sidebar" data-display="true"><div class="toggle-sidebar-info text-center"><span data-toggle="Toggle article">Toggle site</span><hr></div><div class="sidebar-toc"><div class="sidebar-toc__title">Catalog</div><div class="sidebar-toc__progress"><span class="progress-notice">You've read</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar"></div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#jenkins-php-%ED%8C%8C%EC%9D%BC-%EB%B0%B0%ED%8F%AC-%ED%95%98%EA%B8%B0"><span class="toc-number">1.</span> <span class="toc-text">jenkins php 파일 배포 하기</span></a></li></ol><li class="toc-item toc-level-1"><a class="toc-link" href="#%EC%B0%B8%EC%A1%B0"><span class="toc-number"></span> <span class="toc-text">참조</span></a></li></div></div><div class="author-info hide"><div class="author-info__avatar text-center"><img src="https://avatars0.githubusercontent.com/u/4936005?s=400&amp;u=a679b941fe377418e7e4efcf916c6a636d7178ee&amp;v=4"></div><div class="author-info__name text-center">sejoung</div><div class="author-info__description text-center">잘정리하자</div><div class="follow-button"><a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/sejoung">Follow Me</a></div><hr><div class="author-info-articles"><a class="author-info-articles__archives article-meta" href="../../../archives"><span class="pull-left">Articles</span><span class="pull-right">653</span></a><a class="author-info-articles__tags article-meta" href="../../../tags"><span class="pull-left">Tags</span><span class="pull-right">727</span></a><a class="author-info-articles__categories article-meta" href="../../../categories"><span class="pull-left">Categories</span><span class="pull-right">64</span></a></div><hr><div class="author-info-links"><div class="author-info-links__title text-center">Links</div><a class="author-info-links__name text-center" target="_blank" rel="external nofollow noopener noreferrer" href="https://blog.naver.com/sanaes">naverblog</a><a class="author-info-links__name text-center" target="_blank" rel="external nofollow noopener noreferrer" href="https://www.linkedin.com/in/sanaes/">linkedin</a><a class="author-info-links__name text-center" target="_blank" rel="external nofollow noopener noreferrer" href="https://www.slideshare.net/sejoung">slideshare</a></div></div></div><div id="content-outer"><div id="top-container" style="background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Van_Gogh_-_Terrasse_des_Caf%C3%A9s_an_der_Place_du_Forum_in_Arles_am_Abend1.jpeg/1024px-Van_Gogh_-_Terrasse_des_Caf%C3%A9s_an_der_Place_du_Forum_in_Arles_am_Abend1.jpeg)"><div id="page-header"><span class="pull-left"> <a id="site-name" href="../../../index.html">폭간의 기술블로그</a></span><i class="fa fa-bars toggle-menu pull-right" aria-hidden="true"></i><span class="pull-right menus">   <a class="site-page" href="/">Home</a><a class="site-page" href="/archives">Archives</a><a class="site-page" href="/tags">Tags</a><a class="site-page" href="/categories">Categories</a></span><span class="pull-right"><a class="site-page social-icon search"><i class="fa fa-search"></i><span> Search</span></a></span></div><div id="post-info"><div id="post-title">jenkins php 파일 배포 하기</div><div id="post-meta"><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2018-08-01</time><span class="post-meta__separator">|</span><i class="fa fa-inbox post-meta__icon" aria-hidden="true"></i><a class="post-meta__categories" href="../../../categories/jenkins/">jenkins</a><span class="post-meta__separator">|</span><i class="fa fa-comment-o post-meta__icon" aria-hidden="true"></i><a href="#disqus_thread"><span class="disqus-comment-count" data-disqus-identifier="2018/08/2018-08-01-php_build_jenkins/"></span></a></div></div></div><div class="layout" id="content-inner"><article id="post"><div class="article-container" id="post-content"><h3 id="jenkins-php-파일-배포-하기"><a href="#jenkins-php-파일-배포-하기" class="headerlink" title="jenkins php 파일 배포 하기"></a>jenkins php 파일 배포 하기</h3><p>전 php를 해본적이 없습니다.(java 개발자) 아래 내용은 전달 받은 기능을 설정한것 뿐입니다.</p>
+<p>기능 요건 </p>
+<ol>
+<li>git 에서 소스를 다운</li>
+<li>특정 서버 특정 폴더에 업로드</li>
+<li>git을 polling 하는 주기를 5분 단위로 해서 업데이트가 있으면 1번 2번 프로세스 반복</li>
+</ol>
+<p>사전 진행 사항</p>
+<ol>
+<li>jenkins에 git 플러그인 설치, Publish over SSH 플러그인 설치 진행</li>
+<li>git은 내부서버에 설치함 인증은 ssh 인증 방식으로 됨</li>
+<li>ssh 인증을 위해 git이 설치한 서버에 계정을 만듬</li>
+</ol>
+<p>위 사항이 다되면 jenkins 로그인 첫화면</p>
+<p><img src="https://sejoung.github.io/images/2018_08_01_01.jpg" alt="jenkins UI1"></p>
+<p>젠킨스 관리 클릭 </p>
+<p><img src="https://sejoung.github.io/images/2018_08_01_02.jpg" alt="jenkins UI2"></p>
+<p>시스템 설정 클릭 Publish over SSH 설정 화면</p>
+<p><img src="https://sejoung.github.io/images/2018_08_01_03.jpg" alt="jenkins UI3"></p>
+<p>위에 처럼 Publish over SSH에서 사용할 서버정보를 입력한다. </p>
+<p>상세는 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://wiki.jenkins.io/display/JENKINS/Publish+Over+SSH+Plugin">jenkins Publish over SSH</a>로 들어가면 자세히 볼수있다</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">위에 내용을 셋팅한 이유는 업로드할 서버에서 ssh만 지원을해서 설정함</span><br><span class="line"></span><br><span class="line">ftp를 사용하면 Publish over FTP에서 설정을 해도 무방함</span><br><span class="line"></span><br><span class="line">개인적인 생각은 업로드 계정은 사용자 계정으로 하는것이 아니라 CI 전용계정을 사용하는것이 어떻까라고 생각한다.</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>그럼 다시 아래의 첫화면에서 </p>
+<p><img src="https://sejoung.github.io/images/2018_08_01_01.jpg" alt="jenkins UI1"></p>
+<p>새로운 item 클릭 프로젝트 생성</p>
+<p><img src="https://sejoung.github.io/images/2018_08_01_04.jpg" alt="jenkins UI4"></p>
+<p>프로젝트 생성시에는 여러가지 타입이 있는데 적절한 타입으로 생성하면 도움이 된다.</p>
+<p>여기에선 프리스타일로 생성 생성후에 대쉬보드에서 해당 프로젝트 클릭</p>
+<p><img src="https://sejoung.github.io/images/2018_08_01_05.jpg" alt="jenkins UI5"></p>
+<p>여기에서 구성 클릭 </p>
+<p><img src="https://sejoung.github.io/images/2018_08_01_06.jpg" alt="jenkins UI6"></p>
+<p>소스코드 관리에서 git 선택 주소 입력 Credentials 추가 전 master 브런치만 빌드할꺼니 *&#x2F;master 입력</p>
+<p>아래로 내리면 빌드유발에서 Poll SCM 선택</p>
+<p><img src="https://sejoung.github.io/images/2018_08_01_07.jpg" alt="jenkins UI7"></p>
+<p>5분마다 polling 주기를 갖길 원했으니 H&#x2F;5 * * * * 입력 해당 값이 의미 하는것은 옆에 ?를 클릭하면 상세 설명이 나옴</p>
+<p>아래로 스크롤 하면 빌드 후 조치 추가에서 Send build artifacts over SSH를 선택 </p>
+<p><img src="https://sejoung.github.io/images/2018_08_01_08.jpg" alt="jenkins UI8"></p>
+<p>위에처럼 설정 소스파일에 모든 파일 폴더를 업로드 하기 위해서 아래처럼 프리픽스를 줌</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">**/*.*</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<h1 id="참조"><a href="#참조" class="headerlink" title="참조"></a>참조</h1><hr>
+<ul>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://jenkins.io/">jenkins</a></li>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://wiki.jenkins.io/display/JENKINS/Publish+Over+SSH+Plugin">jenkins Publish over SSH</a></li>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://wiki.jenkins.io/display/JENKINS/Git+Plugin">jenkins git</a></li>
+</ul>
+</div></article><div class="post-meta__tag-list"><a class="post-meta__tags" href="../../../tags/jenkins/">jenkins</a><a class="post-meta__tags" href="../../../tags/deploy/">deploy</a></div><nav id="pagination"><div class="prev-post pull-left"><a href="../2018-08-05-java9_module_programming/"><i class="fa fa-chevron-left">  </i><span>Java9 모듈 프로그래밍(유동환) - 비긴 메이트</span></a></div><div class="next-post pull-right"><a href="../../07/2018-07-26-nginx_load_balancer/"><span>nginx HTTP load balancer 설정</span><i class="fa fa-chevron-right"></i></a></div></nav><div id="disqus_thread"></div><script>var unused = null;
+var disqus_config = function () {
+  this.page.url = 'https://sejoung.github.io/2018/08/2018-08-01-php_build_jenkins/';
+  this.page.identifier = '2018/08/2018-08-01-php_build_jenkins/';
+  this.page.title = 'jenkins php 파일 배포 하기';
+}
+var d = document, s = d.createElement('script');
+s.src = "https://" + 'kimsejoung' +".disqus.com/embed.js";
+s.setAttribute('data-timestamp', '' + +new Date());
+(d.head || d.body).appendChild(s);</script><script id="dsq-count-scr" src="https://kimsejoung.disqus.com/count.js" async></script></div></div><footer class="footer-bg" style="background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Van_Gogh_-_Terrasse_des_Caf%C3%A9s_an_der_Place_du_Forum_in_Arles_am_Abend1.jpeg/1024px-Van_Gogh_-_Terrasse_des_Caf%C3%A9s_an_der_Place_du_Forum_in_Arles_am_Abend1.jpeg)"><div class="layout" id="footer"><div class="copyright">&copy;2017 - 2022 By sejoung</div><div class="framework-info"><span>Driven - </span><a target="_blank" rel="external nofollow noopener noreferrer" href="http://hexo.io"><span>Hexo</span></a><span class="footer-separator">|</span><span>Theme - </span><a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/Molunerfinn/hexo-theme-melody"><span>Melody</span></a></div><div class="busuanzi"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><span id="busuanzi_container_page_pv"><i class="fa fa-file-o"></i><span id="busuanzi_value_page_pv"></span><span></span></span></div></div></footer><i class="fa fa-arrow-up" id="go-up" aria-hidden="true"></i><script src="../../../js/third-party/anime.min.js"></script><script src="../../../js/third-party/jquery.min.js"></script><script src="../../../js/third-party/jquery.fancybox.min.js"></script><script src="../../../js/third-party/velocity.min.js"></script><script src="../../../js/third-party/velocity.ui.min.js"></script><script src="../../../js/utils.js?version=1.7.0"></script><script src="../../../js/fancybox.js?version=1.7.0"></script><script src="../../../js/sidebar.js?version=1.7.0"></script><script src="../../../js/copy.js?version=1.7.0"></script><script src="../../../js/fireworks.js?version=1.7.0"></script><script src="../../../js/transition.js?version=1.7.0"></script><script src="../../../js/scroll.js?version=1.7.0"></script><script src="../../../js/head.js?version=1.7.0"></script><script src="../../../js/search/local-search.js"></script><script>if(/Android|webOS|iPhone|iPod|iPad|BlackBerry/i.test(navigator.userAgent)) {
+  $('#nav').addClass('is-mobile')
+  $('footer').addClass('is-mobile')
+  $('#top-container').addClass('is-mobile')
+}</script><div class="search-dialog" id="local-search"><div class="search-dialog__title" id="local-search-title">Local search</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="Search for Posts"></div></div></div><hr><div id="local-search-results"><div id="local-hits"></div><div id="local-stats"><div class="local-search-stats__hr" id="hr"><span>Powered by</span> <a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/wzpan/hexo-generator-search" style="color:#49B1F5;">hexo-generator-search</a></div></div></div><span class="search-close-button"><i class="fa fa-times"></i></span></div><div class="search-mask"></div></body></html>

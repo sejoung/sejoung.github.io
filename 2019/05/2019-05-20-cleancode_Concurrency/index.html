@@ -1,0 +1,145 @@
+<!DOCTYPE html><html lang="lang"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta name="description" content="클린코드(Concurrency)"><meta name="keywords" content="클린코드,cleancode"><meta name="author" content="sejoung"><meta name="copyright" content="sejoung"><title>클린코드(Concurrency) | 폭간의 기술블로그</title><link rel="shortcut icon" href="../../../my-favicon.ico"><link rel="stylesheet" href="../../../css/index.css?version=1.7.0"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css?version=1.7.0"><meta name="format-detection" content="telephone=no"><meta http-equiv="x-dns-prefetch-control" content="on"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="dns-prefetch" href="https://www.google-analytics.com"><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-87353572-1', 'auto');
+ga('send', 'pageview');</script><script async src="https://www.googletagmanager.com/gtag/js?id=G-NVRTGLD8RZ"></script><script>window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-NVRTGLD8RZ');</script><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"We didn't find any results for the search: ${query}"}},
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  }
+} </script><meta name="generator" content="Hexo 5.4.2"></head><body><i class="fa fa-arrow-right" id="toggle-sidebar" aria-hidden="true"></i><div id="sidebar" data-display="true"><div class="toggle-sidebar-info text-center"><span data-toggle="Toggle article">Toggle site</span><hr></div><div class="sidebar-toc"><div class="sidebar-toc__title">Catalog</div><div class="sidebar-toc__progress"><span class="progress-notice">You've read</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar"></div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%ED%81%B4%EB%A6%B0%EC%BD%94%EB%93%9C"><span class="toc-number">1.</span> <span class="toc-text">클린코드</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Concurrency-%EB%8F%99%EC%8B%9C%EC%84%B1"><span class="toc-number">1.1.</span> <span class="toc-text">Concurrency(동시성)</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%EB%8F%99%EC%8B%9C%EC%84%B1%EC%9D%B4-%ED%95%84%EC%9A%94%ED%95%9C-%EC%9D%B4%EC%9C%A0"><span class="toc-number">1.1.1.</span> <span class="toc-text">동시성이 필요한 이유</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%EB%AF%B8%EC%8B%A0%EA%B3%BC-%EC%98%A4%ED%95%B4"><span class="toc-number">1.1.1.1.</span> <span class="toc-text">미신과 오해</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EB%82%9C%EA%B4%80"><span class="toc-number">1.1.2.</span> <span class="toc-text">난관</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EB%8F%99%EC%8B%9C%EC%84%B1-%EB%B0%A9%EC%96%B4-%EC%9B%90%EC%B9%99"><span class="toc-number">1.1.3.</span> <span class="toc-text">동시성 방어 원칙</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%EB%8B%A8%EC%9D%BC-%EC%B1%85%EC%9E%84%EC%9B%90%EC%B9%99"><span class="toc-number">1.1.3.1.</span> <span class="toc-text">단일 책임원칙</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%EC%B6%94%EB%A1%A0-%EC%9E%90%EB%A3%8C%EB%B2%94%EC%9C%84%EB%A5%BC-%EC%A0%9C%ED%95%9C%ED%95%98%EB%9D%BC"><span class="toc-number">1.1.3.2.</span> <span class="toc-text">추론: 자료범위를 제한하라.</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%EC%B6%94%EB%A1%A0-%EC%9E%90%EB%A3%8C-%EC%82%AC%EB%B3%B8%EC%9D%84-%EC%82%AC%EC%9A%A9%ED%95%98%EB%9D%BC"><span class="toc-number">1.1.3.3.</span> <span class="toc-text">추론: 자료 사본을 사용하라</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%EC%B6%94%EB%A1%A0-%EC%8A%A4%EB%A0%88%EB%93%9C%EB%8A%94-%EA%B0%80%EB%8A%A5%ED%95%9C-%EB%8F%85%EB%A6%BD%EC%A0%81%EC%9C%BC%EB%A1%9C-%EA%B5%AC%ED%98%84%ED%95%98%EB%9D%BC"><span class="toc-number">1.1.3.4.</span> <span class="toc-text">추론: 스레드는 가능한 독립적으로 구현하라</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC%EB%A5%BC-%EC%9D%B4%ED%95%B4%ED%95%98%EB%9D%BC"><span class="toc-number">1.1.4.</span> <span class="toc-text">라이브러리를 이해하라.</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%EC%8A%A4%EB%A0%88%EB%93%9C-%ED%99%98%EA%B2%BD%EC%97%90-%EC%95%88%EC%A0%84%ED%95%9C-%EC%A7%91%ED%95%A9-%EC%BB%AC%EB%A0%89%EC%85%98"><span class="toc-number">1.1.4.1.</span> <span class="toc-text">스레드 환경에 안전한 집합 컬렉션</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EC%8B%A4%ED%96%89-%EB%AA%A8%EB%8D%B8%EC%9D%84-%EC%9D%B4%ED%95%B4%ED%95%98%EB%9D%BC"><span class="toc-number">1.1.5.</span> <span class="toc-text">실행 모델을 이해하라.</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%EC%83%9D%EC%82%B0%EC%9E%90-%EC%86%8C%EB%B9%84%EC%9E%90-Producer-Consumer"><span class="toc-number">1.1.5.1.</span> <span class="toc-text">생산자 - 소비자 (Producer-Consumer)</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%EC%9D%BD%EA%B8%B0-%EC%93%B0%EA%B8%B0-Readers-Writers"><span class="toc-number">1.1.5.2.</span> <span class="toc-text">읽기-쓰기 Readers-Writers</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%EC%8B%9D%EC%82%AC%ED%95%98%EB%8A%94-%EC%B2%A0%ED%95%99%EC%9E%90%EB%93%A4"><span class="toc-number">1.1.5.3.</span> <span class="toc-text">식사하는 철학자들</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EB%8F%99%EA%B8%B0%ED%99%94%ED%95%98%EB%8A%94-%EB%A9%94%EC%86%8C%EB%93%9C-%EC%82%AC%EC%9D%B4%EC%97%90-%EC%9D%98%EC%A1%B4%EC%84%B1%EC%9D%84-%EC%9D%B4%ED%95%B4-%ED%95%98%EB%9D%BC"><span class="toc-number">1.1.6.</span> <span class="toc-text">동기화하는 메소드 사이에 의존성을 이해 하라</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EB%8F%99%EA%B8%B0%ED%99%94%ED%95%98%EB%8A%94-%EB%B6%80%EB%B6%84%EC%9D%84-%EC%9E%91%EA%B2%8C-%EB%A7%8C%EB%93%A4%EC%96%B4%EB%9D%BC"><span class="toc-number">1.1.7.</span> <span class="toc-text">동기화하는 부분을 작게 만들어라</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EC%98%AC%EB%B0%94%EB%A5%B8-%EC%A2%85%EB%A3%8C-%EC%BD%94%EB%93%9C%EB%8A%94-%EA%B5%AC%ED%98%84%ED%95%98%EA%B8%B0-%EC%96%B4%EB%A0%B5%EB%8B%A4"><span class="toc-number">1.1.8.</span> <span class="toc-text">올바른 종료 코드는 구현하기 어렵다.</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EC%8A%A4%EB%A0%88%EB%93%9C-%EC%BD%94%EB%93%9C-%ED%85%8C%EC%8A%A4%ED%8A%B8-%ED%95%98%EA%B8%B0"><span class="toc-number">1.1.9.</span> <span class="toc-text">스레드 코드 테스트 하기</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%EB%A7%90%EC%9D%B4-%EC%95%88%EB%90%98%EB%8A%94-%EC%8B%A4%ED%8C%A8%EB%8A%94-%EC%9E%A0%EC%A0%95%EC%A0%81%EC%9D%B8-%EC%8A%A4%EB%A0%88%EB%93%9C-%EB%AC%B8%EC%A0%9C%EB%A1%9C-%EC%B7%A8%EA%B8%89%ED%95%98%EB%9D%BC"><span class="toc-number">1.1.9.1.</span> <span class="toc-text">말이 안되는 실패는 잠정적인 스레드 문제로 취급하라.</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%EB%8B%A4%EC%A4%91-%EC%8A%A4%EB%A0%88%EB%93%9C%EB%A5%BC-%EA%B3%A0%ED%98%80%ED%95%98%EC%A7%80-%EC%95%8A%EC%9D%80-%EC%88%9C%EC%B0%A8-%EC%BD%94%EB%93%9C%EB%B6%80%ED%84%B0-%EC%A0%9C%EB%8C%80%EB%A1%9C-%EB%8F%8C%EA%B2%8C-%EB%A7%8C%EB%93%A4%EC%9E%90"><span class="toc-number">1.1.9.2.</span> <span class="toc-text">다중 스레드를 고혀하지 않은 순차 코드부터 제대로 돌게 만들자.</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%EB%8B%A4%EC%A4%91-%EC%8A%A4%EB%A0%88%EB%93%9C%EB%A5%BC-%EC%93%B0%EB%8A%94-%EC%BD%94%EB%93%9C-%EB%B6%80%EB%B6%84%EC%9D%84-%EC%89%BD%EA%B2%8C-%EB%8B%A4%EC%96%91%ED%95%9C-%ED%99%98%EA%B2%BD%EC%97%90-%EB%81%BC%EC%9B%8C-%EB%84%A3%EC%9D%84%EC%88%98-%EC%9E%88%EA%B2%8C-%EC%8A%A4%EB%A0%88%EB%93%9C-%EC%BD%94%EB%93%9C%EB%A5%BC-%EA%B5%AC%ED%98%84%ED%95%98%EB%9D%BC"><span class="toc-number">1.1.9.3.</span> <span class="toc-text">다중 스레드를 쓰는 코드 부분을 쉽게 다양한 환경에 끼워 넣을수 있게 스레드 코드를 구현하라.</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%EB%8B%A4%EC%A4%91-%EC%8A%A4%EB%A0%88%EB%93%9C%EB%A5%BC-%EC%93%B0%EB%8A%94-%EC%BD%94%EB%93%9C-%EB%B6%80%EB%B6%84%EC%9D%84-%EC%83%81%ED%99%A9%EC%97%90-%EB%A7%9E%EA%B2%8C-%EC%A1%B0%EC%A0%95%ED%95%A0%EC%88%98-%EC%9E%88%EA%B2%8C-%EC%9E%91%EC%84%B1%ED%95%98%EB%9D%BC"><span class="toc-number">1.1.9.4.</span> <span class="toc-text">다중 스레드를 쓰는 코드 부분을 상황에 맞게 조정할수 있게 작성하라.</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%ED%94%84%EB%A1%9C%EC%84%B8%EC%84%9C-%EC%88%98%EB%B3%B4%EB%8B%A4-%EB%A7%8E%EC%9D%80-%EC%8A%A4%EB%A0%88%EB%93%9C%EB%A5%BC-%EB%8F%8C%EB%A0%A4%EB%B3%B4%EB%9D%BC"><span class="toc-number">1.1.9.5.</span> <span class="toc-text">프로세서 수보다 많은 스레드를 돌려보라.</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%EB%8B%A4%EB%A5%B8-%ED%94%8C%EB%9E%AB%ED%8F%BC%EC%97%90%EC%84%9C-%EB%8F%8C%EB%A0%A4%EB%B3%B4%EB%9D%BC"><span class="toc-number">1.1.9.6.</span> <span class="toc-text">다른 플랫폼에서 돌려보라.</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%EC%BD%94%EB%93%9C%EC%97%90-%EB%B3%B4%EC%A1%B0-%EC%BD%94%EB%93%9C%EB%A5%BC-%EB%84%A3%EC%96%B4%EC%84%9C-%EB%8F%8C%EB%A0%A4%EB%9D%BC-%EA%B0%95%EC%A0%9C%EB%A1%9C-%EC%8B%A4%ED%8C%A8%EB%A5%BC-%EC%9D%BC%EC%9C%BC%ED%82%A4%EA%B2%8C-%ED%95%B4%EB%B3%B4%EB%9D%BC"><span class="toc-number">1.1.9.7.</span> <span class="toc-text">코드에 보조 코드를 넣어서 돌려라. 강제로 실패를 일으키게 해보라.</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#%EC%A7%81%EC%A0%91-%EA%B5%AC%ED%98%84%ED%95%98%EA%B8%B0"><span class="toc-number">1.1.9.7.1.</span> <span class="toc-text">직접 구현하기</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#%EC%9E%90%EB%8F%99%ED%99%94"><span class="toc-number">1.1.9.7.2.</span> <span class="toc-text">자동화</span></a></li></ol></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EA%B2%B0%EB%A1%A0"><span class="toc-number">1.1.10.</span> <span class="toc-text">결론</span></a></li></ol></li></ol></li></ol><li class="toc-item toc-level-1"><a class="toc-link" href="#%EC%B0%B8%EC%A1%B0"><span class="toc-number"></span> <span class="toc-text">참조</span></a></li></div></div><div class="author-info hide"><div class="author-info__avatar text-center"><img src="https://avatars0.githubusercontent.com/u/4936005?s=400&amp;u=a679b941fe377418e7e4efcf916c6a636d7178ee&amp;v=4"></div><div class="author-info__name text-center">sejoung</div><div class="author-info__description text-center">잘정리하자</div><div class="follow-button"><a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/sejoung">Follow Me</a></div><hr><div class="author-info-articles"><a class="author-info-articles__archives article-meta" href="../../../archives"><span class="pull-left">Articles</span><span class="pull-right">653</span></a><a class="author-info-articles__tags article-meta" href="../../../tags"><span class="pull-left">Tags</span><span class="pull-right">727</span></a><a class="author-info-articles__categories article-meta" href="../../../categories"><span class="pull-left">Categories</span><span class="pull-right">64</span></a></div><hr><div class="author-info-links"><div class="author-info-links__title text-center">Links</div><a class="author-info-links__name text-center" target="_blank" rel="external nofollow noopener noreferrer" href="https://blog.naver.com/sanaes">naverblog</a><a class="author-info-links__name text-center" target="_blank" rel="external nofollow noopener noreferrer" href="https://www.linkedin.com/in/sanaes/">linkedin</a><a class="author-info-links__name text-center" target="_blank" rel="external nofollow noopener noreferrer" href="https://www.slideshare.net/sejoung">slideshare</a></div></div></div><div id="content-outer"><div id="top-container" style="background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Van_Gogh_-_Terrasse_des_Caf%C3%A9s_an_der_Place_du_Forum_in_Arles_am_Abend1.jpeg/1024px-Van_Gogh_-_Terrasse_des_Caf%C3%A9s_an_der_Place_du_Forum_in_Arles_am_Abend1.jpeg)"><div id="page-header"><span class="pull-left"> <a id="site-name" href="../../../index.html">폭간의 기술블로그</a></span><i class="fa fa-bars toggle-menu pull-right" aria-hidden="true"></i><span class="pull-right menus">   <a class="site-page" href="/">Home</a><a class="site-page" href="/archives">Archives</a><a class="site-page" href="/tags">Tags</a><a class="site-page" href="/categories">Categories</a></span><span class="pull-right"><a class="site-page social-icon search"><i class="fa fa-search"></i><span> Search</span></a></span></div><div id="post-info"><div id="post-title">클린코드(Concurrency)</div><div id="post-meta"><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2019-05-20</time><span class="post-meta__separator">|</span><i class="fa fa-inbox post-meta__icon" aria-hidden="true"></i><a class="post-meta__categories" href="../../../categories/books/">books</a><span class="post-meta__separator">|</span><i class="fa fa-comment-o post-meta__icon" aria-hidden="true"></i><a href="#disqus_thread"><span class="disqus-comment-count" data-disqus-identifier="2019/05/2019-05-20-cleancode_Concurrency/"></span></a></div></div></div><div class="layout" id="content-inner"><article id="post"><div class="article-container" id="post-content"><h2 id="클린코드"><a href="#클린코드" class="headerlink" title="클린코드"></a>클린코드</h2><h3 id="Concurrency-동시성"><a href="#Concurrency-동시성" class="headerlink" title="Concurrency(동시성)"></a>Concurrency(동시성)</h3><h4 id="동시성이-필요한-이유"><a href="#동시성이-필요한-이유" class="headerlink" title="동시성이 필요한 이유"></a>동시성이 필요한 이유</h4><p>동시성은 결합을 없애는 전략이다. 즉 무엇과 언제를 분리하는 전략이다.<br>스레드가 하나인 프로그램은 무엇과 언제가 서로 밀접하다. 그래서 호출스택을 살펴보면 프로그램 상태가 곧바로 드러난다.</p>
+<p>단일 스레드를 디버깅하는 프로그래머는 정지점을 정한후 어느 정지점에 걸렸는지 보고 시스템 상태를 파악한다.</p>
+<h5 id="미신과-오해"><a href="#미신과-오해" class="headerlink" title="미신과 오해"></a>미신과 오해</h5><p>일반적인 동시성의 미신과 오해</p>
+<ul>
+<li>동시성은 항상 성능을 높혀준다. - 동시성은 때로 성능을 높여준다.</li>
+<li>동시성을 구현해도 설계는 변하지 않는다. - 일반적으로 무엇과 언제를 분리하면 시스템 구조가 크게 달라진다.</li>
+<li>웹 또는 EJB 컨테이너를 사용하면 동시성을 이해할 필요가 없다 - 실상 컨테이너가 어떻게 동작하는지 알아야 한다.</li>
+</ul>
+<p>동시성과 관련된 타당한 생각</p>
+<ul>
+<li>동시성은 다소 부하를 유발한다. 성능 측면에서 부하가 걸리며, 코드도 더 짜야 한다.</li>
+<li>동시성은 복잡하다. 간단한 문제라도 동시성은 복잡하다.</li>
+<li>일반적으로 동시성 버그는 재현하기 어렵다. 그래서 일회성 문제로 여겨 무쉬하기 쉽다.</li>
+<li>동시성을 구현하려면 흔히 근본적인 설계 전략은 재고 해야 한다.</li>
+</ul>
+<h4 id="난관"><a href="#난관" class="headerlink" title="난관"></a>난관</h4><p>바이트 코드를 처리하는 방식과 자바 메모리 모델이 원라로 간주하는 최소 단위를 알아야 한다.</p>
+<h4 id="동시성-방어-원칙"><a href="#동시성-방어-원칙" class="headerlink" title="동시성 방어 원칙"></a>동시성 방어 원칙</h4><h5 id="단일-책임원칙"><a href="#단일-책임원칙" class="headerlink" title="단일 책임원칙"></a>단일 책임원칙</h5><p>주어진 메소드&#x2F;클래스&#x2F;컨포넌트를 변경할 이유가 하나여야 한다는 원칙</p>
+<p>동시성을 구현할 때는 다음 몇가지를 고려한다.</p>
+<ul>
+<li>동시성 코드는 독자적인 개발, 변경, 조율 주기가 있다.</li>
+<li>동시성 코드에는 독자적인 난관이 있다.</li>
+<li>잘못 구현한 동시성 코드는 별의 별 방식으로 실패한다.</li>
+</ul>
+<p>권장사항: 동시성 코드는 다른 코드와 분리하라.</p>
+<h5 id="추론-자료범위를-제한하라"><a href="#추론-자료범위를-제한하라" class="headerlink" title="추론: 자료범위를 제한하라."></a>추론: 자료범위를 제한하라.</h5><p>코드내 임계영역 synchronized 키워드로 보호하라</p>
+<p>임계영역의 수가 많으면</p>
+<ul>
+<li>보호할 임계영역을 빼먹는다.</li>
+<li>DRY 위반을 확인하느라 똑같은 노력과 수고를 반복한다.</li>
+<li>안 그래도 찾아내기 어려운 버그가 더욱 찾기 어려워 진다.</li>
+</ul>
+<p>권장사항 : 자료를 캡슐화 하라. 공유자료를 최대한 줄여라.</p>
+<h5 id="추론-자료-사본을-사용하라"><a href="#추론-자료-사본을-사용하라" class="headerlink" title="추론: 자료 사본을 사용하라"></a>추론: 자료 사본을 사용하라</h5><p>공유 자료를 줄이려면 처음 부터 공유하지 않는 방법이 제일 낫다.</p>
+<p>어떤 경우에는 객체를 복사해 읽기 전용으로 사용하는 방법이 가능하다.</p>
+<h5 id="추론-스레드는-가능한-독립적으로-구현하라"><a href="#추론-스레드는-가능한-독립적으로-구현하라" class="headerlink" title="추론: 스레드는 가능한 독립적으로 구현하라"></a>추론: 스레드는 가능한 독립적으로 구현하라</h5><p>자신만의 세상에 존재하는 스레드를 구현한다. 즉 다른 스레드와 자료를 공유하지 않는다.</p>
+<p>권장사항 : 독립적인 스레드로, 가능하면 다른 프로세서로 돌려도 괜찮도록 자료를 독집적인 단위로 분활하라.</p>
+<h4 id="라이브러리를-이해하라"><a href="#라이브러리를-이해하라" class="headerlink" title="라이브러리를 이해하라."></a>라이브러리를 이해하라.</h4><p>자바 5는 동시성 측면에서 이전 버전보다 많이 나아졌다.</p>
+<ul>
+<li>스레드 환경에 안전합 집합 컬렉션을 사용한다.</li>
+<li>서로 무관한 작업을 수행할때는 실행자 프레임워크를 사용한다.</li>
+<li>가능하다면 스레드가 차단되지 않는 방법을 사용한다.</li>
+<li>일부 클래스 라이브러리는 스레드에 안전하지 못하다.</li>
+</ul>
+<h5 id="스레드-환경에-안전한-집합-컬렉션"><a href="#스레드-환경에-안전한-집합-컬렉션" class="headerlink" title="스레드 환경에 안전한 집합 컬렉션"></a>스레드 환경에 안전한 집합 컬렉션</h5><p>ConcurrentHashMap는 거의 모든 상황에서 HashMap 보다 성능이 좋다.</p>
+<p>권장사항 : 언어가 제공하는 클래스를 검토하라.</p>
+<h4 id="실행-모델을-이해하라"><a href="#실행-모델을-이해하라" class="headerlink" title="실행 모델을 이해하라."></a>실행 모델을 이해하라.</h4><ul>
+<li>한정된 자원(Bound Resource) - 다중 스레드 환경에서 사용하는 자원으로 크기나 숫자가 제한적이다.(데이터 베이스 연결, 길이가 일정한 읽기&#x2F;쓰기 버퍼 등)</li>
+<li>상호 배재(Mutual Exclusion) - 한 번에 한 스레드만 공유 자료나 공유 자원을 활용할수 있는 경우를 가르킨다.</li>
+<li>기아(Starvation) - 한 스레드나 여러 스레드가 굉장히 오랫동안 혹은 영원히 자원을 기다린다.(항상 짧은 스레드를 우선순위를 높히면 긴스레드가 기아상태에 빠진다. )</li>
+<li>데드락(Deadlock) - 여러 스레드가 서로가 끝나길 기다린다.</li>
+<li>라이브락(Livelock) - 락을 거는 단계에서 각 스레드가 서로를 방해한다.</li>
+</ul>
+<h5 id="생산자-소비자-Producer-Consumer"><a href="#생산자-소비자-Producer-Consumer" class="headerlink" title="생산자 - 소비자 (Producer-Consumer)"></a>생산자 - 소비자 (Producer-Consumer)</h5><p>생산자 스레드와 소비자 스레드가 사용하는 대기열은 한정된 자원이다.<br>잘못하면 생산자 스레드와 소비자 스레드가 둘다 진행 가능함에도 불구하고 동시에 서로에게 신호를 기다를 가능성이 있다.</p>
+<h5 id="읽기-쓰기-Readers-Writers"><a href="#읽기-쓰기-Readers-Writers" class="headerlink" title="읽기-쓰기 Readers-Writers"></a>읽기-쓰기 Readers-Writers</h5><p>읽기 스레드를 위한 주된 정보원으로 공유 자원을 사용하지만, 쓰기 스레드가 이 공유 자원을 이따금 갱신한다고 하자<br>이런 경우 처리율 뮨제의 핵심이다.</p>
+<p>양쪽이 균형을 잡으면서 동시 갱신을 피하는 해법이 필요하다.</p>
+<h5 id="식사하는-철학자들"><a href="#식사하는-철학자들" class="headerlink" title="식사하는 철학자들"></a>식사하는 철학자들</h5><p>둥근 식탁에 철학자 무리가 있다 각 철학자 왼쪽에는 포크가 놓였다 양손에 포크를 쥐지 않으면 먹지를 못한다.</p>
+<p>각 알고리즘을 공부하고 해법을 구현해보라</p>
+<h4 id="동기화하는-메소드-사이에-의존성을-이해-하라"><a href="#동기화하는-메소드-사이에-의존성을-이해-하라" class="headerlink" title="동기화하는 메소드 사이에 의존성을 이해 하라"></a>동기화하는 메소드 사이에 의존성을 이해 하라</h4><p>동기화 하는 메소드 사이에 의존성이 존재하면 동시성 코드에 찾아내기 어려운 버그가 생긴다.</p>
+<p>공유 개체 하나에는 메소드 하나만 사용하자</p>
+<p>공유 개체 하나에 여러 메소드가 필요한 상황도 생긴다. 그럴 때는 다음 세 가지 방법을 고려한다.</p>
+<ul>
+<li>클라이언트에서 잠금 - 클라이언트에서 첫번째 메소드를 호출하기 전에 서버를 잠든다. 마지막 메소드 호출할 때까지 잠금을 유지한다.</li>
+<li>서버에서 잠금 - 서버에다 서버를 잠그고 모든 메소드를 호출한후 잠금을 해제하는 메소드를 구현한다. 클라이언트는 새메소드를 호출한다.</li>
+<li>연결 서버 - 잠금을 수행하는 중간 단계를 생성한다. 서버에서 잠금 방식과 유사하지만 원래 서버를 변경하지 않는다.</li>
+</ul>
+<h4 id="동기화하는-부분을-작게-만들어라"><a href="#동기화하는-부분을-작게-만들어라" class="headerlink" title="동기화하는 부분을 작게 만들어라"></a>동기화하는 부분을 작게 만들어라</h4><p>자바에서 synchronized 키워드를 사용하면 락을 설정한다. 같은 락으로 감싼 모든 코드 영역은 한번에 스레드 하나만 실행 가능하다.<br>락은 스레드를 지연시키고 부하를 일으킨다. 여기저기 synchronized문을 남발하는 코드는 바람직하지 못하다.<br>동시에 임계영역은 반드시 보호 해야 한다.</p>
+<p>임계영역 개수를 최대한 줄여야 한다. 임계영역 개수를 줄인다고 거대한 임계영역 하나로 구현하는 프로그래머가 있다.<br>필요이상 임계영역 크기를 키우면 스레드간에 경쟁이 늘어나고 프로그램 성능이 떨어진다.</p>
+<p>동기화 하는 부분을 최대한 작게 만들자.</p>
+<h4 id="올바른-종료-코드는-구현하기-어렵다"><a href="#올바른-종료-코드는-구현하기-어렵다" class="headerlink" title="올바른 종료 코드는 구현하기 어렵다."></a>올바른 종료 코드는 구현하기 어렵다.</h4><p>깔끔하게 종료하는 다중 스레드 코드를 짜야 한다면 시간을 들여서 올바로 구현하길 바란다.</p>
+<p>권장 사항 : 종료 코드를 개발 초기에 생각하고 동작하게 구현하라. 생각 보다 오래 걸린다. 생각보다 어려우므로 이미 나온 알고리즘을 검토하라.</p>
+<h4 id="스레드-코드-테스트-하기"><a href="#스레드-코드-테스트-하기" class="headerlink" title="스레드 코드 테스트 하기"></a>스레드 코드 테스트 하기</h4><p>코드가 올바르다고 증명하기는 현실적으로 불가능하다. 테스트가 정확성을 보장하지 않는다.</p>
+<p>권장 사항 : 문제를 노출하는 테스트 케이스를 작성하라. 테스트가 실패하면 원인을 추적하라. 다시 돌렸더니 통과하더라는 이유로 그냥 넘어가면 절대 안된다.</p>
+<p>구체적인 지침</p>
+<ul>
+<li>말이 안되는 실패는 잠정적인 스레드 문제로 취급하라.</li>
+<li>다중 스레드를 고혀하지 않은 순차 코드부터 제대로 돌게 만들자.</li>
+<li>다중 스레드를 쓰는 코드 부분을 쉽게 다양한 환경에 끼워 넣을수 있게 스레드 코드를 구현하라.</li>
+<li>다중 스레드를 쓰는 코드 부분을 상황에 맞게 조정할수 있게 작성하라.</li>
+<li>프로세서 수보다 많은 스레드를 돌려보라.</li>
+<li>다른 플랫폼에서 돌려보라.</li>
+<li>코드에 보조 코드를 넣어서 돌려라. 강제로 실패를 일으키게 해보라.</li>
+</ul>
+<h5 id="말이-안되는-실패는-잠정적인-스레드-문제로-취급하라"><a href="#말이-안되는-실패는-잠정적인-스레드-문제로-취급하라" class="headerlink" title="말이 안되는 실패는 잠정적인 스레드 문제로 취급하라."></a>말이 안되는 실패는 잠정적인 스레드 문제로 취급하라.</h5><p>시스템 실패를 일회성이라 치부하지 마라.</p>
+<h5 id="다중-스레드를-고혀하지-않은-순차-코드부터-제대로-돌게-만들자"><a href="#다중-스레드를-고혀하지-않은-순차-코드부터-제대로-돌게-만들자" class="headerlink" title="다중 스레드를 고혀하지 않은 순차 코드부터 제대로 돌게 만들자."></a>다중 스레드를 고혀하지 않은 순차 코드부터 제대로 돌게 만들자.</h5><p>스레드 환경 밖에서 생기는 버그와 스레드 환경에서 생기는 버그를 동시에 디버깅 하지마라.<br>먼저 스레드 환경 밖에서 코드를 올바로 돌려라.</p>
+<h5 id="다중-스레드를-쓰는-코드-부분을-쉽게-다양한-환경에-끼워-넣을수-있게-스레드-코드를-구현하라"><a href="#다중-스레드를-쓰는-코드-부분을-쉽게-다양한-환경에-끼워-넣을수-있게-스레드-코드를-구현하라" class="headerlink" title="다중 스레드를 쓰는 코드 부분을 쉽게 다양한 환경에 끼워 넣을수 있게 스레드 코드를 구현하라."></a>다중 스레드를 쓰는 코드 부분을 쉽게 다양한 환경에 끼워 넣을수 있게 스레드 코드를 구현하라.</h5><ul>
+<li>한 스레드로 실행하거나, 여러 스레드로 실행하거나, 실행중 스레드 수를 바꿔본다.</li>
+<li>스레드 코드를 실제 환경이나 테스트 환경에서 돌려본다.</li>
+<li>테스트 코드를 빨리, 천천히, 다양한 속력으로 돌려본다.</li>
+<li>반복해서 테스트가 가능하도록 테스트 케이스를 작성한다.</li>
+</ul>
+<h5 id="다중-스레드를-쓰는-코드-부분을-상황에-맞게-조정할수-있게-작성하라"><a href="#다중-스레드를-쓰는-코드-부분을-상황에-맞게-조정할수-있게-작성하라" class="headerlink" title="다중 스레드를 쓰는 코드 부분을 상황에 맞게 조정할수 있게 작성하라."></a>다중 스레드를 쓰는 코드 부분을 상황에 맞게 조정할수 있게 작성하라.</h5><p>적절한 스레드 캐수를 파악하려면 상당한 시행착오가 필요하다. 스레드 개수를 변경하기 쉽도록 코드를 구현한다.</p>
+<h5 id="프로세서-수보다-많은-스레드를-돌려보라"><a href="#프로세서-수보다-많은-스레드를-돌려보라" class="headerlink" title="프로세서 수보다 많은 스레드를 돌려보라."></a>프로세서 수보다 많은 스레드를 돌려보라.</h5><p>시스템이 스레드를 스와핑 할 때도 문제가 발생한다. 스와핑을 일으킬려면 프로세서 수보다 많은 스레드를 돌린다.</p>
+<h5 id="다른-플랫폼에서-돌려보라"><a href="#다른-플랫폼에서-돌려보라" class="headerlink" title="다른 플랫폼에서 돌려보라."></a>다른 플랫폼에서 돌려보라.</h5><p>OS X이랑 원도우랑 돌렸더니 실패횟수가 틀렸다 잘못된 코드였지만 개발 플랫폼이 과 운영 목표 플랫폼 전부를 테스트 해야 한다.</p>
+<h5 id="코드에-보조-코드를-넣어서-돌려라-강제로-실패를-일으키게-해보라"><a href="#코드에-보조-코드를-넣어서-돌려라-강제로-실패를-일으키게-해보라" class="headerlink" title="코드에 보조 코드를 넣어서 돌려라. 강제로 실패를 일으키게 해보라."></a>코드에 보조 코드를 넣어서 돌려라. 강제로 실패를 일으키게 해보라.</h5><p>간단한 테스트로는 버그가 드러나지 않는다. 스레드 버그가 산발적이고 우발적이고 재현이 어려운 이유는 수천가지 경로 중에 아주 소수만 실패하기 때문</p>
+<p>Object.wait(), Object.sleep(), Object.yield() 같은 메소드를 추가해서 실행 순서를 바꿔준다.</p>
+<p>코드에 보조 코드를 추가하는 방법은 두가지다.</p>
+<ul>
+<li>직접 구현하기</li>
+<li>자동화</li>
+</ul>
+<h6 id="직접-구현하기"><a href="#직접-구현하기" class="headerlink" title="직접 구현하기"></a>직접 구현하기</h6><p>코드에다 직접 wait(), sleep(), yield(), priority() 함수를 추가한다.</p>
+<p>이렇게 추가하면 실행 경로가 바뀐다. 만약 추가해서 실패하면 추가해서 실패가 아니라 원래 잘못된 코드이다.</p>
+<p>이 방법의 문제점</p>
+<ul>
+<li>보조 코드를 삽입할 적정 위치를 직접 찾아야 한다.</li>
+<li>어떤 함수를 어디서 호출 해야 적당한지 어떻게 알까?</li>
+<li>배포 환경에 보조 코드를 그대로 남겨두면 프로그램 성능이 떨어진다.</li>
+<li>무작위적이다.</li>
+</ul>
+<h6 id="자동화"><a href="#자동화" class="headerlink" title="자동화"></a>자동화</h6><p>보조 코드를 자동으로 추가하려면 AOP, CGLIB, ASM등과 같은 도구를 사용한다.</p>
+<p>이렇게 하면 코드에 수정 없이 원하는 위치에 값을 삽입 가능</p>
+<p>흔들기 기법을 사용하여 오류를 찾아 내라.</p>
+<h4 id="결론"><a href="#결론" class="headerlink" title="결론"></a>결론</h4><p>무엇보다 먼저 SRP를 준수한다. 스레드 코드와 스레드가 아닌 코드롤 분리한다. 스레드 코드를 테스트 할때 전적으로 스레드만 테스트 한다.</p>
+<h1 id="참조"><a href="#참조" class="headerlink" title="참조"></a>참조</h1><hr>
+</div></article><div class="post-meta__tag-list"><a class="post-meta__tags" href="../../../tags/%ED%81%B4%EB%A6%B0%EC%BD%94%EB%93%9C/">클린코드</a><a class="post-meta__tags" href="../../../tags/cleancode/">cleancode</a></div><nav id="pagination"><div class="prev-post pull-left"><a href="../2019-05-22-mssql_BEGIN_TRANSACTION/"><i class="fa fa-chevron-left">  </i><span>mssql 명시적 트랜잭션 사용</span></a></div><div class="next-post pull-right"><a href="../2019-05-17-spring-framework-Dependencies/"><span>spring framework The IoC Container</span><i class="fa fa-chevron-right"></i></a></div></nav><div id="disqus_thread"></div><script>var unused = null;
+var disqus_config = function () {
+  this.page.url = 'https://sejoung.github.io/2019/05/2019-05-20-cleancode_Concurrency/';
+  this.page.identifier = '2019/05/2019-05-20-cleancode_Concurrency/';
+  this.page.title = '클린코드(Concurrency)';
+}
+var d = document, s = d.createElement('script');
+s.src = "https://" + 'kimsejoung' +".disqus.com/embed.js";
+s.setAttribute('data-timestamp', '' + +new Date());
+(d.head || d.body).appendChild(s);</script><script id="dsq-count-scr" src="https://kimsejoung.disqus.com/count.js" async></script></div></div><footer class="footer-bg" style="background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Van_Gogh_-_Terrasse_des_Caf%C3%A9s_an_der_Place_du_Forum_in_Arles_am_Abend1.jpeg/1024px-Van_Gogh_-_Terrasse_des_Caf%C3%A9s_an_der_Place_du_Forum_in_Arles_am_Abend1.jpeg)"><div class="layout" id="footer"><div class="copyright">&copy;2017 - 2022 By sejoung</div><div class="framework-info"><span>Driven - </span><a target="_blank" rel="external nofollow noopener noreferrer" href="http://hexo.io"><span>Hexo</span></a><span class="footer-separator">|</span><span>Theme - </span><a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/Molunerfinn/hexo-theme-melody"><span>Melody</span></a></div><div class="busuanzi"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><span id="busuanzi_container_page_pv"><i class="fa fa-file-o"></i><span id="busuanzi_value_page_pv"></span><span></span></span></div></div></footer><i class="fa fa-arrow-up" id="go-up" aria-hidden="true"></i><script src="../../../js/third-party/anime.min.js"></script><script src="../../../js/third-party/jquery.min.js"></script><script src="../../../js/third-party/jquery.fancybox.min.js"></script><script src="../../../js/third-party/velocity.min.js"></script><script src="../../../js/third-party/velocity.ui.min.js"></script><script src="../../../js/utils.js?version=1.7.0"></script><script src="../../../js/fancybox.js?version=1.7.0"></script><script src="../../../js/sidebar.js?version=1.7.0"></script><script src="../../../js/copy.js?version=1.7.0"></script><script src="../../../js/fireworks.js?version=1.7.0"></script><script src="../../../js/transition.js?version=1.7.0"></script><script src="../../../js/scroll.js?version=1.7.0"></script><script src="../../../js/head.js?version=1.7.0"></script><script src="../../../js/search/local-search.js"></script><script>if(/Android|webOS|iPhone|iPod|iPad|BlackBerry/i.test(navigator.userAgent)) {
+  $('#nav').addClass('is-mobile')
+  $('footer').addClass('is-mobile')
+  $('#top-container').addClass('is-mobile')
+}</script><div class="search-dialog" id="local-search"><div class="search-dialog__title" id="local-search-title">Local search</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="Search for Posts"></div></div></div><hr><div id="local-search-results"><div id="local-hits"></div><div id="local-stats"><div class="local-search-stats__hr" id="hr"><span>Powered by</span> <a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/wzpan/hexo-generator-search" style="color:#49B1F5;">hexo-generator-search</a></div></div></div><span class="search-close-button"><i class="fa fa-times"></i></span></div><div class="search-mask"></div></body></html>

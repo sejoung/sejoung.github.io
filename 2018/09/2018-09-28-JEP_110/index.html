@@ -1,0 +1,127 @@
+<!DOCTYPE html><html lang="lang"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta name="description" content="JEP 110: HTTP Client (Incubator)"><meta name="keywords" content="jdk 11,JEP"><meta name="author" content="sejoung"><meta name="copyright" content="sejoung"><title>JEP 110: HTTP Client (Incubator) | 폭간의 기술블로그</title><link rel="shortcut icon" href="../../../my-favicon.ico"><link rel="stylesheet" href="../../../css/index.css?version=1.7.0"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css?version=1.7.0"><meta name="format-detection" content="telephone=no"><meta http-equiv="x-dns-prefetch-control" content="on"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="dns-prefetch" href="https://www.google-analytics.com"><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-87353572-1', 'auto');
+ga('send', 'pageview');</script><script async src="https://www.googletagmanager.com/gtag/js?id=G-NVRTGLD8RZ"></script><script>window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-NVRTGLD8RZ');</script><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"We didn't find any results for the search: ${query}"}},
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  }
+} </script><meta name="generator" content="Hexo 5.4.2"></head><body><i class="fa fa-arrow-right" id="toggle-sidebar" aria-hidden="true"></i><div id="sidebar" data-display="true"><div class="toggle-sidebar-info text-center"><span data-toggle="Toggle article">Toggle site</span><hr></div><div class="sidebar-toc"><div class="sidebar-toc__title">Catalog</div><div class="sidebar-toc__progress"><span class="progress-notice">You've read</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar"></div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#JEP-110-HTTP-Client-Incubator"><span class="toc-number">1.</span> <span class="toc-text">JEP 110: HTTP Client (Incubator)</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Summary"><span class="toc-number">1.1.</span> <span class="toc-text">Summary</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Motivation"><span class="toc-number">1.2.</span> <span class="toc-text">Motivation</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Goals"><span class="toc-number">1.3.</span> <span class="toc-text">Goals</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Non-Goals"><span class="toc-number">1.4.</span> <span class="toc-text">Non-Goals</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Description"><span class="toc-number">1.5.</span> <span class="toc-text">Description</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Alternatives"><span class="toc-number">1.6.</span> <span class="toc-text">Alternatives</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Testing"><span class="toc-number">1.7.</span> <span class="toc-text">Testing</span></a></li></ol></li></ol><li class="toc-item toc-level-1"><a class="toc-link" href="#%EC%B0%B8%EC%A1%B0"><span class="toc-number"></span> <span class="toc-text">참조</span></a></li></div></div><div class="author-info hide"><div class="author-info__avatar text-center"><img src="https://avatars0.githubusercontent.com/u/4936005?s=400&amp;u=a679b941fe377418e7e4efcf916c6a636d7178ee&amp;v=4"></div><div class="author-info__name text-center">sejoung</div><div class="author-info__description text-center">잘정리하자</div><div class="follow-button"><a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/sejoung">Follow Me</a></div><hr><div class="author-info-articles"><a class="author-info-articles__archives article-meta" href="../../../archives"><span class="pull-left">Articles</span><span class="pull-right">653</span></a><a class="author-info-articles__tags article-meta" href="../../../tags"><span class="pull-left">Tags</span><span class="pull-right">727</span></a><a class="author-info-articles__categories article-meta" href="../../../categories"><span class="pull-left">Categories</span><span class="pull-right">64</span></a></div><hr><div class="author-info-links"><div class="author-info-links__title text-center">Links</div><a class="author-info-links__name text-center" target="_blank" rel="external nofollow noopener noreferrer" href="https://blog.naver.com/sanaes">naverblog</a><a class="author-info-links__name text-center" target="_blank" rel="external nofollow noopener noreferrer" href="https://www.linkedin.com/in/sanaes/">linkedin</a><a class="author-info-links__name text-center" target="_blank" rel="external nofollow noopener noreferrer" href="https://www.slideshare.net/sejoung">slideshare</a></div></div></div><div id="content-outer"><div id="top-container" style="background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Van_Gogh_-_Terrasse_des_Caf%C3%A9s_an_der_Place_du_Forum_in_Arles_am_Abend1.jpeg/1024px-Van_Gogh_-_Terrasse_des_Caf%C3%A9s_an_der_Place_du_Forum_in_Arles_am_Abend1.jpeg)"><div id="page-header"><span class="pull-left"> <a id="site-name" href="../../../index.html">폭간의 기술블로그</a></span><i class="fa fa-bars toggle-menu pull-right" aria-hidden="true"></i><span class="pull-right menus">   <a class="site-page" href="/">Home</a><a class="site-page" href="/archives">Archives</a><a class="site-page" href="/tags">Tags</a><a class="site-page" href="/categories">Categories</a></span><span class="pull-right"><a class="site-page social-icon search"><i class="fa fa-search"></i><span> Search</span></a></span></div><div id="post-info"><div id="post-title">JEP 110: HTTP Client (Incubator)</div><div id="post-meta"><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2018-09-28</time><span class="post-meta__separator">|</span><i class="fa fa-inbox post-meta__icon" aria-hidden="true"></i><a class="post-meta__categories" href="../../../categories/java/">java</a><span class="post-meta__separator">|</span><i class="fa fa-comment-o post-meta__icon" aria-hidden="true"></i><a href="#disqus_thread"><span class="disqus-comment-count" data-disqus-identifier="2018/09/2018-09-28-JEP_110/"></span></a></div></div></div><div class="layout" id="content-inner"><article id="post"><div class="article-container" id="post-content"><h3 id="JEP-110-HTTP-Client-Incubator"><a href="#JEP-110-HTTP-Client-Incubator" class="headerlink" title="JEP 110: HTTP Client (Incubator)"></a>JEP 110: HTTP Client (Incubator)</h3><h4 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h4><p>HTTP &#x2F; 2 및 WebSocket을 구현하는 새 HTTP 클라이언트 API를 정의하고 기존 HttpURLConnectionAPI를 대체 할 수 있습니다 . API는 JEP 11 , JDK 9에 정의 된 바와 같이 인큐베이터 모듈로 제공됩니다. 이는 다음을 의미합니다.</p>
+<ul>
+<li>API와 구현은 Java SE에 포함되지 않습니다.</li>
+<li>API는 jdk.incubtor 네임 스페이스 아래에 있습니다.</li>
+<li>모듈은 컴파일 또는 실행시 기본적으로 해석되지 않습니다.</li>
+</ul>
+<h4 id="Motivation"><a href="#Motivation" class="headerlink" title="Motivation"></a>Motivation</h4><p>기존 HttpURLConnectionAPI 및 그 구현에는 많은 문제점이 있습니다.</p>
+<ul>
+<li>기본 URLConnectionAPI는 지금 소멸 (있는 거의 모두 염두에두고 여러 프로토콜로 설계되었다 ftp, gopher등).</li>
+<li>API는 HTTP &#x2F; 1.1보다 앞서서 너무 추상적입니다.</li>
+<li>많은 문서화되지 않은 행동으로 사용하기가 어렵습니다.</li>
+<li>블로킹 모드에서만 작동합니다 (요청 &#x2F; 응답 당 하나의 스레드).</li>
+<li>유지하기가 매우 어렵습니다.</li>
+</ul>
+<h4 id="Goals"><a href="#Goals" class="headerlink" title="Goals"></a>Goals</h4><ul>
+<li><p>simple blocking mode를 포함하여 일반적인 경우에 사용하기 쉬워야합니다.</p>
+</li>
+<li><p>“headers received”, errors, and “response body received”과 같은 이벤트 알림을 제공해야합니다. 이 알림은 반드시 콜백을 기반으로하지는 않지만 CompletableFuture와 같은 비동기 메커니즘을 사용할 수 있습니다.</p>
+</li>
+<li><p>애플리케이션 요구의 80-90 %를 충족시키는 간단하고 간결한 API입니다. 이것은 아마도 프로토콜의 모든 기능을 노출하지 않는 상대적으로 작은 API 풋 프린트를 의미합니다.</p>
+</li>
+<li><p>HTTP 프로토콜 요청의 모든 관련 측면을 서버에 노출하고 서버의 응답 (헤더, 본문, 상태 코드 등)을 노출해야합니다.</p>
+</li>
+<li><p>표준 및 공통 인증 메커니즘을 지원해야합니다. 초기에는 기본 인증으로 만 제한됩니다.</p>
+</li>
+<li><p>WebSocket 핸드 셰이크를 쉽게 설정할 수 있어야합니다.</p>
+</li>
+<li><p>HTTP &#x2F; 2를 지원해야합니다 . (HTTP &#x2F; 2의 애플리케이션 레벨 의미는 1.1과 거의 동일하지만 와이어 프로토콜은 완전히 다릅니다.)</p>
+<ul>
+<li>1.1에서 2로 업그레이드를 협상 할 수 있어야하며, 그렇지 않으면 처음부터 2를 선택해야합니다.</li>
+<li>서버 푸시 (Server Push)를 지원해야합니다. 즉, 서버가 클라이언트의 명시 적 요청없이 클라이언트에 자원을 푸시하는 기능입니다.</li>
+</ul>
+</li>
+<li><p>기존 네트워킹 API와 일치하는 보안 검사를 수행해야합니다.</p>
+</li>
+<li><p>람다 식과 같은 새로운 언어 기능에 친숙해야합니다.</p>
+</li>
+<li><p>임베디드 시스템 요구 사항에 맞춰야하며 특히 타이머 스레드를 영구적으로 실행하지 않아야합니다.</p>
+</li>
+<li><p>HTTPS &#x2F; TLS를 지원해야합니다.</p>
+</li>
+<li><p>HTTP &#x2F; 1.1의 성능 요구 사항 :</p>
+<ul>
+<li>성능은 기존 HttpURLConnection 구현 과 동등해야합니다.</li>
+<li>성능은 클라이언트 API로 사용될 때 Apache HttpClient 라이브러리 및 Netty 및 Jetty와 동등해야합니다.</li>
+<li>새 API의 메모리 소비 HttpURLConnection는 클라이언트 API로 사용되는 경우 Apache HttpClient 및 Netty 및 Jetty 보다 낮거나 같아야합니다 .</li>
+</ul>
+</li>
+<li><p>HTTP &#x2F; 2의 성능 요구 사항 :</p>
+<ul>
+<li>플랫폼의 제한 사항 (예 : TCP 세그먼트 확인 창)에도 불구하고 성능은 새로운 프로토콜 (예 : 확장 성 및 대기 시간)에서 예상되는 방식으로 HTTP &#x2F; 1.1보다 우수해야합니다.</li>
+<li>성능은 HTTP &#x2F; 2 용 클라이언트 API로 사용될 때 Netty 및 Jetty와 동등해야합니다.</li>
+<li>새 API의 메모리 소비 HttpURLConnection는 클라이언트 API로 사용할 때 Apache HttpClient 및 Netty 및 Jetty를 사용할 때보 다 낮아야 합니다.</li>
+</ul>
+</li>
+<li><p>성능 비교는 비교 가능한 운영 모드의 맥락에서만 가능할 것입니다. 새로운 API는 모든 가능한 유스 케이스를 다루는 것보다 단순하고 사용하기 쉬우므로,</p>
+</li>
+<li><p>이 작업은 JDK 9를 대상으로합니다. 일부 코드는 Java EE가 Servlet 4.0 API에서 HTTP &#x2F; 2를 구현할 때 다시 사용할 수 있으므로 JDK 8 언어 기능과 가능한 경우 API 만 사용됩니다.</p>
+</li>
+<li><p>JDK 9에서 API를 사용하여 얻은 경험을 활용하면 Java SE에서 JDK 10의 java.net 네임 스페이스 아래에서 API를 표준화 할 수 있습니다.이 경우 JEP 10의 일부로 API 더 이상 인큐베이터 모듈로 존재하지 않습니다.</p>
+</li>
+</ul>
+<h4 id="Non-Goals"><a href="#Non-Goals" class="headerlink" title="Non-Goals"></a>Non-Goals</h4><p>이 API는 결국 HttpURLConnection새 코드 용 API를 대체하기위한 것이지만 새 API를 사용하여 이전 API를 즉시 구현하지는 않습니다. 이것은 미래의 일이 될 수 있습니다.</p>
+<p>JDK 8 용 JEP의 이전 버전에서는 몇 가지 요구 사항이 고려되었지만 가능한 한 간단하게 API를 유지하기 위해 제외되었습니다.</p>
+<ul>
+<li>요청 &#x2F; 응답 필터링,</li>
+<li>플러그 가능한 연결 캐시 및</li>
+<li>일반적인 업그레이드 메커니즘.</li>
+</ul>
+<p>이러한 요구 사항 중 일부 (예 : 연결 캐싱)는 점진적으로 HTTP &#x2F; 2를 채택하면 덜 중요해질 것입니다.</p>
+<h4 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h4><p>HTTP 클라이언트, 요청 및 응답에 대해 별도의 클래스가 정의 된 JDK 9의 프로토 타이핑 작업이 일부 수행되었습니다. 빌더 패턴은 변경 불가능한 엔티티를 변경 불가능한 제품에서 분리하는 데 사용되었습니다. 동기 블로킹 모드는 송수신을 위해 정의되고 java.util.concurrent.CompletableFuture를 기반으로하는 비동기 모드도 정의됩니다.</p>
+<p>이 프로토 타입은 NIO SocketChannels에서 구현되었으며 Selectors 및 외부에서 제공되는 ExecutorServices로 구현 된 비동기 동작을 제공합니다.</p>
+<p>프로토 타입 구현은 독립 실행 형이었습니다. 즉, 기존 스택이 변경되지 않아 호환성을 보장하고 처음부터 모든 기능을 지원해야하는 단계적 접근을 허용했습니다.</p>
+<p>프로토 타입 API에는 다음이 포함됩니다.</p>
+<ul>
+<li>서블릿 및 HTTP 서버 API와 같은 별도의 요청 및 응답;</li>
+<li>다음 이벤트의 비동기 알림 :<ul>
+<li>수신 된 응답 헤더,</li>
+<li>응답 오류,</li>
+<li>접수 된 응답 본문</li>
+<li>서버 푸시 (HTTP &#x2F; 2 전용);</li>
+</ul>
+</li>
+<li>HTTPS, via SSLEngine;</li>
+<li>Proxying;</li>
+<li>Cookies; and Authentication</li>
+</ul>
+<p>추가 작업이 필요한 API 부분은 HTTP &#x2F; 2 다중 응답 (서버 푸시) 및 HTTP &#x2F; 2 구성을 지원하는 것입니다. 프로토 타입 구현은 거의 모든 HTTP &#x2F; 1.1을 지원하지만 아직 HTTP &#x2F; 2는 지원하지 않습니다.</p>
+<p>HTTP &#x2F; 2 proxying은 다음 변경에서 구현됩니다.</p>
+<h4 id="Alternatives"><a href="#Alternatives" class="headerlink" title="Alternatives"></a>Alternatives</h4><p>Jetty 및 Apache HttpClient 와 같은 기존 HTTP 클라이언트 API 및 구현이 많이 존재합니다 . 이 두 가지 모두 패키지와 클래스 수 측면에서 다소 무겁고 람다 식과 같은 새로운 언어 기능을 이용하지 않습니다.</p>
+<h4 id="Testing"><a href="#Testing" class="headerlink" title="Testing"></a>Testing</h4><p>내부 HTTP 서버는 회귀 및 TCK 테스트에 적합한 기반을 제공합니다. 기능 테스트에서도이 기능을 사용할 수 있지만 실제 HTTP 서버를 테스트해야 할 수 있습니다.</p>
+<h1 id="참조"><a href="#참조" class="headerlink" title="참조"></a>참조</h1><hr>
+<ul>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="http://openjdk.java.net/jeps/110">JEP_110</a></li>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="http://openjdk.java.net/groups/net/httpclient/">httpclient</a></li>
+</ul>
+</div></article><div class="post-meta__tag-list"><a class="post-meta__tags" href="../../../tags/jdk-11/">jdk 11</a><a class="post-meta__tags" href="../../../tags/JEP/">JEP</a></div><nav id="pagination"><div class="prev-post pull-left"><a href="../2018-09-28-JEP_321/"><i class="fa fa-chevron-left">  </i><span>JEP 321: HTTP Client (Standard)</span></a></div><div class="next-post pull-right"><a href="../2018-09-27-JEP_181/"><span>JEP 181: Nest-Based Access Control</span><i class="fa fa-chevron-right"></i></a></div></nav><div id="disqus_thread"></div><script>var unused = null;
+var disqus_config = function () {
+  this.page.url = 'https://sejoung.github.io/2018/09/2018-09-28-JEP_110/';
+  this.page.identifier = '2018/09/2018-09-28-JEP_110/';
+  this.page.title = 'JEP 110: HTTP Client (Incubator)';
+}
+var d = document, s = d.createElement('script');
+s.src = "https://" + 'kimsejoung' +".disqus.com/embed.js";
+s.setAttribute('data-timestamp', '' + +new Date());
+(d.head || d.body).appendChild(s);</script><script id="dsq-count-scr" src="https://kimsejoung.disqus.com/count.js" async></script></div></div><footer class="footer-bg" style="background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Van_Gogh_-_Terrasse_des_Caf%C3%A9s_an_der_Place_du_Forum_in_Arles_am_Abend1.jpeg/1024px-Van_Gogh_-_Terrasse_des_Caf%C3%A9s_an_der_Place_du_Forum_in_Arles_am_Abend1.jpeg)"><div class="layout" id="footer"><div class="copyright">&copy;2017 - 2022 By sejoung</div><div class="framework-info"><span>Driven - </span><a target="_blank" rel="external nofollow noopener noreferrer" href="http://hexo.io"><span>Hexo</span></a><span class="footer-separator">|</span><span>Theme - </span><a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/Molunerfinn/hexo-theme-melody"><span>Melody</span></a></div><div class="busuanzi"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><span id="busuanzi_container_page_pv"><i class="fa fa-file-o"></i><span id="busuanzi_value_page_pv"></span><span></span></span></div></div></footer><i class="fa fa-arrow-up" id="go-up" aria-hidden="true"></i><script src="../../../js/third-party/anime.min.js"></script><script src="../../../js/third-party/jquery.min.js"></script><script src="../../../js/third-party/jquery.fancybox.min.js"></script><script src="../../../js/third-party/velocity.min.js"></script><script src="../../../js/third-party/velocity.ui.min.js"></script><script src="../../../js/utils.js?version=1.7.0"></script><script src="../../../js/fancybox.js?version=1.7.0"></script><script src="../../../js/sidebar.js?version=1.7.0"></script><script src="../../../js/copy.js?version=1.7.0"></script><script src="../../../js/fireworks.js?version=1.7.0"></script><script src="../../../js/transition.js?version=1.7.0"></script><script src="../../../js/scroll.js?version=1.7.0"></script><script src="../../../js/head.js?version=1.7.0"></script><script src="../../../js/search/local-search.js"></script><script>if(/Android|webOS|iPhone|iPod|iPad|BlackBerry/i.test(navigator.userAgent)) {
+  $('#nav').addClass('is-mobile')
+  $('footer').addClass('is-mobile')
+  $('#top-container').addClass('is-mobile')
+}</script><div class="search-dialog" id="local-search"><div class="search-dialog__title" id="local-search-title">Local search</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="Search for Posts"></div></div></div><hr><div id="local-search-results"><div id="local-hits"></div><div id="local-stats"><div class="local-search-stats__hr" id="hr"><span>Powered by</span> <a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/wzpan/hexo-generator-search" style="color:#49B1F5;">hexo-generator-search</a></div></div></div><span class="search-close-button"><i class="fa fa-times"></i></span></div><div class="search-mask"></div></body></html>
