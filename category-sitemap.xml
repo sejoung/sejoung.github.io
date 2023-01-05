@@ -10,7 +10,7 @@
 
     <url>
         <loc>https://sejoung.github.io/categories/kotlin/</loc>
-        <lastmod>2023-01-04T12:56:21.047Z</lastmod>
+        <lastmod>2023-01-05T13:15:59.642Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
@@ -247,14 +247,14 @@
     </url>
 
     <url>
-        <loc>https://sejoung.github.io/categories/linux/</loc>
+        <loc>https://sejoung.github.io/categories/msa/</loc>
         <lastmod>2022-10-29T00:43:30.753Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>https://sejoung.github.io/categories/msa/</loc>
+        <loc>https://sejoung.github.io/categories/linux/</loc>
         <lastmod>2022-10-29T00:43:30.753Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
