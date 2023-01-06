@@ -8,8 +8,27 @@
     <atom:link href="/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>잘정리하자</description>
-    <pubDate>Thu, 05 Jan 2023 13:15:59 GMT</pubDate>
+    <pubDate>Fri, 06 Jan 2023 14:05:14 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>이펙티브 코틀린 아이템 42: compareTo의 규약을 지켜라</title>
+      <link>https://sejoung.github.io/2023/01/2023-01-06-effective_kotlin_item_42/</link>
+      <guid>https://sejoung.github.io/2023/01/2023-01-06-effective_kotlin_item_42/</guid>
+      <pubDate>Fri, 06 Jan 2023 13:58:00 GMT</pubDate>
+      <description>
+      
+        
+        
+          &lt;h1 id=&quot;이펙티브-코틀린-클래스설계&quot;&gt;&lt;a href=&quot;#이펙티브-코틀린-클래스설계&quot; class=&quot;headerlink&quot; title=&quot;이펙티브 코틀린(클래스설계)&quot;&gt;&lt;/a&gt;이펙티브 코틀린(클래스설계)&lt;/h1&gt;&lt;h2 id=&quot;아이템-42-compareT
+        
+      
+      </description>
+      
+      <content:encoded><![CDATA[<h1 id="이펙티브-코틀린-클래스설계"><a href="#이펙티브-코틀린-클래스설계" class="headerlink" title="이펙티브 코틀린(클래스설계)"></a>이펙티브 코틀린(클래스설계)</h1><h2 id="아이템-42-compareTo의-규약을-지켜라"><a href="#아이템-42-compareTo의-규약을-지켜라" class="headerlink" title="아이템 42: compareTo의 규약을 지켜라"></a>아이템 42: compareTo의 규약을 지켜라</h2><p>compareTo는 Any에 있는 메소드가 아니라 부등식으로 변환되는 연산자이다.</p><ul><li>비대칭적 동작: a≥b 이고 b≥a 라면 a&#x3D;&#x3D;b이다.</li><li>연속적 동작: a≥b 이고 b≥c라면 a≥c이다.</li><li>코넥스적 동작(connex relation): a≥b 또는 b≥a 중에 적어도 하나는 반드시 항상 true여야 한다. 관계가 없다면 고전적 정렬 알고리즘(퀵, 삽입)을 사용할 수 없고, 위상 정렬만 사용할 수 있다.</li></ul><h3 id="compareTo를-따로-정의해야-할까"><a href="#compareTo를-따로-정의해야-할까" class="headerlink" title="compareTo를 따로 정의해야 할까?"></a>compareTo를 따로 정의해야 할까?</h3><p>일반적으로는 거의 없다. sortedBy(단일 키), sortedWith(여러 키)로 정렬할 수 있기 때문이다.</p><h3 id="compareTo-구현하기"><a href="#compareTo-구현하기" class="headerlink" title="compareTo 구현하기"></a>compareTo 구현하기</h3><ul><li>compareTo를 구현할 때 유용하게 활용할 수 있는 톱레벨 함수가 있음</li><li>두 값을 단순하게 비교하기만 한다면, compareValues 함수를 다움과 같이 활용</li></ul><figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">User</span></span>(</span><br><span class="line">    <span class="keyword">val</span> name: String,</span><br><span class="line">    <span class="keyword">val</span> surname: String</span><br><span class="line">): Comparable&lt;User&gt; &#123;</span><br><span class="line">    <span class="keyword">override</span> <span class="function"><span class="keyword">fun</span> <span class="title">compareTo</span><span class="params">(other: <span class="type">User</span>)</span></span>: <span class="built_in">Int</span> = compareValues(surname, other.surname)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>함수가 다음 값을 리턴해야 한다는 것을 기억</p><ul><li>0: 리시버와 other 가 같온 경우</li><li>양수: 리시버가 other 보다 큰 경우</li><li>음수: 리시버가 other 보다 작은 경우</li></ul><h1 id="참조"><a href="#참조" class="headerlink" title="참조"></a>참조</h1><hr><ul><li><a href="http://www.yes24.com/Product/Goods/106225986">이펙티브 코틀린</a></li></ul>]]></content:encoded>
+      
+      <comments>https://sejoung.github.io/2023/01/2023-01-06-effective_kotlin_item_42/#disqus_thread</comments>
+    </item>
     
     <item>
       <title>이펙티브 코틀린 아이템 41: hashCode의 규약을 지켜라</title>
@@ -371,25 +390,6 @@
       <content:encoded><![CDATA[<h1 id="이펙티브-코틀린-추상화-설계"><a href="#이펙티브-코틀린-추상화-설계" class="headerlink" title="이펙티브 코틀린(추상화 설계)"></a>이펙티브 코틀린(추상화 설계)</h1><h2 id="아이템-28-API-안정성을-확인하라"><a href="#아이템-28-API-안정성을-확인하라" class="headerlink" title="아이템 28: API 안정성을 확인하라"></a>아이템 28: API 안정성을 확인하라</h2><p>시멘틱 버저닝</p><ul><li>MAJOR 버전: 호환되지 않는 수준의 API 변경</li><li>MINOR 버전: 이전 변경과 호환되는 기능을 추가</li><li>PATCH 버전: 간단한 버그 수정</li></ul><p>어노테이션 </p><ul><li>@Experimental: 안정적이지 않음</li><li>@Deprecated: 더 이상 사용되지 않음 (단, 사용자가 적용할 시간을 주자)<ul><li>ReplaceWith: 다른 것으로 대체 되었으면 표시해주는것이 좋음</li></ul></li></ul><h1 id="참조"><a href="#참조" class="headerlink" title="참조"></a>참조</h1><hr><ul><li><a href="http://www.yes24.com/Product/Goods/106225986">이펙티브 코틀린</a></li></ul>]]></content:encoded>
       
       <comments>https://sejoung.github.io/2022/09/2022-09-20-effective_kotlin_item_28/#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>이펙티브 코틀린 아이템 27: 변화로부터 코드를 보호하려면 추상화를 사용하라</title>
-      <link>https://sejoung.github.io/2022/09/2022-09-19-effective_kotlin_item_27/</link>
-      <guid>https://sejoung.github.io/2022/09/2022-09-19-effective_kotlin_item_27/</guid>
-      <pubDate>Mon, 19 Sep 2022 05:00:00 GMT</pubDate>
-      <description>
-      
-        
-        
-          &lt;h1 id=&quot;이펙티브-코틀린-추상화-설계&quot;&gt;&lt;a href=&quot;#이펙티브-코틀린-추상화-설계&quot; class=&quot;headerlink&quot; title=&quot;이펙티브 코틀린(추상화 설계)&quot;&gt;&lt;/a&gt;이펙티브 코틀린(추상화 설계)&lt;/h1&gt;&lt;h2 id=&quot;아이템-27-변화로부
-        
-      
-      </description>
-      
-      <content:encoded><![CDATA[<h1 id="이펙티브-코틀린-추상화-설계"><a href="#이펙티브-코틀린-추상화-설계" class="headerlink" title="이펙티브 코틀린(추상화 설계)"></a>이펙티브 코틀린(추상화 설계)</h1><h2 id="아이템-27-변화로부터-코드를-보호하려면-추상화를-사용하라"><a href="#아이템-27-변화로부터-코드를-보호하려면-추상화를-사용하라" class="headerlink" title="아이템 27: 변화로부터 코드를 보호하려면 추상화를 사용하라"></a>아이템 27: 변화로부터 코드를 보호하려면 추상화를 사용하라</h2><h3 id="상수"><a href="#상수" class="headerlink" title="상수"></a>상수</h3><figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">val</span> MAX_THREADS = <span class="number">10</span></span><br><span class="line"></span><br></pre></td></tr></table></figure><ul><li>이름을 붙일 수 있다.</li><li>나중에 값을 쉽게 변경 가능하다.</li></ul><h3 id="함수"><a href="#함수" class="headerlink" title="함수"></a>함수</h3><p>일반적인 알고리즘을 함수로 추출 하면 코드를 항상 기억해 두지 않아도 된다</p><p>함수의 단점</p><ul><li>함수는 상태를 유지 하지 않는다.</li><li>함수 시그니처를 변경하면 프로그램 전체에 큰영향을 줄수 있다.</li></ul><h3 id="클래스"><a href="#클래스" class="headerlink" title="클래스"></a>클래스</h3><p>클래스가 함수보다 더 강력한 이유</p><ul><li>상태를 가질 수 있고, 많은 함수를 가질 수 있다</li><li>의존성 주입 프레임워크를 이용하면 클래스 생성을 위임할 수도 있다.</li><li>mock 객체를 활용해서 테스트할 수 있다.</li></ul><h3 id="인터페이스"><a href="#인터페이스" class="headerlink" title="인터페이스"></a>인터페이스</h3><ul><li>코틀린은 거의 모든 것을 인터페이스로 표현한다.</li><li>인터페이스 뒤에 객체를 숨겨 구현을 추상화하고 사용자가 추상화된 것에만 의존하도록 만들어서 결합을 줄인다.</li><li>테스트 시 모킹보다 간단하게 인터페이스 페이킹을 사용할 수 있다.</li></ul><h3 id="추상화-문제"><a href="#추상화-문제" class="headerlink" title="추상화 문제"></a>추상화 문제</h3><p>추상화는 자유를 주지만 코드를 이해하고 수정하기 어렵게 만든다.</p><p>너무 많은 것을 숨기면 결과를 이해하는 것 자체가 어려워진다.</p><h1 id="참조"><a href="#참조" class="headerlink" title="참조"></a>참조</h1><hr><ul><li><a href="http://www.yes24.com/Product/Goods/106225986">이펙티브 코틀린</a></li><li><a href="https://github.com/EnterpriseQualityCoding/FizzBuzzEnterpriseEdition">fizzbuzz enterprise edition</a></li></ul>]]></content:encoded>
-      
-      <comments>https://sejoung.github.io/2022/09/2022-09-19-effective_kotlin_item_27/#disqus_thread</comments>
     </item>
     
   </channel>

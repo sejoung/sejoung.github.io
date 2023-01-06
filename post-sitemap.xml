@@ -9,6 +9,14 @@
 
 
     <url>
+        <loc>https://sejoung.github.io/2023/01/2023-01-06-effective_kotlin_item_42/</loc>
+        <lastmod>2023-01-06T14:05:14.725Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://sejoung.github.io/2023/01/2023-01-05-effective_kotlin_item_41/</loc>
         <lastmod>2023-01-05T13:15:59.642Z</lastmod>
         <changefreq>weekly</changefreq>
