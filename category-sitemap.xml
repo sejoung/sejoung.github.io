@@ -9,6 +9,13 @@
 
 
     <url>
+        <loc>https://sejoung.github.io/categories/DB/</loc>
+        <lastmod>2023-01-09T09:11:13.234Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>https://sejoung.github.io/categories/kotlin/</loc>
         <lastmod>2023-01-06T14:05:14.725Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -247,14 +254,14 @@
     </url>
 
     <url>
-        <loc>https://sejoung.github.io/categories/msa/</loc>
+        <loc>https://sejoung.github.io/categories/linux/</loc>
         <lastmod>2022-10-29T00:43:30.753Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>https://sejoung.github.io/categories/linux/</loc>
+        <loc>https://sejoung.github.io/categories/msa/</loc>
         <lastmod>2022-10-29T00:43:30.753Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
@@ -331,14 +338,14 @@
     </url>
 
     <url>
-        <loc>https://sejoung.github.io/categories/%25EB%258F%2599%25ED%2598%25B8%25ED%259A%258C/</loc>
+        <loc>https://sejoung.github.io/categories/server/</loc>
         <lastmod>2022-10-29T00:43:30.733Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>https://sejoung.github.io/categories/server/</loc>
+        <loc>https://sejoung.github.io/categories/%25EB%258F%2599%25ED%2598%25B8%25ED%259A%258C/</loc>
         <lastmod>2022-10-29T00:43:30.733Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
