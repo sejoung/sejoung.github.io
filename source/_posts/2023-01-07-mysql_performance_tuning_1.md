@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "mysql (mariaDB) 성능 튜닝 (performance tuning) 1"
+title: "mysql (mariaDB) 성능 튜닝 (performance tuning)"
 date: 2023-01-07 11:35 +0900
 comments: true
 tags : ["mysql","mariaDB","performance tuning","성능","database parameters","HikariCP","Aurora MySQL"]
@@ -124,3 +124,4 @@ SHOW VARIABLES LIKE '%interactive_timeout%';
 * [Amazon RDS 인스턴스 유형](https://aws.amazon.com/ko/rds/instance-types/)
 * [lock_wait_timeout 의 Default 값이 불러일으키는 문제점](http://small-dbtalk.blogspot.com/2015/01/lockwaittimeout-default_9.html)
 * [Server Status Variables](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html)
+* [MySQL 기본적인 모니터링 방법과 Connection과 Memory 튜닝 방법](http://www.ezmeta.co.kr/page/?p=3025)
