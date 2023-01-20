@@ -13,8 +13,8 @@
     
     <item>
       <title>1장 사용자 수에 따른 규모 확장성</title>
-      <link>https://sejoung.github.io/2023/01/2023-01-19-system_design_interview_42/</link>
-      <guid>https://sejoung.github.io/2023/01/2023-01-19-system_design_interview_42/</guid>
+      <link>https://sejoung.github.io/2023/01/2023-01-19-system_design_interview_1/</link>
+      <guid>https://sejoung.github.io/2023/01/2023-01-19-system_design_interview_1/</guid>
       <pubDate>Thu, 19 Jan 2023 02:49:00 GMT</pubDate>
       <description>
       
@@ -27,7 +27,7 @@
       
       <content:encoded><![CDATA[<h1 id="가상면접으로-배우는-대규모-시스템-설계-기초"><a href="#가상면접으로-배우는-대규모-시스템-설계-기초" class="headerlink" title="가상면접으로 배우는 대규모 시스템 설계 기초"></a>가상면접으로 배우는 대규모 시스템 설계 기초</h1><h2 id="1장-사용자-수에-따른-규모-확장성"><a href="#1장-사용자-수에-따른-규모-확장성" class="headerlink" title="1장 사용자 수에 따른 규모 확장성"></a>1장 사용자 수에 따른 규모 확장성</h2><ul><li><p>단일 서버 -&gt; 데이터베이스 분리 -&gt; 수평적 확장 vs 수직적 확장</p></li><li><p>수직적 확장 : 스케일업</p><ul><li>단점 : 한계가 존재함, 장애 복구에 대한 방안이나 다중화 방안을 제시하지 않는다.</li></ul></li><li><p>수평적 확장 : 스케일 아웃</p></li><li><p>로드벨런서 : L2(Data link 계층을 사용, Mac주소 기반 부하 분산), L3(Network 계층을 사용, IP주소 기반 부하 분산),<br>L4(Transport 계층을 사용, Port 기반 부하 분산), L7(Application 계층을 사용, 요청(URL) 기반 부하 분산)</p></li><li><p>데이터 베이스 다중화 : master - slave 방식</p><ul><li>쓰기는 마스터 읽기는 슬레이브로 부하 분산이되어 성능이 좋아진다.</li><li>분산저장해서 하나가 파괴되어도 다른 DB로 작업 할수 있어서 가용성과 안정성이 높아진다.</li></ul></li><li><p>캐쉬 : 값비싼 연산 결과를 메모리안에 두고 빨리 처리 될수 있도록 하는 저장소이다. </p><ul><li>캐쉬 계층 : 데이터가 잠시 보관 되는 곳으로 DB 보다 훨씬 빠르다.</li><li>읽기 주도형 캐쉬 전략(read-through caching strategy) </li><li>데이터 갱신은 자주 일어나지 않지만 참조가 빈번이 일어날때</li><li>영속적으로 보관할때는 캐시가 좋지는 않다.</li><li>캐시에 보관된 데이터는 어떻게 만료되는지 고려 해야 된다.</li><li>일관성은 어떻게 유지해야 되는지 고려해야 된다.</li><li>장애에는 어떻게 대응 해야 되는지 고려해야 된다</li><li>캐시 메모리의 크기를 고려해야 된다.</li><li>데이터 방출 정책이 무엇인지 고려해야 된다. LRU, LFU, FIFO</li></ul></li><li><p>CDN : 정적 콘텐츠를 전송하는 데 쓰이는 지리적으로 분산된 서버의 네트워크</p><ul><li>비용 문제를 고려하자</li><li>적절한 만료 시한 설정</li><li>CDN 장애에 대한 대처 방안</li></ul></li><li><p>무상태(stateless) 웹 계층</p><ul><li>상태 정보 의존적인 아키텍처(세션 데이터 사용)</li><li>무상태 아키텍처 : 상태 정보는 공유 저장소로 부터 가지고 온다.</li></ul></li><li><p>데이터 센터</p><ul><li>장애가 없는 상황에서 사용자는 지리적으로 가까운 데이터 센터를 이용한다 (geoDNS-routing, geo-routing)</li><li>다중 데이터 센터 아키텍처 <ul><li>트래픽 우회 : 올바른 데이터 센터로 트래픽을 보내는 효과적인 방법</li><li>데이터 동기화 : 데이터 센터마다 별도의 데이터 베이스를 사용하는 상황</li><li>테스트 와 배포 : 여러 위치에 배포하고 테스트 해야 되는 상황</li></ul></li></ul></li><li><p>메시지 큐 : 메시지의 무손실을 보장하는 비동기 통신을 지원하는 컴포넌트</p><ul><li>생산자&#x2F;소비자</li><li>서버간의 느슨한 결합</li></ul></li><li><p>로그, 메트릭 그리고 자동화</p><ul><li>로그 : 에러 로그를 모니터링하는것이 중요하다.</li><li>메트릭 : 메트릭을 잘 수집하면 사업 현황에 관한 유용한 정보를 언을 수도 있고 시스템의 현재 상태를 손쉽게 파악할수 있다.<ul><li>호스트 단위 메트릭</li><li>종합 메트릭</li><li>핵심 비지니스 메트릭</li></ul></li><li>자동화 : 시스템이 크고 복잡해지면 생산성을 높이기 위해 자동화 도구를 사용해야 된다.</li></ul></li><li><p>데이터 베이스의 규모확장</p><ul><li>수직적 확장 : 스케일업, 기존 서버에 더많은 또는 고성능의 자원을 증설하는 방법<ul><li>하드웨어에는 한계가 있다.</li><li>SPOF 로 인한 위험성이 크다</li><li>비용이 많이 든다.</li></ul></li><li>수평적 확장 : 수평적 확장은 샤딩이라고도 부르는데 더 많은 서버를 추가함으로써 성능을 향상시킬수 있다.<ul><li>대규모 데이터베이스를 샤드라고 부르는 작은 단위로 분할하는 기술이다.</li><li>샤딩 전략<ul><li>가장 중요한건 샤딩 키(파티션 키)<ul><li>데이터 재샤딩</li><li>유명인사 문제</li><li>조인과 비정규화</li></ul></li></ul></li></ul></li></ul></li></ul><h1 id="참조"><a href="#참조" class="headerlink" title="참조"></a>참조</h1><hr><ul><li><a href="http://www.yes24.com/Product/Goods/102819435">가상 면접 사례로 배우는 대규모 시스템 설계 기초</a></li><li><a href="https://martinfowler.com/eaaCatalog/">Catalog of Patterns of Enterprise Application Architecture</a></li><li><a href="https://www.youtube.com/watch?v=cflK7FTGPlg">[우아한테크세미나] 200507 우아한CRUD by 정상혁&amp;이명현님</a></li></ul>]]></content:encoded>
       
-      <comments>https://sejoung.github.io/2023/01/2023-01-19-system_design_interview_42/#disqus_thread</comments>
+      <comments>https://sejoung.github.io/2023/01/2023-01-19-system_design_interview_1/#disqus_thread</comments>
     </item>
     
     <item>
