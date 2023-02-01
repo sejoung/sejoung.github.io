@@ -121,3 +121,5 @@ priority : 1.0
 * [RateLimit header fields for HTTP datatracker](https://datatracker.ietf.org/doc/draft-ietf-httpapi-ratelimit-headers/)
 * [The netfilter.org "iptables" project](https://www.netfilter.org/projects/iptables/index.html)
 * [iptables: How to use the limits module](https://thelowedown.wordpress.com/2008/07/03/iptables-how-to-use-the-limits-module/)
+* [자습서-NGINX Ingress Controller 속도 제한 설정](https://nginxstore.com/blog/kubernetes/microservices-march-protect-kubernetes-apis-with-rate-limiting/)
+* [Enabling Rate Limits using Envoy](https://istio.io/latest/docs/tasks/policy-enforcement/rate-limit/)
