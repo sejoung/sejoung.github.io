@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "CHAPTER 3 다른 개발자와 코드 계약"
-date: 2023-01-28 04:20 +0900
+date: 2023-02-05 22:30 +0900
 comments: true
 tags : ["좋은코드 나쁜코드: 프로그래머의 코드 품질 개선법"]
 categories : ["book"]
