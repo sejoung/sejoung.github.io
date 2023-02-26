@@ -8,8 +8,27 @@
     <atom:link href="/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>잘정리하자</description>
-    <pubDate>Fri, 24 Feb 2023 09:13:38 GMT</pubDate>
+    <pubDate>Sun, 26 Feb 2023 15:45:15 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>CHAPTER 6 예측 가능한 코드를 작성하라</title>
+      <link>https://sejoung.github.io/2023/02/2023-02-27-good_code_bad_code_6/</link>
+      <guid>https://sejoung.github.io/2023/02/2023-02-27-good_code_bad_code_6/</guid>
+      <pubDate>Sun, 26 Feb 2023 15:21:00 GMT</pubDate>
+      <description>
+      
+        
+        
+          &lt;h1 id=&quot;좋은코드-나쁜코드-프로그래머의-코드-품질-개선법-PART-II-실전&quot;&gt;&lt;a href=&quot;#좋은코드-나쁜코드-프로그래머의-코드-품질-개선법-PART-II-실전&quot; class=&quot;headerlink&quot; title=&quot;좋은코드 나쁜코드: 프로그래머의 
+        
+      
+      </description>
+      
+      <content:encoded><![CDATA[<h1 id="좋은코드-나쁜코드-프로그래머의-코드-품질-개선법-PART-II-실전"><a href="#좋은코드-나쁜코드-프로그래머의-코드-품질-개선법-PART-II-실전" class="headerlink" title="좋은코드 나쁜코드: 프로그래머의 코드 품질 개선법(PART II 실전)"></a>좋은코드 나쁜코드: 프로그래머의 코드 품질 개선법(PART II 실전)</h1><h2 id="CHAPTER-6-예측-가능한-코드를-작성하라"><a href="#CHAPTER-6-예측-가능한-코드를-작성하라" class="headerlink" title="CHAPTER 6 예측 가능한 코드를 작성하라"></a>CHAPTER 6 예측 가능한 코드를 작성하라</h2><h3 id="6-1-매직값을-반환하지-말아야-한다"><a href="#6-1-매직값을-반환하지-말아야-한다" class="headerlink" title="6.1 매직값을 반환하지 말아야 한다"></a>6.1 매직값을 반환하지 말아야 한다</h3><p>매직값 magic value는 함수의 정상적인 반환 유형에 적합하지만 특별한 의미를 가지고 있다 매직값의 일반적인 예는 값이 ㅇ벗거나 오류가 발생 했음을 나타내기 위해<br>-1을 반환 하는것이다</p><ul><li>매직값은 버그를 유발할 수 있다<ul><li>널, 옵셔널 또는 오류를 반환 하라</li></ul></li><li>때때로 매직값이 우연히 발생할 수 있다<ul><li>매직값은 예측을 벗어나는 결과를 초래 할 수있기 때문에 발생 가능한 상황에 대해 조심해야 된다</li></ul></li></ul><h3 id="6-2-널-객체-패턴을-적절히-사용하라"><a href="#6-2-널-객체-패턴을-적절히-사용하라" class="headerlink" title="6.2 널 객체 패턴을 적절히 사용하라"></a>6.2 널 객체 패턴을 적절히 사용하라</h3><p>값을 얻을수 없을떄 널값이나 빈 옵셔널을 반환 하는 대신 널 객체 패턴을 사용할수 있다.</p><ul><li>빈 컬렉션을 반환하면 코드가 개선될 수 있다.</li><li>빈 문자열을 반환하는 것도 때로는 문제가 될수 있다<ul><li>문자들의 모음으로서의 문자열</li><li>ID로서의 문자열</li></ul></li><li>더 복잡한 널 객체는 예측을 벗어날 수 있다</li><li>널 객체 구현은 예상을 벗어 나는 동작을 유발할 수 있다.</li></ul><h3 id="6-3-예상치-못한-부수-효과를-피하라"><a href="#6-3-예상치-못한-부수-효과를-피하라" class="headerlink" title="6.3 예상치 못한 부수 효과를 피하라"></a>6.3 예상치 못한 부수 효과를 피하라</h3><h4 id="일반적인-부수효과"><a href="#일반적인-부수효과" class="headerlink" title="일반적인 부수효과"></a>일반적인 부수효과</h4><ul><li><p>사용자에게 출력 표시</p></li><li><p>파일이나 데이터베이스에 무언가를 저장</p></li><li><p>다른 시스템을 호출하여 네트워크 트래픽 발생</p></li><li><p>캐시 업데이트 혹은 무효화</p></li><li><p>분명하고 의도적인 부수효과는 괜찮다</p></li><li><p>예기치 않은 부수효과는 문제가 될수 있다</p><ul><li>부수효과는 비용이 많이 들수 있다</li><li>호출한 쪽의 가정을 깨뜨리기</li><li>다중 스레드 코드의 버그</li></ul></li><li><p>부수효과를 피하거나 그 사실을 분명히 해라</p></li></ul><h3 id="6-4-입력-매개변수를-수정하는-것에-주의하라"><a href="#6-4-입력-매개변수를-수정하는-것에-주의하라" class="headerlink" title="6.4 입력 매개변수를 수정하는 것에 주의하라"></a>6.4 입력 매개변수를 수정하는 것에 주의하라</h3><ul><li>입력 매개변수를 수정하면 버그를 초래할 수 있다.<ul><li>변경하기 전에 복사하라</li></ul></li></ul><h3 id="6-5-오해를-일으키는-함수는-작성하지-말라"><a href="#6-5-오해를-일으키는-함수는-작성하지-말라" class="headerlink" title="6.5 오해를 일으키는 함수는 작성하지 말라"></a>6.5 오해를 일으키는 함수는 작성하지 말라</h3><ul><li>중요한 입력이 누락되었을때 아무것도 하지 않으면 놀랄수 있다<ul><li>중요한 입력은 필수 항목으로 만들라</li></ul></li></ul><h3 id="6-6-미래를-대비한-열거형-처리"><a href="#6-6-미래를-대비한-열거형-처리" class="headerlink" title="6.6 미래를 대비한 열거형 처리"></a>6.6 미래를 대비한 열거형 처리</h3><ul><li>미래에 추가될 수 있는 열것값을 암묵적으로 처리하는 것은 문제가 될수 있다.<ul><li>모든 경우를 처리하는 스위치 문을 사용하라<ul><li>기본 케이스를 주의하라<ul><li>기본 케이스에서 예외 발생</li></ul></li></ul></li><li>주의? 다른 프로젝트의 열거형의 의존</li></ul></li></ul><h3 id="6-7-이-모든-것을-테스트로-해결할-수는-없는가"><a href="#6-7-이-모든-것을-테스트로-해결할-수는-없는가" class="headerlink" title="6.7 이 모든 것을 테스트로 해결할 수는 없는가?"></a>6.7 이 모든 것을 테스트로 해결할 수는 없는가?</h3><ul><li>어떤 개발자는 테스트에 부지런 하지 않을수 있다.</li><li>테스트가 항상 실제 상황을 정확하게 시뮬레이션 하는것은 아니다</li><li>어떤 것들은 테스트하기가 매우 어렵다</li></ul><h1 id="참조"><a href="#참조" class="headerlink" title="참조"></a>참조</h1><hr><ul><li><a href="http://www.yes24.com/Product/Goods/109366833">좋은코드 나쁜코드: 프로그래머의 코드 품질 개선법</a></li></ul>]]></content:encoded>
+      
+      <comments>https://sejoung.github.io/2023/02/2023-02-27-good_code_bad_code_6/#disqus_thread</comments>
+    </item>
     
     <item>
       <title>argocd 사용자 추가</title>
@@ -370,25 +389,6 @@
       <content:encoded><![CDATA[<h1 id="가상면접으로-배우는-대규모-시스템-설계-기초"><a href="#가상면접으로-배우는-대규모-시스템-설계-기초" class="headerlink" title="가상면접으로 배우는 대규모 시스템 설계 기초"></a>가상면접으로 배우는 대규모 시스템 설계 기초</h1><h2 id="3장-시스템-설계-면접-공략법"><a href="#3장-시스템-설계-면접-공략법" class="headerlink" title="3장 시스템 설계 면접 공략법"></a>3장 시스템 설계 면접 공략법</h2><h3 id="효과적-면접을-위한-4단계-접근법"><a href="#효과적-면접을-위한-4단계-접근법" class="headerlink" title="효과적 면접을 위한 4단계 접근법"></a>효과적 면접을 위한 4단계 접근법</h3><ul><li>문제 이해 및 설계 범위 확정<ul><li>깊이 생각하고 질문하여 요구사항과 가정들을 분명히 하라<ul><li>구체적으로 어떤 기능들을 만들어야 하나?</li><li>제품 사용자 수는 얼마나 되나?</li><li>회사의 규모는 얼마나 빨리 커지리라 예상되나?</li><li>회사가 주로 사용하는 기술 스택은 무엇인가?</li><li>설계를 단순화 하기위해 활용할수 있는 기존 서비스로는 어떤것이 있나?</li></ul></li></ul></li><li>개략적인 설계안 제시 및 동의 구하기<ul><li>설계안에 대한 최초 청사진을 제시하고 의견을 구하라</li><li>화이트보드나 종이에 핵심 컴포넌트를 포함하는 다이어그램을 그려라</li><li>시스템 규모에 관계된 제약사항을 만족하는지 개략적으로 계산해 보어라 계산과정을 소리내어 설명하라</li></ul></li><li>상세 설계<ul><li>시스템에서 전반적으로 달성해야할 목표와 기능확인</li><li>전체 설계의 개략적 청사진 마련</li><li>해당 청사진에 대한 면접관의 의견청휘</li><li>상세 설계에서 집중해야 할 영역들 확인</li></ul></li><li>마무리<ul><li>시스템 병목구간 혹은 좀더 개선가능한 지점을 찾아내라</li><li>만든 설계를 한번 다시 요약해주는 것도 도움이 될 수 있다.</li><li>오류가 발생하면 무슨 일이 생기는지 따져보면 흥미롭다</li><li>운영이슈도 논의할 가치가 충분하다.</li><li>미래에 닥칠 규모 확장 요구에 어떻게 대처할 것인지도 흥미로운 주제다</li><li>필요하지만 다루지 못했던 세부적 개선사항들을 제안 할수 있다.</li></ul></li></ul><h1 id="참조"><a href="#참조" class="headerlink" title="참조"></a>참조</h1><hr><ul><li><a href="http://www.yes24.com/Product/Goods/102819435">가상 면접 사례로 배우는 대규모 시스템 설계 기초</a></li></ul>]]></content:encoded>
       
       <comments>https://sejoung.github.io/2023/01/2023-01-20-system_design_interview_3/#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>2장 개략적인 규모 추정</title>
-      <link>https://sejoung.github.io/2023/01/2023-01-20-system_design_interview_2/</link>
-      <guid>https://sejoung.github.io/2023/01/2023-01-20-system_design_interview_2/</guid>
-      <pubDate>Fri, 20 Jan 2023 06:22:00 GMT</pubDate>
-      <description>
-      
-        
-        
-          &lt;h1 id=&quot;가상면접으로-배우는-대규모-시스템-설계-기초&quot;&gt;&lt;a href=&quot;#가상면접으로-배우는-대규모-시스템-설계-기초&quot; class=&quot;headerlink&quot; title=&quot;가상면접으로 배우는 대규모 시스템 설계 기초&quot;&gt;&lt;/a&gt;가상면접으로 배우는 대규모
-        
-      
-      </description>
-      
-      <content:encoded><![CDATA[<h1 id="가상면접으로-배우는-대규모-시스템-설계-기초"><a href="#가상면접으로-배우는-대규모-시스템-설계-기초" class="headerlink" title="가상면접으로 배우는 대규모 시스템 설계 기초"></a>가상면접으로 배우는 대규모 시스템 설계 기초</h1><h2 id="2장-개략적인-규모-추정"><a href="#2장-개략적인-규모-추정" class="headerlink" title="2장 개략적인 규모 추정"></a>2장 개략적인 규모 추정</h2><ul><li><p>2의 제곱수 : 데이터 볼륨의 단위 1바이트, 1킬로바이트, 1메가바이트…</p></li><li><p>응답 지연값 : 구글의 제프 딘이 응답지연값을 공개한것이 있다.</p><ul><li>메모리는 빠르지만 디스크는 아직도 느리다</li><li>디스크 탐색(seek)는 가능한 피하라</li><li>단순한 압축 알고리즘은 빠르다.</li><li>데이터를 인터넷으로 전송하기 전에 가능하면 압축하라</li><li>데이터 센터는 보통 여러 지역에 분산되어 있고 센터들 간에 데이터를 주고 받는데 시간이 걸린다</li></ul></li><li><p>가용성에 관계된 수치들</p><ul><li>SLA</li><li>QPS</li></ul></li></ul><h1 id="참조"><a href="#참조" class="headerlink" title="참조"></a>참조</h1><hr><ul><li><a href="http://www.yes24.com/Product/Goods/102819435">가상 면접 사례로 배우는 대규모 시스템 설계 기초</a></li></ul>]]></content:encoded>
-      
-      <comments>https://sejoung.github.io/2023/01/2023-01-20-system_design_interview_2/#disqus_thread</comments>
     </item>
     
   </channel>

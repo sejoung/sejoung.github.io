@@ -9,6 +9,14 @@
 
 
     <url>
+        <loc>https://sejoung.github.io/2023/02/2023-02-27-good_code_bad_code_6/</loc>
+        <lastmod>2023-02-26T15:45:15.705Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://sejoung.github.io/2023/02/2023-02-24-argocd_user_add/</loc>
         <lastmod>2023-02-24T09:13:38.189Z</lastmod>
         <changefreq>weekly</changefreq>

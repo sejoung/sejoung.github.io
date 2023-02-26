@@ -3,6 +3,13 @@
 
 
     <url>
+        <loc>https://sejoung.github.io/tags/%EC%A2%8B%EC%9D%80%EC%BD%94%EB%93%9C-%EB%82%98%EC%81%9C%EC%BD%94%EB%93%9C-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%9D%98-%EC%BD%94%EB%93%9C-%ED%92%88%EC%A7%88-%EA%B0%9C%EC%84%A0%EB%B2%95/</loc>
+        <lastmod>2023-02-26T15:45:15.705Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>https://sejoung.github.io/tags/argocd-%EC%82%AC%EC%9A%A9%EC%9E%90-%EC%B6%94%EA%B0%80/</loc>
         <lastmod>2023-02-24T09:13:38.189Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -12,13 +19,6 @@
     <url>
         <loc>https://sejoung.github.io/tags/argocd-add-user/</loc>
         <lastmod>2023-02-24T09:13:38.189Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://sejoung.github.io/tags/%EC%A2%8B%EC%9D%80%EC%BD%94%EB%93%9C-%EB%82%98%EC%81%9C%EC%BD%94%EB%93%9C-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%9D%98-%EC%BD%94%EB%93%9C-%ED%92%88%EC%A7%88-%EA%B0%9C%EC%84%A0%EB%B2%95/</loc>
-        <lastmod>2023-02-18T14:43:08.638Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
