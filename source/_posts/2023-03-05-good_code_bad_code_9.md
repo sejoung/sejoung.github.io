@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "CHAPTER 8 코드를 모듈화하라"
+title: "CHAPTER 9 코드를 재사용하고 일반화할 수 있도록 하라"
 date: 2023-03-05 23:00 +0900
 comments: true
 tags : ["좋은코드 나쁜코드: 프로그래머의 코드 품질 개선법"]
