@@ -8,11 +8,11 @@
     <atom:link href="/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>잘정리하자</description>
-    <pubDate>Sun, 05 Mar 2023 14:15:33 GMT</pubDate>
+    <pubDate>Sun, 05 Mar 2023 16:16:09 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
-      <title>CHAPTER 8 코드를 모듈화하라</title>
+      <title>CHAPTER 9 코드를 재사용하고 일반화할 수 있도록 하라</title>
       <link>https://sejoung.github.io/2023/03/2023-03-05-good_code_bad_code_9/</link>
       <guid>https://sejoung.github.io/2023/03/2023-03-05-good_code_bad_code_9/</guid>
       <pubDate>Sun, 05 Mar 2023 14:00:00 GMT</pubDate>
