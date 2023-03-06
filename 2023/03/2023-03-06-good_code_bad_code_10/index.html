@@ -1,0 +1,116 @@
+<!DOCTYPE html><html lang="lang"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta name="description" content="CHAPTER 10 단위 테스트의 원칙"><meta name="keywords" content="좋은코드 나쁜코드: 프로그래머의 코드 품질 개선법"><meta name="author" content="sejoung"><meta name="copyright" content="sejoung"><title>CHAPTER 10 단위 테스트의 원칙 | 폭간의 기술블로그</title><link rel="shortcut icon" href="../../../my-favicon.ico"><link rel="stylesheet" href="../../../css/index.css?version=1.7.0"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css?version=1.7.0"><meta name="format-detection" content="telephone=no"><meta http-equiv="x-dns-prefetch-control" content="on"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="dns-prefetch" href="https://www.google-analytics.com"><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-87353572-1', 'auto');
+ga('send', 'pageview');</script><script async src="https://www.googletagmanager.com/gtag/js?id=G-NVRTGLD8RZ"></script><script>window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-NVRTGLD8RZ');</script><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"We didn't find any results for the search: ${query}"}},
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  }
+} </script><meta name="generator" content="Hexo 5.4.2"></head><body><i class="fa fa-arrow-right" id="toggle-sidebar" aria-hidden="true"></i><div id="sidebar" data-display="true"><div class="toggle-sidebar-info text-center"><span data-toggle="Toggle article">Toggle site</span><hr></div><div class="sidebar-toc"><div class="sidebar-toc__title">Catalog</div><div class="sidebar-toc__progress"><span class="progress-notice">You've read</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar"></div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%EC%A2%8B%EC%9D%80%EC%BD%94%EB%93%9C-%EB%82%98%EC%81%9C%EC%BD%94%EB%93%9C-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%9D%98-%EC%BD%94%EB%93%9C-%ED%92%88%EC%A7%88-%EA%B0%9C%EC%84%A0%EB%B2%95-PART-III-%EB%8B%A8%EC%9C%84-%ED%85%8C%EC%8A%A4%ED%8A%B8"><span class="toc-number">1.</span> <span class="toc-text">좋은코드 나쁜코드: 프로그래머의 코드 품질 개선법(PART III 단위 테스트)</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#CHAPTER-10-%EB%8B%A8%EC%9C%84-%ED%85%8C%EC%8A%A4%ED%8A%B8%EC%9D%98-%EC%9B%90%EC%B9%99"><span class="toc-number">1.1.</span> <span class="toc-text">CHAPTER 10 단위 테스트의 원칙</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#10-1-%EB%8B%A8%EC%9C%84-%ED%85%8C%EC%8A%A4%ED%8A%B8-%EA%B8%B0%EC%B4%88"><span class="toc-number">1.1.1.</span> <span class="toc-text">10.1 단위 테스트 기초</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#10-2-%EC%A2%8B%EC%9D%80-%EB%8B%A8%EC%9C%84-%ED%85%8C%EC%8A%A4%ED%8A%B8%EB%8A%94-%EC%96%B4%EB%96%BB%EA%B2%8C-%EC%9E%91%EC%84%B1%ED%95%A0-%EC%88%98-%EC%9E%88%EB%8A%94%EA%B0%80"><span class="toc-number">1.1.2.</span> <span class="toc-text">10.2 좋은 단위 테스트는 어떻게 작성할 수 있는가?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#10-3-%ED%8D%BC%EB%B8%94%EB%A6%AD-API%EC%97%90-%EC%A7%91%EC%A4%91%ED%95%98%EB%90%98-%EC%A4%91%EC%9A%94%ED%95%9C-%EB%8F%99%EC%9E%91%EC%9D%80-%EB%AC%B4%EC%8B%9C%ED%95%98%EC%A7%80-%EB%A7%90%EB%9D%BC"><span class="toc-number">1.1.3.</span> <span class="toc-text">10.3 퍼블릭 API에 집중하되 중요한 동작은 무시하지 말라</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#10-4-%ED%85%8C%EC%8A%A4%ED%8A%B8-%EB%8D%94%EB%B8%94"><span class="toc-number">1.1.4.</span> <span class="toc-text">10.4 테스트 더블</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#10-5-%ED%85%8C%EC%8A%A4%ED%8A%B8-%EC%B2%A0%ED%95%99%EC%9C%BC%EB%A1%9C%EB%B6%80%ED%84%B0-%EC%8B%A0%EC%A4%91%ED%95%98%EA%B2%8C-%EC%84%A0%ED%83%9D%ED%95%98%EB%9D%BC"><span class="toc-number">1.1.5.</span> <span class="toc-text">10.5 테스트 철학으로부터 신중하게 선택하라</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%EC%B0%B8%EC%A1%B0"><span class="toc-number">2.</span> <span class="toc-text">참조</span></a></li></ol></div></div><div class="author-info hide"><div class="author-info__avatar text-center"><img src="https://avatars0.githubusercontent.com/u/4936005?s=400&amp;u=a679b941fe377418e7e4efcf916c6a636d7178ee&amp;v=4"></div><div class="author-info__name text-center">sejoung</div><div class="author-info__description text-center">잘정리하자</div><div class="follow-button"><a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/sejoung">Follow Me</a></div><hr><div class="author-info-articles"><a class="author-info-articles__archives article-meta" href="../../../archives"><span class="pull-left">Articles</span><span class="pull-right">688</span></a><a class="author-info-articles__tags article-meta" href="../../../tags"><span class="pull-left">Tags</span><span class="pull-right">737</span></a><a class="author-info-articles__categories article-meta" href="../../../categories"><span class="pull-left">Categories</span><span class="pull-right">67</span></a></div><hr><div class="author-info-links"><div class="author-info-links__title text-center">Links</div><a class="author-info-links__name text-center" target="_blank" rel="external nofollow noopener noreferrer" href="https://blog.naver.com/sanaes">naverblog</a><a class="author-info-links__name text-center" target="_blank" rel="external nofollow noopener noreferrer" href="https://www.linkedin.com/in/sanaes/">linkedin</a><a class="author-info-links__name text-center" target="_blank" rel="external nofollow noopener noreferrer" href="https://www.slideshare.net/sejoung">slideshare</a></div></div></div><div id="content-outer"><div id="top-container" style="background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Van_Gogh_-_Terrasse_des_Caf%C3%A9s_an_der_Place_du_Forum_in_Arles_am_Abend1.jpeg/1024px-Van_Gogh_-_Terrasse_des_Caf%C3%A9s_an_der_Place_du_Forum_in_Arles_am_Abend1.jpeg)"><div id="page-header"><span class="pull-left"> <a id="site-name" href="../../../index.html">폭간의 기술블로그</a></span><i class="fa fa-bars toggle-menu pull-right" aria-hidden="true"></i><span class="pull-right menus">   <a class="site-page" href="/">Home</a><a class="site-page" href="/archives">Archives</a><a class="site-page" href="/tags">Tags</a><a class="site-page" href="/categories">Categories</a></span><span class="pull-right"><a class="site-page social-icon search"><i class="fa fa-search"></i><span> Search</span></a></span></div><div id="post-info"><div id="post-title">CHAPTER 10 단위 테스트의 원칙</div><div id="post-meta"><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2023-03-06</time><span class="post-meta__separator">|</span><i class="fa fa-inbox post-meta__icon" aria-hidden="true"></i><a class="post-meta__categories" href="../../../categories/book/">book</a><span class="post-meta__separator">|</span><i class="fa fa-comment-o post-meta__icon" aria-hidden="true"></i><a href="#disqus_thread"><span class="disqus-comment-count" data-disqus-identifier="2023/03/2023-03-06-good_code_bad_code_10/"></span></a></div></div></div><div class="layout" id="content-inner"><article id="post"><div class="article-container" id="post-content"><h1 id="좋은코드-나쁜코드-프로그래머의-코드-품질-개선법-PART-III-단위-테스트"><a href="#좋은코드-나쁜코드-프로그래머의-코드-품질-개선법-PART-III-단위-테스트" class="headerlink" title="좋은코드 나쁜코드: 프로그래머의 코드 품질 개선법(PART III 단위 테스트)"></a>좋은코드 나쁜코드: 프로그래머의 코드 품질 개선법(PART III 단위 테스트)</h1><h2 id="CHAPTER-10-단위-테스트의-원칙"><a href="#CHAPTER-10-단위-테스트의-원칙" class="headerlink" title="CHAPTER 10 단위 테스트의 원칙"></a>CHAPTER 10 단위 테스트의 원칙</h2><h3 id="10-1-단위-테스트-기초"><a href="#10-1-단위-테스트-기초" class="headerlink" title="10.1 단위 테스트 기초"></a>10.1 단위 테스트 기초</h3><ul>
+<li>테스트 중인 코드</li>
+<li>테스트 코드</li>
+<li>테스트 케이스<ul>
+<li>준비</li>
+<li>실행</li>
+<li>단언</li>
+</ul>
+</li>
+<li>테스트 러너</li>
+</ul>
+<h3 id="10-2-좋은-단위-테스트는-어떻게-작성할-수-있는가"><a href="#10-2-좋은-단위-테스트는-어떻게-작성할-수-있는가" class="headerlink" title="10.2 좋은 단위 테스트는 어떻게 작성할 수 있는가?"></a>10.2 좋은 단위 테스트는 어떻게 작성할 수 있는가?</h3><p>좋은 단위 테스트가 가져야 할 주요 기능</p>
+<ul>
+<li>훼손의 정확한 감지<ul>
+<li>코드에 대한 초기 신뢰를 준다</li>
+<li>미래의 훼손을 막아준다</li>
+</ul>
+</li>
+<li>세부 구현 사항에 독립적<ul>
+<li>기능적 변화</li>
+<li>리팩터링</li>
+</ul>
+</li>
+<li>잘 설명되는 실패</li>
+<li>이해 할수 있는 테스트 코드</li>
+<li>쉽고 빠르게 실행</li>
+</ul>
+<h3 id="10-3-퍼블릭-API에-집중하되-중요한-동작은-무시하지-말라"><a href="#10-3-퍼블릭-API에-집중하되-중요한-동작은-무시하지-말라" class="headerlink" title="10.3 퍼블릭 API에 집중하되 중요한 동작은 무시하지 말라"></a>10.3 퍼블릭 API에 집중하되 중요한 동작은 무시하지 말라</h3><p>퍼블릭 API만을 사용한 테스트</p>
+<p>퍼블릭 API만으로 테스트 할수 없는 테스트</p>
+<ul>
+<li>서버와 상호작용하는 코드</li>
+<li>데이터베이스에 값을 저장하거나 읽는 코드</li>
+</ul>
+<h3 id="10-4-테스트-더블"><a href="#10-4-테스트-더블" class="headerlink" title="10.4 테스트 더블"></a>10.4 테스트 더블</h3><p>의존성을 실제로 사용하는 것데 대한 대안으로 테스트 더블이 있다</p>
+<ul>
+<li>테스트 더블을 사용하는 이유<ul>
+<li>테스트 단순화<ul>
+<li>테스트를 더 빠르게 실행하는 것</li>
+</ul>
+</li>
+<li>테스트로부터 외부 세계 보호<ul>
+<li>사용자는 이상하고 혼란스러운 값을 볼 수 있다</li>
+<li>모니터링 및 로깅에 영향을 미칠 수 있다</li>
+</ul>
+</li>
+<li>외부로부터 테스트 보호</li>
+<li>가장 일반적인 테스트 더블<ul>
+<li>목 mock : 클래스나 인터페이스를 시뮬레이션하는 데 멤버 함수에 대한 호출을 기록하는 것 외에는 어떠한 일도 수행하지 않는다</li>
+<li>스텁 stub : 함수가 호출되면 미리 정해 놓은 값을 반환함으로써 함수를 시뮬레이션 한다</li>
+<li>페이크 fake : 클래스의 대체 구현체로 테스트에서 안전하게 사용할 수 있다</li>
+</ul>
+</li>
+<li>목과 스텁은 문제가 될 수 있다<ul>
+<li>목이나 스텁이 실제 의존성과 다른 방식으로 동작하도록 설정되면 테스트는 실제적이지 않다</li>
+<li>구현 세부 사항과 테스트가 밀접 하게 결합하여 리팩터링이 어려워질수 있다</li>
+</ul>
+</li>
+<li>페이크로 인해 보다 실질적인 테스트가 이루어질 수 있다</li>
+<li>페이크를 사용하면 구현 세부 정보로부터 테스트를 분리 할수 있다</li>
+<li>목에 대한 의견<ul>
+<li>mockist : 런던학파<ul>
+<li>단위 테스트가 더욱 격리된다</li>
+<li>테스트 코드 작성이 쉬워진다</li>
+</ul>
+</li>
+<li>classicist : 디트로이트 학파<ul>
+<li>목은 실제 호출이 유용한지 검증이 되지 않는다</li>
+<li>구현 세부 사항에 대해 더 독립적인 테스트를 할 수 있다</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="10-5-테스트-철학으로부터-신중하게-선택하라"><a href="#10-5-테스트-철학으로부터-신중하게-선택하라" class="headerlink" title="10.5 테스트 철학으로부터 신중하게 선택하라"></a>10.5 테스트 철학으로부터 신중하게 선택하라</h3><p>테스트 철학과 방법론</p>
+<ul>
+<li>테스트 주도 개발</li>
+<li>행동 주도 개발</li>
+<li>수용 테스트 주도 개발</li>
+</ul>
+<h1 id="참조"><a href="#참조" class="headerlink" title="참조"></a>참조</h1><hr>
+<ul>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="http://www.yes24.com/Product/Goods/109366833">좋은코드 나쁜코드: 프로그래머의 코드 품질 개선법</a></li>
+</ul>
+</div></article><div class="post-meta__tag-list"><a class="post-meta__tags" href="../../../tags/%EC%A2%8B%EC%9D%80%EC%BD%94%EB%93%9C-%EB%82%98%EC%81%9C%EC%BD%94%EB%93%9C-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%9D%98-%EC%BD%94%EB%93%9C-%ED%92%88%EC%A7%88-%EA%B0%9C%EC%84%A0%EB%B2%95/">좋은코드 나쁜코드: 프로그래머의 코드 품질 개선법</a></div><nav id="pagination"><div class="prev-post pull-left"><a href="../2023-03-06-good_code_bad_code_11/"><i class="fa fa-chevron-left">  </i><span>CHAPTER 11 단위 테스트의 실제</span></a></div><div class="next-post pull-right"><a href="../2023-03-05-good_code_bad_code_9/"><span>CHAPTER 9 코드를 재사용하고 일반화할 수 있도록 하라</span><i class="fa fa-chevron-right"></i></a></div></nav><div id="disqus_thread"></div><script>var unused = null;
+var disqus_config = function () {
+  this.page.url = 'https://sejoung.github.io/2023/03/2023-03-06-good_code_bad_code_10/';
+  this.page.identifier = '2023/03/2023-03-06-good_code_bad_code_10/';
+  this.page.title = 'CHAPTER 10 단위 테스트의 원칙';
+}
+var d = document, s = d.createElement('script');
+s.src = "https://" + 'kimsejoung' +".disqus.com/embed.js";
+s.setAttribute('data-timestamp', '' + +new Date());
+(d.head || d.body).appendChild(s);</script><script id="dsq-count-scr" src="https://kimsejoung.disqus.com/count.js" async></script></div></div><footer class="footer-bg" style="background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Van_Gogh_-_Terrasse_des_Caf%C3%A9s_an_der_Place_du_Forum_in_Arles_am_Abend1.jpeg/1024px-Van_Gogh_-_Terrasse_des_Caf%C3%A9s_an_der_Place_du_Forum_in_Arles_am_Abend1.jpeg)"><div class="layout" id="footer"><div class="copyright">&copy;2017 - 2023 By sejoung</div><div class="framework-info"><span>Driven - </span><a target="_blank" rel="external nofollow noopener noreferrer" href="http://hexo.io"><span>Hexo</span></a><span class="footer-separator">|</span><span>Theme - </span><a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/Molunerfinn/hexo-theme-melody"><span>Melody</span></a></div><div class="busuanzi"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><span id="busuanzi_container_page_pv"><i class="fa fa-file-o"></i><span id="busuanzi_value_page_pv"></span><span></span></span></div></div></footer><i class="fa fa-arrow-up" id="go-up" aria-hidden="true"></i><script src="../../../js/third-party/anime.min.js"></script><script src="../../../js/third-party/jquery.min.js"></script><script src="../../../js/third-party/jquery.fancybox.min.js"></script><script src="../../../js/third-party/velocity.min.js"></script><script src="../../../js/third-party/velocity.ui.min.js"></script><script src="../../../js/utils.js?version=1.7.0"></script><script src="../../../js/fancybox.js?version=1.7.0"></script><script src="../../../js/sidebar.js?version=1.7.0"></script><script src="../../../js/copy.js?version=1.7.0"></script><script src="../../../js/fireworks.js?version=1.7.0"></script><script src="../../../js/transition.js?version=1.7.0"></script><script src="../../../js/scroll.js?version=1.7.0"></script><script src="../../../js/head.js?version=1.7.0"></script><script src="../../../js/search/local-search.js"></script><script>if(/Android|webOS|iPhone|iPod|iPad|BlackBerry/i.test(navigator.userAgent)) {
+  $('#nav').addClass('is-mobile')
+  $('footer').addClass('is-mobile')
+  $('#top-container').addClass('is-mobile')
+}</script><div class="search-dialog" id="local-search"><div class="search-dialog__title" id="local-search-title">Local search</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="Search for Posts"></div></div></div><hr><div id="local-search-results"><div id="local-hits"></div><div id="local-stats"><div class="local-search-stats__hr" id="hr"><span>Powered by</span> <a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/wzpan/hexo-generator-search" style="color:#49B1F5;">hexo-generator-search</a></div></div></div><span class="search-close-button"><i class="fa fa-times"></i></span></div><div class="search-mask"></div></body></html>
