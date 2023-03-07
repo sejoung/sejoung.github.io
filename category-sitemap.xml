@@ -9,6 +9,27 @@
 
 
     <url>
+        <loc>https://sejoung.github.io/categories/kubernetes/k8s/AWS/</loc>
+        <lastmod>2023-03-07T14:50:09.449Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/categories/kubernetes/k8s/</loc>
+        <lastmod>2023-03-07T14:50:09.449Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/categories/kubernetes/</loc>
+        <lastmod>2023-03-07T14:50:09.449Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>https://sejoung.github.io/categories/book/</loc>
         <lastmod>2023-03-06T13:14:46.965Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -17,20 +38,6 @@
 
     <url>
         <loc>https://sejoung.github.io/categories/kubernetes/k8s/argocd/</loc>
-        <lastmod>2023-02-24T09:13:38.189Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://sejoung.github.io/categories/kubernetes/k8s/</loc>
-        <lastmod>2023-02-24T09:13:38.189Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://sejoung.github.io/categories/kubernetes/</loc>
         <lastmod>2023-02-24T09:13:38.189Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
@@ -408,14 +415,14 @@
     </url>
 
     <url>
-        <loc>https://sejoung.github.io/categories/%25EC%259E%25A5%25EC%2595%25A0%25EB%25B3%25B5%25EA%25B5%25AC/</loc>
+        <loc>https://sejoung.github.io/categories/cloud/</loc>
         <lastmod>2022-10-29T00:43:30.729Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>https://sejoung.github.io/categories/cloud/</loc>
+        <loc>https://sejoung.github.io/categories/%25EC%259E%25A5%25EC%2595%25A0%25EB%25B3%25B5%25EA%25B5%25AC/</loc>
         <lastmod>2022-10-29T00:43:30.729Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
