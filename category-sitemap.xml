@@ -107,14 +107,14 @@
     </url>
 
     <url>
-        <loc>https://sejoung.github.io/categories/git/</loc>
+        <loc>https://sejoung.github.io/categories/%25ED%259A%258C%25EA%25B3%25A0/</loc>
         <lastmod>2022-10-29T00:43:30.771Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>https://sejoung.github.io/categories/%25ED%259A%258C%25EA%25B3%25A0/</loc>
+        <loc>https://sejoung.github.io/categories/git/</loc>
         <lastmod>2022-10-29T00:43:30.771Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
