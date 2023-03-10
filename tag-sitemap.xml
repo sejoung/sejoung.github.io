@@ -3,6 +3,27 @@
 
 
     <url>
+        <loc>https://sejoung.github.io/tags/%EC%9D%B4%ED%8E%99%ED%8B%B0%EB%B8%8C-%EC%BD%94%ED%8B%80%EB%A6%B0/</loc>
+        <lastmod>2023-03-10T14:01:49.469Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/tags/Effective-kotlin/</loc>
+        <lastmod>2023-03-10T14:01:49.469Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/tags/kotlin/</loc>
+        <lastmod>2023-03-10T14:01:49.469Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>https://sejoung.github.io/tags/https/</loc>
         <lastmod>2023-03-07T14:50:09.449Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -103,27 +124,6 @@
     <url>
         <loc>https://sejoung.github.io/tags/database-parameters/</loc>
         <lastmod>2023-01-09T07:40:13.944Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://sejoung.github.io/tags/%EC%9D%B4%ED%8E%99%ED%8B%B0%EB%B8%8C-%EC%BD%94%ED%8B%80%EB%A6%B0/</loc>
-        <lastmod>2023-01-06T14:05:14.725Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://sejoung.github.io/tags/Effective-kotlin/</loc>
-        <lastmod>2023-01-06T14:05:14.725Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://sejoung.github.io/tags/kotlin/</loc>
-        <lastmod>2023-01-06T14:05:14.725Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>

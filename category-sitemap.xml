@@ -9,6 +9,13 @@
 
 
     <url>
+        <loc>https://sejoung.github.io/categories/kotlin/</loc>
+        <lastmod>2023-03-10T14:01:49.469Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>https://sejoung.github.io/categories/kubernetes/k8s/AWS/</loc>
         <lastmod>2023-03-07T14:50:09.449Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -46,13 +53,6 @@
     <url>
         <loc>https://sejoung.github.io/categories/DB/</loc>
         <lastmod>2023-01-09T09:11:13.234Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://sejoung.github.io/categories/kotlin/</loc>
-        <lastmod>2023-01-06T14:05:14.725Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>

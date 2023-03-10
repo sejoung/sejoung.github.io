@@ -8,8 +8,27 @@
     <atom:link href="/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>잘정리하자</description>
-    <pubDate>Tue, 07 Mar 2023 14:50:09 GMT</pubDate>
+    <pubDate>Fri, 10 Mar 2023 14:01:49 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>이펙티브 코틀린 아이템 42: compareTo의 규약을 지켜라</title>
+      <link>https://sejoung.github.io/2023/03/2023-03-10-effective_kotlin_item_43/</link>
+      <guid>https://sejoung.github.io/2023/03/2023-03-10-effective_kotlin_item_43/</guid>
+      <pubDate>Fri, 10 Mar 2023 13:58:00 GMT</pubDate>
+      <description>
+      
+        
+        
+          &lt;h1 id=&quot;이펙티브-코틀린-클래스설계&quot;&gt;&lt;a href=&quot;#이펙티브-코틀린-클래스설계&quot; class=&quot;headerlink&quot; title=&quot;이펙티브 코틀린(클래스설계)&quot;&gt;&lt;/a&gt;이펙티브 코틀린(클래스설계)&lt;/h1&gt;&lt;h2 id=&quot;아이템-43-API의-필수적
+        
+      
+      </description>
+      
+      <content:encoded><![CDATA[<h1 id="이펙티브-코틀린-클래스설계"><a href="#이펙티브-코틀린-클래스설계" class="headerlink" title="이펙티브 코틀린(클래스설계)"></a>이펙티브 코틀린(클래스설계)</h1><h2 id="아이템-43-API의-필수적이지-않는-부분을-확장-함수로-추출하라"><a href="#아이템-43-API의-필수적이지-않는-부분을-확장-함수로-추출하라" class="headerlink" title="아이템 43: API의 필수적이지 않는 부분을 확장 함수로 추출하라"></a>아이템 43: API의 필수적이지 않는 부분을 확장 함수로 추출하라</h2><p>클래스 메서드를 정의할때 멤버로 정의할 것인지 확장 함수로 정의할 것인지 결정해야 된다</p><p>맴버와 확장 방식의 차이점</p><ul><li>따로 가져와서 사용해야 된다 일반적으로 확장은 다른 패키지에 위치한다</li><li>확장은 우리가 직접 멤버를 추가할 수 없는 경우 데이터와 행위를 분리하도록 설계된 프로젝트에서 사용된다.</li><li>임포트 해서 사용한다는 특징 덕분에 확장은 같은 타입에 같은 이름으로 여러개를 만들수 있다</li><li>확장은 가상(virtual)이 아니다 파생 클래스에서 오버라이드 할수 없다</li><li>확장은 클래스가 아니라 타입에 만들어진다</li><li>확장은 클래스 레퍼런스에 나오지 않는다</li></ul><h1 id="참조"><a href="#참조" class="headerlink" title="참조"></a>참조</h1><hr><ul><li><a href="http://www.yes24.com/Product/Goods/106225986">이펙티브 코틀린</a></li></ul>]]></content:encoded>
+      
+      <comments>https://sejoung.github.io/2023/03/2023-03-10-effective_kotlin_item_43/#disqus_thread</comments>
+    </item>
     
     <item>
       <title>EKS에서 HTTP를 HTTPS로 Redirect</title>
@@ -370,25 +389,6 @@
       <content:encoded><![CDATA[<h1 id="가상면접으로-배우는-대규모-시스템-설계-기초"><a href="#가상면접으로-배우는-대규모-시스템-설계-기초" class="headerlink" title="가상면접으로 배우는 대규모 시스템 설계 기초"></a>가상면접으로 배우는 대규모 시스템 설계 기초</h1><h2 id="8장-URL-단축기-설계"><a href="#8장-URL-단축기-설계" class="headerlink" title="8장 URL 단축기 설계"></a>8장 URL 단축기 설계</h2><ul><li>API 엔드포인트<ul><li>URL 단축용 엔드포인트</li><li>URL 리다이렉션 엔드포인트</li></ul></li><li>URL 리다이렉션<ul><li>301 Moved Permanently : Location 헤더가 가르키는 주소로 영구 이동됨</li><li>302 Found : Location 헤더가 가르키는 주소로 일시적으로 이동</li></ul></li><li>URL 단축</li><li>해시함수<ul><li>해시길이 : 10 + 26 + 26 &#x3D; 62</li><li>해시 함수<ul><li>crc23</li><li>md5</li><li>sha-1</li><li>base62 : 흔히 사용하는 접근법 사용할수 있는 갯수가 62개라서 사용</li></ul></li></ul></li></ul><h1 id="참조"><a href="#참조" class="headerlink" title="참조"></a>참조</h1><hr><ul><li><a href="http://www.yes24.com/Product/Goods/102819435">가상 면접 사례로 배우는 대규모 시스템 설계 기초</a></li></ul>]]></content:encoded>
       
       <comments>https://sejoung.github.io/2023/01/2023-01-30-system_design_interview_8/#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>7장 분산 시스템을 위한 유일 ID 생성기 설계</title>
-      <link>https://sejoung.github.io/2023/01/2023-01-30-system_design_interview_7/</link>
-      <guid>https://sejoung.github.io/2023/01/2023-01-30-system_design_interview_7/</guid>
-      <pubDate>Mon, 30 Jan 2023 01:40:00 GMT</pubDate>
-      <description>
-      
-        
-        
-          &lt;h1 id=&quot;가상면접으로-배우는-대규모-시스템-설계-기초&quot;&gt;&lt;a href=&quot;#가상면접으로-배우는-대규모-시스템-설계-기초&quot; class=&quot;headerlink&quot; title=&quot;가상면접으로 배우는 대규모 시스템 설계 기초&quot;&gt;&lt;/a&gt;가상면접으로 배우는 대규모
-        
-      
-      </description>
-      
-      <content:encoded><![CDATA[<h1 id="가상면접으로-배우는-대규모-시스템-설계-기초"><a href="#가상면접으로-배우는-대규모-시스템-설계-기초" class="headerlink" title="가상면접으로 배우는 대규모 시스템 설계 기초"></a>가상면접으로 배우는 대규모 시스템 설계 기초</h1><h2 id="7장-분산-시스템을-위한-유일-ID-생성기-설계"><a href="#7장-분산-시스템을-위한-유일-ID-생성기-설계" class="headerlink" title="7장 분산 시스템을 위한 유일 ID 생성기 설계"></a>7장 분산 시스템을 위한 유일 ID 생성기 설계</h2><p>분산 시스템에서 유일성이 보장되는 id를 만드는 방법</p><ul><li>다중 마스터 복제(multi-master replication)<ul><li>데이터 베이스의 auto_increment 기능을 활용함, 서버 마다 증가하는 값을 다르게 셋팅함</li><li>단점<ul><li>여러 데이터 센터에 걸쳐 규모를 늘리기 어렵다</li><li>ID의 유일성은 보장되겠지만 그 값이 시간 흐름에 맞추어 커지도록 보장할수 없다</li><li>서버를 추가하거나 삭제할때 잘 동작하도록 만들기 어렵다</li></ul></li></ul></li><li>UUID(universally unique identifier)<ul><li>유일성이 보장되는 ID를 만드는 간단한 방법</li><li>장점<ul><li>만드는것이 단순하다 서버사이에 조율이 필요없고 동기화 이슈도 없다</li><li>각 서버가 자기가 쓸 ID를 알아서 만드는 구조이며 확장도 쉽다</li></ul></li><li>단점<ul><li>ID가 128바이트로 길다</li><li>ID를 시간순으로 정렬할 수 없다</li><li>ID에 숫자아닌 값이 포함될 수 있다</li></ul></li></ul></li><li>티켓 서버(ticket server)<ul><li>키를 만들어내는 중앙집중식 서버를 한대만 사용하는것</li><li>장점<ul><li>유일성이 보장 되는 오직 숫자로만 구성된 ID를 쉽게 만들 수 있다</li><li>구현하기 쉽고 중소 규모 애플리케이션에게 적합</li></ul></li><li>단점<ul><li>티켓 서버가 SPOF 가 된다 해당 시스템이 장애면 해당 시스템을 사용하는 모든서버가 영향을 받음</li></ul></li></ul></li><li>트위터 스토우플레이크(Snowflake) 접근법<ul><li>사인 비트 + 타임스탬프 + 데이터센터 ID + 머신 ID + 일련 번호</li><li>사인 비트 : 1 비트 할당</li><li>타임 스템프 : 41 비트 할당</li><li>데이터 센터 ID : 5 비트 할당 32개 데이터 센터를 지원</li><li>서버 ID : 5 비트 할당, 데이터센터당 32개 서버를 지원</li><li>일련번호 : 12 비트 할당, 1밀리초가 경과될때 0으로 초기화</li></ul></li></ul><p>추가 논의 사항</p><ul><li>시계 동기화<ul><li>NTP</li></ul></li><li>각 섹션의 길이 최적화<ul><li>동시성이 낮고 수명이 긴 애플리케이션이라면 일련번호 섹션의 길이를 줄이고 타임스탬프 섹션의 길이를 늘리는 방법</li></ul></li></ul><h1 id="참조"><a href="#참조" class="headerlink" title="참조"></a>참조</h1><hr><ul><li><a href="http://www.yes24.com/Product/Goods/102819435">가상 면접 사례로 배우는 대규모 시스템 설계 기초</a></li></ul>]]></content:encoded>
-      
-      <comments>https://sejoung.github.io/2023/01/2023-01-30-system_design_interview_7/#disqus_thread</comments>
     </item>
     
   </channel>
