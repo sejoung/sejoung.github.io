@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "이펙티브 코틀린 아이템 42: compareTo의 규약을 지켜라"
+title: "아이템 43: API의 필수적이지 않는 부분을 확장 함수로 추출하라"
 date: 2023-03-10 22:58 +0900
 comments: true
 tags : ["kotlin","Effective kotlin","이펙티브 코틀린"]
