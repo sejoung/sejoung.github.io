@@ -8,11 +8,49 @@
     <atom:link href="/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>잘정리하자</description>
-    <pubDate>Fri, 10 Mar 2023 14:01:49 GMT</pubDate>
+    <pubDate>Sun, 12 Mar 2023 06:31:36 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
-      <title>이펙티브 코틀린 아이템 42: compareTo의 규약을 지켜라</title>
+      <title>아이템 45: 불필요한 객체 생성을 피하라</title>
+      <link>https://sejoung.github.io/2023/03/2023-03-12-effective_kotlin_item_45/</link>
+      <guid>https://sejoung.github.io/2023/03/2023-03-12-effective_kotlin_item_45/</guid>
+      <pubDate>Sun, 12 Mar 2023 06:07:00 GMT</pubDate>
+      <description>
+      
+        
+        
+          &lt;h1 id=&quot;이펙티브-코틀린-효율성&quot;&gt;&lt;a href=&quot;#이펙티브-코틀린-효율성&quot; class=&quot;headerlink&quot; title=&quot;이펙티브 코틀린(효율성)&quot;&gt;&lt;/a&gt;이펙티브 코틀린(효율성)&lt;/h1&gt;&lt;p&gt;오늘날에는 코드 효율성을 관대 하게 바라본다 개발자
+        
+      
+      </description>
+      
+      <content:encoded><![CDATA[<h1 id="이펙티브-코틀린-효율성"><a href="#이펙티브-코틀린-효율성" class="headerlink" title="이펙티브 코틀린(효율성)"></a>이펙티브 코틀린(효율성)</h1><p>오늘날에는 코드 효율성을 관대 하게 바라본다 개발자가 비싸지고 메모리는 싸졌기 때문이다<br>장기적으로 효율성은 중요하다</p><h2 id="아이템-45-불필요한-객체-생성을-피하라"><a href="#아이템-45-불필요한-객체-생성을-피하라" class="headerlink" title="아이템 45: 불필요한 객체 생성을 피하라"></a>아이템 45: 불필요한 객체 생성을 피하라</h2><p>객체 생성에는 언제나 비용이 든다</p><p>객체를 wrap 하면 크게 3가지 비용이든다</p><ul><li>객체는 더 많은 용량을 차지한다</li><li>요소가 캡슐화 되어 있다면 접근에 추가적인 함수 호출이 필요하다</li><li>객체는 생성되어야 한다</li></ul><h3 id="객체선언-싱글톤"><a href="#객체선언-싱글톤" class="headerlink" title="객체선언(싱글톤)"></a>객체선언(싱글톤)</h3><p>매순간 객체를 생성하지 않고 객체를 재사용하는 간단한 방법<br>mutable 객체는 캐시하지 않는 규칙을 지키는게 좋다</p><h3 id="캐시를-활용하는-팩토리-함수"><a href="#캐시를-활용하는-팩토리-함수" class="headerlink" title="캐시를 활용하는 팩토리 함수"></a>캐시를 활용하는 팩토리 함수</h3><p>일반적은 객체는 생성자를 사용해서 만든다 하지만 팩토리 메서드를 사용해서 만드는 경우도 있다 팩토리 함수는 캐시를 가질수도 있다</p><ul><li>WeakReference : 가비지 컬렉터가 값을 정리하는 것을 막지 않는다</li><li>SoftReference : 가비지 컬렉터가 값을 정리할 수도 있고, 정리하지 않을 수도 있다</li></ul><h3 id="무거운-객체를-외부-스코프로-보내기"><a href="#무거운-객체를-외부-스코프로-보내기" class="headerlink" title="무거운 객체를 외부 스코프로 보내기"></a>무거운 객체를 외부 스코프로 보내기</h3><p>성능을 위한 굉장히 유용한 트릭 무거운 객체를 외부 스코프로 보내는 방식</p><h3 id="지연초기화"><a href="#지연초기화" class="headerlink" title="지연초기화"></a>지연초기화</h3><p>무서운 클래스 생성은 지연되게 만드는게 좋을때도 있다</p><h3 id="기본-자료형-사용하기"><a href="#기본-자료형-사용하기" class="headerlink" title="기본 자료형 사용하기"></a>기본 자료형 사용하기</h3><p>두가지 상황에서 기본 자료형을 랩한 자료형이 사용된다</p><ul><li>nullable 타입을 연산할떄</li><li>타입을 제네릭으로 사용할때</li></ul><h1 id="참조"><a href="#참조" class="headerlink" title="참조"></a>참조</h1><hr><ul><li><a href="http://www.yes24.com/Product/Goods/106225986">이펙티브 코틀린</a></li></ul>]]></content:encoded>
+      
+      <comments>https://sejoung.github.io/2023/03/2023-03-12-effective_kotlin_item_45/#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>아이템 44: 멤버 확장 함수의 사용을 피하라</title>
+      <link>https://sejoung.github.io/2023/03/2023-03-12-effective_kotlin_item_44/</link>
+      <guid>https://sejoung.github.io/2023/03/2023-03-12-effective_kotlin_item_44/</guid>
+      <pubDate>Sun, 12 Mar 2023 05:58:00 GMT</pubDate>
+      <description>
+      
+        
+        
+          &lt;h1 id=&quot;이펙티브-코틀린-클래스설계&quot;&gt;&lt;a href=&quot;#이펙티브-코틀린-클래스설계&quot; class=&quot;headerlink&quot; title=&quot;이펙티브 코틀린(클래스설계)&quot;&gt;&lt;/a&gt;이펙티브 코틀린(클래스설계)&lt;/h1&gt;&lt;h2 id=&quot;아이템-44-멤버-확장-함수
+        
+      
+      </description>
+      
+      <content:encoded><![CDATA[<h1 id="이펙티브-코틀린-클래스설계"><a href="#이펙티브-코틀린-클래스설계" class="headerlink" title="이펙티브 코틀린(클래스설계)"></a>이펙티브 코틀린(클래스설계)</h1><h2 id="아이템-44-멤버-확장-함수의-사용을-피하라"><a href="#아이템-44-멤버-확장-함수의-사용을-피하라" class="headerlink" title="아이템 44: 멤버 확장 함수의 사용을 피하라"></a>아이템 44: 멤버 확장 함수의 사용을 피하라</h2><p>확장함수는 첫 번째 아규먼트로 리시버를 받는 단순한 일반 함수로 컴파일된다</p><p>맴버 확장을 피해야 하는 이유</p><ul><li>레퍼런스를 지원하지 않는다</li><li>암묵적으로 접근할때 두 리시버중에 어떤 리시버를 선택할지 혼동된다</li><li>확장 함수가 외부에 있는 다른 클래스를 리시버로 받을때 해당 함수가 어떤 동작을 하지는 명확하지 않다</li><li>경험이 적은 개발자의 경우 화장 함수를 보면 직관적이지 않거나 심지어 보기만 해도 겁먹을수 있다</li></ul><h1 id="참조"><a href="#참조" class="headerlink" title="참조"></a>참조</h1><hr><ul><li><a href="http://www.yes24.com/Product/Goods/106225986">이펙티브 코틀린</a></li></ul>]]></content:encoded>
+      
+      <comments>https://sejoung.github.io/2023/03/2023-03-12-effective_kotlin_item_44/#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>아이템 43: API의 필수적이지 않는 부분을 확장 함수로 추출하라</title>
       <link>https://sejoung.github.io/2023/03/2023-03-10-effective_kotlin_item_43/</link>
       <guid>https://sejoung.github.io/2023/03/2023-03-10-effective_kotlin_item_43/</guid>
       <pubDate>Fri, 10 Mar 2023 13:58:00 GMT</pubDate>
@@ -351,44 +389,6 @@
       <content:encoded><![CDATA[<h1 id="좋은코드-나쁜코드-프로그래머의-코드-품질-개선법-PART-I-이론"><a href="#좋은코드-나쁜코드-프로그래머의-코드-품질-개선법-PART-I-이론" class="headerlink" title="좋은코드 나쁜코드: 프로그래머의 코드 품질 개선법(PART I 이론)"></a>좋은코드 나쁜코드: 프로그래머의 코드 품질 개선법(PART I 이론)</h1><h2 id="CHAPTER-4-오류"><a href="#CHAPTER-4-오류" class="headerlink" title="CHAPTER 4 오류"></a>CHAPTER 4 오류</h2><p>코드가 실행되는 환경은 불완전 하다. 사용자가 잘못된 입력을 제공하고, 외부 시스템이 다운되며, 자신이 작성한 코드와 다른 개발자가 작성한 코드가 종종 버그를 가질수 있다.</p><p>오류에 대해서 특히 어떻게 알리고 대처해야 하는지 논의해봐야 골치만 아픈 복잡한 문제다.</p><h3 id="복구-가능성"><a href="#복구-가능성" class="headerlink" title="복구 가능성"></a>복구 가능성</h3><p>복구 가능한 오류</p><ul><li>네트워크 오류</li><li>잘못된 사용자 입력</li><li>중요하지 않은 작업 오류</li></ul><p>복구할 수 없는 오류</p><ul><li>코드와 함께 추가되어야 하는 리소스가 없다</li><li>잘못된 입력 인수로 호출</li><li>일부 필요한 상태를 사전에 초기화 하지 않음</li></ul><p>신속한 실패와 요란한 실패</p><p>호출하는 쪽에서만 오류 복구 가능 여부를 알 때가 많다</p><p>다른 코드가 자신이 작성한 코드를 호출하는 것과 관련해 다음과 같은 사항을 신중하게 고려해야 한다</p><ul><li>오류로부터 복구하기를 호출하는 쪽에서 원하는가</li><li>만약 그렇다면 오류를 처리할 필요가 있다는 것을 호출하는 쪽에서는 어떻게 알 수 있을까?</li></ul><p>호출하는 쪽에서 복구하고자 하는 오류에 대해 인지하도록 하라</p><h3 id="견고성-vs-실패"><a href="#견고성-vs-실패" class="headerlink" title="견고성 vs 실패"></a>견고성 vs 실패</h3><p>오류가 발생될때 다음 중 하나를 선택해야 한다</p><ul><li>실패 더 높은 코드 계층이 오류를 처리하게 하거나 전체 프로그램의 작동을 멈추게 한다</li><li>오류를 처리하고 계속 진행한다</li></ul><p>신속하게 실패하라</p><ul><li>신속하게 실패하기는 가능한 문제의 실제 발생 지점으로부터 가까운 곳에서 오류를 나타내는 것</li><li>호출하는 쪽에서 오류를 복구할수 있는 기회를 최대한 제공</li><li>복구 할수 없는 오류일 경우 개발자에게 문제를 신속하게 파악하고 해결할수 있는 기회를 제공</li></ul><p>요란하게 실패하라</p><ul><li>오류가 발생하는데도 아무도 모르는 상황을 막고자 하는 법</li></ul><p>복구 가능성의 범위</p><ul><li>오류가 발견되면 오류를 기록하고 모니터링 해야 된다</li><li>복구할수 있는 또는 복구할수 없는 범위가 틀려질수 있다</li></ul><p>오류를 숨기지 않음</p><ul><li>호출하는 쪽에서 복구하고자 할 수도 있는 오류를 숨기면 호출하는 쪽에서 오류로부터 복구할 수 있는 기회를 없에는 것이다</li><li>복구할수 없는 오류를 숨기면 프로그래밍 오류가 감취진다</li><li>오류를 숨기면 호출하는 쪽에서 실제코드가 잘 작동하고 있다고 가정하지만 실제코드는 작동하지 않을수 있다</li></ul><p>오류가 발생했다는 사실을 숨길수 있는 방법</p><ul><li>기본값 반환<ul><li>오류가 발생했을때 기본값을 반환하는것</li><li>요란한 실패의 원리를 위반 하는것</li></ul></li><li>널 객체 패턴<ul><li>개념적으로 기본값 반환가 유사</li></ul></li><li>아무것도 하지 않음<ul><li>코드가 하는 일에 대해 개발자가 가지고 있는 정신 모델과 코드가 실제로 수행하는 것 사이의 불일치를 일으킬 가능성이 높다</li></ul></li></ul><h3 id="오류-전달-방법"><a href="#오류-전달-방법" class="headerlink" title="오류 전달 방법"></a>오류 전달 방법</h3><p>오류가 발생하면 일반적으로 더 높은 계층으로 오류를 알려야 한다.</p><p>오류를 알리는 방법</p><ul><li>명시적 방법<ul><li>검사 예외<ul><li>명시적으로 오류를 전달하는 방법</li><li>호출하는쪽에서 강제적으로 인식함</li></ul></li><li>널 반환 유형(널 안정성의 경우)<ul><li>널값이 의미하는 바를 설명하기 위해 주석문이나 문서를 추가해야 된다</li><li>널 안정성(?)을 지원하기 때문에 호출하는 쪽에서 널인지 반듯이 확인 해야된다</li></ul></li><li>옵셔널 반환 유형</li><li>리절트 반환 유형<ul><li>널값이나 옵셔널 타입을 반환할때 문제 중하나는 오류 정보를 전달할수 없다는것</li><li>값을 얻을수 없음을 알릴 뿐만 아니라 값을 얻을 수 없는 이유까지 알려주면 유용하다</li></ul></li><li>아웃컴 반환 유형(반환값 확인이 필수인 경우)<ul><li>호출하는쪽에서 반환값을 강제적으로 확인해야 된다면 이것은 오류를 알리는 명백한 방법이다.</li><li>컴파일러가 경고를 생성하도록 함수를 표시할수 있다</li></ul></li><li>스위프트 오류</li></ul></li><li>암시적 방법<ul><li>비검사 예외<ul><li>세부조항일 뿐 오류를 암시적으로 알리는 방법</li><li>호출하는 쪽에서 예외가 발생할수도 있다는걸 몰라도 된다</li></ul></li><li>매직값 반환(피해야 한다)<ul><li>매직값은 코드 계약의 명백한 부분을 통해 호출하는 쪽에 알릴 수 없어서 예상을 벗어나는 결과를 가져올수 있고 버그로 이어질수 있다.</li><li>오류를 알리는 좋은 방법이 아니다</li></ul></li><li>프로미스 또는 퓨처<ul><li>프로미스와 퓨처는 오류 상태도 전달할수 있다.</li><li>호출하는 쪽에서 잠재적인 오류 시나리오를 완전히 알지 못하기 때문에 암시적인 방법</li><li>리절트 유형의 프로미스를 반환하면 명시적이지만 코드가 복잡해지기 때문에 모든 사람이 다 이렇게 사용하지 않을것이다</li></ul></li><li>어서션</li><li>체크(구현에 따라 틀려짐)</li><li>패닉</li></ul></li></ul><h3 id="복구할-수-없는-오류의-전달"><a href="#복구할-수-없는-오류의-전달" class="headerlink" title="복구할 수 없는 오류의 전달"></a>복구할 수 없는 오류의 전달</h3><ul><li>비검사 예외를 발생</li><li>프로그램이 패닉이 되도록</li><li>체크나 어셔션의 사용</li></ul><h3 id="호출하는-쪽에서-복구하기를-원할-수도-있는-오류의-전달"><a href="#호출하는-쪽에서-복구하기를-원할-수도-있는-오류의-전달" class="headerlink" title="호출하는 쪽에서 복구하기를 원할 수도 있는 오류의 전달"></a>호출하는 쪽에서 복구하기를 원할 수도 있는 오류의 전달</h3><p>비검사 예외를 사용해야 한다는 주장</p><ul><li>코드 구조 개선<ul><li>대부분의 오류 처리가 상위 계층에서 이루어질 수 있기 때문에 비검사 예외를 발생시키면 구조 개선을 할수 있다.</li></ul></li><li>개발자들이 무엇을 할 것인지에 대해서 실용적이어야 함<ul><li>너무 많은 명시적 오류 전달을 접하면 결국 잘못된 일을 한다고 주장</li></ul></li></ul><p>명시적 기법을 사용해야 한다는 주장</p><ul><li>매끄러운 오류 처리<ul><li>비검사 예외를 사용한다면 모든 오류를 매끄럽게 처리할 수있는 단일 계층을 갖기 어렵다</li></ul></li><li>실수로 오류를 무시할 수 없다<ul><li>잘못된일이 기본적으로 혹은 실수로 인해 일어나지 않는다</li></ul></li><li>개발자들이 무엇을 할 것인지에 대해서 실용적이어야 함<ul><li>비검사 예외는 코드베이스 전반에 걸쳐 제대로 문서화가 된다는 보장이 없고 개인적인 경험을 비추어 보아 문서화되지 않는 경우가 많다.</li></ul></li></ul><p>필자는 명시적인 방식을 선호</p><h3 id="컴파일러-경고를-무시하지-말라"><a href="#컴파일러-경고를-무시하지-말라" class="headerlink" title="컴파일러 경고를 무시하지 말라"></a>컴파일러 경고를 무시하지 말라</h3><p>컴파일러 경고는 어떤식으로든 코드가 의심스러우면 표시하는데 이것은 버그에 대한 조기 경고</p><h1 id="참조"><a href="#참조" class="headerlink" title="참조"></a>참조</h1><hr><ul><li><a href="http://www.yes24.com/Product/Goods/109366833">좋은코드 나쁜코드: 프로그래머의 코드 품질 개선법</a></li><li><a href="https://www.javadoc.io/doc/com.google.code.findbugs/jsr305/3.0.1/javax/annotation/CheckReturnValue.html">jsr305 CheckReturnValue</a></li><li><a href="https://jcp.org/en/jsr/detail?id=305">jsr305</a></li><li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function">async_function</a></li></ul>]]></content:encoded>
       
       <comments>https://sejoung.github.io/2023/02/2023-02-05-good_code_bad_code_4/#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>CHAPTER 3 다른 개발자와 코드 계약</title>
-      <link>https://sejoung.github.io/2023/02/2023-02-05-good_code_bad_code_3/</link>
-      <guid>https://sejoung.github.io/2023/02/2023-02-05-good_code_bad_code_3/</guid>
-      <pubDate>Sun, 05 Feb 2023 13:30:00 GMT</pubDate>
-      <description>
-      
-        
-        
-          &lt;h1 id=&quot;좋은코드-나쁜코드-프로그래머의-코드-품질-개선법-PART-I-이론&quot;&gt;&lt;a href=&quot;#좋은코드-나쁜코드-프로그래머의-코드-품질-개선법-PART-I-이론&quot; class=&quot;headerlink&quot; title=&quot;좋은코드 나쁜코드: 프로그래머의 코드
-        
-      
-      </description>
-      
-      <content:encoded><![CDATA[<h1 id="좋은코드-나쁜코드-프로그래머의-코드-품질-개선법-PART-I-이론"><a href="#좋은코드-나쁜코드-프로그래머의-코드-품질-개선법-PART-I-이론" class="headerlink" title="좋은코드 나쁜코드: 프로그래머의 코드 품질 개선법(PART I 이론)"></a>좋은코드 나쁜코드: 프로그래머의 코드 품질 개선법(PART I 이론)</h1><h2 id="CHAPTER-3-다른-개발자와-코드-계약"><a href="#CHAPTER-3-다른-개발자와-코드-계약" class="headerlink" title="CHAPTER 3 다른 개발자와 코드 계약"></a>CHAPTER 3 다른 개발자와 코드 계약</h2><p><code>예측 가능한 코드를 작성하라, 코드를 오용하기 어렵게 만들라</code> 두가지 원칙은 다른 사람이 작성한 코드와 상호작용할 때 일어날수 있는 일과 관련 있다</p><h3 id="자신의-코드와-다른-개발자의-코드"><a href="#자신의-코드와-다른-개발자의-코드" class="headerlink" title="자신의 코드와 다른 개발자의 코드"></a>자신의 코드와 다른 개발자의 코드</h3><p>1인 개발자 회사에서 일하지 않는한 다른 개발자들을 고려하지 않고는 고품질 코드를 작성할 수 없다</p><p>코드를 작성할때 고려할것 </p><ul><li>자신에게 명백하다고 해서 다른 사람에게도 명백한 것은 아니다<ul><li>자신은 문제를 해결하기 위해 몇시간 또는 몇일을 보냈지만 수정하는 사람은 충분한 시간을 갖지 못했던 사람이 수정해야 된다.</li></ul></li><li>다른 개발자는 무의식중에 여러분의 코드를 망가뜨릴 수 있다<ul><li>문제가 생기면 컴파일이 중지 되거나 테스트가 실패하도록 만드는것이 병합을 중지시킬수 있는 일이다</li></ul></li><li>시간이 지남에 따라 자신의 코드를 기억하지 못한다<ul><li>코드는 이해하기 쉬어야 하고 잘작동 하던 코드에 버그가 발생하는것이 어려워야 된다 다른 사람에게 호의를 베푸는것이고 미래의 자신을 위한 길이기도 하다</li></ul></li></ul><h3 id="여러분이-작성한-코드의-사용법을-다른-사람들은-어떻게-아는가"><a href="#여러분이-작성한-코드의-사용법을-다른-사람들은-어떻게-아는가" class="headerlink" title="여러분이 작성한 코드의 사용법을 다른 사람들은 어떻게 아는가?"></a>여러분이 작성한 코드의 사용법을 다른 사람들은 어떻게 아는가?</h3><ul><li>여러 가지 상황에서 어떤 함수를 호출해야 하는지</li><li>클래스가 무엇을 나타내는지 그리고 언제 사용되어야 하는지</li><li>어떤 값을 인수로 사용해야 하는지</li><li>코드가 수행하는 동작이 무엇인지</li><li>어떤 값을 반환하는지</li></ul><p>코드가 어떻게 사용해야 하는지 알아내는 방법</p><ul><li>함수, 클래스, 열거형 등의 이름을 살펴본다<ul><li>이름을 잘짓는것이 다른 개발자가 어떻게 사용해야 하는지 가장 잘 전달할수 있는 방법이다.</li></ul></li><li>함수와 생성자의 매개변수 유형 또는 반환값의 유형 같은 데이터 유형을 살펴본다<ul><li>유형 시스템을 사용하는 언어로 코드를 작성하는것은 오용하거나 오작동하지 못하게 하기 위한 좋은 방법이다.</li></ul></li><li>함수&#x2F;클래스 수준의 문서나 주석문을 읽어본다.<ul><li>함수및 클래스 수준의 비공식 주석문</li><li>자바독과 같은 좀더 공식적인 코드 내 문서</li><li>외부문서</li><li>단점<ul><li>다른 개발자가 이 문서들을 읽을 것이라는 보장이 없으며 실제로 읽지 않을 떄가 많다</li><li>설령 읽더라도 잘못 해석할 수 있다</li><li>문서의 업데이트가 제대로 안 될수 있다</li></ul></li></ul></li><li>직접 와서 묻거나 채팅&#x2F;이메일을 통해 문의한다<ul><li>단점<ul><li>코드를 많이 작성할수록 질문에 답하는 데 더 많은 시간을 써야 할 것이다</li><li>코드작성자가 휴가를 가면 물어볼사람이 없다</li><li>1년이 지나면 자기 자신도 그 코드를 기억하지 못한다 그래서 제한된 기간 동안만 효과가 있다.</li><li>코드를 작성한 사람이 회사를 떠날수도 있는데 그러면 코드를 사용하는 방법에 대한 지식이 사라져 버린다.</li></ul></li></ul></li><li>여러분이 작성한 함수와 클래스의 자세한 구현 코드를 읽는다.<ul><li>코드의 양이 많으면 효과를 얻기 힘들다</li><li>추상화 계층을 만드는 데 있어 요점은 개발자가 한 번에 몇 가지 개념만 처리해야 하고 그 문제가 어떻게 해결되었는지 정확히 알지 못하더라고 하위 문제에 대한 해결책을 사용할수 있어야 된다</li></ul></li></ul><h3 id="코드-계약"><a href="#코드-계약" class="headerlink" title="코드 계약"></a>코드 계약</h3><p>계약에 의한 프로그래밍 또는 계약에 의한 디자인</p><p>코드의 계약에 대한 용어의 범주</p><ul><li>선결 조건 : 코드를 호출하기 전에 사실이어야 하는것</li><li>사후 조건 : 코드가 호출된 후에 사실이어야 하는것</li><li>불변 사항 : 코드가 호출되기 전과 후에 시스템 상태를 비교해서 변경되지 않아야 하는 사항</li></ul><p>어떻게 하면 코드를 사용하는 사람이 계약을 파악하고 따라갈 수 있을지에 대해 생각하는 것이 중요하다</p><p>계약이 명확한 부분</p><ul><li>함수와 클래스 이름</li><li>인자 유형</li><li>반환 유형</li><li>검사 예외(checked exception)</li></ul><p>세부 조항</p><ul><li>주석문과 문서</li><li>비검사 예외(unchecked exception)</li></ul><p>세부조항에 너무 의존하지 말라</p><ul><li>세부조항은 일반적으로 코드 계약을 전달하기 위해 신뢰할 만한 방법이 아니다</li><li>세부조항을 제거하는 방법<ul><li>정적팩토리 함수</li><li>상태나 가변성이 클래스 외부로 노출되는 것을 없엔다</li></ul></li></ul><h3 id="체크-및-어서션"><a href="#체크-및-어서션" class="headerlink" title="체크 및 어서션"></a>체크 및 어서션</h3><p>컴파일러를 사용하여 코드 계약을 확인하는 것에 대한 대안으로 런타임 검사를 사용할 수 있다.</p><p>컴파일러를 사용하여 계약을 강제할수 있는 실질적인 방법이 없는 상황이 더러 있다.<br>이러한 경우 런타임 검사를 통해 계약을 확인하는 것이 아예 계약을 확인하지 않는 것보다 낫다.</p><p>체크 </p><ul><li>코드 계약 조건을 확인하기 위한 일반적인 방법은 체크를 사용하는 것이다.</li><li>체크는 신속한 실패와 밀접한 관계가 있다.</li></ul><p>체크가 계약조건에 따라 구분 되는 범주</p><ul><li>전제 조건 검사 : 입력 인수 확인, 일부 코드가 실행전에 유효한 상태인지 확인하는 경우</li><li>사후 상태 검사 : 반환값이 올바르거나 일부 코드 실행후 유효한 상태인지 확인하는 경우</li></ul><p>체크의 효과는 보장 되지 않는다</p><ul><li>테스트하기가 불분명한 상황에서 확인 중인 조건이 위반된다면, 코드가 배포되고 사용자가 사용하기 전까지 버그가 미노출</li><li>체크가 잘 작동해서 실패가 명백함에도 불구하고 아무도 알아차리지 못할 위험이 있다. 예외가 일어나더라고 시스템 작동이 엄추지 않게 상위 수준에서 예외가 처리되어<br>로그가 잘 기록 되어도 개발자가 신경쓰지 못하면 아무도 알아차리지 못 한다.</li></ul><p>코드에 체크가 많이 있으면 세부 조항을 없에는 것에 대해 고려해봐야 되는 신호일지도 모른다</p><h1 id="참조"><a href="#참조" class="headerlink" title="참조"></a>참조</h1><hr><ul><li><a href="http://www.yes24.com/Product/Goods/109366833">좋은코드 나쁜코드: 프로그래머의 코드 품질 개선법</a></li></ul>]]></content:encoded>
-      
-      <comments>https://sejoung.github.io/2023/02/2023-02-05-good_code_bad_code_3/#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>8장 URL 단축기 설계</title>
-      <link>https://sejoung.github.io/2023/01/2023-01-30-system_design_interview_8/</link>
-      <guid>https://sejoung.github.io/2023/01/2023-01-30-system_design_interview_8/</guid>
-      <pubDate>Mon, 30 Jan 2023 06:11:00 GMT</pubDate>
-      <description>
-      
-        
-        
-          &lt;h1 id=&quot;가상면접으로-배우는-대규모-시스템-설계-기초&quot;&gt;&lt;a href=&quot;#가상면접으로-배우는-대규모-시스템-설계-기초&quot; class=&quot;headerlink&quot; title=&quot;가상면접으로 배우는 대규모 시스템 설계 기초&quot;&gt;&lt;/a&gt;가상면접으로 배우는 대규모
-        
-      
-      </description>
-      
-      <content:encoded><![CDATA[<h1 id="가상면접으로-배우는-대규모-시스템-설계-기초"><a href="#가상면접으로-배우는-대규모-시스템-설계-기초" class="headerlink" title="가상면접으로 배우는 대규모 시스템 설계 기초"></a>가상면접으로 배우는 대규모 시스템 설계 기초</h1><h2 id="8장-URL-단축기-설계"><a href="#8장-URL-단축기-설계" class="headerlink" title="8장 URL 단축기 설계"></a>8장 URL 단축기 설계</h2><ul><li>API 엔드포인트<ul><li>URL 단축용 엔드포인트</li><li>URL 리다이렉션 엔드포인트</li></ul></li><li>URL 리다이렉션<ul><li>301 Moved Permanently : Location 헤더가 가르키는 주소로 영구 이동됨</li><li>302 Found : Location 헤더가 가르키는 주소로 일시적으로 이동</li></ul></li><li>URL 단축</li><li>해시함수<ul><li>해시길이 : 10 + 26 + 26 &#x3D; 62</li><li>해시 함수<ul><li>crc23</li><li>md5</li><li>sha-1</li><li>base62 : 흔히 사용하는 접근법 사용할수 있는 갯수가 62개라서 사용</li></ul></li></ul></li></ul><h1 id="참조"><a href="#참조" class="headerlink" title="참조"></a>참조</h1><hr><ul><li><a href="http://www.yes24.com/Product/Goods/102819435">가상 면접 사례로 배우는 대규모 시스템 설계 기초</a></li></ul>]]></content:encoded>
-      
-      <comments>https://sejoung.github.io/2023/01/2023-01-30-system_design_interview_8/#disqus_thread</comments>
     </item>
     
   </channel>

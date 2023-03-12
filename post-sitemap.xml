@@ -9,8 +9,24 @@
 
 
     <url>
+        <loc>https://sejoung.github.io/2023/03/2023-03-12-effective_kotlin_item_45/</loc>
+        <lastmod>2023-03-12T06:31:36.641Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/2023/03/2023-03-12-effective_kotlin_item_44/</loc>
+        <lastmod>2023-03-12T06:07:11.043Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://sejoung.github.io/2023/03/2023-03-10-effective_kotlin_item_43/</loc>
-        <lastmod>2023-03-10T14:01:49.469Z</lastmod>
+        <lastmod>2023-03-12T05:59:34.474Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
