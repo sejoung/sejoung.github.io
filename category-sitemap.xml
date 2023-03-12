@@ -10,7 +10,7 @@
 
     <url>
         <loc>https://sejoung.github.io/categories/kotlin/</loc>
-        <lastmod>2023-03-12T06:31:36.641Z</lastmod>
+        <lastmod>2023-03-12T09:11:11.699Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
@@ -107,14 +107,14 @@
     </url>
 
     <url>
-        <loc>https://sejoung.github.io/categories/%25ED%259A%258C%25EA%25B3%25A0/</loc>
+        <loc>https://sejoung.github.io/categories/git/</loc>
         <lastmod>2022-10-29T00:43:30.771Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>https://sejoung.github.io/categories/git/</loc>
+        <loc>https://sejoung.github.io/categories/%25ED%259A%258C%25EA%25B3%25A0/</loc>
         <lastmod>2022-10-29T00:43:30.771Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
@@ -415,14 +415,14 @@
     </url>
 
     <url>
-        <loc>https://sejoung.github.io/categories/cloud/</loc>
+        <loc>https://sejoung.github.io/categories/%25EC%259E%25A5%25EC%2595%25A0%25EB%25B3%25B5%25EA%25B5%25AC/</loc>
         <lastmod>2022-10-29T00:43:30.729Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>https://sejoung.github.io/categories/%25EC%259E%25A5%25EC%2595%25A0%25EB%25B3%25B5%25EA%25B5%25AC/</loc>
+        <loc>https://sejoung.github.io/categories/cloud/</loc>
         <lastmod>2022-10-29T00:43:30.729Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
