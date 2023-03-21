@@ -45,7 +45,18 @@ pipeline {
 
 ```
 
+위는 jenkinsfile 한정으로 인식 시키는 방법이고 global 설정을 위해서는 
+
+jenkins 관리 -> System -> Global properties 
+메뉴에서 Environment variables을 설정 해주면 된다 
+
+이름은 `PATH+EXTRA`
+값은 `/opt/homebrew/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/bin` 이런식으로 설정하면 설정이 된다
+
+
 # 참고자료
+-----
+
 * [pipeline syntax](https://www.jenkins.io/doc/book/pipeline/syntax/)
 * [archiveArtifacts](https://www.jenkins.io/doc/pipeline/steps/core/)
 * [jenkins-hudson-environment-variables](https://stackoverflow.com/questions/5818403/jenkins-hudson-environment-variables)
