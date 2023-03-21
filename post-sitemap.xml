@@ -9,6 +9,22 @@
 
 
     <url>
+        <loc>https://sejoung.github.io/2021/05/2021-05-07-jenkinsfile/</loc>
+        <lastmod>2023-03-21T12:02:16.079Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/2023/03/2023-03-21-effective_kotlin_item_47/</loc>
+        <lastmod>2023-03-21T11:56:45.898Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://sejoung.github.io/2023/03/2023-03-12-effective_kotlin_item_46/</loc>
         <lastmod>2023-03-12T09:11:11.699Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -1538,14 +1554,6 @@
 
     <url>
         <loc>https://sejoung.github.io/2021/04/2021-04-22-query_dsl_spring_boot_datajpatest/</loc>
-        <lastmod>2022-10-29T00:43:30.769Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://sejoung.github.io/2021/05/2021-05-07-jenkinsfile/</loc>
         <lastmod>2022-10-29T00:43:30.769Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
