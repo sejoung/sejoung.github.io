@@ -183,3 +183,4 @@ Solarized Dark color scheme를 사용
 * [how-to-configure-your-macos-terminal-with-zsh](https://www.freecodecamp.org/news/how-to-configure-your-macos-terminal-with-zsh-like-a-pro-c0ab3f3c1156/)
 * [MonitorControl](https://github.com/MonitorControl/MonitorControl)
 * [keka](https://www.keka.io)
+* [rectangleapp](https://rectangleapp.com/)
