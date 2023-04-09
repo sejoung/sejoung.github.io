@@ -8,8 +8,27 @@
     <atom:link href="/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>잘정리하자</description>
-    <pubDate>Mon, 27 Mar 2023 12:48:11 GMT</pubDate>
+    <pubDate>Sun, 09 Apr 2023 12:50:36 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>실용주의 프로그래머 20주년 기념판 1장 ~ 2장</title>
+      <link>https://sejoung.github.io/2023/04/2023-04-09-The_Pragmatic_Programmer_01/</link>
+      <guid>https://sejoung.github.io/2023/04/2023-04-09-The_Pragmatic_Programmer_01/</guid>
+      <pubDate>Sun, 09 Apr 2023 12:28:00 GMT</pubDate>
+      <description>
+      
+        
+        
+          &lt;h1 id=&quot;실용주의-프로그래머&quot;&gt;&lt;a href=&quot;#실용주의-프로그래머&quot; class=&quot;headerlink&quot; title=&quot;실용주의 프로그래머&quot;&gt;&lt;/a&gt;실용주의 프로그래머&lt;/h1&gt;&lt;h2 id=&quot;1장-실용주의-철학&quot;&gt;&lt;a href=&quot;#1장-실용주의-철학&quot;
+        
+      
+      </description>
+      
+      <content:encoded><![CDATA[<h1 id="실용주의-프로그래머"><a href="#실용주의-프로그래머" class="headerlink" title="실용주의 프로그래머"></a>실용주의 프로그래머</h1><h2 id="1장-실용주의-철학"><a href="#1장-실용주의-철학" class="headerlink" title="1장. 실용주의 철학"></a>1장. 실용주의 철학</h2><h3 id="항목-1-당신의-인생이다"><a href="#항목-1-당신의-인생이다" class="headerlink" title="항목 1. 당신의 인생이다"></a>항목 1. 당신의 인생이다</h3><p>주도적으로 행동해서 기회를 잡아라</p><h3 id="항목-2-고양이가-내-소스-코드를-삼켰어요"><a href="#항목-2-고양이가-내-소스-코드를-삼켰어요" class="headerlink" title="항목 2. 고양이가 내 소스 코드를 삼켰어요"></a>항목 2. 고양이가 내 소스 코드를 삼켰어요</h3><p>팀 내 신뢰를 얻어야 된다 </p><p>책임지기</p><ul><li>어설픈 변명 보다는 대안을 제시</li></ul><h3 id="항목-3-소프트웨어-엔트로피"><a href="#항목-3-소프트웨어-엔트로피" class="headerlink" title="항목 3. 소프트웨어 엔트로피"></a>항목 3. 소프트웨어 엔트로피</h3><p>깨진 창문을 내버려 두지 말자</p><p>우선 망가 뜨리지 말자</p><h3 id="항목-4-돌멩이-수프와-삶은-개구리"><a href="#항목-4-돌멩이-수프와-삶은-개구리" class="headerlink" title="항목 4. 돌멩이 수프와 삶은 개구리"></a>항목 4. 돌멩이 수프와 삶은 개구리</h3><p>시작의 피로</p><p>변화의 촉매가 되라</p><p>큰 그림을 기억하라</p><h3 id="항목-5-적당히-괜찮은-소프트웨어"><a href="#항목-5-적당히-괜찮은-소프트웨어" class="headerlink" title="항목 5. 적당히 괜찮은 소프트웨어"></a>항목 5. 적당히 괜찮은 소프트웨어</h3><p>품질을 요구사항으로 만들어라</p><p>멈춰야 할때을 알아야 된다</p><h3 id="항목-6-지식-포트폴리오"><a href="#항목-6-지식-포트폴리오" class="headerlink" title="항목 6. 지식 포트폴리오"></a>항목 6. 지식 포트폴리오</h3><p>지식의 포트 폴리오에 주기적으로 투자하라</p><p>읽고 듣는것을 비판적으로 분석하라</p><h3 id="항목-7-소통하라"><a href="#항목-7-소통하라" class="headerlink" title="항목 7. 소통하라!"></a>항목 7. 소통하라!</h3><p>한국어든 영어든 하나의 프로그램언어일 뿐이다</p><ul><li>청중을 알라</li><li>말하고 싶은 게 무언지 알라</li><li>때를 골라라</li><li>스타일을 골라라</li><li>멋져 보이게 하라</li><li>청중을 참여시켜라</li><li>경청 하라</li><li>응답 하라</li><li>문서화</li></ul><h2 id="2장-실용주의-접근법"><a href="#2장-실용주의-접근법" class="headerlink" title="2장. 실용주의 접근법"></a>2장. 실용주의 접근법</h2><h3 id="항목-8-좋은-설계의-핵심"><a href="#항목-8-좋은-설계의-핵심" class="headerlink" title="항목 8. 좋은 설계의 핵심"></a>항목 8. 좋은 설계의 핵심</h3><p>좋은 설계는 나쁜설계 보다 바꾸기 쉽다</p><h3 id="항목-9-DRY-중복의-해악"><a href="#항목-9-DRY-중복의-해악" class="headerlink" title="항목 9. DRY: 중복의 해악"></a>항목 9. DRY: 중복의 해악</h3><p>반복하지 말라</p><p>모든 코드의 중복의 지식의 중복은 아니다</p><p>재사용하기 쉽게 만들어라</p><h3 id="항목-10-직교성"><a href="#항목-10-직교성" class="headerlink" title="항목 10. 직교성"></a>항목 10. 직교성</h3><p>관련 없는것들 간에 서로 영향이 없도록 하라</p><h3 id="항목-11-가역성"><a href="#항목-11-가역성" class="headerlink" title="항목 11. 가역성"></a>항목 11. 가역성</h3><p>최종 결정이란 없다</p><p>유행을 쫒지말라</p><h3 id="항목-12-예광탄"><a href="#항목-12-예광탄" class="headerlink" title="항목 12. 예광탄"></a>항목 12. 예광탄</h3><p>목표물을 찾기 위해 예광탄을 쏴라</p><h3 id="항목-13-프로토타입과-포스트잇"><a href="#항목-13-프로토타입과-포스트잇" class="headerlink" title="항목 13. 프로토타입과 포스트잇"></a>항목 13. 프로토타입과 포스트잇</h3><p>프로토타입을 코드로 만들 때는 시작하기 전에 항상 모든 사람에게 여러분이 폐기 처분할 코드를 작성하고 있다는 사실을 이해 시켜야 한다</p><h3 id="항목-14-도메인-언어"><a href="#항목-14-도메인-언어" class="headerlink" title="항목 14. 도메인 언어"></a>항목 14. 도메인 언어</h3><p>언어의 한계가 곧 자기 세계의 한계이다</p><p>문제 도메인에 가깝게 프로그래밍 하라</p><h3 id="항목-15-추정"><a href="#항목-15-추정" class="headerlink" title="항목 15. 추정"></a>항목 15. 추정</h3><p>추정으로 놀람을 피하라</p><p>코드와 함께 일정도 반복해서 조정하라</p><h1 id="참조"><a href="#참조" class="headerlink" title="참조"></a>참조</h1><hr><ul><li><a href="http://www.yes24.com/Product/Goods/106225986">이펙티브 코틀린</a></li></ul>]]></content:encoded>
+      
+      <comments>https://sejoung.github.io/2023/04/2023-04-09-The_Pragmatic_Programmer_01/#disqus_thread</comments>
+    </item>
     
     <item>
       <title>아이템 52: mutable 컬렉션 사용을 고려하라</title>
@@ -370,25 +389,6 @@
       <content:encoded><![CDATA[<h1 id="좋은코드-나쁜코드-프로그래머의-코드-품질-개선법-PART-II-실전"><a href="#좋은코드-나쁜코드-프로그래머의-코드-품질-개선법-PART-II-실전" class="headerlink" title="좋은코드 나쁜코드: 프로그래머의 코드 품질 개선법(PART II 실전)"></a>좋은코드 나쁜코드: 프로그래머의 코드 품질 개선법(PART II 실전)</h1><h2 id="CHAPTER-5-가독성-높은-코드를-작성하라"><a href="#CHAPTER-5-가독성-높은-코드를-작성하라" class="headerlink" title="CHAPTER 5 가독성 높은 코드를 작성하라"></a>CHAPTER 5 가독성 높은 코드를 작성하라</h2><p>가독성은 주관적인것 </p><h3 id="서술형-명칭-사용"><a href="#서술형-명칭-사용" class="headerlink" title="서술형 명칭 사용"></a>서술형 명칭 사용</h3><ul><li>서술적이지 않은 이름은 코드를 읽기 어렵게 만든다</li><li>주석문으로 서술적인 이름을 대체할수 없다<ul><li>주석도 유지보수 해야된다</li></ul></li></ul><h3 id="주석문의-적절한-사용"><a href="#주석문의-적절한-사용" class="headerlink" title="주석문의 적절한 사용"></a>주석문의 적절한 사용</h3><p>주석문의 목적</p><ul><li>코드가 무엇을 하는지 설명</li><li>코드가 왜 그 일을 하는지 설명</li><li>사용 지침 등 기타 정보 제공</li></ul><p>코드 기능을 설명하기 위해 주석문을 많이 추가해야 되면 가독성이 떨어진다는 신호</p><ul><li>중복된 주석문은 유해할 수 있다<ul><li>주석도 유지보수 해야 된다</li><li>코드를 지저분하게 만든다</li></ul></li><li>주석문으로 가독성 높은 코드를 대체할 수 없다</li><li>주석문은 코드의 이유를 설명하는데 유용하다</li><li>주석문은 유용한 상위 수준의 요약 정보를 제공할 수 있다<ul><li>책 읽을때 줄거리</li></ul></li></ul><h3 id="코드-줄-수를-고정하지-말라"><a href="#코드-줄-수를-고정하지-말라" class="headerlink" title="코드 줄 수를 고정하지 말라"></a>코드 줄 수를 고정하지 말라</h3><ul><li>간결하지만 이해하기 어려운 코드는 피해라<ul><li>많은줄이 필요하더라고 가독성 높은 코드를 작성하라</li></ul></li></ul><h3 id="일관된-코딩-스타일을-고수하라"><a href="#일관된-코딩-스타일을-고수하라" class="headerlink" title="일관된 코딩 스타일을 고수하라"></a>일관된 코딩 스타일을 고수하라</h3><ul><li>일관적이지 않은 코딩 스타일은 혼동을 일으킬 수 있다<ul><li>스타일 가이드를 채택하고 따르라</li></ul></li></ul><h3 id="깊이-중첩된-코드를-피하라"><a href="#깊이-중첩된-코드를-피하라" class="headerlink" title="깊이 중첩된 코드를 피하라"></a>깊이 중첩된 코드를 피하라</h3><p>일반적인 코드가 갖는 중첩되는 블록</p><ul><li><p>함수가 호출되면 그 함수가 실행되는 코드가 하나의 블록이 된다</p></li><li><p>if문의 조건이 참일 때 실행되는 코드는 하나의 블록이 된다</p></li><li><p>for루프의 각 반복시 실행되는 코드는 하나의 블록이 된다</p></li><li><p>깊이 중첩된 코드는 읽기 어려울 수 있다</p><ul><li>중첩을 최소화하기 위한 구조 변경</li></ul></li><li><p>중첩은 너무 많은 일을 한 결과물이다</p><ul><li>더 작은 함수로 분리</li></ul></li></ul><h3 id="함수-호출도-가독성이-있어야-한다"><a href="#함수-호출도-가독성이-있어야-한다" class="headerlink" title="함수 호출도 가독성이 있어야 한다"></a>함수 호출도 가독성이 있어야 한다</h3><p>함수의 이름이 잘 명명되면 그함수가 무슨일을 하는지 분명하지만 인수가 무엇이고 무슨역활을 하지는 명롹하지 않다면 호출이 이해되지 않는다</p><ul><li>매개변수는 이해하기 어려울 수 있다<ul><li>명명된 매개변수 사용</li><li>서술적 유형 사용<ul><li>열거형</li><li>클래스</li></ul></li></ul></li><li>때로는 훌륭한 해결책이 없다<ul><li>주석?</li><li>세터 함수</li><li>빌더 패턴</li></ul></li><li>IDE는 어떤가?<ul><li>가독성에는 의존하지 않는것이 좋다<ul><li>모든 개발자가 사용하는게 아닐수 있다</li></ul></li></ul></li></ul><h3 id="설명되지-않은-값을-사용하지-말라"><a href="#설명되지-않은-값을-사용하지-말라" class="headerlink" title="설명되지 않은 값을 사용하지 말라"></a>설명되지 않은 값을 사용하지 말라</h3><p>하드코드로 작성된 값이 필요한 경우</p><ul><li>한 수량을 다른 수량으로 변환 할때 사용하는 계수</li><li>작업이 실패할 경우 재시도의 최대 횟수와 같이 조정 가능한 파라미터 값</li><li>어떤 값이 채워질 수 있는 템플릿을 나타내는 문자열</li></ul><p>하드 코드로 작성된 모든 값에 있는 두가지 중요한 정보</p><ul><li><p>값이 무엇인지</p></li><li><p>값이 무엇을 의미 하는지</p></li><li><p>설명되지 않은 값은 혼란스러울 수 있다</p><ul><li>잘 명명된 상수를 사용하라</li><li>잘 명명된 함수를 사용하라<ul><li>상수를 반환하는 공급자 함수</li><li>변환을 수행하는 헬퍼 함수</li></ul></li></ul></li></ul><h3 id="익명-함수를-적절하게-사용하라"><a href="#익명-함수를-적절하게-사용하라" class="headerlink" title="익명 함수를 적절하게 사용하라"></a>익명 함수를 적절하게 사용하라</h3><ul><li>익명 함수는 간단한 로직에 좋다<ul><li>재사용 관점에서 명명함수가 유용할때가 있다</li></ul></li><li>익명 함수는 가독성이 떨어질 수 있다<ul><li>대신 명명 함수를 사용하라</li></ul></li><li>익명 함수가 길면 문제가 될 수 있다<ul><li>긴 익명 함수를 여러 개의 명명 함수로 나누라</li></ul></li></ul><h3 id="프로그래밍-언어의-새로운-기능을-적절하게-사용하라"><a href="#프로그래밍-언어의-새로운-기능을-적절하게-사용하라" class="headerlink" title="프로그래밍 언어의 새로운 기능을 적절하게 사용하라"></a>프로그래밍 언어의 새로운 기능을 적절하게 사용하라</h3><ul><li>새 기능은 코드를 개선할 수 있다</li><li>불분명한 기능은 혼동을 일으킬 수 있다</li><li>작업에 가장 적합한 도구를 사용하라</li></ul><h1 id="참조"><a href="#참조" class="headerlink" title="참조"></a>참조</h1><hr><ul><li><a href="http://www.yes24.com/Product/Goods/109366833">좋은코드 나쁜코드: 프로그래머의 코드 품질 개선법</a></li></ul>]]></content:encoded>
       
       <comments>https://sejoung.github.io/2023/02/2023-02-18-good_code_bad_code_5/#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>15장 구글 드라이브 설계</title>
-      <link>https://sejoung.github.io/2023/02/2023-02-17-system_design_interview_15/</link>
-      <guid>https://sejoung.github.io/2023/02/2023-02-17-system_design_interview_15/</guid>
-      <pubDate>Fri, 17 Feb 2023 14:02:00 GMT</pubDate>
-      <description>
-      
-        
-        
-          &lt;h1 id=&quot;가상면접으로-배우는-대규모-시스템-설계-기초&quot;&gt;&lt;a href=&quot;#가상면접으로-배우는-대규모-시스템-설계-기초&quot; class=&quot;headerlink&quot; title=&quot;가상면접으로 배우는 대규모 시스템 설계 기초&quot;&gt;&lt;/a&gt;가상면접으로 배우는 대규모
-        
-      
-      </description>
-      
-      <content:encoded><![CDATA[<h1 id="가상면접으로-배우는-대규모-시스템-설계-기초"><a href="#가상면접으로-배우는-대규모-시스템-설계-기초" class="headerlink" title="가상면접으로 배우는 대규모 시스템 설계 기초"></a>가상면접으로 배우는 대규모 시스템 설계 기초</h1><h2 id="15장-구글-드라이브-설계"><a href="#15장-구글-드라이브-설계" class="headerlink" title="15장 구글 드라이브 설계"></a>15장 구글 드라이브 설계</h2><ul><li>블록 저장소 서버<ul><li>큰 파일 업데이트시 해결방법<ul><li>델타 동기화 : 수정이 일어난 블록만 동기화</li><li>압축 : 블록단위로 압축하면 크기를 많이 줄일수 있다</li></ul></li></ul></li><li>높은 일관성 요구사항<ul><li>ACID 를 지원하는 데이터베이스 선택</li></ul></li><li>알림 서비스<ul><li>롱폴링 : 드랍박스</li><li>웹소켓</li></ul></li><li>저장소 공간 절약<ul><li>중복 제거</li><li>지능적 백업 전략<ul><li>한도 설정</li><li>중요한 버전만 보관</li></ul></li><li>자주 쓰이지 않는 데이터는 아카이빙 저장소로 옮긴다</li></ul></li></ul><h1 id="참조"><a href="#참조" class="headerlink" title="참조"></a>참조</h1><hr><ul><li><a href="http://www.yes24.com/Product/Goods/102819435">가상 면접 사례로 배우는 대규모 시스템 설계 기초</a></li></ul>]]></content:encoded>
-      
-      <comments>https://sejoung.github.io/2023/02/2023-02-17-system_design_interview_15/#disqus_thread</comments>
     </item>
     
   </channel>
