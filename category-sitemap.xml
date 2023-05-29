@@ -9,15 +9,22 @@
 
 
     <url>
-        <loc>https://sejoung.github.io/categories/books/</loc>
-        <lastmod>2023-04-24T01:30:18.860Z</lastmod>
+        <loc>https://sejoung.github.io/categories/k8s/</loc>
+        <lastmod>2023-05-29T13:53:38.126Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://sejoung.github.io/categories/java/</loc>
-        <lastmod>2023-04-19T13:13:22.752Z</lastmod>
+        <lastmod>2023-04-24T02:50:28.951Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/categories/books/</loc>
+        <lastmod>2023-04-24T01:30:18.860Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
@@ -464,14 +471,14 @@
     </url>
 
     <url>
-        <loc>https://sejoung.github.io/categories/scouter-apm/</loc>
+        <loc>https://sejoung.github.io/categories/2017-%25EC%2584%25B8%25EB%25AF%25B8%25EB%2582%2598/</loc>
         <lastmod>2022-10-29T00:43:30.725Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>https://sejoung.github.io/categories/2017-%25EC%2584%25B8%25EB%25AF%25B8%25EB%2582%2598/</loc>
+        <loc>https://sejoung.github.io/categories/scouter-apm/</loc>
         <lastmod>2022-10-29T00:43:30.725Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
