@@ -9,15 +9,15 @@
 
 
     <url>
-        <loc>https://sejoung.github.io/categories/k8s/</loc>
-        <lastmod>2023-05-29T13:53:38.126Z</lastmod>
+        <loc>https://sejoung.github.io/categories/java/</loc>
+        <lastmod>2023-06-14T12:25:33.784Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>https://sejoung.github.io/categories/java/</loc>
-        <lastmod>2023-04-24T02:50:28.951Z</lastmod>
+        <loc>https://sejoung.github.io/categories/k8s/</loc>
+        <lastmod>2023-05-29T13:53:38.126Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>

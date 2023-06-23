@@ -3,6 +3,34 @@
 
 
     <url>
+        <loc>https://sejoung.github.io/tags/mapper-locations/</loc>
+        <lastmod>2023-06-14T12:25:33.784Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/tags/Invalid-bound-statement-not-found/</loc>
+        <lastmod>2023-06-14T12:25:33.784Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/tags/Multi-Module/</loc>
+        <lastmod>2023-06-14T12:25:33.784Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/tags/mybatis/</loc>
+        <lastmod>2023-06-14T12:25:33.784Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>https://sejoung.github.io/tags/%EB%A0%8C%EC%A6%88/</loc>
         <lastmod>2023-05-29T13:53:38.126Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -1922,13 +1950,6 @@
 
     <url>
         <loc>https://sejoung.github.io/tags/JPA/</loc>
-        <lastmod>2022-10-29T00:43:30.767Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://sejoung.github.io/tags/mybatis/</loc>
         <lastmod>2022-10-29T00:43:30.767Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
