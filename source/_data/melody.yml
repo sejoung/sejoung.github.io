@@ -83,8 +83,6 @@ fireworks: false
 # ---------------
 baidu_analytics:
 
-google_analytics: UA-87353572-1
-
 google_analytics_MeasurementID: G-NVRTGLD8RZ
 
 # stylesheets loaded in the <head>
