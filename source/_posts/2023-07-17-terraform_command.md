@@ -50,6 +50,12 @@ terraform fmt
 terraform validate
 ```
 
+## 인프라 계획
+
+```shell
+terraform plan
+```
+
 ## 인프라 생성
 
 ```shell
