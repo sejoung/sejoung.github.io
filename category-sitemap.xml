@@ -9,8 +9,8 @@
 
 
     <url>
-        <loc>https://sejoung.github.io/categories/os/</loc>
-        <lastmod>2023-10-17T05:50:26.183Z</lastmod>
+        <loc>https://sejoung.github.io/categories/tool/</loc>
+        <lastmod>2023-10-17T05:53:46.214Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
@@ -116,13 +116,6 @@
     <url>
         <loc>https://sejoung.github.io/categories/sql/</loc>
         <lastmod>2022-12-30T02:26:20.389Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://sejoung.github.io/categories/tool/</loc>
-        <lastmod>2022-12-30T02:26:20.387Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>

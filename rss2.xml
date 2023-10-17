@@ -8,11 +8,11 @@
     <atom:link href="/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>잘정리하자</description>
-    <pubDate>Tue, 17 Oct 2023 05:50:26 GMT</pubDate>
+    <pubDate>Tue, 17 Oct 2023 05:53:46 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
-      <title>리눅스에서 gpu 사용량 모니터링</title>
+      <title>리눅스에서 gpu 사용량 모니터링 툴</title>
       <link>https://sejoung.github.io/2023/10/2023-10-17-gpu_monitoring/</link>
       <guid>https://sejoung.github.io/2023/10/2023-10-17-gpu_monitoring/</guid>
       <pubDate>Tue, 17 Oct 2023 05:45:00 GMT</pubDate>

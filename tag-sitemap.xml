@@ -3,22 +3,22 @@
 
 
     <url>
-        <loc>https://sejoung.github.io/tags/%EA%B7%B8%EB%9E%98%ED%94%BD-%EC%B9%B4%EB%93%9C-%EB%AA%A8%EB%8B%88%ED%84%B0%EB%A7%81/</loc>
-        <lastmod>2023-10-17T05:50:26.183Z</lastmod>
+        <loc>https://sejoung.github.io/tags/%EB%AA%A8%EB%8B%88%ED%84%B0%EB%A7%81%ED%88%B4/</loc>
+        <lastmod>2023-10-17T05:53:46.214Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/tags/%EA%B7%B8%EB%9E%98%ED%94%BD-%EC%B9%B4%EB%93%9C-%EB%AA%A8%EB%8B%88%ED%84%B0%EB%A7%81%ED%88%B4/</loc>
+        <lastmod>2023-10-17T05:53:46.214Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://sejoung.github.io/tags/gpu-monitoring/</loc>
-        <lastmod>2023-10-17T05:50:26.183Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://sejoung.github.io/tags/%EB%AA%A8%EB%8B%88%ED%84%B0%EB%A7%81/</loc>
-        <lastmod>2023-10-17T05:50:26.183Z</lastmod>
+        <lastmod>2023-10-17T05:53:46.214Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
@@ -3238,6 +3238,13 @@
 
     <url>
         <loc>https://sejoung.github.io/tags/ManagedAttribute/</loc>
+        <lastmod>2022-10-29T00:43:30.754Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/tags/%EB%AA%A8%EB%8B%88%ED%84%B0%EB%A7%81/</loc>
         <lastmod>2022-10-29T00:43:30.754Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
