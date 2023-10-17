@@ -9,6 +9,22 @@
 
 
     <url>
+        <loc>https://sejoung.github.io/2023/10/2023-10-17-gpu_monitoring/</loc>
+        <lastmod>2023-10-17T05:50:26.183Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/2023/09/2023-09-22-startup/</loc>
+        <lastmod>2023-10-17T04:45:28.274Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://sejoung.github.io/2023/07/2023-07-17-terraform_command/</loc>
         <lastmod>2023-07-17T08:19:25.495Z</lastmod>
         <changefreq>weekly</changefreq>
