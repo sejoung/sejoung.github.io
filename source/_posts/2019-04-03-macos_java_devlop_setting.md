@@ -184,3 +184,4 @@ Solarized Dark color scheme를 사용
 * [MonitorControl](https://github.com/MonitorControl/MonitorControl)
 * [keka](https://www.keka.io)
 * [rectangleapp](https://rectangleapp.com/)
+* [maccy.app](https://maccy.app)
