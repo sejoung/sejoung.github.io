@@ -9,6 +9,14 @@
 
 
     <url>
+        <loc>https://sejoung.github.io/2023/10/2023-10-24-git_error/</loc>
+        <lastmod>2023-10-25T04:29:02.470Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://sejoung.github.io/2023/10/2023-10-26-stable_diffusion_webui_docker_install/</loc>
         <lastmod>2023-10-25T01:49:29.431Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -19,14 +27,6 @@
     <url>
         <loc>https://sejoung.github.io/2023/10/2023-10-23-python_venv/</loc>
         <lastmod>2023-10-24T06:48:58.789Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://sejoung.github.io/2023/10/2023-10-24-git_error/</loc>
-        <lastmod>2023-10-24T06:26:43.737Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
