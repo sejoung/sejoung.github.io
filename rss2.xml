@@ -8,8 +8,27 @@
     <atom:link href="/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>잘정리하자</description>
-    <pubDate>Wed, 25 Oct 2023 01:49:29 GMT</pubDate>
+    <pubDate>Thu, 26 Oct 2023 08:27:30 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>FirebaseError Installations: Could not process request. Application offline.</title>
+      <link>https://sejoung.github.io/2023/10/2023-10-26-FirebaseError/</link>
+      <guid>https://sejoung.github.io/2023/10/2023-10-26-FirebaseError/</guid>
+      <pubDate>Thu, 26 Oct 2023 08:24:00 GMT</pubDate>
+      <description>
+      
+        
+        
+          &lt;h1 id=&quot;FirebaseError-Installations-Could-not-process-request-Application-offline&quot;&gt;&lt;a href=&quot;#FirebaseError-Installations-Could-not-process-r
+        
+      
+      </description>
+      
+      <content:encoded><![CDATA[<h1 id="FirebaseError-Installations-Could-not-process-request-Application-offline"><a href="#FirebaseError-Installations-Could-not-process-request-Application-offline" class="headerlink" title="FirebaseError Installations: Could not process request. Application offline."></a>FirebaseError Installations: Could not process request. Application offline.</h1><p>갑자기 특정 페이지에서 에러가나면서 랜더링이 되지 않은 이슈가 있었다 콘솔 로그를 보니 아래에 에러메시지가 나오고 있었다</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">FirebaseError Installations: Could not process request. Application offline.</span><br></pre></td></tr></table></figure><p>플러그인 문제인줄 알고 모든 플러그인 삭제 및 캐쉬 삭제 후에도 동일한 이슈가 발생하였다.</p><p>구글링을 해보니 아래와 같은 이슈가 있었다.</p><ul><li><a href="https://github.com/firebase/firebase-js-sdk/issues/4922">FirebaseError Installations: Could not process request. Application offline.</a></li></ul><p>해결은 되지 않았지만 한명이 와이파이를 온오프 해보라는 메시지가 있었다 그것으로 해결이 되었다.</p><h1 id="참조"><a href="#참조" class="headerlink" title="참조"></a>참조</h1><hr><ul><li><a href="https://github.com/firebase/firebase-js-sdk/issues/4922">FirebaseError Installations: Could not process request. Application offline.</a></li></ul>]]></content:encoded>
+      
+      <comments>https://sejoung.github.io/2023/10/2023-10-26-FirebaseError/#disqus_thread</comments>
+    </item>
     
     <item>
       <title>stable-diffusion-webui docker 설치</title>
@@ -371,25 +390,6 @@
       <content:encoded><![CDATA[<h1 id="이펙티브-코틀린-효율성"><a href="#이펙티브-코틀린-효율성" class="headerlink" title="이펙티브 코틀린(효율성)"></a>이펙티브 코틀린(효율성)</h1><h2 id="아이템-47-인라인-클래스의-사용을-고려하라"><a href="#아이템-47-인라인-클래스의-사용을-고려하라" class="headerlink" title="아이템 47: 인라인 클래스의 사용을 고려하라"></a>아이템 47: 인라인 클래스의 사용을 고려하라</h2><p>inline 으로 만들수 있는것은 함수뿐만 아니다 하나의 값을 보유하는 객체도 inline 으로 만들수 있다</p><p>inline 클래스는 아래 상황에 많이 쓰인다</p><ul><li>측정 단위를 표현할때</li><li>타입 오용으로 발생하는 문제를 막을때</li></ul><p>인터페이스를 구현하는 인라인 클래스는 inline 으로 동작하지 않는다<br>그래서 장점이 아무것도 없다</p><p>typealias 를 사용하면 타입에 새로운 이름을 붙혀줄수 있다<br>하지만 안전하지 않다 </p><p>인라인 클래스를 사용하면 오버헤드없이 타입을 래핑 할 수 있다</p><h1 id="참조"><a href="#참조" class="headerlink" title="참조"></a>참조</h1><hr><ul><li><a href="http://www.yes24.com/Product/Goods/106225986">이펙티브 코틀린</a></li></ul>]]></content:encoded>
       
       <comments>https://sejoung.github.io/2023/03/2023-03-21-effective_kotlin_item_47/#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>아이템 46: 함수 타입 파라미터를 갖는 함수에 inline 한정자를 붙여라</title>
-      <link>https://sejoung.github.io/2023/03/2023-03-12-effective_kotlin_item_46/</link>
-      <guid>https://sejoung.github.io/2023/03/2023-03-12-effective_kotlin_item_46/</guid>
-      <pubDate>Sun, 12 Mar 2023 08:52:00 GMT</pubDate>
-      <description>
-      
-        
-        
-          &lt;h1 id=&quot;이펙티브-코틀린-효율성&quot;&gt;&lt;a href=&quot;#이펙티브-코틀린-효율성&quot; class=&quot;headerlink&quot; title=&quot;이펙티브 코틀린(효율성)&quot;&gt;&lt;/a&gt;이펙티브 코틀린(효율성)&lt;/h1&gt;&lt;h2 id=&quot;아이템-46-함수-타입-파라미터를-갖는-함
-        
-      
-      </description>
-      
-      <content:encoded><![CDATA[<h1 id="이펙티브-코틀린-효율성"><a href="#이펙티브-코틀린-효율성" class="headerlink" title="이펙티브 코틀린(효율성)"></a>이펙티브 코틀린(효율성)</h1><h2 id="아이템-46-함수-타입-파라미터를-갖는-함수에-inline-한정자를-붙여라"><a href="#아이템-46-함수-타입-파라미터를-갖는-함수에-inline-한정자를-붙여라" class="headerlink" title="아이템 46: 함수 타입 파라미터를 갖는 함수에 inline 한정자를 붙여라"></a>아이템 46: 함수 타입 파라미터를 갖는 함수에 inline 한정자를 붙여라</h2><p>inline 한정자의 역활은 컴파일 시점에 함수를 호출하는 부분을 함수의 본문으로 대체하는것</p><p>inline 한정자의 장점</p><ul><li>타입 아규먼트에 reified 한정자를 붙여서 사용할수 있다<ul><li>reified 한정자를 지정하면 타입 파라미터를 사용한 부분이 타입 아규먼트로 대체된다</li></ul></li><li>함수 타입 파라미터를 가진 함수가 훨씬 빠르게 동작한다<ul><li>함수호출과 리턴을 위해 점프하는 과정과 백스텍을 추적하는 과정이 없기 때문</li><li>함수 타입이 없을때는 사용하지 않는것을 권장</li></ul></li><li>비지역 리턴을 사용할수 있다<ul><li>일반적인 함수는 return을 사용할수 없다<ul><li>함수 리터널이 컴파일 될때 함수가 객체로 래핑되어 발생하는 문제</li></ul></li></ul></li></ul><p>inline 한정자의 비용</p><ul><li>인라인 함수는 재귀적으로 동작할수 없다</li></ul><p>crossinline : 아규먼트로 인라인 함수를 받지만 비지역적 리턴을 하는 함수는 받을수 없게 만듬</p><p>noinline : 아규먼트로 인라인 함수를 받을수 없게 만듬</p><h1 id="참조"><a href="#참조" class="headerlink" title="참조"></a>참조</h1><hr><ul><li><a href="http://www.yes24.com/Product/Goods/106225986">이펙티브 코틀린</a></li></ul>]]></content:encoded>
-      
-      <comments>https://sejoung.github.io/2023/03/2023-03-12-effective_kotlin_item_46/#disqus_thread</comments>
     </item>
     
   </channel>
