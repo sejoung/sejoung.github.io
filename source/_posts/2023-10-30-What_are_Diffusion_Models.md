@@ -206,3 +206,4 @@ Imagen은 U- net을 효율적으로 만들기 위해 U-net의 여러 디자인�
 * [Bayesian Learning via Stochastic Gradient Langevin Dynamics](https://www.stats.ox.ac.uk/~teh/research/compstats/WelTeh2011a.pdf)
 * [Diffusion Models Beat GANs on Image Synthesis](https://arxiv.org/abs/2105.05233)
 * [Diffusion model 설명 (Diffusion model이란? Diffusion model 증명)](https://process-mining.tistory.com/182)
+* [Diffusion Model 설명 – 기초부터 응용까지](https://ffighting.net/deep-learning-paper-review/diffusion-model/diffusion-model-basic/)
