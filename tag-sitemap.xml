@@ -3,6 +3,27 @@
 
 
     <url>
+        <loc>https://sejoung.github.io/tags/Diffusion/</loc>
+        <lastmod>2023-10-30T09:44:17.213Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/tags/%EB%A7%A5%EB%B6%81/</loc>
+        <lastmod>2023-10-30T04:20:25.329Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/tags/%EA%B0%9C%EB%B0%9C%ED%99%98%EA%B2%BD/</loc>
+        <lastmod>2023-10-30T04:20:25.329Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>https://sejoung.github.io/tags/FirebaseError/</loc>
         <lastmod>2023-10-26T08:27:30.127Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -61,20 +82,6 @@
     <url>
         <loc>https://sejoung.github.io/tags/virtual-environments/</loc>
         <lastmod>2023-10-24T06:48:58.789Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://sejoung.github.io/tags/%EB%A7%A5%EB%B6%81/</loc>
-        <lastmod>2023-10-18T04:09:11.312Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://sejoung.github.io/tags/%EA%B0%9C%EB%B0%9C%ED%99%98%EA%B2%BD/</loc>
-        <lastmod>2023-10-18T04:09:11.312Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
