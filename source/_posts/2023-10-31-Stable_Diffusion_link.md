@@ -80,7 +80,7 @@ implicit density estimation :  확률밀도함수를 직접적으로 구하지 �
 문제는 계산을 할수가 없다 실제 값을 아는게 아니라 샘플링만 가능
 
 
-![](https://github.com/CompVis/latent-diffusion/raw/main/assets/modelfigure.png)
+![LDM](https://github.com/CompVis/latent-diffusion/raw/main/assets/modelfigure.png)
 
 
 # 참조
