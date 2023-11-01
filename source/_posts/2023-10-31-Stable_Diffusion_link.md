@@ -84,6 +84,12 @@ implicit density estimation :  확률밀도함수를 직접적으로 구하지 �
 ![LDM](https://github.com/CompVis/latent-diffusion/raw/main/assets/modelfigure.png)
 
 
+
+* denoising 과정에서 autoencoder를 사용
+* denoising이 pixel space 가 아닌 latent space 에서 일어남(픽셀단위가 아니라 인코딩된 잠재공간 내에서 노이즈를 추가 제거)
+* cross-attention layers를(transformer 아키텍처?) 도입함으로 다른 도메인 conditioning 을 같이 사용할수 있게됨 -> 
+
+
 # 참조
 -----
 
