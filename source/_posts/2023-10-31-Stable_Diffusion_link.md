@@ -64,6 +64,23 @@ https://arxiv.org/abs/2010.02502
   * feature learning
   * density estimation
 
+    
+이미지를 넣어서 차원이 작은 벡터를 나오면 이것으로 이미지를 만든다 
+
+explicit density estimation : 확률밀도함수를 직접적으로 구하는 방법
+
+implicit density estimation :  확률밀도함수를 직접적으로 구하지 않고, 확률밀도함수를 구하는 것을 목적으로 하지 않는 방법
+
+
+
+작은 차원에 피처만으로 이미지를 만들수 있다
+
+최대 가능도를 써서 트레이닝을 시킨다 
+
+문제는 계산을 할수가 없다 실제 값을 아는게 아니라 샘플링만 가능
+
+
+![](https://github.com/CompVis/latent-diffusion/raw/main/assets/modelfigure.png)
 
 
 # 참조
@@ -94,4 +111,5 @@ https://arxiv.org/abs/2010.02502
 * [Deep Unsupervised Learning using Nonequilibrium Thermodynamics](https://arxiv.org/abs/1503.03585)
 * [오토인코더(AutoEncoder)](https://pebpung.github.io/autoencoder/2021/09/11/Auto-Encoder-1.html)
 * [[#32.Lec] AutoEncoder and Variational AutoEncoder - 딥러닝 홀로서기](https://www.youtube.com/watch?v=54hyK1J4wTc)
+* [Chapter 2 확률(Probability) vs 가능도(Likelihood)](https://bookdown.org/mathemedicine/Stat_book/probability-vs-likelihood.html)
 
