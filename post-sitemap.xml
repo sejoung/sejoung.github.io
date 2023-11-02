@@ -9,8 +9,16 @@
 
 
     <url>
+        <loc>https://sejoung.github.io/2023/10/2023-10-31-Stable_Diffusion_link/</loc>
+        <lastmod>2023-11-01T04:03:42.095Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://sejoung.github.io/2023/10/2023-10-30-What_are_Diffusion_Models/</loc>
-        <lastmod>2023-10-30T09:44:17.213Z</lastmod>
+        <lastmod>2023-10-30T09:56:47.875Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 

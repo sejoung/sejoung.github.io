@@ -3,8 +3,22 @@
 
 
     <url>
+        <loc>https://sejoung.github.io/tags/%EC%8A%A4%ED%85%8C%EC%9D%B4%EB%B8%94-%EB%94%94%ED%93%A8%EC%A0%84/</loc>
+        <lastmod>2023-11-01T04:03:42.095Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/tags/Stable-Diffusion/</loc>
+        <lastmod>2023-11-01T04:03:42.095Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>https://sejoung.github.io/tags/Diffusion/</loc>
-        <lastmod>2023-10-30T09:44:17.213Z</lastmod>
+        <lastmod>2023-11-01T04:03:42.095Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
