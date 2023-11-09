@@ -1,0 +1,204 @@
+<!DOCTYPE html><html lang="lang"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta name="description" content="데이터 모델과 질의 언어 관계형 모델과 문서 모델"><meta name="keywords" content="데이터 중심 애플리케이션 설계,Designing Data Intensive Applications"><meta name="author" content="sejoung"><meta name="copyright" content="sejoung"><title>데이터 모델과 질의 언어 관계형 모델과 문서 모델 | 폭간의 기술블로그</title><link rel="shortcut icon" href="../../../my-favicon.ico"><link rel="stylesheet" href="../../../css/index.css?version=1.7.0"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css?version=1.7.0"><meta name="format-detection" content="telephone=no"><meta http-equiv="x-dns-prefetch-control" content="on"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><script async src="https://www.googletagmanager.com/gtag/js?id=G-NVRTGLD8RZ"></script><script>window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-NVRTGLD8RZ');</script><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"We didn't find any results for the search: ${query}"}},
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  }
+} </script><meta name="generator" content="Hexo 5.4.2"></head><body><i class="fa fa-arrow-right" id="toggle-sidebar" aria-hidden="true"></i><div id="sidebar" data-display="true"><div class="toggle-sidebar-info text-center"><span data-toggle="Toggle article">Toggle site</span><hr></div><div class="sidebar-toc"><div class="sidebar-toc__title">Catalog</div><div class="sidebar-toc__progress"><span class="progress-notice">You've read</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar"></div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%EB%8D%B0%EC%9D%B4%ED%84%B0-%EC%A4%91%EC%8B%AC-%EC%95%A0%ED%94%8C%EB%A6%AC%EC%BC%80%EC%9D%B4%EC%85%98-%EC%84%A4%EA%B3%84"><span class="toc-number">1.</span> <span class="toc-text">데이터 중심 애플리케이션 설계</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%EC%A0%80%EC%9E%A5%EC%86%8C%EC%99%80-%EA%B2%80%EC%83%89"><span class="toc-number">1.1.</span> <span class="toc-text">저장소와 검색</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4%EB%A5%BC-%EA%B0%95%EB%A0%A5%ED%95%98%EA%B2%8C-%EB%A7%8C%EB%93%9C%EB%8A%94-%EB%8D%B0%EC%9D%B4%ED%84%B0-%EA%B5%AC%EC%A1%B0"><span class="toc-number">1.1.1.</span> <span class="toc-text">데이터베이스를 강력하게 만드는 데이터 구조</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%ED%8A%B8%EB%9E%9C%EC%9E%AD%EC%85%98-%EC%B2%98%EB%A6%AC%EB%82%98-%EB%B6%84%EC%84%9D"><span class="toc-number">1.1.2.</span> <span class="toc-text">트랜잭션 처리나 분석?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%EC%B9%BC%EB%9F%BC-%EC%A7%80%ED%96%A5-%EC%A0%80%EC%9E%A5%EC%86%8C"><span class="toc-number">1.1.3.</span> <span class="toc-text">칼럼 지향 저장소</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%EC%A0%95%EB%A6%AC"><span class="toc-number">1.1.4.</span> <span class="toc-text">정리</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%EC%B0%B8%EC%A1%B0"><span class="toc-number">2.</span> <span class="toc-text">참조</span></a></li></ol></div></div><div class="author-info hide"><div class="author-info__avatar text-center"><img src="https://avatars0.githubusercontent.com/u/4936005?s=400&amp;u=a679b941fe377418e7e4efcf916c6a636d7178ee&amp;v=4"></div><div class="author-info__name text-center">sejoung</div><div class="author-info__description text-center">잘정리하자</div><div class="follow-button"><a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/sejoung">Follow Me</a></div><hr><div class="author-info-articles"><a class="author-info-articles__archives article-meta" href="../../../archives"><span class="pull-left">Articles</span><span class="pull-right">718</span></a><a class="author-info-articles__tags article-meta" href="../../../tags"><span class="pull-left">Tags</span><span class="pull-right">773</span></a><a class="author-info-articles__categories article-meta" href="../../../categories"><span class="pull-left">Categories</span><span class="pull-right">74</span></a></div><hr><div class="author-info-links"><div class="author-info-links__title text-center">Links</div><a class="author-info-links__name text-center" target="_blank" rel="external nofollow noopener noreferrer" href="https://blog.naver.com/sanaes">naverblog</a><a class="author-info-links__name text-center" target="_blank" rel="external nofollow noopener noreferrer" href="https://www.linkedin.com/in/sanaes/">linkedin</a><a class="author-info-links__name text-center" target="_blank" rel="external nofollow noopener noreferrer" href="https://www.slideshare.net/sejoung">slideshare</a></div></div></div><div id="content-outer"><div id="top-container" style="background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Van_Gogh_-_Terrasse_des_Caf%C3%A9s_an_der_Place_du_Forum_in_Arles_am_Abend1.jpeg/1024px-Van_Gogh_-_Terrasse_des_Caf%C3%A9s_an_der_Place_du_Forum_in_Arles_am_Abend1.jpeg)"><div id="page-header"><span class="pull-left"> <a id="site-name" href="../../../index.html">폭간의 기술블로그</a></span><i class="fa fa-bars toggle-menu pull-right" aria-hidden="true"></i><span class="pull-right menus">   <a class="site-page" href="/">Home</a><a class="site-page" href="/archives">Archives</a><a class="site-page" href="/tags">Tags</a><a class="site-page" href="/categories">Categories</a></span><span class="pull-right"><a class="site-page social-icon search"><i class="fa fa-search"></i><span> Search</span></a></span></div><div id="post-info"><div id="post-title">데이터 모델과 질의 언어 관계형 모델과 문서 모델</div><div id="post-meta"><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2023-11-09</time><span class="post-meta__separator">|</span><i class="fa fa-inbox post-meta__icon" aria-hidden="true"></i><a class="post-meta__categories" href="../../../categories/books/">books</a><span class="post-meta__separator">|</span><i class="fa fa-comment-o post-meta__icon" aria-hidden="true"></i><a href="#disqus_thread"><span class="disqus-comment-count" data-disqus-identifier="2023/11/2023-11-09-Designing_Data_Intensive_Applications_chapter3/"></span></a></div></div></div><div class="layout" id="content-inner"><article id="post"><div class="article-container" id="post-content"><h1 id="데이터-중심-애플리케이션-설계"><a href="#데이터-중심-애플리케이션-설계" class="headerlink" title="데이터 중심 애플리케이션 설계"></a>데이터 중심 애플리케이션 설계</h1><h2 id="저장소와-검색"><a href="#저장소와-검색" class="headerlink" title="저장소와 검색"></a>저장소와 검색</h2><p>데이터베이스의 두가지 작업 - 데이터를 저장하고 데이터를 조회하는 것</p>
+<p>로그 구조 계열 저장소 엔진, 페이지 지향 계열 저장소 엔진</p>
+<h3 id="데이터베이스를-강력하게-만드는-데이터-구조"><a href="#데이터베이스를-강력하게-만드는-데이터-구조" class="headerlink" title="데이터베이스를 강력하게 만드는 데이터 구조"></a>데이터베이스를 강력하게 만드는 데이터 구조</h3><p>데이터베이스에서 특정 키의 값을 효율적으로 찾기 위해서 필요한 데이터 구조는 색인 이다</p>
+<p>색인의 일반적인 개념은 부가적인 메타테이터를 유지하는 것이다.</p>
+<p>색인은 기본데이터(primary data)에서 파생된 추가적인 구조다.</p>
+<p>많은 데이터베이스에서는 색인의 추가 삭제만 허용</p>
+<p>어떤 종류에 색인이라도 대개 쓰기 속도를 느리게 만든다 데이터를 쓸때 마다 색인도 갱신 해줘야 되기 때문이다. - 저장소 시스템의 중요한 트레이트 오프</p>
+<ul>
+<li><p>해시 색인</p>
+<ul>
+<li>키값 저장소 - 해시맵(해시 테이블)</li>
+<li>키를 데이터 파일의 바이트 오프셋에 매칭 하여 저장</li>
+<li>문제<ul>
+<li>파일형식</li>
+<li>레코드 삭제</li>
+<li>고장 복구</li>
+<li>부분적으로 레코드 쓰기</li>
+<li>동시성 제어</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>SS테이블과 LSM 트리</p>
+<ul>
+<li>키로 정렬된 형식을 정렬된 문자열 테이블(sorted string table, SSTable)이라고 한다.<ul>
+<li>장점<ul>
+<li>새그먼트 병합은 파일이 사용가능한 메모리보다 크더라도 간단하고 효율적이다</li>
+<li>파일에서 특정 키를 찾기 위해 더는 메모리에 모든 키의 색인을 유지할 필요가 없다</li>
+<li>읽기 요청은 요청 범위 내에서 여러 키-값 쌍을 스캔해야 하기 때문에 해당 레코드들을 블록으로 그룹화하고 디스크에 쓰기 전에 압축한다</li>
+</ul>
+</li>
+<li>SS 테이블 생성과 유지<ul>
+<li>쓰기가 들어오면 인메모리 균형 트리 데이터 구조(멤테이블)에 추가한다</li>
+<li>멤테이블이 일정 크기에 도달하면 디스크에 SSTable 파일로 기록한다</li>
+<li>읽기 요청이 들어오면 먼저 멤테이블에서 키를 찾고 디스크 상의 가장 최신 세그먼트를 찾는다</li>
+<li>가끔 세그먼트 파일을 합치고 덥어 쓰여지거나 삭제된 값을 버리는 병합과 컴팩션 과정을 수행한다 이과정은 백그라운드에서 수행</li>
+</ul>
+</li>
+<li>SS테이블에서 LSM 트리 만들기<ul>
+<li>로그 구조화 병합 트리(Log-Structured Merge-Tree, LSM 트리) 패트릭 오닐등이 발표</li>
+</ul>
+</li>
+<li>성능 최적화<ul>
+<li>데이터베이스에 존재하지 않는 키를 찾는 경우 느려짐<ul>
+<li>블룸 필터 - 키가 존재하는지 여부를 빠르게 확인</li>
+</ul>
+</li>
+<li>SSTable 압축하고 병합하는 순서와 시기를 결정<ul>
+<li>크기 계층</li>
+<li>레벨 컴팩션</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>B 트리</p>
+<ul>
+<li>가장 널리 알려진 색인 구조</li>
+<li>4kb 크기의 고정 크기 블록이나 페이지로 나누고 한 번에 하나의 페이지에 읽기 또는 쓰기를 한다</li>
+<li>한 페이지는 B 트리의 루트로 지정된다</li>
+<li>색인에서 키를 찾으려면 루트에서 시작한다</li>
+<li>신뢰할수 있는 B 트리 만들기<ul>
+<li>기본적인 쓰기 동작은 새로운 데이터를 디스크 상의 페이지에 덮어 쓴다</li>
+<li>즉 페이지를 덮어쓰더라도 페이지를 가리키는 값은 변하지 않는다</li>
+<li>데이터를 복구 하기 위해 쓰기전 로그 (redo log)</li>
+</ul>
+</li>
+<li>최적화<ul>
+<li>일부 데이터베이스는 쓰기 복사 방식을 사용한다</li>
+<li>페이지에 전체 키를 저장하는 게 아니라 키를 축약해 쓰면 공간을 절약할 수 있다</li>
+<li>일반적으로 페이지는 디스크 상 어디에나 위치 할수 있다 트리가 커지면 순서를 유지하기 힘들다 - LSM 트리는 병합하는 과정에서 큰 세그먼트를 다시 한번 쓰기 때문에 순서를 유기하기 쉽다</li>
+<li>트리에 포인터를 추가한다</li>
+<li>프랙탈 트리</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>B 트리와 LSM 트리 비교</p>
+<ul>
+<li>LSM 트리는 쓰기 성능이 뛰어나다</li>
+<li>B 트리는 읽기 성능이 뛰어나다</li>
+<li>LSM 트리의 장점<ul>
+<li>쓰기 증폭이 더 낮다<ul>
+<li>데이터를 덮어 쓰는게 아니라 순차적으로 쓰기 때문이다</li>
+</ul>
+</li>
+<li>압축률이 좋다</li>
+</ul>
+</li>
+<li>LSM 트리의 단점<ul>
+<li>컴팩션 과정이 따로는 진행 중인 읽기와 쓰기의 성능에 영향을 준다</li>
+<li>높은 쓰기 처리량에서 발생</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>기타 색인 구조</p>
+<ul>
+<li>키-값 색인의 대표적인 예는 관계형 모델의 기본키 색인</li>
+<li>보조색인을 사용하는 방식도 매우 일반적</li>
+<li>클러스터 색인(clustered index) - 색인 안에 색인된 로우를 저장</li>
+<li>커버링 색인(covering index)</li>
+<li>포괄열이 있는 색인(index with included columns)</li>
+<li>다중 칼럼 색인<ul>
+<li>결합 색인(concatenated index)</li>
+</ul>
+</li>
+<li>전문 검색과 퍼지 색인<ul>
+<li>유한 상태 오토마론(finite state automaton, FSA) 트라이(trie)</li>
+<li>레벨슈타인 오토마론(Levenshtein automaton)</li>
+</ul>
+</li>
+<li>모든걸 메모리에 보관<ul>
+<li>인메모리 데이터베이스</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="트랜잭션-처리나-분석"><a href="#트랜잭션-처리나-분석" class="headerlink" title="트랜잭션 처리나 분석?"></a>트랜잭션 처리나 분석?</h3><p>커머셜 트랜잭션 - 초창기 비즈니스 데이터 처리<br>온라인 트랜잭션 처리 - OLTP(Online Transaction Processing)<br>온라인 분석 처리 - OLAP(Online Analytical Processing)</p>
+<ul>
+<li><p>데이터 웨어하우징</p>
+<ul>
+<li>ETL(Extract-Transform-Load) - 데이터를 추출하고 변환한 다음 데이터 웨어하우스에 적재</li>
+</ul>
+</li>
+<li><p>분석용 스키마: 별 모양 스키마와 눈꽃송이 모양 스키마</p>
+<ul>
+<li>별 모양 스키마 - 중앙의 큰 테이블을 기준으로 여러 개의 작은 차원 테이블이 연결된 형태</li>
+<li>눈 꽃송이 모양 스키마 - 여러 차원 테이블이 서로 연결된 형태</li>
+</ul>
+</li>
+</ul>
+<h3 id="칼럼-지향-저장소"><a href="#칼럼-지향-저장소" class="headerlink" title="칼럼 지향 저장소"></a>칼럼 지향 저장소</h3><p>모든 값을 하나의 로우에 함께 저장하지 않는대신 각 칼럼별로 모든 값을 함께 저장한다</p>
+<ul>
+<li><p>칼럼 압축</p>
+<ul>
+<li>압축에 용이하다</li>
+<li>비트맵 부호화</li>
+<li>메모리 대역폭과 벡터화 처리<ul>
+<li>벡터화 처리 - 하나의 명령으로 여러 개의 데이터를 한꺼번에 처리하는 것</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>칼럼 저장소의 순서 정렬</p>
+<ul>
+<li>각 칼럼은 독립적으로 정렬할수 없다</li>
+<li>데이터는 한번에 전체 로우를 정렬해야 한다</li>
+<li>다양한 순서 정렬<ul>
+<li>C-store</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>칼럼 지향 저장소에 쓰기</p>
+<ul>
+<li>B 트리와 같은 제자리 갱신이 불가능 하다</li>
+<li>집계 : 데이터 큐브와 구체화뷰<ul>
+<li>데이터 큐브 - 다차원의 데이터를 집계한 것</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>집계: 데이터 큐브와 구체화 뷰</p>
+</li>
+</ul>
+<h3 id="정리"><a href="#정리" class="headerlink" title="정리"></a>정리</h3><ul>
+<li>OLAP - 데이터 웨어하우스에 저장된 데이터를 집계하고 분석하는 일</li>
+<li>OLTP - 비즈니스 데이터 처리</li>
+</ul>
+<h1 id="참조"><a href="#참조" class="headerlink" title="참조"></a>참조</h1><hr>
+<ul>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://wikibook.co.kr/data-intensive-applications-ebook/">데이터 중심 애플리케이션 설계</a></li>
+</ul>
+</div></article><div class="post-meta__tag-list"><a class="post-meta__tags" href="../../../tags/%EB%8D%B0%EC%9D%B4%ED%84%B0-%EC%A4%91%EC%8B%AC-%EC%95%A0%ED%94%8C%EB%A6%AC%EC%BC%80%EC%9D%B4%EC%85%98-%EC%84%A4%EA%B3%84/">데이터 중심 애플리케이션 설계</a><a class="post-meta__tags" href="../../../tags/Designing-Data-Intensive-Applications/">Designing Data Intensive Applications</a></div><nav id="pagination"><div class="next-post pull-right"><a href="../2023-11-06-Designing_Data_Intensive_Applications_chapter2/"><span>데이터 모델과 질의 언어 관계형 모델과 문서 모델</span><i class="fa fa-chevron-right"></i></a></div></nav><div id="disqus_thread"></div><script>var unused = null;
+var disqus_config = function () {
+  this.page.url = 'https://sejoung.github.io/2023/11/2023-11-09-Designing_Data_Intensive_Applications_chapter3/';
+  this.page.identifier = '2023/11/2023-11-09-Designing_Data_Intensive_Applications_chapter3/';
+  this.page.title = '데이터 모델과 질의 언어 관계형 모델과 문서 모델';
+}
+var d = document, s = d.createElement('script');
+s.src = "https://" + 'kimsejoung' +".disqus.com/embed.js";
+s.setAttribute('data-timestamp', '' + +new Date());
+(d.head || d.body).appendChild(s);</script><script id="dsq-count-scr" src="https://kimsejoung.disqus.com/count.js" async></script></div></div><footer class="footer-bg" style="background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Van_Gogh_-_Terrasse_des_Caf%C3%A9s_an_der_Place_du_Forum_in_Arles_am_Abend1.jpeg/1024px-Van_Gogh_-_Terrasse_des_Caf%C3%A9s_an_der_Place_du_Forum_in_Arles_am_Abend1.jpeg)"><div class="layout" id="footer"><div class="copyright">&copy;2017 - 2023 By sejoung</div><div class="framework-info"><span>Driven - </span><a target="_blank" rel="external nofollow noopener noreferrer" href="http://hexo.io"><span>Hexo</span></a><span class="footer-separator">|</span><span>Theme - </span><a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/Molunerfinn/hexo-theme-melody"><span>Melody</span></a></div><div class="busuanzi"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><span id="busuanzi_container_page_pv"><i class="fa fa-file-o"></i><span id="busuanzi_value_page_pv"></span><span></span></span></div></div></footer><i class="fa fa-arrow-up" id="go-up" aria-hidden="true"></i><script src="../../../js/third-party/anime.min.js"></script><script src="../../../js/third-party/jquery.min.js"></script><script src="../../../js/third-party/jquery.fancybox.min.js"></script><script src="../../../js/third-party/velocity.min.js"></script><script src="../../../js/third-party/velocity.ui.min.js"></script><script src="../../../js/utils.js?version=1.7.0"></script><script src="../../../js/fancybox.js?version=1.7.0"></script><script src="../../../js/sidebar.js?version=1.7.0"></script><script src="../../../js/copy.js?version=1.7.0"></script><script src="../../../js/fireworks.js?version=1.7.0"></script><script src="../../../js/transition.js?version=1.7.0"></script><script src="../../../js/scroll.js?version=1.7.0"></script><script src="../../../js/head.js?version=1.7.0"></script><script src="../../../js/search/local-search.js"></script><script>if(/Android|webOS|iPhone|iPod|iPad|BlackBerry/i.test(navigator.userAgent)) {
+  $('#nav').addClass('is-mobile')
+  $('footer').addClass('is-mobile')
+  $('#top-container').addClass('is-mobile')
+}</script><div class="search-dialog" id="local-search"><div class="search-dialog__title" id="local-search-title">Local search</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="Search for Posts"></div></div></div><hr><div id="local-search-results"><div id="local-hits"></div><div id="local-stats"><div class="local-search-stats__hr" id="hr"><span>Powered by</span> <a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/wzpan/hexo-generator-search" style="color:#49B1F5;">hexo-generator-search</a></div></div></div><span class="search-close-button"><i class="fa fa-times"></i></span></div><div class="search-mask"></div></body></html>
