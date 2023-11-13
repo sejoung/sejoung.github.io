@@ -8,11 +8,11 @@
     <atom:link href="/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>잘정리하자</description>
-    <pubDate>Thu, 09 Nov 2023 03:02:14 GMT</pubDate>
+    <pubDate>Mon, 13 Nov 2023 08:13:37 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
-      <title>데이터 모델과 질의 언어 관계형 모델과 문서 모델</title>
+      <title>저장소와 검색</title>
       <link>https://sejoung.github.io/2023/11/2023-11-09-Designing_Data_Intensive_Applications_chapter3/</link>
       <guid>https://sejoung.github.io/2023/11/2023-11-09-Designing_Data_Intensive_Applications_chapter3/</guid>
       <pubDate>Thu, 09 Nov 2023 01:12:00 GMT</pubDate>
@@ -221,6 +221,25 @@
     </item>
     
     <item>
+      <title>getting started with conda</title>
+      <link>https://sejoung.github.io/2023/10/2023-11-13-Getting_started_with_conda/</link>
+      <guid>https://sejoung.github.io/2023/10/2023-11-13-Getting_started_with_conda/</guid>
+      <pubDate>Wed, 18 Oct 2023 01:50:00 GMT</pubDate>
+      <description>
+      
+        
+        
+          &lt;h1 id=&quot;getting-started-with-conda&quot;&gt;&lt;a href=&quot;#getting-started-with-conda&quot; class=&quot;headerlink&quot; title=&quot;getting started with conda&quot;&gt;&lt;/a&gt;getting 
+        
+      
+      </description>
+      
+      <content:encoded><![CDATA[<h1 id="getting-started-with-conda"><a href="#getting-started-with-conda" class="headerlink" title="getting started with conda"></a>getting started with conda</h1><p>Conda는 Windows용 Anaconda Prompt나 macOS 또는 Linux용 터미널 창에서 명령줄 명령과 함께 사용하는 강력한 패키지 관리자이자 환경 관리자입니다.</p><p>Conda 시작을 위한 이 20분 가이드를 통해 Conda의 주요 기능을 시험해 볼 수 있습니다. 이 가이드를 마치면 conda가 어떻게 작동하는지 이해해야 합니다.</p><h2 id="콘다-관리"><a href="#콘다-관리" class="headerlink" title="콘다 관리"></a>콘다 관리</h2><p>다음을 입력하여 시스템에 conda가 설치되어 실행되고 있는지 확인하세요.</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda --version</span><br></pre></td></tr></table></figure><p>Conda를 최신 버전으로 업데이트합니다. 다음을 입력하세요.</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda update conda</span><br></pre></td></tr></table></figure><h2 id="환경-관리"><a href="#환경-관리" class="headerlink" title="환경 관리"></a>환경 관리</h2><p>Conda를 사용하면 다른 환경과 상호 작용하지 않는 파일, 패키지 및 해당 종속성을 포함하는 별도의 환경을 만들 수 있습니다.</p><p>conda를 사용하기 시작하면 이미 이라는 기본 환경이 있습니다 base. 하지만 기본 환경에 프로그램을 넣고 싶지는 않습니다. 프로그램을 서로 격리하려면 별도의 환경을 만드세요.</p><p>새 환경을 만들고 여기에 패키지를 설치합니다.</p><p>환경 이름을 지정 snowflakes하고 BioPython 패키지를 설치하겠습니다. Anaconda 프롬프트 또는 터미널 창에 다음을 입력하십시오.</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda create --name snowflakes biopython</span><br></pre></td></tr></table></figure><p>새 환경을 사용하거나 “활성화”하려면 다음을 입력하십시오.</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">conda activate snowflakes</span><br><span class="line"></span><br></pre></td></tr></table></figure><p>모든 환경 목록을 보려면 다음을 입력하세요.</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda info --envs</span><br></pre></td></tr></table></figure><p>현재 환경을 기본값(base)으로 다시 변경합니다. </p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda activate</span><br></pre></td></tr></table></figure><h2 id="Python-관리"><a href="#Python-관리" class="headerlink" title="Python 관리"></a>Python 관리</h2><p>새 환경을 생성하면 conda는 Anaconda를 다운로드하고 설치할 때 사용한 것과 동일한 Python 버전을 설치합니다.<br>Python 3.5와 같은 다른 버전의 Python을 사용하려면 새 환경을 만들고 원하는 Python 버전을 지정하기만 하면 됩니다.</p><p>Python 3.9가 포함된 “snakes”라는 새 환경을 만듭니다.</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda create --name snakes python=3.9</span><br></pre></td></tr></table></figure><p>새 환경을 활성화합니다.</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda activate snakes</span><br></pre></td></tr></table></figure><p>snakes 환경이 추가되었고 활성화되었는지 확인합니다.</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda info --envs</span><br></pre></td></tr></table></figure><p>활성 환경은 프롬프트 앞에 다음과 같이 (괄호) 또는 [괄호]로 표시됩니다.</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(snakes) $</span><br></pre></td></tr></table></figure><p>현재 환경에 어떤 버전의 Python이 있는지 확인합니다.</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python --version</span><br></pre></td></tr></table></figure><h2 id="패키지-관리"><a href="#패키지-관리" class="headerlink" title="패키지 관리"></a>패키지 관리</h2><p>이미 설치한 패키지를 찾으려면 먼저 검색하려는 환경을 활성화하세요. 위에서 스네이크 환경을 활성화 하는 명령을 찾아보세요.</p><p>설치하지 않은 “beautifulsoup4” 패키지가 Anaconda 저장소에서 사용 가능한지 확인하십시오(인터넷에 연결되어 있어야 함).</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda search beautifulsoup4</span><br></pre></td></tr></table></figure><p>현재 환경에 이 패키지를 설치합니다.</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda install beautifulsoup4</span><br></pre></td></tr></table></figure><p>새로 설치된 프로그램이 이 환경에 있는지 확인하십시오.</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda list</span><br></pre></td></tr></table></figure><h1 id="참조"><a href="#참조" class="headerlink" title="참조"></a>참조</h1><hr><ul><li><a href="https://conda.io/projects/conda/en/latest/user-guide/getting-started.html">콘다 시작하기</a></li></ul>]]></content:encoded>
+      
+      <comments>https://sejoung.github.io/2023/10/2023-11-13-Getting_started_with_conda/#disqus_thread</comments>
+    </item>
+    
+    <item>
       <title>리눅스에서 gpu 사용량 모니터링 툴</title>
       <link>https://sejoung.github.io/2023/10/2023-10-17-gpu_monitoring/</link>
       <guid>https://sejoung.github.io/2023/10/2023-10-17-gpu_monitoring/</guid>
@@ -371,25 +390,6 @@
       <content:encoded><![CDATA[<h1 id="실용주의-프로그래머"><a href="#실용주의-프로그래머" class="headerlink" title="실용주의 프로그래머"></a>실용주의 프로그래머</h1><h2 id="1장-실용주의-철학"><a href="#1장-실용주의-철학" class="headerlink" title="1장. 실용주의 철학"></a>1장. 실용주의 철학</h2><h3 id="항목-1-당신의-인생이다"><a href="#항목-1-당신의-인생이다" class="headerlink" title="항목 1. 당신의 인생이다"></a>항목 1. 당신의 인생이다</h3><p>주도적으로 행동해서 기회를 잡아라</p><h3 id="항목-2-고양이가-내-소스-코드를-삼켰어요"><a href="#항목-2-고양이가-내-소스-코드를-삼켰어요" class="headerlink" title="항목 2. 고양이가 내 소스 코드를 삼켰어요"></a>항목 2. 고양이가 내 소스 코드를 삼켰어요</h3><p>팀 내 신뢰를 얻어야 된다 </p><p>책임지기</p><ul><li>어설픈 변명 보다는 대안을 제시</li></ul><h3 id="항목-3-소프트웨어-엔트로피"><a href="#항목-3-소프트웨어-엔트로피" class="headerlink" title="항목 3. 소프트웨어 엔트로피"></a>항목 3. 소프트웨어 엔트로피</h3><p>깨진 창문을 내버려 두지 말자</p><p>우선 망가 뜨리지 말자</p><h3 id="항목-4-돌멩이-수프와-삶은-개구리"><a href="#항목-4-돌멩이-수프와-삶은-개구리" class="headerlink" title="항목 4. 돌멩이 수프와 삶은 개구리"></a>항목 4. 돌멩이 수프와 삶은 개구리</h3><p>시작의 피로</p><p>변화의 촉매가 되라</p><p>큰 그림을 기억하라</p><h3 id="항목-5-적당히-괜찮은-소프트웨어"><a href="#항목-5-적당히-괜찮은-소프트웨어" class="headerlink" title="항목 5. 적당히 괜찮은 소프트웨어"></a>항목 5. 적당히 괜찮은 소프트웨어</h3><p>품질을 요구사항으로 만들어라</p><p>멈춰야 할때을 알아야 된다</p><h3 id="항목-6-지식-포트폴리오"><a href="#항목-6-지식-포트폴리오" class="headerlink" title="항목 6. 지식 포트폴리오"></a>항목 6. 지식 포트폴리오</h3><p>지식의 포트 폴리오에 주기적으로 투자하라</p><p>읽고 듣는것을 비판적으로 분석하라</p><h3 id="항목-7-소통하라"><a href="#항목-7-소통하라" class="headerlink" title="항목 7. 소통하라!"></a>항목 7. 소통하라!</h3><p>한국어든 영어든 하나의 프로그램언어일 뿐이다</p><ul><li>청중을 알라</li><li>말하고 싶은 게 무언지 알라</li><li>때를 골라라</li><li>스타일을 골라라</li><li>멋져 보이게 하라</li><li>청중을 참여시켜라</li><li>경청 하라</li><li>응답 하라</li><li>문서화</li></ul><h2 id="2장-실용주의-접근법"><a href="#2장-실용주의-접근법" class="headerlink" title="2장. 실용주의 접근법"></a>2장. 실용주의 접근법</h2><h3 id="항목-8-좋은-설계의-핵심"><a href="#항목-8-좋은-설계의-핵심" class="headerlink" title="항목 8. 좋은 설계의 핵심"></a>항목 8. 좋은 설계의 핵심</h3><p>좋은 설계는 나쁜설계 보다 바꾸기 쉽다</p><h3 id="항목-9-DRY-중복의-해악"><a href="#항목-9-DRY-중복의-해악" class="headerlink" title="항목 9. DRY: 중복의 해악"></a>항목 9. DRY: 중복의 해악</h3><p>반복하지 말라</p><p>모든 코드의 중복의 지식의 중복은 아니다</p><p>재사용하기 쉽게 만들어라</p><h3 id="항목-10-직교성"><a href="#항목-10-직교성" class="headerlink" title="항목 10. 직교성"></a>항목 10. 직교성</h3><p>관련 없는것들 간에 서로 영향이 없도록 하라</p><h3 id="항목-11-가역성"><a href="#항목-11-가역성" class="headerlink" title="항목 11. 가역성"></a>항목 11. 가역성</h3><p>최종 결정이란 없다</p><p>유행을 쫒지말라</p><h3 id="항목-12-예광탄"><a href="#항목-12-예광탄" class="headerlink" title="항목 12. 예광탄"></a>항목 12. 예광탄</h3><p>목표물을 찾기 위해 예광탄을 쏴라</p><h3 id="항목-13-프로토타입과-포스트잇"><a href="#항목-13-프로토타입과-포스트잇" class="headerlink" title="항목 13. 프로토타입과 포스트잇"></a>항목 13. 프로토타입과 포스트잇</h3><p>프로토타입을 코드로 만들 때는 시작하기 전에 항상 모든 사람에게 여러분이 폐기 처분할 코드를 작성하고 있다는 사실을 이해 시켜야 한다</p><h3 id="항목-14-도메인-언어"><a href="#항목-14-도메인-언어" class="headerlink" title="항목 14. 도메인 언어"></a>항목 14. 도메인 언어</h3><p>언어의 한계가 곧 자기 세계의 한계이다</p><p>문제 도메인에 가깝게 프로그래밍 하라</p><h3 id="항목-15-추정"><a href="#항목-15-추정" class="headerlink" title="항목 15. 추정"></a>항목 15. 추정</h3><p>추정으로 놀람을 피하라</p><p>코드와 함께 일정도 반복해서 조정하라</p><h1 id="참조"><a href="#참조" class="headerlink" title="참조"></a>참조</h1><hr><ul><li><a href="http://www.yes24.com/Product/Goods/106225986">이펙티브 코틀린</a></li></ul>]]></content:encoded>
       
       <comments>https://sejoung.github.io/2023/04/2023-04-09-The_Pragmatic_Programmer_01/#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>아이템 52: mutable 컬렉션 사용을 고려하라</title>
-      <link>https://sejoung.github.io/2023/03/2023-03-27-effective_kotlin_item_52/</link>
-      <guid>https://sejoung.github.io/2023/03/2023-03-27-effective_kotlin_item_52/</guid>
-      <pubDate>Mon, 27 Mar 2023 12:45:00 GMT</pubDate>
-      <description>
-      
-        
-        
-          &lt;h1 id=&quot;이펙티브-코틀린-효율성&quot;&gt;&lt;a href=&quot;#이펙티브-코틀린-효율성&quot; class=&quot;headerlink&quot; title=&quot;이펙티브 코틀린(효율성)&quot;&gt;&lt;/a&gt;이펙티브 코틀린(효율성)&lt;/h1&gt;&lt;h2 id=&quot;아이템-52-mutable-컬렉션-사용을-
-        
-      
-      </description>
-      
-      <content:encoded><![CDATA[<h1 id="이펙티브-코틀린-효율성"><a href="#이펙티브-코틀린-효율성" class="headerlink" title="이펙티브 코틀린(효율성)"></a>이펙티브 코틀린(효율성)</h1><h2 id="아이템-52-mutable-컬렉션-사용을-고려하라"><a href="#아이템-52-mutable-컬렉션-사용을-고려하라" class="headerlink" title="아이템 52: mutable 컬렉션 사용을 고려하라"></a>아이템 52: mutable 컬렉션 사용을 고려하라</h2><p>immutable 컬렉션 보다 mutable 컬렉션이 좋은 점은 성능적인 측면에서 더 빠르다<br>컬렉션 복제는 처리 비용이 많이 든다</p><h1 id="참조"><a href="#참조" class="headerlink" title="참조"></a>참조</h1><hr><ul><li><a href="http://www.yes24.com/Product/Goods/106225986">이펙티브 코틀린</a></li></ul>]]></content:encoded>
-      
-      <comments>https://sejoung.github.io/2023/03/2023-03-27-effective_kotlin_item_52/#disqus_thread</comments>
     </item>
     
   </channel>
