@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "데이터 모델과 질의 언어 관계형 모델과 문서 모델"
+title: "저장소와 검색"
 date: 2023-11-09 10:12 +0900
 comments: true
 tags : ["데이터 중심 애플리케이션 설계","Designing Data Intensive Applications"]
