@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "데이터 모델과 질의 언어 관계형 모델과 문서 모델"
+title: "02장: 데이터 모델과 질의 언어"
 date: 2023-11-06 13:48 +0900
 comments: true
 tags : ["데이터 중심 애플리케이션 설계","Designing Data Intensive Applications"]
@@ -11,7 +11,7 @@ sitemap :
 ---
 
 # 데이터 중심 애플리케이션 설계
-## 데이터 모델과 질의 언어 관계형 모델과 문서 모델
+## 02장: 데이터 모델과 질의 언어
 
 대부분의 애플리케이션은 하나의 데이터 모델 위에 다른 데이터 모델을 계층을 둬서 만듬
 
@@ -101,4 +101,3 @@ IMS와 코다실은 명령형 코드
 -----
 
 * [데이터 중심 애플리케이션 설계](https://wikibook.co.kr/data-intensive-applications-ebook/)
-

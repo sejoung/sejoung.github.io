@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "신뢰할 수 있고 확장 가능하며 유지보수하기 쉬운 애플리케이션"
+title: "01장: 신뢰할 수 있고 확장 가능하며 유지보수하기 쉬운 애플리케이션"
 date: 2023-11-02 21:33 +0900
 comments: true
 tags : ["데이터 중심 애플리케이션 설계","Designing Data Intensive Applications"]
@@ -11,7 +11,7 @@ sitemap :
 ---
 
 # 데이터 중심 애플리케이션 설계
-## 신뢰할 수 있고 확장 가능하며 유지보수하기 쉬운 애플리케이션
+## 01장: 신뢰할 수 있고 확장 가능하며 유지보수하기 쉬운 애플리케이션
 
 오늘날 소프트웨어는 계산 중심 과는 다르게 데이터 중심적이다
 
@@ -69,4 +69,3 @@ sitemap :
 -----
 
 * [데이터 중심 애플리케이션 설계](https://wikibook.co.kr/data-intensive-applications-ebook/)
-
