@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "우분투에 CUDA 11.8 설치"
+title: "우분투에 CUDA 12.3 설치"
 date: 2023-10-18 10:50 +0900
 comments: true
 tags: [ "CUDA","우분투"]
@@ -10,7 +10,7 @@ changefreq: daily
 priority: 1.0
 ---
 
-# 우분투에 CUDA 11.8 설치
+# 우분투에 CUDA 12.3 설치
 
 
 ## GPU가 있는지 확인
@@ -59,9 +59,9 @@ sudo apt update
 
 ```shell
 
-sudo apt install libnvidia-common-515
-sudo apt install libnvidia-gl-515
-sudo apt install nvidia-driver-515
+sudo apt install libnvidia-common-545
+sudo apt install libnvidia-gl-545
+sudo apt install nvidia-driver-545
 
 sudo wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2204/x86_64/cuda-ubuntu2204.pin
 sudo mv cuda-ubuntu2204.pin /etc/apt/preferences.d/cuda-repository-pin-600
@@ -79,10 +79,10 @@ sudo apt-get upgrade
 
 ```
 
-## installing CUDA-11.8
+## installing CUDA-12.3
 
 ```shell
-sudo apt install cuda-11-8
+sudo apt install cuda-12-3
 ```
 
 아래의 오류가 나면 처리 방법
@@ -102,8 +102,8 @@ sudo apt full-upgrade
 
 ```shell
 
-echo 'export PATH=/usr/local/cuda-11.8/bin:$PATH' >> ~/.bashrc
-echo 'export LD_LIBRARY_PATH=/usr/local/cuda-11.8/lib64:$LD_LIBRARY_PATH' >> ~/.bashrc
+echo 'export PATH=/usr/local/cuda-12.3/bin:$PATH' >> ~/.bashrc
+echo 'export LD_LIBRARY_PATH=/usr/local/cuda-12.3/lib64:$LD_LIBRARY_PATH' >> ~/.bashrc
 source ~/.bashrc
 sudo ldconfig
 
@@ -124,4 +124,3 @@ nvidia-smi
 
 * [cuda_11.8_installation_on_Ubuntu_22.04](https://gist.github.com/MihailCosmin/affa6b1b71b43787e9228c25fe15aeba)
 * [Different CUDA versions shown by nvcc and NVIDIA-smi](https://itecnote.com/tecnote/different-cuda-versions-shown-by-nvcc-and-nvidia-smi/)
-
