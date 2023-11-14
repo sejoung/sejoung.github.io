@@ -9,15 +9,15 @@
 
 
     <url>
-        <loc>https://sejoung.github.io/categories/books/</loc>
-        <lastmod>2023-11-14T02:14:24.469Z</lastmod>
+        <loc>https://sejoung.github.io/categories/tool/</loc>
+        <lastmod>2023-11-14T06:48:57.344Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>https://sejoung.github.io/categories/tool/</loc>
-        <lastmod>2023-11-13T07:56:00.016Z</lastmod>
+        <loc>https://sejoung.github.io/categories/books/</loc>
+        <lastmod>2023-11-14T02:14:24.469Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>

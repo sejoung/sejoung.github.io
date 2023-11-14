@@ -9,6 +9,22 @@
 
 
     <url>
+        <loc>https://sejoung.github.io/2023/11/2023-11-14-cudnn_install/</loc>
+        <lastmod>2023-11-14T06:48:57.344Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/2023/10/2023-10-18-ubuntu_cuda_install/</loc>
+        <lastmod>2023-11-14T04:57:27.829Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://sejoung.github.io/2023/11/2023-11-14-Designing_Data_Intensive_Applications_chapter4/</loc>
         <lastmod>2023-11-14T02:14:24.469Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -107,14 +123,6 @@
     <url>
         <loc>https://sejoung.github.io/2023/10/2023-10-18-stable_diffusion_webui_install/</loc>
         <lastmod>2023-10-18T05:07:47.138Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://sejoung.github.io/2023/10/2023-10-18-ubuntu_cuda_install/</loc>
-        <lastmod>2023-10-18T03:55:45.073Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
