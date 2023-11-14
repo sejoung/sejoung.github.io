@@ -43,6 +43,8 @@ sudo chmod a+r /usr/local/cuda/include/cudnn*.h /usr/local/cuda/lib64/libcudnn*
 
 ```
 
+## 검증 툴
+
 ```shell
  git clone https://github.com/sejoung/cudnn_samples_v8.git
  
@@ -52,6 +54,8 @@ make all TARGET_ARCH=x86_64
 
 ```
 
+### freeImage 에러시에 아래 절차 수행
+
 ```shell
 
 sudo apt-get install g++ freeglut3-dev build-essential libx11-dev libxmu-dev libxi-dev libglu1-mesa libglu1-mesa-dev
@@ -60,10 +64,14 @@ sudo apt-get install libfreeimage3 libfreeimage-dev
 
 ```
 
+### cuda 12 버전 오류
+
+make all TARGET_ARCH=x86_64 실행시에 아래와 같은 오류가 발생함 [Nvcc fatal : Unsupported gpu architecture ‘compute_35’](https://forums.developer.nvidia.com/t/nvcc-fatal-unsupported-gpu-architecture-compute-35/247815)
 ```shell
 nvcc fatal   : Unsupported gpu architecture 'compute_35'
 ```
 
+그래서 makefile 해당 부분 61로 수정 [cudnn_samples_v8](https://github.com/sejoung/cudnn_samples_v8.git) 수정해 놓은 github
 
 
 # 참조
