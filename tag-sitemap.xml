@@ -3,6 +3,104 @@
 
 
     <url>
+        <loc>https://sejoung.github.io/tags/stable-diffusion/</loc>
+        <lastmod>2023-11-21T02:20:51.019Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/tags/stable-diffusion-webui/</loc>
+        <lastmod>2023-11-21T02:20:51.019Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/tags/docker/</loc>
+        <lastmod>2023-11-21T02:20:51.019Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/tags/ubuntu-drivers/</loc>
+        <lastmod>2023-11-21T02:03:27.411Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/tags/nvidia/</loc>
+        <lastmod>2023-11-21T02:03:27.411Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/tags/ubuntu/</loc>
+        <lastmod>2023-11-21T02:03:27.411Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/tags/%EC%9A%B0%EB%B6%84%ED%88%AC/</loc>
+        <lastmod>2023-11-21T02:03:27.411Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/tags/CUDA/</loc>
+        <lastmod>2023-11-21T01:55:42.300Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/tags/%EC%8B%AC%EB%B3%BC%EB%A6%AD-%EB%A7%81%ED%81%AC-%EA%B4%80%EB%A6%AC/</loc>
+        <lastmod>2023-11-21T01:45:35.028Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/tags/python-%EB%B2%84%EC%A0%84%EA%B4%80%EB%A6%AC/</loc>
+        <lastmod>2023-11-21T01:45:35.028Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/tags/java-%EB%B2%84%EC%A0%84%EA%B4%80%EB%A6%AC/</loc>
+        <lastmod>2023-11-21T01:45:35.028Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/tags/linux/</loc>
+        <lastmod>2023-11-21T01:45:35.028Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/tags/tool/</loc>
+        <lastmod>2023-11-21T01:45:35.028Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/tags/update-alternatives/</loc>
+        <lastmod>2023-11-21T01:45:35.028Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>https://sejoung.github.io/tags/Designing-Data-Intensive-Applications/</loc>
         <lastmod>2023-11-16T09:08:05.313Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -33,20 +131,6 @@
     <url>
         <loc>https://sejoung.github.io/tags/conda/</loc>
         <lastmod>2023-11-14T06:59:26.755Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://sejoung.github.io/tags/%EC%9A%B0%EB%B6%84%ED%88%AC/</loc>
-        <lastmod>2023-11-14T04:57:27.829Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://sejoung.github.io/tags/CUDA/</loc>
-        <lastmod>2023-11-14T04:57:27.829Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
@@ -103,27 +187,6 @@
     <url>
         <loc>https://sejoung.github.io/tags/error/</loc>
         <lastmod>2023-10-25T04:29:02.470Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://sejoung.github.io/tags/stable-diffusion/</loc>
-        <lastmod>2023-10-25T01:49:29.431Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://sejoung.github.io/tags/stable-diffusion-webui/</loc>
-        <lastmod>2023-10-25T01:49:29.431Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://sejoung.github.io/tags/docker/</loc>
-        <lastmod>2023-10-25T01:49:29.431Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>

@@ -9,6 +9,38 @@
 
 
     <url>
+        <loc>https://sejoung.github.io/2023/10/2023-10-26-stable_diffusion_webui_docker_install/</loc>
+        <lastmod>2023-11-21T02:20:51.019Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/2023/11/2023-11-21-ubuntu_nvidia_driver_install/</loc>
+        <lastmod>2023-11-21T02:03:27.411Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/2023/10/2023-10-18-ubuntu_cuda_install/</loc>
+        <lastmod>2023-11-21T01:55:42.300Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/2023/11/2023-11-21-ubuntu_update-alternatives/</loc>
+        <lastmod>2023-11-21T01:45:35.028Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://sejoung.github.io/2023/11/2023-11-16-Designing_Data_Intensive_Applications_chapter5/</loc>
         <lastmod>2023-11-16T09:08:05.313Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -57,14 +89,6 @@
     </url>
 
     <url>
-        <loc>https://sejoung.github.io/2023/10/2023-10-18-ubuntu_cuda_install/</loc>
-        <lastmod>2023-11-14T04:57:27.829Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>https://sejoung.github.io/2023/10/2023-11-13-Getting_started_with_conda/</loc>
         <lastmod>2023-11-13T07:56:00.016Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -107,14 +131,6 @@
     <url>
         <loc>https://sejoung.github.io/2023/10/2023-10-24-git_error/</loc>
         <lastmod>2023-10-25T04:29:02.470Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://sejoung.github.io/2023/10/2023-10-26-stable_diffusion_webui_docker_install/</loc>
-        <lastmod>2023-10-25T01:49:29.431Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
