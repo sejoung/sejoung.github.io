@@ -23,8 +23,8 @@ lspci | grep -i nvidia
 
 ```shell
 
-sudo apt-get purge `.*nvidia.*`
-sudo apt remove `.*nvidia.*`
+sudo apt purge nvidia* -y
+sudo apt remove nvidia* -y
 sudo rm /etc/apt/sources.list.d/cuda*
 sudo apt-get autoremove && sudo apt-get autoclean
 sudo rm -rf /usr/local/cuda*
@@ -68,6 +68,10 @@ sudo mv cuda-ubuntu2204.pin /etc/apt/preferences.d/cuda-repository-pin-600
 sudo apt-key adv --fetch-keys https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2204/x86_64/3bf863cc.pub
 sudo add-apt-repository "deb https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2204/x86_64/ /"
 
+```
+
+```shell
+nvidia-smi
 ```
 
 ## system update
