@@ -9,6 +9,14 @@
 
 
     <url>
+        <loc>https://sejoung.github.io/2023/11/2023-11-21-Designing_Data_Intensive_Applications_chapter6/</loc>
+        <lastmod>2023-11-21T09:54:40.816Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://sejoung.github.io/2023/10/2023-10-26-stable_diffusion_webui_docker_install/</loc>
         <lastmod>2023-11-21T02:20:51.019Z</lastmod>
         <changefreq>weekly</changefreq>
