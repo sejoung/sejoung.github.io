@@ -80,6 +80,10 @@ curl -fsSL https://nvidia.github.io/libnvidia-container/gpgkey | sudo gpg --dear
 sudo apt-get install -y nvidia-container-toolkit
 ```
 
+```shell
+sudo systemctl restart docker
+```
+
 ## stable-diffusion-webui-docker 설치
 
 
