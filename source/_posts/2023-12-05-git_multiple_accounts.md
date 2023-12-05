@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "github 여러 계정 관리(ssh)"
-date: 2023-11-21 10:02 +0900
+date: 2023-12-05 10:30 +0900
 comments: true
 tags: [ "github","ssh","multiple accounts","멀티 계정","여러 계정" ]
 categories: [ "ssh" ]
