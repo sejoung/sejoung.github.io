@@ -3,6 +3,20 @@
 
 
     <url>
+        <loc>https://sejoung.github.io/tags/Designing-Data-Intensive-Applications/</loc>
+        <lastmod>2023-12-07T04:21:37.831Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/tags/%EB%8D%B0%EC%9D%B4%ED%84%B0-%EC%A4%91%EC%8B%AC-%EC%95%A0%ED%94%8C%EB%A6%AC%EC%BC%80%EC%9D%B4%EC%85%98-%EC%84%A4%EA%B3%84/</loc>
+        <lastmod>2023-12-07T04:21:37.831Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>https://sejoung.github.io/tags/%EC%97%AC%EB%9F%AC-%EA%B3%84%EC%A0%95/</loc>
         <lastmod>2023-12-05T02:29:29.223Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -95,20 +109,6 @@
 
     <url>
         <loc>https://sejoung.github.io/tags/ubuntu/</loc>
-        <lastmod>2023-12-01T08:00:58.187Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://sejoung.github.io/tags/Designing-Data-Intensive-Applications/</loc>
-        <lastmod>2023-12-01T08:00:58.187Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://sejoung.github.io/tags/%EB%8D%B0%EC%9D%B4%ED%84%B0-%EC%A4%91%EC%8B%AC-%EC%95%A0%ED%94%8C%EB%A6%AC%EC%BC%80%EC%9D%B4%EC%85%98-%EC%84%A4%EA%B3%84/</loc>
         <lastmod>2023-12-01T08:00:58.187Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
