@@ -3,6 +3,34 @@
 
 
     <url>
+        <loc>https://sejoung.github.io/tags/%EB%B2%84%EC%A0%84%EA%B4%80%EB%A6%AC/</loc>
+        <lastmod>2023-12-13T05:14:33.935Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/tags/Python/</loc>
+        <lastmod>2023-12-13T05:14:33.935Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/tags/Python-Version-Management/</loc>
+        <lastmod>2023-12-13T05:14:33.935Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/tags/pyenv/</loc>
+        <lastmod>2023-12-13T05:14:33.935Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>https://sejoung.github.io/tags/Designing-Data-Intensive-Applications/</loc>
         <lastmod>2023-12-12T06:12:56.340Z</lastmod>
         <changefreq>weekly</changefreq>
