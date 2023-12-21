@@ -3,6 +3,27 @@
 
 
     <url>
+        <loc>https://sejoung.github.io/tags/CFG-Scale/</loc>
+        <lastmod>2023-12-21T02:34:11.792Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/tags/Classifier-Free-Guidance-CFG/</loc>
+        <lastmod>2023-12-21T02:34:11.792Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/tags/Stable-Diffusion/</loc>
+        <lastmod>2023-12-21T02:34:11.792Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>https://sejoung.github.io/tags/five-lines-of-code/</loc>
         <lastmod>2023-12-21T01:53:36.161Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -186,13 +207,6 @@
 
     <url>
         <loc>https://sejoung.github.io/tags/%EC%8A%A4%ED%85%8C%EC%9D%B4%EB%B8%94-%EB%94%94%ED%93%A8%EC%A0%84/</loc>
-        <lastmod>2023-12-01T08:00:58.185Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://sejoung.github.io/tags/Stable-Diffusion/</loc>
         <lastmod>2023-12-01T08:00:58.185Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
