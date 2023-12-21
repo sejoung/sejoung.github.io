@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "1장: 리팩터링 리팩터링하기"
-date: 2023-12-21 15:54 +0900
+date: 2023-12-21 10:10 +0900
 comments: true
 tags : ["파이브 라인스 오브 코드","five lines of code"]
 categories : ["books"]
