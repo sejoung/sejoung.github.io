@@ -67,9 +67,9 @@ ODE 솔버의 예측-수정기 방법에서 영감을 받아 5~10단계로 고�
 ## k-diffusion
 
 마지막으로, k-확산 이라는 용어를 듣고 그것이 무엇을 의미하는지 궁금했을 것입니다. 
-이는 단순히 Katherine Crowson의 k-diffusion GitHub 저장소 및 이와 관련된 샘플러를 나타냅니다 .
+이는 단순히 Katherine Crowson의 k-diffusion GitHub 저장소 및 이와 관련된 샘플러를 나타냅니다.
 
-저장소는 Karras 2022 기사 에서 연구된 샘플러를 구현합니다 .
+저장소는 Karras 2022 기사 에서 연구된 샘플러를 구현합니다.
 
 기본적으로 DDIM, PLMS, UniPC를 제외한 AUTOMATIC1111의 모든 샘플러는 k-diffusion에서 차용한 것입니다.
 
