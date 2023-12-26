@@ -9,8 +9,40 @@
 
 
     <url>
+        <loc>https://sejoung.github.io/2023/12/2023-12-26-five_lines_of_code_4/</loc>
+        <lastmod>2023-12-26T06:03:19.527Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/2023/12/2023-12-26-pyproject/</loc>
+        <lastmod>2023-12-26T02:37:19.520Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/2023/12/2023-12-26-five_lines_of_code_3/</loc>
+        <lastmod>2023-12-26T02:13:17.760Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/2023/12/2023-12-22-five_lines_of_code_2/</loc>
+        <lastmod>2023-12-22T01:30:14.517Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://sejoung.github.io/2023/12/2023-12-21-Stable_Diffusion_Samplers/</loc>
-        <lastmod>2023-12-21T09:22:04.983Z</lastmod>
+        <lastmod>2023-12-21T09:23:45.066Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 

@@ -9,22 +9,22 @@
 
 
     <url>
-        <loc>https://sejoung.github.io/categories/Stable-Diffusion/</loc>
-        <lastmod>2023-12-21T09:22:04.983Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>https://sejoung.github.io/categories/books/</loc>
-        <lastmod>2023-12-21T02:35:44.072Z</lastmod>
+        <lastmod>2023-12-26T06:03:19.527Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://sejoung.github.io/categories/python/</loc>
-        <lastmod>2023-12-13T05:14:33.935Z</lastmod>
+        <lastmod>2023-12-26T02:37:19.520Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/categories/Stable-Diffusion/</loc>
+        <lastmod>2023-12-21T09:23:45.066Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
