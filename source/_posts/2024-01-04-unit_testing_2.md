@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "2장. 단위 테스트란 무엇인가"
-date: 2024-01-03 10:43 +0900
+date: 2024-01-04 10:43 +0900
 comments: true
 tags: [ "단위 테스트","생산성과 품질을 위한 단위 테스트 원칙과 패턴" ]
 categories: [ "books" ]
