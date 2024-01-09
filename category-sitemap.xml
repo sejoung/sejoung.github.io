@@ -10,7 +10,28 @@
 
     <url>
         <loc>https://sejoung.github.io/categories/books/</loc>
-        <lastmod>2024-01-08T05:10:59.017Z</lastmod>
+        <lastmod>2024-01-09T01:26:33.959Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/categories/kubernetes/k8s/</loc>
+        <lastmod>2024-01-08T09:46:10.559Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/categories/kubernetes/</loc>
+        <lastmod>2024-01-08T09:46:10.559Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/categories/Machine-Learning/</loc>
+        <lastmod>2024-01-08T09:41:21.257Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
@@ -39,13 +60,6 @@
     <url>
         <loc>https://sejoung.github.io/categories/tool/</loc>
         <lastmod>2023-12-01T08:00:58.187Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://sejoung.github.io/categories/Machine-Learning/</loc>
-        <lastmod>2023-12-01T08:00:58.185Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
@@ -108,20 +122,6 @@
 
     <url>
         <loc>https://sejoung.github.io/categories/book/</loc>
-        <lastmod>2023-12-01T08:00:58.183Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://sejoung.github.io/categories/kubernetes/k8s/</loc>
-        <lastmod>2023-12-01T08:00:58.183Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://sejoung.github.io/categories/kubernetes/</loc>
         <lastmod>2023-12-01T08:00:58.183Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>

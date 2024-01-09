@@ -9,6 +9,30 @@
 
 
     <url>
+        <loc>https://sejoung.github.io/2024/01/2024-01-09-unit_testing_5/</loc>
+        <lastmod>2024-01-09T01:26:33.959Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/2022/12/2022-12-09-k8s_tools/</loc>
+        <lastmod>2024-01-08T09:46:10.559Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/2024/01/2024-01-08-comfyui_examples/</loc>
+        <lastmod>2024-01-08T09:41:21.257Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://sejoung.github.io/2024/01/2024-01-08-unit_testing_4/</loc>
         <lastmod>2024-01-08T05:10:59.017Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -770,14 +794,6 @@
 
     <url>
         <loc>https://sejoung.github.io/2022/12/2022-12-05-k8s_workloads_cronjob/</loc>
-        <lastmod>2023-12-01T08:00:58.180Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://sejoung.github.io/2022/12/2022-12-09-k8s_tools/</loc>
         <lastmod>2023-12-01T08:00:58.180Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
