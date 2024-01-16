@@ -8,8 +8,27 @@
     <atom:link href="/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>잘정리하자</description>
-    <pubDate>Fri, 12 Jan 2024 02:47:29 GMT</pubDate>
+    <pubDate>Tue, 16 Jan 2024 01:23:51 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>9장. 목 처리에 대한 모범 사례</title>
+      <link>https://sejoung.github.io/2024/01/2024-01-16-unit_testing_9/</link>
+      <guid>https://sejoung.github.io/2024/01/2024-01-16-unit_testing_9/</guid>
+      <pubDate>Tue, 16 Jan 2024 00:29:00 GMT</pubDate>
+      <description>
+      
+        
+        
+          &lt;h1 id=&quot;9장-목-처리에-대한-모범-사례&quot;&gt;&lt;a href=&quot;#9장-목-처리에-대한-모범-사례&quot; class=&quot;headerlink&quot; title=&quot;9장. 목 처리에 대한 모범 사례&quot;&gt;&lt;/a&gt;9장. 목 처리에 대한 모범 사례&lt;/h1&gt;&lt;p&gt;목은 테스트 대
+        
+      
+      </description>
+      
+      <content:encoded><![CDATA[<h1 id="9장-목-처리에-대한-모범-사례"><a href="#9장-목-처리에-대한-모범-사례" class="headerlink" title="9장. 목 처리에 대한 모범 사례"></a>9장. 목 처리에 대한 모범 사례</h1><p>목은 테스트 대상 시스템과 의존성 간의 상호 작용을 모방하고 검사하는 데 도움이 되는 테스트 대역이다</p><p>목은 비관리 의존성에만 적용해야 된다</p><h2 id="목의-가치를-극대화하기"><a href="#목의-가치를-극대화하기" class="headerlink" title="목의 가치를 극대화하기"></a>목의 가치를 극대화하기</h2><p>비관리 의존성에만 목을 사용하게끔 제한하는 것이 중요하지만 이는 목의 가치를 극대화 하기 위한 첫 번째 단계일 뿐이다</p><h3 id="시스템-끝에서-상호-작용-검증하기"><a href="#시스템-끝에서-상호-작용-검증하기" class="headerlink" title="시스템 끝에서 상호 작용 검증하기"></a>시스템 끝에서 상호 작용 검증하기</h3><p>시스템 끝에서 비관리 의존성과의 상호 작용을 검증하라.</p><h3 id="목을-스파이로-대체하기"><a href="#목을-스파이로-대체하기" class="headerlink" title="목을 스파이로 대체하기"></a>목을 스파이로 대체하기</h3><p>스파이는 목과 같은 목적을 수행하는 테스트 대역이다<br>스파이는 수동으로 작성하는 반면에 목은 목프레임워크의 도움을 받아 생성한다는 것이 유일한 차이점이다</p><p>시스템 끝에 있는 클래스의 경우 스파이가 목보다 낫다</p><h2 id="목-처리에-대한-모범-사례"><a href="#목-처리에-대한-모범-사례" class="headerlink" title="목 처리에 대한 모범 사례"></a>목 처리에 대한 모범 사례</h2><ul><li>비관리 의존성에만 목 적용하기</li><li>시스템 끝에 있는 의존성에 대해 상호 작용 검증하기</li><li>통합 테스트에서만 목을 사용하고 단위 테스트에서는 하지 않기</li><li>항상 목 호출 수 확인하기</li><li>보유 타입만 목으로 처리하기</li></ul><h3 id="목은-통합-테스트만을-위한-것"><a href="#목은-통합-테스트만을-위한-것" class="headerlink" title="목은 통합 테스트만을 위한 것"></a>목은 통합 테스트만을 위한 것</h3><p>비지니스 로직과 오케이스레이션의 분리에서 비롯된다</p><h3 id="테스트당-목이-하나일-필요는-없음"><a href="#테스트당-목이-하나일-필요는-없음" class="headerlink" title="테스트당 목이 하나일 필요는 없음"></a>테스트당 목이 하나일 필요는 없음</h3><p>단위 테스트의 단위는 코드의 단위가 아니라 동작의 단위이다</p><h3 id="호출-횟수-검증하기"><a href="#호출-횟수-검증하기" class="headerlink" title="호출 횟수 검증하기"></a>호출 횟수 검증하기</h3><p>비관리 의존성과의 통신에 관해서 다음 두가지 모두 확인하는 것이 중요하다</p><ul><li>예상하는 호출이 있는가?</li><li>예상치 못한 호출이 있는가?</li></ul><h3 id="보유-타입만-목으로-처리하기"><a href="#보유-타입만-목으로-처리하기" class="headerlink" title="보유 타입만 목으로 처리하기"></a>보유 타입만 목으로 처리하기</h3><p>보유 타입만 목으로 처리하는것</p><h1 id="참조"><a href="#참조" class="headerlink" title="참조"></a>참조</h1><hr><ul><li><a href="http://www.acornpub.co.kr/book/unit-testing">단위 테스트(생산성과 품질을 위한 단위 테스트 원칙과 패턴)</a></li></ul>]]></content:encoded>
+      
+      <comments>https://sejoung.github.io/2024/01/2024-01-16-unit_testing_9/#disqus_thread</comments>
+    </item>
     
     <item>
       <title>8장. 통합 테스트를 하는 이유</title>
@@ -372,25 +391,6 @@
       <content:encoded><![CDATA[<h1 id="4장-타입-코드-처리하기"><a href="#4장-타입-코드-처리하기" class="headerlink" title="4장: 타입 코드 처리하기"></a>4장: 타입 코드 처리하기</h1><h2 id="간단한-if-문-리팩터링"><a href="#간단한-if-문-리팩터링" class="headerlink" title="간단한 if 문 리팩터링"></a>간단한 if 문 리팩터링</h2><h3 id="규칙-if-문에서-else를-사용하지-말-것"><a href="#규칙-if-문에서-else를-사용하지-말-것" class="headerlink" title="규칙: if 문에서 else를 사용하지 말 것"></a>규칙: if 문에서 else를 사용하지 말 것</h3><p>결정은 어렵다 if문은 검사 로 간주 if-else 를 사용하면 의사결정으로 간주</p><h3 id="규칙-적용"><a href="#규칙-적용" class="headerlink" title="규칙 적용"></a>규칙 적용</h3><p>클래스로 타입 코드 대체 한다</p><h3 id="리팩터링-패턴-클래스로-타입-코드-대체"><a href="#리팩터링-패턴-클래스로-타입-코드-대체" class="headerlink" title="리팩터링 패턴: 클래스로 타입 코드 대체"></a>리팩터링 패턴: 클래스로 타입 코드 대체</h3><p>클래스로 타입 코드를 바꾼다</p><h3 id="클래스로-코드-이관하기"><a href="#클래스로-코드-이관하기" class="headerlink" title="클래스로 코드 이관하기"></a>클래스로 코드 이관하기</h3><p>클래스로 메소드를 이관 시키면 if문을 제거 할수 있다</p><h3 id="리팩터링-패턴-클래스로의-코드-이관"><a href="#리팩터링-패턴-클래스로의-코드-이관" class="headerlink" title="리팩터링 패턴: 클래스로의 코드 이관"></a>리팩터링 패턴: 클래스로의 코드 이관</h3><p>클래스로 타입코드 대체 패턴의 자연스러운 연장선</p><h3 id="불필요한-메서드-인라인화"><a href="#불필요한-메서드-인라인화" class="headerlink" title="불필요한 메서드 인라인화"></a>불필요한 메서드 인라인화</h3><p>함수를 호출하는 곳으로 변경 처리 </p><p>메서드 인라인화 패턴은 매서드 추출과 정확히 반대</p><h3 id="리팩터링-패턴-메서드의-인라인화"><a href="#리팩터링-패턴-메서드의-인라인화" class="headerlink" title="리팩터링 패턴: 메서드의 인라인화"></a>리팩터링 패턴: 메서드의 인라인화</h3><p>메서드 인라인화를 수행할 때는 모든 호출 측을 수정하여 원래 메서드를 제거 해야 한다</p><p>호출 또는 전달 한가지만 할것</p><h2 id="긴-if-문의-리팩터링"><a href="#긴-if-문의-리팩터링" class="headerlink" title="긴 if 문의 리팩터링"></a>긴 if 문의 리팩터링</h2><p>메서드를 클래스로 이관하고 메서드를 전문화 시킨다</p><ul><li>일반성 제거</li><li>리팩터링 패턴: 메서드 전문화<h3 id="규칙-switch를-사용하지-말-것"><a href="#규칙-switch를-사용하지-말-것" class="headerlink" title="규칙: switch를 사용하지 말 것"></a>규칙: switch를 사용하지 말 것</h3></li></ul><p>default 케이스가 없고 모든 case에 반환값이 있는 경우가 아니라면 switch문은 사용하지 말아야 한다</p><h3 id="if-제거하기"><a href="#if-제거하기" class="headerlink" title="if 제거하기"></a>if 제거하기</h3><h2 id="코드-중복-처리"><a href="#코드-중복-처리" class="headerlink" title="코드 중복 처리"></a>코드 중복 처리</h2><h3 id="인터페이스-대신-추상-클래스를-사용할-수는-없을까"><a href="#인터페이스-대신-추상-클래스를-사용할-수는-없을까" class="headerlink" title="인터페이스 대신 추상 클래스를 사용할 수는 없을까?"></a>인터페이스 대신 추상 클래스를 사용할 수는 없을까?</h3><p>사용할수 있다 하지만 몇가지 단점도 있다 인터페이스를 사용하면 개발자가 능동적으로 무엇을 해야 한다 하지만 추상클래스는 그냥 넘어 갈수 있다</p><h3 id="규칙-인터페이스에서만-상속받을-것"><a href="#규칙-인터페이스에서만-상속받을-것" class="headerlink" title="규칙: 인터페이스에서만 상속받을 것"></a>규칙: 인터페이스에서만 상속받을 것</h3><h3 id="클래스에-있는-코드의-중복은-다-무엇일까"><a href="#클래스에-있는-코드의-중복은-다-무엇일까" class="headerlink" title="클래스에 있는 코드의 중복은 다 무엇일까?"></a>클래스에 있는 코드의 중복은 다 무엇일까?</h3><h2 id="복잡한-if-체인-구문-리팩터링"><a href="#복잡한-if-체인-구문-리팩터링" class="headerlink" title="복잡한 if 체인 구문 리팩터링"></a>복잡한 if 체인 구문 리팩터링</h2><h2 id="필요-없는-코드-제거하기"><a href="#필요-없는-코드-제거하기" class="headerlink" title="필요 없는 코드 제거하기"></a>필요 없는 코드 제거하기</h2><h3 id="리팩터링-패턴-삭제-후-컴파일하기"><a href="#리팩터링-패턴-삭제-후-컴파일하기" class="headerlink" title="리팩터링 패턴: 삭제 후 컴파일하기"></a>리팩터링 패턴: 삭제 후 컴파일하기</h3><h1 id="참조"><a href="#참조" class="headerlink" title="참조"></a>참조</h1><hr><ul><li><a href="https://wikibook.co.kr/five-lines/">파이브 라인스 오브 코드</a></li></ul>]]></content:encoded>
       
       <comments>https://sejoung.github.io/2023/12/2023-12-26-five_lines_of_code_4/#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>pyproject.toml</title>
-      <link>https://sejoung.github.io/2023/12/2023-12-26-pyproject/</link>
-      <guid>https://sejoung.github.io/2023/12/2023-12-26-pyproject/</guid>
-      <pubDate>Tue, 26 Dec 2023 02:32:00 GMT</pubDate>
-      <description>
-      
-        
-        
-          &lt;h1 id=&quot;pyproject-toml&quot;&gt;&lt;a href=&quot;#pyproject-toml&quot; class=&quot;headerlink&quot; title=&quot;pyproject.toml&quot;&gt;&lt;/a&gt;pyproject.toml&lt;/h1&gt;&lt;p&gt;pyproject.tomlPEP 518 
-        
-      
-      </description>
-      
-      <content:encoded><![CDATA[<h1 id="pyproject-toml"><a href="#pyproject-toml" class="headerlink" title="pyproject.toml"></a>pyproject.toml</h1><p>pyproject.tomlPEP 518 에 정의되고 PEP 621 및 PEP 660 에서 확장된 새로운 구성 파일입니다.<br>빌드 시스템 요구 사항을 저장하도록 설계되었지만 Python 프로젝트에 대한 모든 도구 구성을 저장할 수도 있어 필요하거나<br>setup.cfg다른 도구 관련 파일을 대체할 수도 있습니다.</p><h1 id="참조"><a href="#참조" class="headerlink" title="참조"></a>참조</h1><hr><ul><li><a href="https://github.com/carlosperate/awesome-pyproject">Awesome pyproject.toml</a></li><li><a href="https://peps.python.org/pep-0518/">PEP 518 – Specifying Minimum Build System Requirements for Python Projects</a></li><li><a href="https://peps.python.org/pep-0621/">PEP 621 – Storing project metadata in pyproject.toml</a></li><li><a href="https://peps.python.org/pep-0660/">PEP 660 – Editable installs for pyproject.toml based builds (wheel based)</a></li><li><a href="https://packaging.python.org/en/latest/guides/writing-pyproject-toml/">Writing your pyproject.toml</a></li></ul>]]></content:encoded>
-      
-      <comments>https://sejoung.github.io/2023/12/2023-12-26-pyproject/#disqus_thread</comments>
     </item>
     
   </channel>
