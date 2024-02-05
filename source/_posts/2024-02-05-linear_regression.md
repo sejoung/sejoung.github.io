@@ -25,6 +25,22 @@ y = ax+b
 
 가증합으로 새로운 특성을 만들어낸다
 
+## 로지스틱 회귀분석(logistic regression)
+
+input과 weight를 곱해서 더하는 과정은 linear combination(선형 결합)이다.
+인공신경망의 학습은 각 뉴런에 곱해지는 ‘weight’라는 모수(parameter)를 추정(estimate)하는 과정이다
+
+로지스틱 회귀분석은 generalized linear model(GLM)의 일종이다
+
+로지스틱 함수가 바로 우리가 활성함수로 사용하는 sigmoid function이다
+
+Sigmoid를 활성함수로 사용하는 multi layer perceptron neural network의 hidden layer의 각 뉴런은 로지스틱 회귀분석을 하는 것과 정확히 일치
+
+## activation function의 종류
+* sigmoid
+* tanh
+* ReLU(Rectified Linear Unit)
+
 ## Bias and Variance (편향과 분산)
 
 예측값들과 정답이 대처로 멀리 떨어져 있으면 결과의 편향(bias)이 높다고 말하고
@@ -52,7 +68,6 @@ y = ax+b
 각 열이 원인과 결과의 관계일 때
 인과관계가 있다고 합니다.
 
-
 ## 지도 학습
 
 * 분류 (Classification)
@@ -79,3 +94,4 @@ y = ax+b
 -----
 
 * [머신러닝에서의 Bias와 Variance](https://gaussian37.github.io/machine-learning-concept-bias_and_variance/)
+* [Activation Function(활성함수)](https://pozalabs.github.io/Activation_Function/)
