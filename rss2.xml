@@ -8,8 +8,46 @@
     <atom:link href="/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>잘정리하자</description>
-    <pubDate>Tue, 06 Feb 2024 01:51:12 GMT</pubDate>
+    <pubDate>Wed, 07 Feb 2024 01:25:07 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>CHAPTER 12 함수형 반복</title>
+      <link>https://sejoung.github.io/2024/02/2024-02-07-Grokking_Simplicity_12/</link>
+      <guid>https://sejoung.github.io/2024/02/2024-02-07-Grokking_Simplicity_12/</guid>
+      <pubDate>Wed, 07 Feb 2024 01:07:00 GMT</pubDate>
+      <description>
+      
+        
+        
+          &lt;h1 id=&quot;CHAPTER-12-함수형-반복&quot;&gt;&lt;a href=&quot;#CHAPTER-12-함수형-반복&quot; class=&quot;headerlink&quot; title=&quot;CHAPTER 12 함수형 반복&quot;&gt;&lt;/a&gt;CHAPTER 12 함수형 반복&lt;/h1&gt;&lt;h2 id=&quot;함수형-도
+        
+      
+      </description>
+      
+      <content:encoded><![CDATA[<h1 id="CHAPTER-12-함수형-반복"><a href="#CHAPTER-12-함수형-반복" class="headerlink" title="CHAPTER 12 함수형 반복"></a>CHAPTER 12 함수형 반복</h1><h2 id="함수형-도구-map"><a href="#함수형-도구-map" class="headerlink" title="함수형 도구: map()"></a>함수형 도구: map()</h2><ul><li>X 값이 있는 배열을 받아서 Y 값이 있는 배열로 변환 한다<h2 id="함수를-전달하는-세-가지-방법"><a href="#함수를-전달하는-세-가지-방법" class="headerlink" title="함수를 전달하는 세 가지 방법"></a>함수를 전달하는 세 가지 방법</h2></li><li>전역으로 정의하기</li><li>지역적으로 정의하기</li><li>인라인으로 정의하기<h2 id="함수형-도구-filter"><a href="#함수형-도구-filter" class="headerlink" title="함수형 도구: filter()"></a>함수형 도구: filter()</h2></li><li>배열에서 일부 항목을 선택하는 함수<h2 id="함수형-도구-reduce"><a href="#함수형-도구-reduce" class="headerlink" title="함수형 도구: reduce()"></a>함수형 도구: reduce()</h2></li><li>배열을 순회하면서 값을 누적한다<h2 id="reduce-로-할-수-있는-것들"><a href="#reduce-로-할-수-있는-것들" class="headerlink" title="reduce()로 할 수 있는 것들"></a>reduce()로 할 수 있는 것들</h2></li><li>실행 취소&#x2F;실행 복귀</li><li>테스트할 때 사용자 입력을 다시 실행하기</li><li>시간 여행 디버깅</li><li>회계 감사 추적<h2 id="세-가지-함수형-도구를-비교하기"><a href="#세-가지-함수형-도구를-비교하기" class="headerlink" title="세 가지 함수형 도구를 비교하기"></a>세 가지 함수형 도구를 비교하기</h2></li><li>map()은 배열의 모든 항복에 함수를 적용해 새로운 배열로 바꾼다</li><li>filter()는 배열의 하위 집합을 선택해 새로운 배열로 만든다</li><li>reduce()는 배열의 항목을 조합해 최종값을 만든다</li></ul><h1 id="참조"><a href="#참조" class="headerlink" title="참조"></a>참조</h1><hr><ul><li><a href="https://www.yes24.com/Product/Goods/108748841">쏙쏙 들어오는 함수형 코딩(심플한 코드로 복잡한 소프트웨어 길들이기)</a></li></ul>]]></content:encoded>
+      
+      <comments>https://sejoung.github.io/2024/02/2024-02-07-Grokking_Simplicity_12/#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>CHAPTER 11 일급 함수 II</title>
+      <link>https://sejoung.github.io/2024/02/2024-02-07-Grokking_Simplicity_11/</link>
+      <guid>https://sejoung.github.io/2024/02/2024-02-07-Grokking_Simplicity_11/</guid>
+      <pubDate>Wed, 07 Feb 2024 00:49:00 GMT</pubDate>
+      <description>
+      
+        
+        
+          &lt;h1 id=&quot;CHAPTER-11-일급-함수-II&quot;&gt;&lt;a href=&quot;#CHAPTER-11-일급-함수-II&quot; class=&quot;headerlink&quot; title=&quot;CHAPTER 11 일급 함수 II&quot;&gt;&lt;/a&gt;CHAPTER 11 일급 함수 II&lt;/h1&gt;&lt;h2 i
+        
+      
+      </description>
+      
+      <content:encoded><![CDATA[<h1 id="CHAPTER-11-일급-함수-II"><a href="#CHAPTER-11-일급-함수-II" class="headerlink" title="CHAPTER 11 일급 함수 II"></a>CHAPTER 11 일급 함수 II</h1><h2 id="코드-냄새-하나와-리팩터링-두-개"><a href="#코드-냄새-하나와-리팩터링-두-개" class="headerlink" title="코드 냄새 하나와 리팩터링 두 개"></a>코드 냄새 하나와 리팩터링 두 개</h2><ul><li>코드의 냄새: 함수 이름에 있는 암묵적 인자<ul><li>거의 똑같이 구현된 함수가 있다</li><li>함수 이름이 구현에 있는 다른 부분을 가르킨다</li></ul></li><li>리팩터링: 암묵적 인자 드러내기</li><li>리팩터링: 함수를 본문을 콜백으로 바꾸기</li></ul><h2 id="카피-온-라이트-리팩터링하기"><a href="#카피-온-라이트-리팩터링하기" class="headerlink" title="카피-온-라이트 리팩터링하기"></a>카피-온-라이트 리팩터링하기</h2><ul><li>함수 본문을 콜백으로 바꾸기 단계<ul><li>본문과 앞부분 뒷부분을 확인하기</li><li>함수 빼내기</li><li>콜백 빼내기</li></ul></li></ul><h1 id="참조"><a href="#참조" class="headerlink" title="참조"></a>참조</h1><hr><ul><li><a href="https://www.yes24.com/Product/Goods/108748841">쏙쏙 들어오는 함수형 코딩(심플한 코드로 복잡한 소프트웨어 길들이기)</a></li></ul>]]></content:encoded>
+      
+      <comments>https://sejoung.github.io/2024/02/2024-02-07-Grokking_Simplicity_11/#disqus_thread</comments>
+    </item>
     
     <item>
       <title>CHAPTER 10 일급 함수 I</title>
@@ -48,6 +86,25 @@
       <content:encoded><![CDATA[<h1 id="선형-회귀-Linear-Regression"><a href="#선형-회귀-Linear-Regression" class="headerlink" title="선형 회귀(Linear Regression)"></a>선형 회귀(Linear Regression)</h1><p>Linear -&gt; 선을 그려</p><p>Regression -&gt; 값을 예측</p><p>회귀(Regression)는 통계학과 머신러닝에서 사용되는 용어로, 어떤 변수의 값을 다른 변수의 값으로 예측하거나 설명하는 모델</p><ul><li>데이터를 일반화하는 선을 찾는다</li><li>그 선을 이용해 새로운 데이터를 예측한다</li></ul><p>y &#x3D; ax+b</p><p>가증합으로 새로운 특성을 만들어낸다</p><h2 id="로지스틱-회귀분석-logistic-regression"><a href="#로지스틱-회귀분석-logistic-regression" class="headerlink" title="로지스틱 회귀분석(logistic regression)"></a>로지스틱 회귀분석(logistic regression)</h2><p>input과 weight를 곱해서 더하는 과정은 linear combination(선형 결합)이다.<br>인공신경망의 학습은 각 뉴런에 곱해지는 ‘weight’라는 모수(parameter)를 추정(estimate)하는 과정이다</p><p>로지스틱 회귀분석은 generalized linear model(GLM)의 일종이다</p><p>로지스틱 함수가 바로 우리가 활성함수로 사용하는 sigmoid function이다</p><p>Sigmoid를 활성함수로 사용하는 multi layer perceptron neural network의 hidden layer의 각 뉴런은 로지스틱 회귀분석을 하는 것과 정확히 일치</p><h2 id="activation-function의-종류"><a href="#activation-function의-종류" class="headerlink" title="activation function의 종류"></a>activation function의 종류</h2><ul><li>sigmoid</li><li>tanh</li><li>ReLU(Rectified Linear Unit)</li></ul><h2 id="Bias-and-Variance-편향과-분산"><a href="#Bias-and-Variance-편향과-분산" class="headerlink" title="Bias and Variance (편향과 분산)"></a>Bias and Variance (편향과 분산)</h2><p>예측값들과 정답이 대처로 멀리 떨어져 있으면 결과의 편향(bias)이 높다고 말하고<br>예측값들이 자기들끼리 대체로 멀리 흩어져 있으면 결과의 분산(variance)이 높다고 말한다.</p><h2 id="독립변수와-종속변수"><a href="#독립변수와-종속변수" class="headerlink" title="독립변수와 종속변수"></a>독립변수와 종속변수</h2><p>표에서 변수는 열</p><ul><li>독립변수<ul><li>원인이 되는 것</li><li>결과랑 상관없는 것</li></ul></li><li>종속변수<ul><li>결과가 되는 것</li><li>원인에 종속되어 있는것</li></ul></li></ul><h3 id="상관관계"><a href="#상관관계" class="headerlink" title="상관관계"></a>상관관계</h3><p>한쪽의 값이 바뀌었을 때, 다른 쪽의 값도 바뀐다면,<br>두 개의 특성은 ‘서로 관련이 있다’고 추측할 수 있습니다.<br>그리고, 이런 관계를 ‘상관관계’라고 합니다.</p><h3 id="인과관계"><a href="#인과관계" class="headerlink" title="인과관계"></a>인과관계</h3><p>각 열이 원인과 결과의 관계일 때<br>인과관계가 있다고 합니다.</p><h2 id="지도-학습"><a href="#지도-학습" class="headerlink" title="지도 학습"></a>지도 학습</h2><ul><li>분류 (Classification)</li><li>회귀 (Regression)</li></ul><h3 id="분류-Classification"><a href="#분류-Classification" class="headerlink" title="분류(Classification)"></a>분류(Classification)</h3><p>결과가 숫자가 아니라 손톱, 정상과 같은 이름이면 분류(Classification)를 사용한다</p><h3 id="회귀-Regression"><a href="#회귀-Regression" class="headerlink" title="회귀(Regression)"></a>회귀(Regression)</h3><p>예측하고 싶은 종속변수가 숫자일 때 회귀(Regression)를 사용한다</p><h2 id="비지도-학습"><a href="#비지도-학습" class="headerlink" title="비지도 학습"></a>비지도 학습</h2><ul><li><p>군집 (Clustering)</p><ul><li>비슷한 것들끼리 모아서 적당한 그룹을 만들 것입니다 이렇게 그룹을 만드는 것이 군집</li><li>좌표 평면을 사용하면 군집을 쉽게 볼 수 있습니다</li></ul></li><li><p>연관 규칙 학습(Association Rule Learning)</p><ul><li>어떤 물건을 살 때 다른 물건도 같이 살 확률이 높다면, 그 물건들은 연관이 있다고 볼 수 있습니다</li><li>이런 연관을 찾는 것이 연관 규칙 학습</li></ul></li></ul><h1 id="참조"><a href="#참조" class="headerlink" title="참조"></a>참조</h1><hr><ul><li><a href="https://gaussian37.github.io/machine-learning-concept-bias_and_variance/">머신러닝에서의 Bias와 Variance</a></li><li><a href="https://pozalabs.github.io/Activation_Function/">Activation Function(활성함수)</a></li></ul>]]></content:encoded>
       
       <comments>https://sejoung.github.io/2024/02/2024-02-05-linear_regression/#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>신경망(Neural Networks)</title>
+      <link>https://sejoung.github.io/2024/02/2024-02-06-neural_networks/</link>
+      <guid>https://sejoung.github.io/2024/02/2024-02-06-neural_networks/</guid>
+      <pubDate>Mon, 05 Feb 2024 07:30:00 GMT</pubDate>
+      <description>
+      
+        
+        
+          &lt;h1 id=&quot;신경망-Neural-Networks&quot;&gt;&lt;a href=&quot;#신경망-Neural-Networks&quot; class=&quot;headerlink&quot; title=&quot;신경망(Neural Networks)&quot;&gt;&lt;/a&gt;신경망(Neural Networks)&lt;/h1&gt;&lt;h2
+        
+      
+      </description>
+      
+      <content:encoded><![CDATA[<h1 id="신경망-Neural-Networks"><a href="#신경망-Neural-Networks" class="headerlink" title="신경망(Neural Networks)"></a>신경망(Neural Networks)</h1><h2 id="행렬곱"><a href="#행렬곱" class="headerlink" title="행렬곱"></a>행렬곱</h2><ul><li>one-hot encoding 통해서 행렬을 만들고 가중치 행렬과 행렬곱을 수행하여 예측값을 만들어낸다.</li></ul><h2 id="경사-하강법-Gradient-Descent"><a href="#경사-하강법-Gradient-Descent" class="headerlink" title="경사 하강법(Gradient Descent)"></a>경사 하강법(Gradient Descent)</h2><ul><li>경사 하강법은 함수의 기울기를 구하고, 기울기가 낮은 쪽으로 이동시키면서 최소값을 찾는 방법이다. (최소 cost&#x2F;loss를 찾는 방법)</li></ul><h2 id="Optimizer의-종류"><a href="#Optimizer의-종류" class="headerlink" title="Optimizer의 종류"></a>Optimizer의 종류</h2><ul><li>SGD(Stochastic Gradient Descent)</li><li>mini-batch SGD</li><li>Momentum</li><li>RMSprop</li><li>Adam</li></ul><h2 id="역전파-Backpropagation"><a href="#역전파-Backpropagation" class="headerlink" title="역전파(Backpropagation)"></a>역전파(Backpropagation)</h2><ul><li>연쇄 법칙(Chain Rule)을 신경망의 그래디언트 계산에 적용한 것</li></ul><h2 id="소프트-맥스-Softmax"><a href="#소프트-맥스-Softmax" class="headerlink" title="소프트 맥스(Softmax)"></a>소프트 맥스(Softmax)</h2><ul><li>소프트맥스 함수는 입력받은 값을 출력으로 0~1사이의 값으로 모두 정규화하며 출력 값들의 총합은 항상 1이 되는 특성을 가진 함수이다.</li><li>예측값을 확률값으로 변환</li><li>출력노드가 2개 이상일때</li></ul><h2 id="크로스엔트로피-Cross-Entropy"><a href="#크로스엔트로피-Cross-Entropy" class="headerlink" title="크로스엔트로피(Cross-Entropy)"></a>크로스엔트로피(Cross-Entropy)</h2><ul><li>모델에서 예측한 확률값이 실제값과 비교했을 때 틀릴 수 있는 정보량</li><li>cost function으로 사용</li></ul><h1 id="참조"><a href="#참조" class="headerlink" title="참조"></a>참조</h1><hr><ul><li><a href="https://www.youtube.com/watch?v=d14TUNcbn1k">Lecture 4 | Introduction to Neural Networks</a></li><li><a href="https://aikorea.org/cs231n/optimization-2/">CS231n Convolutional Neural Networks for Visual Recognition kor</a></li><li><a href="https://cs231n.github.io/optimization-2/">CS231n Convolutional Neural Networks for Visual Recognition en</a></li></ul>]]></content:encoded>
+      
+      <comments>https://sejoung.github.io/2024/02/2024-02-06-neural_networks/#disqus_thread</comments>
     </item>
     
     <item>
@@ -335,63 +392,6 @@
       <content:encoded><![CDATA[<h1 id="6장-단위-테스트-스타일"><a href="#6장-단위-테스트-스타일" class="headerlink" title="6장. 단위 테스트 스타일"></a>6장. 단위 테스트 스타일</h1><p>단위테스트 스타일</p><ul><li>출력 기반 테스트 -&gt; 가장 품질이 좋음</li><li>상태 기반 테스트 -&gt; 두번째 </li><li>통신 기반 테스트 -&gt; 가장 품질이 낮음</li></ul><h2 id="단위-테스트의-세-가지-스타일"><a href="#단위-테스트의-세-가지-스타일" class="headerlink" title="단위 테스트의 세 가지 스타일"></a>단위 테스트의 세 가지 스타일</h2><ul><li>출력 기반 테스트(output-based testing)</li><li>상태 기반 테스트(state-based testing)</li><li>통신 기반 테스트(communication-based testing)</li></ul><h3 id="출력-기반-테스트-정의"><a href="#출력-기반-테스트-정의" class="headerlink" title="출력 기반 테스트 정의"></a>출력 기반 테스트 정의</h3><p>대상 시스템에 입력을 넣고 생성되는 출력을 점검하는 방식</p><p>출력 기반 단위 테스트 스타일은 함수형 이라고도 한다</p><h3 id="상태-기반-스타일-정의"><a href="#상태-기반-스타일-정의" class="headerlink" title="상태 기반 스타일 정의"></a>상태 기반 스타일 정의</h3><p>작업이 완료된 후 시스템 상태를 확인하는 것이다<br>이 테스트 스타일에서 상태라는 용어는 SUT나 협력자 중 하나 또는 데이터베이스나 파일시스템등 외부의존성의 상태를 의미 할수 있다 </p><h3 id="통신-기반-스타일-정의"><a href="#통신-기반-스타일-정의" class="headerlink" title="통신 기반 스타일 정의"></a>통신 기반 스타일 정의</h3><p>목을 사용해 테스트 대상 시스템과 협력자 간의 통신을 검증한다</p><h2 id="단위-테스트-스타일-비교"><a href="#단위-테스트-스타일-비교" class="headerlink" title="단위 테스트 스타일 비교"></a>단위 테스트 스타일 비교</h2><p>4대 요소랑 비교해보면 재미있을것이다</p><ul><li>회귀방지</li><li>리팩터링 내성</li><li>빠른 피드백</li><li>유지보수성</li></ul><h3 id="회귀-방지와-피드백-속도-지표로-스타일-비교하기"><a href="#회귀-방지와-피드백-속도-지표로-스타일-비교하기" class="headerlink" title="회귀 방지와 피드백 속도 지표로 스타일 비교하기"></a>회귀 방지와 피드백 속도 지표로 스타일 비교하기</h3><p>회귀 방지 지표</p><ul><li>테스트 중에 실행되는 코드의 양</li><li>코드 복잡도</li><li>도메인 유의성</li></ul><p> 어떤 스타일도 이 부분 에선 도움이 안된다</p><p>테스트 스타일과 테스트 피드백 속도 사이에는 상관관계가 거의 없다</p><h3 id="리팩터링-내성-지표로-스타일-비교하기"><a href="#리팩터링-내성-지표로-스타일-비교하기" class="headerlink" title="리팩터링 내성 지표로 스타일 비교하기"></a>리팩터링 내성 지표로 스타일 비교하기</h3><p>리팩터링 내성은 리팩터링 중 발생하는 거짓 양성 수에 대한 척도다</p><p>거짓 양성은 식별할 수 있는 동작이 아니라 코드의 구현 세부 사항에 결합된 테스트의 결과다</p><ul><li>출력 기반 테스트가 가장 우수하다</li><li>상태 기반 테스트는 일반적으로 거짓양성이 되기 쉽다</li><li>통신 기반 테스트가 허위 정보에 가장 취약하다</li></ul><h3 id="유지-보수성-지표로-스타일-비교하기"><a href="#유지-보수성-지표로-스타일-비교하기" class="headerlink" title="유지 보수성 지표로 스타일 비교하기"></a>유지 보수성 지표로 스타일 비교하기</h3><ul><li>테스트를 이해라기 얼마나 어려운가(테스트 크기에 대한 함수)?</li><li>테스트를 실행하기 얼마나 어려운가(프로세스 외부 의존성 개수에 대한 함수)?</li></ul><p>출력 기반 테스트가 가장 유지보수에 용의하다</p><p>상태 기반 테스트는 일반적으로 출력 기반 테스트보다 유지 보수가 쉽지 않다</p><p>클래스가 값에 해당하고 값 객체로 변환할 수 있을 때만 효과적 그렇지 않으면 코드 오염으로 이어진다</p><p>통신 기반 테스트는 유지 보수성 지표에서 출력 기반 테스트와 상태 기반 테스트 보다 점수가 낮다</p><h3 id="스타일-비교하기-결론"><a href="#스타일-비교하기-결론" class="headerlink" title="스타일 비교하기: 결론"></a>스타일 비교하기: 결론</h3><p>출력 기반 테스트가 가장 품질이 좋다</p><h2 id="함수형-아키텍처-이해"><a href="#함수형-아키텍처-이해" class="headerlink" title="함수형 아키텍처 이해"></a>함수형 아키텍처 이해</h2><p>함수형 프로그래밍과 출력 기반 테스트의 연관성을 이해하는데 도움이 될 것이다</p><h3 id="함수형-프로그래밍이란"><a href="#함수형-프로그래밍이란" class="headerlink" title="함수형 프로그래밍이란?"></a>함수형 프로그래밍이란?</h3><p>출력 기반 단위 테스트 스타일은 함수형이라고도 한다<br>기반 제품 코드를 함수형 프로그래밍을 이용해 순수 함수 방식으로 작성해야 하기 때문이다</p><p>함수형 프로그래밍은 수학적 함수를 사용한 프로그래밍이다</p><p>수학적 함수는 호출 횟수에 상관 없이 주어진 입력에 대해 동일한 출력을 생성한다</p><p>숨은 입출력의 유형</p><ul><li>부작용</li><li>예외</li><li>내외부 상태에 대한 참조</li></ul><h3 id="함수형-아키텍처란"><a href="#함수형-아키텍처란" class="headerlink" title="함수형 아키텍처란?"></a>함수형 아키텍처란?</h3><p>함수형 프로그래밍 목표는 부작용을 완전히 제거하는 것이 아니라 비즈니스 로직을 처리하는 코드와 부작용을 일으키는 코드를 분리하는 것</p><p>비즈니스 로직과 부작용을 분리하는 유형</p><ul><li>결정을 내리는 코드 : 부작용이 없는 코드<ul><li>함수형 코어(불변 코어)</li></ul></li><li>해당 결정에 따라 작동하는 코드 : 결정이 된 부분을 데이터베이스로 변경이나 메시지 버스로 전송된 메시지 같이 가시적인 부분으로 변환하는 부분<ul><li>가변 셀</li></ul></li></ul><p>함수형 코어와 가변 셀의 협력</p><ul><li>가변 셍은 모든 입력을 수집한다</li><li>함수형 코어는 결정을 생성한다</li><li>셀은 결정을 부작용으로 변환한다</li></ul><h3 id="함수형-아키텍처와-육각형-아키텍처-비교"><a href="#함수형-아키텍처와-육각형-아키텍처-비교" class="headerlink" title="함수형 아키텍처와 육각형 아키텍처 비교"></a>함수형 아키텍처와 육각형 아키텍처 비교</h3><p>함수형 아키텍처와 육각형 아키텍처는 비슷한 점이 많다</p><p>함수형 아키텍처는 육각형 아키텍처의 하위 집합이다. 극단적으로 함수형 아키텍처를 육각형 아키텍처로 볼 수도 있다</p><h2 id="함수형-아키텍처와-출력-기반-테스트로-전환"><a href="#함수형-아키텍처와-출력-기반-테스트로-전환" class="headerlink" title="함수형 아키텍처와 출력 기반 테스트로 전환"></a>함수형 아키텍처와 출력 기반 테스트로 전환</h2><ul><li>프로세스 외부 의존성에서 목으로 변경</li><li>목에서 함수형 아키텍처로 변경</li></ul><h2 id="함수형-아키텍처의-단점-이해하기"><a href="#함수형-아키텍처의-단점-이해하기" class="headerlink" title="함수형 아키텍처의 단점 이해하기"></a>함수형 아키텍처의 단점 이해하기</h2><p>항수형 아키텍처와 관련된 비용과 장단점</p><h3 id="함수형-아키텍처-적용-가능성"><a href="#함수형-아키텍처-적용-가능성" class="headerlink" title="함수형 아키텍처 적용 가능성"></a>함수형 아키텍처 적용 가능성</h3><p>함수형 코어의 클래스는 협력자로 작동하면 안되고 작업의 결과인 값으로 작동해야 한다</p><h3 id="성능-단점"><a href="#성능-단점" class="headerlink" title="성능 단점"></a>성능 단점</h3><p>함수형 아키텍처와 전동적인 아키텍처 사이의 선택은 성능과 코드 유지 보수성간의 절충이다</p><h3 id="코드베이스-크기-증가"><a href="#코드베이스-크기-증가" class="headerlink" title="코드베이스 크기 증가"></a>코드베이스 크기 증가</h3><p>함수형 아키텍처는 함수형 코어와 가변 셀 사이를 명확하게 분리해야 한다 그래서 초기에 코딩이 더 필요하다</p><h1 id="참조"><a href="#참조" class="headerlink" title="참조"></a>참조</h1><hr><ul><li><a href="http://www.acornpub.co.kr/book/unit-testing">단위 테스트(생산성과 품질을 위한 단위 테스트 원칙과 패턴)</a></li></ul>]]></content:encoded>
       
       <comments>https://sejoung.github.io/2024/01/2024-01-10-unit_testing_6/#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>5장. 목과 테스트 취약성</title>
-      <link>https://sejoung.github.io/2024/01/2024-01-09-unit_testing_5/</link>
-      <guid>https://sejoung.github.io/2024/01/2024-01-09-unit_testing_5/</guid>
-      <pubDate>Tue, 09 Jan 2024 00:40:00 GMT</pubDate>
-      <description>
-      
-        
-        
-          &lt;h1 id=&quot;5장-목과-테스트-취약성&quot;&gt;&lt;a href=&quot;#5장-목과-테스트-취약성&quot; class=&quot;headerlink&quot; title=&quot;5장. 목과 테스트 취약성&quot;&gt;&lt;/a&gt;5장. 목과 테스트 취약성&lt;/h1&gt;&lt;p&gt;런던파는 테스트 대상 코드 조각을 서로 분리
-        
-      
-      </description>
-      
-      <content:encoded><![CDATA[<h1 id="5장-목과-테스트-취약성"><a href="#5장-목과-테스트-취약성" class="headerlink" title="5장. 목과 테스트 취약성"></a>5장. 목과 테스트 취약성</h1><p>런던파는 테스트 대상 코드 조각을 서로 분리하고 불변 의존성을 제외한 모든 의존성에 테스트 대역을 써서 격리하고자 한다</p><p>고전파는 단위 테스트를 분리해서 병렬로 실행할 수 있게 하자고 한다 테스트 간에 공유하는 의존성에 대해서만 테스트 대역을 사용한다</p><h2 id="목과-스텁-구분"><a href="#목과-스텁-구분" class="headerlink" title="목과 스텁 구분"></a>목과 스텁 구분</h2><p>테스트 대역의 종류</p><ul><li>목(mock)</li><li>스텁(stub)</li><li>가짜(fakes)</li><li>스파이(spy)</li><li>더미(dummy)</li></ul><h3 id="테스트-대역-유형"><a href="#테스트-대역-유형" class="headerlink" title="테스트 대역 유형"></a>테스트 대역 유형</h3><p>테스트 대역은 모든 유형의 비운영용 가짜 의존성을 설명하는 포괄적인 용어다</p><ul><li>목은 외부로 나가는 상호 작용을 모방하고 검사하는데 도움이 된다</li><li>스텁은 내부로 들어오는 상호 작용을 모방하는데 도움이 된다</li></ul><h3 id="도구로서의-목과-테스트-대역으로서의-목"><a href="#도구로서의-목과-테스트-대역으로서의-목" class="headerlink" title="도구로서의 목과 테스트 대역으로서의 목"></a>도구로서의 목과 테스트 대역으로서의 목</h3><p>도구로써 목은 목라이브러리의 클래스도 목으로 참고할 수 있다</p><h3 id="스텁으로-상호-작용을-검증하지-말라"><a href="#스텁으로-상호-작용을-검증하지-말라" class="headerlink" title="스텁으로 상호 작용을 검증하지 말라"></a>스텁으로 상호 작용을 검증하지 말라</h3><p>스텁과의 상호 작용을 검증하는 것은 취약한 테스트를 야기하는 일반적인 안티 패턴이다</p><p>최종 결과가 아닌 사항을 검증하는 이러한 관행을 과잉 명세라고 부른다</p><p>목을 쓰면 무조건 테스트 취약성을 초래하는 것은 아니지만 대다수 그렇다</p><h3 id="목과-스텁-함께-쓰기"><a href="#목과-스텁-함께-쓰기" class="headerlink" title="목과 스텁 함께 쓰기"></a>목과 스텁 함께 쓰기</h3><p>때로는 목과 스텁의 특성을 모두 나타내는 테스트 대역을 만들 필요가 있다</p><h3 id="목과-스텁은-명령과-조회에-어떻게-관련돼-있는가"><a href="#목과-스텁은-명령과-조회에-어떻게-관련돼-있는가" class="headerlink" title="목과 스텁은 명령과 조회에 어떻게 관련돼 있는가"></a>목과 스텁은 명령과 조회에 어떻게 관련돼 있는가</h3><p>목과 스텁의 개념은 명령 조회 분리 원칙과 관련이 있다</p><p>CQS 원칙에 따르면 모든 메서드는 명령이거나 조회여야 하고 이 둘을 혼용해서는 안된다</p><p>명령은 부작용을 일으키고 어떤 값도 반환 하지 않는다</p><h2 id="식별할-수-있는-동작과-구현-세부-사항"><a href="#식별할-수-있는-동작과-구현-세부-사항" class="headerlink" title="식별할 수 있는 동작과 구현 세부 사항"></a>식별할 수 있는 동작과 구현 세부 사항</h2><p>단위 테스트에서 리패터링 내성 지표가 가장 중요하다</p><p>테스트는 어떻게가 아니라 무엇에 중점을 뒤야한다</p><h3 id="식별할-수-있는-동작은-공개-API와-다르다"><a href="#식별할-수-있는-동작은-공개-API와-다르다" class="headerlink" title="식별할 수 있는 동작은 공개 API와 다르다"></a>식별할 수 있는 동작은 공개 API와 다르다</h3><p>모든 제품 코드는 2차원으로 분류 가능</p><ul><li>공개 API 또는 비공개 API</li><li>식별할 수 있는 동작 또는 구현 세부 사항</li></ul><p>각 차원의 범주는 겹치지 않는다</p><p>코드가 시스템의 식별할 수 있는 동작이려면 다음중 하나를 해야 한다</p><ul><li>클라이언트가 목표를 달성하는 데 도움이 되는 연산을 노출하라</li><li>클라이언트가 목표를 달성하는 데 도움이 되는 상태를 노출하라</li></ul><h3 id="잘-설계된-API와-캡슐화"><a href="#잘-설계된-API와-캡슐화" class="headerlink" title="잘 설계된 API와 캡슐화"></a>잘 설계된 API와 캡슐화</h3><p>장기적으로 코드베이스 유지 보수에서는 캡슐화가 중요하다. 복잡도 때문이다</p><ul><li>구현 세부 사항을 숨기면 클라이언트의 시야에서 클래스 내부를 가릴 수 있기 때문에 내부를 손상시킬 위험이 적다</li><li>데이터와 연산을 결합하면 해당 연산이 클래스의 불변성을 위반하지 않도록 할 수 있다</li></ul><h3 id="구현-세부-사항-유출-상태의-예"><a href="#구현-세부-사항-유출-상태의-예" class="headerlink" title="구현 세부 사항 유출: 상태의 예"></a>구현 세부 사항 유출: 상태의 예</h3><p>API를 잘 설계하면 단위 테스트도 자동으로 좋아진다</p><p>클라이언트가 목표를 달성하는 데 직접적으로 도움이 되는 코드만 공개해야 하며 다른 모든 것은 구현 세부 사항이므로 비공개 API뒤에 숨어 있어야 된다</p><h2 id="목과-테스트-취약성-간의-관계"><a href="#목과-테스트-취약성-간의-관계" class="headerlink" title="목과 테스트 취약성 간의 관계"></a>목과 테스트 취약성 간의 관계</h2><h3 id="육각형-아키텍처-정의"><a href="#육각형-아키텍처-정의" class="headerlink" title="육각형 아키텍처 정의"></a>육각형 아키텍처 정의</h3><p>도메인과 애플리케이션 서비스라는 두 계층으로 나눈다<br>애플리케이션 서비스 계층과 도메인 계층의 조합은 육각형을 형성하며 이 육각형은 애플리케이션을 나타낸다</p><ul><li>도메인 계층과 애플리케이션 서비스 계층 간의 관심사의 분리</li><li>애플리케이션 내부 통신</li><li>애플리케이션 간의 통신</li></ul><h3 id="시스템-내부-통신과-시스템-간-통신"><a href="#시스템-내부-통신과-시스템-간-통신" class="headerlink" title="시스템 내부 통신과 시스템 간 통신"></a>시스템 내부 통신과 시스템 간 통신</h3><p>시스템 내부 통신은 구현 세부 사항이고 시스템 간 통신은 그렇지 않다</p><p>시스템 간 통신의 특성은 별도 애플리케이션과 함께 성장하는 방식에서 비롯된다<br>성장의 주요 원칙중 하나라 하위 호환성을 지키는 것이다</p><h2 id="단위-테스트의-고전파와-런던파-재고"><a href="#단위-테스트의-고전파와-런던파-재고" class="headerlink" title="단위 테스트의 고전파와 런던파 재고"></a>단위 테스트의 고전파와 런던파 재고</h2><p>런던파는 불변 의존성을 제외한 모든 의존성에 목 사용을 권장하며 시스템 내 통신과 시스템 간 통신을 구분하지 않는다</p><p>고전파는 테스트 간에 공유하는 의존성만 교체하자고 한다</p><h3 id="모든-프로세스-외부-의존성을-목으로-해야-하는-것은-아니다"><a href="#모든-프로세스-외부-의존성을-목으로-해야-하는-것은-아니다" class="headerlink" title="모든 프로세스 외부 의존성을 목으로 해야 하는 것은 아니다"></a>모든 프로세스 외부 의존성을 목으로 해야 하는 것은 아니다</h3><ul><li>공유 의존성</li><li>프로세스 외부 의존성</li><li>비공개 의존성</li></ul><p>고전파는 공유 의존성을 피할 것을 권고 한다</p><h3 id="목을-사용한-동작-검증"><a href="#목을-사용한-동작-검증" class="headerlink" title="목을 사용한 동작 검증"></a>목을 사용한 동작 검증</h3><p>종종 목이 동작을 검증한다고 한다 하지만 대부분의 경우는 그렇지 않다</p><h1 id="참조"><a href="#참조" class="headerlink" title="참조"></a>참조</h1><hr><ul><li><a href="http://www.acornpub.co.kr/book/unit-testing">단위 테스트(생산성과 품질을 위한 단위 테스트 원칙과 패턴)</a></li></ul>]]></content:encoded>
-      
-      <comments>https://sejoung.github.io/2024/01/2024-01-09-unit_testing_5/#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>Stable Diffusion 이해를 위한 자료 모음</title>
-      <link>https://sejoung.github.io/2024/01/2024-01-08-comfyui_examples/</link>
-      <guid>https://sejoung.github.io/2024/01/2024-01-08-comfyui_examples/</guid>
-      <pubDate>Mon, 08 Jan 2024 06:30:00 GMT</pubDate>
-      <description>
-      
-        
-        
-          &lt;h1 id=&quot;ComfyUI-샘플-모음&quot;&gt;&lt;a href=&quot;#ComfyUI-샘플-모음&quot; class=&quot;headerlink&quot; title=&quot;ComfyUI 샘플 모음&quot;&gt;&lt;/a&gt;ComfyUI 샘플 모음&lt;/h1&gt;&lt;p&gt;ComfyUI를 이해하는데 도움이 되는 샘플 모
-        
-      
-      </description>
-      
-      <content:encoded><![CDATA[<h1 id="ComfyUI-샘플-모음"><a href="#ComfyUI-샘플-모음" class="headerlink" title="ComfyUI 샘플 모음"></a>ComfyUI 샘플 모음</h1><p>ComfyUI를 이해하는데 도움이 되는 샘플 모음</p><h1 id="참조"><a href="#참조" class="headerlink" title="참조"></a>참조</h1><hr><ul><li><a href="https://comfyanonymous.github.io/ComfyUI_examples/">ComfyUI Examples</a></li><li><a href="https://github.com/WASasquatch/was-node-suite-comfyui/wiki/Workflow-Examples">was-node-examples</a></li><li><a href="https://github.com/atlasunified/Templates-ComfyUI-">Templates-ComfyUI-</a></li><li><a href="https://github.com/comfyanonymous/ComfyUI/blob/master/script_examples/websockets_api_example.py">ComfyUI websockets_api_example</a></li><li><a href="https://github.com/comfyanonymous/ComfyUI/blob/master/script_examples/basic_api_example.py">ComfyUI basic_api_example</a></li></ul>]]></content:encoded>
-      
-      <comments>https://sejoung.github.io/2024/01/2024-01-08-comfyui_examples/#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>4장. 좋은 단위 테스트의 4대 요소</title>
-      <link>https://sejoung.github.io/2024/01/2024-01-08-unit_testing_4/</link>
-      <guid>https://sejoung.github.io/2024/01/2024-01-08-unit_testing_4/</guid>
-      <pubDate>Mon, 08 Jan 2024 00:51:00 GMT</pubDate>
-      <description>
-      
-        
-        
-          &lt;h1 id=&quot;4장-좋은-단위-테스트의-4대-요소&quot;&gt;&lt;a href=&quot;#4장-좋은-단위-테스트의-4대-요소&quot; class=&quot;headerlink&quot; title=&quot;4장. 좋은 단위 테스트의 4대 요소&quot;&gt;&lt;/a&gt;4장. 좋은 단위 테스트의 4대 요소&lt;/h1&gt;&lt;p&gt;
-        
-      
-      </description>
-      
-      <content:encoded><![CDATA[<h1 id="4장-좋은-단위-테스트의-4대-요소"><a href="#4장-좋은-단위-테스트의-4대-요소" class="headerlink" title="4장. 좋은 단위 테스트의 4대 요소"></a>4장. 좋은 단위 테스트의 4대 요소</h1><p>좋은 단위 테스트 스위트의 특성</p><ul><li>개발 주기에 통합돼 있다</li><li>코드베이스의 가장 중요한 부분만을 대상으로 한다</li><li>최소한의 유지비로 최대 가치를 끌어낸다<ul><li>가치 있는 테스트 식별</li><li>가치 있는 테스트 작성</li></ul></li></ul><h2 id="좋은-단위-테스트의-4대-요소-자세히-살펴보기"><a href="#좋은-단위-테스트의-4대-요소-자세히-살펴보기" class="headerlink" title="좋은 단위 테스트의 4대 요소 자세히 살펴보기"></a>좋은 단위 테스트의 4대 요소 자세히 살펴보기</h2><ul><li>회귀 방지</li><li>리팩터링 내성</li><li>빠른 피드백</li><li>유지 보수성</li></ul><h3 id="첫-번째-요소-회귀-방지"><a href="#첫-번째-요소-회귀-방지" class="headerlink" title="첫 번째 요소: 회귀 방지"></a>첫 번째 요소: 회귀 방지</h3><p>회귀는 소프트웨어 버그다. 코드를 수정한 후 기능이 의도한 대로 작동하지 않는 경우<br>회귀는 귀찮다. 최악의 상황은 아니다</p><p>회귀 방지 지표에 대한 테스트 점수가 잘 나오는지 평가하려면 다음 사항을 고려해야 한다</p><ul><li>테스트 중에 실행되는 코드의 양</li><li>코드 복잡도</li><li>코드의 도메인 유의성</li></ul><p>일반적으로 코드가 많을수록 테스트에서 회귀가 나타낼 가능성이 높다</p><p>복잡한 비즈니스 로직을 나타내는 코드가 보일러플레이트 코드 보다 훨씬 더 중요하다</p><h3 id="두-번째-요소-리팩터링-내성"><a href="#두-번째-요소-리팩터링-내성" class="headerlink" title="두 번째 요소: 리팩터링 내성"></a>두 번째 요소: 리팩터링 내성</h3><p>테스트를 빨간색(실패)로 바꾸지 않고 기본 애플리케이션 코드를 리팩터링할 수 있는지에 대한 척도다</p><p>거짓양성(테스트가 실패하는 것처럼 보이지만 실제로는 성공하는 경우)이 발생하면 리팩터링 내성이 떨어진다</p><ul><li>기존 기능이 고장 났을 때 테스트가 조기 경고를 제공한다</li><li>코드 변경이 회귀로 이어지지 않을 것이라고 확신하게 된다</li></ul><h3 id="무엇이-거짓-양성의-원인인가"><a href="#무엇이-거짓-양성의-원인인가" class="headerlink" title="무엇이 거짓 양성의 원인인가?"></a>무엇이 거짓 양성의 원인인가?</h3><p>거짓양성이 생길 가능성을 줄이는 방법은 해당 구현 세부 사항에서 테스트를 분리 하는것 뿐이다</p><p>테스트는 최종 사용자의 관점에서 sut를 검증해야 하고 최종 사용자에게 의미 있는 결과만 확인해야 한다</p><p>테스트를 구성하기에 가장 좋은 방법은 문제 영역에 대해 이야기하는 것이다</p><h3 id="구현-세부-사항-대신-최종-결과를-목표로-하기"><a href="#구현-세부-사항-대신-최종-결과를-목표로-하기" class="headerlink" title="구현 세부 사항 대신 최종 결과를 목표로 하기"></a>구현 세부 사항 대신 최종 결과를 목표로 하기</h3><p>리팩터링 내성을 높이는 방법은 SUT의 구현 세부 사항 과 테스트 간의 결합도를 낮추는 것뿐 이다</p><h2 id="첫-번째-특성과-두-번째-특성-간의-본질적인-관계"><a href="#첫-번째-특성과-두-번째-특성-간의-본질적인-관계" class="headerlink" title="첫 번째 특성과 두 번째 특성 간의 본질적인 관계"></a>첫 번째 특성과 두 번째 특성 간의 본질적인 관계</h2><ul><li>테스트 정확도 극대화</li><li>거짓 양성과 거짓 음성의 중요성</li></ul><h3 id="테스트-정확도-극대화"><a href="#테스트-정확도-극대화" class="headerlink" title="테스트 정확도 극대화"></a>테스트 정확도 극대화</h3><p>정확도 지표</p><ul><li>테스트가 버그 있음을 얼마나 잘 나타내는가</li><li>테스트가 버그 없음을 얼마나 잘 나타내는가</li></ul><h3 id="거짓-양성과-거짓-음성의-중요성-역학-관계"><a href="#거짓-양성과-거짓-음성의-중요성-역학-관계" class="headerlink" title="거짓 양성과 거짓 음성의 중요성: 역학 관계"></a>거짓 양성과 거짓 음성의 중요성: 역학 관계</h3><p>단기적으로 거짓 양성도 거짓 음성만큼 나쁘지 않다 프로젝트가 성장함에 따라 거짓 양성은 테스트 스위트에 점점 큰영향을 미치기 시작한다</p><p>중대형 프로젝트를 하면 거짓 음성과 거짓 양성에 대해 똑같이 주의를 기울여야 한다</p><h2 id="세-번째-요소와-네-번째-요소-빠른-피드백과-유지-보수성"><a href="#세-번째-요소와-네-번째-요소-빠른-피드백과-유지-보수성" class="headerlink" title="세 번째 요소와 네 번째 요소: 빠른 피드백과 유지 보수성"></a>세 번째 요소와 네 번째 요소: 빠른 피드백과 유지 보수성</h2><p>좋은 단위 테스트의 특성 중 남은 두가지 요소</p><ul><li>빠른 피드백</li><li>유지 보수성</li></ul><p>유지 보수성 평가</p><ul><li>테스트가 얼마나 이해하기 어려운가</li><li>테스트가 얼마나 실행하기 어려운가</li></ul><h2 id="이상적인-테스트를-찾아서"><a href="#이상적인-테스트를-찾아서" class="headerlink" title="이상적인 테스트를 찾아서"></a>이상적인 테스트를 찾아서</h2><ul><li>회귀방지</li><li>리팩터링 내성</li><li>빠른 피드백</li><li>유지 보수성</li></ul><p>테스트 코드를 포함한 모든 코드는 책임이다. 최소한으로 필요한 가치로 임계치를 상당히 높게 설정하고 이 임계치를 충족하는 테스트만 테스트 스위트에 남겨라</p><h3 id="이상적인-테스트를-만들-수-있는가"><a href="#이상적인-테스트를-만들-수-있는가" class="headerlink" title="이상적인 테스트를 만들 수 있는가?"></a>이상적인 테스트를 만들 수 있는가?</h3><p>회귀 방지, 리팩터링 내성, 빠른 피드백은 상호 배타적이라 이상적인 테스트를 만드는게 불가능하다</p><h3 id="극단적인-사례-1-엔드-투-엔드-테스트"><a href="#극단적인-사례-1-엔드-투-엔드-테스트" class="headerlink" title="극단적인 사례 1: 엔드 투 엔드 테스트"></a>극단적인 사례 1: 엔드 투 엔드 테스트</h3><p>단점 느린 속도</p><h3 id="극단적인-사례-2-간단한-테스트"><a href="#극단적인-사례-2-간단한-테스트" class="headerlink" title="극단적인 사례 2: 간단한 테스트"></a>극단적인 사례 2: 간단한 테스트</h3><p>간단한 테스트는 실수할 여지가 많지 않아 회귀를 나타내지 않을것이다</p><h3 id="극단적인-사례-3-깨지기-쉬운-테스트"><a href="#극단적인-사례-3-깨지기-쉬운-테스트" class="headerlink" title="극단적인 사례 3: 깨지기 쉬운 테스트"></a>극단적인 사례 3: 깨지기 쉬운 테스트</h3><p>거짓 양성이 많은 테스트를 작성하기 매우 쉽다</p><h3 id="이상적인-테스트를-찾아서-결론"><a href="#이상적인-테스트를-찾아서-결론" class="headerlink" title="이상적인 테스트를 찾아서: 결론"></a>이상적인 테스트를 찾아서: 결론</h3><p>한 특성에서 얻는 것이 많을수록 다른 특성에서 더 일게 된다</p><p>테스트 스위트를 탄탄하게 만들려면 테스트 불안정성을 제거하는 것이 최우선 과제다</p><h2 id="대중적인-테스트-자동화-개념-살펴보기"><a href="#대중적인-테스트-자동화-개념-살펴보기" class="headerlink" title="대중적인 테스트 자동화 개념 살펴보기"></a>대중적인 테스트 자동화 개념 살펴보기</h2><h3 id="테스트-피라미드-분해"><a href="#테스트-피라미드-분해" class="headerlink" title="테스트 피라미드 분해"></a>테스트 피라미드 분해</h3><p>테스트 피라미드는 테스트 스위트에서 테스트 유형 간의 일정한 비율을 일컫는 개념이다</p><h3 id="블랙박스-테스트와-화이트박스-테스트-간의-선택"><a href="#블랙박스-테스트와-화이트박스-테스트-간의-선택" class="headerlink" title="블랙박스 테스트와 화이트박스 테스트 간의 선택"></a>블랙박스 테스트와 화이트박스 테스트 간의 선택</h3><ul><li>블랙 박스 테스트 : 시스템 내부 구조를 몰라도 시스템의 기능을 검사할 수 있는 소프트웨어 테스트 방법이다</li><li>화이트 박스 테스트 : 애플리케이션의 내부 작업을 검증하는 테스트 방식이다</li></ul><h1 id="참조"><a href="#참조" class="headerlink" title="참조"></a>참조</h1><hr><ul><li><a href="http://www.acornpub.co.kr/book/unit-testing">단위 테스트(생산성과 품질을 위한 단위 테스트 원칙과 패턴)</a></li></ul>]]></content:encoded>
-      
-      <comments>https://sejoung.github.io/2024/01/2024-01-08-unit_testing_4/#disqus_thread</comments>
     </item>
     
   </channel>
