@@ -3,15 +3,64 @@
 
 
     <url>
+        <loc>https://sejoung.github.io/tags/Deep-Learning/</loc>
+        <lastmod>2024-02-19T06:19:31.120Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/tags/%EC%95%A0%EB%8B%88%EB%A9%94%EC%9D%B4%ED%8A%B8%EB%94%94%ED%94%84/</loc>
+        <lastmod>2024-02-19T02:09:19.012Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/tags/AnimateDiff/</loc>
+        <lastmod>2024-02-19T02:09:19.012Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/tags/animation/</loc>
+        <lastmod>2024-02-19T02:09:19.012Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/tags/ComfyUI/</loc>
+        <lastmod>2024-02-19T02:09:19.012Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/tags/%EC%8A%A4%ED%85%8C%EC%9D%B4%EB%B8%94-%EB%94%94%ED%93%A8%EC%A0%84/</loc>
+        <lastmod>2024-02-19T02:09:19.012Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/tags/Stable-Diffusion/</loc>
+        <lastmod>2024-02-19T02:09:19.012Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>https://sejoung.github.io/tags/%EC%8B%AC%ED%94%8C%ED%95%9C-%EC%BD%94%EB%93%9C%EB%A1%9C-%EB%B3%B5%EC%9E%A1%ED%95%9C-%EC%86%8C%ED%94%84%ED%8A%B8%EC%9B%A8%EC%96%B4-%EA%B8%B8%EB%93%A4%EC%9D%B4%EA%B8%B0/</loc>
-        <lastmod>2024-02-15T01:51:38.573Z</lastmod>
+        <lastmod>2024-02-19T01:22:19.077Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://sejoung.github.io/tags/%EC%8F%99%EC%8F%99-%EB%93%A4%EC%96%B4%EC%98%A4%EB%8A%94-%ED%95%A8%EC%88%98%ED%98%95-%EC%BD%94%EB%94%A9/</loc>
-        <lastmod>2024-02-15T01:51:38.573Z</lastmod>
+        <lastmod>2024-02-19T01:22:19.077Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
@@ -138,27 +187,6 @@
     <url>
         <loc>https://sejoung.github.io/tags/k8s/</loc>
         <lastmod>2024-01-08T09:46:10.559Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://sejoung.github.io/tags/ComfyUI/</loc>
-        <lastmod>2024-01-08T09:41:21.257Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://sejoung.github.io/tags/%EC%8A%A4%ED%85%8C%EC%9D%B4%EB%B8%94-%EB%94%94%ED%93%A8%EC%A0%84/</loc>
-        <lastmod>2024-01-08T09:41:21.257Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://sejoung.github.io/tags/Stable-Diffusion/</loc>
-        <lastmod>2024-01-08T09:41:21.257Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
