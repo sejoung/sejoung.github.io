@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "CHAPTER 15 타임라인 격리하기"
+title: "CHAPTER 16 타임라인 사이에 자원 공유하기"
 date: 2024-02-16 10:59 +0900
 comments: true
 tags: [ "쏙쏙 들어오는 함수형 코딩","심플한 코드로 복잡한 소프트웨어 길들이기" ]
