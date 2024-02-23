@@ -33,10 +33,10 @@ priority: 1.0
 * Exemplar
   * STL-10 데이터셋 사용
   * 96x96 이미지 내에서 considerable 한 gradient 영역 근처를 32x32 로 crop
-  * 32x32 seed patch를 기준으로 data augmenta/on을 적용하여 추가 영상 생성
+  * 32x32 seed patch를 기준으로 data augmentation을 적용하여 추가 영상 생성
   * Seed image를 data augmentation 하여 이 데이터를 seed image로 prediction하도록 학습.
   * surrogate training classes / training samples가 많아질 수록 성능이 향상한다
-  * Surrogate labels 을 data augmenta/on을 통해 얻어서 네트워크를 학습하면 transfer했을 때 성능이 좋다.
+  * Surrogate labels 을 data augmentation을 통해 얻어서 네트워크를 학습하면 transfer했을 때 성능이 좋다.
   * Discrimina/ve 한 features로서 image matching에 적용했을 때 SIFT보다 좋은 descriptors로서의 결과도 낸다. (marginal 하지만)
   * ImageNet과 같은 large-scale datasets에는 적용하기 어려움.
 * Context Prediction
@@ -50,7 +50,7 @@ priority: 1.0
   * 직쏘 퍼즐을 풀게하는 pretext task
   * 앞선 context prediction과 3x3 패치를 추출하지만, 임의의 permutation으로 셔플함.
   * 하지만, 직쏘 퍼즐은 9!=362,880 개(36만개)의 클래스를 배워야해서 이는 어렵다.
-  * Permutation 수에 따른 결과: permutation의 수가 많아질수록/ permutation간의 차이가 클수록(구분하기 쉬워질 수록) transfer 성능이 좋아진다.
+  * Permutation 수에 따른 결과: permutation의 수가 많아질수록 permutation간의 차이가 클수록(구분하기 쉬워질 수록) transfer 성능이 좋아진다.
   * 직쏘 퍼즐은 좋은 pretext task이다.
   * 이와 같은 context-free network (CFN)은 인간이 해내기 어려운 task를 학습함으 로써 더 좋은 deep learning 모델을 학습 하는 데에 성공하였다.
   * 또한 label없이 학습하는 self-supervised learning task를 정의하여 human annotation의 비용을 줄였다.
