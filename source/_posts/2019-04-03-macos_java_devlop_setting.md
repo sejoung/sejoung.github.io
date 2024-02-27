@@ -10,7 +10,15 @@ sitemap :
   priority : 1.0
 ---
 
-## 맥북에서 자바 개발 환경 셋팅
+# 맥북에서 자바 개발 환경 셋팅
+
+## 인텔리제이 키 먹통 해결
+
+
+```shell
+defaults write -g ApplePressAndHoldEnabled -bool false
+```
+
 
 ### 파인더에 숨김파일 표시
 
@@ -186,3 +194,4 @@ Solarized Dark color scheme를 사용
 * [rectangleapp](https://rectangleapp.com/)
 * [maccy.app](https://maccy.app)
 * [YouType](https://github.com/freefelt/YouType)
+* [Mac IntelliJ Tip 키 입력 먹통 해결](https://androphil.tistory.com/759?category=423961)
