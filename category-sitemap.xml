@@ -10,14 +10,21 @@
 
     <url>
         <loc>https://sejoung.github.io/categories/books/</loc>
-        <lastmod>2024-02-26T02:03:54.213Z</lastmod>
+        <lastmod>2024-02-27T01:39:52.036Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/categories/java/</loc>
+        <lastmod>2024-02-27T01:18:19.117Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://sejoung.github.io/categories/Machine-Learning/</loc>
-        <lastmod>2024-02-23T07:39:39.199Z</lastmod>
+        <lastmod>2024-02-26T07:56:28.202Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
@@ -101,13 +108,6 @@
 
     <url>
         <loc>https://sejoung.github.io/categories/kotlin/</loc>
-        <lastmod>2023-12-01T08:00:58.184Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://sejoung.github.io/categories/java/</loc>
         <lastmod>2023-12-01T08:00:58.184Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>

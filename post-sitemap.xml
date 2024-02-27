@@ -9,6 +9,30 @@
 
 
     <url>
+        <loc>https://sejoung.github.io/2024/02/2024-02-27-design_patterns_beauty_4/</loc>
+        <lastmod>2024-02-27T01:39:52.036Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/2019/04/2019-04-03-macos_java_devlop_setting/</loc>
+        <lastmod>2024-02-27T01:18:19.117Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/2024/02/2024-02-26-Object_Detection_Segmentation/</loc>
+        <lastmod>2024-02-26T07:56:28.202Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://sejoung.github.io/2024/02/2024-02-26-design_patterns_beauty_3/</loc>
         <lastmod>2024-02-26T02:03:54.213Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -3954,14 +3978,6 @@
 
     <url>
         <loc>https://sejoung.github.io/2019/04/2019-04-04-mssql_autoclose/</loc>
-        <lastmod>2023-12-01T08:00:58.152Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://sejoung.github.io/2019/04/2019-04-03-macos_java_devlop_setting/</loc>
         <lastmod>2023-12-01T08:00:58.152Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
