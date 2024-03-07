@@ -83,10 +83,10 @@ sudo apt-get upgrade
 
 ```
 
-## installing CUDA-12.3
+## installing CUDA-12.1
 
 ```shell
-sudo apt install cuda-12-3
+sudo apt install cuda-12-1
 ```
 
 아래의 오류가 나면 처리 방법
@@ -106,11 +106,17 @@ sudo apt full-upgrade
 
 ```shell
 
-echo 'export PATH=/usr/local/cuda-12.3/bin:$PATH' >> ~/.bashrc
-echo 'export LD_LIBRARY_PATH=/usr/local/cuda-12.3/lib64:$LD_LIBRARY_PATH' >> ~/.bashrc
+echo 'export PATH=/usr/local/cuda-12.1/bin:$PATH' >> ~/.bashrc
+echo 'export LD_LIBRARY_PATH=/usr/local/cuda-12.1/lib64:$LD_LIBRARY_PATH' >> ~/.bashrc
 source ~/.bashrc
 sudo ldconfig
 
+```
+
+```shell
+sudo update-alternatives --display cuda
+
+sudo update-alternatives --config cuda
 ```
 
 ## cuda 버전이 불일치 함?
