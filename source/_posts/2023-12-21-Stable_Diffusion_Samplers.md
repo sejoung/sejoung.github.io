@@ -79,3 +79,5 @@ ODE 솔버의 예측-수정기 방법에서 영감을 받아 5~10단계로 고�
 * [Stable Diffusion Samplers: A Comprehensive Guide](https://stable-diffusion-art.com/samplers/)
 * [k-diffusion](https://github.com/crowsonkb/k-diffusion)
 * [Elucidating the Design Space of Diffusion-Based Generative Models](https://arxiv.org/abs/2206.00364)
+* [Complete guide to samplers in Stable Diffusion](https://www.felixsanz.dev/articles/complete-guide-to-samplers-in-stable-diffusion)
+* [The ML developers guide to Schedulers in Stable Diffusion](https://blog.segmind.com/what-are-schedulers-in-stable-diffusion/)
