@@ -8,8 +8,65 @@
     <atom:link href="/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>잘정리하자</description>
-    <pubDate>Wed, 06 Mar 2024 01:53:52 GMT</pubDate>
+    <pubDate>Tue, 12 Mar 2024 02:58:52 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Semantic Matching 2</title>
+      <link>https://sejoung.github.io/2024/03/2024-03-11-Semantic_Matching_2/</link>
+      <guid>https://sejoung.github.io/2024/03/2024-03-11-Semantic_Matching_2/</guid>
+      <pubDate>Tue, 12 Mar 2024 02:38:00 GMT</pubDate>
+      <description>
+      
+        
+        
+          &lt;h1 id=&quot;Semantic-Matching-2&quot;&gt;&lt;a href=&quot;#Semantic-Matching-2&quot; class=&quot;headerlink&quot; title=&quot;Semantic Matching 2&quot;&gt;&lt;/a&gt;Semantic Matching 2&lt;/h1&gt;&lt;h2 i
+        
+      
+      </description>
+      
+      <content:encoded><![CDATA[<h1 id="Semantic-Matching-2"><a href="#Semantic-Matching-2" class="headerlink" title="Semantic Matching 2"></a>Semantic Matching 2</h1><h2 id="Semantic-Flow"><a href="#Semantic-Flow" class="headerlink" title="Semantic Flow"></a>Semantic Flow</h2><ul><li>UCN(Universal Correspondence Networks)<ul><li>Fully convolutional NN -&gt; STNs -&gt; L2 Normalization</li></ul></li><li>Proposal Flow<ul><li>Comparisons </li><li>매칭 알고리즘</li></ul></li><li>Semantic Correspondence<ul><li>dense correspondence</li></ul></li><li>Hyperpixel representation<ul><li>Pixel : (𝑥, 𝑦, 𝑅, 𝐺, 𝐵)</li><li>Superpixel : 𝑛 ∗ (𝑥, 𝑦, 𝑅, 𝐺, 𝐵)</li><li>Hypercolumn :  (𝑥, 𝑦, 𝑑1, … , 𝑑n)</li><li>Hyperpixel : (𝑥, 𝑦, 𝑤, ℎ, 𝑑1, … , 𝑑n)</li></ul></li><li>Hyperpixel Flow<ul><li>Regularized Hough Matching (RHM)<ul><li>Classic computer vision 에서 사용하던 매칭 테크닉.</li><li>Re-parameterization technique : parametric space 를 변환 시켜 voting을 통해 가장 적절한 매칭을 찾는 방식</li><li>Hough transform</li></ul></li><li>summary<ul><li>Hyperpixel representation 제안 : geometry (region information; width, height …) 정보를 가진 hypercolumn 구조</li><li>모든 layer를 다 사용하지 않고, 특정 layer 만 사용하여 composing 하는 hypercolumn, hyperpixel 구조가 더 성능이 좋다.</li><li>GPU computation을 통해 기존의 matching technique인 probabilistic Hough matching 방식의 성능과 속도를 압도적으로 높일 수 있다. (regularized Hough matching) (정량적 결과 result section에 기록)</li></ul></li></ul></li><li>Dynamic feed-forward network<ul><li>Forward time : argmax  </li><li>Backward time : softmax</li><li>Local 영역을 중요하게 봐야하는 computer vision task (object detection, segmentation, tracking, matching …)에서 Multi-layer neural feature를 사용하자.</li><li>그런데 문제를 풀 때에 중요한 layer output을 잘 골라서 사용하자.</li><li>Beam search (Greedy algorithm)으로 찾을 수도 있지만 Data domain에 맞게 training하면 더 좋다</li><li>Trainable model을 만들 때에 layer 를 selection 해야하는데, argmax selection 은 differentiable 하지 않아 학습 불가능 하니, Gumbel-softmax trick을 사용해서 학습하자.</li></ul></li><li>SFNet</li></ul><h1 id="참조"><a href="#참조" class="headerlink" title="참조"></a>참조</h1><hr>]]></content:encoded>
+      
+      <comments>https://sejoung.github.io/2024/03/2024-03-11-Semantic_Matching_2/#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>Semantic Matching 1</title>
+      <link>https://sejoung.github.io/2024/03/2024-03-11-Semantic_Matching/</link>
+      <guid>https://sejoung.github.io/2024/03/2024-03-11-Semantic_Matching/</guid>
+      <pubDate>Mon, 11 Mar 2024 00:40:00 GMT</pubDate>
+      <description>
+      
+        
+        
+          &lt;h1 id=&quot;Semantic-Matching-1&quot;&gt;&lt;a href=&quot;#Semantic-Matching-1&quot; class=&quot;headerlink&quot; title=&quot;Semantic Matching 1&quot;&gt;&lt;/a&gt;Semantic Matching 1&lt;/h1&gt;&lt;h2 i
+        
+      
+      </description>
+      
+      <content:encoded><![CDATA[<h1 id="Semantic-Matching-1"><a href="#Semantic-Matching-1" class="headerlink" title="Semantic Matching 1"></a>Semantic Matching 1</h1><h2 id="Semantic-Alignment"><a href="#Semantic-Alignment" class="headerlink" title="Semantic Alignment"></a>Semantic Alignment</h2><ul><li><p>Spatial Transformer Networks</p><ul><li>Differentiable spatial transformation<ul><li>Localisation network</li><li>Parameterised Sampling Grid</li><li>Differentiable Image Sampling</li></ul></li></ul></li><li><p>GeoCNN, weakalign, A2Net</p></li><li><p>NC-Net, Sparse-NC-Net, CHM</p></li><li><p>Neighbourhood Consensus Networks (NCNet)</p><ul><li>Loss functions<ul><li>weakly supervised training</li></ul></li><li>Memory issue</li><li>Cannot handle high-resolution images</li></ul></li><li><p>Sparse-NCNet</p><ul><li>Minkowski Engine</li></ul></li><li><p>Convolutional Hough Matching Networks (CHM)</p></li></ul><h1 id="참조"><a href="#참조" class="headerlink" title="참조"></a>참조</h1><hr>]]></content:encoded>
+      
+      <comments>https://sejoung.github.io/2024/03/2024-03-11-Semantic_Matching/#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>CHAPTER 8 행동 디자인 패턴 PART1</title>
+      <link>https://sejoung.github.io/2024/03/2024-03-07-design_patterns_beauty_8_PART_1/</link>
+      <guid>https://sejoung.github.io/2024/03/2024-03-07-design_patterns_beauty_8_PART_1/</guid>
+      <pubDate>Thu, 07 Mar 2024 00:48:00 GMT</pubDate>
+      <description>
+      
+        
+        
+          &lt;h1 id=&quot;CHAPTER-8-행동-디자인-패턴-PART1&quot;&gt;&lt;a href=&quot;#CHAPTER-8-행동-디자인-패턴-PART1&quot; class=&quot;headerlink&quot; title=&quot;CHAPTER 8 행동 디자인 패턴 PART1&quot;&gt;&lt;/a&gt;CHAPTER 8 행
+        
+      
+      </description>
+      
+      <content:encoded><![CDATA[<h1 id="CHAPTER-8-행동-디자인-패턴-PART1"><a href="#CHAPTER-8-행동-디자인-패턴-PART1" class="headerlink" title="CHAPTER 8 행동 디자인 패턴 PART1"></a>CHAPTER 8 행동 디자인 패턴 PART1</h1><ul><li>생성 디자인 패턴 : 주로 객체의 생성에 관련된 문제 해결</li><li>구조 디자인 패턴 : 주로 클래스나 객체의 결합 문제를 해결</li><li>행동 디자인 패턴 : 주로 클래스나 객체의 상호작용 문제를 해결</li></ul><h2 id="8-1-옵서버-패턴"><a href="#8-1-옵서버-패턴" class="headerlink" title="8.1 옵서버 패턴"></a>8.1 옵서버 패턴</h2><h3 id="8-1-1-옵서버-패턴의-정의"><a href="#8-1-1-옵서버-패턴의-정의" class="headerlink" title="8.1.1 옵서버 패턴의 정의"></a>8.1.1 옵서버 패턴의 정의</h3><p>발행 구독 패턴이라고도 한다</p><ul><li>많은 객체들 사이에서 일대일 의존 관계가 정의되어 있을 때, 어느 한 객체의 상태가 변경되면 이 객체에 의존하고 있는 모든 객체는 자동으로 알림을 받는다</li><li>의존되는 객체를 피관찰자, 옵서버블 이라고 한다</li><li>의존하고 있는 객체를 관찰자, 옵서버라고 한다<h3 id="8-1-3-옵서버-패턴의-의미"><a href="#8-1-3-옵서버-패턴의-의미" class="headerlink" title="8.1.3 옵서버 패턴의 의미"></a>8.1.3 옵서버 패턴의 의미</h3></li><li>서로 다른 행동을 하는 코드를 디커플링</li><li>옵서버 코드와 옵서버블 코드를 디커플링<h3 id="8-1-4-옵서버-패턴의-적용"><a href="#8-1-4-옵서버-패턴의-적용" class="headerlink" title="8.1.4 옵서버 패턴의 적용"></a>8.1.4 옵서버 패턴의 적용</h3></li><li>동기식 차단 옵서버 패턴</li><li>비동기식 비차단 옵서버 패턴<h3 id="8-1-5-비동기식-비차단-옵서버-패턴"><a href="#8-1-5-비동기식-비차단-옵서버-패턴" class="headerlink" title="8.1.5 비동기식 비차단 옵서버 패턴"></a>8.1.5 비동기식 비차단 옵서버 패턴</h3></li><li>비동기식 비차단 옵서버 패턴은 EventBus 프레임워크를 사용하여 구현</li></ul><h1 id="참조"><a href="#참조" class="headerlink" title="참조"></a>참조</h1><hr><ul><li><a href="https://www.yes24.com/Product/Goods/118859035">디자인 패턴의 아름다움</a></li></ul>]]></content:encoded>
+      
+      <comments>https://sejoung.github.io/2024/03/2024-03-07-design_patterns_beauty_8_PART_1/#disqus_thread</comments>
+    </item>
     
     <item>
       <title>CHAPTER 7 구조 디자인 패턴_PART_1</title>
@@ -334,63 +391,6 @@
       <content:encoded><![CDATA[<h1 id="CHAPTER-18-반응형-아키텍처와-어니언-아키텍처"><a href="#CHAPTER-18-반응형-아키텍처와-어니언-아키텍처" class="headerlink" title="CHAPTER 18 반응형 아키텍처와 어니언 아키텍처"></a>CHAPTER 18 반응형 아키텍처와 어니언 아키텍처</h1><p>반응형 아키텍처(reactive architecture)는 순차적인 액션을 표현하는 방식을 뒤집습니다<br>어니언 아키텍처(onion architecture)는 함수형 프로그래밍으로 현실 세계를 다루기 위한 고수준의 개념입니다</p><h2 id="두-아키텍처-패턴은-독립적입니다"><a href="#두-아키텍처-패턴은-독립적입니다" class="headerlink" title="두 아키텍처 패턴은 독립적입니다"></a>두 아키텍처 패턴은 독립적입니다</h2><ul><li>반응형 아키텍처<ul><li>코드에 나타난 순차적 액션의 순서를 뒤집는다</li><li>효과(effect)와 원인(cause)을 분리한다</li></ul></li><li>어니언 아키텍처<ul><li>웹 서비스나 온도 조절 장치 같은 현실 세계와 상호작용하기 위한 서비스 구조를 만든다</li></ul></li></ul><h2 id="반응형-아키텍처는-무엇인가요"><a href="#반응형-아키텍처는-무엇인가요" class="headerlink" title="반응형 아키텍처는 무엇인가요?"></a>반응형 아키텍처는 무엇인가요?</h2><ul><li>애플리케이션을 구조화하는 방법</li><li>이벤트에 대한 반응으로 일어날 일을 지정하는 것</li><li>웹 서비스와 UI에 잘 어울린다</li></ul><h2 id="반응형-아키텍처의-절충점"><a href="#반응형-아키텍처의-절충점" class="headerlink" title="반응형 아키텍처의 절충점"></a>반응형 아키텍처의 절충점</h2><ul><li>원인과 효과가 결합한 것을 분리한다</li><li>여러 단계를 파이프라인으로 처리한다</li><li>타임라인이 유연해진다</li><li>결합의 분리는 원인과 효과의 중심을 관리합니다</li></ul><h2 id="어니언-아키텍처는-무엇인가요"><a href="#어니언-아키텍처는-무엇인가요" class="headerlink" title="어니언 아키텍처는 무엇인가요?"></a>어니언 아키텍처는 무엇인가요?</h2><ul><li><p>인터랙션 계층</p><ul><li>바깥세상에 영향을 주거나 받는 액션</li></ul></li><li><p>도메인 계층</p><ul><li>비즈니스 규칙을 정의하는 계산</li></ul></li><li><p>언어 계층</p><ul><li>언어 유틸리티와 라이브러리</li></ul></li><li><p>현실 세계와 상호작용은 인터렉션 계층에서 해야 한다</p></li><li><p>계층에서 호출하는 방향은 중심 방향입니다</p></li><li><p>계층은 외부에 어떤 계층이 있는지 모른다</p></li></ul><h2 id="도메인-규칙은-도메인-용어를-사용합니다"><a href="#도메인-규칙은-도메인-용어를-사용합니다" class="headerlink" title="도메인 규칙은 도메인 용어를 사용합니다"></a>도메인 규칙은 도메인 용어를 사용합니다</h2><ul><li>프로그램의 핵심 로직을 도메인 규칙(domain rule) 또는 비즈니스 규칙(business rule)이라고 합니다<h2 id="가독성을-따져-봐야-합니다"><a href="#가독성을-따져-봐야-합니다" class="headerlink" title="가독성을 따져 봐야 합니다"></a>가독성을 따져 봐야 합니다</h2></li><li>특정 패러다임의 장점이 항상 좋은 것이 아니라는 것을 알았습니다</li><li>가독성을 결정하는 요소<ul><li>사용하는 언어</li><li>레거시 코드와 코드 스타일</li><li>사용하는 라이브러리</li><li>개발자들의 습관</li></ul></li><li>코드의 가독성<ul><li>일반적으로 함수형 코드는 읽기 좋습니다</li></ul></li><li>개발 속도</li><li>시스템 성능</li></ul><h1 id="참조"><a href="#참조" class="headerlink" title="참조"></a>참조</h1><hr><ul><li><a href="https://www.yes24.com/Product/Goods/108748841">쏙쏙 들어오는 함수형 코딩(심플한 코드로 복잡한 소프트웨어 길들이기)</a></li></ul>]]></content:encoded>
       
       <comments>https://sejoung.github.io/2024/02/2024-02-20-Grokking_Simplicity_18/#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>Deep Learning-2</title>
-      <link>https://sejoung.github.io/2024/02/2024-02-19-deep_learning_2/</link>
-      <guid>https://sejoung.github.io/2024/02/2024-02-19-deep_learning_2/</guid>
-      <pubDate>Mon, 19 Feb 2024 02:32:00 GMT</pubDate>
-      <description>
-      
-        
-        
-          &lt;h1 id=&quot;Deep-Learning-2&quot;&gt;&lt;a href=&quot;#Deep-Learning-2&quot; class=&quot;headerlink&quot; title=&quot;Deep Learning 2&quot;&gt;&lt;/a&gt;Deep Learning 2&lt;/h1&gt;&lt;h2 id=&quot;Beyond-ResNet
-        
-      
-      </description>
-      
-      <content:encoded><![CDATA[<h1 id="Deep-Learning-2"><a href="#Deep-Learning-2" class="headerlink" title="Deep Learning 2"></a>Deep Learning 2</h1><h2 id="Beyond-ResNet"><a href="#Beyond-ResNet" class="headerlink" title="Beyond ResNet"></a>Beyond ResNet</h2><h3 id="DenseNet-Add-Dense-Connection"><a href="#DenseNet-Add-Dense-Connection" class="headerlink" title="DenseNet : Add Dense Connection"></a>DenseNet : Add Dense Connection</h3><ul><li>ResNet의 단점을 보완하기 위해 제안된 방법</li><li>ResNet은 입력과 출력을 더하는 방식으로 연결을 만들었지만, DenseNet은 입력과 출력을 Concatenation하는 방식으로 연결을 만듬</li></ul><h3 id="SENet-Squeeze-and-Excitation-module"><a href="#SENet-Squeeze-and-Excitation-module" class="headerlink" title="SENet : Squeeze and Excitation module"></a>SENet : Squeeze and Excitation module</h3><ul><li>각 채널의 중요도를 학습하여 채널의 중요도에 따라 가중치를 부여하는 방법</li></ul><h3 id="EfficientNet-Network-Depth-Network-Width-Input-Resolution-search"><a href="#EfficientNet-Network-Depth-Network-Width-Input-Resolution-search" class="headerlink" title="EfficientNet : Network Depth, Network Width, Input Resolution search."></a>EfficientNet : Network Depth, Network Width, Input Resolution search.</h3><ul><li>baseline에 스케일업을 한다</li><li>compound scaling을 통해 네트워크의 깊이, 너비, 입력 해상도를 조정하여 성능을 높임</li></ul><h2 id="Efficient-CNN"><a href="#Efficient-CNN" class="headerlink" title="Efficient CNN"></a>Efficient CNN</h2><ul><li>smail model을 만들어서 성능을 높이는 방법</li><li>best cnn 은 가장 정확한 cnn이 아니다</li><li>mobile net<ul><li>depthwise separable convolution</li></ul></li><li>shuffle net<ul><li>group convolution</li><li>channel shuffle</li></ul></li></ul><h2 id="Vision-Transformer"><a href="#Vision-Transformer" class="headerlink" title="Vision Transformer"></a>Vision Transformer</h2><ul><li>Attention을 이용하여 CNN을 대체하는 방법</li><li>soft-and-hard attention<ul><li>soft attention : 0~1을 이용하여 weighted sum</li><li>hard attention : 0~1을 이용하여 하나의 feature를 선택</li></ul></li><li>self-attention<ul><li>key, query, value를 이용하여 attention을 계산</li></ul></li><li>multi-head attention<ul><li>여러개의 attention을 이용하여 attention을 계산</li></ul></li><li>cross-attention<ul><li>다른 feature map을 이용하여 attention을 계산</li></ul></li><li>stand-alone self attention<ul><li>지역적인 정보를 이용하여 attention을 계산</li></ul></li></ul><h2 id="Transformer"><a href="#Transformer" class="headerlink" title="Transformer"></a>Transformer</h2><ul><li>encoder-decoder 구조</li><li>self-attention을 이용하여 input을 처리</li><li>positional encoding을 이용하여 input의 위치 정보를 추가</li></ul><h2 id="Vision-Transformer-ViT"><a href="#Vision-Transformer-ViT" class="headerlink" title="Vision Transformer(ViT)"></a>Vision Transformer(ViT)</h2><ul><li>image를 patch로 나누어서 input으로 사용</li><li>masked self-attention을 이용하여 input을 처리</li><li>base model</li><li>large model</li><li>huge model</li></ul><h2 id="Swin-Transformer"><a href="#Swin-Transformer" class="headerlink" title="Swin Transformer"></a>Swin Transformer</h2><ul><li>shift window를 이용하여 input을 처리</li><li>local attention을 이용하여 input을 처리</li><li>W-MSA<ul><li>window based multi-head self-attention(local attention)</li></ul></li></ul><h1 id="참조"><a href="#참조" class="headerlink" title="참조"></a>참조</h1><hr><ul><li><a href="https://arxiv.org/pdf/1409.0473.pdf">NEURAL MACHINE TRANSLATION BY JOINTLY LEARNING TO ALIGN AND TRANSLATE</a></li><li><a href="https://arxiv.org/pdf/1502.03044.pdf">Show, Attend and Tell: Neural Image Caption Generation with Visual Attention</a></li><li><a href="https://www.youtube.com/watch?v=mMa2PmYJlCo">Visual Guide to Transformer Neural Networks - (Episode 2) Multi-Head &amp; Self-Attention</a></li><li><a href="https://arxiv.org/pdf/1906.05909.pdf">Stand-Alone Self-Attention in Vision Models</a></li><li><a href="https://towardsdatascience.com/master-positional-encoding-part-i-63c05d90a0c3">Master Positional Encoding: Part I</a></li><li><a href="https://arxiv.org/pdf/2010.11929.pdf">AN IMAGE IS WORTH 16X16 WORDS: TRANSFORMERS FOR IMAGE RECOGNITION AT SCALE</a></li></ul>]]></content:encoded>
-      
-      <comments>https://sejoung.github.io/2024/02/2024-02-19-deep_learning_2/#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>AnimateDiff: Stable Diffusion for Animation Generation with ComfyUI</title>
-      <link>https://sejoung.github.io/2024/02/2024-02-19-comfyui_animatediff/</link>
-      <guid>https://sejoung.github.io/2024/02/2024-02-19-comfyui_animatediff/</guid>
-      <pubDate>Mon, 19 Feb 2024 01:38:00 GMT</pubDate>
-      <description>
-      
-        
-        
-          &lt;h1 id=&quot;AnimateDiff-Stable-Diffusion-for-Animation-Generation-with-ComfyUI&quot;&gt;&lt;a href=&quot;#AnimateDiff-Stable-Diffusion-for-Animation-Generation-
-        
-      
-      </description>
-      
-      <content:encoded><![CDATA[<h1 id="AnimateDiff-Stable-Diffusion-for-Animation-Generation-with-ComfyUI"><a href="#AnimateDiff-Stable-Diffusion-for-Animation-Generation-with-ComfyUI" class="headerlink" title="AnimateDiff: Stable Diffusion for Animation Generation with ComfyUI"></a>AnimateDiff: Stable Diffusion for Animation Generation with ComfyUI</h1><p>지금 까지 comfyui에 AnimateDiff를 사용하여 애니메이션을 생성하는 플러그인은 2개 정도 인데<br><a href="https://github.com/Kosinkadink/ComfyUI-AnimateDiff-Evolved">Kosinkadink&#x2F;ComfyUI-AnimateDiff-Evolved</a> 플러그인은<br>img2img를 사용하여 애니메이션을 생성하지 못한다 그래서 <a href="https://github.com/ArtVentureX/comfyui-animatediff">ArtVentureX&#x2F;comfyui-animatediff</a> 플러그인을 사용하여 애니메이션을 생성하였다.</p><h2 id="설치"><a href="#설치" class="headerlink" title="설치"></a>설치</h2><p>먼저 comfyui 플러그인을 설치한다. 설치 방법은 comfyui manager를 설치하면 쉽게 다운로드 할수 있다 </p><p>수동 설치를 원한다면 comfyui에 <code>custom_nodes</code> 폴더에 직접 다운로드 하면 된다</p><p>설치가 완료 되면 필수 모델을 다운로드 해야 된다 custom_nodes 폴더에 <code>comfyui-animatediff/models/</code> 폴더에 다운로드 하면 된다.</p><p><a href="https://huggingface.co/guoyww/animatediff">guoyww&#x2F;animatediff</a></p><h2 id="사용법"><a href="#사용법" class="headerlink" title="사용법"></a>사용법</h2><p><a href="https://github.com/ArtVentureX/comfyui-animatediff/blob/main/README.md">comfyui-animatediff README</a> 파일에 잘 나와있다</p><h1 id="참조"><a href="#참조" class="headerlink" title="참조"></a>참조</h1><hr><ul><li><a href="https://github.com/ArtVentureX/comfyui-animatediff">ArtVentureX&#x2F;comfyui-animatediff</a></li><li><a href="https://github.com/Kosinkadink/ComfyUI-AnimateDiff-Evolved">Kosinkadink&#x2F;ComfyUI-AnimateDiff-Evolved</a></li><li><a href="https://huggingface.co/guoyww/animatediff">guoyww&#x2F;animatediff</a></li></ul>]]></content:encoded>
-      
-      <comments>https://sejoung.github.io/2024/02/2024-02-19-comfyui_animatediff/#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>CHAPTER 17 타임라인 조율하기</title>
-      <link>https://sejoung.github.io/2024/02/2024-02-19-Grokking_Simplicity_17/</link>
-      <guid>https://sejoung.github.io/2024/02/2024-02-19-Grokking_Simplicity_17/</guid>
-      <pubDate>Mon, 19 Feb 2024 00:50:00 GMT</pubDate>
-      <description>
-      
-        
-        
-          &lt;h1 id=&quot;CHAPTER-17-타임라인-조율하기&quot;&gt;&lt;a href=&quot;#CHAPTER-17-타임라인-조율하기&quot; class=&quot;headerlink&quot; title=&quot;CHAPTER 17 타임라인 조율하기&quot;&gt;&lt;/a&gt;CHAPTER 17 타임라인 조율하기&lt;/h1&gt;&lt;
-        
-      
-      </description>
-      
-      <content:encoded><![CDATA[<h1 id="CHAPTER-17-타임라인-조율하기"><a href="#CHAPTER-17-타임라인-조율하기" class="headerlink" title="CHAPTER 17 타임라인 조율하기"></a>CHAPTER 17 타임라인 조율하기</h1><h2 id="타임라인을-나누기-위한-동시성-기본형"><a href="#타임라인을-나누기-위한-동시성-기본형" class="headerlink" title="타임라인을 나누기 위한 동시성 기본형"></a>타임라인을 나누기 위한 동시성 기본형</h2><p>경쟁조건(race condition)은 어떤 동작이 먼저 끝나는 타임라인에 의존할 때 발생합니다</p><h2 id="코드에-Cut-적용하기"><a href="#코드에-Cut-적용하기" class="headerlink" title="코드에 Cut() 적용하기"></a>코드에 Cut() 적용하기</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">Cut</span>(<span class="params">num, callback</span>) &#123;</span><br><span class="line">  <span class="keyword">var</span> num_finished = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">function</span>(<span class="params"></span>) &#123;</span><br><span class="line">    num_finished += <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">if</span>(num_finished === num)</span><br><span class="line">      <span class="title function_">callback</span>();</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> done = <span class="title class_">Cut</span>(<span class="number">3</span>, <span class="keyword">function</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;3 timelines are finished&quot;</span>);</span><br><span class="line">&#125;);</span><br><span class="line">  </span><br><span class="line"><span class="title function_">done</span>();</span><br><span class="line"><span class="title function_">done</span>();</span><br><span class="line"><span class="title function_">done</span>();</span><br></pre></td></tr></table></figure><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">calc_cart_total</span>(<span class="params">cart, callback</span>) &#123;</span><br><span class="line">  <span class="keyword">var</span> total = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">var</span> done = <span class="title class_">Cut</span>(<span class="number">2</span>, <span class="keyword">function</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="title function_">callback</span>(total);</span><br><span class="line">  &#125;);</span><br><span class="line">  <span class="title function_">cost_ajax</span>(cart, <span class="keyword">function</span>(<span class="params">cost</span>) &#123;</span><br><span class="line">    total += cost;</span><br><span class="line">    <span class="title function_">done</span>();</span><br><span class="line">  &#125;);</span><br><span class="line">  <span class="title function_">shipping_ajax</span>(cart, <span class="keyword">function</span>(<span class="params">shipping</span>) &#123;</span><br><span class="line">    total += shipping;</span><br><span class="line">    <span class="title function_">done</span>();</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h2 id="딱-한-번만-호출하는-기본형"><a href="#딱-한-번만-호출하는-기본형" class="headerlink" title="딱 한 번만 호출하는 기본형"></a>딱 한 번만 호출하는 기본형</h2><p>최초 한 번만 효과가 발생하는 액션을 멱등원(idempotent)이라고 합니다. </p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">sendAddToCartText</span>(<span class="params">number</span>) &#123;</span><br><span class="line">  <span class="title function_">sendTextAjax</span>(number, <span class="string">&quot;Thanks for adding something to your cart. Reply if you have any questions!&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">JustOnce</span>(<span class="params">action</span>) &#123;</span><br><span class="line">  <span class="keyword">var</span> alreadyCalled = <span class="literal">false</span>;</span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">function</span>(<span class="params">a, b, c</span>) &#123;</span><br><span class="line">    <span class="keyword">if</span>(alreadyCalled) <span class="keyword">return</span>;</span><br><span class="line">    alreadyCalled = <span class="literal">true</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="title function_">action</span>(a, b, c);</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> sendAddToCartTextOnce = <span class="title class_">JustOnce</span>(sendAddToCartText);</span><br><span class="line"></span><br><span class="line"><span class="title function_">sendAddToCartTextOnce</span>(<span class="string">&quot;555-555-5555-55&quot;</span>);</span><br><span class="line"><span class="title function_">sendAddToCartTextOnce</span>(<span class="string">&quot;555-555-5555-55&quot;</span>);</span><br><span class="line"><span class="title function_">sendAddToCartTextOnce</span>(<span class="string">&quot;555-555-5555-55&quot;</span>);</span><br><span class="line"><span class="title function_">sendAddToCartTextOnce</span>(<span class="string">&quot;555-555-5555-55&quot;</span>);</span><br></pre></td></tr></table></figure><h2 id="요약-타임라인-사용하기"><a href="#요약-타임라인-사용하기" class="headerlink" title="요약: 타임라인 사용하기"></a>요약: 타임라인 사용하기</h2><ul><li>타임라인 수를 줄입니다</li><li>타임라인 길이를 줄입니다</li><li>공유 자원을 업앱니다</li><li>동시성 기본형으로 자원을 공유한다</li><li>동시성 기본형으로 조율한다</li></ul><h1 id="참조"><a href="#참조" class="headerlink" title="참조"></a>참조</h1><hr><ul><li><a href="https://www.yes24.com/Product/Goods/108748841">쏙쏙 들어오는 함수형 코딩(심플한 코드로 복잡한 소프트웨어 길들이기)</a></li></ul>]]></content:encoded>
-      
-      <comments>https://sejoung.github.io/2024/02/2024-02-19-Grokking_Simplicity_17/#disqus_thread</comments>
     </item>
     
   </channel>

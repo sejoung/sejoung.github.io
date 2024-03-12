@@ -9,6 +9,46 @@
 
 
     <url>
+        <loc>https://sejoung.github.io/2024/03/2024-03-11-Semantic_Matching_2/</loc>
+        <lastmod>2024-03-12T02:58:52.200Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/2024/03/2024-03-11-Semantic_Matching/</loc>
+        <lastmod>2024-03-11T08:55:46.973Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/2023/12/2023-12-21-Stable_Diffusion_Samplers/</loc>
+        <lastmod>2024-03-08T09:55:20.938Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/2023/10/2023-10-18-ubuntu_cuda_install/</loc>
+        <lastmod>2024-03-07T04:32:02.816Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/2024/03/2024-03-07-design_patterns_beauty_8_PART_1/</loc>
+        <lastmod>2024-03-07T01:27:48.455Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://sejoung.github.io/2024/03/2024-03-06-design_patterns_beauty_7_PART_2/</loc>
         <lastmod>2024-03-06T01:53:52.031Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -561,14 +601,6 @@
     </url>
 
     <url>
-        <loc>https://sejoung.github.io/2023/12/2023-12-21-Stable_Diffusion_Samplers/</loc>
-        <lastmod>2023-12-21T09:23:45.066Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>https://sejoung.github.io/2023/12/2023-12-21-Classifier_Free_Guidance/</loc>
         <lastmod>2023-12-21T07:19:23.510Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -842,14 +874,6 @@
 
     <url>
         <loc>https://sejoung.github.io/2023/10/2023-10-17-gpu_monitoring/</loc>
-        <lastmod>2023-12-01T08:00:58.184Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://sejoung.github.io/2023/10/2023-10-18-ubuntu_cuda_install/</loc>
         <lastmod>2023-12-01T08:00:58.184Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
