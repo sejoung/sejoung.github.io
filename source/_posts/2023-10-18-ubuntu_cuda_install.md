@@ -129,8 +129,20 @@ nvidia-smi
 
 문제 없다고 함???
 
+
+## 팁
+UEFI Secure Boot를 비활성화 해야 함
+
+아래는 확인 커멘드
+
+```shell
+sudo mokutil --sb-state 
+```
+
+
 # 참조
 -----
 
 * [cuda_11.8_installation_on_Ubuntu_22.04](https://gist.github.com/MihailCosmin/affa6b1b71b43787e9228c25fe15aeba)
 * [Different CUDA versions shown by nvcc and NVIDIA-smi](https://itecnote.com/tecnote/different-cuda-versions-shown-by-nvcc-and-nvidia-smi/)
+* [UEFI Secure Boot](https://docs.nvidia.com/networking/display/bluefielddpuosv385/uefi+secure+boot)
