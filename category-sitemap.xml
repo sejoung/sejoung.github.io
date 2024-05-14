@@ -10,7 +10,14 @@
 
     <url>
         <loc>https://sejoung.github.io/categories/books/</loc>
-        <lastmod>2024-05-07T07:40:39.805Z</lastmod>
+        <lastmod>2024-05-14T02:25:55.259Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/categories/LLM/</loc>
+        <lastmod>2024-05-10T05:59:40.030Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
