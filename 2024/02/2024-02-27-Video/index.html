@@ -1,0 +1,154 @@
+<!DOCTYPE html><html lang="lang"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta name="description" content="Video"><meta name="keywords" content="Video"><meta name="author" content="sejoung"><meta name="copyright" content="sejoung"><title>Video | 폭간의 기술블로그</title><link rel="shortcut icon" href="../../../my-favicon.ico"><link rel="stylesheet" href="../../../css/index.css?version=1.7.0"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css?version=1.7.0"><meta name="format-detection" content="telephone=no"><meta http-equiv="x-dns-prefetch-control" content="on"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><script async src="https://www.googletagmanager.com/gtag/js?id=G-NVRTGLD8RZ"></script><script>window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-NVRTGLD8RZ');</script><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"We didn't find any results for the search: ${query}"}},
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  }
+} </script><meta name="generator" content="Hexo 5.4.2"></head><body><i class="fa fa-arrow-right" id="toggle-sidebar" aria-hidden="true"></i><div id="sidebar" data-display="true"><div class="toggle-sidebar-info text-center"><span data-toggle="Toggle article">Toggle site</span><hr></div><div class="sidebar-toc"><div class="sidebar-toc__title">Catalog</div><div class="sidebar-toc__progress"><span class="progress-notice">You've read</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar"></div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Video"><span class="toc-number">1.</span> <span class="toc-text">Video</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Video-Recognition-with-Sparse-Points"><span class="toc-number">1.1.</span> <span class="toc-text">Video Recognition with Sparse Points</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Video-Recognition-with-Dense-Trajectory-Descriptors"><span class="toc-number">1.2.</span> <span class="toc-text">Video Recognition with Dense Trajectory Descriptors</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Video-Recognition-with-3D-CNN"><span class="toc-number">1.3.</span> <span class="toc-text">Video Recognition with 3D CNN</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Video-Understanding-Modern-Approaches"><span class="toc-number">1.4.</span> <span class="toc-text">Video Understanding: Modern Approaches</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Visual-Object-Tracking"><span class="toc-number">1.5.</span> <span class="toc-text">Visual Object Tracking</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%EC%B0%B8%EC%A1%B0"><span class="toc-number">2.</span> <span class="toc-text">참조</span></a></li></ol></div></div><div class="author-info hide"><div class="author-info__avatar text-center"><img src="https://avatars0.githubusercontent.com/u/4936005?s=400&amp;u=a679b941fe377418e7e4efcf916c6a636d7178ee&amp;v=4"></div><div class="author-info__name text-center">sejoung</div><div class="author-info__description text-center">잘정리하자</div><div class="follow-button"><a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/sejoung">Follow Me</a></div><hr><div class="author-info-articles"><a class="author-info-articles__archives article-meta" href="../../../archives"><span class="pull-left">Articles</span><span class="pull-right">818</span></a><a class="author-info-articles__tags article-meta" href="../../../tags"><span class="pull-left">Tags</span><span class="pull-right">838</span></a><a class="author-info-articles__categories article-meta" href="../../../categories"><span class="pull-left">Categories</span><span class="pull-right">76</span></a></div><hr><div class="author-info-links"><div class="author-info-links__title text-center">Links</div><a class="author-info-links__name text-center" target="_blank" rel="external nofollow noopener noreferrer" href="https://blog.naver.com/sanaes">naverblog</a><a class="author-info-links__name text-center" target="_blank" rel="external nofollow noopener noreferrer" href="https://www.linkedin.com/in/sanaes/">linkedin</a><a class="author-info-links__name text-center" target="_blank" rel="external nofollow noopener noreferrer" href="https://www.slideshare.net/sejoung">slideshare</a></div></div></div><div id="content-outer"><div id="top-container" style="background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Van_Gogh_-_Terrasse_des_Caf%C3%A9s_an_der_Place_du_Forum_in_Arles_am_Abend1.jpeg/1024px-Van_Gogh_-_Terrasse_des_Caf%C3%A9s_an_der_Place_du_Forum_in_Arles_am_Abend1.jpeg)"><div id="page-header"><span class="pull-left"> <a id="site-name" href="../../../index.html">폭간의 기술블로그</a></span><i class="fa fa-bars toggle-menu pull-right" aria-hidden="true"></i><span class="pull-right menus">   <a class="site-page" href="/">Home</a><a class="site-page" href="/archives">Archives</a><a class="site-page" href="/tags">Tags</a><a class="site-page" href="/categories">Categories</a></span><span class="pull-right"><a class="site-page social-icon search"><i class="fa fa-search"></i><span> Search</span></a></span></div><div id="post-info"><div id="post-title">Video</div><div id="post-meta"><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2024-02-27</time><span class="post-meta__separator">|</span><i class="fa fa-inbox post-meta__icon" aria-hidden="true"></i><a class="post-meta__categories" href="../../../categories/Machine-Learning/">Machine Learning</a><span class="post-meta__separator">|</span><i class="fa fa-comment-o post-meta__icon" aria-hidden="true"></i><a href="#disqus_thread"><span class="disqus-comment-count" data-disqus-identifier="2024/02/2024-02-27-Video/"></span></a></div></div></div><div class="layout" id="content-inner"><article id="post"><div class="article-container" id="post-content"><h1 id="Video"><a href="#Video" class="headerlink" title="Video"></a>Video</h1><ul>
+<li>Optical Flow<ul>
+<li>pixel correspondences problem</li>
+<li>using local window</li>
+<li>Lucas-Kanade flow</li>
+<li>FlowNet<ul>
+<li>CNN은 classification 분야에서 성공적이였으나, optical flow estimation에서는 적용된 사례가 없었음</li>
+<li>End-to-end optical flow estimation CNN 구조와 학습방법 제안</li>
+<li>Two Architectures (FlowNet-C, FlowNet-S)</li>
+</ul>
+</li>
+<li>FlowNet2<ul>
+<li>FlowNet을 faster and more accurate하게 하자</li>
+</ul>
+</li>
+<li>PWC-Net<ul>
+<li>Feature pyramid 와 warping, Correlation volme 을 활용한 optical flow estimation</li>
+<li>Compare but effective CNN for optical flow</li>
+<li>Pyramidal features의 사용</li>
+</ul>
+</li>
+<li>RAFT<ul>
+<li>All-pairs correlation volume 계산과, recurrent optical flow update</li>
+<li>Multi-scale 3D correla)on volumes 을 만든다</li>
+<li>Correlation volum을 전체 pixel에 대해 다 만듬</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="Video-Recognition-with-Sparse-Points"><a href="#Video-Recognition-with-Sparse-Points" class="headerlink" title="Video Recognition with Sparse Points"></a>Video Recognition with Sparse Points</h2><ul>
+<li>Video Recognition with Space-Time Interest Points<ul>
+<li>Space-time interest point (STIP)<ul>
+<li>STIP detector</li>
+<li>Corner point in a spatio-temporal domain</li>
+<li>Bag of visual words</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="Video-Recognition-with-Dense-Trajectory-Descriptors"><a href="#Video-Recognition-with-Dense-Trajectory-Descriptors" class="headerlink" title="Video Recognition with Dense Trajectory Descriptors"></a>Video Recognition with Dense Trajectory Descriptors</h2><ul>
+<li>Dense Trajectory<ul>
+<li>Sparse -&gt; Dense</li>
+<li>Point -&gt; Trajectory</li>
+<li>Trajectory extraction</li>
+</ul>
+</li>
+</ul>
+<h2 id="Video-Recognition-with-3D-CNN"><a href="#Video-Recognition-with-3D-CNN" class="headerlink" title="Video Recognition with 3D CNN"></a>Video Recognition with 3D CNN</h2><ul>
+<li>3D Convolutional Neural Network</li>
+<li>C3D<ul>
+<li>A modern 3D CNN architecture </li>
+<li>VGGNet style network</li>
+</ul>
+</li>
+<li>Visual Information Fusion Across Time<ul>
+<li>A video &#x3D; A bag of short fixed-sized clips</li>
+</ul>
+</li>
+<li>Time Information Fusion<ul>
+<li>early fusion</li>
+<li>late fusion</li>
+<li>slow fusion</li>
+</ul>
+</li>
+<li>Explicit Motion Estimation and Utilization<ul>
+<li>Two-Stream Convolutional Network<ul>
+<li>spatial stream<ul>
+<li>ImageNet pretrained network, whose architecture is similar to ZFNet</li>
+</ul>
+</li>
+<li>temporal stream<ul>
+<li>Multi-task learning</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="Video-Understanding-Modern-Approaches"><a href="#Video-Understanding-Modern-Approaches" class="headerlink" title="Video Understanding: Modern Approaches"></a>Video Understanding: Modern Approaches</h2><ul>
+<li><p>Video Representation Learning</p>
+</li>
+<li><p>SlowFast Networks</p>
+<ul>
+<li>Low frame rate branch와 high frame rate branch를 나누어서 action recognition</li>
+<li>Time axis 에 대한 탐구</li>
+<li>Slow pathway</li>
+<li>Fast pathway</li>
+</ul>
+</li>
+<li><p>MoViNet</p>
+<ul>
+<li>Video를 좀 더 efficient하게 처리하기 위한 구조 탐구.</li>
+<li>Video recognition에서의 efficientNet (ICML 2019) 와 같은 논문</li>
+</ul>
+</li>
+<li><p>MaskFeat</p>
+<ul>
+<li>ransformer 와 self-supervised representation learning 을 통한 video recognition 의 최신 기법</li>
+<li>Action recognition 을 위한 representation learning을 할 때 꼭 temporal sequence 가 필요할까?</li>
+<li>Pretext task로 masked input으로 HOG를 prediction 해보자</li>
+<li>HOG 는 이미지의 pixel intensity 등의 정보를 없애서 motion 그 자체의 학습에 좀 더 집중하게 도움을 줌</li>
+</ul>
+</li>
+<li><p>Self-supervised learning 기반의 representation learning 방식이 video recognition 쪽에서 현재 가장 잘 동작한다. (MaskFeat)</p>
+</li>
+<li><p>Transformer architecture를 활용한 구조.</p>
+</li>
+<li><p>Video 를 이해하는 데에 꼭 sequential 한 information 이 필요하지 않을 수 있다</p>
+</li>
+<li><p>Single key frame 으로도 일부의 action 정보 학습&#x2F;파악 가능</p>
+</li>
+</ul>
+<h2 id="Visual-Object-Tracking"><a href="#Visual-Object-Tracking" class="headerlink" title="Visual Object Tracking"></a>Visual Object Tracking</h2><ul>
+<li>MDNet<ul>
+<li>당시 CNN이 높은 성능을 내고 있으나, classification 과 tracking은 다른 문제여서 다르게 적용되어야 한다</li>
+<li>Occlusion, deforma)on, mo)on blur 와 같은 문제를 처리해야함</li>
+<li>같은 targe이여도 동영상&#x2F;배경에 따라 다르게 인식될 수 있음.</li>
+<li>여러 동영상으로부터 target의 domain-independent shared representation 학습</li>
+<li>Domain-specific branch를 두어 서로 다른 도메인 학습</li>
+<li>VOT를 위한 CNN 구조 제안; Domain-independent shared layers &#x2F; Domain- specific branches.</li>
+<li>Offline에서 pre-training되고, online으로 fine-tuning된다</li>
+</ul>
+</li>
+</ul>
+<h1 id="참조"><a href="#참조" class="headerlink" title="참조"></a>참조</h1><hr>
+</div></article><div class="post-meta__tag-list"><a class="post-meta__tags" href="../../../tags/Video/">Video</a></div><nav id="pagination"><div class="prev-post pull-left"><a href="../2024-02-28-design_patterns_beauty_5/"><i class="fa fa-chevron-left">  </i><span>CHAPTER 5 리팩터링 기법</span></a></div><div class="next-post pull-right"><a href="../2024-02-27-Object_Detection_Segmentation_2/"><span>Object Detection &amp; Segmentation 2</span><i class="fa fa-chevron-right"></i></a></div></nav><div id="disqus_thread"></div><script>var unused = null;
+var disqus_config = function () {
+  this.page.url = 'https://sejoung.github.io/2024/02/2024-02-27-Video/';
+  this.page.identifier = '2024/02/2024-02-27-Video/';
+  this.page.title = 'Video';
+}
+var d = document, s = d.createElement('script');
+s.src = "https://" + 'kimsejoung' +".disqus.com/embed.js";
+s.setAttribute('data-timestamp', '' + +new Date());
+(d.head || d.body).appendChild(s);</script><script id="dsq-count-scr" src="https://kimsejoung.disqus.com/count.js" async></script></div></div><footer class="footer-bg" style="background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Van_Gogh_-_Terrasse_des_Caf%C3%A9s_an_der_Place_du_Forum_in_Arles_am_Abend1.jpeg/1024px-Van_Gogh_-_Terrasse_des_Caf%C3%A9s_an_der_Place_du_Forum_in_Arles_am_Abend1.jpeg)"><div class="layout" id="footer"><div class="copyright">&copy;2017 - 2024 By sejoung</div><div class="framework-info"><span>Driven - </span><a target="_blank" rel="external nofollow noopener noreferrer" href="http://hexo.io"><span>Hexo</span></a><span class="footer-separator">|</span><span>Theme - </span><a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/Molunerfinn/hexo-theme-melody"><span>Melody</span></a></div><div class="busuanzi"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><span id="busuanzi_container_page_pv"><i class="fa fa-file-o"></i><span id="busuanzi_value_page_pv"></span><span></span></span></div></div></footer><i class="fa fa-arrow-up" id="go-up" aria-hidden="true"></i><script src="../../../js/third-party/anime.min.js"></script><script src="../../../js/third-party/jquery.min.js"></script><script src="../../../js/third-party/jquery.fancybox.min.js"></script><script src="../../../js/third-party/velocity.min.js"></script><script src="../../../js/third-party/velocity.ui.min.js"></script><script src="../../../js/utils.js?version=1.7.0"></script><script src="../../../js/fancybox.js?version=1.7.0"></script><script src="../../../js/sidebar.js?version=1.7.0"></script><script src="../../../js/copy.js?version=1.7.0"></script><script src="../../../js/fireworks.js?version=1.7.0"></script><script src="../../../js/transition.js?version=1.7.0"></script><script src="../../../js/scroll.js?version=1.7.0"></script><script src="../../../js/head.js?version=1.7.0"></script><script src="../../../js/search/local-search.js"></script><script>if(/Android|webOS|iPhone|iPod|iPad|BlackBerry/i.test(navigator.userAgent)) {
+  $('#nav').addClass('is-mobile')
+  $('footer').addClass('is-mobile')
+  $('#top-container').addClass('is-mobile')
+}</script><div class="search-dialog" id="local-search"><div class="search-dialog__title" id="local-search-title">Local search</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="Search for Posts"></div></div></div><hr><div id="local-search-results"><div id="local-hits"></div><div id="local-stats"><div class="local-search-stats__hr" id="hr"><span>Powered by</span> <a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/wzpan/hexo-generator-search" style="color:#49B1F5;">hexo-generator-search</a></div></div></div><span class="search-close-button"><i class="fa fa-times"></i></span></div><div class="search-mask"></div></body></html>

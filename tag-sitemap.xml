@@ -3,15 +3,477 @@
 
 
     <url>
+        <loc>https://sejoung.github.io/tags/Nonviolent-Communication/</loc>
+        <lastmod>2024-05-15T06:28:23.330Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/tags/%EA%B0%88%EB%93%B1%EC%9D%84-%ED%95%B4%EA%B2%B0%ED%95%98%EA%B3%A0-%EA%B4%80%EA%B3%84%EB%A5%BC-%ED%9A%8C%EB%B3%B5%ED%95%98%EB%8A%94-%EB%B9%84%ED%8F%AD%EB%A0%A5%EB%8C%80%ED%99%94%EC%9D%98-%EA%B8%B0%EC%88%A0/</loc>
+        <lastmod>2024-05-15T06:28:23.330Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/tags/%EC%83%81%EC%B2%98-%EC%A3%BC%EC%A7%80-%EC%95%8A%EB%8A%94-%EB%8C%80%ED%99%94/</loc>
+        <lastmod>2024-05-15T06:28:23.330Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/tags/%EB%A7%81%ED%81%AC/</loc>
+        <lastmod>2024-05-13T13:18:00.897Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/tags/LLM-%EC%B0%B8%EA%B3%A0/</loc>
+        <lastmod>2024-05-13T13:18:00.897Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/tags/Tidy-First/</loc>
+        <lastmod>2024-05-09T12:31:09.181Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/tags/%EC%BC%84%ED%8A%B8-%EB%B2%A1/</loc>
+        <lastmod>2024-05-09T12:31:09.181Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/tags/%EC%BC%84%ED%8A%B8-%EB%B2%A1%EC%9D%98-Tidy-First/</loc>
+        <lastmod>2024-05-09T12:31:09.181Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/tags/llm/</loc>
+        <lastmod>2024-04-29T12:18:33.051Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/tags/lora/</loc>
+        <lastmod>2024-04-29T12:18:33.051Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/tags/Semantic-Matching/</loc>
+        <lastmod>2024-04-29T12:18:33.051Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/tags/%EA%B0%9D%EC%B2%B4%EC%A7%80%ED%96%A5-%ED%8C%A8%EB%9F%AC%EB%8B%A4%EC%9E%84%EB%B6%80%ED%84%B0-%EC%84%A4%EA%B3%84-%EC%9B%90%EC%B9%99-%EC%BD%94%EB%94%A9-%EA%B7%9C%EC%B9%99-%EB%A6%AC%ED%8C%A9%ED%84%B0%EB%A7%81-%EA%B8%B0%EB%B2%95-%EB%94%94%EC%9E%90%EC%9D%B8-%ED%8C%A8%ED%84%B4%EA%B9%8C%EC%A7%80/</loc>
+        <lastmod>2024-04-29T12:18:33.051Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/tags/%EB%94%94%EC%9E%90%EC%9D%B8-%ED%8C%A8%ED%84%B4%EC%9D%98-%EC%95%84%EB%A6%84%EB%8B%A4%EC%9B%80/</loc>
+        <lastmod>2024-04-29T12:18:33.051Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/tags/python/</loc>
+        <lastmod>2024-04-29T12:18:33.051Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/tags/Multiview-geometry/</loc>
+        <lastmod>2024-04-29T12:18:33.050Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/tags/Video/</loc>
+        <lastmod>2024-04-29T12:18:33.049Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/tags/Object-Detection-Segmentation/</loc>
+        <lastmod>2024-04-29T12:18:33.049Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/tags/Representation-Learning/</loc>
+        <lastmod>2024-04-29T12:18:33.049Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/tags/%EC%95%A0%EB%8B%88%EB%A9%94%EC%9D%B4%ED%8A%B8%EB%94%94%ED%94%84/</loc>
+        <lastmod>2024-04-29T12:18:33.048Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/tags/AnimateDiff/</loc>
+        <lastmod>2024-04-29T12:18:33.048Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/tags/animation/</loc>
+        <lastmod>2024-04-29T12:18:33.048Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/tags/Deep-Learning/</loc>
+        <lastmod>2024-04-29T12:18:33.048Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/tags/%EA%B3%A0%EC%A0%84%EC%A0%81%EC%9D%B8-%EC%BB%B4%ED%93%A8%ED%84%B0-%EB%B9%84%EC%A0%84/</loc>
+        <lastmod>2024-04-29T12:18:33.048Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/tags/Classical-Computer-Vision/</loc>
+        <lastmod>2024-04-29T12:18:33.048Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/tags/%EC%BB%B4%ED%93%A8%ED%84%B0-%EB%B9%84%EC%A0%84/</loc>
+        <lastmod>2024-04-29T12:18:33.048Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/tags/Computer-Vision/</loc>
+        <lastmod>2024-04-29T12:18:33.048Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/tags/%EC%8B%AC%ED%94%8C%ED%95%9C-%EC%BD%94%EB%93%9C%EB%A1%9C-%EB%B3%B5%EC%9E%A1%ED%95%9C-%EC%86%8C%ED%94%84%ED%8A%B8%EC%9B%A8%EC%96%B4-%EA%B8%B8%EB%93%A4%EC%9D%B4%EA%B8%B0/</loc>
+        <lastmod>2024-04-29T12:18:33.048Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/tags/%EC%8F%99%EC%8F%99-%EB%93%A4%EC%96%B4%EC%98%A4%EB%8A%94-%ED%95%A8%EC%88%98%ED%98%95-%EC%BD%94%EB%94%A9/</loc>
+        <lastmod>2024-04-29T12:18:33.048Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/tags/ComfyUI/</loc>
+        <lastmod>2024-04-29T12:18:33.048Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/tags/%EC%8A%A4%ED%85%8C%EC%9D%B4%EB%B8%94-%EB%94%94%ED%93%A8%EC%A0%84/</loc>
+        <lastmod>2024-04-29T12:18:33.048Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/tags/Stable-Diffusion/</loc>
+        <lastmod>2024-04-29T12:18:33.048Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/tags/CNN/</loc>
+        <lastmod>2024-04-29T12:18:33.047Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/tags/%ED%95%A9%EC%84%B1%EA%B3%B1-Convolution/</loc>
+        <lastmod>2024-04-29T12:18:33.047Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/tags/Convolution-Neural-Networks/</loc>
+        <lastmod>2024-04-29T12:18:33.047Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/tags/%EC%8B%A0%EA%B2%BD%EB%A7%9D/</loc>
+        <lastmod>2024-04-29T12:18:33.047Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/tags/Neural-Networks/</loc>
+        <lastmod>2024-04-29T12:18:33.047Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/tags/%EC%84%A0%ED%98%95-%ED%9A%8C%EA%B7%80/</loc>
+        <lastmod>2024-04-29T12:18:33.047Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/tags/linear-regression/</loc>
+        <lastmod>2024-04-29T12:18:33.047Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/tags/%EC%83%9D%EC%82%B0%EC%84%B1%EA%B3%BC-%ED%92%88%EC%A7%88%EC%9D%84-%EC%9C%84%ED%95%9C-%EB%8B%A8%EC%9C%84-%ED%85%8C%EC%8A%A4%ED%8A%B8-%EC%9B%90%EC%B9%99%EA%B3%BC-%ED%8C%A8%ED%84%B4/</loc>
+        <lastmod>2024-04-29T12:18:33.046Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/tags/%EB%8B%A8%EC%9C%84-%ED%85%8C%EC%8A%A4%ED%8A%B8/</loc>
+        <lastmod>2024-04-29T12:18:33.046Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/tags/five-lines-of-code/</loc>
+        <lastmod>2024-04-29T12:18:33.044Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/tags/%ED%8C%8C%EC%9D%B4%EB%B8%8C-%EB%9D%BC%EC%9D%B8%EC%8A%A4-%EC%98%A4%EB%B8%8C-%EC%BD%94%EB%93%9C/</loc>
+        <lastmod>2024-04-29T12:18:33.044Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/tags/configuration-file/</loc>
+        <lastmod>2024-04-29T12:18:33.043Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/tags/pyproject-toml/</loc>
+        <lastmod>2024-04-29T12:18:33.043Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/tags/Samplers/</loc>
+        <lastmod>2024-04-29T12:18:33.043Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/tags/Stable-Diffusion-Samplers/</loc>
+        <lastmod>2024-04-29T12:18:33.043Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/tags/CFG-Scale/</loc>
+        <lastmod>2024-04-29T12:18:33.043Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/tags/Classifier-Free-Guidance-CFG/</loc>
+        <lastmod>2024-04-29T12:18:33.043Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/tags/%EB%B2%84%EC%A0%84%EA%B4%80%EB%A6%AC/</loc>
+        <lastmod>2024-04-29T12:18:33.043Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/tags/Python/</loc>
+        <lastmod>2024-04-29T12:18:33.043Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/tags/Python-Version-Management/</loc>
+        <lastmod>2024-04-29T12:18:33.043Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/tags/pyenv/</loc>
+        <lastmod>2024-04-29T12:18:33.043Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>https://sejoung.github.io/tags/Designing-Data-Intensive-Applications/</loc>
-        <lastmod>2023-11-28T05:44:24.752Z</lastmod>
+        <lastmod>2024-04-29T12:18:33.043Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://sejoung.github.io/tags/%EB%8D%B0%EC%9D%B4%ED%84%B0-%EC%A4%91%EC%8B%AC-%EC%95%A0%ED%94%8C%EB%A6%AC%EC%BC%80%EC%9D%B4%EC%85%98-%EC%84%A4%EA%B3%84/</loc>
-        <lastmod>2023-11-28T05:44:24.752Z</lastmod>
+        <lastmod>2024-04-29T12:18:33.043Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/tags/%EC%97%AC%EB%9F%AC-%EA%B3%84%EC%A0%95/</loc>
+        <lastmod>2024-04-29T12:18:33.042Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/tags/%EB%A9%80%ED%8B%B0-%EA%B3%84%EC%A0%95/</loc>
+        <lastmod>2024-04-29T12:18:33.042Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/tags/multiple-accounts/</loc>
+        <lastmod>2024-04-29T12:18:33.042Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/tags/github/</loc>
+        <lastmod>2024-04-29T12:18:33.042Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/tags/%EC%9A%B0%EB%B6%84%ED%88%AC/</loc>
+        <lastmod>2024-04-29T12:18:33.042Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/tags/CUDA/</loc>
+        <lastmod>2024-04-29T12:18:33.042Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/tags/ssh/</loc>
+        <lastmod>2024-04-29T12:18:33.042Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/tags/%EC%BF%A0%EB%B2%84%EB%84%A4%ED%8B%B0%EC%8A%A4-%ED%88%B4/</loc>
+        <lastmod>2024-04-29T12:18:33.041Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/tags/tools/</loc>
+        <lastmod>2024-04-29T12:18:33.041Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/tags/%EC%BF%A0%EB%B2%84%EB%84%A4%ED%8B%B0%EC%8A%A4/</loc>
+        <lastmod>2024-04-29T12:18:33.041Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/tags/kubernetes/</loc>
+        <lastmod>2024-04-29T12:18:33.041Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/tags/k8s/</loc>
+        <lastmod>2024-04-29T12:18:33.041Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/tags/%EB%A7%A5%EB%B6%81/</loc>
+        <lastmod>2024-04-29T12:18:33.040Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/tags/%EA%B0%9C%EB%B0%9C%ED%99%98%EA%B2%BD/</loc>
+        <lastmod>2024-04-29T12:18:33.040Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
@@ -59,20 +521,6 @@
     </url>
 
     <url>
-        <loc>https://sejoung.github.io/tags/%EC%9A%B0%EB%B6%84%ED%88%AC/</loc>
-        <lastmod>2023-11-21T02:03:27.411Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://sejoung.github.io/tags/CUDA/</loc>
-        <lastmod>2023-11-21T01:55:42.300Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>https://sejoung.github.io/tags/%EC%8B%AC%EB%B3%BC%EB%A6%AD-%EB%A7%81%ED%81%AC-%EA%B4%80%EB%A6%AC/</loc>
         <lastmod>2023-11-21T01:45:35.028Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -115,13 +563,6 @@
     </url>
 
     <url>
-        <loc>https://sejoung.github.io/tags/python/</loc>
-        <lastmod>2023-11-14T06:59:26.755Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>https://sejoung.github.io/tags/anaconda/</loc>
         <lastmod>2023-11-14T06:59:26.755Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -136,20 +577,6 @@
     </url>
 
     <url>
-        <loc>https://sejoung.github.io/tags/%EC%8A%A4%ED%85%8C%EC%9D%B4%EB%B8%94-%EB%94%94%ED%93%A8%EC%A0%84/</loc>
-        <lastmod>2023-11-01T04:03:42.095Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://sejoung.github.io/tags/Stable-Diffusion/</loc>
-        <lastmod>2023-11-01T04:03:42.095Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>https://sejoung.github.io/tags/Diffusion/</loc>
         <lastmod>2023-11-01T04:03:42.095Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -157,29 +584,8 @@
     </url>
 
     <url>
-        <loc>https://sejoung.github.io/tags/%EB%A7%A5%EB%B6%81/</loc>
-        <lastmod>2023-10-30T04:20:25.329Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://sejoung.github.io/tags/%EA%B0%9C%EB%B0%9C%ED%99%98%EA%B2%BD/</loc>
-        <lastmod>2023-10-30T04:20:25.329Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>https://sejoung.github.io/tags/FirebaseError/</loc>
         <lastmod>2023-10-26T08:27:30.127Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://sejoung.github.io/tags/ssh/</loc>
-        <lastmod>2023-10-25T04:29:02.470Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
@@ -528,20 +934,6 @@
     </url>
 
     <url>
-        <loc>https://sejoung.github.io/tags/%EC%BF%A0%EB%B2%84%EB%84%A4%ED%8B%B0%EC%8A%A4-%ED%88%B4/</loc>
-        <lastmod>2022-12-30T02:26:20.393Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://sejoung.github.io/tags/tools/</loc>
-        <lastmod>2022-12-30T02:26:20.393Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>https://sejoung.github.io/tags/cronjob/</loc>
         <lastmod>2022-12-30T02:26:20.393Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -563,28 +955,7 @@
     </url>
 
     <url>
-        <loc>https://sejoung.github.io/tags/%EC%BF%A0%EB%B2%84%EB%84%A4%ED%8B%B0%EC%8A%A4/</loc>
-        <lastmod>2022-12-30T02:26:20.393Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>https://sejoung.github.io/tags/%EC%9B%8C%ED%81%AC%EB%A1%9C%EB%93%9C/</loc>
-        <lastmod>2022-12-30T02:26:20.393Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://sejoung.github.io/tags/kubernetes/</loc>
-        <lastmod>2022-12-30T02:26:20.393Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://sejoung.github.io/tags/k8s/</loc>
         <lastmod>2022-12-30T02:26:20.393Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>

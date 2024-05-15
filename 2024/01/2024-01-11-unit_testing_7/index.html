@@ -1,0 +1,71 @@
+<!DOCTYPE html><html lang="lang"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta name="description" content="7장. 가치 있는 단위 테스트를 위한 리팩터링"><meta name="keywords" content="단위 테스트,생산성과 품질을 위한 단위 테스트 원칙과 패턴"><meta name="author" content="sejoung"><meta name="copyright" content="sejoung"><title>7장. 가치 있는 단위 테스트를 위한 리팩터링 | 폭간의 기술블로그</title><link rel="shortcut icon" href="../../../my-favicon.ico"><link rel="stylesheet" href="../../../css/index.css?version=1.7.0"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css?version=1.7.0"><meta name="format-detection" content="telephone=no"><meta http-equiv="x-dns-prefetch-control" content="on"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><script async src="https://www.googletagmanager.com/gtag/js?id=G-NVRTGLD8RZ"></script><script>window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-NVRTGLD8RZ');</script><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"We didn't find any results for the search: ${query}"}},
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  }
+} </script><meta name="generator" content="Hexo 5.4.2"></head><body><i class="fa fa-arrow-right" id="toggle-sidebar" aria-hidden="true"></i><div id="sidebar" data-display="true"><div class="toggle-sidebar-info text-center"><span data-toggle="Toggle article">Toggle site</span><hr></div><div class="sidebar-toc"><div class="sidebar-toc__title">Catalog</div><div class="sidebar-toc__progress"><span class="progress-notice">You've read</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar"></div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#7%EC%9E%A5-%EA%B0%80%EC%B9%98-%EC%9E%88%EB%8A%94-%EB%8B%A8%EC%9C%84-%ED%85%8C%EC%8A%A4%ED%8A%B8%EB%A5%BC-%EC%9C%84%ED%95%9C-%EB%A6%AC%ED%8C%A9%ED%84%B0%EB%A7%81"><span class="toc-number">1.</span> <span class="toc-text">7장. 가치 있는 단위 테스트를 위한 리팩터링</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%EB%A6%AC%ED%8C%A9%ED%84%B0%EB%A7%81%ED%95%A0-%EC%BD%94%EB%93%9C-%EC%8B%9D%EB%B3%84%ED%95%98%EA%B8%B0"><span class="toc-number">1.1.</span> <span class="toc-text">리팩터링할 코드 식별하기</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%EC%BD%94%EB%93%9C%EC%9D%98-%EB%84%A4-%EA%B0%80%EC%A7%80-%EC%9C%A0%ED%98%95"><span class="toc-number">1.1.1.</span> <span class="toc-text">코드의 네 가지 유형</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%ED%97%98%EB%B8%94-%EA%B0%9D%EC%B2%B4-%ED%8C%A8%ED%84%B4%EC%9D%84-%EC%82%AC%EC%9A%A9%ED%95%B4-%EC%A7%80%EB%82%98%EC%B9%98%EA%B2%8C-%EB%B3%B5%EC%9E%A1%ED%95%9C-%EC%BD%94%EB%93%9C-%EB%B6%84%ED%95%A0%ED%95%98%EA%B8%B0"><span class="toc-number">1.1.2.</span> <span class="toc-text">험블 객체 패턴을 사용해 지나치게 복잡한 코드 분할하기</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%EC%B5%9C%EC%A0%81%EC%9D%98-%EB%8B%A8%EC%9C%84-%ED%85%8C%EC%8A%A4%ED%8A%B8-%EC%BB%A4%EB%B2%84%EB%A6%AC%EC%A7%80-%EB%B6%84%EC%84%9D"><span class="toc-number">1.2.</span> <span class="toc-text">최적의 단위 테스트 커버리지 분석</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%EC%A0%84%EC%A0%9C-%EC%A1%B0%EA%B1%B4%EC%9D%84-%ED%85%8C%EC%8A%A4%ED%8A%B8%ED%95%B4%EC%95%BC-%ED%95%98%EB%8A%94%EA%B0%80"><span class="toc-number">1.2.1.</span> <span class="toc-text">전제 조건을 테스트해야 하는가?</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%EC%BB%A8%ED%8A%B8%EB%A1%A4%EB%9F%AC%EC%97%90%EC%84%9C-%EC%A1%B0%EA%B1%B4%EB%B6%80-%EB%A1%9C%EC%A7%81-%EC%B2%98%EB%A6%AC"><span class="toc-number">1.3.</span> <span class="toc-text">컨트롤러에서 조건부 로직 처리</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%EA%B2%B0%EB%A1%A0"><span class="toc-number">1.4.</span> <span class="toc-text">결론</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%EC%B0%B8%EC%A1%B0"><span class="toc-number">2.</span> <span class="toc-text">참조</span></a></li></ol></div></div><div class="author-info hide"><div class="author-info__avatar text-center"><img src="https://avatars0.githubusercontent.com/u/4936005?s=400&amp;u=a679b941fe377418e7e4efcf916c6a636d7178ee&amp;v=4"></div><div class="author-info__name text-center">sejoung</div><div class="author-info__description text-center">잘정리하자</div><div class="follow-button"><a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/sejoung">Follow Me</a></div><hr><div class="author-info-articles"><a class="author-info-articles__archives article-meta" href="../../../archives"><span class="pull-left">Articles</span><span class="pull-right">818</span></a><a class="author-info-articles__tags article-meta" href="../../../tags"><span class="pull-left">Tags</span><span class="pull-right">838</span></a><a class="author-info-articles__categories article-meta" href="../../../categories"><span class="pull-left">Categories</span><span class="pull-right">76</span></a></div><hr><div class="author-info-links"><div class="author-info-links__title text-center">Links</div><a class="author-info-links__name text-center" target="_blank" rel="external nofollow noopener noreferrer" href="https://blog.naver.com/sanaes">naverblog</a><a class="author-info-links__name text-center" target="_blank" rel="external nofollow noopener noreferrer" href="https://www.linkedin.com/in/sanaes/">linkedin</a><a class="author-info-links__name text-center" target="_blank" rel="external nofollow noopener noreferrer" href="https://www.slideshare.net/sejoung">slideshare</a></div></div></div><div id="content-outer"><div id="top-container" style="background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Van_Gogh_-_Terrasse_des_Caf%C3%A9s_an_der_Place_du_Forum_in_Arles_am_Abend1.jpeg/1024px-Van_Gogh_-_Terrasse_des_Caf%C3%A9s_an_der_Place_du_Forum_in_Arles_am_Abend1.jpeg)"><div id="page-header"><span class="pull-left"> <a id="site-name" href="../../../index.html">폭간의 기술블로그</a></span><i class="fa fa-bars toggle-menu pull-right" aria-hidden="true"></i><span class="pull-right menus">   <a class="site-page" href="/">Home</a><a class="site-page" href="/archives">Archives</a><a class="site-page" href="/tags">Tags</a><a class="site-page" href="/categories">Categories</a></span><span class="pull-right"><a class="site-page social-icon search"><i class="fa fa-search"></i><span> Search</span></a></span></div><div id="post-info"><div id="post-title">7장. 가치 있는 단위 테스트를 위한 리팩터링</div><div id="post-meta"><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2024-01-11</time><span class="post-meta__separator">|</span><i class="fa fa-inbox post-meta__icon" aria-hidden="true"></i><a class="post-meta__categories" href="../../../categories/books/">books</a><span class="post-meta__separator">|</span><i class="fa fa-comment-o post-meta__icon" aria-hidden="true"></i><a href="#disqus_thread"><span class="disqus-comment-count" data-disqus-identifier="2024/01/2024-01-11-unit_testing_7/"></span></a></div></div></div><div class="layout" id="content-inner"><article id="post"><div class="article-container" id="post-content"><h1 id="7장-가치-있는-단위-테스트를-위한-리팩터링"><a href="#7장-가치-있는-단위-테스트를-위한-리팩터링" class="headerlink" title="7장. 가치 있는 단위 테스트를 위한 리팩터링"></a>7장. 가치 있는 단위 테스트를 위한 리팩터링</h1><p>좋은 단위 테스트 스위트의 속성</p>
+<ul>
+<li>개발 주기에 통합돼 있다</li>
+<li>코드베이스 중 가장 중요한 부분만을 대상으로 한다</li>
+<li>최소한의 유지비로 최대의 가치를 끌어낸다<ul>
+<li>가치 있는 테스트</li>
+<li>가치 있는 테스트 작성하기</li>
+</ul>
+</li>
+</ul>
+<h2 id="리팩터링할-코드-식별하기"><a href="#리팩터링할-코드-식별하기" class="headerlink" title="리팩터링할 코드 식별하기"></a>리팩터링할 코드 식별하기</h2><h3 id="코드의-네-가지-유형"><a href="#코드의-네-가지-유형" class="headerlink" title="코드의 네 가지 유형"></a>코드의 네 가지 유형</h3><ul>
+<li>복잡도 또는 도메인 유의성<ul>
+<li>코드 복잡도는 코드 내 의사 결정 지점 수로 정의한다</li>
+<li>도메인 유의성은 코드가 프로젝트의 문제 도메인에 대해 얼마나 의미 있는지를 나타낸다</li>
+</ul>
+</li>
+<li>클래스 또는 매서드가 가진 협력자 수<ul>
+<li>가변 의존성이거나 프로젝트 외부 의존성 이다</li>
+<li>협력자가 많은 코드는 테스트 비용이 많이 든다</li>
+</ul>
+</li>
+</ul>
+<p>기초가 되는 4가지 유형</p>
+<ul>
+<li>도메인 모델과 알고리즘</li>
+<li>간단한 코드</li>
+<li>컨트롤러</li>
+<li>지나치게 복잡한 코드</li>
+</ul>
+<p>코드가 더 중요해지거나 복잡해질수록 협력자는 더 적어야 된다</p>
+<p>좋지 않은 테스트를 작성하는 것보다는 테스트를 전혀 작성하지 않는 편이 낫다</p>
+<h3 id="험블-객체-패턴을-사용해-지나치게-복잡한-코드-분할하기"><a href="#험블-객체-패턴을-사용해-지나치게-복잡한-코드-분할하기" class="headerlink" title="험블 객체 패턴을 사용해 지나치게 복잡한 코드 분할하기"></a>험블 객체 패턴을 사용해 지나치게 복잡한 코드 분할하기</h3><p>지나치게 복잡한 코드를 쪼개려면, 험블 객체 패턴을 써야 한다<br>헥사고날과 함수형 아키텍처는 험블 객체 패턴을 사용한다<br>험블객체 패턴을 보는 또 다른 방법은 단일 책임 원칙(SRP)을 지키는 것<br>또 다른 예로 도메인 주도 설계에 나오는 집계 패턴이 있다</p>
+<h2 id="최적의-단위-테스트-커버리지-분석"><a href="#최적의-단위-테스트-커버리지-분석" class="headerlink" title="최적의 단위 테스트 커버리지 분석"></a>최적의 단위 테스트 커버리지 분석</h2><p>비지니스 로직과 오케스트레이션을 완전히 분리하면 코드베이스의 어느 부분을 테스트할수 있다</p>
+<h3 id="전제-조건을-테스트해야-하는가"><a href="#전제-조건을-테스트해야-하는가" class="headerlink" title="전제 조건을 테스트해야 하는가?"></a>전제 조건을 테스트해야 하는가?</h3><p>전제 조건에 도메인 의미가 없으면 테스트는 가치가 없다</p>
+<h2 id="컨트롤러에서-조건부-로직-처리"><a href="#컨트롤러에서-조건부-로직-처리" class="headerlink" title="컨트롤러에서 조건부 로직 처리"></a>컨트롤러에서 조건부 로직 처리</h2><p>비지니스 로직과 오케스트레이션의 분리</p>
+<ul>
+<li>저장소에서 데이터 검색</li>
+<li>비즈니스 로직 실행</li>
+<li>데이터를 다시 저장소에 저장</li>
+</ul>
+<h2 id="결론"><a href="#결론" class="headerlink" title="결론"></a>결론</h2><p>추상화할 것을 테스트하기보다 추상화를 테스트하는 것이 더 쉽다</p>
+<h1 id="참조"><a href="#참조" class="headerlink" title="참조"></a>참조</h1><hr>
+<ul>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="http://www.acornpub.co.kr/book/unit-testing">단위 테스트(생산성과 품질을 위한 단위 테스트 원칙과 패턴)</a></li>
+</ul>
+</div></article><div class="post-meta__tag-list"><a class="post-meta__tags" href="../../../tags/%EB%8B%A8%EC%9C%84-%ED%85%8C%EC%8A%A4%ED%8A%B8/">단위 테스트</a><a class="post-meta__tags" href="../../../tags/%EC%83%9D%EC%82%B0%EC%84%B1%EA%B3%BC-%ED%92%88%EC%A7%88%EC%9D%84-%EC%9C%84%ED%95%9C-%EB%8B%A8%EC%9C%84-%ED%85%8C%EC%8A%A4%ED%8A%B8-%EC%9B%90%EC%B9%99%EA%B3%BC-%ED%8C%A8%ED%84%B4/">생산성과 품질을 위한 단위 테스트 원칙과 패턴</a></div><nav id="pagination"><div class="prev-post pull-left"><a href="../2024-01-12-unit_testing_8/"><i class="fa fa-chevron-left">  </i><span>8장. 통합 테스트를 하는 이유</span></a></div><div class="next-post pull-right"><a href="../2024-01-10-unit_testing_6/"><span>6장. 단위 테스트 스타일</span><i class="fa fa-chevron-right"></i></a></div></nav><div id="disqus_thread"></div><script>var unused = null;
+var disqus_config = function () {
+  this.page.url = 'https://sejoung.github.io/2024/01/2024-01-11-unit_testing_7/';
+  this.page.identifier = '2024/01/2024-01-11-unit_testing_7/';
+  this.page.title = '7장. 가치 있는 단위 테스트를 위한 리팩터링';
+}
+var d = document, s = d.createElement('script');
+s.src = "https://" + 'kimsejoung' +".disqus.com/embed.js";
+s.setAttribute('data-timestamp', '' + +new Date());
+(d.head || d.body).appendChild(s);</script><script id="dsq-count-scr" src="https://kimsejoung.disqus.com/count.js" async></script></div></div><footer class="footer-bg" style="background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Van_Gogh_-_Terrasse_des_Caf%C3%A9s_an_der_Place_du_Forum_in_Arles_am_Abend1.jpeg/1024px-Van_Gogh_-_Terrasse_des_Caf%C3%A9s_an_der_Place_du_Forum_in_Arles_am_Abend1.jpeg)"><div class="layout" id="footer"><div class="copyright">&copy;2017 - 2024 By sejoung</div><div class="framework-info"><span>Driven - </span><a target="_blank" rel="external nofollow noopener noreferrer" href="http://hexo.io"><span>Hexo</span></a><span class="footer-separator">|</span><span>Theme - </span><a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/Molunerfinn/hexo-theme-melody"><span>Melody</span></a></div><div class="busuanzi"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><span id="busuanzi_container_page_pv"><i class="fa fa-file-o"></i><span id="busuanzi_value_page_pv"></span><span></span></span></div></div></footer><i class="fa fa-arrow-up" id="go-up" aria-hidden="true"></i><script src="../../../js/third-party/anime.min.js"></script><script src="../../../js/third-party/jquery.min.js"></script><script src="../../../js/third-party/jquery.fancybox.min.js"></script><script src="../../../js/third-party/velocity.min.js"></script><script src="../../../js/third-party/velocity.ui.min.js"></script><script src="../../../js/utils.js?version=1.7.0"></script><script src="../../../js/fancybox.js?version=1.7.0"></script><script src="../../../js/sidebar.js?version=1.7.0"></script><script src="../../../js/copy.js?version=1.7.0"></script><script src="../../../js/fireworks.js?version=1.7.0"></script><script src="../../../js/transition.js?version=1.7.0"></script><script src="../../../js/scroll.js?version=1.7.0"></script><script src="../../../js/head.js?version=1.7.0"></script><script src="../../../js/search/local-search.js"></script><script>if(/Android|webOS|iPhone|iPod|iPad|BlackBerry/i.test(navigator.userAgent)) {
+  $('#nav').addClass('is-mobile')
+  $('footer').addClass('is-mobile')
+  $('#top-container').addClass('is-mobile')
+}</script><div class="search-dialog" id="local-search"><div class="search-dialog__title" id="local-search-title">Local search</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="Search for Posts"></div></div></div><hr><div id="local-search-results"><div id="local-hits"></div><div id="local-stats"><div class="local-search-stats__hr" id="hr"><span>Powered by</span> <a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/wzpan/hexo-generator-search" style="color:#49B1F5;">hexo-generator-search</a></div></div></div><span class="search-close-button"><i class="fa fa-times"></i></span></div><div class="search-mask"></div></body></html>
