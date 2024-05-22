@@ -10,7 +10,7 @@ sitemap:
     priority: 1.0
 ---
 
-# Part I 전제
+# Part II 문화
 ## CHAPTER 2 팀워크 이끌어내기
 반듯이 통제해야 하는 하나의 변수는 자기자신이다
 
