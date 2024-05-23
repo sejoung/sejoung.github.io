@@ -8,8 +8,27 @@
     <atom:link href="/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>잘정리하자</description>
-    <pubDate>Wed, 22 May 2024 02:01:06 GMT</pubDate>
+    <pubDate>Thu, 23 May 2024 05:07:40 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>CHAPTER 4 공정 사회를 위한 엔지니어링</title>
+      <link>https://sejoung.github.io/2024/05/2024-05-23-Software_Engineering_at_Google_CHAPTER_4/</link>
+      <guid>https://sejoung.github.io/2024/05/2024-05-23-Software_Engineering_at_Google_CHAPTER_4/</guid>
+      <pubDate>Thu, 23 May 2024 04:28:00 GMT</pubDate>
+      <description>
+      
+        
+        
+          &lt;h1 id=&quot;Part-II-문화&quot;&gt;&lt;a href=&quot;#Part-II-문화&quot; class=&quot;headerlink&quot; title=&quot;Part II 문화&quot;&gt;&lt;/a&gt;Part II 문화&lt;/h1&gt;&lt;h2 id=&quot;CHAPTER-4-공정-사회를-위한-엔지니어링&quot;&gt;&lt;a hre
+        
+      
+      </description>
+      
+      <content:encoded><![CDATA[<h1 id="Part-II-문화"><a href="#Part-II-문화" class="headerlink" title="Part II 문화"></a>Part II 문화</h1><h2 id="CHAPTER-4-공정-사회를-위한-엔지니어링"><a href="#CHAPTER-4-공정-사회를-위한-엔지니어링" class="headerlink" title="CHAPTER 4 공정 사회를 위한 엔지니어링"></a>CHAPTER 4 공정 사회를 위한 엔지니어링</h2><p>프로그래밍은 당면한 문제에 집중하여 코드를 생산한다</p><p>우기가 얻은 깨우침을 다음 세대에 전하여 차세대 엔지니어들은 우리보다 나은 결정을 내리도록 이끄는 일이 중요하다고 생각</p><h3 id="편견은-피할-수-없다"><a href="#편견은-피할-수-없다" class="headerlink" title="편견은 피할 수 없다"></a>편견은 피할 수 없다</h3><p>무의식적인 편견은 교묘하여 의도적인 배척 행위보다 물리치기 어려울 때가 많다</p><p>엔지니어링 조직 자체의 인적 구성을 제품이 목표하는 시장의 인적 구성과 비슷해지도록 돕는것</p><h3 id="다양성이-필요한-이유-이해하기"><a href="#다양성이-필요한-이유-이해하기" class="headerlink" title="다양성이 필요한 이유 이해하기"></a>다양성이 필요한 이유 이해하기</h3><p>뛰어난 엔지니어가 되려면 제품 설계와 구현에 다양한 관점을 포용해야 한다고 믿는다</p><p>모두를 위한 제품을 만들려면 우리가 어떤 사람들을 대표하는지 이해해야 한다</p><h3 id="다문화-역량-갖추기"><a href="#다문화-역량-갖추기" class="headerlink" title="다문화 역량 갖추기"></a>다문화 역량 갖추기</h3><p>엔지니어가 되려면?</p><ul><li>적성에 맞아야 된다</li><li>만들어야 할때와 아닐 때를 구분하는 안목도 필요</li></ul><p>기술 회사는 직원들이 계속해서 전문가답게 개발을 이어가도록 해야 하고 여러 분야에 걸쳐 포용적인 개발이 되도록 돌봐야 한다</p><h3 id="다양성-실천하기"><a href="#다양성-실천하기" class="headerlink" title="다양성 실천하기"></a>다양성 실천하기</h3><p>제도가 잘못되었다면 우리가 책임져야 한다 특정 개인에게 떠넘기거나 못본척해 봐야 효과가 없으며, 무책임한 태도이다</p><h3 id="단일한-접근-방식-거부하기"><a href="#단일한-접근-방식-거부하기" class="headerlink" title="단일한 접근 방식 거부하기"></a>단일한 접근 방식 거부하기</h3><p>기술 분야의 불평등을 해소하는 데 단하나의 철학이나 방법론을 고집할 수는 없다</p><p>단일한 접근 방식에서 탈피해야 한다</p><p>가장 어렵고 가장 소외된 사용 사례를 최우선으로 살피자</p><h3 id="확립된-프로세스에-도전하기"><a href="#확립된-프로세스에-도전하기" class="headerlink" title="확립된 프로세스에 도전하기"></a>확립된 프로세스에 도전하기</h3><ul><li>기존의 평가가 향후 성과를 예측하는 척도인가?</li><li>성과 평가가 다음 관리자에게 편견을 주지 않을까?</li><li>성과 평가 점수가 회사 전체적으로 표준화 된것인가?</li></ul><h3 id="가치-vs-결과"><a href="#가치-vs-결과" class="headerlink" title="가치 vs 결과"></a>가치 vs 결과</h3><ul><li>자신을 솔찍하게 바라보고 성찰하자</li><li>모두를 위해 만들지 말자. 모두와 함께 만들자</li><li>제품을 이용하기 가장 어려운 이들을 위해 설계하자</li><li>가정하지 말고 시스템 전반의 공정성을 측정하자</li><li>변할 수 있다</li></ul><h3 id="관심을-잃지-말고-전진하자"><a href="#관심을-잃지-말고-전진하자" class="headerlink" title="관심을 잃지 말고 전진하자"></a>관심을 잃지 말고 전진하자</h3><p>편견과 차별 때문에 고통받는 사용자들에게 최우선으로 관심을 기울여야 한다</p><h1 id="참조"><a href="#참조" class="headerlink" title="참조"></a>참조</h1><hr><ul><li><a href="https://www.yes24.com/Product/Goods/109182479">구글 엔지니어는 이렇게 일한다</a></li></ul>]]></content:encoded>
+      
+      <comments>https://sejoung.github.io/2024/05/2024-05-23-Software_Engineering_at_Google_CHAPTER_4/#disqus_thread</comments>
+    </item>
     
     <item>
       <title>CHAPTER 3 지식 공유</title>
@@ -372,25 +391,6 @@
       <content:encoded><![CDATA[<h1 id="CHAPTER-7-구조-디자인-패턴-PART-2"><a href="#CHAPTER-7-구조-디자인-패턴-PART-2" class="headerlink" title="CHAPTER 7 구조 디자인 패턴_PART_2"></a>CHAPTER 7 구조 디자인 패턴_PART_2</h1><h3 id="7-3-4-래퍼-패턴"><a href="#7-3-4-래퍼-패턴" class="headerlink" title="7.3.4 래퍼 패턴"></a>7.3.4 래퍼 패턴</h3><ul><li>프록시 패턴</li><li>데커레이터 패턴</li><li>어뎁터 패턴</li></ul><p>코드 구조 측면에서 이 세가지 디자인 패턴을 통틀어 래퍼 패턴으로 구분</p><p>원본 클래스를 래퍼 클래스를 통해 두 번 캡슐화하는 패턴</p><h2 id="7-4-브리지-패턴"><a href="#7-4-브리지-패턴" class="headerlink" title="7.4 브리지 패턴"></a>7.4 브리지 패턴</h2><p>상속 대신 합성을 사용 복잡한 상속 관계를 간단한 합성 관계로 단순화</p><h3 id="7-4-1-브리지-패턴의-정의"><a href="#7-4-1-브리지-패턴의-정의" class="headerlink" title="7.4.1 브리지 패턴의 정의"></a>7.4.1 브리지 패턴의 정의</h3><p>추상화와 구현을 디커플링해야만 두 가지가 서로 독립적으로 변화할 수 있다</p><h2 id="7-5-퍼사드-패턴"><a href="#7-5-퍼사드-패턴" class="headerlink" title="7.5 퍼사드 패턴"></a>7.5 퍼사드 패턴</h2><h3 id="7-5-1-퍼사드-패턴과-인터페이스-설계"><a href="#7-5-1-퍼사드-패턴과-인터페이스-설계" class="headerlink" title="7.5.1 퍼사드 패턴과 인터페이스 설계"></a>7.5.1 퍼사드 패턴과 인터페이스 설계</h3><p>서브 시스템에 대한 통합 인터페이스 세트를 제공하고 하위 시스템을 더 쉽게 만들기 위한 상위 통합 인터페이스를 제공한다</p><h2 id="7-6-복합체-패턴"><a href="#7-6-복합체-패턴" class="headerlink" title="7.6 복합체 패턴"></a>7.6 복합체 패턴</h2><p>주로 트리 구조의 데이터를 처리하는데 사용된다 여기서 데이터는 단순한 객체의 모음으로 이해</p><h3 id="7-6-1-복합체-패턴-기반의-디렉터리-트리"><a href="#7-6-1-복합체-패턴-기반의-디렉터리-트리" class="headerlink" title="7.6.1 복합체 패턴 기반의 디렉터리 트리"></a>7.6.1 복합체 패턴 기반의 디렉터리 트리</h3><p>부분 - 전체 계층 구조로 인식하는 트리 구조로 구성된 객체 컬렉션, 복합체 패턴을 통해 코드 사용자로 대표되는 클라이언트가<br>개별 객체와 복합 객체의 처리 방식을 하나로 통합할 수 있다고 정의</p><h2 id="7-7-플라이웨이트-패턴"><a href="#7-7-플라이웨이트-패턴" class="headerlink" title="7.7 플라이웨이트 패턴"></a>7.7 플라이웨이트 패턴</h2><p>공유를 위해 사용하는 패턴 목적은 객체를 공유하여 메모리 사용량을 줄이는 것</p><h3 id="7-7-5-플라이웨이트-패턴과-싱글턴-패턴-캐시-오브젝트-풀의-차이"><a href="#7-7-5-플라이웨이트-패턴과-싱글턴-패턴-캐시-오브젝트-풀의-차이" class="headerlink" title="7.7.5 플라이웨이트 패턴과 싱글턴 패턴, 캐시, 오브젝트 풀의 차이"></a>7.7.5 플라이웨이트 패턴과 싱글턴 패턴, 캐시, 오브젝트 풀의 차이</h3><ul><li>플라이웨이트 패턴과 싱글턴 패턴의 차이<ul><li>싱글턴 패턴에서 클래스는 하나의 객체만 생성하고, 플라이웨이트 패턴에서는 여러 객체를 생성하고 여러 코드에서 공유된다</li><li>플라이웨이트 패턴은 다중 인스턴스 패턴과 다소 유사한 면이 있다</li></ul></li><li>플라이웨이트 패턴과 캐싱의 차이점<ul><li>플라이웨이트 패턴은 클래스를 사용하여 생성된 객체를 캐싱</li><li>캐시는 실제로 저장소를 의미</li></ul></li><li>플라이웨이트 패턴과 오브젝트 풀의 차이<ul><li>오브젝트 풀은 오프젝트 풀에서 객체를 꺼내서 사용하고 다시 풀에 넣는다</li></ul></li></ul><h1 id="참조"><a href="#참조" class="headerlink" title="참조"></a>참조</h1><hr><ul><li><a href="https://www.yes24.com/Product/Goods/118859035">디자인 패턴의 아름다움</a></li></ul>]]></content:encoded>
       
       <comments>https://sejoung.github.io/2024/03/2024-03-06-design_patterns_beauty_7_PART_2/#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>CHAPTER 7 구조 디자인 패턴_PART_1</title>
-      <link>https://sejoung.github.io/2024/03/2024-03-05-design_patterns_beauty_7_PART_1/</link>
-      <guid>https://sejoung.github.io/2024/03/2024-03-05-design_patterns_beauty_7_PART_1/</guid>
-      <pubDate>Tue, 05 Mar 2024 00:37:00 GMT</pubDate>
-      <description>
-      
-        
-        
-          &lt;h1 id=&quot;CHAPTER-7-구조-디자인-패턴-PART-1&quot;&gt;&lt;a href=&quot;#CHAPTER-7-구조-디자인-패턴-PART-1&quot; class=&quot;headerlink&quot; title=&quot;CHAPTER 7 구조 디자인 패턴_PART_1&quot;&gt;&lt;/a&gt;CHAPTER 
-        
-      
-      </description>
-      
-      <content:encoded><![CDATA[<h1 id="CHAPTER-7-구조-디자인-패턴-PART-1"><a href="#CHAPTER-7-구조-디자인-패턴-PART-1" class="headerlink" title="CHAPTER 7 구조 디자인 패턴_PART_1"></a>CHAPTER 7 구조 디자인 패턴_PART_1</h1><ul><li>프록시 패턴 : 원본기술가 연관 없는 기능을 추가할 때 사용</li><li>데커레이터 패턴: 원본 클래스와 관련 있거나 향산된 기능을 추가할 때 사용</li><li>어댑터 패턴: 코드 호환성 문제 해결</li><li>브리지 패턴 : 합성의 폭발문제를 해결하는 데 사용</li><li>퍼사드 패턴 : 인터페이스 설계에 사용</li><li>복합체 패턴 : 주로 트리 구조로 나타낼 수 있는 데이터에 사용</li><li>플라이웨이트 패턴 : 재사용 문제 해결</li></ul><h2 id="7-1-프록시-패턴"><a href="#7-1-프록시-패턴" class="headerlink" title="7.1 프록시 패턴"></a>7.1 프록시 패턴</h2><h3 id="7-1-1-인터페이스-기반의-프록시-패턴"><a href="#7-1-1-인터페이스-기반의-프록시-패턴" class="headerlink" title="7.1.1 인터페이스 기반의 프록시 패턴"></a>7.1.1 인터페이스 기반의 프록시 패턴</h3><p>프록시 클래스를 도입하여 원본 클래스와 관련 없는 새로운 기능을 추가하는 것</p><h3 id="7-1-2-상속-기반의-프록시-패턴"><a href="#7-1-2-상속-기반의-프록시-패턴" class="headerlink" title="7.1.2 상속 기반의 프록시 패턴"></a>7.1.2 상속 기반의 프록시 패턴</h3><p>인터페이스를 정의하지 않고 있어서 클래스를 직접 수정할수 없을때 상속을 통해서 외부 클래스를 확장</p><h3 id="7-1-3-리플렉션-기반의-동적-프록시"><a href="#7-1-3-리플렉션-기반의-동적-프록시" class="headerlink" title="7.1.3 리플렉션 기반의 동적 프록시"></a>7.1.3 리플렉션 기반의 동적 프록시</h3><p>동적 프록시 : 각 원본 클래스에 대한 프록시 클래스를 미리 작성하는 대신 코드를 실행하는 도중 원본 클래스에 대한 프록시 클래스를 동적으로 생성하고<br>코드 내의 원본 클래스를 프록시 클래스로 대체하는 것을 말한다</p><h3 id="7-1-4-프록시-패턴의-활용-방법"><a href="#7-1-4-프록시-패턴의-활용-방법" class="headerlink" title="7.1.4 프록시 패턴의 활용 방법"></a>7.1.4 프록시 패턴의 활용 방법</h3><ul><li>주요 비즈니스와 관련 없는 요구 사항의 개발에 활용될 수 있다</li><li>RPC에서 프록시 패턴을 적용할 수 있다</li><li>캐시에 프록시 패턴을 적용할 수 있다<h2 id="7-2-데커레이터-패턴"><a href="#7-2-데커레이터-패턴" class="headerlink" title="7.2 데커레이터 패턴"></a>7.2 데커레이터 패턴</h2>원본 클래스와 관련 있거나 향산된 기능을 추가할 때 사용<h2 id="7-3-어댑터-패턴"><a href="#7-3-어댑터-패턴" class="headerlink" title="7.3 어댑터 패턴"></a>7.3 어댑터 패턴</h2>조정에 따른 적응에 사용되며, 호환되지 않은 인터페이스를 호환 가능한 인터페이스로 변환하여 두 클래스를 함께 작동할 수 있게 한다</li></ul><h3 id="7-3-1-클래스-어댑터와-객체-어댑터"><a href="#7-3-1-클래스-어댑터와-객체-어댑터" class="headerlink" title="7.3.1 클래스 어댑터와 객체 어댑터"></a>7.3.1 클래스 어댑터와 객체 어댑터</h3><p>클래스 어댑터는 상속 관계를 사용한 방식<br>객체 어뎁터는 합성 관계를 사용한 방식</p><ul><li>인터페이스가 많지 않으면 두 방식중 어느 것을 사용해도 무방하다</li><li>인터페이스가 많지만 source 와 target 인터페이스의 정의가 대부분 같다면 클래스 어뎁터를 사용하는것이 좋다</li><li>인터페이스가 많고 source 와 target 인터페이스의 정의가 대부분 다르다면 객체 어뎁터를 사용하는것이 좋다</li></ul><h3 id="7-3-2-어댑터-패턴의-응용"><a href="#7-3-2-어댑터-패턴의-응용" class="headerlink" title="7.3.2 어댑터 패턴의 응용"></a>7.3.2 어댑터 패턴의 응용</h3><p>어댑터 패턴은 설계 결함을 교정하는 보상 패턴으로 볼 수 있다</p><ul><li>결함이 있는 인터페이스 설계가 캡슐화된 경우</li><li>여러 클래스의 인터페이스 설계를 통합할 경우</li><li>사용 중인 외부 시스템을 교체해야 할 경우</li><li>이전 버전 인터페이스와 호환성이 필요한 경우</li><li>다양한 형식의 데이터에 적응해야 할 경우</li></ul><h1 id="참조"><a href="#참조" class="headerlink" title="참조"></a>참조</h1><hr><ul><li><a href="https://www.yes24.com/Product/Goods/118859035">디자인 패턴의 아름다움</a></li></ul>]]></content:encoded>
-      
-      <comments>https://sejoung.github.io/2024/03/2024-03-05-design_patterns_beauty_7_PART_1/#disqus_thread</comments>
     </item>
     
   </channel>
