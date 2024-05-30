@@ -8,8 +8,66 @@
     <atom:link href="/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>잘정리하자</description>
-    <pubDate>Tue, 28 May 2024 13:08:02 GMT</pubDate>
+    <pubDate>Thu, 30 May 2024 22:45:04 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>2 함께</title>
+      <link>https://sejoung.github.io/2024/05/2024-05-31-growing_up_together_CHAPTER_2/</link>
+      <guid>https://sejoung.github.io/2024/05/2024-05-31-growing_up_together_CHAPTER_2/</guid>
+      <pubDate>Thu, 30 May 2024 21:50:00 GMT</pubDate>
+      <description>
+      
+        
+        
+          &lt;h1 id=&quot;2-함께&quot;&gt;&lt;a href=&quot;#2-함께&quot; class=&quot;headerlink&quot; title=&quot;2 함께&quot;&gt;&lt;/a&gt;2 함께&lt;/h1&gt;&lt;p&gt;협력, 일을 잘 나눌수 있을때는 프로젝트 끝날때다&lt;/p&gt;
+&lt;h2 id=&quot;소프트웨어-관리자의-개선-우선순위&quot;&gt;&lt;a
+        
+      
+      </description>
+      
+      <content:encoded><![CDATA[<h1 id="2-함께"><a href="#2-함께" class="headerlink" title="2 함께"></a>2 함께</h1><p>협력, 일을 잘 나눌수 있을때는 프로젝트 끝날때다</p><h2 id="소프트웨어-관리자의-개선-우선순위"><a href="#소프트웨어-관리자의-개선-우선순위" class="headerlink" title="소프트웨어 관리자의 개선 우선순위"></a>소프트웨어 관리자의 개선 우선순위</h2><p>조엘 테스트 -&gt; 간단하다 -&gt; 문제는 맥락을 이해하지 못한사람이 12개 질문만으로 평가</p><ul><li>모든 항목에 예라고 답하는 것이 무조건 더 낫다고 보기 힘들다<br>조엘테스트 8번은 독립된 공간을 가져야된다 -&gt; 피플웨어라는 책에서는 그룹차원의 몰입이 가능 팀원들이 상시 대면 소통할수 있는 공간에서 생산성 향상이 된다고 함<br>-&gt; 서로 같은 목표로 일하는 팀이 만드는 소음은 그들사이에 더이상 소음이 아니다</li><li>12가지 질문이 개발팀 평가에서 정말 중요한 요소인가?<ul><li>제럴드 와인버그<ul><li>복잡한 상황을 이해하는 능력</li><li>관찰하는 능력</li><li>행동하는 능력</li></ul></li><li>품질소프트웨어관리<ul><li>시스템적 사고</li><li>일차적 측정</li><li>일차적 행동</li><li>변화를 기대하기</li></ul></li><li>프로젝트에 영향을 미친 요소<ul><li>관리 -&gt; 시스템 -&gt; 사람 -&gt; 도구</li></ul></li></ul></li></ul><h2 id="협력을-통한-추상화"><a href="#협력을-통한-추상화" class="headerlink" title="협력을 통한 추상화"></a>협력을 통한 추상화</h2><ul><li>커뮤니케이션과 협력<ul><li>실력이 뛰어난 프로그래머는 커뮤니케이션과 협력에 더 오랜 시</li></ul></li><li>백지장도 맞들면 찢어진다<ul><li>협력을 통하면 퍼포먼스가 더 떨러진다고 생각함</li></ul></li><li>톱니바퀴 실험<ul><li>패러티 법칙</li><li>혼자 작업한 사람보다 같이 작업한 사람들이 패러티법칙을 더 잘 찾음</li></ul></li><li>추상화의 중요성<ul><li>추상화를 높일수 있는 방법은 협력이다</li></ul></li><li>대화 하는 프로그래밍<ul><li>xp는 작업하면서 프로그래밍 각단계에 대해 이야기한다</li></ul></li></ul><h2 id="신뢰를-깎는-공유인가-신뢰를-쌓는-공유인가"><a href="#신뢰를-깎는-공유인가-신뢰를-쌓는-공유인가" class="headerlink" title="신뢰를 깎는 공유인가 신뢰를 쌓는 공유인가"></a>신뢰를 깎는 공유인가 신뢰를 쌓는 공유인가</h2><p>신뢰 자산이 높은 조직은 커뮤니케이션 효율이나 생산성이 높다</p><p>신뢰를 쌓는 방법</p><ul><li><p>투명성</p></li><li><p>공유</p></li><li><p>인터렉션</p></li><li><p>공유 조건 별 신뢰도 변화 실험</p><ul><li>모두 공유후에 신뢰도가 떨어짐<ul><li>각자 디자인하고 그걸 모두 공유한 경우</li></ul></li><li>하나 공유 -2.11</li><li>복수 공유 0.89</li><li>최고 공유 -1.75</li></ul></li><li><p>복수 공유는 신뢰도가 높아지고 성과도 더 좋았다</p></li></ul><h2 id="객관성의-주관성"><a href="#객관성의-주관성" class="headerlink" title="객관성의 주관성"></a>객관성의 주관성</h2><p>팀장의 자라에 앉으면 새로운 아이디어 전파가 쉬울거라고 생각하는 것은 환상<br>상대방에 대해 얼마나 이해하고 있나? 얼마나 대화를 해봤나?</p><ul><li>품질은 상대적이다<ul><li>품질이란 누군가에게 가치가 되는것 이다</li><li>품질 관련 일을 하는 사람들은 인간에 대한 이해가 필수적이다</li><li>객관적 데이터가 전부가 아니다</li></ul></li><li>감정을 배제할수 없다<ul><li>의사결정을 하는 과정에 감정적이고 직관적인부분이 큰역활을 하고 있으며 그런 감정적 부분이 배제된다면 의사결정을 제대로 할수 없다</li></ul></li></ul><h2 id="이것도-모르세요"><a href="#이것도-모르세요" class="headerlink" title="이것도 모르세요?"></a>이것도 모르세요?</h2><ul><li>공감하고 이해하려는 대화</li><li>행동을 유도하는 대화<h2 id="하향식-접근의-함정"><a href="#하향식-접근의-함정" class="headerlink" title="하향식 접근의 함정"></a>하향식 접근의 함정</h2>전문가는 언제나 탑다운으로 깔끔하게 생각할거다 -&gt; 미신</li></ul><p>탑다운 -&gt; 깔끔해보임<br>바텀업 -&gt; 탐색적인 성격이 강함</p><p>뛰어난 전문가 일수록 바텀업과 탑다운을 섞어 쓴다</p><ul><li>빠르고 빈번한 바통 터치가 가능한 전문가 조직<ul><li>오버해드를 낮출려면 협력 모델이 바통 터치 모형에 기반하지 않고 삼투압 모형에 기반해야 한다</li><li>삼투압적 의사소통</li></ul></li></ul><h2 id="전문가팀이-실패하는-이유"><a href="#전문가팀이-실패하는-이유" class="headerlink" title="전문가팀이 실패하는 이유"></a>전문가팀이 실패하는 이유</h2><p>전문가팀이라도 협력하지 않으면 성과가 훨씬 나쁘다</p><ul><li>전문가들 모아서 팀 만든다고 잘하는 것 아님</li><li>오히려 성과가 떨어질수도 있음</li><li>정보 공유하고 협력을 잘하기 위한 명시적인 도움이 필요</li><li>소셜 스킬등이 뛰어난 제너럴리스트가 있으면 도움이된다</li></ul><h2 id="구글이-밝힌-탁월한-팀의-비밀"><a href="#구글이-밝힌-탁월한-팀의-비밀" class="headerlink" title="구글이 밝힌 탁월한 팀의 비밀"></a>구글이 밝힌 탁월한 팀의 비밀</h2><ul><li>심리적 안정감</li><li>팀원들이 서로 어떻게 상호작용하고 자신의 일을 어떻게 바라보는지 중요함</li><li>팀토론등 특별히 고안된 활동을 통해 심리적 안정감을 높일수 있다</li></ul><h2 id="쾌속-학습팀"><a href="#쾌속-학습팀" class="headerlink" title="쾌속 학습팀"></a>쾌속 학습팀</h2><ul><li>패러다임 전환, 죽느냐 사느냐<ul><li>개발자에겐 학습, 빠른 학습이 중요하다</li></ul></li><li>최소 침습 심장 수술<ul><li>수술시간의 감소가 시간이 지나면 되는데 팀마다 천차만별</li></ul></li><li>학습속도랑 상관 없는것<ul><li>무엇이 학습 속도를 결정할까?</li></ul></li><li>리더가 팀 학습 속도에 미치는 영향<ul><li>독재자가 아닌 파트너가 될 수 있는 능력이 핵심</li></ul></li><li>학습 환경의 차이<ul><li>속도가 빠른 팀은 기술적 도전이라기 보다 팀에 대한 도전으로 생각했고 함께 일하는 새로운 방법을 만들어야 된다고 생각함</li></ul></li><li>진정한 학습은 실행속에서 이루어 지고 진정한 실행은 학습을 수반한다</li></ul><h2 id="프로젝트-확률론"><a href="#프로젝트-확률론" class="headerlink" title="프로젝트 확률론"></a>프로젝트 확률론</h2><ul><li>어디에다 돈을 걸 것인가?</li><li>직관의 허점<ul><li>인지적 편향</li></ul></li><li>이번 프로젝트는 제때에 끝낼 수 있을 것 같았는데<ul><li>각자의 확률이 90%라고 생각함</li></ul></li><li>애자일 확률론<ul><li>관심사의 섞임</li><li>프렉탈 구조처럼 부분속에 전체가 있는것</li><li>애자일은 좋은일에 대해서 그리고 확률을 또는 확률로 바꿈</li><li>애자일은 나쁜일에 대해서 또는 확률을 그리고 확률로 바꿈</li></ul></li></ul><h1 id="참조"><a href="#참조" class="headerlink" title="참조"></a>참조</h1><hr><ul><li><a href="https://www.yes24.com/Product/Goods/67350256">함께 자라기</a></li></ul>]]></content:encoded>
+      
+      <comments>https://sejoung.github.io/2024/05/2024-05-31-growing_up_together_CHAPTER_2/#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>CHAPTER 7 엔지니어링 생산성 측정하기</title>
+      <link>https://sejoung.github.io/2024/05/2024-05-30-Software_Engineering_at_Google_CHAPTER_7/</link>
+      <guid>https://sejoung.github.io/2024/05/2024-05-30-Software_Engineering_at_Google_CHAPTER_7/</guid>
+      <pubDate>Thu, 30 May 2024 01:30:00 GMT</pubDate>
+      <description>
+      
+        
+        
+          &lt;h1 id=&quot;Part-II-문화&quot;&gt;&lt;a href=&quot;#Part-II-문화&quot; class=&quot;headerlink&quot; title=&quot;Part II 문화&quot;&gt;&lt;/a&gt;Part II 문화&lt;/h1&gt;&lt;h2 id=&quot;CHAPTER-7-엔지니어링-생산성-측정하기&quot;&gt;&lt;a href
+        
+      
+      </description>
+      
+      <content:encoded><![CDATA[<h1 id="Part-II-문화"><a href="#Part-II-문화" class="headerlink" title="Part II 문화"></a>Part II 문화</h1><h2 id="CHAPTER-7-엔지니어링-생산성-측정하기"><a href="#CHAPTER-7-엔지니어링-생산성-측정하기" class="headerlink" title="CHAPTER 7 엔지니어링 생산성 측정하기"></a>CHAPTER 7 엔지니어링 생산성 측정하기</h2><p>구들은 데이터를 토대로 결정하는 데이터 주도 회사 이다.<br>제품과 설계에 관한 결정 대부분을 근거 데이터와 함께 백업해놓는다</p><h3 id="엔지니어링-생산성을-측정하는-이유"><a href="#엔지니어링-생산성을-측정하는-이유" class="headerlink" title="엔지니어링 생산성을 측정하는 이유"></a>엔지니어링 생산성을 측정하는 이유</h3><p>사업을 확장하려면 충원을 피할수 없는데 그에 따른 소통 비용이 너무 가파르게 늘어난다</p><p>사업확장문제를 다르게 풀어볼수 있다 -&gt; 개개인의 생산성을 </p><h3 id="선별-측정할-가치가-있는가"><a href="#선별-측정할-가치가-있는가" class="headerlink" title="선별: 측정할 가치가 있는가?"></a>선별: 측정할 가치가 있는가?</h3><p>생산성 측정을 해도 될지 결정하는 질문 목록</p><ul><li>어떤 결과를 기대하고, 왜 그런가?</li><li>데이터가 기대한 결과를 뒷받침한다면 어떤 조치를 취하겠는가?</li><li>부정적인 결과가 나온다면 적절한 조취를 취할 것인가?</li><li>결과에 따른 조치는 누가 결정하고 언제 수행하는가?</li><li>당장 프로세스&#x2F;도구를 변경할 여유가 없다</li><li>어떤 결과가 나오든 곧 다른 요인에 의해 의미가 없어질 것이다</li><li>측정 결과를 이미 확정된 계획을 뒷받침하는 용도로만 쓴다</li><li>측정할 수 있는 지표들이 문제를 평가하기에 충분히 정확하지 않으며, 다른 요인들 때문에 혼탁해질 우려가 크다</li></ul><h3 id="GSM-프레임워크-목표와-신호를-뒷받침하는-의미-있는-지표-선정하기"><a href="#GSM-프레임워크-목표와-신호를-뒷받침하는-의미-있는-지표-선정하기" class="headerlink" title="GSM 프레임워크: 목표와 신호를 뒷받침하는 의미 있는 지표 선정하기"></a>GSM 프레임워크: 목표와 신호를 뒷받침하는 의미 있는 지표 선정하기</h3><ul><li>목표(goal) : 측정자가 원하는 최종 결과</li><li>신호(signal) : 원하는 최종 결과를 이루었는지 판단하는 방법</li><li>지표(metric) : 신호를 대변</li></ul><p>중요한건 추적 가능성을 잃지 않는것</p><h3 id="목표-goal"><a href="#목표-goal" class="headerlink" title="목표(goal)"></a>목표(goal)</h3><p>속성을 설명하되 어떠한 지표도 명시해서는 안된다<br>목표는 측정이 불가능하다</p><p>대부분 팀은 중요한 트레이드오프를 잊은 채 측정을 하곤한다</p><p>특정 요소를 개선하느라 실수로 다른 요소를 희생하는 일을 막는 요소 퀀즈(QUANTS)</p><ul><li>코드 품질</li><li>엔지니어들의 몰입도</li><li>지적 복잡성</li><li>박자와 속도</li><li>만족도</li></ul><h3 id="신호-signal"><a href="#신호-signal" class="headerlink" title="신호(signal)"></a>신호(signal)</h3><p>신호는 목표 달성 여부를 알 수 있는 방법</p><h3 id="지표-metric"><a href="#지표-metric" class="headerlink" title="지표(metric)"></a>지표(metric)</h3><p>지표는 측정하는 방법의 최종형태</p><h3 id="데이터로-지표-검증하기"><a href="#데이터로-지표-검증하기" class="headerlink" title="데이터로 지표 검증하기"></a>데이터로 지표 검증하기</h3><p>경험 표집법(ESM)</p><p>정량적 지표가 유용한 이유는 우리에게 힘과 확장성을 주기때문</p><p>정성적 지표도 지표이다 정성적 지표가 나타내는 결과가 정량적 지표와 일치해야 한다</p><h1 id="참조"><a href="#참조" class="headerlink" title="참조"></a>참조</h1><hr><ul><li><a href="https://www.yes24.com/Product/Goods/109182479">구글 엔지니어는 이렇게 일한다</a></li></ul>]]></content:encoded>
+      
+      <comments>https://sejoung.github.io/2024/05/2024-05-30-Software_Engineering_at_Google_CHAPTER_7/#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>CHAPTER 6 성장하는 조직 이끌기</title>
+      <link>https://sejoung.github.io/2024/05/2024-05-29-Software_Engineering_at_Google_CHAPTER_6/</link>
+      <guid>https://sejoung.github.io/2024/05/2024-05-29-Software_Engineering_at_Google_CHAPTER_6/</guid>
+      <pubDate>Wed, 29 May 2024 02:20:00 GMT</pubDate>
+      <description>
+      
+        
+        
+          &lt;h1 id=&quot;Part-II-문화&quot;&gt;&lt;a href=&quot;#Part-II-문화&quot; class=&quot;headerlink&quot; title=&quot;Part II 문화&quot;&gt;&lt;/a&gt;Part II 문화&lt;/h1&gt;&lt;h2 id=&quot;CHAPTER-6-성장하는-조직-이끌기&quot;&gt;&lt;a href=&quot;#
+        
+      
+      </description>
+      
+      <content:encoded><![CDATA[<h1 id="Part-II-문화"><a href="#Part-II-문화" class="headerlink" title="Part II 문화"></a>Part II 문화</h1><h2 id="CHAPTER-6-성장하는-조직-이끌기"><a href="#CHAPTER-6-성장하는-조직-이끌기" class="headerlink" title="CHAPTER 6 성장하는 조직 이끌기"></a>CHAPTER 6 성장하는 조직 이끌기</h2><p>팀하나를 이끌게 되었다면 다음 순서로는 연관된 여러 팀을 이끄는게 자연스러운 흐름</p><p>역활이 커져도 기존의 모범사례들은 계속 유효하다</p><ul><li>섬기는 리더</li><li>3A 리더쉽</li></ul><h3 id="늘-결정하라-Always-Be-Deciding"><a href="#늘-결정하라-Always-Be-Deciding" class="headerlink" title="늘 결정하라(Always Be Deciding)"></a>늘 결정하라(Always Be Deciding)</h3><p>기존 보다 높은 수준에서 더 많은 걸 결정해야 한다는 뜻</p><p>여러 전략 사이의 트레이드오프들을 정확히 찾아 내는것</p><p>트레이드오프는 사람의 행동에도 적용된다</p><p>문제를 뜯어 보고 통제 할수 있는 상태가 되어야 한다</p><ul><li>눈가리개 찾기</li><li>핵심 트레이드 오프 파악하기</li><li>결정하고 반복하기</li></ul><h3 id="늘-떠나라-Always-Be-Leaving"><a href="#늘-떠나라-Always-Be-Leaving" class="headerlink" title="늘 떠나라(Always Be Leaving)"></a>늘 떠나라(Always Be Leaving)</h3><p>조직에 리더가 없어도 스스로 문제를 풀 수 있게 유도해야 한다</p><p>리더스스로 SPOF 단일 장애지점 되는것은 안티패턴이다</p><ul><li>미션 자율주행 팀을 만들어라<ul><li>긍정적이고 자기-영속적인 문화를 갖춰야 한다</li></ul></li><li>문제 공간 분활하기</li><li>하위 문제를 다른 리더에게 위임하기<ul><li>무언가를 제대로 하고 싶다면 스스로 하라</li></ul></li><li>조율하고 반복하기<ul><li>관촬과 경청 95% &#x2F; 개입 5%</li></ul></li></ul><h3 id="늘-확장하라-Always-Be-Scaling"><a href="#늘-확장하라-Always-Be-Scaling" class="headerlink" title="늘 확장하라(Always Be Scaling)"></a>늘 확장하라(Always Be Scaling)</h3><p>성공 사이클</p><ul><li>분석</li><li>분투</li><li>견인</li><li>보상</li></ul><p>중요한일 vs 급한일</p><ul><li>리더가 되면 능동형 일보다 반응형 일의 비중이 커진다</li><li>급한일에 몰두 하려면?<ul><li>위임하자</li><li>따로 정지적으로 시간을 내자</li><li>나에게 효과가 있는 추적 시스템을 마련하자</li></ul></li></ul><p>공 떨어뜨리기</p><ul><li>어차피 공 몇 개는 떨어뜨릴 수 밖에 없다면 실수 보다는 의도적으로 떨어뜨리는게 낫지 않을까? 그럼 어느정도 통제력을 유지할수 있으니깐</li><li>몇번 떨어뜨리면 60%는 중간에 다른사람이 가지고 간다</li><li>진짜 중요한 업무면 위로 올라온다</li></ul><p>에너지 관리하기</p><ul><li>진짜 휴가 떠나기</li><li>일과 쉽게 단절하기</li><li>진짜 주말 보내기</li><li>매일매일 휴식하기</li><li>스스로에게 정신 건갈의 날을 가질 수 있는 권한 부여하기</li></ul><h1 id="참조"><a href="#참조" class="headerlink" title="참조"></a>참조</h1><hr><ul><li><a href="https://www.yes24.com/Product/Goods/109182479">구글 엔지니어는 이렇게 일한다</a></li></ul>]]></content:encoded>
+      
+      <comments>https://sejoung.github.io/2024/05/2024-05-29-Software_Engineering_at_Google_CHAPTER_6/#disqus_thread</comments>
+    </item>
     
     <item>
       <title>1 자라기</title>
@@ -335,63 +393,6 @@
       <content:encoded><![CDATA[<h1 id="Part-1-코드-정리법"><a href="#Part-1-코드-정리법" class="headerlink" title="Part 1 코드 정리법"></a>Part 1 코드 정리법</h1><h2 id="Chapter-1-보호-구문"><a href="#Chapter-1-보호-구문" class="headerlink" title="Chapter 1 보호 구문"></a>Chapter 1 보호 구문</h2><ul><li>중첩된 조건은 헷갈린다</li><li>보호 구문은 코드를 읽기 쉽게 만든다</li><li><a href="https://github.com/Bogdanp/dramatiq/pull/470">Add guard clause to stub.py</a></li></ul><h2 id="Chapter-2-안-쓰는-코드"><a href="#Chapter-2-안-쓰는-코드" class="headerlink" title="Chapter 2 안 쓰는 코드"></a>Chapter 2 안 쓰는 코드</h2><ul><li>삭제 하라</li></ul><h2 id="Chapter-3-대칭으로-맞추기"><a href="#Chapter-3-대칭으로-맞추기" class="headerlink" title="Chapter 3 대칭으로 맞추기"></a>Chapter 3 대칭으로 맞추기</h2><ul><li>같은 문제라도 시대와 사람에 따라 다른 모습으로 해결된다 자연스러운 일이지만 이것이 코드를 읽기 어렵게 만들기도 한다</li><li>코드를 읽는 사람 입장에선 일관성이 중요하다</li></ul><h2 id="Chapter-4-새로운-인터페이스로-기존-루틴-부르기"><a href="#Chapter-4-새로운-인터페이스로-기존-루틴-부르기" class="headerlink" title="Chapter 4 새로운 인터페이스로 기존 루틴 부르기"></a>Chapter 4 새로운 인터페이스로 기존 루틴 부르기</h2><ul><li>새로운 인터페이스를 만들어 기존 루틴을 부르는 방식으로 코드를 정리하자</li><li>거꾸로 코딩하기 : 루틴의 마지막 줄부터 시작해서 거꾸로 코드를 짜나가는 방식</li><li>테스트 우선 코딩</li><li>도우미 설계</li></ul><h2 id="Chapter-5-읽는-순서"><a href="#Chapter-5-읽는-순서" class="headerlink" title="Chapter 5 읽는 순서"></a>Chapter 5 읽는 순서</h2><ul><li>코드를 읽기 좋은 순서로 다시 정렬하면 그 순서대로 코드를 만날수 있다</li><li>코드를 읽는 사람 입장에서 코드를 작성하자</li></ul><h2 id="Chapter-6-응집도를-높이는-배치"><a href="#Chapter-6-응집도를-높이는-배치" class="headerlink" title="Chapter 6 응집도를 높이는 배치"></a>Chapter 6 응집도를 높이는 배치</h2><ul><li>코드를 읽다가 변경해야 할 동작을 찾았더니 여러 곳에 흩어져 있는 코드를 함께 바꿔야 한다면 그 코드는 응집도가 낮다</li><li>코드의 순서를 바꿔서 변경할 요소들을 가까이 두면된다</li><li>결합도가 있으면 서로 옆에 두자</li><li>두 파일에 결합도가 있으면 같은 디렉토리에 넣자</li><li>응집도를 높이는 순서로 정리하면 코드를 더 쉽게 변경할 수 있다</li></ul><h2 id="Chapter-7-선언과-초기화를-함께-옮기기"><a href="#Chapter-7-선언과-초기화를-함께-옮기기" class="headerlink" title="Chapter 7 선언과 초기화를 함께 옮기기"></a>Chapter 7 선언과 초기화를 함께 옮기기</h2><ul><li>변수 선언가 초기화 위치는 같이 붙어 있는게 좋다</li></ul><h2 id="Chapter-8-설명하는-변수"><a href="#Chapter-8-설명하는-변수" class="headerlink" title="Chapter 8 설명하는 변수"></a>Chapter 8 설명하는 변수</h2><ul><li>표현의 의도가 드러나도록 변수명을 지어야 된다</li><li>코드 정리 커밋과 동작 변경에 대한 커밋은 분리 해야 된다</li></ul><h2 id="Chapter-9-설명하는-상수"><a href="#Chapter-9-설명하는-상수" class="headerlink" title="Chapter 9 설명하는 상수"></a>Chapter 9 설명하는 상수</h2><ul><li>같은 리터럴 상수가 두 곳에서 나타날때는 다른 의미로 쓰이는지 확인</li></ul><h2 id="Chapter-10-명시적인-매개변수"><a href="#Chapter-10-명시적인-매개변수" class="headerlink" title="Chapter 10 명시적인 매개변수"></a>Chapter 10 명시적인 매개변수</h2><ul><li>매개변수를 암묵적으로 사용하지 말고 명시적으로 사용하자</li><li>명시적으로 하면 읽기 테스트 분석이 쉬워진다</li></ul><h2 id="Chapter-11-비슷한-코드끼리"><a href="#Chapter-11-비슷한-코드끼리" class="headerlink" title="Chapter 11 비슷한 코드끼리"></a>Chapter 11 비슷한 코드끼리</h2><ul><li>두 부분사이에 빈 줄을 넣어 분리</li><li>제대로 된 설계는 설계 유연성을 확보 잘못하면 소프트웨어 설계의 소용돌이에 빠질 수 있다</li></ul><h2 id="Chapter-12-도우미-추출"><a href="#Chapter-12-도우미-추출" class="headerlink" title="Chapter 12 도우미 추출"></a>Chapter 12 도우미 추출</h2><ul><li>시간적 결합을 표현하는 경우 도우미 함수를 추출하자</li></ul><h2 id="Chapter-13-하나의-더미"><a href="#Chapter-13-하나의-더미" class="headerlink" title="Chapter 13 하나의 더미"></a>Chapter 13 하나의 더미</h2><ul><li>필요한 만큼의 코드를 하나의 더미 처럼 느껴질 때 까지 흩어진 코드를 모으세요</li><li>길고 반복되는 인자 목록</li><li>반복되는 코드 그 중에서도 반복되는 조건문</li><li>도우미에 대한 부적절한 이름</li><li>공유되어 변경에 노출된 데이터 구조</li></ul><h2 id="Chapter-14-설명하는-주석"><a href="#Chapter-14-설명하는-주석" class="headerlink" title="Chapter 14 설명하는 주석"></a>Chapter 14 설명하는 주석</h2><ul><li>아 이건 이렇게 돌아가는 거구나 라는 생각이 드는 순간을 아시죠? 그 순간이 소중한 순간입니다 기록하세요</li><li>코드의 결합을 발견했다면 그 즉시 해당 위치에 주석을 달아야 한다</li></ul><h2 id="Chapter-15-불필요한-주석-지우기"><a href="#Chapter-15-불필요한-주석-지우기" class="headerlink" title="Chapter 15 불필요한 주석 지우기"></a>Chapter 15 불필요한 주석 지우기</h2><ul><li>코드만으로 내용을 모두 이해할 수 있다면 주석은 삭제 하세요</li></ul><h1 id="참조"><a href="#참조" class="headerlink" title="참조"></a>참조</h1><hr><ul><li><a href="https://www.yes24.com/Product/Goods/125921718">Tidy First?</a></li><li><a href="https://github.com/Bogdanp/dramatiq/pull/470">Add guard clause to stub.py</a></li><li><a href="https://jamie95.tistory.com/99">객체지향 생활체조 원칙 9가지</a></li></ul>]]></content:encoded>
       
       <comments>https://sejoung.github.io/2024/04/2024-04-26-tidy_first_PART1/#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>LoRa 학습용 tool</title>
-      <link>https://sejoung.github.io/2024/03/2024-03-18-lora_tool/</link>
-      <guid>https://sejoung.github.io/2024/03/2024-03-18-lora_tool/</guid>
-      <pubDate>Mon, 18 Mar 2024 01:16:00 GMT</pubDate>
-      <description>
-      
-        
-        
-          &lt;h1 id=&quot;LoRa-학습용-tool&quot;&gt;&lt;a href=&quot;#LoRa-학습용-tool&quot; class=&quot;headerlink&quot; title=&quot;LoRa 학습용 tool&quot;&gt;&lt;/a&gt;LoRa 학습용 tool&lt;/h1&gt;&lt;h2 id=&quot;lora-scripts-a-k-a-SD
-        
-      
-      </description>
-      
-      <content:encoded><![CDATA[<h1 id="LoRa-학습용-tool"><a href="#LoRa-학습용-tool" class="headerlink" title="LoRa 학습용 tool"></a>LoRa 학습용 tool</h1><h2 id="lora-scripts-a-k-a-SD-Trainer"><a href="#lora-scripts-a-k-a-SD-Trainer" class="headerlink" title="lora-scripts a.k.a SD-Trainer"></a>lora-scripts a.k.a SD-Trainer</h2><ul><li>중국에서 로라 학습용으로 만든 gui와 script를 동시에 지원하는 툴</li><li>중국어만 지원함</li></ul><h2 id="SD-script"><a href="#SD-script" class="headerlink" title="SD script"></a>SD script</h2><ul><li>accelerate 라이브러리를 활용해서 미세조정 스크립트</li><li>kohya_ss 툴에서 사용중</li></ul><h2 id="kohya-ss"><a href="#kohya-ss" class="headerlink" title="kohya_ss"></a>kohya_ss</h2><ul><li>windows에서 동작하는 툴</li><li>lora 학습용으로 만들어진 툴</li><li>linux는 커뮤니티를 통해서 지원</li></ul><h2 id=""><a href="#" class="headerlink" title=""></a></h2><h1 id="참조"><a href="#참조" class="headerlink" title="참조"></a>참조</h1><hr><ul><li><a href="https://github.com/LarryJane491/Lora-Training-in-Comfy">Lora-Training-in-Comfy</a></li><li><a href="https://github.com/Akegarasu/lora-scripts">lora-scripts a.k.a SD-Trainer</a></li><li><a href="https://github.com/kohya-ss/sd-scripts">sd-scripts</a></li><li><a href="https://github.com/bmaltais/kohya_ss">kohya_ss</a></li><li><a href="https://rentry.org/lora_train">LoRA 교육 가이드</a></li><li><a href="https://github.com/Linaqruf/kohya-trainer">kohya-trainer</a></li><li><a href="https://rentry.org/tohoaifaq#opinionated-lora-guide-for-colab">dongProject AI에 대한 대략적인 FAQ</a></li><li><a href="https://github.com/derrian-distro/LoRA_Easy_Training_Scripts">LoRA_Easy_Training_Scripts</a></li><li><a href="https://huggingface.co/hollowstrawberry/stable-diffusion-guide">hollowstrawberry_stable-diffusion-guide</a></li><li><a href="https://stable-diffusion-art.com/train-lora/">How to train Lora models</a></li><li><a href="https://civitai.com/models/22530">쉽고 무료로 나만의 로라스를 만들어보세요</a></li></ul>]]></content:encoded>
-      
-      <comments>https://sejoung.github.io/2024/03/2024-03-18-lora_tool/#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>Semantic Matching 2</title>
-      <link>https://sejoung.github.io/2024/03/2024-03-12-Semantic_Matching_2/</link>
-      <guid>https://sejoung.github.io/2024/03/2024-03-12-Semantic_Matching_2/</guid>
-      <pubDate>Tue, 12 Mar 2024 02:38:00 GMT</pubDate>
-      <description>
-      
-        
-        
-          &lt;h1 id=&quot;Semantic-Matching-2&quot;&gt;&lt;a href=&quot;#Semantic-Matching-2&quot; class=&quot;headerlink&quot; title=&quot;Semantic Matching 2&quot;&gt;&lt;/a&gt;Semantic Matching 2&lt;/h1&gt;&lt;h2 i
-        
-      
-      </description>
-      
-      <content:encoded><![CDATA[<h1 id="Semantic-Matching-2"><a href="#Semantic-Matching-2" class="headerlink" title="Semantic Matching 2"></a>Semantic Matching 2</h1><h2 id="Semantic-Flow"><a href="#Semantic-Flow" class="headerlink" title="Semantic Flow"></a>Semantic Flow</h2><ul><li>UCN(Universal Correspondence Networks)<ul><li>Fully convolutional NN -&gt; STNs -&gt; L2 Normalization</li></ul></li><li>Proposal Flow<ul><li>Comparisons </li><li>매칭 알고리즘</li></ul></li><li>Semantic Correspondence<ul><li>dense correspondence</li></ul></li><li>Hyperpixel representation<ul><li>Pixel : (𝑥, 𝑦, 𝑅, 𝐺, 𝐵)</li><li>Superpixel : 𝑛 ∗ (𝑥, 𝑦, 𝑅, 𝐺, 𝐵)</li><li>Hypercolumn :  (𝑥, 𝑦, 𝑑1, … , 𝑑n)</li><li>Hyperpixel : (𝑥, 𝑦, 𝑤, ℎ, 𝑑1, … , 𝑑n)</li></ul></li><li>Hyperpixel Flow<ul><li>Regularized Hough Matching (RHM)<ul><li>Classic computer vision 에서 사용하던 매칭 테크닉.</li><li>Re-parameterization technique : parametric space 를 변환 시켜 voting을 통해 가장 적절한 매칭을 찾는 방식</li><li>Hough transform</li></ul></li><li>summary<ul><li>Hyperpixel representation 제안 : geometry (region information; width, height …) 정보를 가진 hypercolumn 구조</li><li>모든 layer를 다 사용하지 않고, 특정 layer 만 사용하여 composing 하는 hypercolumn, hyperpixel 구조가 더 성능이 좋다.</li><li>GPU computation을 통해 기존의 matching technique인 probabilistic Hough matching 방식의 성능과 속도를 압도적으로 높일 수 있다. (regularized Hough matching) (정량적 결과 result section에 기록)</li></ul></li></ul></li><li>Dynamic feed-forward network<ul><li>Forward time : argmax  </li><li>Backward time : softmax</li><li>Local 영역을 중요하게 봐야하는 computer vision task (object detection, segmentation, tracking, matching …)에서 Multi-layer neural feature를 사용하자.</li><li>그런데 문제를 풀 때에 중요한 layer output을 잘 골라서 사용하자.</li><li>Beam search (Greedy algorithm)으로 찾을 수도 있지만 Data domain에 맞게 training하면 더 좋다</li><li>Trainable model을 만들 때에 layer 를 selection 해야하는데, argmax selection 은 differentiable 하지 않아 학습 불가능 하니, Gumbel-softmax trick을 사용해서 학습하자.</li></ul></li><li>SFNet</li></ul><h1 id="참조"><a href="#참조" class="headerlink" title="참조"></a>참조</h1><hr>]]></content:encoded>
-      
-      <comments>https://sejoung.github.io/2024/03/2024-03-12-Semantic_Matching_2/#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>Semantic Matching 1</title>
-      <link>https://sejoung.github.io/2024/03/2024-03-11-Semantic_Matching/</link>
-      <guid>https://sejoung.github.io/2024/03/2024-03-11-Semantic_Matching/</guid>
-      <pubDate>Mon, 11 Mar 2024 00:40:00 GMT</pubDate>
-      <description>
-      
-        
-        
-          &lt;h1 id=&quot;Semantic-Matching-1&quot;&gt;&lt;a href=&quot;#Semantic-Matching-1&quot; class=&quot;headerlink&quot; title=&quot;Semantic Matching 1&quot;&gt;&lt;/a&gt;Semantic Matching 1&lt;/h1&gt;&lt;h2 i
-        
-      
-      </description>
-      
-      <content:encoded><![CDATA[<h1 id="Semantic-Matching-1"><a href="#Semantic-Matching-1" class="headerlink" title="Semantic Matching 1"></a>Semantic Matching 1</h1><h2 id="Semantic-Alignment"><a href="#Semantic-Alignment" class="headerlink" title="Semantic Alignment"></a>Semantic Alignment</h2><ul><li><p>Spatial Transformer Networks</p><ul><li>Differentiable spatial transformation<ul><li>Localisation network</li><li>Parameterised Sampling Grid</li><li>Differentiable Image Sampling</li></ul></li></ul></li><li><p>GeoCNN, weakalign, A2Net</p></li><li><p>NC-Net, Sparse-NC-Net, CHM</p></li><li><p>Neighbourhood Consensus Networks (NCNet)</p><ul><li>Loss functions<ul><li>weakly supervised training</li></ul></li><li>Memory issue</li><li>Cannot handle high-resolution images</li></ul></li><li><p>Sparse-NCNet</p><ul><li>Minkowski Engine</li></ul></li><li><p>Convolutional Hough Matching Networks (CHM)</p></li></ul><h1 id="참조"><a href="#참조" class="headerlink" title="참조"></a>참조</h1><hr>]]></content:encoded>
-      
-      <comments>https://sejoung.github.io/2024/03/2024-03-11-Semantic_Matching/#disqus_thread</comments>
     </item>
     
   </channel>
