@@ -8,8 +8,27 @@
     <atom:link href="/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>잘정리하자</description>
-    <pubDate>Wed, 29 May 2024 08:49:18 GMT</pubDate>
+    <pubDate>Thu, 30 May 2024 02:19:20 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>CHAPTER 7 엔지니어링 생산성 측정하기</title>
+      <link>https://sejoung.github.io/2024/05/2024-05-30-Software_Engineering_at_Google_CHAPTER_7/</link>
+      <guid>https://sejoung.github.io/2024/05/2024-05-30-Software_Engineering_at_Google_CHAPTER_7/</guid>
+      <pubDate>Thu, 30 May 2024 01:30:00 GMT</pubDate>
+      <description>
+      
+        
+        
+          &lt;h1 id=&quot;Part-II-문화&quot;&gt;&lt;a href=&quot;#Part-II-문화&quot; class=&quot;headerlink&quot; title=&quot;Part II 문화&quot;&gt;&lt;/a&gt;Part II 문화&lt;/h1&gt;&lt;h2 id=&quot;CHAPTER-7-엔지니어링-생산성-측정하기&quot;&gt;&lt;a href
+        
+      
+      </description>
+      
+      <content:encoded><![CDATA[<h1 id="Part-II-문화"><a href="#Part-II-문화" class="headerlink" title="Part II 문화"></a>Part II 문화</h1><h2 id="CHAPTER-7-엔지니어링-생산성-측정하기"><a href="#CHAPTER-7-엔지니어링-생산성-측정하기" class="headerlink" title="CHAPTER 7 엔지니어링 생산성 측정하기"></a>CHAPTER 7 엔지니어링 생산성 측정하기</h2><p>구들은 데이터를 토대로 결정하는 데이터 주도 회사 이다.<br>제품과 설계에 관한 결정 대부분을 근거 데이터와 함께 백업해놓는다</p><h3 id="엔지니어링-생산성을-측정하는-이유"><a href="#엔지니어링-생산성을-측정하는-이유" class="headerlink" title="엔지니어링 생산성을 측정하는 이유"></a>엔지니어링 생산성을 측정하는 이유</h3><p>사업을 확장하려면 충원을 피할수 없는데 그에 따른 소통 비용이 너무 가파르게 늘어난다</p><p>사업확장문제를 다르게 풀어볼수 있다 -&gt; 개개인의 생산성을 </p><h3 id="선별-측정할-가치가-있는가"><a href="#선별-측정할-가치가-있는가" class="headerlink" title="선별: 측정할 가치가 있는가?"></a>선별: 측정할 가치가 있는가?</h3><p>생산성 측정을 해도 될지 결정하는 질문 목록</p><ul><li>어떤 결과를 기대하고, 왜 그런가?</li><li>데이터가 기대한 결과를 뒷받침한다면 어떤 조치를 취하겠는가?</li><li>부정적인 결과가 나온다면 적절한 조취를 취할 것인가?</li><li>결과에 따른 조치는 누가 결정하고 언제 수행하는가?</li><li>당장 프로세스&#x2F;도구를 변경할 여유가 없다</li><li>어떤 결과가 나오든 곧 다른 요인에 의해 의미가 없어질 것이다</li><li>측정 결과를 이미 확정된 계획을 뒷받침하는 용도로만 쓴다</li><li>측정할 수 있는 지표들이 문제를 평가하기에 충분히 정확하지 않으며, 다른 요인들 때문에 혼탁해질 우려가 크다</li></ul><h3 id="GSM-프레임워크-목표와-신호를-뒷받침하는-의미-있는-지표-선정하기"><a href="#GSM-프레임워크-목표와-신호를-뒷받침하는-의미-있는-지표-선정하기" class="headerlink" title="GSM 프레임워크: 목표와 신호를 뒷받침하는 의미 있는 지표 선정하기"></a>GSM 프레임워크: 목표와 신호를 뒷받침하는 의미 있는 지표 선정하기</h3><ul><li>목표(goal) : 측정자가 원하는 최종 결과</li><li>신호(signal) : 원하는 최종 결과를 이루었는지 판단하는 방법</li><li>지표(metric) : 신호를 대변</li></ul><p>중요한건 추적 가능성을 잃지 않는것</p><h3 id="목표-goal"><a href="#목표-goal" class="headerlink" title="목표(goal)"></a>목표(goal)</h3><p>속성을 설명하되 어떠한 지표도 명시해서는 안된다<br>목표는 측정이 불가능하다</p><p>대부분 팀은 중요한 트레이드오프를 잊은 채 측정을 하곤한다</p><p>특정 요소를 개선하느라 실수로 다른 요소를 희생하는 일을 막는 요소 퀀즈(QUANTS)</p><ul><li>코드 품질</li><li>엔지니어들의 몰입도</li><li>지적 복잡성</li><li>박자와 속도</li><li>만족도</li></ul><h3 id="신호-signal"><a href="#신호-signal" class="headerlink" title="신호(signal)"></a>신호(signal)</h3><p>신호는 목표 달성 여부를 알 수 있는 방법</p><h3 id="지표-metric"><a href="#지표-metric" class="headerlink" title="지표(metric)"></a>지표(metric)</h3><p>지표는 측정하는 방법의 최종형태</p><h3 id="데이터로-지표-검증하기"><a href="#데이터로-지표-검증하기" class="headerlink" title="데이터로 지표 검증하기"></a>데이터로 지표 검증하기</h3><p>경험 표집법(ESM)</p><p>정량적 지표가 유용한 이유는 우리에게 힘과 확장성을 주기때문</p><p>정성적 지표도 지표이다 정성적 지표가 나타내는 결과가 정량적 지표와 일치해야 한다</p><h1 id="참조"><a href="#참조" class="headerlink" title="참조"></a>참조</h1><hr><ul><li><a href="https://www.yes24.com/Product/Goods/109182479">구글 엔지니어는 이렇게 일한다</a></li></ul>]]></content:encoded>
+      
+      <comments>https://sejoung.github.io/2024/05/2024-05-30-Software_Engineering_at_Google_CHAPTER_7/#disqus_thread</comments>
+    </item>
     
     <item>
       <title>CHAPTER 6 성장하는 조직 이끌기</title>
@@ -373,25 +392,6 @@
       <content:encoded><![CDATA[<h1 id="LoRa-학습용-tool"><a href="#LoRa-학습용-tool" class="headerlink" title="LoRa 학습용 tool"></a>LoRa 학습용 tool</h1><h2 id="lora-scripts-a-k-a-SD-Trainer"><a href="#lora-scripts-a-k-a-SD-Trainer" class="headerlink" title="lora-scripts a.k.a SD-Trainer"></a>lora-scripts a.k.a SD-Trainer</h2><ul><li>중국에서 로라 학습용으로 만든 gui와 script를 동시에 지원하는 툴</li><li>중국어만 지원함</li></ul><h2 id="SD-script"><a href="#SD-script" class="headerlink" title="SD script"></a>SD script</h2><ul><li>accelerate 라이브러리를 활용해서 미세조정 스크립트</li><li>kohya_ss 툴에서 사용중</li></ul><h2 id="kohya-ss"><a href="#kohya-ss" class="headerlink" title="kohya_ss"></a>kohya_ss</h2><ul><li>windows에서 동작하는 툴</li><li>lora 학습용으로 만들어진 툴</li><li>linux는 커뮤니티를 통해서 지원</li></ul><h2 id=""><a href="#" class="headerlink" title=""></a></h2><h1 id="참조"><a href="#참조" class="headerlink" title="참조"></a>참조</h1><hr><ul><li><a href="https://github.com/LarryJane491/Lora-Training-in-Comfy">Lora-Training-in-Comfy</a></li><li><a href="https://github.com/Akegarasu/lora-scripts">lora-scripts a.k.a SD-Trainer</a></li><li><a href="https://github.com/kohya-ss/sd-scripts">sd-scripts</a></li><li><a href="https://github.com/bmaltais/kohya_ss">kohya_ss</a></li><li><a href="https://rentry.org/lora_train">LoRA 교육 가이드</a></li><li><a href="https://github.com/Linaqruf/kohya-trainer">kohya-trainer</a></li><li><a href="https://rentry.org/tohoaifaq#opinionated-lora-guide-for-colab">dongProject AI에 대한 대략적인 FAQ</a></li><li><a href="https://github.com/derrian-distro/LoRA_Easy_Training_Scripts">LoRA_Easy_Training_Scripts</a></li><li><a href="https://huggingface.co/hollowstrawberry/stable-diffusion-guide">hollowstrawberry_stable-diffusion-guide</a></li><li><a href="https://stable-diffusion-art.com/train-lora/">How to train Lora models</a></li><li><a href="https://civitai.com/models/22530">쉽고 무료로 나만의 로라스를 만들어보세요</a></li></ul>]]></content:encoded>
       
       <comments>https://sejoung.github.io/2024/03/2024-03-18-lora_tool/#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>Semantic Matching 2</title>
-      <link>https://sejoung.github.io/2024/03/2024-03-12-Semantic_Matching_2/</link>
-      <guid>https://sejoung.github.io/2024/03/2024-03-12-Semantic_Matching_2/</guid>
-      <pubDate>Tue, 12 Mar 2024 02:38:00 GMT</pubDate>
-      <description>
-      
-        
-        
-          &lt;h1 id=&quot;Semantic-Matching-2&quot;&gt;&lt;a href=&quot;#Semantic-Matching-2&quot; class=&quot;headerlink&quot; title=&quot;Semantic Matching 2&quot;&gt;&lt;/a&gt;Semantic Matching 2&lt;/h1&gt;&lt;h2 i
-        
-      
-      </description>
-      
-      <content:encoded><![CDATA[<h1 id="Semantic-Matching-2"><a href="#Semantic-Matching-2" class="headerlink" title="Semantic Matching 2"></a>Semantic Matching 2</h1><h2 id="Semantic-Flow"><a href="#Semantic-Flow" class="headerlink" title="Semantic Flow"></a>Semantic Flow</h2><ul><li>UCN(Universal Correspondence Networks)<ul><li>Fully convolutional NN -&gt; STNs -&gt; L2 Normalization</li></ul></li><li>Proposal Flow<ul><li>Comparisons </li><li>매칭 알고리즘</li></ul></li><li>Semantic Correspondence<ul><li>dense correspondence</li></ul></li><li>Hyperpixel representation<ul><li>Pixel : (𝑥, 𝑦, 𝑅, 𝐺, 𝐵)</li><li>Superpixel : 𝑛 ∗ (𝑥, 𝑦, 𝑅, 𝐺, 𝐵)</li><li>Hypercolumn :  (𝑥, 𝑦, 𝑑1, … , 𝑑n)</li><li>Hyperpixel : (𝑥, 𝑦, 𝑤, ℎ, 𝑑1, … , 𝑑n)</li></ul></li><li>Hyperpixel Flow<ul><li>Regularized Hough Matching (RHM)<ul><li>Classic computer vision 에서 사용하던 매칭 테크닉.</li><li>Re-parameterization technique : parametric space 를 변환 시켜 voting을 통해 가장 적절한 매칭을 찾는 방식</li><li>Hough transform</li></ul></li><li>summary<ul><li>Hyperpixel representation 제안 : geometry (region information; width, height …) 정보를 가진 hypercolumn 구조</li><li>모든 layer를 다 사용하지 않고, 특정 layer 만 사용하여 composing 하는 hypercolumn, hyperpixel 구조가 더 성능이 좋다.</li><li>GPU computation을 통해 기존의 matching technique인 probabilistic Hough matching 방식의 성능과 속도를 압도적으로 높일 수 있다. (regularized Hough matching) (정량적 결과 result section에 기록)</li></ul></li></ul></li><li>Dynamic feed-forward network<ul><li>Forward time : argmax  </li><li>Backward time : softmax</li><li>Local 영역을 중요하게 봐야하는 computer vision task (object detection, segmentation, tracking, matching …)에서 Multi-layer neural feature를 사용하자.</li><li>그런데 문제를 풀 때에 중요한 layer output을 잘 골라서 사용하자.</li><li>Beam search (Greedy algorithm)으로 찾을 수도 있지만 Data domain에 맞게 training하면 더 좋다</li><li>Trainable model을 만들 때에 layer 를 selection 해야하는데, argmax selection 은 differentiable 하지 않아 학습 불가능 하니, Gumbel-softmax trick을 사용해서 학습하자.</li></ul></li><li>SFNet</li></ul><h1 id="참조"><a href="#참조" class="headerlink" title="참조"></a>참조</h1><hr>]]></content:encoded>
-      
-      <comments>https://sejoung.github.io/2024/03/2024-03-12-Semantic_Matching_2/#disqus_thread</comments>
     </item>
     
   </channel>
