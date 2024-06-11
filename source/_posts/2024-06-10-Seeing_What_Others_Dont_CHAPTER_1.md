@@ -87,4 +87,4 @@ sitemap:
 # 참조
 -----
 
-* [구글 엔지니어는 이렇게 일한다](https://www.yes24.com/Product/Goods/109182479)
+* [통찰, 평범에서 비범으로](https://m.yes24.com/Goods/Detail/15850970)
