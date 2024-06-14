@@ -8,8 +8,84 @@
     <atom:link href="/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>잘정리하자</description>
-    <pubDate>Mon, 10 Jun 2024 07:59:49 GMT</pubDate>
+    <pubDate>Fri, 14 Jun 2024 07:51:34 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>CHAPTER 10 문서자료</title>
+      <link>https://sejoung.github.io/2024/06/2024-06-14-Software_Engineering_at_Google_CHAPTER_10/</link>
+      <guid>https://sejoung.github.io/2024/06/2024-06-14-Software_Engineering_at_Google_CHAPTER_10/</guid>
+      <pubDate>Fri, 14 Jun 2024 07:20:00 GMT</pubDate>
+      <description>
+      
+        
+        
+          &lt;h1 id=&quot;Part-III-프로세스&quot;&gt;&lt;a href=&quot;#Part-III-프로세스&quot; class=&quot;headerlink&quot; title=&quot;Part III 프로세스&quot;&gt;&lt;/a&gt;Part III 프로세스&lt;/h1&gt;&lt;h2 id=&quot;CHAPTER-10-문서자료&quot;&gt;&lt;a h
+        
+      
+      </description>
+      
+      <content:encoded><![CDATA[<h1 id="Part-III-프로세스"><a href="#Part-III-프로세스" class="headerlink" title="Part III 프로세스"></a>Part III 프로세스</h1><h2 id="CHAPTER-10-문서자료"><a href="#CHAPTER-10-문서자료" class="headerlink" title="CHAPTER 10 문서자료"></a>CHAPTER 10 문서자료</h2><p>대부분의 엔지니어가 코드를 작성하고 이용하고 유지보수 하면서 대표적인 불만이 양질의 문서자료가 부족하다는 점</p><p>구글에서 문서 자료를 개선하고자 해본 시도 중 가장 성공적이었던 방법은 문서자료를 코드처럼 취급하여 엔지니어링 워크플로에 통합하는 것</p><h3 id="문서자료란"><a href="#문서자료란" class="headerlink" title="문서자료란?"></a>문서자료란?</h3><p>엔지니어가 작업을 끝마치기 위해 작성해야 하는 모든 부수적인 테스트를 의미</p><h3 id="문서자료가-필요한-이유"><a href="#문서자료가-필요한-이유" class="headerlink" title="문서자료가 필요한 이유"></a>문서자료가 필요한 이유</h3><p>양질의 문서 자료는 엔지니어링 조직에 커다란 축복<br>코드와 API를 이해하기 쉬워지고 실수가 줄어든다</p><p>프로젝트팀은 자신들의 설계 목표와 팀의 목표가 활자로 명확하게 적혀있을 때 역량을 더 집중하게 됩니다.</p><p>수동으로 해야 되는 일은 절차가 잘 기술되어 있어야 쉬워진다.</p><p>문서자료가 중요한데 덜중요하다고 생각되는 이유가 무엇인가?</p><ul><li>해택이 즉각적으로 돌어오지 않는다</li><li>글쓰르길 프로그래밍과는 별개의 기술로 본다</li><li>글쓰기에 자신 없어하는 엔지니어도 많다</li><li>문서자료는 도구 지원이나 개발 워크플로 통합 측면에서 아직 많이 부족하기 때문에 작성하기가 상대적으로 더 어렵다</li><li>문서자료가 기존 코드를 유지 보수하기 더 쉽게 해준다고 생각하기보다는 유지보수할 대상이 하나 더 늘어난다고 생각한다</li></ul><p>문서자료는 다양한 부류에 사람에게 혜택을 준다</p><p>작성자에도 혜택을 받는다</p><ul><li>API를 가다듭는데 도움을 준다</li><li>유지보수를 위한 로드맵과 과거 이력을 제공한다</li><li>코드를 더 전문적이고 매력있게 보이게 한다</li></ul><p>읽는이에게 최적화 하라</p><h3 id="문서자료는-코드와-같다"><a href="#문서자료는-코드와-같다" class="headerlink" title="문서자료는 코드와 같다"></a>문서자료는 코드와 같다</h3><ul><li>꼭 따라야 하는 내부 정책과 규칙이 있어야 한다</li><li>버전 관리 시스템에 등록해 관리해야 한다</li><li>관리 책임자를 명시해야 한다</li><li>변경시 리뷰를 거쳐야 한다</li><li>주기적으로 평가를 받아야 한다</li><li>가능하면 정확성이나 최신 정보 반영 여부등을 측정해야 한다</li></ul><h3 id="독자를-알라"><a href="#독자를-알라" class="headerlink" title="독자를 알라"></a>독자를 알라</h3><p>문서자료를 작성하면 법하는 가장 중요한 실수는 자신만을 위해 쓴다는것</p><p>독자 유형</p><ul><li>도메인 지식을 독자의 눈높이에 맞는 기술 수준으로 써야한다<ul><li>경험 수준 : 전문 프로그래머, 초보 엔지니어</li><li>도메인 지식 : 팀원, 혹은 다른 사내직원</li><li>목적 : 최종사용자, 소프트웨어 전문가</li></ul></li><li>탐색자 : 자신이 원하는것을 명확히 알고 있는 사람</li><li>배외자 : 무엇을 원하는지 정확하게 알지 못하는 사람</li></ul><h3 id="문서자료-유형"><a href="#문서자료-유형" class="headerlink" title="문서자료 유형"></a>문서자료 유형</h3><ul><li>참조용 문서자료<ul><li>파일 주석</li><li>클래스 주석</li><li>함수주석</li></ul></li><li>설계 문서</li><li>튜토리얼</li><li>개념 설명 문서</li><li>랜딩 페이지<h3 id="문서자료-리뷰"><a href="#문서자료-리뷰" class="headerlink" title="문서자료 리뷰"></a>문서자료 리뷰</h3></li><li>정확성 확인용 기술 리뷰</li><li>명확성 확인용 기술 리뷰</li><li>일관성 확인용 기술 리뷰</li></ul><h3 id="문서화-철학"><a href="#문서화-철학" class="headerlink" title="문서화 철학"></a>문서화 철학</h3><ul><li>누가 무엇을 어떻게 어디서 왜<ul><li>누갸 : 독자</li><li>무엇 : 문서의 목적</li><li>언제 : 생성되고 리뷰되고 갱신된 날짜</li><li>어디에 : 문서가 존재해야할 장소</li><li>왜 : 문서의 목적</li></ul></li><li>시작 중간 끝</li><li>좋은 문서자료의 특징<ul><li>완전성</li><li>정확성</li><li>명확성</li></ul></li><li>문서 폐기하기</li></ul><h3 id="테크니컬-라이터가-필요한-순간"><a href="#테크니컬-라이터가-필요한-순간" class="headerlink" title="테크니컬 라이터가 필요한 순간"></a>테크니컬 라이터가 필요한 순간</h3><p>팀원 외 독자를 위한 문서를 만들때 필요하다</p><h3 id="마치며"><a href="#마치며" class="headerlink" title="마치며"></a>마치며</h3><p>내가 곧 문제이자 해결책임</p><h1 id="참조"><a href="#참조" class="headerlink" title="참조"></a>참조</h1><hr><ul><li><a href="https://www.yes24.com/Product/Goods/109182479">구글 엔지니어는 이렇게 일한다</a></li></ul>]]></content:encoded>
+      
+      <comments>https://sejoung.github.io/2024/06/2024-06-14-Software_Engineering_at_Google_CHAPTER_10/#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>3부 문을 열다 / 어떻게 통찰을 촉진할 수 있는가</title>
+      <link>https://sejoung.github.io/2024/06/2024-06-11-Seeing_What_Others_Dont_CHAPTER_3/</link>
+      <guid>https://sejoung.github.io/2024/06/2024-06-11-Seeing_What_Others_Dont_CHAPTER_3/</guid>
+      <pubDate>Tue, 11 Jun 2024 13:45:00 GMT</pubDate>
+      <description>
+      
+        
+        
+          &lt;h1 id=&quot;3부-문을-열다-x2F-어떻게-통찰을-촉진할-수-있는가&quot;&gt;&lt;a href=&quot;#3부-문을-열다-x2F-어떻게-통찰을-촉진할-수-있는가&quot; class=&quot;headerlink&quot; title=&quot;3부 문을 열다 &amp;#x2F; 어떻게 통찰을 촉진할 수 있는
+        
+      
+      </description>
+      
+      <content:encoded><![CDATA[<h1 id="3부-문을-열다-x2F-어떻게-통찰을-촉진할-수-있는가"><a href="#3부-문을-열다-x2F-어떻게-통찰을-촉진할-수-있는가" class="headerlink" title="3부 문을 열다 &#x2F; 어떻게 통찰을 촉진할 수 있는가"></a>3부 문을 열다 &#x2F; 어떻게 통찰을 촉진할 수 있는가</h1><p>통찰의 경로</p><ul><li>모순 경로</li><li>연결 경로</li><li>창의적 절망 경로</li></ul><h2 id="14장-우리-자신을-돕기"><a href="#14장-우리-자신을-돕기" class="headerlink" title="14장 우리 자신을 돕기"></a>14장 우리 자신을 돕기</h2><p>모순의 힘을 더 잘 사용하는 것</p><p>연결 경로는 많은 아이디어들을 빙빙 돌게 만들며 우연한 링크를 만드는데 뛰어나다<br>소용돌이와 난류가 많을수록 발견의 확률은 더 높아진다<br>아이디어 밀도를 높이고 창의적인 사람들과의 접촉을 늘리는 방법들을 찾아야 한다<br>거꾸로 사고하기의 오류에 부딪힐수도 있다</p><p>창의적 절망의 경로는 다른 태도를 요구한다</p><ul><li>비판적 사고</li></ul><p>번뜩임의 순간을 촉진하기 위한 배양은?</p><ul><li>회복을 위한 휴식</li></ul><h2 id="15장-다른-사람-돕기"><a href="#15장-다른-사람-돕기" class="headerlink" title="15장 다른 사람 돕기"></a>15장 다른 사람 돕기</h2><p>그들의 결함 있는 믿음을 바로잡는것</p><ul><li>진단</li><li>진단 더하기 행동</li><li>결함 있는 믿음을 고치기 위한 모순 사용</li><li>헛발질 하기</li></ul><h2 id="16장-우리-조직-돕기"><a href="#16장-우리-조직-돕기" class="headerlink" title="16장 우리 조직 돕기"></a>16장 우리 조직 돕기</h2><p>성과 공식의 아랫쪽 화살의 독재를 깬다</p><ul><li>위쪽 화살표 강화하기</li><li>필터 느슨하게 만들기 </li><li>조직의 의지력 늘리기<ul><li>행동으로 옮기는 의지력 부족</li><li>개인의 수준이 아닌 조직 수준에서의 자기 통찰이 필요</li></ul></li><li>권위에 호소하기<ul><li>조직의 리더들이 문화를 바꾸도록 시도하는것</li></ul></li></ul><h2 id="17장-통찰-사냥꾼이-되기-위한-팁"><a href="#17장-통찰-사냥꾼이-되기-위한-팁" class="headerlink" title="17장 통찰 사냥꾼이 되기 위한 팁"></a>17장 통찰 사냥꾼이 되기 위한 팁</h2><p>최고의 상황은 통찰이 일어나는 것을 지켜본 후에 더 많은 세부사항을 찾는 것</p><h2 id="18장-통찰의-마술"><a href="#18장-통찰의-마술" class="headerlink" title="18장 통찰의 마술"></a>18장 통찰의 마술</h2><p>통찰의 마술은 다음 힘에서 나온다 연결, 우연의 일치, 호기심을 알아채려는 힘, 모순을 감지하려는 힘. 이 마술은 우리 속에 살고 있다. 쉬지 않고 마음을 뒤흔들면서.</p><h1 id="참조"><a href="#참조" class="headerlink" title="참조"></a>참조</h1><hr><ul><li><a href="https://m.yes24.com/Goods/Detail/15850970">통찰, 평범에서 비범으로</a></li></ul>]]></content:encoded>
+      
+      <comments>https://sejoung.github.io/2024/06/2024-06-11-Seeing_What_Others_Dont_CHAPTER_3/#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>2부 문을 닫다 / 무엇이 통찰을 방해하는가</title>
+      <link>https://sejoung.github.io/2024/06/2024-06-11-Seeing_What_Others_Dont_CHAPTER_2/</link>
+      <guid>https://sejoung.github.io/2024/06/2024-06-11-Seeing_What_Others_Dont_CHAPTER_2/</guid>
+      <pubDate>Tue, 11 Jun 2024 13:14:00 GMT</pubDate>
+      <description>
+      
+        
+        
+          &lt;h1 id=&quot;2부-문을-닫다-x2F-무엇이-통찰을-방해하는가&quot;&gt;&lt;a href=&quot;#2부-문을-닫다-x2F-무엇이-통찰을-방해하는가&quot; class=&quot;headerlink&quot; title=&quot;2부 문을 닫다 &amp;#x2F; 무엇이 통찰을 방해하는가&quot;&gt;&lt;/a&gt;2부 문을
+        
+      
+      </description>
+      
+      <content:encoded><![CDATA[<h1 id="2부-문을-닫다-x2F-무엇이-통찰을-방해하는가"><a href="#2부-문을-닫다-x2F-무엇이-통찰을-방해하는가" class="headerlink" title="2부 문을 닫다 &#x2F; 무엇이 통찰을 방해하는가"></a>2부 문을 닫다 &#x2F; 무엇이 통찰을 방해하는가</h1><h2 id="9장-어리석음"><a href="#9장-어리석음" class="headerlink" title="9장 어리석음"></a>9장 어리석음</h2><p>동일한 상황 동일한 정보가 있어도 어리석으면 통찰을 얻지 못한다.</p><p>그 생각을 못했다니 얼마나 멍청한가 - 헉슬리</p><h2 id="10장-대조적-쌍둥이-연구"><a href="#10장-대조적-쌍둥이-연구" class="headerlink" title="10장 대조적 쌍둥이 연구"></a>10장 대조적 쌍둥이 연구</h2><p>통찰을 얻지 못함</p><ul><li>결함이 있는 믿음에 빠짐</li><li>경험 부족</li><li>수동적 자세</li><li>구체적 추론 방식<ul><li>통찰에 개방적이도록 놓아 두지 않는다.</li></ul></li></ul><p>통찰을 얻음</p><ul><li>결함 있는 믿음에서 탈피함</li><li>경험 있음</li><li>적극적 자세</li><li>장난스러운 추촌 방식</li></ul><p>지식 방패 - 자신의 애초 진단이 틀렸음에도 거기에 계속 매달림</p><h2 id="11장-멍청해지는-설계"><a href="#11장-멍청해지는-설계" class="headerlink" title="11장 멍청해지는 설계"></a>11장 멍청해지는 설계</h2><p>컴퓨터 기반의 보조도구를 설계 할때 지침</p><ul><li>시스템은 사용자가 일을 더 잘하도록 도와야 한다<ul><li>일 개념을 고정시키고 통찰의 기회를 감소시킨다</li></ul></li><li>시스템은 중대한 신호를 사용자에게 분명히 보여 줘야 한다<ul><li>데이터 베이스 구조는 통찰을 얻는 데 방해가 될수 있다</li></ul></li><li>시스템은 사용자가 의미 없는 메시지 속에서 허우적 되지 않아야한다<ul><li>시스템이 새로운 중대신호를 모호하게 만들어버릴수도 있다.</li></ul></li><li>시스템은 사용자가 목표 대비 어느 정도의 진전이 있는지 모니터링 할 수 있도록 도와야 한다.<ul><li>작업을 어떻게 재구조화할지 통찰이 생겼을 때 진척도에 대한 모니터링이 우리를 방해 할 수 있다</li></ul></li></ul><p>더 강한 설계 &#x3D; 더 약한 통찰</p><h2 id="12장-조직은-어떻게-통찰을-가로막는가"><a href="#12장-조직은-어떻게-통찰을-가로막는가" class="headerlink" title="12장 조직은 어떻게 통찰을 가로막는가"></a>12장 조직은 어떻게 통찰을 가로막는가</h2><p>뜻밖의 실수가 계획과 매끄러운 운영을 엉망으로 만들수 있다</p><p>불확실성을 줄이고 실수를 최소화하겠다는 집착으로 조직들은 예측 가능성의 함정과 완벽성의 함정에 빠지게 된다</p><p>통찰은 예측 가능한 것의 반대이다</p><p>통찰은 파괴적이다</p><p>통찰은 경고없이 찾아오며 예기치 못한 형태를 띠고 상상도 못한 기회의 문을 연다</p><p>완벽성의 실수의 부재</p><p>조직이 통찰을 가로막는 방식</p><ul><li>아래쪽 화살표 시행하기</li><li>조직적 억압</li></ul><p>실수와 불확실성을 줄이는 법</p><ul><li>더욱 까다로운 기준을 부과한다</li><li>단속을 강화한다</li><li>모든 출처를 문서화 한다</li><li>가정을 뽑아낸다</li><li>이 가정들에 붕확실성 정도를 추정한다</li><li>검토 숫자를 늘린다</li><li>더 높은 엄밀성으로 결론의 정당성을 주장하게 된다</li><li>체크리스트와 절차에 의존한다</li><li>일정의 정밀도를 높여 더욱 세세하게 계획한다</li></ul><h2 id="13장-이렇게-통찰을-사냥하지-말라"><a href="#13장-이렇게-통찰을-사냥하지-말라" class="headerlink" title="13장 이렇게 통찰을 사냥하지 말라"></a>13장 이렇게 통찰을 사냥하지 말라</h2><p>패러다임이 교착상태에 빠졌을때</p><h1 id="참조"><a href="#참조" class="headerlink" title="참조"></a>참조</h1><hr><ul><li><a href="https://m.yes24.com/Goods/Detail/15850970">통찰, 평범에서 비범으로</a></li></ul>]]></content:encoded>
+      
+      <comments>https://sejoung.github.io/2024/06/2024-06-11-Seeing_What_Others_Dont_CHAPTER_2/#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>1부 통찰의 문으로 들어가다 / 통찰은 어떻게 촉발되는가</title>
+      <link>https://sejoung.github.io/2024/06/2024-06-10-Seeing_What_Others_Dont_CHAPTER_1/</link>
+      <guid>https://sejoung.github.io/2024/06/2024-06-10-Seeing_What_Others_Dont_CHAPTER_1/</guid>
+      <pubDate>Mon, 10 Jun 2024 13:28:00 GMT</pubDate>
+      <description>
+      
+        
+        
+          &lt;h1 id=&quot;1부-통찰의-문으로-들어가다-x2F-통찰은-어떻게-촉발되는가&quot;&gt;&lt;a href=&quot;#1부-통찰의-문으로-들어가다-x2F-통찰은-어떻게-촉발되는가&quot; class=&quot;headerlink&quot; title=&quot;1부 통찰의 문으로 들어가다 &amp;#x2F; 통찰은
+        
+      
+      </description>
+      
+      <content:encoded><![CDATA[<h1 id="1부-통찰의-문으로-들어가다-x2F-통찰은-어떻게-촉발되는가"><a href="#1부-통찰의-문으로-들어가다-x2F-통찰은-어떻게-촉발되는가" class="headerlink" title="1부 통찰의 문으로 들어가다 &#x2F; 통찰은 어떻게 촉발되는가"></a>1부 통찰의 문으로 들어가다 &#x2F; 통찰은 어떻게 촉발되는가</h1><p>성과 개선 &#x3D; 실수를 줄이고 + 통찰을 올리는것</p><p>하지만 실수를 모두 제거해 버리면 통찰을 얻기 힘들다</p><h2 id="1장-통찰-사냥하기"><a href="#1장-통찰-사냥하기" class="headerlink" title="1장 통찰 사냥하기"></a>1장 통찰 사냥하기</h2><p>다양한 방법으로 통찰을 얻어낸다</p><h2 id="2장-번뜩임의-순간"><a href="#2장-번뜩임의-순간" class="headerlink" title="2장 번뜩임의 순간"></a>2장 번뜩임의 순간</h2><p>준비 -&gt; 배양 -&gt; 조명 -&gt; 확인</p><p>삶의 통찰을 따라다니는<br>내 매일의 아름다움이여 선율을 바꾸고<br>내 미지의 정신을 따라 길을 내네</p><p>전문성과 준비를 혼동할수도 있다.</p><p>사전에 관심사와 경험들 덕분에 다른 사람이 놓쳤던 통찰을 잡아챌 준비가 되어 있었다.</p><p>의도적 준비가 필요하다</p><p>준비는 직업윤리<br>배양은 놀이윤리에 잘 들어맞는다<br>조명단계는 무의식 속의 연상들이 이어진 결과</p><p>통찰은 되돌릴수 없다 그전에 내가 있던 지점으로 돌아갈 수 없게 된다</p><h2 id="3장-연결"><a href="#3장-연결" class="headerlink" title="3장 연결"></a>3장 연결</h2><p>점 연결하기 경험 과 더 많은 아이디어에 노출되어 문제를 해결하는 경험</p><p>오랜기간 경각심을 유지하는 것은 어려운 일<br>일상적으로 일어나는 위기 상황들은 지속적으로 산만함을 유발</p><h2 id="4장-우연의-일치와-호기심"><a href="#4장-우연의-일치와-호기심" class="headerlink" title="4장 우연의 일치와 호기심"></a>4장 우연의 일치와 호기심</h2><p>우연의 일치란 일반적으로 무시해야 할 운에 의해 일어나는 사건이지만 무시해선 안되는 경우가 있다.<br>이는 때때로 새로운 패턴에 대해 우리에게 경고를 하기도 한다.</p><p>추세를 알아채고, 패턴을 찾아내며, 불규칙성을 궁금해하며, 우연의 일치를 감지하는 사람들이야 말로 중요한 자산이다.</p><p>버넬도 펄서를 발견한 것은 우연의 일치였다.</p><h2 id="5장-모순"><a href="#5장-모순" class="headerlink" title="5장 모순"></a>5장 모순</h2><p>모순으로부터 비롯된 통찰은 그럴리 없어! 라는 감정적 반응에 불꽃을 일으킨다<br>회의적 사고</p><p>토마스 쿤 - 과학혁명의 구조</p><p>정상 과학은 모순을 짓눌러버린다 -&gt; 시간이 지나면서 이러한 불일치는 점점 커지다가 위기를 만난다 -&gt; 패러다임 시프트</p><p>아인슈타인은 일정한것을 바꿔서 패러독스를 해결함</p><h2 id="6장-창의적-절망"><a href="#6장-창의적-절망" class="headerlink" title="6장 창의적 절망"></a>6장 창의적 절망</h2><p>어떠한 통찰은 우발적이다. 계획되지 않은 우연의 결과 혹은 딱 적절한 시기와 적절한 장소에 있었다는 결과로 탄생</p><p>창의적 절망 -&gt; 시간은 자꾸흘러가고 그럴듯한 말의 이동도 소용없고, 그 어떠한 방법도 통하지 않는 절망적인 상황</p><h2 id="7장-통찰을-바라보는-다른-방법들"><a href="#7장-통찰을-바라보는-다른-방법들" class="headerlink" title="7장 통찰을 바라보는 다른 방법들"></a>7장 통찰을 바라보는 다른 방법들</h2><p>데이터를 보자 아이디어를 죽이게 되었다</p><p>통찰은 순간에도 오지만 점진적으로도 올 수 있다.</p><p>점진적 통찰</p><h2 id="8장-발견의-논리"><a href="#8장-발견의-논리" class="headerlink" title="8장 발견의 논리"></a>8장 발견의 논리</h2><p>퉁찰로 가는 모순의 경로</p><ul><li>모순 경로 </li><li>연결 경로</li><li>창의적 절망 경로</li></ul><h1 id="참조"><a href="#참조" class="headerlink" title="참조"></a>참조</h1><hr><ul><li><a href="https://m.yes24.com/Goods/Detail/15850970">통찰, 평범에서 비범으로</a></li></ul>]]></content:encoded>
+      
+      <comments>https://sejoung.github.io/2024/06/2024-06-10-Seeing_What_Others_Dont_CHAPTER_1/#disqus_thread</comments>
+    </item>
     
     <item>
       <title>CHAPTER 9 코드 리뷰</title>
@@ -316,82 +392,6 @@
       <content:encoded><![CDATA[<h1 id="CHAPTER-4-사랑을-어떻게-말하는가"><a href="#CHAPTER-4-사랑을-어떻게-말하는가" class="headerlink" title="CHAPTER 4 사랑을 어떻게 말하는가"></a>CHAPTER 4 사랑을 어떻게 말하는가</h1><h2 id="마음을-구체적으로-묻고-표현하는-법"><a href="#마음을-구체적으로-묻고-표현하는-법" class="headerlink" title="마음을 구체적으로 묻고 표현하는 법"></a>마음을 구체적으로 묻고 표현하는 법</h2><p>구체적인 마음의 표현을 말로 하는게 좋다</p><p>단순 사랑해보다 구체적으로 표현해보자</p><h2 id="관계에-필요한-말들"><a href="#관계에-필요한-말들" class="headerlink" title="관계에 필요한 말들"></a>관계에 필요한 말들</h2><p>상대에게 보장할수 있는것은 지금 이 순간의 목적 뿐이다</p><p>나의 욕구는 어디에 있는가? 나에게 정말 의미있는 것은 무엇인가를 스스로에게 묻고 이것을 상대방에게 정확히 전달해봐라</p><h2 id="남자다움과-여자다움이-낳는-갈등"><a href="#남자다움과-여자다움이-낳는-갈등" class="headerlink" title="남자다움과 여자다움이 낳는 갈등"></a>남자다움과 여자다움이 낳는 갈등</h2><p>남자랑 여자의 사회적 편견으로 인해 학습되고 서로 오해가 생겨서 갈등이 생길수 있다</p><h1 id="참조"><a href="#참조" class="headerlink" title="참조"></a>참조</h1><hr><ul><li><a href="https://www.yes24.com/Product/Goods/58512315">상처 주지 않는 대화</a></li></ul>]]></content:encoded>
       
       <comments>https://sejoung.github.io/2024/05/2024-05-14-Nonviolent_Communication_CHAPTER4/#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>CHAPTER 3 말이 필요 없는 것이 공감이다</title>
-      <link>https://sejoung.github.io/2024/05/2024-05-14-Nonviolent_Communication_CHAPTER3/</link>
-      <guid>https://sejoung.github.io/2024/05/2024-05-14-Nonviolent_Communication_CHAPTER3/</guid>
-      <pubDate>Tue, 14 May 2024 02:18:00 GMT</pubDate>
-      <description>
-      
-        
-        
-          &lt;h1 id=&quot;CHAPTER-3-말이-필요-없는-것이-공감이다&quot;&gt;&lt;a href=&quot;#CHAPTER-3-말이-필요-없는-것이-공감이다&quot; class=&quot;headerlink&quot; title=&quot;CHAPTER 3 말이 필요 없는 것이 공감이다&quot;&gt;&lt;/a&gt;CHAPTER 
-        
-      
-      </description>
-      
-      <content:encoded><![CDATA[<h1 id="CHAPTER-3-말이-필요-없는-것이-공감이다"><a href="#CHAPTER-3-말이-필요-없는-것이-공감이다" class="headerlink" title="CHAPTER 3 말이 필요 없는 것이 공감이다"></a>CHAPTER 3 말이 필요 없는 것이 공감이다</h1><h2 id="현재에-집중한다"><a href="#현재에-집중한다" class="headerlink" title="현재에 집중한다"></a>현재에 집중한다</h2><p>공감은 인간이 다른 사람에게 줄 수 있는 가장 값진 선물</p><p>타인은 공감을 통해 유대감을 느낀다</p><p>공감은 동의가 아니다</p><h2 id="내가-당신의-마음을-잘-읽은-걸까"><a href="#내가-당신의-마음을-잘-읽은-걸까" class="headerlink" title="내가 당신의 마음을 잘 읽은 걸까"></a>내가 당신의 마음을 잘 읽은 걸까</h2><p>공감은 서핑과 비슷 파도를 잘 타야 된다</p><p>우리가 정해 놓은 기준에 얽매이지 말고 조금씩 벗어나려 노력해보자</p><p>비폭력대화는 최종 목적지가 아니다 유대감을 맺을 수 있는 도구 일뿐</p><h2 id="타인을-이해하는-어려움"><a href="#타인을-이해하는-어려움" class="headerlink" title="타인을 이해하는 어려움"></a>타인을 이해하는 어려움</h2><p>상대방이 내가 한말을 어떻게 받아 드리냐?</p><h2 id="유대감이-이끄는-관계의-치유"><a href="#유대감이-이끄는-관계의-치유" class="headerlink" title="유대감이 이끄는 관계의 치유"></a>유대감이 이끄는 관계의 치유</h2><p>서로의 입장을 이해하고 공감하서 유대감을 연결시키면 치유가 된다</p><h1 id="참조"><a href="#참조" class="headerlink" title="참조"></a>참조</h1><hr><ul><li><a href="https://www.yes24.com/Product/Goods/58512315">상처 주지 않는 대화</a></li></ul>]]></content:encoded>
-      
-      <comments>https://sejoung.github.io/2024/05/2024-05-14-Nonviolent_Communication_CHAPTER3/#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>CHAPTER 2 삶의 갈증이 욕구가 된다</title>
-      <link>https://sejoung.github.io/2024/05/2024-05-14-Nonviolent_Communication_CHAPTER2/</link>
-      <guid>https://sejoung.github.io/2024/05/2024-05-14-Nonviolent_Communication_CHAPTER2/</guid>
-      <pubDate>Tue, 14 May 2024 02:00:00 GMT</pubDate>
-      <description>
-      
-        
-        
-          &lt;h1 id=&quot;CHAPTER-2-삶의-갈증이-욕구가-된다&quot;&gt;&lt;a href=&quot;#CHAPTER-2-삶의-갈증이-욕구가-된다&quot; class=&quot;headerlink&quot; title=&quot;CHAPTER 2 삶의 갈증이 욕구가 된다&quot;&gt;&lt;/a&gt;CHAPTER 2 삶의 갈증이 
-        
-      
-      </description>
-      
-      <content:encoded><![CDATA[<h1 id="CHAPTER-2-삶의-갈증이-욕구가-된다"><a href="#CHAPTER-2-삶의-갈증이-욕구가-된다" class="headerlink" title="CHAPTER 2 삶의 갈증이 욕구가 된다"></a>CHAPTER 2 삶의 갈증이 욕구가 된다</h1><h2 id="우리는-욕구를-표현하는-법을-모른다"><a href="#우리는-욕구를-표현하는-법을-모른다" class="headerlink" title="우리는 욕구를 표현하는 법을 모른다"></a>우리는 욕구를 표현하는 법을 모른다</h2><p>비폭력적 대화는 다양한 상황에서 우리 안에서 일어나는 상태(상황)에 적합한 표현을 찾는다</p><p>인간은 무리를 지어 사는 동물이다 즉 인간은 욕구를 채우기 위해 서로에게 도움을 주어야 한다</p><p>사람에게 가장 중요하고 필요하다고 느끼는 욕구는 존중</p><p>내 안에 무엇이 살아 있는가?<br>무엇이 나의 삶을 충만하게 하는가?</p><h2 id="욕구는-삶의-표현이다"><a href="#욕구는-삶의-표현이다" class="headerlink" title="욕구는 삶의 표현이다"></a>욕구는 삶의 표현이다</h2><p>우리의 욕구는 선물이다</p><p>절대 다른 사람의 전략에 의존하지 말라</p><h2 id="스스로를-비난하지-않는다"><a href="#스스로를-비난하지-않는다" class="headerlink" title="스스로를 비난하지 않는다"></a>스스로를 비난하지 않는다</h2><p>인간성의 대부분은 자칼의 언어 혹은 자칼의 사고로 표현 할 수 있다</p><p>내면의 재판관이 자기자신의 소리를 듣게 만들어야 된다</p><p>나 자신을 덜 희생하면서 더 효과적으로 욕구를 좇을수 있는 방법은 없을까?</p><h2 id="삶의-모든-순간에-책임을-갖는-용기"><a href="#삶의-모든-순간에-책임을-갖는-용기" class="headerlink" title="삶의 모든 순간에 책임을 갖는 용기"></a>삶의 모든 순간에 책임을 갖는 용기</h2><p>내면의 결정자가 하는 일은 우리가 품만한 삶을 살웃 있도록 돌보는것</p><p>내면의 재판관이 하는 일은 성공 여부를 판단하는 것</p><p>자신의 결정이 옳고 그른지를 판단하는 것이 아니라 오로지 진실을 보려고 노력해야 하낟</p><p>내면의 결정자가 절대로 관료 영어를 사용하지 않기를 바란다</p><p>너는 선택권이 없어, 시간이 없어… 이런 말을 하지 않는다</p><h2 id="‘쉬운’-일은-삶을-소중하게-만든다"><a href="#‘쉬운’-일은-삶을-소중하게-만든다" class="headerlink" title="‘쉬운’ 일은 삶을 소중하게 만든다"></a>‘쉬운’ 일은 삶을 소중하게 만든다</h2><p>욕구를 충족 시킬수 있는 자신에가 맞는 쉬운 일을 찾자?</p><h1 id="참조"><a href="#참조" class="headerlink" title="참조"></a>참조</h1><hr><ul><li><a href="https://www.yes24.com/Product/Goods/58512315">상처 주지 않는 대화</a></li></ul>]]></content:encoded>
-      
-      <comments>https://sejoung.github.io/2024/05/2024-05-14-Nonviolent_Communication_CHAPTER2/#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>CHAPTER 1  내 안의 감정을 이해한다</title>
-      <link>https://sejoung.github.io/2024/05/2024-05-13-Nonviolent_Communication_CHAPTER1/</link>
-      <guid>https://sejoung.github.io/2024/05/2024-05-13-Nonviolent_Communication_CHAPTER1/</guid>
-      <pubDate>Mon, 13 May 2024 13:28:00 GMT</pubDate>
-      <description>
-      
-        
-        
-          &lt;h1 id=&quot;CHAPTER-1-내-안의-감정을-이해한다&quot;&gt;&lt;a href=&quot;#CHAPTER-1-내-안의-감정을-이해한다&quot; class=&quot;headerlink&quot; title=&quot;CHAPTER 1  내 안의 감정을 이해한다&quot;&gt;&lt;/a&gt;CHAPTER 1  내 안의 
-        
-      
-      </description>
-      
-      <content:encoded><![CDATA[<h1 id="CHAPTER-1-내-안의-감정을-이해한다"><a href="#CHAPTER-1-내-안의-감정을-이해한다" class="headerlink" title="CHAPTER 1  내 안의 감정을 이해한다"></a>CHAPTER 1  내 안의 감정을 이해한다</h1><h2 id="나의-감정은-온전히-내-것이다"><a href="#나의-감정은-온전히-내-것이다" class="headerlink" title="나의 감정은 온전히 내 것이다"></a>나의 감정은 온전히 내 것이다</h2><ul><li>자칼 : 소통하는데 어려움을 느끼게 만드는 사람</li><li>기린 : 진심이 담긴 언어의 상징</li></ul><p>비폭력적대화</p><ul><li>지금 내 안에 무엇이 살아있는가?</li><li>무엇이 내 삶을 충만하게 하는가?</li></ul><p>비폭력적 대화의 4가지 요소</p><ul><li>관찰</li><li>감정 </li><li>욕구 </li><li>부탁</li></ul><p>평가 하지 말고 관찰만 한다</p><p>지금 내감정은 다른 사람과 무관 하다</p><h2 id="내-안에-무엇이-살아-있는가"><a href="#내-안에-무엇이-살아-있는가" class="headerlink" title="내 안에 무엇이 살아 있는가"></a>내 안에 무엇이 살아 있는가</h2><p>나의 삶의 질을 제한하는 것이 다른 사람에게 어떻게 작용되는가?</p><p>어떻게 삶의 질을 향상시킬수 있을까?</p><p>다른 사람에게 부탁하는 것을 어려워 하지 않아야 세상이 변할수 있다</p><h2 id="감정이-아름다운-이유"><a href="#감정이-아름다운-이유" class="headerlink" title="감정이 아름다운 이유"></a>감정이 아름다운 이유</h2><p>다른 사람을 도덕적으로 판단하거나 그에게 어떤 행동을 강압적으로 요구하지 않는 것이 비폭력대화의 전부</p><p>감정과 욕구는 비폭력대화의 핵심 개념</p><h2 id="나의-생각이-분노를-일으킨다"><a href="#나의-생각이-분노를-일으킨다" class="headerlink" title="나의 생각이 분노를 일으킨다"></a>나의 생각이 분노를 일으킨다</h2><p>화가 난 이유가 상대방 때문이 아니다</p><p>내가 내 욕구를 어떻게 표현해야 당신이 나를 비난하지 않겠어요?</p><h2 id="마음껏-분노하라"><a href="#마음껏-분노하라" class="headerlink" title="마음껏 분노하라"></a>마음껏 분노하라</h2><p>자신이 느끼는 분노 뒤에 숨겨진 욕구를 찾는법</p><h2 id="생각이-언어를-낳고-언어가-감정을-낳는다"><a href="#생각이-언어를-낳고-언어가-감정을-낳는다" class="headerlink" title="생각이 언어를 낳고 언어가 감정을 낳는다"></a>생각이 언어를 낳고 언어가 감정을 낳는다</h2><p>대화를 하는데 사용하지 말아야 하는 단어</p><ul><li>맞다 틀리다</li><li>좋다 나쁘다</li><li>정상이다 비정상이다</li><li>능력이 있다 능력이 없다</li></ul><p>정적인 언어?</p><h1 id="참조"><a href="#참조" class="headerlink" title="참조"></a>참조</h1><hr><ul><li><a href="https://www.yes24.com/Product/Goods/58512315">상처 주지 않는 대화</a></li></ul>]]></content:encoded>
-      
-      <comments>https://sejoung.github.io/2024/05/2024-05-13-Nonviolent_Communication_CHAPTER1/#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>LLM 참고 링크</title>
-      <link>https://sejoung.github.io/2024/05/2024-05-10-LLM_link/</link>
-      <guid>https://sejoung.github.io/2024/05/2024-05-10-LLM_link/</guid>
-      <pubDate>Fri, 10 May 2024 05:46:00 GMT</pubDate>
-      <description>
-      
-        
-        
-          &lt;h1 id=&quot;LLM-참고-링크&quot;&gt;&lt;a href=&quot;#LLM-참고-링크&quot; class=&quot;headerlink&quot; title=&quot;LLM 참고 링크&quot;&gt;&lt;/a&gt;LLM 참고 링크&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;https://github.com/karpathy/nanoG
-        
-      
-      </description>
-      
-      <content:encoded><![CDATA[<h1 id="LLM-참고-링크"><a href="#LLM-참고-링크" class="headerlink" title="LLM 참고 링크"></a>LLM 참고 링크</h1><p><a href="https://github.com/karpathy/nanoGPT">nanoGPT</a></p><p><a href="https://github.com/eniompw/DisneyGPT">DisneyGPT</a></p><p><a href="https://github.com/karpathy/minGPT">minGPT</a></p><p><a href="https://github.com/Yngie-C/JasoAI">JasoAI</a></p><p><a href="https://github.com/gyunggyung/KoGPT2-FineTuning">KoGPT2-FineTuning</a></p><p><a href="https://github.com/SKT-AI/KoGPT2">KoGPT2</a></p><p><a href="https://lightning.ai/blog/how-to-finetune-gpt-like-large-language-models-on-a-custom-dataset/">How To Finetune GPT Like Large Language Models on a Custom Dataset</a></p><p><a href="https://littlefoxdiary.tistory.com/118">ChatGPT Fine-tuning 예시 | 언제, 어떻게 해야 하는가</a></p><p><a href="https://github.com/Beomi/KoAlpaca">KoAlpaca</a></p><p><a href="https://github.com/nlpai-lab/KULLM">KULLM (구름): Korea University Large Language Model</a></p><p><a href="https://github.com/0hq/WebGPT">WebGPT</a></p><p><a href="https://github.com/janhq/jan">Jan - Bring AI to your Desktop</a></p><h1 id="참조"><a href="#참조" class="headerlink" title="참조"></a>참조</h1><hr><ul><li><a href="https://www.yes24.com/Product/Goods/125921718">Tidy First?</a></li></ul>]]></content:encoded>
-      
-      <comments>https://sejoung.github.io/2024/05/2024-05-10-LLM_link/#disqus_thread</comments>
     </item>
     
   </channel>
