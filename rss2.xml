@@ -8,8 +8,27 @@
     <atom:link href="/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>잘정리하자</description>
-    <pubDate>Fri, 21 Jun 2024 07:10:40 GMT</pubDate>
+    <pubDate>Wed, 03 Jul 2024 05:59:56 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>COLMAP 설치</title>
+      <link>https://sejoung.github.io/2024/07/2024-07-03-colmap/</link>
+      <guid>https://sejoung.github.io/2024/07/2024-07-03-colmap/</guid>
+      <pubDate>Wed, 03 Jul 2024 00:52:00 GMT</pubDate>
+      <description>
+      
+        
+        
+          &lt;h1 id=&quot;COLMAP-설치&quot;&gt;&lt;a href=&quot;#COLMAP-설치&quot; class=&quot;headerlink&quot; title=&quot;COLMAP 설치&quot;&gt;&lt;/a&gt;COLMAP 설치&lt;/h1&gt;&lt;p&gt;COLMAP은 그래픽 및 명령줄 인터페이스가 있는 범용 구조-모션(SfM) 
+        
+      
+      </description>
+      
+      <content:encoded><![CDATA[<h1 id="COLMAP-설치"><a href="#COLMAP-설치" class="headerlink" title="COLMAP 설치"></a>COLMAP 설치</h1><p>COLMAP은 그래픽 및 명령줄 인터페이스가 있는 범용 구조-모션(SfM) 및 멀티-뷰 스테레오(MVS) 파이프라인입니다.</p><h2 id="설치"><a href="#설치" class="headerlink" title="설치"></a>설치</h2><p>최신 버전은 맥용으로 빌드를 해놓지 않았다 2021년 7월 3일 기준으로. 그래서 직접 빌드를 해야한다.</p><p>아래 종속성 설치</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">brew install \</span><br><span class="line">    cmake \</span><br><span class="line">    ninja \</span><br><span class="line">    boost \</span><br><span class="line">    eigen \</span><br><span class="line">    flann \</span><br><span class="line">    freeimage \</span><br><span class="line">    metis \</span><br><span class="line">    glog \</span><br><span class="line">    googletest \</span><br><span class="line">    ceres-solver \</span><br><span class="line">    qt5 \</span><br><span class="line">    glew \</span><br><span class="line">    cgal \</span><br><span class="line">    sqlite3</span><br></pre></td></tr></table></figure><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/colmap/colmap.git</span><br><span class="line"><span class="built_in">cd</span> colmap</span><br><span class="line"><span class="built_in">export</span> PATH=<span class="string">&quot;/opt/homebrew/opt/qt@5/bin:<span class="variable">$PATH</span>&quot;</span></span><br><span class="line"><span class="built_in">mkdir</span> build</span><br><span class="line"><span class="built_in">cd</span> build</span><br><span class="line">cmake ..  -GNinja -DQt5_DIR=/usr/local/opt/qt/lib/cmake/Qt5</span><br><span class="line">ninja</span><br><span class="line">sudo ninja install</span><br></pre></td></tr></table></figure><h2 id="실행"><a href="#실행" class="headerlink" title="실행"></a>실행</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">colmap gui</span><br></pre></td></tr></table></figure><h1 id="참조"><a href="#참조" class="headerlink" title="참조"></a>참조</h1><hr><ul><li><a href="https://colmap.github.io/install.html">colmap install</a></li><li><a href="https://demuc.de/colmap/">COLMAP – SfM and MVS</a></li><li><a href="https://github.com/kmss1258/Colmap-setup">Colmap-setup</a></li></ul>]]></content:encoded>
+      
+      <comments>https://sejoung.github.io/2024/07/2024-07-03-colmap/#disqus_thread</comments>
+    </item>
     
     <item>
       <title>3D Vision 2</title>
@@ -374,25 +393,6 @@
       <content:encoded><![CDATA[<h1 id="Part-II-문화"><a href="#Part-II-문화" class="headerlink" title="Part II 문화"></a>Part II 문화</h1><h2 id="CHAPTER-2-팀워크-이끌어내기"><a href="#CHAPTER-2-팀워크-이끌어내기" class="headerlink" title="CHAPTER 2 팀워크 이끌어내기"></a>CHAPTER 2 팀워크 이끌어내기</h2><p>반듯이 통제해야 하는 하나의 변수는 자기자신이다</p><p>사람은 간헐적 버그들의 집합</p><h3 id="내-코드를-숨기고-싶어요"><a href="#내-코드를-숨기고-싶어요" class="headerlink" title="내 코드를 숨기고 싶어요"></a>내 코드를 숨기고 싶어요</h3><p>불안감 때문에 코드를 숨기고 싶어 한다</p><h3 id="천재-신화"><a href="#천재-신화" class="headerlink" title="천재 신화"></a>천재 신화</h3><p>천재 신화의 진짜 업적은 사람들을 협업하도록 이끈것이다</p><h3 id="숨기는-건-해롭다"><a href="#숨기는-건-해롭다" class="headerlink" title="숨기는 건 해롭다"></a>숨기는 건 해롭다</h3><p>오롯이 홀로 일한다면 실패할 위험성을 불필요하게 키우고 자신의 성장 잠재력을 속이는 것</p><p>누군가에게 빠르게 보여주면 피드백을 빠르게 받을수 있다</p><p>공유는 조기감지의 기회를 준다<br>버스지수 : 몇 명의 팀원이 버스에 치어서 일을 할 수 없게 될 때 프로젝트가 망하게 되는지를 나타내는 지수</p><p>원점회기 : 문제를 발리 찾을수록 고치는 비용이 낮아 진다</p><p>결론은 숨기지 말자</p><p>홀로 일하기는 함께 일하기 보다 본질적으로 더 위험하다</p><h3 id="모든-건-팀에-달렸다"><a href="#모든-건-팀에-달렸다" class="headerlink" title="모든 건 팀에 달렸다"></a>모든 건 팀에 달렸다</h3><p>비전을 공유하세요. 역활을 나누세요. 다른 이로부터 배우세요</p><p>사회적 상호작용의 세 기둥</p><ul><li>겸손</li><li>존중</li><li>신뢰</li></ul><p>실천 하는 법</p><ul><li>자존심 버리기</li><li>비평하고 비평받는 법 배우기</li><li>빠르게 실패라고 반복하기</li></ul><p>비난 없는 포스트모템 문화</p><ul><li>사건의 개요</li><li>사건을 인지하고 해결에 이르기 까지의 타임라인</li><li>사건의 근본 원인</li><li>영향과 피해 평가</li><li>문제를 즉시 해결하기 위한 조치 항목(소유자 명시)</li><li>재발 방지를 위한 조치 항목</li><li>해당 경험에서 얻은 교훈</li></ul><p>인내심을 기르자<br>마음을 열고 받아 드리자</p><p>구글 답게 하기</p><ul><li>모호함을 뚫고 번창한다</li><li>피드백을 소중히 한다</li><li>저항을 극복한다</li><li>사용자를 우선한다</li><li>팀에 관심을 기울인다</li><li>옳은 일을 한다</li></ul><h1 id="참조"><a href="#참조" class="headerlink" title="참조"></a>참조</h1><hr><ul><li><a href="https://www.yes24.com/Product/Goods/109182479">구글 엔지니어는 이렇게 일한다</a></li></ul>]]></content:encoded>
       
       <comments>https://sejoung.github.io/2024/05/2024-05-21-Software_Engineering_at_Google_CHAPTER_2/#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>CHAPTER 1 소프트웨어 엔지니어링이란?</title>
-      <link>https://sejoung.github.io/2024/05/2024-05-20-Software_Engineering_at_Google_CHAPTER_1/</link>
-      <guid>https://sejoung.github.io/2024/05/2024-05-20-Software_Engineering_at_Google_CHAPTER_1/</guid>
-      <pubDate>Mon, 20 May 2024 04:47:00 GMT</pubDate>
-      <description>
-      
-        
-        
-          &lt;h1 id=&quot;Part-I-전제&quot;&gt;&lt;a href=&quot;#Part-I-전제&quot; class=&quot;headerlink&quot; title=&quot;Part I 전제&quot;&gt;&lt;/a&gt;Part I 전제&lt;/h1&gt;&lt;h2 id=&quot;CHAPTER-1-소프트웨어-엔지니어링이란&quot;&gt;&lt;a href=&quot;#CH
-        
-      
-      </description>
-      
-      <content:encoded><![CDATA[<h1 id="Part-I-전제"><a href="#Part-I-전제" class="headerlink" title="Part I 전제"></a>Part I 전제</h1><h2 id="CHAPTER-1-소프트웨어-엔지니어링이란"><a href="#CHAPTER-1-소프트웨어-엔지니어링이란" class="headerlink" title="CHAPTER 1 소프트웨어 엔지니어링이란?"></a>CHAPTER 1 소프트웨어 엔지니어링이란?</h2><p>프로그래밍과 소프트웨어 엔지니어링의 가장 큰 차이</p><ul><li>시간</li><li>확장</li><li>트레이드오프</li></ul><p>소프트웨어 엔지니어링은 흐르는 시간 위에서 순간순간의 프로그래밍을 모두 합산한것</p><p>이 코드의 예상 수명은?</p><ul><li>지속가능성</li></ul><p>소프트웨어 프로젝트의 팀 조직, 프로젝트 구성, 정책과 관례는 모두 소프트웨어 엔지니어링의 복잡성을 좌우 한다<br>이문제들은 모두 규모와 관련이 깊다</p><h3 id="시간과-변경"><a href="#시간과-변경" class="headerlink" title="시간과 변경"></a>시간과 변경</h3><p>단명하는 코드도 있고 장수 하는 코드도 있다</p><p>수명이 길어질수록 동작한다와 유지보수 가능하다의 차이를 더 분명하게 인지해야 한다</p><ul><li>하이럼의 법칙<ul><li>API 사용자가 충분히 많다면 API명세에 적힌 내용은 중요하지 않다</li><li>시간의 흐름에 따른 변경과 유지 보소를 논하려면 하이럼의 법칙을 알아야 된다</li><li>해시순서</li><li>모법사례를 따르고 미래에 대비한 코드는 클린하고 유지보수 가능한 코드 이다</li></ul></li><li>변하지 않기를 목표로 하지 않는이유<ul><li>변경은 피할 수 없다라는 가정은 정말 그럴까?<h3 id="규모-확장과-효율성"><a href="#규모-확장과-효율성" class="headerlink" title="규모 확장과 효율성"></a>규모 확장과 효율성</h3>구글이 운영하는 시스템은 인류가 만든 가장 복잡한 머신이다</li></ul></li></ul><p>변경비용이 시간 흐름보다 가파르게 상승하는 시스템은 분명 확장 가능하지 않습니다<br>비욘세 규칙(CI 시스템에 테스트를 추가해 놓지 않으면 인프라팀 책임이 아니다)</p><p>코드베이스의 유연성에 영향을 주는 여러 요인</p><ul><li>전문성</li><li>안정성</li><li>순응</li><li>익숙함</li><li>정책</li></ul><p>원점회기 : 개발과정에서 문제를 일찍 발견할수록 비용이 적게 든다</p><h3 id="트레이드오프와-비용"><a href="#트레이드오프와-비용" class="headerlink" title="트레이드오프와 비용"></a>트레이드오프와 비용</h3><p>잘못된 결정이라 판단될때 찾아가야할 사람들의 에스컬레이션 경로도 명시해야 된다</p><p>비용</p><ul><li>금융비용</li><li>리소스 비용</li><li>인적 비용</li><li>거래 비용</li><li>기뢰 비용</li><li>사회적 비용</li></ul><p>엔지리어닝 조직의 선택을 결정짓는 요인</p><ul><li>반드시 해야 하는일</li><li>근거에 기반하여 당시에 내릴수 있는 최선의 선택</li></ul><p>제펀스의 역설 : 효율이 좋아지면 자원소비가 늘어난다</p><p>잘못을 인정할줄 아는 리더가 더 존경받는다</p><h3 id="소프트웨어-엔지니어링-vs-프로그래밍"><a href="#소프트웨어-엔지니어링-vs-프로그래밍" class="headerlink" title="소프트웨어 엔지니어링 vs 프로그래밍"></a>소프트웨어 엔지니어링 vs 프로그래밍</h3><p>주어진 과업을 쉽게 해결할수 있고 당장 활용할수 있는 방법을 찾으세요</p><h1 id="참조"><a href="#참조" class="headerlink" title="참조"></a>참조</h1><hr><ul><li><a href="https://www.yes24.com/Product/Goods/109182479">구글 엔지니어는 이렇게 일한다</a></li></ul>]]></content:encoded>
-      
-      <comments>https://sejoung.github.io/2024/05/2024-05-20-Software_Engineering_at_Google_CHAPTER_1/#disqus_thread</comments>
     </item>
     
   </channel>

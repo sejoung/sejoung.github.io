@@ -3,6 +3,13 @@
 
 
     <url>
+        <loc>https://sejoung.github.io/tags/COLMAP/</loc>
+        <lastmod>2024-07-03T05:59:56.829Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>https://sejoung.github.io/tags/3D-Vision/</loc>
         <lastmod>2024-06-21T07:10:40.615Z</lastmod>
         <changefreq>weekly</changefreq>
