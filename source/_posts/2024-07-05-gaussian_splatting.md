@@ -26,7 +26,7 @@ colmap을 사용해서 3D reconstruction을 하고 나서 3D Gaussian Splatting�
         |---images.bin
         |---points3D.bin
 ```
-
+ ㅇ --ㅎ
 위에 폴더 구조를 따라야 된다.
 
 ```
