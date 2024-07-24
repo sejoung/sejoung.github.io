@@ -9,6 +9,22 @@
 
 
     <url>
+        <loc>https://sejoung.github.io/2024/07/2024-07-24-Software_Engineering_at_Google_CHAPTER_14/</loc>
+        <lastmod>2024-07-24T01:58:58.367Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/2024/07/2024-07-09-Software_Engineering_at_Google_CHAPTER_13/</loc>
+        <lastmod>2024-07-09T01:54:18.815Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://sejoung.github.io/2024/07/2024-07-05-gaussian_splatting/</loc>
         <lastmod>2024-07-08T05:34:08.114Z</lastmod>
         <changefreq>weekly</changefreq>
