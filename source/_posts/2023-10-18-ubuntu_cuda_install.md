@@ -146,3 +146,4 @@ sudo mokutil --sb-state
 * [cuda_11.8_installation_on_Ubuntu_22.04](https://gist.github.com/MihailCosmin/affa6b1b71b43787e9228c25fe15aeba)
 * [Different CUDA versions shown by nvcc and NVIDIA-smi](https://itecnote.com/tecnote/different-cuda-versions-shown-by-nvcc-and-nvidia-smi/)
 * [UEFI Secure Boot](https://docs.nvidia.com/networking/display/bluefielddpuosv385/uefi+secure+boot)
+* [cuda-installation-guide-linux](https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html#local-repo-installation-for-ubuntu)
