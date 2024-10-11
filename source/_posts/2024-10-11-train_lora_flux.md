@@ -20,3 +20,4 @@ sitemap:
 * [ai-toolkit](https://github.com/ostris/ai-toolkit)
 * [Kasucast #26 - FLUX.1 [dev]: Training LoRA with SimpleTuner and AI-Toolkit](https://www.youtube.com/watch?v=se3qpLkJnrk)
 * [Stable Diffusion 3 Medium Fine-tuning Tutorial](https://stability.ai/learning-hub/stable-diffusion-3-medium-fine-tuning-tutorial)
+* [OneTrainer](https://github.com/Nerogar/OneTrainer)
