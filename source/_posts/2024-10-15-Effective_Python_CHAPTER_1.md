@@ -160,8 +160,76 @@ for i, flavor in enumerate(flavors, 1):
 ```
 
 ## Better way 8 여러 이터레이터에 대해 나란히 루프를 수행하려면 zip을 사용하라
+
+```
+for name, count in zip(names, counts):
+    print(name, count)
+
+```
+
+zip 제너레이션은 각 이터레이터의 다음값이 있는 튜플을 반환한다
+
+zip은 입력 이터레이터들 중 가장 짧은 이터레이터가 끝날 때 멈춘다
+
 ## Better way 9 for나 while 루프 뒤에 else 블록을 사용하지 말라
+
+파이썬은 루프가 완전히 실행되고 나면 else 블록을 실행한다
+
+```
+for i in range(3):
+    print('Loop', i)
+else:
+    print('Else block!')    
+```
+
+하지만 break 문을 사용하면 else 블록은 실행되지 않는다
+
+```
+for i in range(3):
+    print('Loop', i)
+    if i == 1:
+        break
+else:
+    print('Else block!')
+    
+```
+
+또 빈 시퀀스에 대한 루프를 실행할 때도 else 블록이 실행된다
+
+```
+
+for x in []:
+    print('Never runs')
+else:
+    print('For Else block!')
+
+```
+
+while 루프에도 값이 false면 바로 else 블록을 실행한다
+
+```
+while False:
+    print('Never runs')
+else:
+    print('While Else block!')
+```
+
+위처럼 동작이 직관적이지 않고 혼동을 야기 할수 있다
+
 ## Better way 10 대입식을 사용해 반복을 피하라
+
+assignment expression이며 walrus operator라고도 한다
+
+* 대입식에서는 왈러스 연산자(:=)를 사용해서 변수에 값을 대입하면서 동시에 이 값을 평가할 수 있고 중복을 줄일수 있다
+* 대입식이 더 큰 식의 일부분으로 쓰일 때는 괄호로 둘러싸야 한다
+* 파이썬에서는 switch/case 문이나 do/while 루프가 없지만 대입식을 활용해서 이방법을 깔끔하게 흉내 낼수 있다
+
+```
+bottles = []
+while fresh_fruit := pick_fruit():
+    bottles.append(fresh_fruit.make_juice())
+```
+
 
 
 
