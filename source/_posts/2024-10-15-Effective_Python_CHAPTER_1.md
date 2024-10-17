@@ -108,8 +108,57 @@ print(f'내가 고른 숫자? {number:.{place}f}')
 * boolean 연산자나 or, and를 식에 사용하는 것 보다 if/else 문을 사용하는 것이 가독성이 좋다
 
 ## Better way 6 인덱스를 사용하는 대신 대입을 사용해 데이터를 언패킹하라
+파이썬에는 값으로 이뤄진 불변 순서쌍을 만들어낼 수 있는 tuple이 있다
 
-## Better way 7 range보다는 enumerate를 사용하라 066
+튜플이 만들어지면 인덱스를 통해 새 값을 대입해서 튜플을 변경할수는 없다
+
+언패킹
+```
+item = ('apple', 5)
+name, count = item
+print(name, count)
+
+```
+
+```
+def bubble_sort(a):
+    for _ in range(len(a)):
+        for i in range(1, len(a)):
+            if a[i] < a[i-1]:
+                a[i-1], a[i] = a[i], a[i-1]
+                
+names = ['pretzels', 'carrots', 'arugula', 'bacon']
+bubble_sort(names)
+print(names)
+# ['arugula', 'bacon', 'carrots', 'pretzels']
+```
+
+```
+for rank, (name, count) in enumerate(results, 1):
+    print(f'{rank}: {name} -> {count}')
+```
+
+## Better way 7 range보다는 enumerate를 사용하라 
+range 함수는 어떤 정수의 집합을 이터레이션 하는 루프가 필요 할 때 유용하다
+
+enumerate 함수는 이터레이터를 감싸서 이터레이터가 생성하는 각 아이템의 값과 인덱스를 함께 반환한다
+
+``` 
+flavors = ['one', 'two', 'three']
+
+it = enumerate(flavors)
+print(next(it))
+print(next(it))
+print(next(it))
+
+for i, flavor in enumerate(flavors):
+    print(f'{i+1}: {flavor}')
+    
+for i, flavor in enumerate(flavors, 1):
+    print(f'{i}: {flavor}')
+
+```
+
 ## Better way 8 여러 이터레이터에 대해 나란히 루프를 수행하려면 zip을 사용하라
 ## Better way 9 for나 while 루프 뒤에 else 블록을 사용하지 말라
 ## Better way 10 대입식을 사용해 반복을 피하라
