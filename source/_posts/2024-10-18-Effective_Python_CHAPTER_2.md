@@ -58,8 +58,6 @@ assert a[5:] == a[5:len(a)]
 
 ## Better way 18 __missing__을 사용해 키에 따라 다른 디폴트 값을 생성하는 방법을 알아두라
 
-* 출처 : 예스24 <https://www.yes24.com/Product/Goods/94197582>
-
 
 # 참조
 -----
