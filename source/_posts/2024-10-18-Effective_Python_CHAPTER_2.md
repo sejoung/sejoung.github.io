@@ -48,11 +48,61 @@ assert a[5:] == a[5:len(a)]
 
 ## Better way 13 슬라이싱보다는 나머지를 모두 잡아내는 언패킹을 사용하라
 
+```python
+
+car_ages = [0, 9, 4, 8, 7, 20, 19, 1, 6, 15]
+car_ages_descending = sorted(car_ages, reverse=True)
+
+```
+아래 코드는 시작적으로 노이즈가 많다
+그래서 인덱스에 대한 오류를 만들어 내기 쉽다
+```python
+
+oldest = car_ages_descending[0]
+second_oldest = car_ages_descending[1]
+ohers = car_ages_descending[2:]
+
+```
+
+이런 상황을 더 잘 다룰 수 있도록 파이썬은 별표식을 사용해 모든 값을 담는 언패킹을 할 수 있게 지원 한다
+
+```python
+oldest, second_oldest, *others = car_ages_descending
+
+```
+
+별표식은 다른 위치에도 쓸수 있다
+
+```python
+oldest, *others, youngest = car_ages_descending
+*others, second_youngest, youngest = car_ages_descending
+```
+한 수준의 언패킹에 별표식 2개 이상 쓸수 없다
+
+별표식은 항상 list 인스턴스가 된다
+
 ## Better way 14 복잡한 기준을 사용해 정렬할 때는 key 파라미터를 사용하라
+
+* 리스트 타입에 들어 있는 sort 메서드를 사용하면 원소 타입이 문자열 정수 튜플 등로가 같은 내장 타입인 경우 자연스러운 순서로 리스트의 원소를 정렬할 수 있다
+* 원소 타입에 특별 메서드를 통해 자연스러운 순서가 정의되 있지 않으면 sort 메서드는 예외를 일으킨다
+* sort 메서드에서 key 파라미터를 사용하면 리스트의 각 원소 대신 비교에 사용할 객체를 반환하는 도우미 함수를 제공할 수 있다
+* key 함수에서 튜플을 반환하면 여러 정렬 기준을 하나로 역을수 있다
+
 
 ## Better way 15 딕셔너리 삽입 순서에 의존할 때는 조심하라
 
+* 파이썬 3.6 이전에는 딕셔너리의 순서가 삽입 순서에 의존하지 않는다는 사실을 명시적으로 문서화하지 않았다
+* 파이썬 3.7부터는 딕셔너리의 순서가 삽입 순서에 의존한다는 사실을 문서화했다
+* 파이썬은 dict는 아니지만 딕셔너리와 비슷한 객체를 쉽게 만들 수 있게 해준다
+* 딕셔너리와 비슷한 클래스를 조심스럽게 다루는 방법은 
+  * dict 인스턴스의 삽입 순서에 의존하지 않는 방법
+  * 실행 시점에 명시적으로 타입검사를 하는것
+  * 타입 애너테이션과 정적 분석을 사용해 dict 값을 요구하는 법
+
 ## Better way 16 in을 사용하고 딕셔너리 키가 없을 때 KeyError를 처리하기보다는 get을 사용하라
+* 딕셔너리가 없는 경우를 처리하는 방법으로 in식을 사용하는 방법 keyError를 처리하는 방법으로 get을 사용하는 방법이 있다
+* 카운터와 같이 기본적인 타입의 값이 들어가는 딕셔너리를 다룰 때는 get 메서드를 사용하는 것이 더 깔끔하다
+* setdefault 메서드 대신 defaultdict를 사용하면 더 간결하게 딕셔너리를 다룰 수 있다
 
 ## Better way 17 내부 상태에서 원소가 없는 경우를 처리할 때는 setdefault보다 defaultdict를 사용하라
 
