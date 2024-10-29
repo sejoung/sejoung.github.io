@@ -78,43 +78,41 @@ If you want to see the full list of options available, you can check the [OPTION
 ```
 
 
-In addition, I’m using one of the latest main branches of `SimpleTuner` instead of a [release branch](https://github.com/bghira/SimpleTuner/tree/release) as I wanted to keep it as up-to-date as possible. This is the commit hash (10/15/2024):
 
+또한, [릴리스 브랜치](https://github.com/bghira/SimpleTuner/tree/release) 대신 `SimpleTuner`의 최신 메인 브랜치 중 하나를 사용하고 있습니다. 가능한 한 현재까지. 커밋 해시(2024년 10월 15일)는 다음과 같습니다.
 ```
 694784083c70bf81086bb3ceba86262b7b22757d
 ```
 
 ### Python Dependencies
 
-To install the dependencies, follow the [quickstart guide](https://github.com/bghira/SimpleTuner/blob/main/documentation/quickstart/SD3.md) for SD3 on the repository page. I’ll  go over it here as well and add an alternative installation method as well. The dependency installation can be pretty straightforward if you have matching `CUDA` versions as `SimpleTuner` (`12.4+`), or it can be a little more convoluted if you’re on an older version of `CUDA`.
+종속성을 설치하려면 저장소 페이지에서 SD3용 [빠른 시작 가이드](https://github.com/bghira/SimpleTuner/blob/main/documentation/quickstart/SD3.md)를 따르세요. 여기에서도 살펴보고 대체 설치 방법도 추가하겠습니다. `SimpleTuner`(`12.4+`)와 일치하는 `CUDA` 버전이 있는 경우 종속성 설치가 매우 간단할 수 있지만 `CUDA`의 이전 버전을 사용하는 경우 조금 더 복잡해질 수 있습니다.
 
-First of all, `git clone` the repository.
+우선 저장소를 `git clone`합니다.
 
-```jsx
+```
 git clone https://github.com/bghira/SimpleTuner.git
 ```
 
-`cd` into the repository.
-
-```jsx
+```
 cd SimpleTuner
 ```
 
-Finally, check out the commit hash I mentioned above. In case you want to do any debugging, let’s go ahead and create a branch out of it (named `base_branch`, feel free to rename).
 
-```jsx
+마지막으로 위에서 언급한 커밋 해시를 확인하세요. 디버깅을 하고 싶다면 계속해서 분기를 생성해 보겠습니다('base_branch'라는 이름, 자유롭게 이름을 바꾸세요).
+
+```
 git checkout -b base_branch 694784083c70bf81086bb3ceba86262b7b22757d
 ```
 
-Double-check that you are on the new branch. It should tell you that you are on `base_branch` now.
 
-```jsx
+```
 git branch
 ```
 
-Once you’re on your new branch, it’s time to create a python virtual environment. It’s recommended that you be on `python 3.11` when installing your dependencies.
+새 지점에 있으면 Python 가상 환경을 만들 차례입니다. 종속성을 설치할 때 `python 3.11`을 사용하는 것이 좋습니다.
 
-You can check your `OS` and `CUDA` environments using these commands, respectively:
+각각 다음 명령을 사용하여 `OS` 및 `CUDA` 환경을 확인할 수 있습니다.
 
 ```bash
 uname -a
@@ -124,68 +122,53 @@ uname -a
 nvcc --version
 ```
 
-My `OS`/`CUDA` environment is:
-
-```jsx
-Ubuntu 20.04.6 LTS
-NVIDIA-SMI 535.161.08
-Driver Version: 535.161.08
-CUDA Version: 12.2 
-```
-
-Check your python version with:
-
-```jsx
+```bash
 python --version
 ```
 
-My python version is:
 
-```jsx
-Python 3.11.6
+`SimpleTuner` 디렉터리의 루트에 이 명령을 사용하여 `virtualenv`를 만듭니다.
+
 ```
-
-Create a `virtualenv` using this command in the root of the `SimpleTuner` directory:
-
-```jsx
 python -m venv .venv
 ```
 
 Activate it with:
 
-```jsx
+```
 source .venv/bin/activate
 ```
 
-Once that’s completed, install `poetry` (a dependency manager similar to `pip` or `uv` )
+완료되면 `poetry`(`pip` 또는 `uv`와 유사한 종속성 관리자)를 설치합니다.
 
-```jsx
+```
 pip install -U poetry pip
 ```
 
-`bghira` recommends that you run this command just to be safe:
+`bghira`는 안전을 위해 이 명령을 실행할 것을 권장합니다:
 
-```jsx
+```
 poetry config virtualenvs.create false
 ```
 
-As I’m using `Linux` , the next step is installing all your dependencies with this command:
+저는 `Linux`를 사용하고 있으므로 다음 단계는 다음 명령을 사용하여 모든 종속성을 설치하는 것입니다.
 
 ```jsx
 poetry install
 ```
 
-However, SD3.5 Large depends on a specific commit of `diffusers` (probably newer versions will work too). Make sure you are using a version that includes this [commit](https://github.com/huggingface/diffusers/commit/e2d037bbf1388fdc172458bed7a8a58b34fc6f84) or later.
+
+그러나 SD3.5 Large는 `diffusers`의 특정 커밋에 따라 달라집니다(아마도 최신 버전도 작동할 것입니다). 이 [커밋](https://github.com/huggingface/diffusers/commit/e2d037bbf1388fdc172458bed7a8a58b34fc6f84) 이상이 포함된 버전을 사용하고 있는지 확인하세요.
 
 ```markdown
 e2d037bbf1388fdc172458bed7a8a58b34fc6f84
 ```
 
-This is subject to change as `bghira` and his team updates the SimpleTuner repository very quickly. To ensure that you’re using the correct version of `diffusers` , change the `pyproject.toml` file in your `SimpleTuner` directory to use the correct commit.
 
-- Custom `pyproject.toml` with the correct `diffusers` version
+이는 'bghira'로 변경될 수 있으며 그의 팀은 SimpleTuner 저장소를 매우 빠르게 업데이트합니다. 올바른 버전의 `diffusers`를 사용하고 있는지 확인하려면 `SimpleTuner` 디렉터리의 `pyproject.toml` 파일을 변경하여 올바른 커밋을 사용하세요.
 
-    ```toml
+
+```toml
     [tool.poetry]
     name = "simpletuner"
     version = "1.1.0"
@@ -248,10 +231,11 @@ This is subject to change as `bghira` and his team updates the SimpleTuner repos
     name = "pytorch"
     url = "https://download.pytorch.org/whl/cu124"
     
-    ```
+```
 
 
-The change was this one:
+
+변경 사항은 다음과 같습니다.
 
 Old
 
@@ -265,46 +249,44 @@ New
 diffusers = {git = "https://github.com/huggingface/diffusers", rev = "e2d037b"}
 ```
 
-You should have all the necessary `SimpleTuner` dependencies installed now.
+이제 필요한 `SimpleTuner` 종속성이 모두 설치되어 있어야 합니다.
+- 
+- [**🚨](https://emojipedia.org/police-car-light)** 컴퓨터 환경에서 'CUDA 12.4' 이상이 아닌 경우 'SimpleTuner'가 'CUDA 12.4' 이상이라는 가정하에 작동하므로 CUDA 종속성 문제가 발생할 수 있습니다. 앞서 알아차리셨다면 저는 `CUDA 12.2`를 사용 중이었고 `poetry install` 문제가 발생했습니다.
+    - 이 단락을 펼치고 **대체** 설치 지침을 보려면 ▷를 클릭하세요.
 
-- [**🚨](https://emojipedia.org/police-car-light)** If you’re not on `CUDA 12.4` or above on your machine environment, you may encounter CUDA dependency issues as `SimpleTuner` operates under the assumption that you are on `CUDA 12.4` or above. If you noticed earlier, I was on `CUDA 12.2` , and ran into an issue with`poetry install`.
-    - Click the ▷ to unfold this paragraph and see **alternative** installation instructions.
+      대신, 제가 한 일은 기본 `torch` 종속성을 먼저 설치한 다음 `pyproject.toml`의 나머지 종속성을 포함하는 `requirements.txt` 파일을 만드는 것이었습니다. 그런 다음 해당 텍스트 파일에 `pip install`을 실행했습니다.
 
-      Instead, what I did was install my default `torch` dependencies first, then create a `requirements.txt` file that had the rest of the dependencies from the `pyproject.toml`. Then, I ran `pip install` on that text file.
-
-      If you tried `poetry install` first and ran into issues, I suggest removing the existing `virtualenv` and installing it again.
-
-        ```jsx
+      `poetry install`을 먼저 시도하고 문제가 발생했다면 기존 `virtualenv`를 제거하고 다시 설치하는 것이 좋습니다.
+        ```bash
         rm -rf .venv
         ```
 
-        ```jsx
+        ```bash
         python -m venv .venv
         ```
 
-        ```jsx
+        ```bash
         source .venv/bin/activate
         ```
 
-      Now, install your torch dependencies first according to your `CUDA` version. CUDA 12.1 works for me as it’s a lower version compared to my environment of `CUDA 12.2` .
+        이제 'CUDA' 버전에 따라 먼저 토치 종속성을 설치하세요. CUDA 12.1은 내 환경인 'CUDA 12.2'에 비해 낮은 버전이므로 나에게 적합합니다.
 
-        ```jsx
+        ```bash
         pip install torch==2.4.1+cu121 torchvision==0.19.1+cu121 torchaudio==2.4.1+cu121 --index-url https://download.pytorch.org/whl/cu121
         ```
 
-      You may notice that there is an appended `cu121` . This specifies the `CUDA` version. Change it accordingly for your version of `CUDA` .
+      'cu121'이 추가된 것을 볼 수 있습니다. 이는 'CUDA' 버전을 지정합니다. `CUDA` 버전에 맞게 변경하세요.
+      그런 다음 `torchao`를 설치합니다.
 
-      Afterwards, install `torchao` :
-
-        ```jsx
+        ```bash
         pip install torchao --extra-index-url https://download.pytorch.org/whl/cu121
         ```
 
-      Now, create a `requirements.txt` file in the root of your `SimpleTuner` directory.
+      이제 `SimpleTuner` 디렉터리 루트에 `requirements.txt` 파일을 만듭니다.
 
         - `requirements.txt`
 
-            ```markdown
+            ```text
             diffusers @ git+https://github.com/huggingface/diffusers.git@e2d037b
             transformers==4.45.1
             datasets==3.0.1
@@ -342,49 +324,43 @@ You should have all the necessary `SimpleTuner` dependencies installed now.
             lm-eval==0.4.4
             ```
 
-
-        Once that’s completed, install your dependencies:
+        완료되면 종속성을 설치하십시오.
         
-        ```jsx
+        ```bash
         pip install -r requirements.txt
         ```
-        
-        You should have all the necessary dependencies installed now.
+
+       이제 필요한 모든 종속성이 설치되어 있어야 합니다.
 
 
 ### Model Dependencies
 
-This time, the base checkpoint as well as the diffusers are all packaged together nicely in this Hugging Face [repository](https://huggingface.co/stabilityai/stable-diffusion-3.5-large) named `stabilityai/stable-diffusion-3.5-large`.
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/4e8dae13-2612-4518-91a4-53485ccdba7c/7dc0cc81-37f0-4827-aeff-2ba5cf9639ed/image.png)
+이번에는 기본 체크포인트와 디퓨저가 `stabilityai/stable-diffusion-'이라는 Hugging Face [저장소](https://huggingface.co/stabilityai/stable-diffusion-3.5-large)에 모두 잘 패키지되어 있습니다. 
 
-The previous `stabilityai/stable-diffusion-3-medium-diffusers` directory organization looked something like this:
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/4e8dae13-2612-4518-91a4-53485ccdba7c/91356702-56bc-4282-9492-fc030a370f98/image.png)
 
-Just set your `MODEL_NAME` (if using`config.env`) or `--pretrained_model_name_or_path` (if using `config.json`) to `stabilityai/stable-diffusion-3.5-large`. `SimpleTuner` will pull the model from Hugging Face for you and store it in the `.cache` directory in your home directory.
+`MODEL_NAME`(`config.env`를 사용하는 경우) 또는 `--pretrained_model_name_or_path`(`config.json`을 사용하는 경우)를 `stabilityai/stable-diffusion-3.5-large`로 설정하세요. `SimpleTuner`는 Hugging Face에서 모델을 가져와 홈 디렉토리의 `.cache` 디렉토리에 저장합니다.
 
-```markdown
+```bash
 ~/.cache/huggingface/hub 
 ```
 
-The model files will show up something like this inside the `~/.cache/huggingface/hub/models--stabilityai--stable-diffusion-3.5-large/snapshots/hash` like so:
-
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/4e8dae13-2612-4518-91a4-53485ccdba7c/0f877456-4463-461e-af4b-a7902781086f/image.png)
+모델 파일은 `~/.cache/huggingface/hub/models--stabilityai--stable-diffusion-3.5-large/snapshots/hash` 내에 다음과 같이 표시됩니다.
 
 ### Configuration setup (high-level)
 
-If you are coming from an older version of `SimpleTuner`, the high-level configuration file setup has changed significantly. However, the internal [OPTIONS.MD](https://github.com/bghira/SimpleTuner/blob/main/OPTIONS.md#environment-configuration-variables) still remain the same.
+이전 버전의 'SimpleTuner'에서 오시는 경우 상위 수준 구성 파일 설정이 크게 변경되었습니다. 그러나 내부 [OPTIONS.MD](https://github.com/bghira/SimpleTuner/blob/main/OPTIONS.md#environment-configuration-variables)는 여전히 동일하게 유지됩니다.
 
-[**⚠️](https://emojipedia.org/warning) Notably**, if you just follow the [SD3 quickstart](https://github.com/bghira/SimpleTuner/blob/main/documentation/quickstart/SD3.md), you may not get the full picture of how exactly the configuration files should be set up. The [INSTALL.MD](https://github.com/bghira/SimpleTuner/blob/main/INSTALL.md) file from `SimpleTuner` gives a full picture of how exactly the configuration file system works.
+[**⚠️](https://emojipedia.org/warning) 특히**, [SD3 빠른 시작](https://github.com/bghira/SimpleTuner/blob/main/documentation/quickstart/)만 따르면 됩니다. SD3.md) 구성 파일을 정확히 어떻게 설정해야 하는지 전체 그림을 얻지 못할 수도 있습니다. `SimpleTuner`의 [INSTALL.MD](https://github.com/bghira/SimpleTuner/blob/main/INSTALL.md) 파일은 구성 파일 시스템이 정확히 어떻게 작동하는지에 대한 전체 그림을 제공합니다.
 
-Before we go further, I want to touch upon how training actually starts. From the quickstart, it says that you run it with:
+더 진행하기 전에 실제로 훈련이 어떻게 시작되는지 알아보고 싶습니다. 빠른 시작에서는 다음을 사용하여 실행한다고 나와 있습니다.
 
 ```bash
 bash train.sh
 ```
 
-- The default [train.sh](http://train.sh) is provided here:
+- 기본 [train.sh](http://train.sh)가 여기에 제공됩니다.
 
     ```bash
     #!/usr/bin/env bash
@@ -495,27 +471,23 @@ bash train.sh
     ```
 
 
-This is the general flow.
+이것이 일반적인 흐름입니다.
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/4e8dae13-2612-4518-91a4-53485ccdba7c/8c7f41e0-1bc4-41d9-9caa-9bbd4a058c91/image.png)
+처음에는 `SimpleTuner/config` 디렉토리에서 `config.env`를 소스로 사용합니다. 이는 `gpus` 수와 같은 중요한 설정이 포함된 상위 수준 `config.env`가 있고 보다 세부적인 설정이 포함된 `config.json` 또는 `config.env`와 같은 하위 수준 구성이 있기 때문에 혼란스럽습니다. 설정(예: `model_family`, `learning_rate` 등).
 
-At the very beginning, it sources a `config.env` from the `SimpleTuner/config` directory. This is confusing because you have a high-level `config.env` with overarching settings such as number of `gpus`, and then your low-level config such as `config.json` or `config.env` with your more granular settings (i.e. `model_family`, `learning_rate`, etc.).
+그러나 저장소를 `git clone`하면 `config.env` 파일이 표시되지 않습니다.
 
-However, if you `git clone` the repository, you will not see a `config.env` file.
+내 테스트에서는 실제로 [INSTALL.MD](https://github.com/bghira/SimpleTuner/blob/main/INSTALL.md)에 따라 상위 수준 `config.env`를 생성할 필요가 없습니다. , 하지만 `config` 폴더 내에서 폴더를 동적으로 전환하는 데 도움이 되므로 그렇게 하는 것이 좋습니다.
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/4e8dae13-2612-4518-91a4-53485ccdba7c/578bc16b-4ff9-458e-ad51-6a764acb31da/image.png)
+`config` 디렉터리에 `config.env` 파일을 만듭니다.
 
-In my testing, you don’t need to actually create a high-level `config.env` according to the [INSTALL.MD](https://github.com/bghira/SimpleTuner/blob/main/INSTALL.md), but I highly recommend to do so as it helps you dynamically switch folders within the `config` folder.
-
-Create the `config.env` file inside your `config` directory:
-
-```jsx
+```bash
 vim SimpleTuner/config/config.env
 ```
 
 - High-level `config.env`
 
-    ```jsx
+    ```bash
     TRAINING_NUM_PROCESSES=1
     TRAINING_NUM_MACHINES=1
     TRAINING_DYNAMO_BACKEND='no'
@@ -525,17 +497,16 @@ vim SimpleTuner/config/config.env
     ```
 
 
-If I run this:
-
-```jsx
+```bash
 bash train.sh
 ```
 
-`SimpleTuner` will search inside the `ENV` directory for a `config.json`, which is the `config` directory. The reason being, in the master `config.env` file, `ENV` was set to `default` , which means `SimpleTuner/config`.
 
-You might also ask, why does it look for `config.json`? Well, if you look at this code block from the [`train.sh`](http://train.sh) file, you’ll see that it looks for this file depending on what you specified as the `CONFIG_BACKEND` in the master `config.env` file:
+`SimpleTuner`는 `ENV` 디렉토리 내에서 `config` 디렉토리인 `config.json`을 검색합니다. 그 이유는 마스터 `config.env` 파일에서 `ENV`가 `default`로 설정되어 있기 때문입니다. 이는 `SimpleTuner/config`를 의미합니다.
 
-```jsx
+'config.json'을 찾는 이유가 무엇인지 물어볼 수도 있습니다. 음, [`train.sh`](http://train.sh) 파일에서 이 코드 블록을 보면, `CONFIG_BACKEND`로 지정한 내용에 따라 이 파일을 찾는다는 것을 알 수 있습니다. 마스터 `config.env` 파일:
+
+```bash
 if [ -z "${CONFIG_BACKEND}" ]; then
     export CONFIG_BACKEND="env"
     export CONFIG_PATH="config/${ENV_PATH}config"
@@ -550,11 +521,12 @@ if [ -z "${CONFIG_BACKEND}" ]; then
 fi
 ```
 
-You might also wonder, can I change the name of the `config.*`? Can I use `config_fantasy_art_lora_01.*`? What about `config_fantasy_art_full_01.*`?
 
-Sadly, it seems like you cannot. Even if you change the name of your `config.*` in the `train.sh`file, the [loader.py](https://github.com/bghira/SimpleTuner/blob/main/helpers/configuration/loader.py#L17) code in the configuration helpers defaults to these values:
+`config.*`의 이름을 변경할 수 있는지 궁금하실 수도 있습니다. `config_fantasy_art_lora_01.*`를 사용할 수 있나요? `config_fantasy_art_full_01.*`은 어떻습니까?
 
-```jsx
+안타깝게도 그럴 수 없는 것 같습니다. `train.sh` 파일에서 `config.*`의 이름을 변경하더라도 [loader.py](https://github.com/bghira/SimpleTuner/blob/main/helpers/configuration/loader) .py#L17) 구성 도우미의 코드는 기본적으로 다음 값으로 설정됩니다.
+
+```bash
 default_config_paths = {
     "json": "config.json",
     "toml": "config.toml",
@@ -562,19 +534,19 @@ default_config_paths = {
 }
 ```
 
-So, if you want to differentiate between low-level `config.*` files with your detailed training parameter settings and don’t want to modify the [loader.py](https://github.com/bghira/SimpleTuner/blob/main/helpers/configuration/loader.py#L17) code, I suggest that you create a folder within the `SimpleTuner/config` directory that corresponds with your training. I’ll be doing the same.
+따라서 세부 훈련 매개변수 설정으로 하위 수준 `config.*` 파일을 구별하고 [loader.py](https://github.com/bghira/SimpleTuner/blob)를 수정하고 싶지 않은 경우 /main/helpers/configuration/loader.py#L17) 코드를 사용하는 경우 훈련에 해당하는 `SimpleTuner/config` 디렉토리 내에 폴더를 생성하는 것이 좋습니다. 나도 똑같이 할 것이다.
 
-Inside `SimpleTuner/config` , let’s create a directory for the first training.
+`SimpleTuner/config` 안에 첫 번째 훈련을 위한 디렉토리를 생성해 보겠습니다.
 
-```jsx
+```bash
 mkdir SimpleTuner/config/sd35_fantasy_art_lora
 ```
 
-Now, I’ll modify my high-level `config.env` at `SimpleTuner/config/config.env` to be this:
+이제 `SimpleTuner/config/config.env`에서 상위 수준 `config.env`를 다음과 같이 수정하겠습니다.
 
 - High-level `config.env`
 
-    ```jsx
+    ```bash
     TRAINING_NUM_PROCESSES=1
     TRAINING_NUM_MACHINES=1
     TRAINING_DYNAMO_BACKEND='no'
@@ -583,24 +555,21 @@ Now, I’ll modify my high-level `config.env` at `SimpleTuner/config/config.env`
     export ENV="sd35_fantasy_art_lora"
     ```
 
+훈련이 시작되면 먼저 `SimpleTuner/config/config.env`에서 마스터 `config.env`를 소싱한 다음 `SimpleTuner/config/sd35_fantasy_art_lora`에서 해당 `config.${CONFIG_BACKEND}` 파일을 찾습니다. 이 경우 `config.json` 입니다.
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/4e8dae13-2612-4518-91a4-53485ccdba7c/5b234473-9e5b-430e-ae72-85711595006b/image.png)
+이를 이해하면 다양한 모델에 대한 다양한 'config' 학습 매개변수를 관리하는 것이 매우 쉬워지므로 학습 흐름이 명확해지기를 바랍니다.
 
-When training starts, it will first source the master `config.env` at `SimpleTuner/config/config.env` , then look inside `SimpleTuner/config/sd35_fantasy_art_lora` for the corresponding `config.${CONFIG_BACKEND}` file. In this case, it is `config.json` .
-
-I hope this clarifies the flow of the training as understanding this will make it extremely easy for you to manage your different `config` training parameters for different models.
-
-Let’s head to the low-level `config.*` files now.
+이제 하위 수준 `config.*` 파일로 이동하겠습니다.
 
 ### Configuration setup (low-level)
 
-There is a default `config.json.example` provided by `bghira` inside the `SimpleTuner/config/` directory.
+`SimpleTuner/config/` 디렉토리에는 `bghira`에서 제공하는 기본 `config.json.example`이 있습니다.
 
-Just skip to using my custom `config.json` if you don’t want to know the details.
+자세한 내용을 알고 싶지 않다면 내 맞춤 `config.json` 사용으로 건너뛰세요.
 
-- Custom SD3.5 Large `LoRA` `config.json`
+- 맞춤형 SD3.5 대형 `LoRA` `config.json`
 
-    ```jsx
+    ```json
     {
       "--model_type": "lora",
       "--model_family": "sd3",
@@ -657,20 +626,19 @@ Just skip to using my custom `config.json` if you don’t want to know the detai
     }
     ```
 
+자세한 내용을 알고 싶다면 계속 읽어보세요.
 
-If you do want to know the details, read on.
-
-You can get started by copying the `config` file in the root of the `SimpleTuner` to your `ENV` directory. This is my command.
+`SimpleTuner` 루트에 있는 `config` 파일을 `ENV` 디렉터리에 복사하여 시작할 수 있습니다. 이것이 내 명령이다.
 
 ```jsx
 cp config/config.json.example config/sd35_fantasy_art_lora/config.json
 ```
 
-Once you open it up, the `json` file looks something like this:
+일단 열면 `json` 파일은 다음과 같습니다:
 
 - `config.json.example`
 
-    ```jsx
+    ```json
     {
         "--resume_from_checkpoint": "latest",
         "--data_backend_config": "config/multidatabackend.json",
@@ -715,12 +683,11 @@ Once you open it up, the `json` file looks something like this:
     }
     ```
 
+원하신다면 이 제품을 즉시 사용하실 수 있습니다. 그러나 제공된 `json`에는 [OPTIONS.MD](https://github.com/bghira/SimpleTuner/blob/main/OPTIONS.md#environment-configuration-variables)의 다른 매개변수가 많이 부족합니다. [configure.py](https://github.com/bghira/SimpleTuner/blob/main/configure.py)를 사용하더라도 결국 다음과 같은 `config.json` 파일이 생성됩니다.
 
-If you like, you could use this out of the box if you want. However, the provided `json` lacks plenty of the other parameters in [OPTIONS.MD](https://github.com/bghira/SimpleTuner/blob/main/OPTIONS.md#environment-configuration-variables). Even if you use the [configure.py](https://github.com/bghira/SimpleTuner/blob/main/configure.py), you end up with this generated`config.json` file:
+- `configure.py`로 생성된 샘플 `.json`(참조로 사용됨)
 
-- Sample `.json` generated with `configure.py` (used as a reference)
-
-    ```jsx
+    ```json
     {
         "--resume_from_checkpoint": "latest",
         "--data_backend_config": "config/multidatabackend.json",
@@ -762,12 +729,11 @@ If you like, you could use this out of the box if you want. However, the provide
     }
     ```
 
-
-The [configure.py](https://github.com/bghira/SimpleTuner/blob/main/configure.py) restricts some of the parameters such as `lora_rank` as well as leaving out a negative prompt during validation (`validation_negative_prompt`) among other things, so I recommend just copying my `config.json` below as a starting point:
+[configure.py](https://github.com/bghira/SimpleTuner/blob/main/configure.py)는 `lora_rank`와 같은 일부 매개변수를 제한할 뿐만 아니라 유효성 검사 중에 부정적인 프롬프트(`validation_negative_prompt)를 생략합니다. `) 무엇보다도 먼저 아래 `config.json`을 복사하여 시작하는 것이 좋습니다.
 
 - Custom SD3.5 Large `LoRA` `config.json`
 
-    ```jsx
+    ```json
     {
       "--model_type": "lora",
       "--model_family": "sd3",
@@ -824,83 +790,81 @@ The [configure.py](https://github.com/bghira/SimpleTuner/blob/main/configure.py)
     }
     ```
 
+뭔가 눈치채셨을 수도 있지만, 우리는 **더 이상** 이전 하위 수준 `config.env`의 이 매개변수를 사용하지 않습니다.
 
-You might have noticed something, but we **no** **longer** have this parameter from the old low-level `config.env`:
+```bash
 
-```jsx
 export STABLE_DIFFUSION_3=true
+
 ```
 
-Instead, it’s been replaced with the `"--model_family"` parameter. Set this to `sd3`:
+대신 `"--model_family"` 매개변수로 대체되었습니다. 이것을 `sd3`으로 설정합니다:
 
-```jsx
+```
 "--model_family": "sd3"
 ```
 
-In fact, low-level `config.env` is possibly deprecated by `SimpleTuner`. However, I’ll show you how to use it still if you want in this [section](https://www.notion.so/Stable-Diffusion-3-5-Large-Fine-tuning-Tutorial-11a61cdcd1968027a15bdbd7c40be8c6?pvs=21).
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/4e8dae13-2612-4518-91a4-53485ccdba7c/6f31cfde-e490-4319-a6b6-f9ec6df80e16/image.png)
+실제로, 낮은 수준 `config.env`는 `SimpleTuner`에 의해 더 이상 사용되지 않을 수 있습니다. 하지만 원하시면 그래도 사용하는 방법은 이 [섹션](https://www.notion.so/Stable-Diffusion-3-5-Large-Fine-tuning-Tutorial-11a61cdcd1968027a15bdbd7c40be8c6?pvs)에서 보여드리겠습니다. =21).
 
-In addition, make sure this parameter is set properly or else you won’t be able to pull the model from `HuggingFace`.
 
-```jsx
+또한 이 매개변수가 제대로 설정되었는지 확인하세요. 그렇지 않으면 `HuggingFace`에서 모델을 가져올 수 없습니다.
+
+```
  "--pretrained_model_name_or_path": "stabilityai/stable-diffusion-3.5-large"
 ```
 
-To ensure that this works, you’ll have to make sure that your `HuggingFace` account has been granted access to this model on the model card page here. You can follow the instructions here from the [quickstart guide](https://github.com/bghira/SimpleTuner/blob/main/documentation/quickstart/SD3.md) to do so.
+이것이 작동하는지 확인하려면 'HuggingFace' 계정에 여기 모델 카드 페이지에서 이 모델에 대한 액세스 권한이 부여되었는지 확인해야 합니다. [빠른 시작 가이드](https://github.com/bghira/SimpleTuner/blob/main/documentation/quickstart/SD3.md)의 지침을 따르면 됩니다.
 
-These are the commands:
+다음 명령은 다음과 같습니다.
 
-**Optional**
 
-This is for logging the metrics of your model during training via [Weights & Biases](https://wandb.ai/).
+**필수**
 
-```bash
-wandb login
-```
-
-**Mandatory**
-
-This is for getting access to download the model.
+모델을 다운로드하기 위한 접근 권한을 얻기 위한 것입니다.
 
 ```bash
 huggingface-cli login
 ```
 
-Before we address the rest of the settings, it’s a good idea to set up the `multidatabackend.json` file now.
+나머지 설정을 다루기 전에 지금 'multidatabackend.json' 파일을 설정하는 것이 좋습니다.
 
 ### Dataloader
 
-Before I parse the relevant parameters into digestible vocabulary for humans, I want to start with the data portion: `--data_backend_config` and `--output_dir`. In the previous version of `SimpleTuner` , there was a `multidatabackend.json` file that handled the data.
+
+관련 매개변수를 인간이 이해할 수 있는 어휘로 구문 분석하기 전에 데이터 부분인 `--data_backend_config` 및 `--output_dir`부터 시작하고 싶습니다. 이전 버전의 `SimpleTuner`에는 데이터를 처리하는 `multidatabackend.json` 파일이 있었습니다.
 
 Excerpt from old code:
 
-```jsx
+```bash
 export BASE_DIR="/weka2/home-yeo/simpletuner_models/sd3_large/full_finetune/fantasy_art_L_01/datasets/"
 export DATALOADER_CONFIG="${BASE_DIR}/multidatabackend.json"
 export OUTPUT_DIR="${BASE_DIR}/models"
 ```
 
-As you can see, the `BASE_DIR` is declared, then both the `DATALOADER_CONFIG` and `OUTPUT_DIR` expands it. `multidatabackend.json` is a file created inside of the `BASE_DIR` .
+보시다시피 `BASE_DIR`이 선언된 다음 `DATALOADER_CONFIG`와 `OUTPUT_DIR`이 이를 확장합니다. `multidatabackend.json`은 `BASE_DIR` 내부에 생성된 파일입니다.
 
-However, SimpleTuner’s default config folder has this file `SimpleTuner/config/multidatabackend.json`. Depending on your personal preference, you can place all your `multidatabackend.json` files wherever you like, but I’m going to preserve the structure from older versions of `SimpleTuner` as it keeps all my models and caches in one place.
 
-Thus, I will create a folder location that will serve as my `BASE_DIR` . As such, both `--data_backend_config` and `--output_dir` will utilize this path.
+그러나 SimpleTuner의 기본 구성 폴더에는 'SimpleTuner/config/multidatabackend.json' 파일이 있습니다. 개인 취향에 따라 'multidatabackend.json' 파일을 원하는 곳에 모두 배치할 수 있지만, 모든 모델과 캐시를 한 곳에 보관하므로 이전 버전의 'SimpleTuner' 구조를 보존하겠습니다.
 
-Since we’re using `json`, we’ll have to hard-code it.
+따라서 `BASE_DIR` 역할을 할 폴더 위치를 생성하겠습니다. 따라서 `--data_backend_config`와 `--output_dir` 모두 이 경로를 활용합니다.
 
-```jsx
+
+우리는 `json`을 사용하고 있으므로 하드코딩해야 합니다.
+
+```
  "--data_backend_config": "/weka2/home-yeo/simpletuner_models/sd3_large/full_finetune/fantasy_art_L_01/datasets/multidatabackend.json",
   "--output_dir": "/weka2/home-yeo/simpletuner_models/sd3_large/full_finetune/fantasy_art_L_01/datasets/models",
 ```
 
-All the models will be saved in the `--output_dir` , which in this case is the hard-coded `BASE_DIR/models`.
 
-Below is my custom `multidatabackend.json` .
+모든 모델은 `--output_dir`에 저장되며, 이 경우 하드 코딩된 `BASE_DIR/models`입니다.
+
+다음은 내 사용자 정의 `multidatabackend.json`입니다.
 
 - Custom `multidatabackend.json`
 
-    ```jsx
+    ```json
     [
       {
         "id": "fantasy_art_neo",
@@ -934,59 +898,63 @@ Below is my custom `multidatabackend.json` .
     ```
 
 
-There are three directories that need to be specified:
+지정해야 하는 디렉터리는 세 개입니다.
 
 1. `cache_dir_vae`
 
-I have this in my example file:
 
-```jsx
+내 예제 파일에는 다음이 있습니다.
+
+```
     "cache_dir_vae": "/weka2/home-yeo/simpletuner_models/sd3_large/full_finetune/fantasy_art_L_01/cache/vae/sd3/fantasy_art_neo"
 ```
 
-For readability and clarity, I’ve put the `cache` folder inside the base directory.
+
+가독성과 명확성을 위해 기본 디렉터리 안에 'cache' 폴더를 넣었습니다.
 
 1. `instance_dir_vae`
 
-This is where your dataset with images and captions go. Pretty straightforward.
 
-```jsx
+여기에 이미지와 캡션이 포함된 데이터세트가 저장됩니다. 매우 간단합니다.
+
+```
 "instance_data_dir": "/weka2/home-yeo/datasets/SDXL/duplicate_shuffle_01"
 ```
 
 1. `cache_dir`
 
-Same thing as above.
+위와 동일합니다.
 
-```jsx
+```
     "cache_dir": "/weka2/home-yeo/simpletuner_models/sd3_large/full_finetune/fantasy_art_L_01/cache/text/sd3/fantasy_art_neo"
 ```
 
-The rest of the settings are not so important to me. I’ve already pre-cropped my images, so I’ve set `"crop": false` .
 
-In addition, there is a `repeats` parameter that you may or may not be familiar with depending on whether or not you’ve used other training repositories before. I will cover this as well in the next section. That’s why `"repeats": 1` as I handle it on my own.
+나머지 설정은 나에게 그다지 중요하지 않습니다. 저는 이미 이미지를 미리 잘라서 `"crop": false`를 설정했습니다.
+
+또한 이전에 다른 교육 리포지토리를 사용해 본 적이 있는지 여부에 따라 익숙할 수도 있고 익숙하지 않을 수도 있는 '반복' 매개변수가 있습니다. 이 내용도 다음 섹션에서 다루겠습니다. 그래서 ``repeats": 1'을 제가 직접 처리하는 것입니다.
 
 ### Data preparation
 
-All of the images in my datasets were already pre-cropped into one of these aspect ratios and resolutions:
+내 데이터 세트의 모든 이미지는 이미 다음 종횡비 및 해상도 중 하나로 미리 잘려져 있습니다.
 
-```python
+```
 [
     (1024, 1024), (1152, 896), (896, 1152), (1216, 832),
     (832, 1216), (1344, 768), (768, 1344), (1472, 704)
 ]
 ```
 
-If you need help automatically pre-cropping your images, this is a lightweight, barebones [script](https://github.com/kasukanra/autogen_local_LLM/blob/main/detect_utils.py) I wrote to do it. It will find the best crop depending on:
+이미지를 자동으로 미리 자르는 데 도움이 필요한 경우 이를 위해 제가 작성한 경량의 기본 [스크립트](https://github.com/kasukanra/autogen_local_LLM/blob/main/Detect_utils.py)가 있습니다. 다음에 따라 최상의 작물을 찾습니다.
 
-1. Is there a human face in the image? If so, we’ll do the cropping oriented around that region of the image.
-2. If there is no human face detected, we’ll do the cropping using a saliency map, which will detect the most interesting region of the image. Then, a best crop will be extracted centered around that region.
 
-Anyway, my base dataset structure looks something like this (text files are the captions):
+1. 이미지에 사람 얼굴이 포함되어 있나요? 그렇다면 이미지의 해당 영역을 중심으로 자르기를 수행합니다.
+2. 감지된 사람의 얼굴이 없으면 이미지에서 가장 흥미로운 영역을 감지하는 돌출 맵을 사용하여 자르기를 수행합니다. 그러면 해당 지역을 중심으로 가장 좋은 작물이 추출됩니다.
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/4e8dae13-2612-4518-91a4-53485ccdba7c/397b1f8c-331d-4d14-933c-a26a1178fe0f/image.png)
 
-Here are some examples of what my captions look like:
+어쨌든 내 기본 데이터 세트 구조는 다음과 같습니다(텍스트 파일은 캡션입니다).
+
+내 캡션이 어떻게 보이는지에 대한 몇 가지 예는 다음과 같습니다.
 
 ```markdown
 k4s4, a close up portrait view of a young man with green eyes and short dark hair, looking at the viewer with a slight smile, visible ears, wearing a dark jacket, hair bangs, a green and orange background
@@ -996,18 +964,19 @@ k4s4, a close up portrait view of a young man with green eyes and short dark hai
 k4s4, a rear view of a woman wearing a red hood and faded skirt holding a staff in each hand and steering a small boat with small white wings and large white sail towards a city with tall structures, blue sky with white clouds, cropped
 ```
 
-If you don't have your own fine-tuning dataset, feel free to use [this dataset](https://drive.google.com/file/d/1capT9kF-zCu2OiNVzm7VG5DQDaAQLl1Q/view?usp=sharing) of paintings by John Singer Sargent (downloaded from WikiArt and auto-captioned) or a synthetic pixel art [dataset](https://drive.google.com/file/d/1tOyNsjR5i7ki5UkyxHhjjT_VVD8vK5WN/view?usp=drive_link).
 
-I’ll be showing results from several fine-tuned `LoRA` models of varying dataset size to show that the settings I chose generalize well enough to be a good starting point for fine-tuning `LoRA`.
+자체 미세 조정 데이터 세트가 없다면 John이 그린 그림의 [이 데이터 세트](https://drive.google.com/file/d/1capT9kF-zCu2OiNVzm7VG5DQDaAQLl1Q/view?usp=sharing)를 자유롭게 사용해 보세요. 가수 Sargent(WikiArt에서 다운로드하고 자동 캡션 있음) 또는 합성 픽셀 아트 [데이터세트](https://drive.google.com/file/d/1tOyNsjR5i7ki5UkyxHhjjT_VVD8vK5WN/view?usp=drive_link).
+
+다양한 데이터 세트 크기의 여러 미세 조정된 'LoRA' 모델의 결과를 보여줌으로써 내가 선택한 설정이 'LoRA' 미세 조정을 위한 좋은 출발점이 될 만큼 충분히 일반화된다는 것을 보여줄 것입니다.
 
 | `name` | `fantasy art` | `cinema photo` | `john singer sargent` | `underexposed photography` | `pixel art`  | `ethnic paint`  |
 | --- | --- | --- | --- | --- | --- | --- |
 | `number of images` | 476 | 460 | 460 | 96 | 82 | 68 |
 | `number of repeats` | 5 | 5 | 5 | 5 | 5 | 5 |
 
-`repeats` duplicates your images (and optionally rotates, changes the hue/saturation, etc.) and captions as well to help generalize the style into the model and prevent overfitting. While `SimpleTuner` supports caption dropout (randomly dropping captions a specified percentage of the time), it doesn’t support shuffling tokens (tokens are kind of like words in the caption) as of this moment, but you can simulate the behavior of kohya’s [sd-scripts](https://github.com/kohya-ss/sd-scripts) where you can [shuffle tokens](https://github.com/kohya-ss/sd-scripts/blob/25f961bc779bc79aef440813e3e8e92244ac5739/docs/config_README-en.md?plain=1#L146) while [keeping](https://github.com/kohya-ss/sd-scripts/blob/25f961bc779bc79aef440813e3e8e92244ac5739/docs/config_README-en.md?plain=1#L143) an `n` amount of tokens in the beginning positions. **Doing so helps the model not get too fixated on extraneous tokens.**
+`반복`은 이미지를 복제하고(선택적으로 회전하고, 색조/채도 등을 변경하는 등) 캡션도 모델에 일반화하고 과적합을 방지하는 데 도움이 됩니다. `SimpleTuner`는 캡션 드롭아웃(지정된 시간 비율에 따라 캡션을 무작위로 삭제)을 지원하지만 현재로서는 셔플링 토큰(토큰은 캡션의 단어와 유사함)을 지원하지 않지만 kohya의 동작을 시뮬레이션할 수 있습니다. [sd-scripts](https://github.com/kohya-ss/sd-scripts) [토큰 섞기](https://github.com/kohya-ss/sd-scripts/blob/25f961bc779bc79aef440813e3e8e92244ac5739/)할 수 있는 곳 docs/config_README-en.md?plain=1#L146) [유지]하는 동안(https://github.com/kohya-ss/sd-scripts/blob/25f961bc779bc79aef440813e3e8e92244ac5739/docs/config_README-en.md?plain=1 #L143) 시작 위치에 'n'개의 토큰이 있습니다. **이렇게 하면 모델이 외부 토큰에 너무 집착하지 않도록 도와줍니다.**
 
-If you’d like to replicate that function, I’ve provided a script here that will duplicate the images and manipulate the captions:
+해당 기능을 복제하려면 여기에 이미지를 복제하고 캡션을 조작하는 스크립트를 제공했습니다.
 
 - `duplicate_shuffle.py`
 
@@ -1070,13 +1039,14 @@ If you’d like to replicate that function, I’ve provided a script here that w
     ```
 
 
-If you do so, the final dataset looks something like the image below. I felt that with the settings I used, 5 `repeats` seemed acceptable.
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/4e8dae13-2612-4518-91a4-53485ccdba7c/e3502df8-bfac-4e20-b462-b7a8127e927e/image.png)
+그렇게 하면 최종 데이터 세트는 아래 이미지와 비슷해집니다. 제가 사용한 설정으로는 5번의 '반복'이 허용되는 것 같았습니다.
+
 
 ## Returning to the custom config
 
-At this point, let’s address these specific settings in the custom config:
+
+이제 사용자 정의 구성에서 이러한 특정 설정을 다루겠습니다.
 
 ### Learning rate/steps
 
@@ -1139,10 +1109,9 @@ At this point, let’s address these specific settings in the custom config:
     }
     ```
 
+이제 사용자 정의 구성에서 이러한 설정을 다루겠습니다.
 
-At this point, let’s address these settings in the custom config:
-
-```jsx
+```json
 {
   "--checkpointing_steps": 400,
   "--checkpoints_total_limit": 60,
@@ -1153,47 +1122,48 @@ At this point, let’s address these settings in the custom config:
 
 ### Steps calculation
 
-Max training steps can be calculated based on a simple mathematical equation (for a **single concept**):
+최대 훈련 단계는 간단한 수학 방정식을 기반으로 계산할 수 있습니다(**단일 개념**의 경우).
 
 $$
 \text{Max training steps} = \left(\frac{\text{Number of samples} \times \text{Repeats}}{\text{Batch size}}\right) \times \text{Epochs}
 $$
 
-There are four variables here:
+여기에는 네 가지 변수가 있습니다.
 
-- Batch size: The number of samples processed in one iteration.
-- Number of samples: Total number of samples in your dataset.
-- Number of repeats: How many times you repeat the dataset within one epoch.
-- Epochs: The number of times the entire dataset is processed.
+- 배치 크기: 한 번의 반복으로 처리되는 샘플 수입니다.
+- 샘플 수: 데이터 세트의 총 샘플 수입니다.
+- 반복 횟수: 한 에포크 내에서 데이터 세트를 반복하는 횟수입니다.
+- Epochs: 전체 데이터세트가 처리되는 횟수입니다.
 
-There are `476` images in the `fantasy art` dataset. Add on top of the `5` repeats from `multidatabackend.json` . I chose a `train_batch_size` of `6` for two reasons:
 
-1. This value would let me see the progress bar update every second or two.
-2.  It’s large enough in that it can take `6` samples in one iteration, making sure that there is more generalization during the training process.
+'fantasy art' 데이터세트에는 '476' 이미지가 있습니다. `multidatabackend.json`의 `5` 반복 위에 추가합니다. 나는 두 가지 이유로 `train_batch_size`를 `6`으로 선택했습니다:
 
-If I wanted 30 or something epochs, then the final calculation would be this:
+1. 이 값을 사용하면 진행률 표시줄이 1~2초마다 업데이트되는 것을 볼 수 있습니다.
+2. 한 번의 반복으로 '6'개의 샘플을 취할 수 있을 만큼 충분히 크므로 훈련 과정에서 더 많은 일반화가 이루어지도록 합니다.
+
+30개 정도의 에포크를 원했다면 최종 계산은 다음과 같습니다.
 
 $$
 \text{Max training steps} = \left(\frac{\text{476} \times \text{5}}{\text{6}}\right) \times \text{30}
 $$
 
-This equals `11,900` steps, more or less.
+이는 대략 '11,900' 단계와 같습니다.
 
-The part inside the parentheses:
+괄호 안의 부분:
 
 $$
 \left(\frac{\text{476} \times \text{5}}{\text{6}}\right)
 $$
 
-represents the number of steps per epoch, which is `396`.
+는 에포크당 단계 수, 즉 '396'을 나타냅니다.
 
-As such, I rounded these values up to `400` for  `CHECKPOINTING_STEPS` .
+따라서 `CHECKPOINTING_STEPS`에 대해 이 값을 `400`으로 반올림했습니다.
 
-[**⚠️](https://emojipedia.org/warning)** Although I calculated `11,900` for `MAX_NUM_STEPS`, I set it to `24,000` in the end. I wanted to see more of samples of the LoRA training. Thus, anything after the original `11,900` would give me a good gauge on whether I was overtraining or not. So, I just doubled the total steps `11,900` x `2` = `23,800`, then rounded up.
+[**⚠️](https://emojipedia.org/warning)** `MAX_NUM_STEPS`에 대해 `11,900`을 계산했지만 결국 `24,000`으로 설정했습니다. LoRA 훈련 샘플을 더 보고 싶었습니다. 따라서 원래 '11,900' 이후의 모든 값은 내가 과도한 훈련을 했는지 여부에 대한 좋은 척도가 될 것입니다. 그래서 총 단계 `11,900` x `2` = `23,800`을 두 배로 늘린 다음 반올림했습니다.
 
-`CHECKPOINTING_STEPS` represents how often you want to save a model checkpoint. Setting it to `400` is pretty close to one epoch for me, so that seemed fine.
+`CHECKPOINTING_STEPS`는 모델 체크포인트를 저장하려는 빈도를 나타냅니다. '400'으로 설정하는 것은 제게는 한 시대에 꽤 가깝기 때문에 괜찮아 보였습니다.
 
-`CHECKPOINTING_LIMIT` is how many checkpoints you want to save before overwriting the earlier ones. In my case, I wanted to keep all of the checkpoints, so I set the limit to a high number like `60`.
+`CHECKPOINTING_LIMIT`은 이전 체크포인트를 덮어쓰기 전에 저장하려는 체크포인트 수입니다. 제 경우에는 체크포인트를 모두 유지하고 싶어서 '60'처럼 높은 숫자로 제한을 두었습니다.
 
 ### Multiple concepts
 
@@ -1211,13 +1181,11 @@ $$
 \text{Max steps} = \left(\frac{\sum_{i \in C} N_i \times R_i}{\text{Batch size}}\right) \times \text{Epochs}
 $$
 
-Lastly, for learning rate, I set it to `1.5e-3` as any higher would cause the gradient to explode like so:
+마지막으로 학습률의 경우 '1.5e-3'으로 설정했습니다. 더 높을수록 기울기가 다음과 같이 폭발하기 때문입니다.
 
-![checkpoint-5600_0001.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/4e8dae13-2612-4518-91a4-53485ccdba7c/fca2f221-6b2a-4465-abed-84db356e7c42/checkpoint-5600_0001.png)
+다른 관련 설정은 'LoRA'와 관련이 있습니다.
 
-The other relevant settings are related to `LoRA`.
-
-```jsx
+```json
 {
   "--lora_rank": 768,
   "--lora_alpha": 768,
@@ -1225,17 +1193,18 @@ The other relevant settings are related to `LoRA`.
 }
 ```
 
-Personally, I received very satisfactory results using a higher `LoRA` rank and alpha. You can watch the more recent videos on my YouTube [channel](https://youtube.com/@kasukanra) for a more precise heuristic breakdown of how image fidelity increases the higher you raise the `LoRA` rank (in my opinion).
 
-Anyway, If you don’t have the VRAM, storage capacity, or time to go so high, you can choose to go with a lower value such as `256` or `128` .
+개인적으로는 좀 더 높은 'LoRA' 랭크와 알파를 사용해 아주 만족스러운 결과를 얻었습니다. 내 YouTube [채널](https://youtube.com/@kasukanra)에서 'LoRA' 순위를 높일수록 이미지 충실도가 어떻게 증가하는지에 대한 보다 정확한 경험적 분석을 보려면 최신 동영상을 시청할 수 있습니다. .
 
-As for `lora_type` , I’m just going with the tried and true `standard` . There is another option for the `lycoris` type of `LoRA` , but it’s still very experimental and not well explored. I have done the deep-dive of `lycoris` myself, but I haven’t found the correct settings that produces acceptable results.
+어쨌든 VRAM, 저장 용량 또는 그렇게 높아질 시간이 없다면 '256' 또는 '128'과 같이 더 낮은 값을 선택할 수 있습니다.
+
+`lora_type`에 관해서는, 나는 시도되고 진실된 `standard`를 사용하겠습니다. 'LoRA'의 'lycoris' 유형에 대한 또 다른 옵션이 있지만 아직은 매우 실험적이며 잘 탐색되지 않았습니다. 나는 'lycoris'에 대해 직접 심층 분석했지만 만족스러운 결과를 얻을 수 있는 올바른 설정을 찾지 못했습니다.
 
 ### Custom `config.json` miscellaneous
 
-There are some extra settings that you can change for quality of life.
+삶의 질을 위해 변경할 수 있는 몇 가지 추가 설정이 있습니다.
 
-```jsx
+```json
 {
   "--validation_prompt": "k4s4, a waist up view of a beautiful blonde woman, green eyes",
   "--validation_guidance": 7.5,
@@ -1259,15 +1228,15 @@ There are some extra settings that you can change for quality of life.
 
 `"--lr_warmup_steps": 2400`
 
-These are pretty self-explanatory:
+이것들은 매우 자명합니다:
 
 `"--validation_prompt"`
 
-The prompt that you want to use to generate validation images. This is your positive prompt.
+검증 이미지를 생성하는 데 사용할 프롬프트입니다. 이것이 당신의 긍정적인 메시지입니다.
 
 `"--validation_negative_prompt"`
 
-Negative prompt.
+부정적인 프롬프트.
 
 `"--validation_guidance"`
 
@@ -1275,36 +1244,34 @@ Classifier free guidance (CFG) scale.
 
 `"--validation_num_inference_steps"`
 
-The number of sampling steps to use.
+사용할 샘플링 단계 수입니다.
 
 `"--validation_seed"`
 
-Seed value when generating validation images.
+검증 이미지 생성 시 시드 값입니다.
 
 `"--lr_warmup_steps"`
 
-`SimpleTuner` has set the default warm up to `10%` of the total training steps behind the scenes if you don’t set it, and that’s a value I use often. So, I hard-coded it in (`24,000` * `0.1` = `2,400`). Feel free to change this.
+'SimpleTuner'는 설정하지 않을 경우 기본 워밍업을 전체 훈련 단계의 '10%'로 설정했는데, 이는 제가 자주 사용하는 값입니다. 그래서 (`24,000` * `0.1` = `2,400`)에 하드코딩했습니다. 자유롭게 변경해 보세요.
 
 `"--validation_steps"`
 
-The frequency at which you want to generate validation images is set with `"--validation_steps"`. I set mine to 200, which is a 1/2 of 400 (number of steps in an epoch for my fantasy art example dataset). This means that I generate a validation image every 1/2 of an epoch. I suggest generating validation images at least every half epoch as a sanity check. If you don’t, you might not be able to catch errors as quickly as you can.
+검증 이미지를 생성하려는 빈도는 `"--validation_steps"`로 설정됩니다. 저는 400의 1/2인 200으로 설정했습니다(판타지 아트 예제 데이터세트에 대한 한 시대의 단계 수). 이는 에포크의 1/2마다 검증 이미지를 생성한다는 의미입니다. 온전한 확인을 위해 최소한 반기점마다 검증 이미지를 생성하는 것이 좋습니다. 그렇지 않으면 최대한 빨리 오류를 포착하지 못할 수도 있습니다.
 
-Lastly is `"--lr_scheduler"` and `"--lr_warmup_steps"`.
 
-I went with a `cosine` scheduler. This is what it will look like:
+마지막으로 `"--lr_scheduler"`와 `"--lr_warmup_steps"`입니다.
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/4e8dae13-2612-4518-91a4-53485ccdba7c/a5f404ff-e50b-455d-8153-fb6ef7ed2c78/image.png)
+저는 '코사인' 스케줄러를 사용했습니다. 다음과 같은 모습입니다.
+
 
 ### What happened to the low-level `config.env` ?
 
-As I mentioned before, it appears that `SimpleTuner` is moving away from the low-level `config.env` format, opting to go with `json` for ease of use. Most other training repositories also use `json` .
+앞서 언급했듯이 `SimpleTuner`는 낮은 수준의 `config.env` 형식에서 벗어나 사용 편의성을 위해 `json`을 선택하는 것으로 보입니다. 대부분의 다른 교육 리포지토리도 `json`을 사용합니다.
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/4e8dae13-2612-4518-91a4-53485ccdba7c/6f31cfde-e490-4319-a6b6-f9ec6df80e16/image.png)
+그러나 [loader.py](https://github.com/bghira/SimpleTuner/blob/main/helpers/configuration/loader.py#L17)의 코드를 기반으로 하위 수준 `config.env`는 계속 지원됩니다. . 또한 이전의 낮은 수준 `config.env` 파일이 이미 있는 `SimpleTuner`의 이전 사용자는 파일 형식을 전환하지 않고도 일부 매개변수를 조정하여 신속하게 속도를 얻을 수 있습니다(해당 [OPTIONS.MD](https //github.com/bghira/SimpleTuner/blob/main/OPTIONS.md#environment-configuration-variables)).
 
-However, low-level `config.env` is still supported based on the code in [loader.py](https://github.com/bghira/SimpleTuner/blob/main/helpers/configuration/loader.py#L17). Furthermore, previous users of `SimpleTuner` who already have a previous low-level `config.env` file can just adjust some parameters to get up to speed quickly without switching file formats (involves looking up the corresponding [OPTIONS.MD](https://github.com/bghira/SimpleTuner/blob/main/OPTIONS.md#environment-configuration-variables)).
-
-This is the equivalent version of the `config.json` above, but in `.env` format.
-
+이는 위의 `config.json`과 동일한 버전이지만 `.env` 형식입니다.
+- 
 - Custom SD3.5 Large `LoRA` `config.env`
 
     ```bash
@@ -1459,13 +1426,13 @@ This is the equivalent version of the `config.json` above, but in `.env` format.
     ```
 
 
-[**☝️](https://emojipedia.org/index-pointing-up)** I just want to point out that `LoRA` rank/alpha can be changed inside the `TRAINER_EXTRA_ARGS` variable.
+[**☝️](https://emojipedia.org/index-pointing-up)** `LoRA` 순위/알파는 `TRAINER_EXTRA_ARGS` 변수 내에서 변경될 수 있다는 점을 지적하고 싶습니다.
 
 ```bash
 export TRAINER_EXTRA_ARGS="--lora_rank=768 --lora_alpha=768"
 ```
 
-[**⚠️](https://emojipedia.org/warning)** If you end up deciding to go with the `.env` format, make sure that there are no inline comments,  reference variables, or calculations. The is just how the new `SimpleTuner` [env helper](https://github.com/bghira/SimpleTuner/blob/main/helpers/configuration/env_file.py#L94) works, so everything needs to be hard-coded. ****For example:
+[**⚠️](https://emojipedia.org/warning)** `.env` 형식을 사용하기로 결정한 경우 인라인 주석, 참조 변수 또는 계산이 없는지 확인하세요. 이것은 새로운 `SimpleTuner` [env 도우미](https://github.com/bghira/SimpleTuner/blob/main/helpers/configuration/env_file.py#L94)가 작동하는 방식이므로 모든 것을 하드 코딩해야 합니다. . ****예를 들어:
 
 **Failure case 1 (inline comments):**
 
@@ -1485,7 +1452,7 @@ export TRAINER_EXTRA_ARGS="${TRAINER_EXTRA_ARGS} --offset_noise --noise_offset=0
 export LR_WARMUP_STEPS=$((MAX_NUM_STEPS / 10))
 ```
 
-You can use the above low-level `config.env` as a base reference if you’d like. Remember, if you do decide to use a low-level `env` file, don’t forget to change your `CONFIG_BACKEND` to be `env` in your high-level `config.env`:
+원하는 경우 위의 하위 수준 `config.env`를 기본 참조로 사용할 수 있습니다. 하위 수준 `env` 파일을 사용하기로 결정한 경우 상위 수준 `config.env`에서 `CONFIG_BACKEND`를 `env`로 변경하는 것을 잊지 마세요.
 
 ```bash
 TRAINING_NUM_PROCESSES=1
@@ -1498,11 +1465,11 @@ export ENV="sd35_fantasy_art_lora"
 
 ## Training process
 
-Finally, we can start the training process. Let’s bring all the necessary files here just for reference.
+마지막으로 훈련 과정을 시작할 수 있습니다. 참고용으로 필요한 모든 파일을 여기에 가져오겠습니다.
 
 - High-level `config.env`
 
-    ```jsx
+    ```bash
     TRAINING_NUM_PROCESSES=1
     TRAINING_NUM_MACHINES=1
     TRAINING_DYNAMO_BACKEND='no'
@@ -1837,9 +1804,9 @@ Finally, we can start the training process. Let’s bring all the necessary file
 
 ### Possible `accelerate` issues
 
-I want to mention one small thing here that could prevent you from launching your training. Inside the default `train.sh` near the end, there is a command to run the the training.
+여기서는 훈련을 시작하는 데 방해가 될 수 있는 한 가지 작은 사항을 언급하고 싶습니다. 끝 부분에 있는 기본 `train.sh` 안에는 훈련을 실행하는 명령이 있습니다.
 
-```python
+```bash
 accelerate launch --config_file="${ACCELERATE_CONFIG_PATH}" train.py
 ```
 
@@ -1858,9 +1825,11 @@ else
 fi
 ```
 
-If this is your first training repository install ever, this will probably run without error. However, if you have used `accelerate` in any other repository, odds are that you will have already configured a `default_config.yaml`. If your training does run into an error, then I’ve provided my own `config.yaml` here for normal training. I’ve also provided a `DeepSpeed` `config.yaml` if you’d like to attempt a full fine-tune as opposed to `LoRA` training.
 
-`DeepSpeed` uses special techniques under the hood to offload optimizer states, gradients, and other parameters to CPU memory (RAM) when not enough GPU VRAM is available. On a single `H100` GPU with `80 GB` of VRAM and `128 GB` of CPU RAM, I could perform full fine-tuning with `SD3.5 Large`. You can also use this `config.yaml` whenever you have low VRAM and need to offload to CPU RAM.
+이것이 처음으로 훈련 저장소를 설치하는 것이라면 아마도 오류 없이 실행될 것입니다. 그러나 다른 저장소에서 `accelerate`를 사용한 경우 `default_config.yaml`을 이미 구성했을 가능성이 높습니다. 훈련에서 오류가 발생하는 경우 일반 훈련을 위해 여기에 자체 `config.yaml`을 제공했습니다. 또한 'LoRA' 교육이 아닌 완전한 미세 조정을 시도하려는 경우 'DeepSpeed' 'config.yaml'을 제공했습니다.
+
+
+'DeepSpeed'는 GPU VRAM이 충분하지 않을 때 내부의 특수 기술을 사용하여 최적화 상태, 그라데이션 및 기타 매개변수를 CPU 메모리(RAM)로 오프로드합니다. '80GB' VRAM과 '128GB' CPU RAM을 갖춘 단일 'H100' GPU에서는 'SD3.5 Large'로 완전한 미세 조정을 수행할 수 있었습니다. VRAM이 부족하고 CPU RAM으로 오프로드해야 할 때마다 이 `config.yaml`을 사용할 수도 있습니다.
 
 - Custom general use `base_config.yaml`
 
@@ -1913,7 +1882,7 @@ If this is your first training repository install ever, this will probably run w
     ```
 
 
-Wherever you choose to place these `yaml` files, make sure to properly reference them in the `train.sh` code. For example, I place my files inside the root of the `SimpleTuner` directory. As such, the `ACCELERATE_CONFIG_PATH` part of the code will be modified accordingly.
+이러한 `yaml` 파일을 배치할 위치를 선택할 때마다 `train.sh` 코드에서 해당 파일을 올바르게 참조해야 합니다. 예를 들어, 저는 `SimpleTuner` 디렉토리의 루트에 파일을 배치합니다. 따라서 코드의 'ACCELERATE_CONFIG_PATH' 부분이 그에 따라 수정됩니다.
 
 ```bash
 # Run the training script with base config.
@@ -1931,7 +1900,7 @@ if [[ -z "${ACCELERATE_CONFIG_PATH}" ]]; then
 fi
 ```
 
-If you do end up trying out `DeepSpeed`-assisted training, this is a sample low-level `config.env` to go with it.
+결국 `DeepSpeed` 지원 훈련을 시도하게 된다면, 이에 따라 사용할 수 있는 하위 수준 `config.env` 샘플이 있습니다.
 
 - Custom SD3.5 Large `full` fine-tune`config.json`
 
@@ -2157,9 +2126,9 @@ Changed parameters
 
 ```
 
-Notably, the learning rate was decreased to `5e-5`.
+특히 학습률이 '5e-5'로 감소했습니다.
 
-If everything is in order, go ahead and start your training.
+모든 것이 정상이면 계속해서 훈련을 시작하십시오.
 
 ```bash
 bash train.sh
@@ -2167,67 +2136,45 @@ bash train.sh
 
 ### Memory usage
 
-If you aren’t training the text encoders (we aren’t), `SimpleTuner` saves us about `10.4 GB` of VRAM.
+텍스트 인코더를 훈련하지 않는 경우(우리는 그렇지 않습니다) 'SimpleTuner'를 사용하면 약 '10.4GB'의 VRAM을 절약할 수 있습니다.
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/4e8dae13-2612-4518-91a4-53485ccdba7c/316002db-297b-45a9-b919-cec6b311c773/image.png)
+'배치 크기'를 '6'으로 설정하고 'lora 순위/알파'를 '768'로 설정하면 훈련에서 약 '32GB'의 VRAM을 소비합니다.
 
-With the settings of `batch size` of `6` and a `lora rank/alpha` of `768`, the training consumes about `32 GB` of VRAM.
+당연히 이는 소비자 '24GB' VRAM GPU의 범위를 벗어납니다. 그래서 `batch size`를 `1`, `lora Rank/alpha`를 `128`로 사용하여 메모리 비용을 줄이려고 했습니다.
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/4e8dae13-2612-4518-91a4-53485ccdba7c/c2aac70a-8c65-4f6f-b602-487f24de4bd2/image.png)
+잠정적으로 VRAM 비용을 약 '19.65GB' VRAM으로 낮출 수 있었습니다.
 
-Understandably, this is out of the range of consumer `24 GB` VRAM GPUs. As such, I tried to decrease the memory costs by using a `batch size` of `1` and `lora rank/alpha` of `128` .
+그러나 유효성 검사 프롬프트에 대한 추론을 실행하면 VRAM이 최대 '23.37GB'까지 급증합니다.
 
-Tentatively, I was able to bring the VRAM cost down to around `19.65 GB` of VRAM.
+안전을 위해 'lora 순위/알파'를 '64'로 더욱 줄여야 할 수도 있습니다. 그렇다면 훈련 중에 약 '18.83GB'의 VRAM을 소비하게 됩니다.
 
-However, when running inference for the validation prompts, it spikes up to around `23.37 GB` of VRAM.
+검증 추론 중에는 최대 약 '21.50GB'의 VRAM이 사용됩니다. 이 정도면 충분히 안전해 보입니다.
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/4e8dae13-2612-4518-91a4-53485ccdba7c/0c5240d6-6f71-404e-bea7-b18cc35ee5ad/image.png)
-
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/4e8dae13-2612-4518-91a4-53485ccdba7c/026be306-8331-45a2-9c02-541005f2cdfd/image.png)
-
-To be safe, you might have to decrease the `lora rank/alpha` even further to `64`. If so, you’ll consume around `18.83 GB` of VRAM during training.
-
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/4e8dae13-2612-4518-91a4-53485ccdba7c/5edcaaf9-bf0d-4db0-a183-cfab44963b8e/image.png)
-
-During validation inference, it will go up to around `21.50 GB` of VRAM. This seems safe enough.
-
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/4e8dae13-2612-4518-91a4-53485ccdba7c/bd41ce4e-a0db-443b-b3d2-63eac136779d/image.png)
-
-If you do decide to go with the higher spec training of `batch size` of `6` and `lora rank/alpha` of `768` , you can use the `DeepSpeed` config I provided [above](https://www.notion.so/Stable-Diffusion-3-5-Large-Fine-tuning-Tutorial-11a61cdcd1968027a15bdbd7c40be8c6?pvs=21) if your GPU VRAM is insufficient and you have enough CPU RAM.
+'배치 크기' '6' 및 'lora 순위/알파' '768'의 더 높은 사양 교육을 사용하기로 결정한 경우 [위](https:// www.notion.so/Stable-Diffusion-3-5-Large-Fine-tuning-Tutorial-11a61cdcd1968027a15bdbd7c40be8c6?pvs=21) GPU VRAM이 부족하고 CPU RAM이 충분한 경우.
 
 ### Monitoring the training
 
-Throughout the training, there may be times when your validation images pixelate or turn black. This is because I’m using a pretty aggressive learning rate of `1.05e-3` . If you want to play it safer, `9.5e-4` gave me very few pixelating issues, if at all. Nevertheless, both loss curves converged nicely in the end.
 
-However, I’d like to show some examples of what it may look like to assuage any concerns.
+훈련 과정에서 검증 이미지가 픽셀화되거나 검게 변하는 경우가 있을 수 있습니다. 이는 '1.05e-3'이라는 매우 공격적인 학습률을 사용하고 있기 때문입니다. 더 안전하게 플레이하고 싶다면 '9.5e-4'를 사용하면 픽셀화 문제가 거의 발생하지 않습니다. 그럼에도 불구하고 두 손실 곡선은 결국 훌륭하게 수렴했습니다.
 
-`Fantasy Art`
+하지만 우려사항을 해소하기 위해 어떤 모습일지 몇 가지 예를 보여드리고 싶습니다.
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/4e8dae13-2612-4518-91a4-53485ccdba7c/c900b6d5-9a90-4de1-9fde-335bb9ce9887/image.png)
-
-`Underexposed photography`
-
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/4e8dae13-2612-4518-91a4-53485ccdba7c/d6c34f3d-f320-433a-a914-24699f6803b5/image.png)
 
 ### Observing training loss
 
 ### `LoRA`
 
-These are the figures that I received from my fantasy art `LoRA` training. Loss is decreasing and hasn’t converged yet. However, if you have some experience with fine-tuning diffusion models, minimizing loss has almost nothing to do with maximizing aesthetics. Also, I noticed that near the peaks of the loss curve, pixelation or degradation in validation images may occur, if using a high learning rate. This makes sense as training reaches a learning rate that the model weights aren’t comfortable with.
+판타지 아트 'LoRA' 수련을 통해 얻은 피규어들입니다. 손실이 감소하고 있으며 아직 수렴되지 않았습니다. 그러나 확산 모델을 미세 조정한 경험이 있는 경우 손실 최소화는 미적 극대화와 거의 관련이 없습니다. 또한 높은 학습률을 사용하는 경우 손실 곡선의 최고점 근처에서 검증 이미지의 픽셀화 또는 품질 저하가 발생할 수 있음을 확인했습니다. 훈련이 모델 가중치가 만족스럽지 않은 학습 속도에 도달하면 이는 의미가 있습니다.
 
-When learning rate is high, train loss peaks high as well.
-
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/4e8dae13-2612-4518-91a4-53485ccdba7c/011c7bbf-c601-4797-a5b3-b90dbdf2e293/image.png)
-
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/4e8dae13-2612-4518-91a4-53485ccdba7c/548c5118-ff38-4653-97ea-019a87879026/image.png)
+학습률이 높으면 열차 손실도 최고점에 달합니다.
 
 ## Evaluating the results
 
 ### How to actually get the LoRA models into ComfyUI
 
-Now that the models are all trained, it’s time to test them out with `ComfyUI` . However, the way that SimpleTuner saves models makes it a little difficult to bring into the `ComfyUI/models/loras` directory.
+이제 모델이 모두 훈련되었으므로 `ComfyUI`를 사용하여 테스트할 차례입니다. 그러나 SimpleTuner가 모델을 저장하는 방식으로 인해 'ComfyUI/models/loras' 디렉터리로 가져오기가 약간 어렵습니다.
 
-When you go to the directory where you saved your models, you’ll see that it’s in this format.
+모델을 저장한 디렉터리로 이동하면 해당 형식이 이 형식인 것을 볼 수 있습니다.
 
 ![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/4e8dae13-2612-4518-91a4-53485ccdba7c/4c576802-3c82-4347-87aa-055e9dfdf0c1/image.png)
 
@@ -2528,9 +2475,9 @@ Prompt
 a three fourth perspective waist up portrait view of a young woman with messy long blonde hair and light purple eyes, looking at viewer with a closed mouth smile, wearing tight black dress, a faded pink simple background during golden hour
 ```
 
-I ended up choosing the checkpoint near the end at step`24,000`.
+결국 '24,000' 단계에서 거의 마지막에 체크포인트를 선택하게 되었습니다.
 
-I also ran the same experiments for every other training I did as a sanity check.
+나는 또한 건전성 확인을 위해 수행한 다른 모든 훈련에 대해 동일한 실험을 실행했습니다.
 
 Cinema Photo `LoRA`
 
@@ -2540,10 +2487,6 @@ Prompt
 a few hooded figures walking on an empty road in the rain, desolate, high skyscrapers
 ```
 
-![output_image_strip.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/4e8dae13-2612-4518-91a4-53485ccdba7c/e679c9bb-339d-44be-814f-11f6d69a681e/output_image_strip.png)
-
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/4e8dae13-2612-4518-91a4-53485ccdba7c/a896482a-4e3a-4bc5-9600-a78b32f49b28/image.png)
-
 John Singer Sargent `LoRA`
 
 Prompt
@@ -2551,10 +2494,6 @@ Prompt
 ```markdown
 an abandoned beach with a lighthouse
 ```
-
-![output_image_strip.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/4e8dae13-2612-4518-91a4-53485ccdba7c/4c52b80d-fa70-421b-8bf4-cf1f46824551/output_image_strip.png)
-
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/4e8dae13-2612-4518-91a4-53485ccdba7c/b4f05ec3-6652-4697-9643-2a7783b0ae21/image.png)
 
 Underexposed Photography `LoRA`
 
@@ -2564,9 +2503,8 @@ Prompt
 waist up view of a woman posing on a runway, streetwear in the style of alexander mcqueen
 ```
 
-For professional reasons, certain parts of the original grid have been omitted. The full grid contains content that may not be appropriate for all audiences, so a cropped version is displayed to maintain the focus on the technical aspects.
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/4e8dae13-2612-4518-91a4-53485ccdba7c/58bd3b25-ab8e-45e0-8847-34d624204229/image.png)
+전문적인 이유로 원래 그리드의 특정 부분이 생략되었습니다. 전체 그리드에는 모든 청중에게 적합하지 않을 수 있는 콘텐츠가 포함되어 있으므로 기술적인 측면에 초점을 맞추기 위해 잘린 버전이 표시됩니다.
 
 Pixel Art `LoRA`
 
@@ -2576,10 +2514,6 @@ Prompt
 a plush chibi mythical creature
 ```
 
-![output_image_strip.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/4e8dae13-2612-4518-91a4-53485ccdba7c/c2b059ca-f3ae-4045-a7f4-91ab4c02d029/output_image_strip.png)
-
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/4e8dae13-2612-4518-91a4-53485ccdba7c/20b793d1-99a1-4721-883a-fca98f021d9e/image.png)
-
 Ethnic Paint `LoRA`
 
 Prompt
@@ -2588,23 +2522,19 @@ Prompt
 a skyline view of a futuristic maritime village floating above ground, in the clouds, towering skyscrapers, golden hour, day time lighting
 ```
 
-![output_image_strip.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/4e8dae13-2612-4518-91a4-53485ccdba7c/594e0733-15b2-44da-903e-f861d52e8198/output_image_strip.png)
-
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/4e8dae13-2612-4518-91a4-53485ccdba7c/4a3684d2-1150-4ac1-ae08-15460fb65bb5/image.png)
-
 ## A/B evaluation
 
 ### Improving/tuning generations with APG scaling
 
-Once you’ve found the `LoRA` checkpoint that gives you the best aesthetic results, you can further improve it with `APG` scaling. `APG` scaling stands for adaptive projected guidance.
+최고의 미적 결과를 제공하는 'LoRA' 체크포인트를 찾았으면 'APG' 스케일링을 통해 이를 더욱 향상시킬 수 있습니다. 'APG' 스케일링은 적응형 예측 지침을 의미합니다.
 
-Key part of the abstract from the [APG paper](https://arxiv.org/abs/2410.02416)
+[APG 논문](https://arxiv.org/abs/2410.02416) 초록의 핵심 부분
 
 ```markdown
 Our approach, termed adaptive projected guidance (APG), retains the quality-boosting advantages of CFG while enabling the use of higher guidance scales without oversaturation. APG is easy to implement and introduces practically no additional computational overhead to the sampling process.
 ```
 
-This is the [ComfyUI node](https://github.com/logtd/ComfyUI-APGScaling) that’s included in this sample workflow. It will generate three different images, one with the base image, one with the `LoRA` applied ***without*** `APG` scaling, and a third image with the `LoRA` applied ***with*** `APG` scaling.
+이것이 이 샘플 워크플로에 포함된 [ComfyUI 노드](https://github.com/logtd/ComfyUI-APGScaling)입니다. 세 가지 다른 이미지를 생성합니다. 하나는 기본 이미지, 하나는 ***`APG` 스케일링 없이 ***`LoRA` 적용, 세 번째 이미지는 ***` 사용*** ` LoRA` 적용 APG` 스케일링.
 
 The parameters for APG are:
 
@@ -2615,7 +2545,7 @@ use_momentum
 momentum
 ```
 
-I didn’t do that much of a deep dive for this node, but it does change the image quality, for better or for worse.
+이 노드에 대해 그렇게 많이 심층 분석하지는 않았지만 이미지 품질이 좋든 나쁘든 변경됩니다.
 
 ### Before and after comparison
 
@@ -2629,15 +2559,12 @@ a three fourth perspective waist up portrait view of a young woman with messy lo
 
 `Base model`
 
-![ComfyUI_temp_foqht_00038_.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/4e8dae13-2612-4518-91a4-53485ccdba7c/c625a584-ea9f-4439-ab05-491bb69b4e5c/ComfyUI_temp_foqht_00038_.png)
 
 `LoRA`
 
-![ComfyUI_temp_okvik_00013_.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/4e8dae13-2612-4518-91a4-53485ccdba7c/c41e4924-19db-4f5b-aa4c-ef1aa87d840e/ComfyUI_temp_okvik_00013_.png)
 
 `LoRA` + `APG`
 
-![ComfyUI_temp_xmuld_00011_NEW.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/4e8dae13-2612-4518-91a4-53485ccdba7c/970e85dd-586a-4978-b1bb-4a9cb0c14114/ComfyUI_temp_xmuld_00011_NEW.png)
 
 Cinema Photo
 
@@ -2649,15 +2576,11 @@ a wide view of a figure looking up at a meteor breaking apart
 
 `Base model`
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/4e8dae13-2612-4518-91a4-53485ccdba7c/9f2673ce-47f1-490a-b43b-59b70a07f85f/image.png)
-
 `LoRA`
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/4e8dae13-2612-4518-91a4-53485ccdba7c/bdaf166b-2653-496f-ba34-42564dc28569/image.png)
 
 `LoRA` + `APG`
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/4e8dae13-2612-4518-91a4-53485ccdba7c/f197b2f2-bd22-43b3-9aa2-aa0104c89ab1/image.png)
 
 John Singer Sargent
 
@@ -2669,15 +2592,9 @@ an abandoned beach with a lighthouse
 
 `Base model`
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/4e8dae13-2612-4518-91a4-53485ccdba7c/700fccf5-a1da-4ff1-92a4-274e9ee0638a/image.png)
-
 `LoRA`
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/4e8dae13-2612-4518-91a4-53485ccdba7c/383df80f-06a9-418a-936b-0e48c57c71bb/image.png)
-
 `LoRA` + `APG`
-
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/4e8dae13-2612-4518-91a4-53485ccdba7c/a64a36b0-85db-4e07-99ff-69fddc4e6af4/image.png)
 
 Underexposed Photography
 
@@ -2689,15 +2606,9 @@ waist up view of a woman posing on a runway, streetwear in the style of alexande
 
 `Base model`
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/4e8dae13-2612-4518-91a4-53485ccdba7c/752c7d28-f6ec-49fb-8d49-76544e5167fd/image.png)
-
 `LoRA`
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/4e8dae13-2612-4518-91a4-53485ccdba7c/5cd2cbd3-e81c-4ada-99bf-1f8a45ac3c36/image.png)
-
 `LoRA` + `APG`
-
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/4e8dae13-2612-4518-91a4-53485ccdba7c/15b84758-d663-4acf-8b30-69acc4f9e257/image.png)
 
 Pixel Art
 
@@ -2709,15 +2620,9 @@ a sci-fi venetian town near the water
 
 `Base model`
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/4e8dae13-2612-4518-91a4-53485ccdba7c/2af8625c-11c7-4d36-b6a3-1a5d1d3aaa6f/image.png)
-
 `LoRA`
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/4e8dae13-2612-4518-91a4-53485ccdba7c/410cc312-4e90-4a33-af16-21941fbf1b8f/image.png)
-
 `LoRA` + `APG`
-
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/4e8dae13-2612-4518-91a4-53485ccdba7c/df49439c-08b5-4db5-b2a2-d8983c1ed820/image.png)
 
 Ethnic Paint
 
@@ -2729,47 +2634,42 @@ a man in his late 30s to early 40s, rendered in a dark, moody style, The subject
 
 `Base model`
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/4e8dae13-2612-4518-91a4-53485ccdba7c/9ec25fae-a57b-46c3-a4d7-2d049cf09aa2/image.png)
-
 `LoRA`
-
-![ComfyUI_temp_bavyy_00005_PERFECT.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/4e8dae13-2612-4518-91a4-53485ccdba7c/bcebc65e-23bb-48ba-be0e-6b7643d9edc8/ComfyUI_temp_bavyy_00005_PERFECT.png)
 
 `LoRA` + `APG`
 
-![ComfyUI_temp_pmjav_00001_.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/4e8dae13-2612-4518-91a4-53485ccdba7c/71a85dab-28f1-4ad3-a151-e10c85d5956a/ComfyUI_temp_pmjav_00001_.png)
 
-`APG` seems to be true to its word. It does reduce saturation. Personally, I don’t prefer the washed out colors it brings, but it could be a great way to acquire a flat ‘’`RAW`”-ish image.
+`APG` 는 그 말에 충실한 것 같습니다. 채도를 줄여줍니다. 개인적으로 나는 바랜 색상을 선호하지 않지만 밋밋한 "RAW" 같은 이미지를 얻을 수 있는 좋은 방법이 될 수 있습니다.
+
 
 ## Other fine-tuning tools/libraries for SD3.5
 
-See [this script and config](https://huggingface.co/blog/sd3-5#training-loras-with-sd35-large-with-quantization) from Hugging Face. This is simpler to use, but the result might be a bit worse.
+Hugging Face의 [이 스크립트 및 구성](https://huggingface.co/blog/sd3-5#training-loras-with-sd35-large-with-Quantization)을 참조하세요. 이는 사용하기가 더 간단하지만 결과는 약간 더 나쁠 수 있습니다.
 
 ## Conclusion & Feedback
 
-I hope all of the information here helps you fine-tune SD3.5 Large on release day. As `DiT` architectures are still relatively new, we've tried various methods to achieve the best image quality in terms of composition, texture, and overall aesthetics. If you do run into issues where you’re not attaining the best result, more granular layer manipulation during training is highly recommended.
 
-We'd love to hear how this guide helped you and what we could do to make it even better! If you have 2 minutes, please fill out this form:
+여기 있는 모든 정보가 출시일에 SD3.5 Large를 미세 조정하는 데 도움이 되기를 바랍니다. 'DiT' 아키텍처는 여전히 상대적으로 새로운 것이기 때문에 우리는 구성, 질감 및 전체적인 미학 측면에서 최고의 이미지 품질을 달성하기 위해 다양한 방법을 시도했습니다. 최상의 결과를 얻지 못하는 문제가 발생하는 경우 훈련 중에 보다 세부적인 레이어 조작을 적극 권장합니다.
+
+
 
 ## Two cents from Dango
 
-As such, here is some extra information from Dango, one of the main architects of SD3.5 Series.
+따라서 SD3.5 시리즈의 주요 설계자 중 하나인 Dango의 추가 정보는 다음과 같습니다.
 
 [Dango's Hugging Face profile](https://huggingface.co/Dango233)
 
 ### Diving into SD3.5 Large Architecture
 
-In order to understand the big picture of SD 3.5 Large, let’s go ahead and print out the architecture.
 
-If you download the model to your local directory, it should have a file structure similar to `stable-diffusion-3-medium-diffusers`:
+SD 3.5 Large의 큰 그림을 이해하기 위해 먼저 아키텍처를 인쇄해 보겠습니다.
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/4e8dae13-2612-4518-91a4-53485ccdba7c/e1d595cc-5bcd-497a-8872-128ad07fbcf9/image.png)
+모델을 로컬 디렉터리에 다운로드하는 경우 `stable-diffusion-3-medium-diffusers`와 유사한 파일 구조를 가져야 합니다.
 
-In SD3.5 Large’s case, it will look like this:
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/4e8dae13-2612-4518-91a4-53485ccdba7c/11853e4d-b1c7-4ffb-ab92-e8e2f3f4c7f1/image.png)
+SD3.5 Large의 경우 다음과 같습니다.
 
-The base model in sharded diffusers format errors out when I try to list its keys, so this is the code to merge it into a single model. At this point, I was working with a local version of the model, but it’s the same as the Hugging Face version downloaded to your `.cache` .
+키를 나열하려고 하면 샤딩된 디퓨저 형식의 기본 모델에서 오류가 발생하므로 이를 단일 모델로 병합하는 코드입니다. 이 시점에서 나는 모델의 로컬 버전으로 작업하고 있었지만 `.cache`에 다운로드한 Hugging Face 버전과 동일합니다.
 
 Example path:
 
@@ -2802,8 +2702,8 @@ print(f"Combined model saved successfully at {output_path}")
 
 ```
 
-Once you have the merged model (`combined_model.safetensors` ) in my case, go ahead and run this script to save the architecture in a text file. The script outputs the general sequential flow of transformer models.
 
+제 경우에는 병합된 모델(`combined_model.safetensors`)이 있으면 이 스크립트를 실행하여 아키텍처를 텍스트 파일에 저장하세요. 스크립트는 변환기 모델의 일반적인 순차 흐름을 출력합니다.
 ```python
 import safetensors.torch
 import re
@@ -2868,1440 +2768,6 @@ output_file = "ckpt_keys_grouped_output.txt"
 pretty_print_and_save(ckpt, output_file)
 ```
 
-- SD3.5 Large Architecture
-
-    ```markdown
-    EMBEDDING:
-    context_embedder.bias
-    context_embedder.weight
-    pos_embed.pos_embed
-    pos_embed.proj.bias
-    pos_embed.proj.weight
-    time_text_embed.text_embedder.linear_1.bias
-    time_text_embed.text_embedder.linear_1.weight
-    time_text_embed.text_embedder.linear_2.bias
-    time_text_embed.text_embedder.linear_2.weight
-    time_text_embed.timestep_embedder.linear_1.bias
-    time_text_embed.timestep_embedder.linear_1.weight
-    time_text_embed.timestep_embedder.linear_2.bias
-    time_text_embed.timestep_embedder.linear_2.weight
-    
-    TRANSFORMER_BLOCK_0:
-    transformer_blocks.0.attn.add_k_proj.bias
-    transformer_blocks.0.attn.add_k_proj.weight
-    transformer_blocks.0.attn.add_q_proj.bias
-    transformer_blocks.0.attn.add_q_proj.weight
-    transformer_blocks.0.attn.add_v_proj.bias
-    transformer_blocks.0.attn.add_v_proj.weight
-    transformer_blocks.0.attn.norm_added_k.weight
-    transformer_blocks.0.attn.norm_added_q.weight
-    transformer_blocks.0.attn.norm_k.weight
-    transformer_blocks.0.attn.norm_q.weight
-    transformer_blocks.0.attn.to_add_out.bias
-    transformer_blocks.0.attn.to_add_out.weight
-    transformer_blocks.0.attn.to_k.bias
-    transformer_blocks.0.attn.to_k.weight
-    transformer_blocks.0.attn.to_out.0.bias
-    transformer_blocks.0.attn.to_out.0.weight
-    transformer_blocks.0.attn.to_q.bias
-    transformer_blocks.0.attn.to_q.weight
-    transformer_blocks.0.attn.to_v.bias
-    transformer_blocks.0.attn.to_v.weight
-    transformer_blocks.0.ff.net.0.proj.bias
-    transformer_blocks.0.ff.net.0.proj.weight
-    transformer_blocks.0.ff.net.2.bias
-    transformer_blocks.0.ff.net.2.weight
-    transformer_blocks.0.ff_context.net.0.proj.bias
-    transformer_blocks.0.ff_context.net.0.proj.weight
-    transformer_blocks.0.ff_context.net.2.bias
-    transformer_blocks.0.ff_context.net.2.weight
-    transformer_blocks.0.norm1.linear.bias
-    transformer_blocks.0.norm1.linear.weight
-    transformer_blocks.0.norm1_context.linear.bias
-    transformer_blocks.0.norm1_context.linear.weight
-    
-    TRANSFORMER_BLOCK_1:
-    transformer_blocks.1.attn.add_k_proj.bias
-    transformer_blocks.1.attn.add_k_proj.weight
-    transformer_blocks.1.attn.add_q_proj.bias
-    transformer_blocks.1.attn.add_q_proj.weight
-    transformer_blocks.1.attn.add_v_proj.bias
-    transformer_blocks.1.attn.add_v_proj.weight
-    transformer_blocks.1.attn.norm_added_k.weight
-    transformer_blocks.1.attn.norm_added_q.weight
-    transformer_blocks.1.attn.norm_k.weight
-    transformer_blocks.1.attn.norm_q.weight
-    transformer_blocks.1.attn.to_add_out.bias
-    transformer_blocks.1.attn.to_add_out.weight
-    transformer_blocks.1.attn.to_k.bias
-    transformer_blocks.1.attn.to_k.weight
-    transformer_blocks.1.attn.to_out.0.bias
-    transformer_blocks.1.attn.to_out.0.weight
-    transformer_blocks.1.attn.to_q.bias
-    transformer_blocks.1.attn.to_q.weight
-    transformer_blocks.1.attn.to_v.bias
-    transformer_blocks.1.attn.to_v.weight
-    transformer_blocks.1.ff.net.0.proj.bias
-    transformer_blocks.1.ff.net.0.proj.weight
-    transformer_blocks.1.ff.net.2.bias
-    transformer_blocks.1.ff.net.2.weight
-    transformer_blocks.1.ff_context.net.0.proj.bias
-    transformer_blocks.1.ff_context.net.0.proj.weight
-    transformer_blocks.1.ff_context.net.2.bias
-    transformer_blocks.1.ff_context.net.2.weight
-    transformer_blocks.1.norm1.linear.bias
-    transformer_blocks.1.norm1.linear.weight
-    transformer_blocks.1.norm1_context.linear.bias
-    transformer_blocks.1.norm1_context.linear.weight
-    
-    TRANSFORMER_BLOCK_2:
-    transformer_blocks.2.attn.add_k_proj.bias
-    transformer_blocks.2.attn.add_k_proj.weight
-    transformer_blocks.2.attn.add_q_proj.bias
-    transformer_blocks.2.attn.add_q_proj.weight
-    transformer_blocks.2.attn.add_v_proj.bias
-    transformer_blocks.2.attn.add_v_proj.weight
-    transformer_blocks.2.attn.norm_added_k.weight
-    transformer_blocks.2.attn.norm_added_q.weight
-    transformer_blocks.2.attn.norm_k.weight
-    transformer_blocks.2.attn.norm_q.weight
-    transformer_blocks.2.attn.to_add_out.bias
-    transformer_blocks.2.attn.to_add_out.weight
-    transformer_blocks.2.attn.to_k.bias
-    transformer_blocks.2.attn.to_k.weight
-    transformer_blocks.2.attn.to_out.0.bias
-    transformer_blocks.2.attn.to_out.0.weight
-    transformer_blocks.2.attn.to_q.bias
-    transformer_blocks.2.attn.to_q.weight
-    transformer_blocks.2.attn.to_v.bias
-    transformer_blocks.2.attn.to_v.weight
-    transformer_blocks.2.ff.net.0.proj.bias
-    transformer_blocks.2.ff.net.0.proj.weight
-    transformer_blocks.2.ff.net.2.bias
-    transformer_blocks.2.ff.net.2.weight
-    transformer_blocks.2.ff_context.net.0.proj.bias
-    transformer_blocks.2.ff_context.net.0.proj.weight
-    transformer_blocks.2.ff_context.net.2.bias
-    transformer_blocks.2.ff_context.net.2.weight
-    transformer_blocks.2.norm1.linear.bias
-    transformer_blocks.2.norm1.linear.weight
-    transformer_blocks.2.norm1_context.linear.bias
-    transformer_blocks.2.norm1_context.linear.weight
-    
-    TRANSFORMER_BLOCK_3:
-    transformer_blocks.3.attn.add_k_proj.bias
-    transformer_blocks.3.attn.add_k_proj.weight
-    transformer_blocks.3.attn.add_q_proj.bias
-    transformer_blocks.3.attn.add_q_proj.weight
-    transformer_blocks.3.attn.add_v_proj.bias
-    transformer_blocks.3.attn.add_v_proj.weight
-    transformer_blocks.3.attn.norm_added_k.weight
-    transformer_blocks.3.attn.norm_added_q.weight
-    transformer_blocks.3.attn.norm_k.weight
-    transformer_blocks.3.attn.norm_q.weight
-    transformer_blocks.3.attn.to_add_out.bias
-    transformer_blocks.3.attn.to_add_out.weight
-    transformer_blocks.3.attn.to_k.bias
-    transformer_blocks.3.attn.to_k.weight
-    transformer_blocks.3.attn.to_out.0.bias
-    transformer_blocks.3.attn.to_out.0.weight
-    transformer_blocks.3.attn.to_q.bias
-    transformer_blocks.3.attn.to_q.weight
-    transformer_blocks.3.attn.to_v.bias
-    transformer_blocks.3.attn.to_v.weight
-    transformer_blocks.3.ff.net.0.proj.bias
-    transformer_blocks.3.ff.net.0.proj.weight
-    transformer_blocks.3.ff.net.2.bias
-    transformer_blocks.3.ff.net.2.weight
-    transformer_blocks.3.ff_context.net.0.proj.bias
-    transformer_blocks.3.ff_context.net.0.proj.weight
-    transformer_blocks.3.ff_context.net.2.bias
-    transformer_blocks.3.ff_context.net.2.weight
-    transformer_blocks.3.norm1.linear.bias
-    transformer_blocks.3.norm1.linear.weight
-    transformer_blocks.3.norm1_context.linear.bias
-    transformer_blocks.3.norm1_context.linear.weight
-    
-    TRANSFORMER_BLOCK_4:
-    transformer_blocks.4.attn.add_k_proj.bias
-    transformer_blocks.4.attn.add_k_proj.weight
-    transformer_blocks.4.attn.add_q_proj.bias
-    transformer_blocks.4.attn.add_q_proj.weight
-    transformer_blocks.4.attn.add_v_proj.bias
-    transformer_blocks.4.attn.add_v_proj.weight
-    transformer_blocks.4.attn.norm_added_k.weight
-    transformer_blocks.4.attn.norm_added_q.weight
-    transformer_blocks.4.attn.norm_k.weight
-    transformer_blocks.4.attn.norm_q.weight
-    transformer_blocks.4.attn.to_add_out.bias
-    transformer_blocks.4.attn.to_add_out.weight
-    transformer_blocks.4.attn.to_k.bias
-    transformer_blocks.4.attn.to_k.weight
-    transformer_blocks.4.attn.to_out.0.bias
-    transformer_blocks.4.attn.to_out.0.weight
-    transformer_blocks.4.attn.to_q.bias
-    transformer_blocks.4.attn.to_q.weight
-    transformer_blocks.4.attn.to_v.bias
-    transformer_blocks.4.attn.to_v.weight
-    transformer_blocks.4.ff.net.0.proj.bias
-    transformer_blocks.4.ff.net.0.proj.weight
-    transformer_blocks.4.ff.net.2.bias
-    transformer_blocks.4.ff.net.2.weight
-    transformer_blocks.4.ff_context.net.0.proj.bias
-    transformer_blocks.4.ff_context.net.0.proj.weight
-    transformer_blocks.4.ff_context.net.2.bias
-    transformer_blocks.4.ff_context.net.2.weight
-    transformer_blocks.4.norm1.linear.bias
-    transformer_blocks.4.norm1.linear.weight
-    transformer_blocks.4.norm1_context.linear.bias
-    transformer_blocks.4.norm1_context.linear.weight
-    
-    TRANSFORMER_BLOCK_5:
-    transformer_blocks.5.attn.add_k_proj.bias
-    transformer_blocks.5.attn.add_k_proj.weight
-    transformer_blocks.5.attn.add_q_proj.bias
-    transformer_blocks.5.attn.add_q_proj.weight
-    transformer_blocks.5.attn.add_v_proj.bias
-    transformer_blocks.5.attn.add_v_proj.weight
-    transformer_blocks.5.attn.norm_added_k.weight
-    transformer_blocks.5.attn.norm_added_q.weight
-    transformer_blocks.5.attn.norm_k.weight
-    transformer_blocks.5.attn.norm_q.weight
-    transformer_blocks.5.attn.to_add_out.bias
-    transformer_blocks.5.attn.to_add_out.weight
-    transformer_blocks.5.attn.to_k.bias
-    transformer_blocks.5.attn.to_k.weight
-    transformer_blocks.5.attn.to_out.0.bias
-    transformer_blocks.5.attn.to_out.0.weight
-    transformer_blocks.5.attn.to_q.bias
-    transformer_blocks.5.attn.to_q.weight
-    transformer_blocks.5.attn.to_v.bias
-    transformer_blocks.5.attn.to_v.weight
-    transformer_blocks.5.ff.net.0.proj.bias
-    transformer_blocks.5.ff.net.0.proj.weight
-    transformer_blocks.5.ff.net.2.bias
-    transformer_blocks.5.ff.net.2.weight
-    transformer_blocks.5.ff_context.net.0.proj.bias
-    transformer_blocks.5.ff_context.net.0.proj.weight
-    transformer_blocks.5.ff_context.net.2.bias
-    transformer_blocks.5.ff_context.net.2.weight
-    transformer_blocks.5.norm1.linear.bias
-    transformer_blocks.5.norm1.linear.weight
-    transformer_blocks.5.norm1_context.linear.bias
-    transformer_blocks.5.norm1_context.linear.weight
-    
-    TRANSFORMER_BLOCK_6:
-    transformer_blocks.6.attn.add_k_proj.bias
-    transformer_blocks.6.attn.add_k_proj.weight
-    transformer_blocks.6.attn.add_q_proj.bias
-    transformer_blocks.6.attn.add_q_proj.weight
-    transformer_blocks.6.attn.add_v_proj.bias
-    transformer_blocks.6.attn.add_v_proj.weight
-    transformer_blocks.6.attn.norm_added_k.weight
-    transformer_blocks.6.attn.norm_added_q.weight
-    transformer_blocks.6.attn.norm_k.weight
-    transformer_blocks.6.attn.norm_q.weight
-    transformer_blocks.6.attn.to_add_out.bias
-    transformer_blocks.6.attn.to_add_out.weight
-    transformer_blocks.6.attn.to_k.bias
-    transformer_blocks.6.attn.to_k.weight
-    transformer_blocks.6.attn.to_out.0.bias
-    transformer_blocks.6.attn.to_out.0.weight
-    transformer_blocks.6.attn.to_q.bias
-    transformer_blocks.6.attn.to_q.weight
-    transformer_blocks.6.attn.to_v.bias
-    transformer_blocks.6.attn.to_v.weight
-    transformer_blocks.6.ff.net.0.proj.bias
-    transformer_blocks.6.ff.net.0.proj.weight
-    transformer_blocks.6.ff.net.2.bias
-    transformer_blocks.6.ff.net.2.weight
-    transformer_blocks.6.ff_context.net.0.proj.bias
-    transformer_blocks.6.ff_context.net.0.proj.weight
-    transformer_blocks.6.ff_context.net.2.bias
-    transformer_blocks.6.ff_context.net.2.weight
-    transformer_blocks.6.norm1.linear.bias
-    transformer_blocks.6.norm1.linear.weight
-    transformer_blocks.6.norm1_context.linear.bias
-    transformer_blocks.6.norm1_context.linear.weight
-    
-    TRANSFORMER_BLOCK_7:
-    transformer_blocks.7.attn.add_k_proj.bias
-    transformer_blocks.7.attn.add_k_proj.weight
-    transformer_blocks.7.attn.add_q_proj.bias
-    transformer_blocks.7.attn.add_q_proj.weight
-    transformer_blocks.7.attn.add_v_proj.bias
-    transformer_blocks.7.attn.add_v_proj.weight
-    transformer_blocks.7.attn.norm_added_k.weight
-    transformer_blocks.7.attn.norm_added_q.weight
-    transformer_blocks.7.attn.norm_k.weight
-    transformer_blocks.7.attn.norm_q.weight
-    transformer_blocks.7.attn.to_add_out.bias
-    transformer_blocks.7.attn.to_add_out.weight
-    transformer_blocks.7.attn.to_k.bias
-    transformer_blocks.7.attn.to_k.weight
-    transformer_blocks.7.attn.to_out.0.bias
-    transformer_blocks.7.attn.to_out.0.weight
-    transformer_blocks.7.attn.to_q.bias
-    transformer_blocks.7.attn.to_q.weight
-    transformer_blocks.7.attn.to_v.bias
-    transformer_blocks.7.attn.to_v.weight
-    transformer_blocks.7.ff.net.0.proj.bias
-    transformer_blocks.7.ff.net.0.proj.weight
-    transformer_blocks.7.ff.net.2.bias
-    transformer_blocks.7.ff.net.2.weight
-    transformer_blocks.7.ff_context.net.0.proj.bias
-    transformer_blocks.7.ff_context.net.0.proj.weight
-    transformer_blocks.7.ff_context.net.2.bias
-    transformer_blocks.7.ff_context.net.2.weight
-    transformer_blocks.7.norm1.linear.bias
-    transformer_blocks.7.norm1.linear.weight
-    transformer_blocks.7.norm1_context.linear.bias
-    transformer_blocks.7.norm1_context.linear.weight
-    
-    TRANSFORMER_BLOCK_8:
-    transformer_blocks.8.attn.add_k_proj.bias
-    transformer_blocks.8.attn.add_k_proj.weight
-    transformer_blocks.8.attn.add_q_proj.bias
-    transformer_blocks.8.attn.add_q_proj.weight
-    transformer_blocks.8.attn.add_v_proj.bias
-    transformer_blocks.8.attn.add_v_proj.weight
-    transformer_blocks.8.attn.norm_added_k.weight
-    transformer_blocks.8.attn.norm_added_q.weight
-    transformer_blocks.8.attn.norm_k.weight
-    transformer_blocks.8.attn.norm_q.weight
-    transformer_blocks.8.attn.to_add_out.bias
-    transformer_blocks.8.attn.to_add_out.weight
-    transformer_blocks.8.attn.to_k.bias
-    transformer_blocks.8.attn.to_k.weight
-    transformer_blocks.8.attn.to_out.0.bias
-    transformer_blocks.8.attn.to_out.0.weight
-    transformer_blocks.8.attn.to_q.bias
-    transformer_blocks.8.attn.to_q.weight
-    transformer_blocks.8.attn.to_v.bias
-    transformer_blocks.8.attn.to_v.weight
-    transformer_blocks.8.ff.net.0.proj.bias
-    transformer_blocks.8.ff.net.0.proj.weight
-    transformer_blocks.8.ff.net.2.bias
-    transformer_blocks.8.ff.net.2.weight
-    transformer_blocks.8.ff_context.net.0.proj.bias
-    transformer_blocks.8.ff_context.net.0.proj.weight
-    transformer_blocks.8.ff_context.net.2.bias
-    transformer_blocks.8.ff_context.net.2.weight
-    transformer_blocks.8.norm1.linear.bias
-    transformer_blocks.8.norm1.linear.weight
-    transformer_blocks.8.norm1_context.linear.bias
-    transformer_blocks.8.norm1_context.linear.weight
-    
-    TRANSFORMER_BLOCK_9:
-    transformer_blocks.9.attn.add_k_proj.bias
-    transformer_blocks.9.attn.add_k_proj.weight
-    transformer_blocks.9.attn.add_q_proj.bias
-    transformer_blocks.9.attn.add_q_proj.weight
-    transformer_blocks.9.attn.add_v_proj.bias
-    transformer_blocks.9.attn.add_v_proj.weight
-    transformer_blocks.9.attn.norm_added_k.weight
-    transformer_blocks.9.attn.norm_added_q.weight
-    transformer_blocks.9.attn.norm_k.weight
-    transformer_blocks.9.attn.norm_q.weight
-    transformer_blocks.9.attn.to_add_out.bias
-    transformer_blocks.9.attn.to_add_out.weight
-    transformer_blocks.9.attn.to_k.bias
-    transformer_blocks.9.attn.to_k.weight
-    transformer_blocks.9.attn.to_out.0.bias
-    transformer_blocks.9.attn.to_out.0.weight
-    transformer_blocks.9.attn.to_q.bias
-    transformer_blocks.9.attn.to_q.weight
-    transformer_blocks.9.attn.to_v.bias
-    transformer_blocks.9.attn.to_v.weight
-    transformer_blocks.9.ff.net.0.proj.bias
-    transformer_blocks.9.ff.net.0.proj.weight
-    transformer_blocks.9.ff.net.2.bias
-    transformer_blocks.9.ff.net.2.weight
-    transformer_blocks.9.ff_context.net.0.proj.bias
-    transformer_blocks.9.ff_context.net.0.proj.weight
-    transformer_blocks.9.ff_context.net.2.bias
-    transformer_blocks.9.ff_context.net.2.weight
-    transformer_blocks.9.norm1.linear.bias
-    transformer_blocks.9.norm1.linear.weight
-    transformer_blocks.9.norm1_context.linear.bias
-    transformer_blocks.9.norm1_context.linear.weight
-    
-    TRANSFORMER_BLOCK_10:
-    transformer_blocks.10.attn.add_k_proj.bias
-    transformer_blocks.10.attn.add_k_proj.weight
-    transformer_blocks.10.attn.add_q_proj.bias
-    transformer_blocks.10.attn.add_q_proj.weight
-    transformer_blocks.10.attn.add_v_proj.bias
-    transformer_blocks.10.attn.add_v_proj.weight
-    transformer_blocks.10.attn.norm_added_k.weight
-    transformer_blocks.10.attn.norm_added_q.weight
-    transformer_blocks.10.attn.norm_k.weight
-    transformer_blocks.10.attn.norm_q.weight
-    transformer_blocks.10.attn.to_add_out.bias
-    transformer_blocks.10.attn.to_add_out.weight
-    transformer_blocks.10.attn.to_k.bias
-    transformer_blocks.10.attn.to_k.weight
-    transformer_blocks.10.attn.to_out.0.bias
-    transformer_blocks.10.attn.to_out.0.weight
-    transformer_blocks.10.attn.to_q.bias
-    transformer_blocks.10.attn.to_q.weight
-    transformer_blocks.10.attn.to_v.bias
-    transformer_blocks.10.attn.to_v.weight
-    transformer_blocks.10.ff.net.0.proj.bias
-    transformer_blocks.10.ff.net.0.proj.weight
-    transformer_blocks.10.ff.net.2.bias
-    transformer_blocks.10.ff.net.2.weight
-    transformer_blocks.10.ff_context.net.0.proj.bias
-    transformer_blocks.10.ff_context.net.0.proj.weight
-    transformer_blocks.10.ff_context.net.2.bias
-    transformer_blocks.10.ff_context.net.2.weight
-    transformer_blocks.10.norm1.linear.bias
-    transformer_blocks.10.norm1.linear.weight
-    transformer_blocks.10.norm1_context.linear.bias
-    transformer_blocks.10.norm1_context.linear.weight
-    
-    TRANSFORMER_BLOCK_11:
-    transformer_blocks.11.attn.add_k_proj.bias
-    transformer_blocks.11.attn.add_k_proj.weight
-    transformer_blocks.11.attn.add_q_proj.bias
-    transformer_blocks.11.attn.add_q_proj.weight
-    transformer_blocks.11.attn.add_v_proj.bias
-    transformer_blocks.11.attn.add_v_proj.weight
-    transformer_blocks.11.attn.norm_added_k.weight
-    transformer_blocks.11.attn.norm_added_q.weight
-    transformer_blocks.11.attn.norm_k.weight
-    transformer_blocks.11.attn.norm_q.weight
-    transformer_blocks.11.attn.to_add_out.bias
-    transformer_blocks.11.attn.to_add_out.weight
-    transformer_blocks.11.attn.to_k.bias
-    transformer_blocks.11.attn.to_k.weight
-    transformer_blocks.11.attn.to_out.0.bias
-    transformer_blocks.11.attn.to_out.0.weight
-    transformer_blocks.11.attn.to_q.bias
-    transformer_blocks.11.attn.to_q.weight
-    transformer_blocks.11.attn.to_v.bias
-    transformer_blocks.11.attn.to_v.weight
-    transformer_blocks.11.ff.net.0.proj.bias
-    transformer_blocks.11.ff.net.0.proj.weight
-    transformer_blocks.11.ff.net.2.bias
-    transformer_blocks.11.ff.net.2.weight
-    transformer_blocks.11.ff_context.net.0.proj.bias
-    transformer_blocks.11.ff_context.net.0.proj.weight
-    transformer_blocks.11.ff_context.net.2.bias
-    transformer_blocks.11.ff_context.net.2.weight
-    transformer_blocks.11.norm1.linear.bias
-    transformer_blocks.11.norm1.linear.weight
-    transformer_blocks.11.norm1_context.linear.bias
-    transformer_blocks.11.norm1_context.linear.weight
-    
-    TRANSFORMER_BLOCK_12:
-    transformer_blocks.12.attn.add_k_proj.bias
-    transformer_blocks.12.attn.add_k_proj.weight
-    transformer_blocks.12.attn.add_q_proj.bias
-    transformer_blocks.12.attn.add_q_proj.weight
-    transformer_blocks.12.attn.add_v_proj.bias
-    transformer_blocks.12.attn.add_v_proj.weight
-    transformer_blocks.12.attn.norm_added_k.weight
-    transformer_blocks.12.attn.norm_added_q.weight
-    transformer_blocks.12.attn.norm_k.weight
-    transformer_blocks.12.attn.norm_q.weight
-    transformer_blocks.12.attn.to_add_out.bias
-    transformer_blocks.12.attn.to_add_out.weight
-    transformer_blocks.12.attn.to_k.bias
-    transformer_blocks.12.attn.to_k.weight
-    transformer_blocks.12.attn.to_out.0.bias
-    transformer_blocks.12.attn.to_out.0.weight
-    transformer_blocks.12.attn.to_q.bias
-    transformer_blocks.12.attn.to_q.weight
-    transformer_blocks.12.attn.to_v.bias
-    transformer_blocks.12.attn.to_v.weight
-    transformer_blocks.12.ff.net.0.proj.bias
-    transformer_blocks.12.ff.net.0.proj.weight
-    transformer_blocks.12.ff.net.2.bias
-    transformer_blocks.12.ff.net.2.weight
-    transformer_blocks.12.ff_context.net.0.proj.bias
-    transformer_blocks.12.ff_context.net.0.proj.weight
-    transformer_blocks.12.ff_context.net.2.bias
-    transformer_blocks.12.ff_context.net.2.weight
-    transformer_blocks.12.norm1.linear.bias
-    transformer_blocks.12.norm1.linear.weight
-    transformer_blocks.12.norm1_context.linear.bias
-    transformer_blocks.12.norm1_context.linear.weight
-    
-    TRANSFORMER_BLOCK_13:
-    transformer_blocks.13.attn.add_k_proj.bias
-    transformer_blocks.13.attn.add_k_proj.weight
-    transformer_blocks.13.attn.add_q_proj.bias
-    transformer_blocks.13.attn.add_q_proj.weight
-    transformer_blocks.13.attn.add_v_proj.bias
-    transformer_blocks.13.attn.add_v_proj.weight
-    transformer_blocks.13.attn.norm_added_k.weight
-    transformer_blocks.13.attn.norm_added_q.weight
-    transformer_blocks.13.attn.norm_k.weight
-    transformer_blocks.13.attn.norm_q.weight
-    transformer_blocks.13.attn.to_add_out.bias
-    transformer_blocks.13.attn.to_add_out.weight
-    transformer_blocks.13.attn.to_k.bias
-    transformer_blocks.13.attn.to_k.weight
-    transformer_blocks.13.attn.to_out.0.bias
-    transformer_blocks.13.attn.to_out.0.weight
-    transformer_blocks.13.attn.to_q.bias
-    transformer_blocks.13.attn.to_q.weight
-    transformer_blocks.13.attn.to_v.bias
-    transformer_blocks.13.attn.to_v.weight
-    transformer_blocks.13.ff.net.0.proj.bias
-    transformer_blocks.13.ff.net.0.proj.weight
-    transformer_blocks.13.ff.net.2.bias
-    transformer_blocks.13.ff.net.2.weight
-    transformer_blocks.13.ff_context.net.0.proj.bias
-    transformer_blocks.13.ff_context.net.0.proj.weight
-    transformer_blocks.13.ff_context.net.2.bias
-    transformer_blocks.13.ff_context.net.2.weight
-    transformer_blocks.13.norm1.linear.bias
-    transformer_blocks.13.norm1.linear.weight
-    transformer_blocks.13.norm1_context.linear.bias
-    transformer_blocks.13.norm1_context.linear.weight
-    
-    TRANSFORMER_BLOCK_14:
-    transformer_blocks.14.attn.add_k_proj.bias
-    transformer_blocks.14.attn.add_k_proj.weight
-    transformer_blocks.14.attn.add_q_proj.bias
-    transformer_blocks.14.attn.add_q_proj.weight
-    transformer_blocks.14.attn.add_v_proj.bias
-    transformer_blocks.14.attn.add_v_proj.weight
-    transformer_blocks.14.attn.norm_added_k.weight
-    transformer_blocks.14.attn.norm_added_q.weight
-    transformer_blocks.14.attn.norm_k.weight
-    transformer_blocks.14.attn.norm_q.weight
-    transformer_blocks.14.attn.to_add_out.bias
-    transformer_blocks.14.attn.to_add_out.weight
-    transformer_blocks.14.attn.to_k.bias
-    transformer_blocks.14.attn.to_k.weight
-    transformer_blocks.14.attn.to_out.0.bias
-    transformer_blocks.14.attn.to_out.0.weight
-    transformer_blocks.14.attn.to_q.bias
-    transformer_blocks.14.attn.to_q.weight
-    transformer_blocks.14.attn.to_v.bias
-    transformer_blocks.14.attn.to_v.weight
-    transformer_blocks.14.ff.net.0.proj.bias
-    transformer_blocks.14.ff.net.0.proj.weight
-    transformer_blocks.14.ff.net.2.bias
-    transformer_blocks.14.ff.net.2.weight
-    transformer_blocks.14.ff_context.net.0.proj.bias
-    transformer_blocks.14.ff_context.net.0.proj.weight
-    transformer_blocks.14.ff_context.net.2.bias
-    transformer_blocks.14.ff_context.net.2.weight
-    transformer_blocks.14.norm1.linear.bias
-    transformer_blocks.14.norm1.linear.weight
-    transformer_blocks.14.norm1_context.linear.bias
-    transformer_blocks.14.norm1_context.linear.weight
-    
-    TRANSFORMER_BLOCK_15:
-    transformer_blocks.15.attn.add_k_proj.bias
-    transformer_blocks.15.attn.add_k_proj.weight
-    transformer_blocks.15.attn.add_q_proj.bias
-    transformer_blocks.15.attn.add_q_proj.weight
-    transformer_blocks.15.attn.add_v_proj.bias
-    transformer_blocks.15.attn.add_v_proj.weight
-    transformer_blocks.15.attn.norm_added_k.weight
-    transformer_blocks.15.attn.norm_added_q.weight
-    transformer_blocks.15.attn.norm_k.weight
-    transformer_blocks.15.attn.norm_q.weight
-    transformer_blocks.15.attn.to_add_out.bias
-    transformer_blocks.15.attn.to_add_out.weight
-    transformer_blocks.15.attn.to_k.bias
-    transformer_blocks.15.attn.to_k.weight
-    transformer_blocks.15.attn.to_out.0.bias
-    transformer_blocks.15.attn.to_out.0.weight
-    transformer_blocks.15.attn.to_q.bias
-    transformer_blocks.15.attn.to_q.weight
-    transformer_blocks.15.attn.to_v.bias
-    transformer_blocks.15.attn.to_v.weight
-    transformer_blocks.15.ff.net.0.proj.bias
-    transformer_blocks.15.ff.net.0.proj.weight
-    transformer_blocks.15.ff.net.2.bias
-    transformer_blocks.15.ff.net.2.weight
-    transformer_blocks.15.ff_context.net.0.proj.bias
-    transformer_blocks.15.ff_context.net.0.proj.weight
-    transformer_blocks.15.ff_context.net.2.bias
-    transformer_blocks.15.ff_context.net.2.weight
-    transformer_blocks.15.norm1.linear.bias
-    transformer_blocks.15.norm1.linear.weight
-    transformer_blocks.15.norm1_context.linear.bias
-    transformer_blocks.15.norm1_context.linear.weight
-    
-    TRANSFORMER_BLOCK_16:
-    transformer_blocks.16.attn.add_k_proj.bias
-    transformer_blocks.16.attn.add_k_proj.weight
-    transformer_blocks.16.attn.add_q_proj.bias
-    transformer_blocks.16.attn.add_q_proj.weight
-    transformer_blocks.16.attn.add_v_proj.bias
-    transformer_blocks.16.attn.add_v_proj.weight
-    transformer_blocks.16.attn.norm_added_k.weight
-    transformer_blocks.16.attn.norm_added_q.weight
-    transformer_blocks.16.attn.norm_k.weight
-    transformer_blocks.16.attn.norm_q.weight
-    transformer_blocks.16.attn.to_add_out.bias
-    transformer_blocks.16.attn.to_add_out.weight
-    transformer_blocks.16.attn.to_k.bias
-    transformer_blocks.16.attn.to_k.weight
-    transformer_blocks.16.attn.to_out.0.bias
-    transformer_blocks.16.attn.to_out.0.weight
-    transformer_blocks.16.attn.to_q.bias
-    transformer_blocks.16.attn.to_q.weight
-    transformer_blocks.16.attn.to_v.bias
-    transformer_blocks.16.attn.to_v.weight
-    transformer_blocks.16.ff.net.0.proj.bias
-    transformer_blocks.16.ff.net.0.proj.weight
-    transformer_blocks.16.ff.net.2.bias
-    transformer_blocks.16.ff.net.2.weight
-    transformer_blocks.16.ff_context.net.0.proj.bias
-    transformer_blocks.16.ff_context.net.0.proj.weight
-    transformer_blocks.16.ff_context.net.2.bias
-    transformer_blocks.16.ff_context.net.2.weight
-    transformer_blocks.16.norm1.linear.bias
-    transformer_blocks.16.norm1.linear.weight
-    transformer_blocks.16.norm1_context.linear.bias
-    transformer_blocks.16.norm1_context.linear.weight
-    
-    TRANSFORMER_BLOCK_17:
-    transformer_blocks.17.attn.add_k_proj.bias
-    transformer_blocks.17.attn.add_k_proj.weight
-    transformer_blocks.17.attn.add_q_proj.bias
-    transformer_blocks.17.attn.add_q_proj.weight
-    transformer_blocks.17.attn.add_v_proj.bias
-    transformer_blocks.17.attn.add_v_proj.weight
-    transformer_blocks.17.attn.norm_added_k.weight
-    transformer_blocks.17.attn.norm_added_q.weight
-    transformer_blocks.17.attn.norm_k.weight
-    transformer_blocks.17.attn.norm_q.weight
-    transformer_blocks.17.attn.to_add_out.bias
-    transformer_blocks.17.attn.to_add_out.weight
-    transformer_blocks.17.attn.to_k.bias
-    transformer_blocks.17.attn.to_k.weight
-    transformer_blocks.17.attn.to_out.0.bias
-    transformer_blocks.17.attn.to_out.0.weight
-    transformer_blocks.17.attn.to_q.bias
-    transformer_blocks.17.attn.to_q.weight
-    transformer_blocks.17.attn.to_v.bias
-    transformer_blocks.17.attn.to_v.weight
-    transformer_blocks.17.ff.net.0.proj.bias
-    transformer_blocks.17.ff.net.0.proj.weight
-    transformer_blocks.17.ff.net.2.bias
-    transformer_blocks.17.ff.net.2.weight
-    transformer_blocks.17.ff_context.net.0.proj.bias
-    transformer_blocks.17.ff_context.net.0.proj.weight
-    transformer_blocks.17.ff_context.net.2.bias
-    transformer_blocks.17.ff_context.net.2.weight
-    transformer_blocks.17.norm1.linear.bias
-    transformer_blocks.17.norm1.linear.weight
-    transformer_blocks.17.norm1_context.linear.bias
-    transformer_blocks.17.norm1_context.linear.weight
-    
-    TRANSFORMER_BLOCK_18:
-    transformer_blocks.18.attn.add_k_proj.bias
-    transformer_blocks.18.attn.add_k_proj.weight
-    transformer_blocks.18.attn.add_q_proj.bias
-    transformer_blocks.18.attn.add_q_proj.weight
-    transformer_blocks.18.attn.add_v_proj.bias
-    transformer_blocks.18.attn.add_v_proj.weight
-    transformer_blocks.18.attn.norm_added_k.weight
-    transformer_blocks.18.attn.norm_added_q.weight
-    transformer_blocks.18.attn.norm_k.weight
-    transformer_blocks.18.attn.norm_q.weight
-    transformer_blocks.18.attn.to_add_out.bias
-    transformer_blocks.18.attn.to_add_out.weight
-    transformer_blocks.18.attn.to_k.bias
-    transformer_blocks.18.attn.to_k.weight
-    transformer_blocks.18.attn.to_out.0.bias
-    transformer_blocks.18.attn.to_out.0.weight
-    transformer_blocks.18.attn.to_q.bias
-    transformer_blocks.18.attn.to_q.weight
-    transformer_blocks.18.attn.to_v.bias
-    transformer_blocks.18.attn.to_v.weight
-    transformer_blocks.18.ff.net.0.proj.bias
-    transformer_blocks.18.ff.net.0.proj.weight
-    transformer_blocks.18.ff.net.2.bias
-    transformer_blocks.18.ff.net.2.weight
-    transformer_blocks.18.ff_context.net.0.proj.bias
-    transformer_blocks.18.ff_context.net.0.proj.weight
-    transformer_blocks.18.ff_context.net.2.bias
-    transformer_blocks.18.ff_context.net.2.weight
-    transformer_blocks.18.norm1.linear.bias
-    transformer_blocks.18.norm1.linear.weight
-    transformer_blocks.18.norm1_context.linear.bias
-    transformer_blocks.18.norm1_context.linear.weight
-    
-    TRANSFORMER_BLOCK_19:
-    transformer_blocks.19.attn.add_k_proj.bias
-    transformer_blocks.19.attn.add_k_proj.weight
-    transformer_blocks.19.attn.add_q_proj.bias
-    transformer_blocks.19.attn.add_q_proj.weight
-    transformer_blocks.19.attn.add_v_proj.bias
-    transformer_blocks.19.attn.add_v_proj.weight
-    transformer_blocks.19.attn.norm_added_k.weight
-    transformer_blocks.19.attn.norm_added_q.weight
-    transformer_blocks.19.attn.norm_k.weight
-    transformer_blocks.19.attn.norm_q.weight
-    transformer_blocks.19.attn.to_add_out.bias
-    transformer_blocks.19.attn.to_add_out.weight
-    transformer_blocks.19.attn.to_k.bias
-    transformer_blocks.19.attn.to_k.weight
-    transformer_blocks.19.attn.to_out.0.bias
-    transformer_blocks.19.attn.to_out.0.weight
-    transformer_blocks.19.attn.to_q.bias
-    transformer_blocks.19.attn.to_q.weight
-    transformer_blocks.19.attn.to_v.bias
-    transformer_blocks.19.attn.to_v.weight
-    transformer_blocks.19.ff.net.0.proj.bias
-    transformer_blocks.19.ff.net.0.proj.weight
-    transformer_blocks.19.ff.net.2.bias
-    transformer_blocks.19.ff.net.2.weight
-    transformer_blocks.19.ff_context.net.0.proj.bias
-    transformer_blocks.19.ff_context.net.0.proj.weight
-    transformer_blocks.19.ff_context.net.2.bias
-    transformer_blocks.19.ff_context.net.2.weight
-    transformer_blocks.19.norm1.linear.bias
-    transformer_blocks.19.norm1.linear.weight
-    transformer_blocks.19.norm1_context.linear.bias
-    transformer_blocks.19.norm1_context.linear.weight
-    
-    TRANSFORMER_BLOCK_20:
-    transformer_blocks.20.attn.add_k_proj.bias
-    transformer_blocks.20.attn.add_k_proj.weight
-    transformer_blocks.20.attn.add_q_proj.bias
-    transformer_blocks.20.attn.add_q_proj.weight
-    transformer_blocks.20.attn.add_v_proj.bias
-    transformer_blocks.20.attn.add_v_proj.weight
-    transformer_blocks.20.attn.norm_added_k.weight
-    transformer_blocks.20.attn.norm_added_q.weight
-    transformer_blocks.20.attn.norm_k.weight
-    transformer_blocks.20.attn.norm_q.weight
-    transformer_blocks.20.attn.to_add_out.bias
-    transformer_blocks.20.attn.to_add_out.weight
-    transformer_blocks.20.attn.to_k.bias
-    transformer_blocks.20.attn.to_k.weight
-    transformer_blocks.20.attn.to_out.0.bias
-    transformer_blocks.20.attn.to_out.0.weight
-    transformer_blocks.20.attn.to_q.bias
-    transformer_blocks.20.attn.to_q.weight
-    transformer_blocks.20.attn.to_v.bias
-    transformer_blocks.20.attn.to_v.weight
-    transformer_blocks.20.ff.net.0.proj.bias
-    transformer_blocks.20.ff.net.0.proj.weight
-    transformer_blocks.20.ff.net.2.bias
-    transformer_blocks.20.ff.net.2.weight
-    transformer_blocks.20.ff_context.net.0.proj.bias
-    transformer_blocks.20.ff_context.net.0.proj.weight
-    transformer_blocks.20.ff_context.net.2.bias
-    transformer_blocks.20.ff_context.net.2.weight
-    transformer_blocks.20.norm1.linear.bias
-    transformer_blocks.20.norm1.linear.weight
-    transformer_blocks.20.norm1_context.linear.bias
-    transformer_blocks.20.norm1_context.linear.weight
-    
-    TRANSFORMER_BLOCK_21:
-    transformer_blocks.21.attn.add_k_proj.bias
-    transformer_blocks.21.attn.add_k_proj.weight
-    transformer_blocks.21.attn.add_q_proj.bias
-    transformer_blocks.21.attn.add_q_proj.weight
-    transformer_blocks.21.attn.add_v_proj.bias
-    transformer_blocks.21.attn.add_v_proj.weight
-    transformer_blocks.21.attn.norm_added_k.weight
-    transformer_blocks.21.attn.norm_added_q.weight
-    transformer_blocks.21.attn.norm_k.weight
-    transformer_blocks.21.attn.norm_q.weight
-    transformer_blocks.21.attn.to_add_out.bias
-    transformer_blocks.21.attn.to_add_out.weight
-    transformer_blocks.21.attn.to_k.bias
-    transformer_blocks.21.attn.to_k.weight
-    transformer_blocks.21.attn.to_out.0.bias
-    transformer_blocks.21.attn.to_out.0.weight
-    transformer_blocks.21.attn.to_q.bias
-    transformer_blocks.21.attn.to_q.weight
-    transformer_blocks.21.attn.to_v.bias
-    transformer_blocks.21.attn.to_v.weight
-    transformer_blocks.21.ff.net.0.proj.bias
-    transformer_blocks.21.ff.net.0.proj.weight
-    transformer_blocks.21.ff.net.2.bias
-    transformer_blocks.21.ff.net.2.weight
-    transformer_blocks.21.ff_context.net.0.proj.bias
-    transformer_blocks.21.ff_context.net.0.proj.weight
-    transformer_blocks.21.ff_context.net.2.bias
-    transformer_blocks.21.ff_context.net.2.weight
-    transformer_blocks.21.norm1.linear.bias
-    transformer_blocks.21.norm1.linear.weight
-    transformer_blocks.21.norm1_context.linear.bias
-    transformer_blocks.21.norm1_context.linear.weight
-    
-    TRANSFORMER_BLOCK_22:
-    transformer_blocks.22.attn.add_k_proj.bias
-    transformer_blocks.22.attn.add_k_proj.weight
-    transformer_blocks.22.attn.add_q_proj.bias
-    transformer_blocks.22.attn.add_q_proj.weight
-    transformer_blocks.22.attn.add_v_proj.bias
-    transformer_blocks.22.attn.add_v_proj.weight
-    transformer_blocks.22.attn.norm_added_k.weight
-    transformer_blocks.22.attn.norm_added_q.weight
-    transformer_blocks.22.attn.norm_k.weight
-    transformer_blocks.22.attn.norm_q.weight
-    transformer_blocks.22.attn.to_add_out.bias
-    transformer_blocks.22.attn.to_add_out.weight
-    transformer_blocks.22.attn.to_k.bias
-    transformer_blocks.22.attn.to_k.weight
-    transformer_blocks.22.attn.to_out.0.bias
-    transformer_blocks.22.attn.to_out.0.weight
-    transformer_blocks.22.attn.to_q.bias
-    transformer_blocks.22.attn.to_q.weight
-    transformer_blocks.22.attn.to_v.bias
-    transformer_blocks.22.attn.to_v.weight
-    transformer_blocks.22.ff.net.0.proj.bias
-    transformer_blocks.22.ff.net.0.proj.weight
-    transformer_blocks.22.ff.net.2.bias
-    transformer_blocks.22.ff.net.2.weight
-    transformer_blocks.22.ff_context.net.0.proj.bias
-    transformer_blocks.22.ff_context.net.0.proj.weight
-    transformer_blocks.22.ff_context.net.2.bias
-    transformer_blocks.22.ff_context.net.2.weight
-    transformer_blocks.22.norm1.linear.bias
-    transformer_blocks.22.norm1.linear.weight
-    transformer_blocks.22.norm1_context.linear.bias
-    transformer_blocks.22.norm1_context.linear.weight
-    
-    TRANSFORMER_BLOCK_23:
-    transformer_blocks.23.attn.add_k_proj.bias
-    transformer_blocks.23.attn.add_k_proj.weight
-    transformer_blocks.23.attn.add_q_proj.bias
-    transformer_blocks.23.attn.add_q_proj.weight
-    transformer_blocks.23.attn.add_v_proj.bias
-    transformer_blocks.23.attn.add_v_proj.weight
-    transformer_blocks.23.attn.norm_added_k.weight
-    transformer_blocks.23.attn.norm_added_q.weight
-    transformer_blocks.23.attn.norm_k.weight
-    transformer_blocks.23.attn.norm_q.weight
-    transformer_blocks.23.attn.to_add_out.bias
-    transformer_blocks.23.attn.to_add_out.weight
-    transformer_blocks.23.attn.to_k.bias
-    transformer_blocks.23.attn.to_k.weight
-    transformer_blocks.23.attn.to_out.0.bias
-    transformer_blocks.23.attn.to_out.0.weight
-    transformer_blocks.23.attn.to_q.bias
-    transformer_blocks.23.attn.to_q.weight
-    transformer_blocks.23.attn.to_v.bias
-    transformer_blocks.23.attn.to_v.weight
-    transformer_blocks.23.ff.net.0.proj.bias
-    transformer_blocks.23.ff.net.0.proj.weight
-    transformer_blocks.23.ff.net.2.bias
-    transformer_blocks.23.ff.net.2.weight
-    transformer_blocks.23.ff_context.net.0.proj.bias
-    transformer_blocks.23.ff_context.net.0.proj.weight
-    transformer_blocks.23.ff_context.net.2.bias
-    transformer_blocks.23.ff_context.net.2.weight
-    transformer_blocks.23.norm1.linear.bias
-    transformer_blocks.23.norm1.linear.weight
-    transformer_blocks.23.norm1_context.linear.bias
-    transformer_blocks.23.norm1_context.linear.weight
-    
-    TRANSFORMER_BLOCK_24:
-    transformer_blocks.24.attn.add_k_proj.bias
-    transformer_blocks.24.attn.add_k_proj.weight
-    transformer_blocks.24.attn.add_q_proj.bias
-    transformer_blocks.24.attn.add_q_proj.weight
-    transformer_blocks.24.attn.add_v_proj.bias
-    transformer_blocks.24.attn.add_v_proj.weight
-    transformer_blocks.24.attn.norm_added_k.weight
-    transformer_blocks.24.attn.norm_added_q.weight
-    transformer_blocks.24.attn.norm_k.weight
-    transformer_blocks.24.attn.norm_q.weight
-    transformer_blocks.24.attn.to_add_out.bias
-    transformer_blocks.24.attn.to_add_out.weight
-    transformer_blocks.24.attn.to_k.bias
-    transformer_blocks.24.attn.to_k.weight
-    transformer_blocks.24.attn.to_out.0.bias
-    transformer_blocks.24.attn.to_out.0.weight
-    transformer_blocks.24.attn.to_q.bias
-    transformer_blocks.24.attn.to_q.weight
-    transformer_blocks.24.attn.to_v.bias
-    transformer_blocks.24.attn.to_v.weight
-    transformer_blocks.24.ff.net.0.proj.bias
-    transformer_blocks.24.ff.net.0.proj.weight
-    transformer_blocks.24.ff.net.2.bias
-    transformer_blocks.24.ff.net.2.weight
-    transformer_blocks.24.ff_context.net.0.proj.bias
-    transformer_blocks.24.ff_context.net.0.proj.weight
-    transformer_blocks.24.ff_context.net.2.bias
-    transformer_blocks.24.ff_context.net.2.weight
-    transformer_blocks.24.norm1.linear.bias
-    transformer_blocks.24.norm1.linear.weight
-    transformer_blocks.24.norm1_context.linear.bias
-    transformer_blocks.24.norm1_context.linear.weight
-    
-    TRANSFORMER_BLOCK_25:
-    transformer_blocks.25.attn.add_k_proj.bias
-    transformer_blocks.25.attn.add_k_proj.weight
-    transformer_blocks.25.attn.add_q_proj.bias
-    transformer_blocks.25.attn.add_q_proj.weight
-    transformer_blocks.25.attn.add_v_proj.bias
-    transformer_blocks.25.attn.add_v_proj.weight
-    transformer_blocks.25.attn.norm_added_k.weight
-    transformer_blocks.25.attn.norm_added_q.weight
-    transformer_blocks.25.attn.norm_k.weight
-    transformer_blocks.25.attn.norm_q.weight
-    transformer_blocks.25.attn.to_add_out.bias
-    transformer_blocks.25.attn.to_add_out.weight
-    transformer_blocks.25.attn.to_k.bias
-    transformer_blocks.25.attn.to_k.weight
-    transformer_blocks.25.attn.to_out.0.bias
-    transformer_blocks.25.attn.to_out.0.weight
-    transformer_blocks.25.attn.to_q.bias
-    transformer_blocks.25.attn.to_q.weight
-    transformer_blocks.25.attn.to_v.bias
-    transformer_blocks.25.attn.to_v.weight
-    transformer_blocks.25.ff.net.0.proj.bias
-    transformer_blocks.25.ff.net.0.proj.weight
-    transformer_blocks.25.ff.net.2.bias
-    transformer_blocks.25.ff.net.2.weight
-    transformer_blocks.25.ff_context.net.0.proj.bias
-    transformer_blocks.25.ff_context.net.0.proj.weight
-    transformer_blocks.25.ff_context.net.2.bias
-    transformer_blocks.25.ff_context.net.2.weight
-    transformer_blocks.25.norm1.linear.bias
-    transformer_blocks.25.norm1.linear.weight
-    transformer_blocks.25.norm1_context.linear.bias
-    transformer_blocks.25.norm1_context.linear.weight
-    
-    TRANSFORMER_BLOCK_26:
-    transformer_blocks.26.attn.add_k_proj.bias
-    transformer_blocks.26.attn.add_k_proj.weight
-    transformer_blocks.26.attn.add_q_proj.bias
-    transformer_blocks.26.attn.add_q_proj.weight
-    transformer_blocks.26.attn.add_v_proj.bias
-    transformer_blocks.26.attn.add_v_proj.weight
-    transformer_blocks.26.attn.norm_added_k.weight
-    transformer_blocks.26.attn.norm_added_q.weight
-    transformer_blocks.26.attn.norm_k.weight
-    transformer_blocks.26.attn.norm_q.weight
-    transformer_blocks.26.attn.to_add_out.bias
-    transformer_blocks.26.attn.to_add_out.weight
-    transformer_blocks.26.attn.to_k.bias
-    transformer_blocks.26.attn.to_k.weight
-    transformer_blocks.26.attn.to_out.0.bias
-    transformer_blocks.26.attn.to_out.0.weight
-    transformer_blocks.26.attn.to_q.bias
-    transformer_blocks.26.attn.to_q.weight
-    transformer_blocks.26.attn.to_v.bias
-    transformer_blocks.26.attn.to_v.weight
-    transformer_blocks.26.ff.net.0.proj.bias
-    transformer_blocks.26.ff.net.0.proj.weight
-    transformer_blocks.26.ff.net.2.bias
-    transformer_blocks.26.ff.net.2.weight
-    transformer_blocks.26.ff_context.net.0.proj.bias
-    transformer_blocks.26.ff_context.net.0.proj.weight
-    transformer_blocks.26.ff_context.net.2.bias
-    transformer_blocks.26.ff_context.net.2.weight
-    transformer_blocks.26.norm1.linear.bias
-    transformer_blocks.26.norm1.linear.weight
-    transformer_blocks.26.norm1_context.linear.bias
-    transformer_blocks.26.norm1_context.linear.weight
-    
-    TRANSFORMER_BLOCK_27:
-    transformer_blocks.27.attn.add_k_proj.bias
-    transformer_blocks.27.attn.add_k_proj.weight
-    transformer_blocks.27.attn.add_q_proj.bias
-    transformer_blocks.27.attn.add_q_proj.weight
-    transformer_blocks.27.attn.add_v_proj.bias
-    transformer_blocks.27.attn.add_v_proj.weight
-    transformer_blocks.27.attn.norm_added_k.weight
-    transformer_blocks.27.attn.norm_added_q.weight
-    transformer_blocks.27.attn.norm_k.weight
-    transformer_blocks.27.attn.norm_q.weight
-    transformer_blocks.27.attn.to_add_out.bias
-    transformer_blocks.27.attn.to_add_out.weight
-    transformer_blocks.27.attn.to_k.bias
-    transformer_blocks.27.attn.to_k.weight
-    transformer_blocks.27.attn.to_out.0.bias
-    transformer_blocks.27.attn.to_out.0.weight
-    transformer_blocks.27.attn.to_q.bias
-    transformer_blocks.27.attn.to_q.weight
-    transformer_blocks.27.attn.to_v.bias
-    transformer_blocks.27.attn.to_v.weight
-    transformer_blocks.27.ff.net.0.proj.bias
-    transformer_blocks.27.ff.net.0.proj.weight
-    transformer_blocks.27.ff.net.2.bias
-    transformer_blocks.27.ff.net.2.weight
-    transformer_blocks.27.ff_context.net.0.proj.bias
-    transformer_blocks.27.ff_context.net.0.proj.weight
-    transformer_blocks.27.ff_context.net.2.bias
-    transformer_blocks.27.ff_context.net.2.weight
-    transformer_blocks.27.norm1.linear.bias
-    transformer_blocks.27.norm1.linear.weight
-    transformer_blocks.27.norm1_context.linear.bias
-    transformer_blocks.27.norm1_context.linear.weight
-    
-    TRANSFORMER_BLOCK_28:
-    transformer_blocks.28.attn.add_k_proj.bias
-    transformer_blocks.28.attn.add_k_proj.weight
-    transformer_blocks.28.attn.add_q_proj.bias
-    transformer_blocks.28.attn.add_q_proj.weight
-    transformer_blocks.28.attn.add_v_proj.bias
-    transformer_blocks.28.attn.add_v_proj.weight
-    transformer_blocks.28.attn.norm_added_k.weight
-    transformer_blocks.28.attn.norm_added_q.weight
-    transformer_blocks.28.attn.norm_k.weight
-    transformer_blocks.28.attn.norm_q.weight
-    transformer_blocks.28.attn.to_add_out.bias
-    transformer_blocks.28.attn.to_add_out.weight
-    transformer_blocks.28.attn.to_k.bias
-    transformer_blocks.28.attn.to_k.weight
-    transformer_blocks.28.attn.to_out.0.bias
-    transformer_blocks.28.attn.to_out.0.weight
-    transformer_blocks.28.attn.to_q.bias
-    transformer_blocks.28.attn.to_q.weight
-    transformer_blocks.28.attn.to_v.bias
-    transformer_blocks.28.attn.to_v.weight
-    transformer_blocks.28.ff.net.0.proj.bias
-    transformer_blocks.28.ff.net.0.proj.weight
-    transformer_blocks.28.ff.net.2.bias
-    transformer_blocks.28.ff.net.2.weight
-    transformer_blocks.28.ff_context.net.0.proj.bias
-    transformer_blocks.28.ff_context.net.0.proj.weight
-    transformer_blocks.28.ff_context.net.2.bias
-    transformer_blocks.28.ff_context.net.2.weight
-    transformer_blocks.28.norm1.linear.bias
-    transformer_blocks.28.norm1.linear.weight
-    transformer_blocks.28.norm1_context.linear.bias
-    transformer_blocks.28.norm1_context.linear.weight
-    
-    TRANSFORMER_BLOCK_29:
-    transformer_blocks.29.attn.add_k_proj.bias
-    transformer_blocks.29.attn.add_k_proj.weight
-    transformer_blocks.29.attn.add_q_proj.bias
-    transformer_blocks.29.attn.add_q_proj.weight
-    transformer_blocks.29.attn.add_v_proj.bias
-    transformer_blocks.29.attn.add_v_proj.weight
-    transformer_blocks.29.attn.norm_added_k.weight
-    transformer_blocks.29.attn.norm_added_q.weight
-    transformer_blocks.29.attn.norm_k.weight
-    transformer_blocks.29.attn.norm_q.weight
-    transformer_blocks.29.attn.to_add_out.bias
-    transformer_blocks.29.attn.to_add_out.weight
-    transformer_blocks.29.attn.to_k.bias
-    transformer_blocks.29.attn.to_k.weight
-    transformer_blocks.29.attn.to_out.0.bias
-    transformer_blocks.29.attn.to_out.0.weight
-    transformer_blocks.29.attn.to_q.bias
-    transformer_blocks.29.attn.to_q.weight
-    transformer_blocks.29.attn.to_v.bias
-    transformer_blocks.29.attn.to_v.weight
-    transformer_blocks.29.ff.net.0.proj.bias
-    transformer_blocks.29.ff.net.0.proj.weight
-    transformer_blocks.29.ff.net.2.bias
-    transformer_blocks.29.ff.net.2.weight
-    transformer_blocks.29.ff_context.net.0.proj.bias
-    transformer_blocks.29.ff_context.net.0.proj.weight
-    transformer_blocks.29.ff_context.net.2.bias
-    transformer_blocks.29.ff_context.net.2.weight
-    transformer_blocks.29.norm1.linear.bias
-    transformer_blocks.29.norm1.linear.weight
-    transformer_blocks.29.norm1_context.linear.bias
-    transformer_blocks.29.norm1_context.linear.weight
-    
-    TRANSFORMER_BLOCK_30:
-    transformer_blocks.30.attn.add_k_proj.bias
-    transformer_blocks.30.attn.add_k_proj.weight
-    transformer_blocks.30.attn.add_q_proj.bias
-    transformer_blocks.30.attn.add_q_proj.weight
-    transformer_blocks.30.attn.add_v_proj.bias
-    transformer_blocks.30.attn.add_v_proj.weight
-    transformer_blocks.30.attn.norm_added_k.weight
-    transformer_blocks.30.attn.norm_added_q.weight
-    transformer_blocks.30.attn.norm_k.weight
-    transformer_blocks.30.attn.norm_q.weight
-    transformer_blocks.30.attn.to_add_out.bias
-    transformer_blocks.30.attn.to_add_out.weight
-    transformer_blocks.30.attn.to_k.bias
-    transformer_blocks.30.attn.to_k.weight
-    transformer_blocks.30.attn.to_out.0.bias
-    transformer_blocks.30.attn.to_out.0.weight
-    transformer_blocks.30.attn.to_q.bias
-    transformer_blocks.30.attn.to_q.weight
-    transformer_blocks.30.attn.to_v.bias
-    transformer_blocks.30.attn.to_v.weight
-    transformer_blocks.30.ff.net.0.proj.bias
-    transformer_blocks.30.ff.net.0.proj.weight
-    transformer_blocks.30.ff.net.2.bias
-    transformer_blocks.30.ff.net.2.weight
-    transformer_blocks.30.ff_context.net.0.proj.bias
-    transformer_blocks.30.ff_context.net.0.proj.weight
-    transformer_blocks.30.ff_context.net.2.bias
-    transformer_blocks.30.ff_context.net.2.weight
-    transformer_blocks.30.norm1.linear.bias
-    transformer_blocks.30.norm1.linear.weight
-    transformer_blocks.30.norm1_context.linear.bias
-    transformer_blocks.30.norm1_context.linear.weight
-    
-    TRANSFORMER_BLOCK_31:
-    transformer_blocks.31.attn.add_k_proj.bias
-    transformer_blocks.31.attn.add_k_proj.weight
-    transformer_blocks.31.attn.add_q_proj.bias
-    transformer_blocks.31.attn.add_q_proj.weight
-    transformer_blocks.31.attn.add_v_proj.bias
-    transformer_blocks.31.attn.add_v_proj.weight
-    transformer_blocks.31.attn.norm_added_k.weight
-    transformer_blocks.31.attn.norm_added_q.weight
-    transformer_blocks.31.attn.norm_k.weight
-    transformer_blocks.31.attn.norm_q.weight
-    transformer_blocks.31.attn.to_add_out.bias
-    transformer_blocks.31.attn.to_add_out.weight
-    transformer_blocks.31.attn.to_k.bias
-    transformer_blocks.31.attn.to_k.weight
-    transformer_blocks.31.attn.to_out.0.bias
-    transformer_blocks.31.attn.to_out.0.weight
-    transformer_blocks.31.attn.to_q.bias
-    transformer_blocks.31.attn.to_q.weight
-    transformer_blocks.31.attn.to_v.bias
-    transformer_blocks.31.attn.to_v.weight
-    transformer_blocks.31.ff.net.0.proj.bias
-    transformer_blocks.31.ff.net.0.proj.weight
-    transformer_blocks.31.ff.net.2.bias
-    transformer_blocks.31.ff.net.2.weight
-    transformer_blocks.31.ff_context.net.0.proj.bias
-    transformer_blocks.31.ff_context.net.0.proj.weight
-    transformer_blocks.31.ff_context.net.2.bias
-    transformer_blocks.31.ff_context.net.2.weight
-    transformer_blocks.31.norm1.linear.bias
-    transformer_blocks.31.norm1.linear.weight
-    transformer_blocks.31.norm1_context.linear.bias
-    transformer_blocks.31.norm1_context.linear.weight
-    
-    TRANSFORMER_BLOCK_32:
-    transformer_blocks.32.attn.add_k_proj.bias
-    transformer_blocks.32.attn.add_k_proj.weight
-    transformer_blocks.32.attn.add_q_proj.bias
-    transformer_blocks.32.attn.add_q_proj.weight
-    transformer_blocks.32.attn.add_v_proj.bias
-    transformer_blocks.32.attn.add_v_proj.weight
-    transformer_blocks.32.attn.norm_added_k.weight
-    transformer_blocks.32.attn.norm_added_q.weight
-    transformer_blocks.32.attn.norm_k.weight
-    transformer_blocks.32.attn.norm_q.weight
-    transformer_blocks.32.attn.to_add_out.bias
-    transformer_blocks.32.attn.to_add_out.weight
-    transformer_blocks.32.attn.to_k.bias
-    transformer_blocks.32.attn.to_k.weight
-    transformer_blocks.32.attn.to_out.0.bias
-    transformer_blocks.32.attn.to_out.0.weight
-    transformer_blocks.32.attn.to_q.bias
-    transformer_blocks.32.attn.to_q.weight
-    transformer_blocks.32.attn.to_v.bias
-    transformer_blocks.32.attn.to_v.weight
-    transformer_blocks.32.ff.net.0.proj.bias
-    transformer_blocks.32.ff.net.0.proj.weight
-    transformer_blocks.32.ff.net.2.bias
-    transformer_blocks.32.ff.net.2.weight
-    transformer_blocks.32.ff_context.net.0.proj.bias
-    transformer_blocks.32.ff_context.net.0.proj.weight
-    transformer_blocks.32.ff_context.net.2.bias
-    transformer_blocks.32.ff_context.net.2.weight
-    transformer_blocks.32.norm1.linear.bias
-    transformer_blocks.32.norm1.linear.weight
-    transformer_blocks.32.norm1_context.linear.bias
-    transformer_blocks.32.norm1_context.linear.weight
-    
-    TRANSFORMER_BLOCK_33:
-    transformer_blocks.33.attn.add_k_proj.bias
-    transformer_blocks.33.attn.add_k_proj.weight
-    transformer_blocks.33.attn.add_q_proj.bias
-    transformer_blocks.33.attn.add_q_proj.weight
-    transformer_blocks.33.attn.add_v_proj.bias
-    transformer_blocks.33.attn.add_v_proj.weight
-    transformer_blocks.33.attn.norm_added_k.weight
-    transformer_blocks.33.attn.norm_added_q.weight
-    transformer_blocks.33.attn.norm_k.weight
-    transformer_blocks.33.attn.norm_q.weight
-    transformer_blocks.33.attn.to_add_out.bias
-    transformer_blocks.33.attn.to_add_out.weight
-    transformer_blocks.33.attn.to_k.bias
-    transformer_blocks.33.attn.to_k.weight
-    transformer_blocks.33.attn.to_out.0.bias
-    transformer_blocks.33.attn.to_out.0.weight
-    transformer_blocks.33.attn.to_q.bias
-    transformer_blocks.33.attn.to_q.weight
-    transformer_blocks.33.attn.to_v.bias
-    transformer_blocks.33.attn.to_v.weight
-    transformer_blocks.33.ff.net.0.proj.bias
-    transformer_blocks.33.ff.net.0.proj.weight
-    transformer_blocks.33.ff.net.2.bias
-    transformer_blocks.33.ff.net.2.weight
-    transformer_blocks.33.ff_context.net.0.proj.bias
-    transformer_blocks.33.ff_context.net.0.proj.weight
-    transformer_blocks.33.ff_context.net.2.bias
-    transformer_blocks.33.ff_context.net.2.weight
-    transformer_blocks.33.norm1.linear.bias
-    transformer_blocks.33.norm1.linear.weight
-    transformer_blocks.33.norm1_context.linear.bias
-    transformer_blocks.33.norm1_context.linear.weight
-    
-    TRANSFORMER_BLOCK_34:
-    transformer_blocks.34.attn.add_k_proj.bias
-    transformer_blocks.34.attn.add_k_proj.weight
-    transformer_blocks.34.attn.add_q_proj.bias
-    transformer_blocks.34.attn.add_q_proj.weight
-    transformer_blocks.34.attn.add_v_proj.bias
-    transformer_blocks.34.attn.add_v_proj.weight
-    transformer_blocks.34.attn.norm_added_k.weight
-    transformer_blocks.34.attn.norm_added_q.weight
-    transformer_blocks.34.attn.norm_k.weight
-    transformer_blocks.34.attn.norm_q.weight
-    transformer_blocks.34.attn.to_add_out.bias
-    transformer_blocks.34.attn.to_add_out.weight
-    transformer_blocks.34.attn.to_k.bias
-    transformer_blocks.34.attn.to_k.weight
-    transformer_blocks.34.attn.to_out.0.bias
-    transformer_blocks.34.attn.to_out.0.weight
-    transformer_blocks.34.attn.to_q.bias
-    transformer_blocks.34.attn.to_q.weight
-    transformer_blocks.34.attn.to_v.bias
-    transformer_blocks.34.attn.to_v.weight
-    transformer_blocks.34.ff.net.0.proj.bias
-    transformer_blocks.34.ff.net.0.proj.weight
-    transformer_blocks.34.ff.net.2.bias
-    transformer_blocks.34.ff.net.2.weight
-    transformer_blocks.34.ff_context.net.0.proj.bias
-    transformer_blocks.34.ff_context.net.0.proj.weight
-    transformer_blocks.34.ff_context.net.2.bias
-    transformer_blocks.34.ff_context.net.2.weight
-    transformer_blocks.34.norm1.linear.bias
-    transformer_blocks.34.norm1.linear.weight
-    transformer_blocks.34.norm1_context.linear.bias
-    transformer_blocks.34.norm1_context.linear.weight
-    
-    TRANSFORMER_BLOCK_35:
-    transformer_blocks.35.attn.add_k_proj.bias
-    transformer_blocks.35.attn.add_k_proj.weight
-    transformer_blocks.35.attn.add_q_proj.bias
-    transformer_blocks.35.attn.add_q_proj.weight
-    transformer_blocks.35.attn.add_v_proj.bias
-    transformer_blocks.35.attn.add_v_proj.weight
-    transformer_blocks.35.attn.norm_added_k.weight
-    transformer_blocks.35.attn.norm_added_q.weight
-    transformer_blocks.35.attn.norm_k.weight
-    transformer_blocks.35.attn.norm_q.weight
-    transformer_blocks.35.attn.to_add_out.bias
-    transformer_blocks.35.attn.to_add_out.weight
-    transformer_blocks.35.attn.to_k.bias
-    transformer_blocks.35.attn.to_k.weight
-    transformer_blocks.35.attn.to_out.0.bias
-    transformer_blocks.35.attn.to_out.0.weight
-    transformer_blocks.35.attn.to_q.bias
-    transformer_blocks.35.attn.to_q.weight
-    transformer_blocks.35.attn.to_v.bias
-    transformer_blocks.35.attn.to_v.weight
-    transformer_blocks.35.ff.net.0.proj.bias
-    transformer_blocks.35.ff.net.0.proj.weight
-    transformer_blocks.35.ff.net.2.bias
-    transformer_blocks.35.ff.net.2.weight
-    transformer_blocks.35.ff_context.net.0.proj.bias
-    transformer_blocks.35.ff_context.net.0.proj.weight
-    transformer_blocks.35.ff_context.net.2.bias
-    transformer_blocks.35.ff_context.net.2.weight
-    transformer_blocks.35.norm1.linear.bias
-    transformer_blocks.35.norm1.linear.weight
-    transformer_blocks.35.norm1_context.linear.bias
-    transformer_blocks.35.norm1_context.linear.weight
-    
-    TRANSFORMER_BLOCK_36:
-    transformer_blocks.36.attn.add_k_proj.bias
-    transformer_blocks.36.attn.add_k_proj.weight
-    transformer_blocks.36.attn.add_q_proj.bias
-    transformer_blocks.36.attn.add_q_proj.weight
-    transformer_blocks.36.attn.add_v_proj.bias
-    transformer_blocks.36.attn.add_v_proj.weight
-    transformer_blocks.36.attn.norm_added_k.weight
-    transformer_blocks.36.attn.norm_added_q.weight
-    transformer_blocks.36.attn.norm_k.weight
-    transformer_blocks.36.attn.norm_q.weight
-    transformer_blocks.36.attn.to_add_out.bias
-    transformer_blocks.36.attn.to_add_out.weight
-    transformer_blocks.36.attn.to_k.bias
-    transformer_blocks.36.attn.to_k.weight
-    transformer_blocks.36.attn.to_out.0.bias
-    transformer_blocks.36.attn.to_out.0.weight
-    transformer_blocks.36.attn.to_q.bias
-    transformer_blocks.36.attn.to_q.weight
-    transformer_blocks.36.attn.to_v.bias
-    transformer_blocks.36.attn.to_v.weight
-    transformer_blocks.36.ff.net.0.proj.bias
-    transformer_blocks.36.ff.net.0.proj.weight
-    transformer_blocks.36.ff.net.2.bias
-    transformer_blocks.36.ff.net.2.weight
-    transformer_blocks.36.ff_context.net.0.proj.bias
-    transformer_blocks.36.ff_context.net.0.proj.weight
-    transformer_blocks.36.ff_context.net.2.bias
-    transformer_blocks.36.ff_context.net.2.weight
-    transformer_blocks.36.norm1.linear.bias
-    transformer_blocks.36.norm1.linear.weight
-    transformer_blocks.36.norm1_context.linear.bias
-    transformer_blocks.36.norm1_context.linear.weight
-    
-    TRANSFORMER_BLOCK_37:
-    transformer_blocks.37.attn.add_k_proj.bias
-    transformer_blocks.37.attn.add_k_proj.weight
-    transformer_blocks.37.attn.add_q_proj.bias
-    transformer_blocks.37.attn.add_q_proj.weight
-    transformer_blocks.37.attn.add_v_proj.bias
-    transformer_blocks.37.attn.add_v_proj.weight
-    transformer_blocks.37.attn.norm_added_k.weight
-    transformer_blocks.37.attn.norm_added_q.weight
-    transformer_blocks.37.attn.norm_k.weight
-    transformer_blocks.37.attn.norm_q.weight
-    transformer_blocks.37.attn.to_k.bias
-    transformer_blocks.37.attn.to_k.weight
-    transformer_blocks.37.attn.to_out.0.bias
-    transformer_blocks.37.attn.to_out.0.weight
-    transformer_blocks.37.attn.to_q.bias
-    transformer_blocks.37.attn.to_q.weight
-    transformer_blocks.37.attn.to_v.bias
-    transformer_blocks.37.attn.to_v.weight
-    transformer_blocks.37.ff.net.0.proj.bias
-    transformer_blocks.37.ff.net.0.proj.weight
-    transformer_blocks.37.ff.net.2.bias
-    transformer_blocks.37.ff.net.2.weight
-    transformer_blocks.37.norm1.linear.bias
-    transformer_blocks.37.norm1.linear.weight
-    transformer_blocks.37.norm1_context.linear.bias
-    transformer_blocks.37.norm1_context.linear.weight
-    
-    OUTPUT_NORMALIZATION:
-    norm_out.linear.bias
-    norm_out.linear.weight
-    
-    OUTPUT_PROJECTION:
-    proj_out.bias
-    proj_out.weight
-    ```
-
-
-### Potential Improvements
-
-**General idea**
-
-A commonly believed heuristic that we verified once again during the construction of the SD3.5 family of models is that later/higher layers (i.e. `30 - 37`)* impact tertiary details more heavily. Conversely, earlier layers (i.e. `12 - 24` )* influence the overall composition/primary form more.
-
-So, freezing other layers/targeting specific layers is a viable approach.
-
-`*`These suggested layers are speculative and not 100% guaranteed. The tips here are more or less a general idea for next steps.
-
-**Photorealism**
-
-In preliminary testing, we observed that freezing the last few layers of the architecture significantly improved model training when using a photorealistic dataset, preventing detail degradation introduced by small dataset from happening.
-
-**Anatomy preservation**
-
-To dampen any possible degradation of anatomy, training only the attention layers and **not** the adaptive linear layers could help. For reference, below is one of the transformer blocks.
-
-- Sample single transformer block
-
-    ```json
-    TRANSFORMER_BLOCK_0:
-    transformer_blocks.0.attn.add_k_proj.bias
-    transformer_blocks.0.attn.add_k_proj.weight
-    transformer_blocks.0.attn.add_q_proj.bias
-    transformer_blocks.0.attn.add_q_proj.weight
-    transformer_blocks.0.attn.add_v_proj.bias
-    transformer_blocks.0.attn.add_v_proj.weight
-    transformer_blocks.0.attn.norm_added_k.weight
-    transformer_blocks.0.attn.norm_added_q.weight
-    transformer_blocks.0.attn.norm_k.weight
-    transformer_blocks.0.attn.norm_q.weight
-    transformer_blocks.0.attn.to_add_out.bias
-    transformer_blocks.0.attn.to_add_out.weight
-    transformer_blocks.0.attn.to_k.bias
-    transformer_blocks.0.attn.to_k.weight
-    transformer_blocks.0.attn.to_out.0.bias
-    transformer_blocks.0.attn.to_out.0.weight
-    transformer_blocks.0.attn.to_q.bias
-    transformer_blocks.0.attn.to_q.weight
-    transformer_blocks.0.attn.to_v.bias
-    transformer_blocks.0.attn.to_v.weight
-    transformer_blocks.0.ff.net.0.proj.bias
-    transformer_blocks.0.ff.net.0.proj.weight
-    transformer_blocks.0.ff.net.2.bias
-    transformer_blocks.0.ff.net.2.weight
-    transformer_blocks.0.ff_context.net.0.proj.bias
-    transformer_blocks.0.ff_context.net.0.proj.weight
-    transformer_blocks.0.ff_context.net.2.bias
-    transformer_blocks.0.ff_context.net.2.weight
-    transformer_blocks.0.norm1.linear.bias
-    transformer_blocks.0.norm1.linear.weight
-    transformer_blocks.0.norm1_context.linear.bias
-    transformer_blocks.0.norm1_context.linear.weight 
-    ```
-
-
-Candidate layers of interest:
-
-```json
-transformer_blocks.0.attn.add_k_proj.bias
-transformer_blocks.0.attn.add_k_proj.weight
-transformer_blocks.0.attn.add_q_proj.bias
-transformer_blocks.0.attn.add_q_proj.weight
-transformer_blocks.0.attn.add_v_proj.bias
-transformer_blocks.0.attn.add_v_proj.weight
-transformer_blocks.0.attn.norm_added_k.weight
-transformer_blocks.0.attn.norm_added_q.weight
-transformer_blocks.0.attn.norm_k.weight
-transformer_blocks.0.attn.norm_q.weight
-transformer_blocks.0.attn.to_add_out.bias
-transformer_blocks.0.attn.to_add_out.weight
-transformer_blocks.0.attn.to_k.bias
-transformer_blocks.0.attn.to_k.weight
-transformer_blocks.0.attn.to_out.0.bias
-transformer_blocks.0.attn.to_out.0.weight
-transformer_blocks.0.attn.to_q.bias
-transformer_blocks.0.attn.to_q.weight
-transformer_blocks.0.attn.to_v.bias
-transformer_blocks.0.attn.to_v.weight
-```
-
-**General case (`i.e.` small or low-quality dataset)**
-
-A possible idea to work around issues caused by small or low quality datasets is to do training of context blocks only (the left “tower” of Figure 2(b)) . This means other layers could be potentially frozen.
-
-Here are the figures from the SD3 paper, [Scaling Rectified Flow Transformers for High-Resolution Image Synthesis](https://arxiv.org/abs/2403.03206).
-
-`Figure 2(a)`
-
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/4e8dae13-2612-4518-91a4-53485ccdba7c/9a611922-8b76-4157-a7a0-a6ea7159d287/image.png)
-
-`Figure 2(b)`
-
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/4e8dae13-2612-4518-91a4-53485ccdba7c/5c332a25-e1a8-43df-8eff-ec802a0fa1ef/image.png)
-
-The context (text representation) is denoted with the variable `c`. The concatenation of the `CLIP`s and `T5` embeddings go from here into the `MMDiT` block.
-
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/4e8dae13-2612-4518-91a4-53485ccdba7c/c61b5622-328e-497e-9da9-adb38723bcad/image.png)
-
-![Screenshot 2024-10-22 at 15.19.36.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/4e8dae13-2612-4518-91a4-53485ccdba7c/35eadfb3-e79a-42bc-9cdb-a407ee3c5ab2/Screenshot_2024-10-22_at_15.19.36.png)
-
-**Embedders**
-
-Freezing embedders could also be a potential improvement.
-
-Candidate layers of interest:
-
-```json
-time_text_embed.text_embedder.linear_1.bias
-time_text_embed.text_embedder.linear_1.weight
-time_text_embed.text_embedder.linear_2.bias
-time_text_embed.text_embedder.linear_2.weight
-time_text_embed.timestep_embedder.linear_1.bias
-time_text_embed.timestep_embedder.linear_1.weight
-time_text_embed.timestep_embedder.linear_2.bias
-time_text_embed.timestep_embedder.linear_2.weight
-```
-
-Theses are all potential ideas/food for thought, but it’s highly likely that different types of targeted training will yield improved results.
 
 # 참조
 -----
