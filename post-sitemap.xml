@@ -9,6 +9,54 @@
 
 
     <url>
+        <loc>https://sejoung.github.io/2024/10/2024-10-25-Stable%20Diffusion_3_5_Large_Fine-tuning_Tutorial/</loc>
+        <lastmod>2024-10-29T07:57:36.396Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/2024/10/2024-10-18-Effective_Python_CHAPTER_2/</loc>
+        <lastmod>2024-10-29T03:19:15.261Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/2024/10/2024-10-15-Effective_Python_CHAPTER_1/</loc>
+        <lastmod>2024-10-17T11:05:21.479Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/2024/10/2024-10-11-train_lora_flux/</loc>
+        <lastmod>2024-10-11T01:49:57.347Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/2023/10/2023-10-18-ubuntu_cuda_install/</loc>
+        <lastmod>2024-10-08T02:01:40.739Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/2024/09/2024-09-09-train_lora/</loc>
+        <lastmod>2024-09-09T05:42:58.491Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://sejoung.github.io/2024/08/2024-08-22-Software_Engineering_at_Google_CHAPTER_19/</loc>
         <lastmod>2024-08-22T00:49:08.336Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -323,14 +371,6 @@
     <url>
         <loc>https://sejoung.github.io/2024/04/2024-04-26-tidy_first_PART1/</loc>
         <lastmod>2024-04-26T06:38:06.105Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://sejoung.github.io/2023/10/2023-10-18-ubuntu_cuda_install/</loc>
-        <lastmod>2024-04-22T02:34:29.076Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
