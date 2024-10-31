@@ -105,9 +105,12 @@ oldest, *others, youngest = car_ages_descending
 * setdefault 메서드 대신 defaultdict를 사용하면 더 간결하게 딕셔너리를 다룰 수 있다
 
 ## Better way 17 내부 상태에서 원소가 없는 경우를 처리할 때는 setdefault보다 defaultdict를 사용하라
+* 키로 어떤 값이 들어올지 모르는 딕셔너리를 관리해야 하는데 collections.defaultdict를 사용하면 편리하다
+* 임의의 키가 들어 있는 딕셔너리가 여러분에게 전달됐고 그 딕셔너리가 어떻게 생성됐는지 모르는 경우, defaultdict를 사용하면 편리하다
 
 ## Better way 18 __missing__을 사용해 키에 따라 다른 디폴트 값을 생성하는 방법을 알아두라
-
+* 디폴드 값을 만드는 계산 비용이 높거나 만드는 과정에서 예외가 발생할 수 있는 상황에서는 dict의 setdefault 메서드를 사용하지 말라
+* 디폴트 키를 만들때 어떤 키를 사용했는지 반드시 알아야 하는 상황이라면 직접 dict의 하위 클래스와 __missing__ 메서드를 정의하라
 
 # 참조
 -----
