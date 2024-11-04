@@ -2176,9 +2176,7 @@ bash train.sh
 
 모델을 저장한 디렉터리로 이동하면 해당 형식이 이 형식인 것을 볼 수 있습니다.
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/4e8dae13-2612-4518-91a4-53485ccdba7c/4c576802-3c82-4347-87aa-055e9dfdf0c1/image.png)
-
-The file of interest that we want from each directory is the file `pytorch_lora_weights.safetensors` . To streamline the process of getting these files into `ComfyUI`, I’ve written this script:
+각 디렉토리에서 원하는 파일은 `pytorch_lora_weights.safetensors` 파일입니다. 이러한 파일을 `ComfyUI`로 가져오는 프로세스를 간소화하기 위해 다음 스크립트를 작성했습니다.
 
 - `create_symlinks_lora.sh`
 
@@ -2225,19 +2223,16 @@ The file of interest that we want from each directory is the file `pytorch_lora_
     ```
 
 
-What this shell script above will do is loop through your `SOURCE_DIR` from `SimpleTuner` , and then symlink ***only*** the `pytorch_lora_weights.safetensors` files to your `TARGET_DIR`, which should be a directory inside `ComfyUI/models/loras`. To keep track of the files, I’ve also renamed them so that they have their corresponding checkpoint numbers inside the file name.
+위의 쉘 스크립트가 수행할 작업은 `SimpleTuner`에서 `SOURCE_DIR`을 반복한 다음 ***만*** `pytorch_lora_weights.safetensors` 파일을 `TARGET_DIR`에 심볼릭 링크하는 것입니다. 이 파일은 `ComfyUI 내부 디렉토리여야 합니다. /모델/로라스`. 파일을 추적하기 위해 파일 이름 안에 해당 체크포인트 번호가 포함되도록 이름도 변경했습니다.
 
 ### Determining the best checkpoint
 
-The basic `SD3.5 Large` workflow that I’m using is this one.
 
-[sd35_fantasy_art_01.json](https://prod-files-secure.s3.us-west-2.amazonaws.com/4e8dae13-2612-4518-91a4-53485ccdba7c/43deb260-8159-48b7-affd-65230ce190c7/sd35_fantasy_art_02.json)
+제가 사용하고 있는 기본적인 'SD3.5 Large' 워크플로는 이것이었습니다.
 
-[sd35_fantasy_art_01_api.json](https://prod-files-secure.s3.us-west-2.amazonaws.com/4e8dae13-2612-4518-91a4-53485ccdba7c/3b896d45-20f7-4ec1-b416-14e42524067c/sd35_fantasy_art_02_api.json)
+가장 좋은 체크포인트를 결정하는 방법은 특정 프롬프트에 대해 x축에 체크포인트 번호를 표시하는 것입니다. 그래서 저는 다음과 같은 단일 스트립을 얻습니다.
 
-The way that I determine the best checkpoint is to plot the checkpoint number on the x-axis for a specific prompt. So, I’ll just get one single strip like this:
-
-Fantasy Art `LoRA`
+판타지 아트 'LoRA'
 
 Prompt
 
@@ -2245,21 +2240,18 @@ Prompt
 a three fourth perspective waist up portrait view of a young woman with messy long blonde hair and light purple eyes, looking at viewer with a closed mouth smile, wearing tight black dress, a faded pink simple background during golden hour
 ```
 
-![output_image_strip.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/4e8dae13-2612-4518-91a4-53485ccdba7c/a9496ce6-ef22-4bc2-8fad-f0de6a7a5a89/output_image_strip.png)
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/4e8dae13-2612-4518-91a4-53485ccdba7c/d81a252f-695f-4499-aefa-9ef15595dea5/image.png)
 
-To do this, I use a custom script that loads in the `api` version of the `ComfyUI` workflow. You can save any workflow in the `API` format if you click the save (API format) button. I’ve already saved a version above for your use. If you want a more in-depth video guide about using the `ComfyUI` API, I made one [here](https://youtu.be/WwsJ_QIgsG8) last year.
+이를 위해 `ComfyUI` 워크플로의 `api` 버전에 로드되는 사용자 정의 스크립트를 사용합니다. 저장(API 형식) 버튼을 클릭하면 모든 워크플로우를 'API' 형식으로 저장할 수 있습니다. 귀하가 사용할 수 있도록 이미 위 버전을 저장했습니다. 'ComfyUI' API 사용에 대한 더 심층적인 비디오 가이드를 원하시면 제가 작년에 [여기](https://youtu.be/WwsJ_QIgsG8)를 만들었습니다.
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/4e8dae13-2612-4518-91a4-53485ccdba7c/f3c7ce48-5f0c-4784-b744-f813423a75bc/image.png)
 
-Make sure that `ComfyUI` is running, and then run this script below. You’ll also need to set up an `.env` file in the same place where you run the script.
+`ComfyUI`가 실행 중인지 확인한 후 아래 스크립트를 실행하세요. 또한 스크립트를 실행하는 동일한 위치에 `.env` 파일을 설정해야 합니다.
 
 - `API script`
 
   This is my custom `python` script:
 
-    ```python
+    ```
     import os
     import json
     import random
@@ -2677,7 +2669,8 @@ Example path:
 /home-kasukanra/.cache/huggingface/hub/models--stabilityai--stable-diffusion-3.5-large/snapshots/1a43aa3b9bb52ead637f9693a228092aa802a5dd/transformer
 ```
 
-```python
+```
+
 import safetensors.torch
 
 shards = [
@@ -2704,7 +2697,9 @@ print(f"Combined model saved successfully at {output_path}")
 
 
 제 경우에는 병합된 모델(`combined_model.safetensors`)이 있으면 이 스크립트를 실행하여 아키텍처를 텍스트 파일에 저장하세요. 스크립트는 변환기 모델의 일반적인 순차 흐름을 출력합니다.
-```python
+
+```
+
 import safetensors.torch
 import re
 import json
@@ -2766,8 +2761,8 @@ ckpt = safetensors.torch.load_file(checkpoint_path)
 # Pretty-print and save the grouped keys to a file
 output_file = "ckpt_keys_grouped_output.txt"
 pretty_print_and_save(ckpt, output_file)
-```
 
+```
 
 # 참조
 -----
