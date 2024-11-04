@@ -3,6 +3,41 @@
 
 
     <url>
+        <loc>https://sejoung.github.io/tags/debugging/</loc>
+        <lastmod>2024-11-01T08:07:55.684Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/tags/Poetry/</loc>
+        <lastmod>2024-11-01T08:07:55.684Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/tags/error/</loc>
+        <lastmod>2024-11-01T08:07:55.684Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/tags/Effective-Python/</loc>
+        <lastmod>2024-10-31T11:17:41.318Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/tags/%ED%8C%8C%EC%9D%B4%EC%8D%AC-%EC%BD%94%EB%94%A9%EC%9D%98-%EA%B8%B0%EC%88%A0/</loc>
+        <lastmod>2024-10-31T11:17:41.318Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>https://sejoung.github.io/tags/Tutorial/</loc>
         <lastmod>2024-10-29T07:57:36.396Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -61,20 +96,6 @@
     <url>
         <loc>https://sejoung.github.io/tags/stable-diffusion/</loc>
         <lastmod>2024-10-29T07:57:36.396Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://sejoung.github.io/tags/Effective-Python/</loc>
-        <lastmod>2024-10-29T03:19:15.261Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://sejoung.github.io/tags/%ED%8C%8C%EC%9D%B4%EC%8D%AC-%EC%BD%94%EB%94%A9%EC%9D%98-%EA%B8%B0%EC%88%A0/</loc>
-        <lastmod>2024-10-29T03:19:15.261Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
@@ -732,13 +753,6 @@
 
     <url>
         <loc>https://sejoung.github.io/tags/stable-diffusion-webui/</loc>
-        <lastmod>2023-12-01T08:00:58.185Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://sejoung.github.io/tags/error/</loc>
         <lastmod>2023-12-01T08:00:58.185Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
