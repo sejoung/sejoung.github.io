@@ -9,6 +9,13 @@
 
 
     <url>
+        <loc>https://sejoung.github.io/categories/%25EC%2583%259D%25EA%25B0%2581/</loc>
+        <lastmod>2024-12-19T05:49:15.375Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>https://sejoung.github.io/categories/Machine-Learning/</loc>
         <lastmod>2024-11-04T05:22:21.866Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -360,13 +367,6 @@
 
     <url>
         <loc>https://sejoung.github.io/categories/2019-%25EC%2584%25B8%25EB%25AF%25B8%25EB%2582%2598/</loc>
-        <lastmod>2023-12-01T08:00:58.157Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://sejoung.github.io/categories/%25EC%2583%259D%25EA%25B0%2581/</loc>
         <lastmod>2023-12-01T08:00:58.157Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
