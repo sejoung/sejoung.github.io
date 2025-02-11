@@ -8,8 +8,27 @@
     <atom:link href="/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>잘정리하자</description>
-    <pubDate>Thu, 19 Dec 2024 05:49:15 GMT</pubDate>
+    <pubDate>Tue, 11 Feb 2025 05:59:02 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>최신 image gen AI 기술 관련 기사</title>
+      <link>https://sejoung.github.io/2025/02/2025-02-11-lora_articles/</link>
+      <guid>https://sejoung.github.io/2025/02/2025-02-11-lora_articles/</guid>
+      <pubDate>Tue, 11 Feb 2025 05:30:00 GMT</pubDate>
+      <description>
+      
+        
+        
+          &lt;h1 id=&quot;최신-image-gen-AI-기술-관련-기사&quot;&gt;&lt;a href=&quot;#최신-image-gen-AI-기술-관련-기사&quot; class=&quot;headerlink&quot; title=&quot;최신 image gen AI 기술 관련 기사&quot;&gt;&lt;/a&gt;최신 image gen A
+        
+      
+      </description>
+      
+      <content:encoded><![CDATA[<h1 id="최신-image-gen-AI-기술-관련-기사"><a href="#최신-image-gen-AI-기술-관련-기사" class="headerlink" title="최신 image gen AI 기술 관련 기사"></a>최신 image gen AI 기술 관련 기사</h1><h2 id="LoRa-관련-기사"><a href="#LoRa-관련-기사" class="headerlink" title="LoRa 관련 기사"></a>LoRa 관련 기사</h2><ul><li><a href="https://civitai.com/articles/11394/understanding-flux-lora-training-parameters">Flux LoRA 훈련 매개변수 이해</a></li><li><a href="https://civitai.com/articles/4/make-your-own-loras-easy-and-free">쉽고 무료로 나만의 로라를 만들어보세요</a></li><li><a href="https://civitai.com/articles/10381/my-online-training-parameter-for-style-lora-on-illustrious-and-some-of-my-thoughts">Illustrious의 Style LoRa에 대한 내 온라인 교육 매개변수와 내 생각 중 일부</a></li><li><a href="https://civitai.com/articles/9223/how-to-accidentally-create-a-pretty-good-lora">우연히 꽤 괜찮은 LoRA를 만드는 방법</a></li><li><a href="https://civitai.com/articles/2179/how-to-train-style-lora-101">스타일 로라 101 훈련 방법</a></li><li><a href="https://civitai.com/articles/10584/writing-a-good-description-for-your-lora">LoRA에 대한 좋은 설명 작성하기</a></li><li><a href="https://civitai.com/articles/9205/how-i-create-my-own-sdxl-loras">내 SDXL LoRA를 만드는 방법</a></li></ul><h2 id="안정된-확산-관련-기사"><a href="#안정된-확산-관련-기사" class="headerlink" title="안정된 확산 관련 기사"></a>안정된 확산 관련 기사</h2><ul><li><a href="https://civitai.com/articles/11359/mastering-the-cfg-scale-in-stable-diffusion">안정된 확산에서 CFG 스케일 마스터링</a></li></ul><h1 id="참조"><a href="#참조" class="headerlink" title="참조"></a>참조</h1><hr><ul><li><a href="https://civitai.com/articles/11394/understanding-flux-lora-training-parameters">Flux LoRA 훈련 매개변수 이해</a></li><li><a href="https://civitai.com/articles/4/make-your-own-loras-easy-and-free">쉽고 무료로 나만의 로라를 만들어보세요</a></li><li><a href="https://civitai.com/articles/10381/my-online-training-parameter-for-style-lora-on-illustrious-and-some-of-my-thoughts">Illustrious의 Style LoRa에 대한 내 온라인 교육 매개변수와 내 생각 중 일부</a></li><li><a href="https://civitai.com/articles/9223/how-to-accidentally-create-a-pretty-good-lora">우연히 꽤 괜찮은 LoRA를 만드는 방법</a></li><li><a href="https://civitai.com/articles/11359/mastering-the-cfg-scale-in-stable-diffusion">안정된 확산에서 CFG 스케일 마스터링</a></li><li><a href="https://civitai.com/articles/2179/how-to-train-style-lora-101">스타일 로라 101 훈련 방법</a></li></ul>]]></content:encoded>
+      
+      <comments>https://sejoung.github.io/2025/02/2025-02-11-lora_articles/#disqus_thread</comments>
+    </item>
     
     <item>
       <title>2024년 간략 회고</title>
@@ -374,25 +393,6 @@
       <content:encoded><![CDATA[<h1 id="3D-Vision"><a href="#3D-Vision" class="headerlink" title="3D Vision"></a>3D Vision</h1><p>3차원 데이터는 x,y,z 같은 좌표를 갖는다</p><h2 id="3D-Representations-Point-Cloud-Voxel-Mesh"><a href="#3D-Representations-Point-Cloud-Voxel-Mesh" class="headerlink" title="3D Representations: Point Cloud, Voxel, Mesh"></a>3D Representations: Point Cloud, Voxel, Mesh</h2><p>컴퓨터를 통해서 3D 데이터를 어떻게 만들어야 되나</p><p>시멘틱 vs 신텍스</p><p>Raw data</p><ul><li>Point cloud<ul><li>Unstructured</li></ul></li><li>Range image <ul><li>텝스이미지의 스캔한 이미지</li></ul></li><li>Polygon soup<ul><li>폴리곤</li></ul></li></ul><p>Surfaces</p><ul><li>Mesh<ul><li>폴리곤 삼각형으로 되어 있는것</li><li>꼭 이어져있지 않다</li></ul></li><li>Subdivision<ul><li>점점 더 작은 폴리곤으로 나누어지는것</li></ul></li><li>Parametric</li><li>Implicit</li></ul><p>Solids</p><ul><li>Voxels</li><li>BSP tree<ul><li>바이너리 트리</li></ul></li><li>CSG</li><li>Sweep</li></ul><p>High-level structures</p><ul><li>Scene graph<ul><li>리프노드의 모음</li></ul></li><li>Skeleton</li><li>Application specific</li></ul><h2 id="Point-Cloud-Classification"><a href="#Point-Cloud-Classification" class="headerlink" title="Point Cloud Classification"></a>Point Cloud Classification</h2><ul><li>point net <ul><li>Multi-Layer Perceptron (MLP)</li></ul></li><li>PointNet++<ul><li>포인트넷은 로컬 스트럭처를 캡쳐하지 못한 문제</li></ul></li><li>point transformer<ul><li>포인트넷의 문제를 해결하기 위해 제안된 모델</li><li>트렌스포머 구조를 3d에도 잘 활용한다</li></ul></li></ul><h2 id="Point-Cloud-Registration"><a href="#Point-Cloud-Registration" class="headerlink" title="Point Cloud Registration"></a>Point Cloud Registration</h2><ul><li>3D surface registration<ul><li>Gauss Newton algorithm</li><li>chain rule</li></ul></li><li>point set registration<ul><li>sparse convolution<ul><li>특정 위치에서만 컨블러션을 수행함</li></ul></li><li>u-shape network</li></ul></li></ul><h1 id="참조"><a href="#참조" class="headerlink" title="참조"></a>참조</h1><hr>]]></content:encoded>
       
       <comments>https://sejoung.github.io/2024/06/2024-06-17-3d_vision_1/#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>CHAPTER 11 테스트 개요</title>
-      <link>https://sejoung.github.io/2024/06/2024-06-17-Software_Engineering_at_Google_CHAPTER_11/</link>
-      <guid>https://sejoung.github.io/2024/06/2024-06-17-Software_Engineering_at_Google_CHAPTER_11/</guid>
-      <pubDate>Mon, 17 Jun 2024 02:53:00 GMT</pubDate>
-      <description>
-      
-        
-        
-          &lt;h1 id=&quot;Part-III-프로세스&quot;&gt;&lt;a href=&quot;#Part-III-프로세스&quot; class=&quot;headerlink&quot; title=&quot;Part III 프로세스&quot;&gt;&lt;/a&gt;Part III 프로세스&lt;/h1&gt;&lt;h2 id=&quot;CHAPTER-11-테스트-개요&quot;&gt;&lt;a
-        
-      
-      </description>
-      
-      <content:encoded><![CDATA[<h1 id="Part-III-프로세스"><a href="#Part-III-프로세스" class="headerlink" title="Part III 프로세스"></a>Part III 프로세스</h1><h2 id="CHAPTER-11-테스트-개요"><a href="#CHAPTER-11-테스트-개요" class="headerlink" title="CHAPTER 11 테스트 개요"></a>CHAPTER 11 테스트 개요</h2><p>테스트는 처음부터 프로그래밍과 함께다</p><p>소프트웨어와 시스템 복잡도에 대응하기 위해 테스트 방식을 극적으로 진화<br>그 진화의 중심에는 개발자가 주도하는 테스트와 자동 테스트가 있다</p><p>자동 테스트는 버그가 몰래 숨어들어 고객을 놀라게 하는 사태를 막아준다</p><p>테스트 체계가 잘 갖춰져 있다면 변화를 두려워할 이유가 없다</p><p>시스템을 더 많이 더 빠르게 변경하고 싶다면 더 빠르게 테스트 하는 방법을 모색해야 한다</p><p>테스트를 작성하는 행위가 시스템 설계에도 영향을 준다</p><h3 id="테스트를-작성하는-이유"><a href="#테스트를-작성하는-이유" class="headerlink" title="테스트를 작성하는 이유"></a>테스트를 작성하는 이유</h3><ul><li>테스트 하려는 단하나의 행위</li><li>특정한 입력</li><li>관측 가능한 출력 혹은 동작</li><li>통제된 조건</li></ul><p>테스트는 엔지니어에게 신뢰를 줄때만 가치가 있다.</p><p>최고의 팀은 팀원들의 집단 지성을 팀 전체의 이익으로 환원하는 방법을 찾아내야 된다</p><p>테스트 코드가 주는 혜택</p><ul><li>디버깅 감소</li><li>자신 있게 변경</li><li>더 나은 문서자료</li><li>더 단순한 리뷰</li><li>사려 깊은 설계</li><li>고품질의 릴리스를 빠르게</li></ul><h3 id="테스트-스위트-설계하기"><a href="#테스트-스위트-설계하기" class="headerlink" title="테스트 스위트 설계하기"></a>테스트 스위트 설계하기</h3><ul><li>테스트의 크기<ul><li>작은 테스트<ul><li>제약이 가장심하다</li></ul></li><li>중간 크기의 테스트<ul><li>단 한 대의 기기에서 수행</li></ul></li><li>큰 테스트<ul><li>여러 대의 기기를 활용</li></ul></li><li>테스트 크기와 무관한 공통 습성<ul><li>테스트는 독립적이어야 한다(밀폐 되어야 한다)</li></ul></li></ul></li><li>테스트 범위<ul><li>좁은 범위 테스트</li><li>중간 범위 테스트</li><li>넓은 범위 테스트</li><li>안티 패턴<ul><li>아이스크림 콘<ul><li>종단간 테스트를 많이 작성하고 통합테스트나 단위 테스트는</li></ul></li><li>모레시계<ul><li>종단간 테스트와 단위테스트는 많지만 통합테스트가 적다</li></ul></li></ul></li><li>비욘세 규칙<ul><li>네가 좋아했다면 테스트를 준비했어야지</li></ul></li><li>코드 커버리지</li></ul></li></ul><h3 id="구글-규모의-테스트"><a href="#구글-규모의-테스트" class="headerlink" title="구글 규모의 테스트"></a>구글 규모의 테스트</h3><p>구글은 모든 코드를 모노리포로 관리</p><p>리포지토리 브랜치를 사용하는 팀은 거의 없다</p><p>테스트 비용을 낮추는데 투자하지 않으면 종국에는 엔지니어들이 테스트가 전혀 가치가 없다고 결론 낼 것이다</p><h3 id="구글의-테스트-역사"><a href="#구글의-테스트-역사" class="headerlink" title="구글의 테스트 역사"></a>구글의 테스트 역사</h3><ul><li>오리엔테이션 수업</li><li>테스트 인증</li><li>화장실에서도 테스트<ul><li>화장실 변기 않에 붙히기</li></ul></li><li>오늘날의 테스트 문화<ul><li>테스트를 강제시키면 테스트가 뿌리내리는데 오래 걸렸을것다</li><li>테스트가 훌륭한 아이디어인것을 검증하는데 집중함<h3 id="자동-테스트의-한계"><a href="#자동-테스트의-한계" class="headerlink" title="자동 테스트의 한계"></a>자동 테스트의 한계</h3>탐색적 테스팅</li></ul></li></ul><h1 id="참조"><a href="#참조" class="headerlink" title="참조"></a>참조</h1><hr><ul><li><a href="https://www.yes24.com/Product/Goods/109182479">구글 엔지니어는 이렇게 일한다</a></li></ul>]]></content:encoded>
-      
-      <comments>https://sejoung.github.io/2024/06/2024-06-17-Software_Engineering_at_Google_CHAPTER_11/#disqus_thread</comments>
     </item>
     
   </channel>
