@@ -9,6 +9,13 @@
 
 
     <url>
+        <loc>https://sejoung.github.io/categories/os/</loc>
+        <lastmod>2025-03-17T06:46:27.618Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>https://sejoung.github.io/categories/Machine-Learning/</loc>
         <lastmod>2025-02-11T05:59:02.856Z</lastmod>
         <changefreq>weekly</changefreq>

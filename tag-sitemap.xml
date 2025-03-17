@@ -3,6 +3,41 @@
 
 
     <url>
+        <loc>https://sejoung.github.io/tags/%ED%99%94%EB%A9%B4-%EA%B3%B5%EC%9C%A0/</loc>
+        <lastmod>2025-03-17T06:46:27.618Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/tags/%EC%9B%90%EA%B2%A9-%EC%A0%91%EC%86%8D-%ED%88%B4/</loc>
+        <lastmod>2025-03-17T06:46:27.618Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/tags/%EB%A7%A5-%EC%9B%90%EA%B2%A9%EC%A0%91%EC%86%8D/</loc>
+        <lastmod>2025-03-17T06:46:27.618Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/tags/%EC%9B%90%EA%B2%A9%EC%A0%91%EC%86%8D/</loc>
+        <lastmod>2025-03-17T06:46:27.618Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/tags/ssh/</loc>
+        <lastmod>2025-03-17T06:46:27.618Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>https://sejoung.github.io/tags/SDXL/</loc>
         <lastmod>2025-02-11T05:59:02.856Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -655,13 +690,6 @@
 
     <url>
         <loc>https://sejoung.github.io/tags/github/</loc>
-        <lastmod>2023-12-05T02:29:29.223Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://sejoung.github.io/tags/ssh/</loc>
         <lastmod>2023-12-05T02:29:29.223Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
