@@ -9,6 +9,20 @@
 
 
     <url>
+        <loc>https://sejoung.github.io/categories/docker/</loc>
+        <lastmod>2025-04-07T05:34:21.365Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/categories/jenkins/</loc>
+        <lastmod>2025-04-07T05:30:05.236Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>https://sejoung.github.io/categories/os/</loc>
         <lastmod>2025-03-17T06:46:27.618Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -191,13 +205,6 @@
     </url>
 
     <url>
-        <loc>https://sejoung.github.io/categories/docker/</loc>
-        <lastmod>2023-12-01T08:00:58.176Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>https://sejoung.github.io/categories/testing/</loc>
         <lastmod>2023-12-01T08:00:58.175Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -206,13 +213,6 @@
 
     <url>
         <loc>https://sejoung.github.io/categories/aws/</loc>
-        <lastmod>2023-12-01T08:00:58.175Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://sejoung.github.io/categories/jenkins/</loc>
         <lastmod>2023-12-01T08:00:58.175Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
