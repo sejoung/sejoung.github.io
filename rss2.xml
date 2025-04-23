@@ -8,8 +8,27 @@
     <atom:link href="/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>잘정리하자</description>
-    <pubDate>Mon, 07 Apr 2025 05:34:21 GMT</pubDate>
+    <pubDate>Wed, 23 Apr 2025 02:47:30 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Docker login 시 mac keychain 에러</title>
+      <link>https://sejoung.github.io/2025/04/2025-04-23-docker_login_mac/</link>
+      <guid>https://sejoung.github.io/2025/04/2025-04-23-docker_login_mac/</guid>
+      <pubDate>Wed, 23 Apr 2025 02:43:00 GMT</pubDate>
+      <description>
+      
+        
+        
+          &lt;h1 id=&quot;Docker-login-시-mac-keychain-에러&quot;&gt;&lt;a href=&quot;#Docker-login-시-mac-keychain-에러&quot; class=&quot;headerlink&quot; title=&quot;Docker login 시 mac keychain 에러&quot;&gt;
+        
+      
+      </description>
+      
+      <content:encoded><![CDATA[<h1 id="Docker-login-시-mac-keychain-에러"><a href="#Docker-login-시-mac-keychain-에러" class="headerlink" title="Docker login 시 mac keychain 에러"></a>Docker login 시 mac keychain 에러</h1><h2 id="로그인"><a href="#로그인" class="headerlink" title="로그인"></a>로그인</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">echo 키정보 | docker login -u 사용자 --password-stdin</span><br><span class="line"></span><br></pre></td></tr></table></figure><h3 id="예시"><a href="#예시" class="headerlink" title="예시"></a>예시</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">echo dckr_pat_ewhqgTvF1234GFjYM4ziAEWNctrw | docker login -u zolla --password-stdin</span><br></pre></td></tr></table></figure><h3 id="에러"><a href="#에러" class="headerlink" title="에러"></a>에러</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Error saving credentials: error storing credentials - err: exit status 1, out: `error getting credentials - err: exit status 1, out: `keychain cannot be accessed because the current session does not allow user interaction. The keychain may be locked; unlock it by running &quot;security -v unlock-keychain ~/Library/Keychains/login.keychain-db&quot; and try again``</span><br></pre></td></tr></table></figure><h2 id="해결-방법"><a href="#해결-방법" class="headerlink" title="해결 방법"></a>해결 방법</h2><p>Keychain 잠금 해제</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">security unlock-keychain -p &#x27;비밀번호&#x27; ~/Library/Keychains/login.keychain-db</span><br></pre></td></tr></table></figure><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">security unlock-keychain -p &#x27;1234&#x27; ~/Library/Keychains/login.keychain-db</span><br></pre></td></tr></table></figure><h1 id="참고"><a href="#참고" class="headerlink" title="참고"></a>참고</h1><hr>]]></content:encoded>
+      
+      <comments>https://sejoung.github.io/2025/04/2025-04-23-docker_login_mac/#disqus_thread</comments>
+    </item>
     
     <item>
       <title>Docker build 시 SSH 키 설정 사용</title>
@@ -373,25 +392,6 @@
       <content:encoded><![CDATA[<h1 id="3D-Gaussian-Splatting"><a href="#3D-Gaussian-Splatting" class="headerlink" title="3D Gaussian Splatting"></a>3D Gaussian Splatting</h1><p>colmap을 사용해서 3D reconstruction을 하고 나서 3D Gaussian Splatting을 사용해서 rendering을 할 수 있다.</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;location&gt;</span><br><span class="line">|---images</span><br><span class="line">|   |---&lt;image 0&gt;</span><br><span class="line">|   |---&lt;image 1&gt;</span><br><span class="line">|   |---...</span><br><span class="line">|---sparse</span><br><span class="line">    |---0</span><br><span class="line">        |---cameras.bin</span><br><span class="line">        |---images.bin</span><br><span class="line">        |---points3D.bin</span><br></pre></td></tr></table></figure><p> ㅇ –ㅎ<br>위에 폴더 구조를 따라야 된다.</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">  File &quot;/repositories/gaussian-splatting/scene/dataset_readers.py&quot;, line 95, in readColmapCameras</span><br><span class="line">    assert False, &quot;Colmap camera model not handled: only undistorted datasets (PINHOLE or SIMPLE_PINHOLE cameras) supported!&quot;</span><br><span class="line">AssertionError: Colmap camera model not handled: only undistorted datasets (PINHOLE or SIMPLE_PINHOLE cameras) supported!</span><br></pre></td></tr></table></figure><h1 id="참조"><a href="#참조" class="headerlink" title="참조"></a>참조</h1><hr><ul><li><a href="https://github.com/graphdeco-inria/gaussian-splatting">3D Gaussian Splatting for Real-Time Radiance Field Rendering</a></li><li><a href="https://github.com/mkkellogg/GaussianSplats3D">3D Gaussian splatting for Three.js</a></li><li><a href="https://demuc.de/colmap/">COLMAP – SfM and MVS</a></li></ul>]]></content:encoded>
       
       <comments>https://sejoung.github.io/2024/07/2024-07-05-gaussian_splatting/#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>COLMAP 설치</title>
-      <link>https://sejoung.github.io/2024/07/2024-07-03-colmap/</link>
-      <guid>https://sejoung.github.io/2024/07/2024-07-03-colmap/</guid>
-      <pubDate>Wed, 03 Jul 2024 00:52:00 GMT</pubDate>
-      <description>
-      
-        
-        
-          &lt;h1 id=&quot;COLMAP-설치&quot;&gt;&lt;a href=&quot;#COLMAP-설치&quot; class=&quot;headerlink&quot; title=&quot;COLMAP 설치&quot;&gt;&lt;/a&gt;COLMAP 설치&lt;/h1&gt;&lt;p&gt;COLMAP은 그래픽 및 명령줄 인터페이스가 있는 범용 구조-모션(SfM) 
-        
-      
-      </description>
-      
-      <content:encoded><![CDATA[<h1 id="COLMAP-설치"><a href="#COLMAP-설치" class="headerlink" title="COLMAP 설치"></a>COLMAP 설치</h1><p>COLMAP은 그래픽 및 명령줄 인터페이스가 있는 범용 구조-모션(SfM) 및 멀티-뷰 스테레오(MVS) 파이프라인입니다.</p><h2 id="설치"><a href="#설치" class="headerlink" title="설치"></a>설치</h2><p>최신 버전은 맥용으로 빌드를 해놓지 않았다 2021년 7월 3일 기준으로. 그래서 직접 빌드를 해야한다.</p><p>아래 종속성 설치</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">brew install \</span><br><span class="line">    cmake \</span><br><span class="line">    ninja \</span><br><span class="line">    boost \</span><br><span class="line">    eigen \</span><br><span class="line">    flann \</span><br><span class="line">    freeimage \</span><br><span class="line">    metis \</span><br><span class="line">    glog \</span><br><span class="line">    googletest \</span><br><span class="line">    ceres-solver \</span><br><span class="line">    qt5 \</span><br><span class="line">    glew \</span><br><span class="line">    cgal \</span><br><span class="line">    sqlite3</span><br></pre></td></tr></table></figure><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/colmap/colmap.git</span><br><span class="line"><span class="built_in">cd</span> colmap</span><br><span class="line"><span class="built_in">export</span> PATH=<span class="string">&quot;/opt/homebrew/opt/qt@5/bin:<span class="variable">$PATH</span>&quot;</span></span><br><span class="line"><span class="built_in">mkdir</span> build</span><br><span class="line"><span class="built_in">cd</span> build</span><br><span class="line">cmake ..  -GNinja -DQt5_DIR=/usr/local/opt/qt/lib/cmake/Qt5</span><br><span class="line">ninja</span><br><span class="line">sudo ninja install</span><br></pre></td></tr></table></figure><h2 id="실행"><a href="#실행" class="headerlink" title="실행"></a>실행</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">colmap gui</span><br></pre></td></tr></table></figure><h1 id="참조"><a href="#참조" class="headerlink" title="참조"></a>참조</h1><hr><ul><li><a href="https://colmap.github.io/install.html">colmap install</a></li><li><a href="https://demuc.de/colmap/">COLMAP – SfM and MVS</a></li><li><a href="https://github.com/kmss1258/Colmap-setup">Colmap-setup</a></li></ul>]]></content:encoded>
-      
-      <comments>https://sejoung.github.io/2024/07/2024-07-03-colmap/#disqus_thread</comments>
     </item>
     
   </channel>
