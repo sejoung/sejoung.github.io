@@ -3,50 +3,92 @@
 
 
     <url>
-        <loc>https://sejoung.github.io/tags/network/</loc>
-        <lastmod>2025-05-07T06:45:38.925Z</lastmod>
+        <loc>https://sejoung.github.io/tags/driver/</loc>
+        <lastmod>2025-05-07T09:44:42.266Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/tags/nvidia-5090/</loc>
+        <lastmod>2025-05-07T09:44:42.266Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/tags/5090/</loc>
+        <lastmod>2025-05-07T09:44:42.266Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/tags/nvidia-smi/</loc>
+        <lastmod>2025-05-07T09:44:42.266Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://sejoung.github.io/tags/%EB%93%9C%EB%9D%BC%EC%9D%B4%EB%B2%84/</loc>
-        <lastmod>2025-05-07T06:45:38.925Z</lastmod>
+        <lastmod>2025-05-07T09:44:42.266Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>https://sejoung.github.io/tags/%EC%9C%A0%EC%84%A0%EB%9E%9C/</loc>
-        <lastmod>2025-05-07T06:45:38.925Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://sejoung.github.io/tags/realtek/</loc>
-        <lastmod>2025-05-07T06:45:38.925Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://sejoung.github.io/tags/r8125/</loc>
-        <lastmod>2025-05-07T06:45:38.925Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://sejoung.github.io/tags/realtek-r8125/</loc>
-        <lastmod>2025-05-07T06:45:38.925Z</lastmod>
+        <loc>https://sejoung.github.io/tags/nvidia/</loc>
+        <lastmod>2025-05-07T09:44:42.266Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://sejoung.github.io/tags/ubuntu/</loc>
-        <lastmod>2025-05-07T06:45:38.925Z</lastmod>
+        <lastmod>2025-05-07T09:44:42.266Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/tags/%EC%9A%B0%EB%B6%84%ED%88%AC/</loc>
+        <lastmod>2025-05-07T09:44:42.266Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/tags/network/</loc>
+        <lastmod>2025-05-07T09:42:08.103Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/tags/%EC%9C%A0%EC%84%A0%EB%9E%9C/</loc>
+        <lastmod>2025-05-07T09:42:08.103Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/tags/realtek/</loc>
+        <lastmod>2025-05-07T09:42:08.103Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/tags/r8125/</loc>
+        <lastmod>2025-05-07T09:42:08.103Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/tags/realtek-r8125/</loc>
+        <lastmod>2025-05-07T09:42:08.103Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
@@ -320,13 +362,6 @@
     <url>
         <loc>https://sejoung.github.io/tags/flux/</loc>
         <lastmod>2024-10-11T01:49:57.347Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://sejoung.github.io/tags/%EC%9A%B0%EB%B6%84%ED%88%AC/</loc>
-        <lastmod>2024-10-08T02:01:40.739Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
@@ -893,13 +928,6 @@
 
     <url>
         <loc>https://sejoung.github.io/tags/ubuntu-drivers/</loc>
-        <lastmod>2023-12-01T08:00:58.187Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://sejoung.github.io/tags/nvidia/</loc>
         <lastmod>2023-12-01T08:00:58.187Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
