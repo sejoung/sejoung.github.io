@@ -8,8 +8,27 @@
     <atom:link href="/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>잘정리하자</description>
-    <pubDate>Wed, 23 Apr 2025 02:47:30 GMT</pubDate>
+    <pubDate>Wed, 07 May 2025 06:45:38 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>우분투 설치시 네트워크 드라이브(R8125) 인식 안됨</title>
+      <link>https://sejoung.github.io/2025/05/2025-05-07-r8125_drive_ubuntu/</link>
+      <guid>https://sejoung.github.io/2025/05/2025-05-07-r8125_drive_ubuntu/</guid>
+      <pubDate>Wed, 07 May 2025 06:45:00 GMT</pubDate>
+      <description>
+      
+        
+        
+          &lt;h1 id=&quot;우분투-설치시-네트워크-드라이브-R8125-인식-안됨&quot;&gt;&lt;a href=&quot;#우분투-설치시-네트워크-드라이브-R8125-인식-안됨&quot; class=&quot;headerlink&quot; title=&quot;우분투 설치시 네트워크 드라이브(R8125) 인식 안됨&quot;&gt;&lt;/
+        
+      
+      </description>
+      
+      <content:encoded><![CDATA[<h1 id="우분투-설치시-네트워크-드라이브-R8125-인식-안됨"><a href="#우분투-설치시-네트워크-드라이브-R8125-인식-안됨" class="headerlink" title="우분투 설치시 네트워크 드라이브(R8125) 인식 안됨"></a>우분투 설치시 네트워크 드라이브(R8125) 인식 안됨</h1><h2 id="현상"><a href="#현상" class="headerlink" title="현상"></a>현상</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lshw -C network</span><br></pre></td></tr></table></figure><p>위에 명형어를 수행하면 </p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">*-network UNCLAIMED</span><br></pre></td></tr></table></figure><p>위처럼 나오고 유선랜이 잡히지 않음</p><h2 id="해결-방법"><a href="#해결-방법" class="headerlink" title="해결 방법"></a>해결 방법</h2><p><a href="https://github.com/awesometic/realtek-r8125-dkms">realtek-r8125-dkms</a></p><p>위에 링크를 통해서 드라이버를 설치하면 됨 네트워크 없이는 의존성을 설치하기 힘듬 wifi를 통해서 설치하면 됨</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo add-apt-repository ppa:awesometic/ppa</span><br></pre></td></tr></table></figure><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt update</span><br></pre></td></tr></table></figure><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install realtek-r8125-dkms</span><br></pre></td></tr></table></figure><h1 id="참고"><a href="#참고" class="headerlink" title="참고"></a>참고</h1><hr><p><a href="https://github.com/awesometic/realtek-r8125-dkms">realtek-r8125-dkms</a></p>]]></content:encoded>
+      
+      <comments>https://sejoung.github.io/2025/05/2025-05-07-r8125_drive_ubuntu/#disqus_thread</comments>
+    </item>
     
     <item>
       <title>Docker login 시 mac keychain 에러</title>
@@ -373,25 +392,6 @@
       <content:encoded><![CDATA[<h1 id="Part-III-프로세스"><a href="#Part-III-프로세스" class="headerlink" title="Part III 프로세스"></a>Part III 프로세스</h1><h2 id="CHAPTER-13-테스트-대역"><a href="#CHAPTER-13-테스트-대역" class="headerlink" title="CHAPTER 13 테스트 대역"></a>CHAPTER 13 테스트 대역</h2><p>단순한 코드라면 단위 테스트 작성이 전혀 부담되지 않습니다 하지만 대상 코드가 복잡해질수록 테스트를 작성하기도 어려워진다</p><p>테스트 대역은 실제 구현 대신 사용 할 수 있는 객체나 함수를 말한다</p><h3 id="테스트-대역이-소프트웨어-개발에-미치는-영향"><a href="#테스트-대역이-소프트웨어-개발에-미치는-영향" class="headerlink" title="테스트 대역이 소프트웨어 개발에 미치는 영향"></a>테스트 대역이 소프트웨어 개발에 미치는 영향</h3><ul><li>테스트 용이성</li><li>적용 가능성</li><li>충실성</li></ul><h3 id="테스트-대역-구글"><a href="#테스트-대역-구글" class="headerlink" title="테스트 대역 @ 구글"></a>테스트 대역 @ 구글</h3><p>품질을 높은 예도 많지만 잘못 할용하여 역효과를 낸 예도 못지 않다</p><ul><li>엔지니어가 관행들에 익숙하지 않는다</li><li>코드베이스가 관행을 따르기에 적합하지 않게 작성되어 있기도 한다</li></ul><h3 id="기본-개념"><a href="#기본-개념" class="headerlink" title="기본 개념"></a>기본 개념</h3><ul><li>테스트 대역 예</li><li>이어주기<ul><li>테스트 하기 쉽다</li><li>의존성 주입</li></ul></li><li>모의 객체 프레임 워크</li></ul><h3 id="테스트-대역-활용-기법"><a href="#테스트-대역-활용-기법" class="headerlink" title="테스트 대역 활용 기법"></a>테스트 대역 활용 기법</h3><ul><li>속이기(가짜 객체)</li><li>뭉개기(스텁)</li><li>상호작용 테스트하기</li></ul><h3 id="실제-구현"><a href="#실제-구현" class="headerlink" title="실제 구현"></a>실제 구현</h3><ul><li>실제 구현을 선호하는 테스트 방식을 고전적 테스트</li><li>모의 객체 프레임워크를 선호하는 테스트 방식은 모의 객체 중심주의 테스트</li><li>갹리 보단 현실성을 우선하자</li><li>실제 구현을 사용할지 결정하기<ul><li>실행시간</li><li>결정성</li><li>의존성 생성</li></ul></li></ul><h3 id="속이기-가짜-객체"><a href="#속이기-가짜-객체" class="headerlink" title="속이기(가짜 객체)"></a>속이기(가짜 객체)</h3><ul><li>가짜 객체가 중요한 이유</li><li>가짜 객체를 작성해야 할때</li><li>가자 객체의 충실성</li><li>가짜 객체도 테스트 해야</li><li>가짜 객체를 이용할 수 없다면<h3 id="뭉개기-스텁"><a href="#뭉개기-스텁" class="headerlink" title="뭉개기(스텁)"></a>뭉개기(스텁)</h3></li><li>스텁 과용의 위험성<ul><li>불명확해진다</li><li>깨지기 쉬워진다</li><li>테스트 효과가 감소한다</li></ul></li><li>스텁이 적합한경우<ul><li>대상 시스템을 원하는 상태로 변경하려 할 때 제격</li></ul></li></ul><h3 id="상호작용-테스트하기"><a href="#상호작용-테스트하기" class="headerlink" title="상호작용 테스트하기"></a>상호작용 테스트하기</h3><ul><li>상호작용 테스트보다 상태 테스트를 우선하자<ul><li>변경 검충 테스트</li></ul></li><li>상호작용 테스트가 적합한 경우<ul><li>상태 변경 함수일 경우에만 상호작용 테스트를 우선 고려하자</li><li>너무 상세한 테스트는 피하자</li></ul></li></ul><h1 id="참조"><a href="#참조" class="headerlink" title="참조"></a>참조</h1><hr><ul><li><a href="https://www.yes24.com/Product/Goods/109182479">구글 엔지니어는 이렇게 일한다</a></li></ul>]]></content:encoded>
       
       <comments>https://sejoung.github.io/2024/07/2024-07-09-Software_Engineering_at_Google_CHAPTER_13/#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>3D Gaussian Splatting</title>
-      <link>https://sejoung.github.io/2024/07/2024-07-05-gaussian_splatting/</link>
-      <guid>https://sejoung.github.io/2024/07/2024-07-05-gaussian_splatting/</guid>
-      <pubDate>Fri, 05 Jul 2024 06:39:00 GMT</pubDate>
-      <description>
-      
-        
-        
-          &lt;h1 id=&quot;3D-Gaussian-Splatting&quot;&gt;&lt;a href=&quot;#3D-Gaussian-Splatting&quot; class=&quot;headerlink&quot; title=&quot;3D Gaussian Splatting&quot;&gt;&lt;/a&gt;3D Gaussian Splatting&lt;/
-        
-      
-      </description>
-      
-      <content:encoded><![CDATA[<h1 id="3D-Gaussian-Splatting"><a href="#3D-Gaussian-Splatting" class="headerlink" title="3D Gaussian Splatting"></a>3D Gaussian Splatting</h1><p>colmap을 사용해서 3D reconstruction을 하고 나서 3D Gaussian Splatting을 사용해서 rendering을 할 수 있다.</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;location&gt;</span><br><span class="line">|---images</span><br><span class="line">|   |---&lt;image 0&gt;</span><br><span class="line">|   |---&lt;image 1&gt;</span><br><span class="line">|   |---...</span><br><span class="line">|---sparse</span><br><span class="line">    |---0</span><br><span class="line">        |---cameras.bin</span><br><span class="line">        |---images.bin</span><br><span class="line">        |---points3D.bin</span><br></pre></td></tr></table></figure><p> ㅇ –ㅎ<br>위에 폴더 구조를 따라야 된다.</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">  File &quot;/repositories/gaussian-splatting/scene/dataset_readers.py&quot;, line 95, in readColmapCameras</span><br><span class="line">    assert False, &quot;Colmap camera model not handled: only undistorted datasets (PINHOLE or SIMPLE_PINHOLE cameras) supported!&quot;</span><br><span class="line">AssertionError: Colmap camera model not handled: only undistorted datasets (PINHOLE or SIMPLE_PINHOLE cameras) supported!</span><br></pre></td></tr></table></figure><h1 id="참조"><a href="#참조" class="headerlink" title="참조"></a>참조</h1><hr><ul><li><a href="https://github.com/graphdeco-inria/gaussian-splatting">3D Gaussian Splatting for Real-Time Radiance Field Rendering</a></li><li><a href="https://github.com/mkkellogg/GaussianSplats3D">3D Gaussian splatting for Three.js</a></li><li><a href="https://demuc.de/colmap/">COLMAP – SfM and MVS</a></li></ul>]]></content:encoded>
-      
-      <comments>https://sejoung.github.io/2024/07/2024-07-05-gaussian_splatting/#disqus_thread</comments>
     </item>
     
   </channel>
