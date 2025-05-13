@@ -40,6 +40,8 @@ sudo groupadd docker
 # docker group에 현재의 사용자 추가
 sudo usermod -aG docker $USER
 
+# 로그아웃 후 다시 로그인
+newgrp docker
 ```
 
 ## docker-compose 설치
