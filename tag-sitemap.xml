@@ -3,6 +3,27 @@
 
 
     <url>
+        <loc>https://sejoung.github.io/tags/%EC%97%94%EB%B9%84%EB%94%94%EC%95%84-%EB%93%9C%EB%9D%BC%EC%9D%B4%EB%B8%8C/</loc>
+        <lastmod>2025-05-16T02:51:37.160Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/tags/nvidia-driver/</loc>
+        <lastmod>2025-05-16T02:51:37.160Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/tags/nvidia-smi/</loc>
+        <lastmod>2025-05-16T02:51:37.160Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>https://sejoung.github.io/tags/stable-diffusion/</loc>
         <lastmod>2025-05-13T09:45:26.155Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -39,13 +60,6 @@
 
     <url>
         <loc>https://sejoung.github.io/tags/5090/</loc>
-        <lastmod>2025-05-07T09:44:42.266Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://sejoung.github.io/tags/nvidia-smi/</loc>
         <lastmod>2025-05-07T09:44:42.266Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>

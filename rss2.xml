@@ -8,8 +8,27 @@
     <atom:link href="/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>잘정리하자</description>
-    <pubDate>Wed, 07 May 2025 09:44:42 GMT</pubDate>
+    <pubDate>Fri, 16 May 2025 02:51:37 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>우분투 nvidia 드라이버 업데이트</title>
+      <link>https://sejoung.github.io/2025/05/2025-05-16-nvidia_drive_update_ubuntu/</link>
+      <guid>https://sejoung.github.io/2025/05/2025-05-16-nvidia_drive_update_ubuntu/</guid>
+      <pubDate>Fri, 16 May 2025 02:49:00 GMT</pubDate>
+      <description>
+      
+        
+        
+          &lt;h1 id=&quot;우분투-nvidia-드라이버-업데이트&quot;&gt;&lt;a href=&quot;#우분투-nvidia-드라이버-업데이트&quot; class=&quot;headerlink&quot; title=&quot;우분투 nvidia 드라이버 업데이트&quot;&gt;&lt;/a&gt;우분투 nvidia 드라이버 업데이트&lt;/h1&gt;&lt;
+        
+      
+      </description>
+      
+      <content:encoded><![CDATA[<h1 id="우분투-nvidia-드라이버-업데이트"><a href="#우분투-nvidia-드라이버-업데이트" class="headerlink" title="우분투 nvidia 드라이버 업데이트"></a>우분투 nvidia 드라이버 업데이트</h1><h2 id="사용-가능한-NVIDIA-드라이버-목록-보기"><a href="#사용-가능한-NVIDIA-드라이버-목록-보기" class="headerlink" title="사용 가능한 NVIDIA 드라이버 목록 보기"></a>사용 가능한 NVIDIA 드라이버 목록 보기</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ubuntu-drivers devices</span><br></pre></td></tr></table></figure><h2 id="최신-권장-드라이버-자동-설치"><a href="#최신-권장-드라이버-자동-설치" class="headerlink" title="최신 권장 드라이버 자동 설치"></a>최신 권장 드라이버 자동 설치</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo ubuntu-drivers autoinstall</span><br></pre></td></tr></table></figure><h2 id="수동으로-특정-버전-설치"><a href="#수동으로-특정-버전-설치" class="headerlink" title="수동으로 특정 버전 설치"></a>수동으로 특정 버전 설치</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt update</span><br><span class="line">sudo apt install nvidia-driver-575</span><br></pre></td></tr></table></figure><h2 id="드라이버-설치-후-재부팅"><a href="#드라이버-설치-후-재부팅" class="headerlink" title="드라이버 설치 후 재부팅"></a>드라이버 설치 후 재부팅</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo reboot</span><br></pre></td></tr></table></figure><h1 id="참고"><a href="#참고" class="headerlink" title="참고"></a>참고</h1><hr>]]></content:encoded>
+      
+      <comments>https://sejoung.github.io/2025/05/2025-05-16-nvidia_drive_update_ubuntu/#disqus_thread</comments>
+    </item>
     
     <item>
       <title>우분투 에서 5090 driver 설치</title>
@@ -373,25 +392,6 @@
       <content:encoded><![CDATA[<h1 id="Part-III-프로세스"><a href="#Part-III-프로세스" class="headerlink" title="Part III 프로세스"></a>Part III 프로세스</h1><h2 id="CHAPTER-15-폐기"><a href="#CHAPTER-15-폐기" class="headerlink" title="CHAPTER 15 폐기"></a>CHAPTER 15 폐기</h2><p>모든 시스템은 나이를 먹습니다.<br>소프트웨어는 디지털 자산이라서 물리적인 비트들 자체가 늙지 않는다.</p><p>이주를 순차적으로 시켜서 낡은 시스템을 완전히 걷어내는 과정은 폐기라 한다</p><h3 id="폐기시키는-이유"><a href="#폐기시키는-이유" class="headerlink" title="폐기시키는 이유"></a>폐기시키는 이유</h3><p>기본전재는 코드는 자산이 아니라 부채다 라는 기본 전재에서 시작함<br>코드가 부채가 아니라 자산이면 폐기 시킬이유가 어디 있을까?</p><p>코드는 자체는 가치를 창출하지 않는다 가치를 만들어내는 건 바로 기능<br>사용자 요구사항에 부합하는 기능은 자산이다</p><p>폐기대상을 신중하게 선택한 다음 집중해서 빠르게 완료하는게 중요</p><h3 id="폐기는-왜-그리-어려운가"><a href="#폐기는-왜-그리-어려운가" class="headerlink" title="폐기는 왜 그리 어려운가?"></a>폐기는 왜 그리 어려운가?</h3><p>하이럼의 법칙에 의해 시스템은 사용자 수가 늘수록 설계자가 예상하지 못한 전에 본 적 없는 방식으로 이용될 가능성이 높음</p><p>되니깐 쓰는 기능과 함께 이를 잘 활용하던 수많은 사용자까지 한꺼번에 떼어내어버린다</p><p>옛시스템에 대한 애착이 의외의 저항이 될수 도 있다</p><p>정치라는 관문도 통과 신기능 개발이 지연된다면 폐기시키는 편이 오히려 이득임을 이해관계자들에게 납득시키기가 더욱 어렵다</p><ul><li>설계 단계에서의 폐기<ul><li>내 제품의 고객이 잠재적인 대체품으로 이주하기가 얼마나 쉬울까?</li><li>내 시스템을 한 부분씩 점진적으로 교체하려면 어떻게 해야 할까?</li></ul></li></ul><h3 id="폐기-유형"><a href="#폐기-유형" class="headerlink" title="폐기 유형"></a>폐기 유형</h3><ul><li>권고 폐기<ul><li>희망 폐기</li></ul></li><li>강제 폐기</li><li>폐기 경고<ul><li>실행 가능성 과 적시성 <h3 id="폐기-프로세스-관리"><a href="#폐기-프로세스-관리" class="headerlink" title="폐기 프로세스 관리"></a>폐기 프로세스 관리</h3></li></ul></li><li>프로세스 소유자</li><li>마일스톤</li><li>폐기 도구<ul><li>발견</li><li>마이그레이션</li><li>퇴행 방지</li></ul></li></ul><h1 id="참조"><a href="#참조" class="headerlink" title="참조"></a>참조</h1><hr><ul><li><a href="https://www.yes24.com/Product/Goods/109182479">구글 엔지니어는 이렇게 일한다</a></li></ul>]]></content:encoded>
       
       <comments>https://sejoung.github.io/2024/08/2024-08-09-Software_Engineering_at_Google_CHAPTER_15/#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>CHAPTER 14 더 큰 테스트</title>
-      <link>https://sejoung.github.io/2024/07/2024-07-24-Software_Engineering_at_Google_CHAPTER_14/</link>
-      <guid>https://sejoung.github.io/2024/07/2024-07-24-Software_Engineering_at_Google_CHAPTER_14/</guid>
-      <pubDate>Wed, 24 Jul 2024 00:50:00 GMT</pubDate>
-      <description>
-      
-        
-        
-          &lt;h1 id=&quot;Part-III-프로세스&quot;&gt;&lt;a href=&quot;#Part-III-프로세스&quot; class=&quot;headerlink&quot; title=&quot;Part III 프로세스&quot;&gt;&lt;/a&gt;Part III 프로세스&lt;/h1&gt;&lt;h2 id=&quot;CHAPTER-14-더-큰-테스트&quot;&gt;&lt;
-        
-      
-      </description>
-      
-      <content:encoded><![CDATA[<h1 id="Part-III-프로세스"><a href="#Part-III-프로세스" class="headerlink" title="Part III 프로세스"></a>Part III 프로세스</h1><h2 id="CHAPTER-14-더-큰-테스트"><a href="#CHAPTER-14-더-큰-테스트" class="headerlink" title="CHAPTER 14 더 큰 테스트"></a>CHAPTER 14 더 큰 테스트</h2><p>테스트들이 자원 낭비가 아닌 값진 자산이 되게끔 하려면 또 다른 난관을 극복해야 된다</p><h3 id="더-큰-테스트란"><a href="#더-큰-테스트란" class="headerlink" title="더 큰 테스트란?"></a>더 큰 테스트란?</h3><p>더 큰 테스트의 특징</p><ul><li>느릴 수 있다</li><li>밀폐되지 않을 수 있다</li><li>비결정적일 수 있다</li></ul><h4 id="충실성"><a href="#충실성" class="headerlink" title="충실성"></a>충실성</h4><p>테스트가 대상의 실제 행위를 얼마나 충실하게 반영했는냐를 나타내는 속성</p><h4 id="단위-테스트가-손-대기-어려운-영역"><a href="#단위-테스트가-손-대기-어려운-영역" class="headerlink" title="단위 테스트가 손 대기 어려운 영역"></a>단위 테스트가 손 대기 어려운 영역</h4><ul><li>부적확한 테스트 대역</li><li>설정 문제</li><li>과부하 시 나타나는 문제</li><li>예기치 못한 동작 입력 부작용</li><li>창발적 행위와 진공 효과</li></ul><h4 id="더-큰-테스트를-만들지-않는-이유"><a href="#더-큰-테스트를-만들지-않는-이유" class="headerlink" title="더 큰 테스트를 만들지 않는 이유"></a>더 큰 테스트를 만들지 않는 이유</h4><ul><li>높은 신뢰성</li><li>빠른 속도</li><li>높은 확장성</li></ul><h3 id="더-큰-테스트-구글"><a href="#더-큰-테스트-구글" class="headerlink" title="더 큰 테스트 @ 구글"></a>더 큰 테스트 @ 구글</h3><ul><li>더 큰 테스트와 수명<ul><li>아이스크림콘 테스트 안티패턴</li></ul></li><li>구글 규모에서의 더 큰 테스트<ul><li>통합 테스트라 하더라도 가능한 작을수록 좋습니다<h3 id="큰-테스트의-구조"><a href="#큰-테스트의-구조" class="headerlink" title="큰 테스트의 구조"></a>큰 테스트의 구조</h3></li></ul></li></ul><ol><li>테스트 대상 시스템 확보</li><li>필요한 테스트 데이터 준비</li><li>대상 시스템을 이용해 동작수행</li><li>행위 검증</li></ol><ul><li>테스트 대상 시스템<ul><li>밀폐성</li><li>충실성</li><li>단일 프로세스 SUT</li><li>단일 머신 SUT</li><li>다중 머신 SUT</li><li>공유환경</li><li>하이브리드</li></ul></li><li>밀폐된 SUT의 이점<ul><li>큰 테스트에서 SUT는 테스트 신뢰성을 떨어뜨리고 피드백 시간을 늘리는 주범이 될 수 있습니다</li></ul></li><li>쿤제 경계에서 SUT 크기 줄이기<ul><li>테스트 하다 보면 웬만해서는 피해야할 고통스러운 경계가 존재함</li></ul></li><li>기록&#x2F;재생 프록시<ul><li>비결정성을 없애기 위해 매칭기를 이용하여 요청을 보고 기대하는 응답과 일치시킨다</li></ul></li><li>테스트 데이터<ul><li>시드 데이터</li><li>테스트 트래픽</li><li>도메인 데이터</li><li>현실적인 기준선</li><li>데이터 기록 API</li><li>손수 가공한 데이터</li><li>복사한 데이터</li><li>샘플링한 데이터</li></ul></li><li>검증<ul><li>수동 검증</li><li>단정문</li><li>A&#x2F;B 테스트</li></ul></li></ul><h3 id="더-큰-테스트-유형"><a href="#더-큰-테스트-유형" class="headerlink" title="더 큰 테스트 유형"></a>더 큰 테스트 유형</h3><ul><li>하나 이상의 바이너리에 대한 기능 테스트<ul><li>SUT : 밀폐된 단일 머신 혹은 격리된 클라우드 배포</li><li>데이터 : 수동 생성</li><li>검증 방식 : 단정문</li></ul></li><li>브라우저와 기기 테스트</li><li>성능, 부하, 스트레스 테스트<ul><li>SUT : 격리된 클라우드에 배포</li><li>데이터 : 수동 생성 혹은 프로덕션 환경에서 복사</li><li>검증 방식 : 차이 비교</li></ul></li><li>배포 설정 테스트<ul><li>SUT : 밀폐된 단일 머신 혹은 격리된 클라우드 배포</li><li>데이터 : 없음</li><li>검증 방식 : 단정문(비정상 종료는 하지 않음)</li><li>스모크 테스트</li></ul></li><li>탐색적 테스팅<ul><li>한계</li><li>버그 파티</li></ul></li><li>A&#x2F;B 차이(회귀) 테스트</li><li>사용자 인수 테스트</li><li>프로버와 카나리 분석</li><li>재해 복구와 카오스 엔지니어링</li><li>사용자 평가</li></ul><h3 id="큰-테스트와-개발자-워크플로"><a href="#큰-테스트와-개발자-워크플로" class="headerlink" title="큰 테스트와 개발자 워크플로"></a>큰 테스트와 개발자 워크플로</h3><ul><li>큰테스트 작성하기</li><li>큰테스트 수행하기<ul><li>테스트 속도 개선하기</li><li>불규칙한 결과에서 벗어나기</li><li>이해되는 테스트 만들기</li></ul></li><li>큰 테스트의 소유권<ul><li>반듯이 소유자가 문서로 기록되어 있어야 함</li></ul></li></ul><h1 id="참조"><a href="#참조" class="headerlink" title="참조"></a>참조</h1><hr><ul><li><a href="https://www.yes24.com/Product/Goods/109182479">구글 엔지니어는 이렇게 일한다</a></li></ul>]]></content:encoded>
-      
-      <comments>https://sejoung.github.io/2024/07/2024-07-24-Software_Engineering_at_Google_CHAPTER_14/#disqus_thread</comments>
     </item>
     
   </channel>

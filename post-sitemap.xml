@@ -9,6 +9,14 @@
 
 
     <url>
+        <loc>https://sejoung.github.io/2025/05/2025-05-16-nvidia_drive_update_ubuntu/</loc>
+        <lastmod>2025-05-16T02:51:37.160Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://sejoung.github.io/2023/10/2023-10-26-stable_diffusion_webui_docker_install/</loc>
         <lastmod>2025-05-13T09:45:26.155Z</lastmod>
         <changefreq>weekly</changefreq>
