@@ -3,6 +3,41 @@
 
 
     <url>
+        <loc>https://sejoung.github.io/tags/%EC%9C%88%EB%8F%84%EC%9A%B0/</loc>
+        <lastmod>2025-05-27T09:39:04.227Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/tags/symlinks/</loc>
+        <lastmod>2025-05-27T09:39:04.227Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/tags/mklink/</loc>
+        <lastmod>2025-05-27T09:39:04.227Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/tags/%EC%8B%AC%EB%B3%BC%EB%A6%AD-%EB%A7%81%ED%81%AC/</loc>
+        <lastmod>2025-05-27T09:39:04.227Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/tags/windows/</loc>
+        <lastmod>2025-05-27T09:39:04.227Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>https://sejoung.github.io/tags/%EC%97%94%EB%B9%84%EB%94%94%EC%95%84-%EB%93%9C%EB%9D%BC%EC%9D%B4%EB%B8%8C/</loc>
         <lastmod>2025-05-16T02:51:37.160Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -4155,13 +4190,6 @@
 
     <url>
         <loc>https://sejoung.github.io/tags/spring-boot-JMX/</loc>
-        <lastmod>2023-12-01T08:00:58.160Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://sejoung.github.io/tags/windows/</loc>
         <lastmod>2023-12-01T08:00:58.160Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>

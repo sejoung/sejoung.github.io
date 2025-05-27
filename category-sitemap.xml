@@ -9,6 +9,13 @@
 
 
     <url>
+        <loc>https://sejoung.github.io/categories/windows/</loc>
+        <lastmod>2025-05-27T09:39:04.227Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>https://sejoung.github.io/categories/ubuntu/</loc>
         <lastmod>2025-05-16T02:51:37.160Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -290,13 +297,6 @@
 
     <url>
         <loc>https://sejoung.github.io/categories/rabbitmq/</loc>
-        <lastmod>2023-12-01T08:00:58.168Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://sejoung.github.io/categories/windows/</loc>
         <lastmod>2023-12-01T08:00:58.168Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
