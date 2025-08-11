@@ -9,6 +9,20 @@
 
 
     <url>
+        <loc>https://sejoung.github.io/categories/java/</loc>
+        <lastmod>2025-08-11T10:08:50.064Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/categories/github/</loc>
+        <lastmod>2025-07-08T08:23:30.516Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>https://sejoung.github.io/categories/windows/</loc>
         <lastmod>2025-05-27T09:39:04.227Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -95,13 +109,6 @@
     <url>
         <loc>https://sejoung.github.io/categories/Stable-Diffusion/</loc>
         <lastmod>2024-03-08T09:55:20.938Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://sejoung.github.io/categories/java/</loc>
-        <lastmod>2024-02-27T01:18:19.117Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>

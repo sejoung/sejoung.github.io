@@ -3,6 +3,62 @@
 
 
     <url>
+        <loc>https://sejoung.github.io/tags/Virtual-Threads/</loc>
+        <lastmod>2025-08-11T10:08:50.064Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/tags/jdk-21/</loc>
+        <lastmod>2025-08-11T10:08:50.064Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/tags/JEP/</loc>
+        <lastmod>2025-08-11T10:08:50.064Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/tags/DNS-%EC%84%A4%EC%A0%95/</loc>
+        <lastmod>2025-07-08T08:23:30.516Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/tags/custom-domain/</loc>
+        <lastmod>2025-07-08T08:23:30.516Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/tags/%EB%8F%84%EB%A9%94%EC%9D%B8%EC%84%A4%EC%A0%95/</loc>
+        <lastmod>2025-07-08T08:23:30.516Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/tags/github-pages/</loc>
+        <lastmod>2025-07-08T08:23:30.516Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/tags/github/</loc>
+        <lastmod>2025-07-08T08:23:30.516Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>https://sejoung.github.io/tags/%EC%9C%88%EB%8F%84%EC%9A%B0/</loc>
         <lastmod>2025-05-27T09:39:04.227Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -934,13 +990,6 @@
     </url>
 
     <url>
-        <loc>https://sejoung.github.io/tags/github/</loc>
-        <lastmod>2023-12-05T02:29:29.223Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>https://sejoung.github.io/tags/%EC%8B%AC%EB%B3%BC%EB%A6%AD-%EB%A7%81%ED%81%AC-%EA%B4%80%EB%A6%AC/</loc>
         <lastmod>2023-12-01T08:00:58.187Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -1509,13 +1558,6 @@
 
     <url>
         <loc>https://sejoung.github.io/tags/Kubernetes/</loc>
-        <lastmod>2023-12-01T08:00:58.177Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://sejoung.github.io/tags/JEP/</loc>
         <lastmod>2023-12-01T08:00:58.177Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
