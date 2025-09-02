@@ -8,8 +8,27 @@
     <atom:link href="/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>잘정리하자</description>
-    <pubDate>Mon, 11 Aug 2025 10:08:50 GMT</pubDate>
+    <pubDate>Tue, 02 Sep 2025 07:13:40 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Git LFS와 pre-commit 훅으로 대용량 파일 자동 추적하기</title>
+      <link>https://sejoung.github.io/2025/09/2025-09-02-git_lfs_pre_commit/</link>
+      <guid>https://sejoung.github.io/2025/09/2025-09-02-git_lfs_pre_commit/</guid>
+      <pubDate>Tue, 02 Sep 2025 07:13:00 GMT</pubDate>
+      <description>
+      
+        
+        
+          &lt;h1 id=&quot;Git-LFS와-pre-commit-훅으로-대용량-파일-자동-추적하기&quot;&gt;&lt;a href=&quot;#Git-LFS와-pre-commit-훅으로-대용량-파일-자동-추적하기&quot; class=&quot;headerlink&quot; title=&quot;Git LFS와 pre-com
+        
+      
+      </description>
+      
+      <content:encoded><![CDATA[<h1 id="Git-LFS와-pre-commit-훅으로-대용량-파일-자동-추적하기"><a href="#Git-LFS와-pre-commit-훅으로-대용량-파일-자동-추적하기" class="headerlink" title="Git LFS와 pre-commit 훅으로 대용량 파일 자동 추적하기"></a>Git LFS와 pre-commit 훅으로 대용량 파일 자동 추적하기</h1><p>pre-commit 파일</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">!/usr/bin/env bash</span></span><br><span class="line">set -euo pipefail</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">===== 설정: 임계값 100MB =====</span></span><br><span class="line">THRESH=$((100*1024*1024))</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">git-lfs 설치 여부 확인</span></span><br><span class="line">if ! command -v git-lfs &gt;/dev/null 2&gt;&amp;1; then</span><br><span class="line">  echo &quot;[pre-commit] git-lfs not found. Run &#x27;git lfs install&#x27; first.&quot; &gt;&amp;2</span><br><span class="line">  exit 1</span><br><span class="line">fi</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">스테이징된 추가/수정 파일 목록</span></span><br><span class="line">files=$(git diff --cached --name-only --diff-filter=AM -z | tr &#x27;\0&#x27; &#x27;\n&#x27;)</span><br><span class="line"></span><br><span class="line">for f in $files; do</span><br><span class="line">  [ -f &quot;$f&quot; ] || continue</span><br><span class="line">  size=$(stat -c%s &quot;$f&quot; 2&gt;/dev/null || stat -f%z &quot;$f&quot;)</span><br><span class="line"></span><br><span class="line">  if [ &quot;$size&quot; -ge &quot;$THRESH&quot; ]; then</span><br><span class="line">    echo &quot;[LFS] &#x27;$f&#x27; is $size bytes (&gt;= $THRESH). Tracking with Git LFS...&quot;</span><br><span class="line">    git lfs track -- &quot;$f&quot; &gt;/dev/null</span><br><span class="line">    git add .gitattributes &quot;$f&quot;</span><br><span class="line">    echo &quot;[LFS] Tracked + re-staged: $f&quot;</span><br><span class="line">  fi</span><br><span class="line">done</span><br><span class="line"></span><br><span class="line">exit 0</span><br><span class="line"></span><br></pre></td></tr></table></figure><h2 id="hooksPath-확인"><a href="#hooksPath-확인" class="headerlink" title="hooksPath 확인"></a>hooksPath 확인</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --get core.hooksPath</span><br></pre></td></tr></table></figure><h2 id="로컬-설정"><a href="#로컬-설정" class="headerlink" title="로컬 설정"></a>로컬 설정</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --local core.hooksPath .githooks</span><br></pre></td></tr></table></figure><h2 id="글로벌-설정"><a href="#글로벌-설정" class="headerlink" title="글로벌 설정"></a>글로벌 설정</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --global core.hooksPath .githooks</span><br></pre></td></tr></table></figure><h1 id="참조"><a href="#참조" class="headerlink" title="참조"></a>참조</h1><hr>]]></content:encoded>
+      
+      <comments>https://sejoung.github.io/2025/09/2025-09-02-git_lfs_pre_commit/#disqus_thread</comments>
+    </item>
     
     <item>
       <title>JEP 444: Virtual Threads</title>
@@ -373,25 +392,6 @@
       <content:encoded><![CDATA[<h1 id="Part-IV-도구"><a href="#Part-IV-도구" class="headerlink" title="Part IV 도구"></a>Part IV 도구</h1><h2 id="CHAPTER-19-Critique-구글의-코드-리뷰-도구"><a href="#CHAPTER-19-Critique-구글의-코드-리뷰-도구" class="headerlink" title="CHAPTER 19 Critique: 구글의 코드 리뷰 도구"></a>CHAPTER 19 Critique: 구글의 코드 리뷰 도구</h2><p>코드 리뷰는 소프트웨어 개발에서 없어서는 안 될 요소입니다.<br>특히 성장하기 위해 매우 중요한 요소입니다.</p><h3 id="코드-리뷰-도구-원칙"><a href="#코드-리뷰-도구-원칙" class="headerlink" title="코드 리뷰 도구 원칙"></a>코드 리뷰 도구 원칙</h3><ul><li>간결성<ul><li>가장 큰 영향을 준 원칙</li></ul></li><li>신뢰 제공</li><li>익숙한 소통 방식</li><li>워크플로 통합</li></ul><h3 id="코드-리뷰-흐름"><a href="#코드-리뷰-흐름" class="headerlink" title="코드 리뷰 흐름"></a>코드 리뷰 흐름</h3><ul><li>변경 생성</li><li>리뷰 요청</li><li>변경 이해하고 댓글 달기</li><li>변경 수정 및 댓글에 답하기</li><li>변경 승인</li><li>변경 커밋</li></ul><h3 id="1단계-변경-생성"><a href="#1단계-변경-생성" class="headerlink" title="1단계: 변경 생성"></a>1단계: 변경 생성</h3><ul><li>디프, 차이점 보여주기</li><li>분석 결과</li><li>긴밀한 도구 통합<h3 id="2단계-리뷰-요청"><a href="#2단계-리뷰-요청" class="headerlink" title="2단계: 리뷰 요청"></a>2단계: 리뷰 요청</h3>리뷰 요청 할때 리뷰어 선정이 어려운데 별칭으로 리뷰어를 선정하는 방법이 있다.</li></ul><h3 id="3-4단계-변경-이해하고-댓글-달기"><a href="#3-4단계-변경-이해하고-댓글-달기" class="headerlink" title="3~4단계: 변경 이해하고 댓글 달기"></a>3~4단계: 변경 이해하고 댓글 달기</h3><ul><li><p>댓글달기</p></li><li><p>변경의 상태 이해하기</p><ul><li>누구 차례 기능</li><li>대시보드 와 검색 시스템<h3 id="5단계-변경-승인-변경에-점수-매기기"><a href="#5단계-변경-승인-변경에-점수-매기기" class="headerlink" title="5단계: 변경 승인(변경에 점수 매기기)"></a>5단계: 변경 승인(변경에 점수 매기기)</h3>구글에서 변경에 점수를 매길 때 고려하는 요소</li></ul></li><li><p>LGTM</p></li><li><p>승인</p></li><li><p>미해결 댓글 개수</p></li></ul><h3 id="6단계-변경-커밋"><a href="#6단계-변경-커밋" class="headerlink" title="6단계: 변경 커밋"></a>6단계: 변경 커밋</h3><ul><li>커밋 후 : 뱐걍 이력 추적</li></ul><h1 id="참조"><a href="#참조" class="headerlink" title="참조"></a>참조</h1><hr><ul><li><a href="https://www.yes24.com/Product/Goods/109182479">구글 엔지니어는 이렇게 일한다</a></li></ul>]]></content:encoded>
       
       <comments>https://sejoung.github.io/2024/08/2024-08-22-Software_Engineering_at_Google_CHAPTER_19/#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>CHAPTER 18 빌드 시스템과 빌드 철학</title>
-      <link>https://sejoung.github.io/2024/08/2024-08-19-Software_Engineering_at_Google_CHAPTER_18/</link>
-      <guid>https://sejoung.github.io/2024/08/2024-08-19-Software_Engineering_at_Google_CHAPTER_18/</guid>
-      <pubDate>Mon, 19 Aug 2024 00:42:00 GMT</pubDate>
-      <description>
-      
-        
-        
-          &lt;h1 id=&quot;Part-IV-도구&quot;&gt;&lt;a href=&quot;#Part-IV-도구&quot; class=&quot;headerlink&quot; title=&quot;Part IV 도구&quot;&gt;&lt;/a&gt;Part IV 도구&lt;/h1&gt;&lt;h2 id=&quot;CHAPTER-18-빌드-시스템과-빌드-철학&quot;&gt;&lt;a href
-        
-      
-      </description>
-      
-      <content:encoded><![CDATA[<h1 id="Part-IV-도구"><a href="#Part-IV-도구" class="headerlink" title="Part IV 도구"></a>Part IV 도구</h1><h2 id="CHAPTER-18-빌드-시스템과-빌드-철학"><a href="#CHAPTER-18-빌드-시스템과-빌드-철학" class="headerlink" title="CHAPTER 18 빌드 시스템과 빌드 철학"></a>CHAPTER 18 빌드 시스템과 빌드 철학</h2><p>구글 엔지니어에게 빌드시스템은 사랑이다</p><h3 id="빌드-시스템의-목적"><a href="#빌드-시스템의-목적" class="headerlink" title="빌드 시스템의 목적"></a>빌드 시스템의 목적</h3><p>빌드 시스템의 목적</p><ul><li>속도 : 개발자가 명령 하나로 빌드를 수행하고 몇 초안에 결과 바이너리를 얻을 수 있어야 한다.</li><li>정확성 : 소스 파일과 기타 입력 데이터가 같다면 모든 개발자가 어떤 컴퓨터에서 빌드하더라고 항상 동일한 결과를 내어야 한다</li></ul><h3 id="빌드-시스템이-없다면"><a href="#빌드-시스템이-없다면" class="headerlink" title="빌드 시스템이 없다면?"></a>빌드 시스템이 없다면?</h3><p>빌드 환경 없이 프로젝트 규모를 확장하려 들면 온갖 난관에 부딪히게 된다</p><h4 id="컴파일러로-충분하지-않나"><a href="#컴파일러로-충분하지-않나" class="headerlink" title="컴파일러로 충분하지 않나?"></a>컴파일러로 충분하지 않나?</h4><p>의존 관계가 조금만 복잡해져도 귀찮고 오류가 잦은 작업이다</p><h4 id="쉘-스크립트가-출동한다면"><a href="#쉘-스크립트가-출동한다면" class="headerlink" title="쉘 스크립트가 출동한다면?"></a>쉘 스크립트가 출동한다면?</h4><ul><li>지루해진다</li><li>느리다</li></ul><h3 id="모던-빌드-시스템"><a href="#모던-빌드-시스템" class="headerlink" title="모던 빌드 시스템"></a>모던 빌드 시스템</h3><ul><li>핵심은 의존성</li><li>태스크 기반 빌드 시스템<ul><li>단점<ul><li>빌드 단계들을 병렬로 싱행하기 어렵다</li><li>증분 빌드를 수행하기 어렵다</li><li>스크립트를 유지보수하고 디버깅하기 어렵다</li></ul></li></ul></li><li>아티 팩트 기반 빌드 시스템<ul><li>도구도 의존성으로 취급</li><li>빌드 시스템 확장하기</li><li>외부 의존성 명확히 드러내기<h3 id="모듈과-의존성-다루기"><a href="#모듈과-의존성-다루기" class="headerlink" title="모듈과 의존성 다루기"></a>모듈과 의존성 다루기</h3></li></ul></li><li>작은 모듈 사용과 1:1:1 규칙</li><li>모듈 가시성 최소화</li><li>의존성관리<ul><li>내부 의존성</li><li>외부 의존성<ul><li>원-버전 규칙</li><li>전이 외부 의존성</li><li>외부 의존성을 이용해 빌드 결과 캐시</li><li>외부 의존성의 보안과 안정성</li></ul></li></ul></li></ul><h1 id="참조"><a href="#참조" class="headerlink" title="참조"></a>참조</h1><hr><ul><li><a href="https://www.yes24.com/Product/Goods/109182479">구글 엔지니어는 이렇게 일한다</a></li></ul>]]></content:encoded>
-      
-      <comments>https://sejoung.github.io/2024/08/2024-08-19-Software_Engineering_at_Google_CHAPTER_18/#disqus_thread</comments>
     </item>
     
   </channel>
