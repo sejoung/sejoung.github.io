@@ -60,7 +60,7 @@ git config --local core.hooksPath .githooks
 ## 글로벌 설정
 
 ```shell
-git config --global core.hooksPath .githooks
+git config --global core.hooksPath home/beni/.githooks
 ```
 
 # 참조
