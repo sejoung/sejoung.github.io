@@ -8,8 +8,27 @@
     <atom:link href="/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>잘정리하자</description>
-    <pubDate>Tue, 02 Sep 2025 07:47:13 GMT</pubDate>
+    <pubDate>Fri, 17 Oct 2025 08:59:51 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>언리얼 Python 스크립트로 에디터 자동화하기</title>
+      <link>https://sejoung.github.io/2025/10/2025-10-17-unreal_python_script/</link>
+      <guid>https://sejoung.github.io/2025/10/2025-10-17-unreal_python_script/</guid>
+      <pubDate>Fri, 17 Oct 2025 05:28:00 GMT</pubDate>
+      <description>
+      
+        
+        
+          &lt;h1 id=&quot;언리얼-Python-스크립트로-에디터-자동화하기&quot;&gt;&lt;a href=&quot;#언리얼-Python-스크립트로-에디터-자동화하기&quot; class=&quot;headerlink&quot; title=&quot;언리얼 Python 스크립트로 에디터 자동화하기&quot;&gt;&lt;/a&gt;언리얼 Pyth
+        
+      
+      </description>
+      
+      <content:encoded><![CDATA[<h1 id="언리얼-Python-스크립트로-에디터-자동화하기"><a href="#언리얼-Python-스크립트로-에디터-자동화하기" class="headerlink" title="언리얼 Python 스크립트로 에디터 자동화하기"></a>언리얼 Python 스크립트로 에디터 자동화하기</h1><p>언리얼 엔진은 C++와 블루프린트 외에도 Python 스크립팅을 지원하여 에디터 작업을 자동화할 수 있습니다.</p><p>그중에서도 python 스크립트의 장점인 번거러운 컴파일 과정이 없다는것이 큰 장점입니다.</p><p>만드는 방법은 언리얼에 설명이 되어 있고 <a href="https://dev.epicgames.com/documentation/en-us/unreal-engine/python-api/index?application_version=5.6">Unreal Python API Documentation</a>에서 다양한 API를 확인할 수 있습니다.</p><h2 id="Python-플러그인-개발시에-활용-방법"><a href="#Python-플러그인-개발시에-활용-방법" class="headerlink" title="Python 플러그인 개발시에 활용 방법"></a>Python 플러그인 개발시에 활용 방법</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install unreal-stub</span><br></pre></td></tr></table></figure><p>가이드에도 stub 설치 방법이 나와 있지만, <code>unreal-stub</code> 패키지를 설치하면 언리얼 파이썬 API에 대한 자동 완성 기능을 IDE에서 사용할 수 있습니다.</p><h1 id="참조"><a href="#참조" class="headerlink" title="참조"></a>참조</h1><hr><ul><li><a href="https://dev.epicgames.com/documentation/en-us/unreal-engine/scripting-the-unreal-editor-using-python?application_version=5.6">Scripting the Unreal Editor Using Python</a></li><li><a href="https://dev.epicgames.com/documentation/en-us/unreal-engine/python-api/index?application_version=5.6">Unreal Python API Documentation</a></li><li><a href="https://vfxplatform.com/">vfxplatform</a></li><li><a href="https://dev.epicgames.com/documentation/en-us/unreal-engine/setting-up-autocomplete-for-unreal-editor-python-scripting">Setting up Autocomplete for Editor Python Scripting</a></li><li><a href="https://pypi.org/project/unreal-stub/">unreal-stub</a></li></ul>]]></content:encoded>
+      
+      <comments>https://sejoung.github.io/2025/10/2025-10-17-unreal_python_script/#disqus_thread</comments>
+    </item>
     
     <item>
       <title>Git LFS와 pre-commit 훅으로 대용량 파일 자동 추적하기</title>
@@ -373,25 +392,6 @@
       <content:encoded><![CDATA[<h1 id="Lora-훈련하기"><a href="#Lora-훈련하기" class="headerlink" title="Lora 훈련하기"></a>Lora 훈련하기</h1><p>괜찮은 스레드들의 모음</p><h1 id="참조"><a href="#참조" class="headerlink" title="참조"></a>참조</h1><hr><ul><li><a href="https://civitai.com/articles/3921/this-is-how-i-create-and-train-loras">This is how I create and train LoRAs</a></li><li><a href="https://civitai.com/articles/6824/training-a-flux-character-lora-on-civitai">Training a Flux Character LoRA on Civitai</a></li><li><a href="https://civitai.com/articles/6792/flux-style-captioning-differences-training-diary">Flux Style Captioning Differences - Training Diary</a></li><li><a href="https://civitai.com/articles/7097/flux-complete-lora-settings-and-dataset-guide-post-mortem-of-two-weeks-of-learning">Flux complete Lora settings and dataset guide - post-mortem of two weeks of learning</a></li><li><a href="https://civitai.com/articles/6868/flux-character-caption-differences-training-diary">Flux Character Caption Differences - Training Diary</a></li><li><a href="https://civitai.com/articles/7146/flux-style-captioning-differences-pt2-4-new-caption-tools-training-diary">Flux Style Captioning Differences pt2. - 4 new caption tools - Training Diary</a></li><li></li></ul>]]></content:encoded>
       
       <comments>https://sejoung.github.io/2024/09/2024-09-09-train_lora/#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>CHAPTER 19 Critique: 구글의 코드 리뷰 도구</title>
-      <link>https://sejoung.github.io/2024/08/2024-08-22-Software_Engineering_at_Google_CHAPTER_19/</link>
-      <guid>https://sejoung.github.io/2024/08/2024-08-22-Software_Engineering_at_Google_CHAPTER_19/</guid>
-      <pubDate>Thu, 22 Aug 2024 00:21:00 GMT</pubDate>
-      <description>
-      
-        
-        
-          &lt;h1 id=&quot;Part-IV-도구&quot;&gt;&lt;a href=&quot;#Part-IV-도구&quot; class=&quot;headerlink&quot; title=&quot;Part IV 도구&quot;&gt;&lt;/a&gt;Part IV 도구&lt;/h1&gt;&lt;h2 id=&quot;CHAPTER-19-Critique-구글의-코드-리뷰-도구&quot;
-        
-      
-      </description>
-      
-      <content:encoded><![CDATA[<h1 id="Part-IV-도구"><a href="#Part-IV-도구" class="headerlink" title="Part IV 도구"></a>Part IV 도구</h1><h2 id="CHAPTER-19-Critique-구글의-코드-리뷰-도구"><a href="#CHAPTER-19-Critique-구글의-코드-리뷰-도구" class="headerlink" title="CHAPTER 19 Critique: 구글의 코드 리뷰 도구"></a>CHAPTER 19 Critique: 구글의 코드 리뷰 도구</h2><p>코드 리뷰는 소프트웨어 개발에서 없어서는 안 될 요소입니다.<br>특히 성장하기 위해 매우 중요한 요소입니다.</p><h3 id="코드-리뷰-도구-원칙"><a href="#코드-리뷰-도구-원칙" class="headerlink" title="코드 리뷰 도구 원칙"></a>코드 리뷰 도구 원칙</h3><ul><li>간결성<ul><li>가장 큰 영향을 준 원칙</li></ul></li><li>신뢰 제공</li><li>익숙한 소통 방식</li><li>워크플로 통합</li></ul><h3 id="코드-리뷰-흐름"><a href="#코드-리뷰-흐름" class="headerlink" title="코드 리뷰 흐름"></a>코드 리뷰 흐름</h3><ul><li>변경 생성</li><li>리뷰 요청</li><li>변경 이해하고 댓글 달기</li><li>변경 수정 및 댓글에 답하기</li><li>변경 승인</li><li>변경 커밋</li></ul><h3 id="1단계-변경-생성"><a href="#1단계-변경-생성" class="headerlink" title="1단계: 변경 생성"></a>1단계: 변경 생성</h3><ul><li>디프, 차이점 보여주기</li><li>분석 결과</li><li>긴밀한 도구 통합<h3 id="2단계-리뷰-요청"><a href="#2단계-리뷰-요청" class="headerlink" title="2단계: 리뷰 요청"></a>2단계: 리뷰 요청</h3>리뷰 요청 할때 리뷰어 선정이 어려운데 별칭으로 리뷰어를 선정하는 방법이 있다.</li></ul><h3 id="3-4단계-변경-이해하고-댓글-달기"><a href="#3-4단계-변경-이해하고-댓글-달기" class="headerlink" title="3~4단계: 변경 이해하고 댓글 달기"></a>3~4단계: 변경 이해하고 댓글 달기</h3><ul><li><p>댓글달기</p></li><li><p>변경의 상태 이해하기</p><ul><li>누구 차례 기능</li><li>대시보드 와 검색 시스템<h3 id="5단계-변경-승인-변경에-점수-매기기"><a href="#5단계-변경-승인-변경에-점수-매기기" class="headerlink" title="5단계: 변경 승인(변경에 점수 매기기)"></a>5단계: 변경 승인(변경에 점수 매기기)</h3>구글에서 변경에 점수를 매길 때 고려하는 요소</li></ul></li><li><p>LGTM</p></li><li><p>승인</p></li><li><p>미해결 댓글 개수</p></li></ul><h3 id="6단계-변경-커밋"><a href="#6단계-변경-커밋" class="headerlink" title="6단계: 변경 커밋"></a>6단계: 변경 커밋</h3><ul><li>커밋 후 : 뱐걍 이력 추적</li></ul><h1 id="참조"><a href="#참조" class="headerlink" title="참조"></a>참조</h1><hr><ul><li><a href="https://www.yes24.com/Product/Goods/109182479">구글 엔지니어는 이렇게 일한다</a></li></ul>]]></content:encoded>
-      
-      <comments>https://sejoung.github.io/2024/08/2024-08-22-Software_Engineering_at_Google_CHAPTER_19/#disqus_thread</comments>
     </item>
     
   </channel>
