@@ -9,6 +9,76 @@
 
 
     <url>
+        <loc>https://sejoung.github.io/categories/unreal/</loc>
+        <lastmod>2026-01-10T06:21:00.990Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/categories/flutter/</loc>
+        <lastmod>2026-01-10T06:04:44.095Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/categories/github/</loc>
+        <lastmod>2026-01-10T06:04:44.095Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/categories/ubuntu/</loc>
+        <lastmod>2026-01-10T06:04:44.095Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/categories/git/</loc>
+        <lastmod>2026-01-10T06:04:44.095Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/categories/windows/</loc>
+        <lastmod>2026-01-10T06:04:44.095Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/categories/linux/</loc>
+        <lastmod>2026-01-10T06:04:44.095Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/categories/java/</loc>
+        <lastmod>2026-01-10T06:04:44.095Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/categories/docker/</loc>
+        <lastmod>2026-01-10T06:04:44.094Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/categories/tool/</loc>
+        <lastmod>2026-01-10T06:04:44.094Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>https://sejoung.github.io/categories/jenkins/</loc>
         <lastmod>2025-03-25T12:23:14.773Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -38,13 +108,6 @@
 
     <url>
         <loc>https://sejoung.github.io/categories/python/</loc>
-        <lastmod>2024-12-12T20:00:38.679Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://sejoung.github.io/categories/tool/</loc>
         <lastmod>2024-12-12T20:00:38.679Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
@@ -100,22 +163,8 @@
     </url>
 
     <url>
-        <loc>https://sejoung.github.io/categories/java/</loc>
-        <lastmod>2024-04-29T12:18:33.040Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>https://sejoung.github.io/categories/chrome/</loc>
         <lastmod>2023-10-26T08:27:30.127Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://sejoung.github.io/categories/git/</loc>
-        <lastmod>2023-10-25T04:29:02.470Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
@@ -219,13 +268,6 @@
     </url>
 
     <url>
-        <loc>https://sejoung.github.io/categories/docker/</loc>
-        <lastmod>2022-10-29T00:43:30.771Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>https://sejoung.github.io/categories/testing/</loc>
         <lastmod>2022-10-29T00:43:30.770Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -310,13 +352,6 @@
     </url>
 
     <url>
-        <loc>https://sejoung.github.io/categories/windows/</loc>
-        <lastmod>2022-10-29T00:43:30.762Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>https://sejoung.github.io/categories/mac/</loc>
         <lastmod>2022-10-29T00:43:30.762Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -353,13 +388,6 @@
 
     <url>
         <loc>https://sejoung.github.io/categories/msa/</loc>
-        <lastmod>2022-10-29T00:43:30.753Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://sejoung.github.io/categories/linux/</loc>
         <lastmod>2022-10-29T00:43:30.753Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>

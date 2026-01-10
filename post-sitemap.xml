@@ -9,6 +9,118 @@
 
 
     <url>
+        <loc>https://sejoung.github.io/2026/01/2026-01-10-fab_publishing_plugin/</loc>
+        <lastmod>2026-01-10T06:21:00.990Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/2025/05/2025-05-16-nvidia_drive_update_ubuntu/</loc>
+        <lastmod>2026-01-10T06:04:44.095Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/2025/07/2025-07-08-GitHub_Pages_DNS_Setting/</loc>
+        <lastmod>2026-01-10T06:04:44.095Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/2025/09/2025-09-02-git_lfs_pre_commit/</loc>
+        <lastmod>2026-01-10T06:04:44.095Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/2025/10/2025-10-17-unreal_python_script/</loc>
+        <lastmod>2026-01-10T06:04:44.095Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/2025/12/2025-12-08-flutter_setting/</loc>
+        <lastmod>2026-01-10T06:04:44.095Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/2025/08/2025-08-11-JEP_444/</loc>
+        <lastmod>2026-01-10T06:04:44.095Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/2025/05/2025-05-27-symlinks_windows/</loc>
+        <lastmod>2026-01-10T06:04:44.095Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/2025/12/2025-12-10-dgx_spark_onnxruntime/</loc>
+        <lastmod>2026-01-10T06:04:44.095Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/2023/10/2023-10-26-stable_diffusion_webui_docker_install/</loc>
+        <lastmod>2026-01-10T06:04:44.094Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/2025/04/2025-04-23-docker_login_mac/</loc>
+        <lastmod>2026-01-10T06:04:44.094Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/2025/04/2025-04-07-docker_build_ssh_git/</loc>
+        <lastmod>2026-01-10T06:04:44.094Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/2025/05/2025-05-07-nvidia-driver-install-5090/</loc>
+        <lastmod>2026-01-10T06:04:44.094Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/2025/05/2025-05-07-r8125_drive_ubuntu/</loc>
+        <lastmod>2026-01-10T06:04:44.094Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://sejoung.github.io/2025/03/2025-03-25-jenkins_python_build/</loc>
         <lastmod>2025-03-25T12:23:14.773Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -1091,14 +1203,6 @@
     <url>
         <loc>https://sejoung.github.io/2023/11/2023-11-21-Designing_Data_Intensive_Applications_chapter6/</loc>
         <lastmod>2023-11-21T09:54:40.816Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://sejoung.github.io/2023/10/2023-10-26-stable_diffusion_webui_docker_install/</loc>
-        <lastmod>2023-11-21T02:20:51.019Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
