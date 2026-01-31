@@ -28,7 +28,7 @@ sitemap :
 * [안정된 확산에서 CFG 스케일 마스터링](https://civitai.com/articles/11359/mastering-the-cfg-scale-in-stable-diffusion)
 
 
-
+위에 링크들을 보면 기본적인 이미지 생성 관련 내용을 파악할수 있다.
 
 # 참조
 -----
