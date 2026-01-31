@@ -6,8 +6,14 @@
 title: 폭간의 기술블로그
 subtitle: sejoung
 description: Java, Kotlin 등 백엔드 개발 기술과 소프트웨어 엔지니어링 학습 내용을 정리하는 기술 블로그입니다.
-keywords: Java, Kotlin, 개발, 백엔드, 소프트웨어 엔지니어링, 시스템설계
-author: sejoung
+keywords:
+  - Java
+  - Kotlin
+  - 개발
+  - 백엔드
+  - 소프트웨어 엔지니어링
+  - 시스템설계
+author: sejoung kim
 language: ko
 timezone: Asia/seoul
 
