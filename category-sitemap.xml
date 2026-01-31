@@ -9,15 +9,15 @@
 
 
     <url>
-        <loc>https://sejoung.github.io/categories/unreal/</loc>
-        <lastmod>2026-01-10T06:21:00.990Z</lastmod>
+        <loc>https://sejoung.github.io/categories/Machine-Learning/</loc>
+        <lastmod>2026-01-31T13:40:58.995Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>https://sejoung.github.io/categories/flutter/</loc>
-        <lastmod>2026-01-10T06:04:44.095Z</lastmod>
+        <loc>https://sejoung.github.io/categories/unreal/</loc>
+        <lastmod>2026-01-10T06:21:00.990Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
@@ -81,13 +81,6 @@
     <url>
         <loc>https://sejoung.github.io/categories/jenkins/</loc>
         <lastmod>2025-03-25T12:23:14.773Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://sejoung.github.io/categories/Machine-Learning/</loc>
-        <lastmod>2025-03-25T11:52:52.775Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>

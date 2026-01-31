@@ -3,6 +3,34 @@
 
 
     <url>
+        <loc>https://sejoung.github.io/tags/SDXL/</loc>
+        <lastmod>2026-01-31T13:40:58.995Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/tags/FLUX/</loc>
+        <lastmod>2026-01-31T13:40:58.995Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/tags/LoRa/</loc>
+        <lastmod>2026-01-31T13:40:58.995Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sejoung.github.io/tags/stable-diffusion/</loc>
+        <lastmod>2026-01-31T13:40:58.995Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>https://sejoung.github.io/tags/plugin/</loc>
         <lastmod>2026-01-10T06:21:00.990Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -81,27 +109,6 @@
 
     <url>
         <loc>https://sejoung.github.io/tags/jdk-21/</loc>
-        <lastmod>2026-01-10T06:04:44.095Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://sejoung.github.io/tags/%EC%84%A4%EC%B9%98-%EB%B0%8F-%EC%84%A4%EC%A0%95/</loc>
-        <lastmod>2026-01-10T06:04:44.095Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://sejoung.github.io/tags/%ED%94%8C%EB%A6%AC%ED%84%B0/</loc>
-        <lastmod>2026-01-10T06:04:44.095Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://sejoung.github.io/tags/flutter/</loc>
         <lastmod>2026-01-10T06:04:44.095Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
@@ -353,13 +360,6 @@
     </url>
 
     <url>
-        <loc>https://sejoung.github.io/tags/stable-diffusion/</loc>
-        <lastmod>2026-01-10T06:04:44.094Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>https://sejoung.github.io/tags/stable-diffusion-webui/</loc>
         <lastmod>2026-01-10T06:04:44.094Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -432,27 +432,6 @@
     <url>
         <loc>https://sejoung.github.io/tags/%EC%A0%A0%ED%82%A8%EC%8A%A4/</loc>
         <lastmod>2025-03-25T12:23:14.773Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://sejoung.github.io/tags/SDXL/</loc>
-        <lastmod>2025-03-25T11:52:52.775Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://sejoung.github.io/tags/FLUX/</loc>
-        <lastmod>2025-03-25T11:52:52.775Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://sejoung.github.io/tags/LoRa/</loc>
-        <lastmod>2025-03-25T11:52:52.775Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
