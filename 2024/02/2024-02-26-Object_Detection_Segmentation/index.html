@@ -1,0 +1,118 @@
+<!DOCTYPE html><html lang="ko"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta name="description" content="Object Detection &amp; Segmentation 1"><meta name="keywords" content="Object Detection &amp; Segmentation"><meta name="author" content="sejoung kim"><meta name="copyright" content="sejoung kim"><title>Object Detection &amp; Segmentation 1 | 폭간의 기술블로그</title><link rel="shortcut icon" href="../../../my-favicon.ico"><link rel="stylesheet" href="../../../css/index.css?version=1.7.0"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css?version=1.7.0"><meta name="format-detection" content="telephone=no"><meta http-equiv="x-dns-prefetch-control" content="on"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4136060060870959"></script><script>(adsbygoogle = window.adsbygoogle || []).push({
+  google_ad_client: '',
+  enable_page_level_ads: 'true'
+});
+</script><script async src="https://www.googletagmanager.com/gtag/js?id=G-NVRTGLD8RZ"></script><script>window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-NVRTGLD8RZ');</script><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"We didn't find any results for the search: ${query}"}},
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  }
+} </script><meta name="generator" content="Hexo 5.4.2"></head><body><i class="fa fa-arrow-right" id="toggle-sidebar" aria-hidden="true"></i><div id="sidebar" data-display="true"><div class="toggle-sidebar-info text-center"><span data-toggle="Toggle article">Toggle site</span><hr></div><div class="sidebar-toc"><div class="sidebar-toc__title">Catalog</div><div class="sidebar-toc__progress"><span class="progress-notice">You've read</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar"></div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Object-Detection-amp-Segmentation-1"><span class="toc-number">1.</span> <span class="toc-text">Object Detection &amp; Segmentation 1</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Region-based-CNN-RCNN"><span class="toc-number">1.1.</span> <span class="toc-text">Region-based CNN* (RCNN)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Faster-R-CNN-with-ResNet"><span class="toc-number">1.2.</span> <span class="toc-text">Faster R-CNN with ResNet</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Object-Detection-%E2%80%92-Basic-Concepts"><span class="toc-number">1.3.</span> <span class="toc-text">Object Detection ‒ Basic Concepts</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Object-Detection-%E2%80%92-Classical-Object-Detection"><span class="toc-number">1.4.</span> <span class="toc-text">Object Detection ‒ Classical Object Detection</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%EC%B0%B8%EC%A1%B0"><span class="toc-number">2.</span> <span class="toc-text">참조</span></a></li></ol></div></div><div class="author-info hide"><div class="author-info__avatar text-center"><img src="https://avatars0.githubusercontent.com/u/4936005?s=400&amp;u=a679b941fe377418e7e4efcf916c6a636d7178ee&amp;v=4"></div><div class="author-info__name text-center">sejoung kim</div><div class="author-info__description text-center">Java, Kotlin 등 백엔드 개발 기술과 소프트웨어 엔지니어링 학습 내용을 정리하는 기술 블로그입니다.</div><div class="follow-button"><a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/sejoung">Follow Me</a></div><hr><div class="author-info-articles"><a class="author-info-articles__archives article-meta" href="../../../archives"><span class="pull-left">Articles</span><span class="pull-right">869</span></a><a class="author-info-articles__tags article-meta" href="../../../tags"><span class="pull-left">Tags</span><span class="pull-right">913</span></a><a class="author-info-articles__categories article-meta" href="../../../categories"><span class="pull-left">Categories</span><span class="pull-right">81</span></a></div><hr><div class="author-info-links"><div class="author-info-links__title text-center">Links</div><a class="author-info-links__name text-center" target="_blank" rel="external nofollow noopener noreferrer" href="https://blog.naver.com/sanaes">naverblog</a><a class="author-info-links__name text-center" target="_blank" rel="external nofollow noopener noreferrer" href="https://www.linkedin.com/in/sanaes/">linkedin</a><a class="author-info-links__name text-center" target="_blank" rel="external nofollow noopener noreferrer" href="https://www.slideshare.net/sejoung">slideshare</a></div></div></div><div id="content-outer"><div id="top-container" style="background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Van_Gogh_-_Terrasse_des_Caf%C3%A9s_an_der_Place_du_Forum_in_Arles_am_Abend1.jpeg/1024px-Van_Gogh_-_Terrasse_des_Caf%C3%A9s_an_der_Place_du_Forum_in_Arles_am_Abend1.jpeg)"><div id="page-header"><span class="pull-left"> <a id="site-name" href="../../../index.html">폭간의 기술블로그</a></span><i class="fa fa-bars toggle-menu pull-right" aria-hidden="true"></i><span class="pull-right menus">   <a class="site-page" href="/">Home</a><a class="site-page" href="/archives">Archives</a><a class="site-page" href="/tags">Tags</a><a class="site-page" href="/categories">Categories</a><a class="site-page" href="/privacy">Privacy</a><a class="site-page" href="/about">About</a><a class="site-page" href="/contact">Contact</a></span><span class="pull-right"><a class="site-page social-icon search"><i class="fa fa-search"></i><span> Search</span></a></span></div><div id="post-info"><div id="post-title">Object Detection &amp; Segmentation 1</div><div id="post-meta"><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2024-02-26</time><span class="post-meta__separator">|</span><i class="fa fa-inbox post-meta__icon" aria-hidden="true"></i><a class="post-meta__categories" href="../../../categories/Machine-Learning/">Machine Learning</a><span class="post-meta__separator">|</span><i class="fa fa-comment-o post-meta__icon" aria-hidden="true"></i><a href="#disqus_thread"><span class="disqus-comment-count" data-disqus-identifier="2024/02/2024-02-26-Object_Detection_Segmentation/"></span></a></div></div></div><div class="layout" id="content-inner"><article id="post"><div class="article-container" id="post-content"><h1 id="Object-Detection-amp-Segmentation-1"><a href="#Object-Detection-amp-Segmentation-1" class="headerlink" title="Object Detection &amp; Segmentation 1"></a>Object Detection &amp; Segmentation 1</h1><ul>
+<li>Object Detection : 이미지 내에서 특정 객체의 위치를 찾아내는 것</li>
+<li>Segmentation : 이미지 내에서 특정 객체의 픽셀을 찾아내는 것</li>
+</ul>
+<p>Object Detection &#x3D; Box localization + Box classification</p>
+<h2 id="Region-based-CNN-RCNN"><a href="#Region-based-CNN-RCNN" class="headerlink" title="Region-based CNN* (RCNN)"></a>Region-based CNN* (RCNN)</h2><ul>
+<li>bounding box의 transformation를 학습</li>
+</ul>
+<h2 id="Faster-R-CNN-with-ResNet"><a href="#Faster-R-CNN-with-ResNet" class="headerlink" title="Faster R-CNN with ResNet"></a>Faster R-CNN with ResNet</h2><ul>
+<li>R-CNN의 속도를 개선</li>
+</ul>
+<h2 id="Object-Detection-‒-Basic-Concepts"><a href="#Object-Detection-‒-Basic-Concepts" class="headerlink" title="Object Detection ‒ Basic Concepts"></a>Object Detection ‒ Basic Concepts</h2><ul>
+<li>Object Detection : 이미지 내에서 특정 객체의 위치를 찾아내는 것</li>
+</ul>
+<h2 id="Object-Detection-‒-Classical-Object-Detection"><a href="#Object-Detection-‒-Classical-Object-Detection" class="headerlink" title="Object Detection ‒ Classical Object Detection"></a>Object Detection ‒ Classical Object Detection</h2><ul>
+<li>Support Vector Machine (SVM) : 이미지 내에서 특정 객체의 위치를 찾아내는 것<ul>
+<li>Linear SVM : 선형 분류기</li>
+<li>Non-Linear SVM : 비선형 분류기</li>
+<li>Hyper-Parameters Tuning : cross-validation을 통해 최적의 파라미터를 찾는 것</li>
+<li>Multi-Class SVM : 다중 클래스 분류기<ul>
+<li>one-versus-all</li>
+<li>one-versus-one</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Histogram of Oriented Gradients (HOG)<ul>
+<li>가우시안 스무딩을 하지 않는다</li>
+<li>이미지를 8x8 크기의 cell로 나눈다</li>
+<li>HOG+SVM for Pedestrian Detection</li>
+</ul>
+</li>
+<li>Selective Search for Object Detection<ul>
+<li>Capture all scales: 물체 크기 랜덤, 경계 불명확 할수 있음</li>
+<li>Diversification: 색상, 재질, 크기 등의 조건을 고려해서 다중 전략을 취함</li>
+<li>Fast to compute: 계산 시 너무 오래 걸리면 안됨</li>
+<li>segment가 있으면 그 영역에 대해 candidate objects로 사용하여 좀 더 쉽게 object detection 을 할 수 있지 않을까?</li>
+<li>Object recogntion이나 detection을 위한 후보 영역 을 알아 낼수 있는 알고리즘</li>
+<li>Mean Average Best Overlap (MABO)</li>
+<li>Recall</li>
+</ul>
+</li>
+<li>EdgeBox for Object Detection<ul>
+<li>Gradient orientation 을 기반으로 edge group을 표현하고, 이를 이용해서 bounding box score를 계산함</li>
+<li>Evaluation metric 제안: Intersection on Union (IoU)</li>
+</ul>
+</li>
+<li>Region-based CNN* (RCNN)<ul>
+<li>2 stage detection</li>
+</ul>
+</li>
+<li>Fast R-CNN<ul>
+<li>ROI pooling</li>
+<li>9 anchor per location</li>
+</ul>
+</li>
+<li>Mask R-CNN<ul>
+<li>instance segmentation</li>
+</ul>
+</li>
+<li>One-Stage Detector<ul>
+<li>regional proposal 와 classification을 동시에 수행 </li>
+<li>YOLO(You Only Look Once)</li>
+<li>YOLO v2<ul>
+<li>better, faster, stronger</li>
+<li>Batch normalization: 모든 conv layer에 BN추가</li>
+<li>High-resolution classifier: ImageNet으로 pre-training하고, 448x448의 해상도로 10 epoch 동안 fine tuning</li>
+<li>Convolutional with anchor boxes: V1에서 FC부분을 conv로 대체. Anchor box 적용</li>
+</ul>
+</li>
+<li>YOLO v3<ul>
+<li>하나의 object에 하나의 anchor box할당</li>
+<li>3가지 다른 scale 사용한 feature pyramid 사용. 3개 scale에 대해 각각 3개 박스를 생성하여 9개의 anchor box가 있음.</li>
+</ul>
+</li>
+<li>YOLO v4<ul>
+<li>Practically, one-stage detector의 개선</li>
+<li>다양한 테크닉을 통해 성능, 속도 향상한다</li>
+<li>저자가 달라졌다</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="참조"><a href="#참조" class="headerlink" title="참조"></a>참조</h1><hr>
+<ul>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="http://www.csie.ntu.edu.tw/~cjlin/libsvm/">LIBSVM</a></li>
+</ul>
+</div></article><div class="post-meta__tag-list"><a class="post-meta__tags" href="../../../tags/Object-Detection-Segmentation/">Object Detection &amp; Segmentation</a></div><nav id="pagination"><div class="prev-post pull-left"><a href="../2024-02-27-design_patterns_beauty_4/"><i class="fa fa-chevron-left">  </i><span>CHAPTER 4 코딩 규칙</span></a></div><div class="next-post pull-right"><a href="../2024-02-26-design_patterns_beauty_3/"><span>CHAPTER 3 설계 원칙</span><i class="fa fa-chevron-right"></i></a></div></nav><div id="disqus_thread"></div><script>var unused = null;
+var disqus_config = function () {
+  this.page.url = 'https://sejoung.github.io/2024/02/2024-02-26-Object_Detection_Segmentation/';
+  this.page.identifier = '2024/02/2024-02-26-Object_Detection_Segmentation/';
+  this.page.title = 'Object Detection & Segmentation 1';
+}
+var d = document, s = d.createElement('script');
+s.src = "https://" + 'kimsejoung' +".disqus.com/embed.js";
+s.setAttribute('data-timestamp', '' + +new Date());
+(d.head || d.body).appendChild(s);</script><script id="dsq-count-scr" src="https://kimsejoung.disqus.com/count.js" async></script></div></div><footer class="footer-bg" style="background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Van_Gogh_-_Terrasse_des_Caf%C3%A9s_an_der_Place_du_Forum_in_Arles_am_Abend1.jpeg/1024px-Van_Gogh_-_Terrasse_des_Caf%C3%A9s_an_der_Place_du_Forum_in_Arles_am_Abend1.jpeg)"><div class="layout" id="footer"><div class="copyright">&copy;2017 - 2026 By sejoung kim</div><div class="framework-info"><span>Driven - </span><a target="_blank" rel="external nofollow noopener noreferrer" href="http://hexo.io"><span>Hexo</span></a><span class="footer-separator">|</span><span>Theme - </span><a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/Molunerfinn/hexo-theme-melody"><span>Melody</span></a></div><div class="busuanzi"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><span id="busuanzi_container_page_pv"><i class="fa fa-file-o"></i><span id="busuanzi_value_page_pv"></span><span></span></span></div></div></footer><i class="fa fa-arrow-up" id="go-up" aria-hidden="true"></i><script src="../../../js/third-party/anime.min.js"></script><script src="../../../js/third-party/jquery.min.js"></script><script src="../../../js/third-party/jquery.fancybox.min.js"></script><script src="../../../js/third-party/velocity.min.js"></script><script src="../../../js/third-party/velocity.ui.min.js"></script><script src="../../../js/utils.js?version=1.7.0"></script><script src="../../../js/fancybox.js?version=1.7.0"></script><script src="../../../js/sidebar.js?version=1.7.0"></script><script src="../../../js/copy.js?version=1.7.0"></script><script src="../../../js/fireworks.js?version=1.7.0"></script><script src="../../../js/transition.js?version=1.7.0"></script><script src="../../../js/scroll.js?version=1.7.0"></script><script src="../../../js/head.js?version=1.7.0"></script><script src="../../../js/search/local-search.js"></script><script>if(/Android|webOS|iPhone|iPod|iPad|BlackBerry/i.test(navigator.userAgent)) {
+  $('#nav').addClass('is-mobile')
+  $('footer').addClass('is-mobile')
+  $('#top-container').addClass('is-mobile')
+}</script><div class="search-dialog" id="local-search"><div class="search-dialog__title" id="local-search-title">Local search</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="Search for Posts"></div></div></div><hr><div id="local-search-results"><div id="local-hits"></div><div id="local-stats"><div class="local-search-stats__hr" id="hr"><span>Powered by</span> <a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/wzpan/hexo-generator-search" style="color:#49B1F5;">hexo-generator-search</a></div></div></div><span class="search-close-button"><i class="fa fa-times"></i></span></div><div class="search-mask"></div></body></html>

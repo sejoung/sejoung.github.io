@@ -1,0 +1,124 @@
+<!DOCTYPE html><html lang="ko"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta name="description" content="CHAPTER 7 코드를 오용하기 어렵게 만들라"><meta name="keywords" content="좋은코드 나쁜코드: 프로그래머의 코드 품질 개선법"><meta name="author" content="sejoung kim"><meta name="copyright" content="sejoung kim"><title>CHAPTER 7 코드를 오용하기 어렵게 만들라 | 폭간의 기술블로그</title><link rel="shortcut icon" href="../../../my-favicon.ico"><link rel="stylesheet" href="../../../css/index.css?version=1.7.0"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css?version=1.7.0"><meta name="format-detection" content="telephone=no"><meta http-equiv="x-dns-prefetch-control" content="on"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4136060060870959"></script><script>(adsbygoogle = window.adsbygoogle || []).push({
+  google_ad_client: '',
+  enable_page_level_ads: 'true'
+});
+</script><script async src="https://www.googletagmanager.com/gtag/js?id=G-NVRTGLD8RZ"></script><script>window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-NVRTGLD8RZ');</script><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"We didn't find any results for the search: ${query}"}},
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  }
+} </script><meta name="generator" content="Hexo 5.4.2"></head><body><i class="fa fa-arrow-right" id="toggle-sidebar" aria-hidden="true"></i><div id="sidebar" data-display="true"><div class="toggle-sidebar-info text-center"><span data-toggle="Toggle article">Toggle site</span><hr></div><div class="sidebar-toc"><div class="sidebar-toc__title">Catalog</div><div class="sidebar-toc__progress"><span class="progress-notice">You've read</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar"></div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%EC%A2%8B%EC%9D%80%EC%BD%94%EB%93%9C-%EB%82%98%EC%81%9C%EC%BD%94%EB%93%9C-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%9D%98-%EC%BD%94%EB%93%9C-%ED%92%88%EC%A7%88-%EA%B0%9C%EC%84%A0%EB%B2%95-PART-II-%EC%8B%A4%EC%A0%84"><span class="toc-number">1.</span> <span class="toc-text">좋은코드 나쁜코드: 프로그래머의 코드 품질 개선법(PART II 실전)</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#CHAPTER-7-%EC%BD%94%EB%93%9C%EB%A5%BC-%EC%98%A4%EC%9A%A9%ED%95%98%EA%B8%B0-%EC%96%B4%EB%A0%B5%EA%B2%8C-%EB%A7%8C%EB%93%A4%EB%9D%BC"><span class="toc-number">1.1.</span> <span class="toc-text">CHAPTER 7 코드를 오용하기 어렵게 만들라</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#7-1-%EB%B6%88%EB%B3%80-%EA%B0%9D%EC%B2%B4%EB%A1%9C-%EB%A7%8C%EB%93%9C%EB%8A%94-%EA%B2%83%EC%9D%84-%EA%B3%A0%EB%A0%A4%ED%95%98%EB%9D%BC"><span class="toc-number">1.1.1.</span> <span class="toc-text">7.1 불변 객체로 만드는 것을 고려하라</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-2-%EA%B0%9D%EC%B2%B4%EB%A5%BC-%EA%B9%8A%EC%9D%80-%EC%88%98%EC%A4%80%EA%B9%8C%EC%A7%80-%EB%B6%88%EB%B3%80%EC%A0%81%EC%9C%BC%EB%A1%9C-%EB%A7%8C%EB%93%9C%EB%8A%94-%EA%B2%83%EC%9D%84-%EA%B3%A0%EB%A0%A4%ED%95%98%EB%9D%BC"><span class="toc-number">1.1.2.</span> <span class="toc-text">7.2 객체를 깊은 수준까지 불변적으로 만드는 것을 고려하라</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-3-%EC%A7%80%EB%82%98%EC%B9%98%EA%B2%8C-%EC%9D%BC%EB%B0%98%EC%A0%81%EC%9D%B8-%EB%8D%B0%EC%9D%B4%ED%84%B0-%EC%9C%A0%ED%98%95%EC%9D%84-%ED%94%BC%ED%95%98%EB%9D%BC"><span class="toc-number">1.1.3.</span> <span class="toc-text">7.3 지나치게 일반적인 데이터 유형을 피하라</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-4-%EC%8B%9C%EA%B0%84-%EC%B2%98%EB%A6%AC"><span class="toc-number">1.1.4.</span> <span class="toc-text">7.4 시간 처리</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-5-%EB%8D%B0%EC%9D%B4%ED%84%B0%EC%97%90-%EB%8C%80%ED%95%B4-%EC%A7%84%EC%8B%A4%EC%9D%98-%EC%9B%90%EC%B2%9C%EC%9D%84-%ED%95%98%EB%82%98%EB%A7%8C-%EA%B0%80%EC%A0%B8%EC%95%BC-%ED%95%9C%EB%8B%A4"><span class="toc-number">1.1.5.</span> <span class="toc-text">7.5 데이터에 대해 진실의 원천을 하나만 가져야 한다</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-6-%EB%85%BC%EB%A6%AC%EC%97%90-%EB%8C%80%ED%95%9C-%EC%A7%84%EC%8B%A4%EC%9D%98-%EC%9B%90%EC%B2%9C%EC%9D%84-%ED%95%98%EB%82%98%EB%A7%8C-%EA%B0%80%EC%A0%B8%EC%95%BC-%ED%95%9C%EB%8B%A4"><span class="toc-number">1.1.6.</span> <span class="toc-text">7.6 논리에 대한 진실의 원천을 하나만 가져야 한다</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%EC%B0%B8%EC%A1%B0"><span class="toc-number">2.</span> <span class="toc-text">참조</span></a></li></ol></div></div><div class="author-info hide"><div class="author-info__avatar text-center"><img src="https://avatars0.githubusercontent.com/u/4936005?s=400&amp;u=a679b941fe377418e7e4efcf916c6a636d7178ee&amp;v=4"></div><div class="author-info__name text-center">sejoung kim</div><div class="author-info__description text-center">Java, Kotlin 등 백엔드 개발 기술과 소프트웨어 엔지니어링 학습 내용을 정리하는 기술 블로그입니다.</div><div class="follow-button"><a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/sejoung">Follow Me</a></div><hr><div class="author-info-articles"><a class="author-info-articles__archives article-meta" href="../../../archives"><span class="pull-left">Articles</span><span class="pull-right">869</span></a><a class="author-info-articles__tags article-meta" href="../../../tags"><span class="pull-left">Tags</span><span class="pull-right">913</span></a><a class="author-info-articles__categories article-meta" href="../../../categories"><span class="pull-left">Categories</span><span class="pull-right">81</span></a></div><hr><div class="author-info-links"><div class="author-info-links__title text-center">Links</div><a class="author-info-links__name text-center" target="_blank" rel="external nofollow noopener noreferrer" href="https://blog.naver.com/sanaes">naverblog</a><a class="author-info-links__name text-center" target="_blank" rel="external nofollow noopener noreferrer" href="https://www.linkedin.com/in/sanaes/">linkedin</a><a class="author-info-links__name text-center" target="_blank" rel="external nofollow noopener noreferrer" href="https://www.slideshare.net/sejoung">slideshare</a></div></div></div><div id="content-outer"><div id="top-container" style="background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Van_Gogh_-_Terrasse_des_Caf%C3%A9s_an_der_Place_du_Forum_in_Arles_am_Abend1.jpeg/1024px-Van_Gogh_-_Terrasse_des_Caf%C3%A9s_an_der_Place_du_Forum_in_Arles_am_Abend1.jpeg)"><div id="page-header"><span class="pull-left"> <a id="site-name" href="../../../index.html">폭간의 기술블로그</a></span><i class="fa fa-bars toggle-menu pull-right" aria-hidden="true"></i><span class="pull-right menus">   <a class="site-page" href="/">Home</a><a class="site-page" href="/archives">Archives</a><a class="site-page" href="/tags">Tags</a><a class="site-page" href="/categories">Categories</a><a class="site-page" href="/privacy">Privacy</a><a class="site-page" href="/about">About</a><a class="site-page" href="/contact">Contact</a></span><span class="pull-right"><a class="site-page social-icon search"><i class="fa fa-search"></i><span> Search</span></a></span></div><div id="post-info"><div id="post-title">CHAPTER 7 코드를 오용하기 어렵게 만들라</div><div id="post-meta"><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2023-03-03</time><span class="post-meta__separator">|</span><i class="fa fa-inbox post-meta__icon" aria-hidden="true"></i><a class="post-meta__categories" href="../../../categories/book/">book</a><span class="post-meta__separator">|</span><i class="fa fa-comment-o post-meta__icon" aria-hidden="true"></i><a href="#disqus_thread"><span class="disqus-comment-count" data-disqus-identifier="2023/03/2023-03-03-good_code_bad_code_7/"></span></a></div></div></div><div class="layout" id="content-inner"><article id="post"><div class="article-container" id="post-content"><h1 id="좋은코드-나쁜코드-프로그래머의-코드-품질-개선법-PART-II-실전"><a href="#좋은코드-나쁜코드-프로그래머의-코드-품질-개선법-PART-II-실전" class="headerlink" title="좋은코드 나쁜코드: 프로그래머의 코드 품질 개선법(PART II 실전)"></a>좋은코드 나쁜코드: 프로그래머의 코드 품질 개선법(PART II 실전)</h1><h2 id="CHAPTER-7-코드를-오용하기-어렵게-만들라"><a href="#CHAPTER-7-코드를-오용하기-어렵게-만들라" class="headerlink" title="CHAPTER 7 코드를 오용하기 어렵게 만들라"></a>CHAPTER 7 코드를 오용하기 어렵게 만들라</h2><p>코드를 잘못 사용할수 있는 몇가지 일반적인 경우</p>
+<ul>
+<li>호출하는 쪽에서 잘못된 입력을 제공</li>
+<li>다른 코드의 부수효과</li>
+<li>정확한 시간이나 순서에 따라 함수를 호출하지 않음</li>
+<li>관련 코드에서 가정과 맞지 않게 수정이 이루어짐</li>
+</ul>
+<h3 id="7-1-불변-객체로-만드는-것을-고려하라"><a href="#7-1-불변-객체로-만드는-것을-고려하라" class="headerlink" title="7.1 불변 객체로 만드는 것을 고려하라"></a>7.1 불변 객체로 만드는 것을 고려하라</h3><p>객체가 생성된 후에 상태를 바꿀 수 없는 객체는 불변(불가변)이다</p>
+<p>가변객체의 문제점</p>
+<ul>
+<li><p>가변 객체는 추론하기 어렵다</p>
+</li>
+<li><p>가변 객체는 다중 스레드에서 문제가 발생할 수 있다</p>
+</li>
+<li><p>가변 클래스는 오용하기 쉽다</p>
+<ul>
+<li>객체를 생성할 때만 값을 할당하라</li>
+<li>불변성에 대한 디자인 패턴을 사용하라<ul>
+<li>빌더 패턴<ul>
+<li>값을 하나씩 설정할 수 있는 빌더 클래스</li>
+<li>발더에 의해 작성된 불변적인 읽기 전용 클래스</li>
+</ul>
+</li>
+<li>쓰기시 복사 패턴</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="7-2-객체를-깊은-수준까지-불변적으로-만드는-것을-고려하라"><a href="#7-2-객체를-깊은-수준까지-불변적으로-만드는-것을-고려하라" class="headerlink" title="7.2 객체를 깊은 수준까지 불변적으로 만드는 것을 고려하라"></a>7.2 객체를 깊은 수준까지 불변적으로 만드는 것을 고려하라</h3><p>클래스가 실수로 가변적으로 될수 있는 일반적인 경우는 깊은 가변성 때문이다</p>
+<ul>
+<li>깊은 가변성은 오용을 초래할 수 있다<ul>
+<li>방어적으로 복사하라</li>
+<li>불변적 자료구조를 사용하라</li>
+</ul>
+</li>
+</ul>
+<h3 id="7-3-지나치게-일반적인-데이터-유형을-피하라"><a href="#7-3-지나치게-일반적인-데이터-유형을-피하라" class="headerlink" title="7.3 지나치게 일반적인 데이터 유형을 피하라"></a>7.3 지나치게 일반적인 데이터 유형을 피하라</h3><ul>
+<li>지나치게 일반적인 유형은 오용될 수 있다<ul>
+<li>유형 자체로 아무것도 설명해주지 않는다</li>
+<li>리스트에서 어떤 항목인지 혼동하기 쉽다</li>
+<li>패러다임은 퍼지기 쉽다</li>
+<li>페어 유형은 오용하기 쉽다<ul>
+<li>전용 유형 사용</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="7-4-시간-처리"><a href="#7-4-시간-처리" class="headerlink" title="7.4 시간 처리"></a>7.4 시간 처리</h3><p>시간을 다룰 때 코드를 잘못 사용하고 혼동을 일으킬 여지가 굉장히 많다.</p>
+<ul>
+<li>정수로 시간을 나타내는 것은 문제가 될수 있다<ul>
+<li>한순간의 시간인가 아니면 시간의 양인가?</li>
+<li>일치하지 않은 단위</li>
+<li>시간대 처리오류</li>
+</ul>
+</li>
+<li>해결책<ul>
+<li>적절한 자료구조를 사용하라<ul>
+<li>양으로서의 시간과 순간의 시간을 구분</li>
+<li>더이상 단위에 대한 혼동이 없다</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="7-5-데이터에-대해-진실의-원천을-하나만-가져야-한다"><a href="#7-5-데이터에-대해-진실의-원천을-하나만-가져야-한다" class="headerlink" title="7.5 데이터에 대해 진실의 원천을 하나만 가져야 한다"></a>7.5 데이터에 대해 진실의 원천을 하나만 가져야 한다</h3><ul>
+<li><p>기본데이터 : 코드에 제공해야 할 데이터</p>
+</li>
+<li><p>파생데이터 : 주어진 기본 데이터에 기반해서 코그가 계산할 수 있는 데이터</p>
+</li>
+<li><p>또 다른 진싱의 원천으 유효하지 않은 상태를 초래할 수 있다</p>
+<ul>
+<li>기본데이터를 유일한 진실의 원천으로 사용하라<ul>
+<li>데이터 계산에 비용이 많은 드는 경우<ul>
+<li>지연계산 및 캐싱</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="7-6-논리에-대한-진실의-원천을-하나만-가져야-한다"><a href="#7-6-논리에-대한-진실의-원천을-하나만-가져야-한다" class="headerlink" title="7.6 논리에 대한 진실의 원천을 하나만 가져야 한다"></a>7.6 논리에 대한 진실의 원천을 하나만 가져야 한다</h3><p>진실의 원천은 코드에 제공된 데이터에만 적용되는 것이 아니라 코드에 포함된 논리에도 적용된다</p>
+<ul>
+<li>논리에 대한 진싱의 원천이 여러 개 있으면 버그를 유발할 수 있다<ul>
+<li>진실의 원천은 단 하나만 있어야 한다</li>
+</ul>
+</li>
+</ul>
+<h1 id="참조"><a href="#참조" class="headerlink" title="참조"></a>참조</h1><hr>
+<ul>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="http://www.yes24.com/Product/Goods/109366833">좋은코드 나쁜코드: 프로그래머의 코드 품질 개선법</a></li>
+</ul>
+</div></article><div class="post-meta__tag-list"><a class="post-meta__tags" href="../../../tags/%EC%A2%8B%EC%9D%80%EC%BD%94%EB%93%9C-%EB%82%98%EC%81%9C%EC%BD%94%EB%93%9C-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%9D%98-%EC%BD%94%EB%93%9C-%ED%92%88%EC%A7%88-%EA%B0%9C%EC%84%A0%EB%B2%95/">좋은코드 나쁜코드: 프로그래머의 코드 품질 개선법</a></div><nav id="pagination"><div class="prev-post pull-left"><a href="../2023-03-05-good_code_bad_code_8/"><i class="fa fa-chevron-left">  </i><span>CHAPTER 8 코드를 모듈화하라</span></a></div><div class="next-post pull-right"><a href="../../02/2023-02-27-good_code_bad_code_6/"><span>CHAPTER 6 예측 가능한 코드를 작성하라</span><i class="fa fa-chevron-right"></i></a></div></nav><div id="disqus_thread"></div><script>var unused = null;
+var disqus_config = function () {
+  this.page.url = 'https://sejoung.github.io/2023/03/2023-03-03-good_code_bad_code_7/';
+  this.page.identifier = '2023/03/2023-03-03-good_code_bad_code_7/';
+  this.page.title = 'CHAPTER 7 코드를 오용하기 어렵게 만들라';
+}
+var d = document, s = d.createElement('script');
+s.src = "https://" + 'kimsejoung' +".disqus.com/embed.js";
+s.setAttribute('data-timestamp', '' + +new Date());
+(d.head || d.body).appendChild(s);</script><script id="dsq-count-scr" src="https://kimsejoung.disqus.com/count.js" async></script></div></div><footer class="footer-bg" style="background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Van_Gogh_-_Terrasse_des_Caf%C3%A9s_an_der_Place_du_Forum_in_Arles_am_Abend1.jpeg/1024px-Van_Gogh_-_Terrasse_des_Caf%C3%A9s_an_der_Place_du_Forum_in_Arles_am_Abend1.jpeg)"><div class="layout" id="footer"><div class="copyright">&copy;2017 - 2026 By sejoung kim</div><div class="framework-info"><span>Driven - </span><a target="_blank" rel="external nofollow noopener noreferrer" href="http://hexo.io"><span>Hexo</span></a><span class="footer-separator">|</span><span>Theme - </span><a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/Molunerfinn/hexo-theme-melody"><span>Melody</span></a></div><div class="busuanzi"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><span id="busuanzi_container_page_pv"><i class="fa fa-file-o"></i><span id="busuanzi_value_page_pv"></span><span></span></span></div></div></footer><i class="fa fa-arrow-up" id="go-up" aria-hidden="true"></i><script src="../../../js/third-party/anime.min.js"></script><script src="../../../js/third-party/jquery.min.js"></script><script src="../../../js/third-party/jquery.fancybox.min.js"></script><script src="../../../js/third-party/velocity.min.js"></script><script src="../../../js/third-party/velocity.ui.min.js"></script><script src="../../../js/utils.js?version=1.7.0"></script><script src="../../../js/fancybox.js?version=1.7.0"></script><script src="../../../js/sidebar.js?version=1.7.0"></script><script src="../../../js/copy.js?version=1.7.0"></script><script src="../../../js/fireworks.js?version=1.7.0"></script><script src="../../../js/transition.js?version=1.7.0"></script><script src="../../../js/scroll.js?version=1.7.0"></script><script src="../../../js/head.js?version=1.7.0"></script><script src="../../../js/search/local-search.js"></script><script>if(/Android|webOS|iPhone|iPod|iPad|BlackBerry/i.test(navigator.userAgent)) {
+  $('#nav').addClass('is-mobile')
+  $('footer').addClass('is-mobile')
+  $('#top-container').addClass('is-mobile')
+}</script><div class="search-dialog" id="local-search"><div class="search-dialog__title" id="local-search-title">Local search</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="Search for Posts"></div></div></div><hr><div id="local-search-results"><div id="local-hits"></div><div id="local-stats"><div class="local-search-stats__hr" id="hr"><span>Powered by</span> <a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/wzpan/hexo-generator-search" style="color:#49B1F5;">hexo-generator-search</a></div></div></div><span class="search-close-button"><i class="fa fa-times"></i></span></div><div class="search-mask"></div></body></html>

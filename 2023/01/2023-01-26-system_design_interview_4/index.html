@@ -1,0 +1,151 @@
+<!DOCTYPE html><html lang="ko"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta name="description" content="4장 처리율 제한 장치 설계"><meta name="keywords" content="가상 면접 사례로 배우는 대규모 시스템 설계 기초"><meta name="author" content="sejoung kim"><meta name="copyright" content="sejoung kim"><title>4장 처리율 제한 장치 설계 | 폭간의 기술블로그</title><link rel="shortcut icon" href="../../../my-favicon.ico"><link rel="stylesheet" href="../../../css/index.css?version=1.7.0"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css?version=1.7.0"><meta name="format-detection" content="telephone=no"><meta http-equiv="x-dns-prefetch-control" content="on"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4136060060870959"></script><script>(adsbygoogle = window.adsbygoogle || []).push({
+  google_ad_client: '',
+  enable_page_level_ads: 'true'
+});
+</script><script async src="https://www.googletagmanager.com/gtag/js?id=G-NVRTGLD8RZ"></script><script>window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-NVRTGLD8RZ');</script><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"We didn't find any results for the search: ${query}"}},
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  }
+} </script><meta name="generator" content="Hexo 5.4.2"></head><body><i class="fa fa-arrow-right" id="toggle-sidebar" aria-hidden="true"></i><div id="sidebar" data-display="true"><div class="toggle-sidebar-info text-center"><span data-toggle="Toggle article">Toggle site</span><hr></div><div class="sidebar-toc"><div class="sidebar-toc__title">Catalog</div><div class="sidebar-toc__progress"><span class="progress-notice">You've read</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar"></div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%EA%B0%80%EC%83%81%EB%A9%B4%EC%A0%91%EC%9C%BC%EB%A1%9C-%EB%B0%B0%EC%9A%B0%EB%8A%94-%EB%8C%80%EA%B7%9C%EB%AA%A8-%EC%8B%9C%EC%8A%A4%ED%85%9C-%EC%84%A4%EA%B3%84-%EA%B8%B0%EC%B4%88"><span class="toc-number">1.</span> <span class="toc-text">가상면접으로 배우는 대규모 시스템 설계 기초</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#4%EC%9E%A5-%EC%B2%98%EB%A6%AC%EC%9C%A8-%EC%A0%9C%ED%95%9C-%EC%9E%A5%EC%B9%98-%EC%84%A4%EA%B3%84"><span class="toc-number">1.1.</span> <span class="toc-text">4장 처리율 제한 장치 설계</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%ED%86%A0%ED%81%B0-%EB%B2%84%ED%82%B7-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98"><span class="toc-number">1.1.1.</span> <span class="toc-text">토큰 버킷 알고리즘</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%EB%88%84%EC%B6%9C-%EB%B2%84%ED%82%B7-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98"><span class="toc-number">1.1.2.</span> <span class="toc-text">누출 버킷 알고리즘</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%EA%B3%A0%EC%A0%95-%EC%9B%90%EB%8F%84-%EC%B9%B4%EC%9A%B4%ED%84%B0-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98"><span class="toc-number">1.1.3.</span> <span class="toc-text">고정 원도 카운터 알고리즘</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%EC%9D%B4%EB%8F%99-%EC%9B%90%EB%8F%84-%EB%A1%9C%EA%B9%85-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98"><span class="toc-number">1.1.4.</span> <span class="toc-text">이동 원도 로깅 알고리즘</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%EC%9D%B4%EB%8F%99-%EC%9B%90%EB%8F%84-%EC%B9%B4%EC%9A%B4%ED%84%B0-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98"><span class="toc-number">1.1.5.</span> <span class="toc-text">이동 원도 카운터 알고리즘</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%EB%B6%84%EC%82%B0-%ED%99%98%EA%B2%BD%EC%9D%98-%EC%B2%98%EB%A6%AC%EC%9C%A8-%EC%A0%9C%ED%95%9C%EC%9E%A5%EC%B9%98%EC%9D%98-%EA%B5%AC%ED%98%84"><span class="toc-number">1.1.6.</span> <span class="toc-text">분산 환경의 처리율 제한장치의 구현</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%EC%B0%B8%EC%A1%B0"><span class="toc-number">2.</span> <span class="toc-text">참조</span></a></li></ol></div></div><div class="author-info hide"><div class="author-info__avatar text-center"><img src="https://avatars0.githubusercontent.com/u/4936005?s=400&amp;u=a679b941fe377418e7e4efcf916c6a636d7178ee&amp;v=4"></div><div class="author-info__name text-center">sejoung kim</div><div class="author-info__description text-center">Java, Kotlin 등 백엔드 개발 기술과 소프트웨어 엔지니어링 학습 내용을 정리하는 기술 블로그입니다.</div><div class="follow-button"><a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/sejoung">Follow Me</a></div><hr><div class="author-info-articles"><a class="author-info-articles__archives article-meta" href="../../../archives"><span class="pull-left">Articles</span><span class="pull-right">869</span></a><a class="author-info-articles__tags article-meta" href="../../../tags"><span class="pull-left">Tags</span><span class="pull-right">913</span></a><a class="author-info-articles__categories article-meta" href="../../../categories"><span class="pull-left">Categories</span><span class="pull-right">81</span></a></div><hr><div class="author-info-links"><div class="author-info-links__title text-center">Links</div><a class="author-info-links__name text-center" target="_blank" rel="external nofollow noopener noreferrer" href="https://blog.naver.com/sanaes">naverblog</a><a class="author-info-links__name text-center" target="_blank" rel="external nofollow noopener noreferrer" href="https://www.linkedin.com/in/sanaes/">linkedin</a><a class="author-info-links__name text-center" target="_blank" rel="external nofollow noopener noreferrer" href="https://www.slideshare.net/sejoung">slideshare</a></div></div></div><div id="content-outer"><div id="top-container" style="background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Van_Gogh_-_Terrasse_des_Caf%C3%A9s_an_der_Place_du_Forum_in_Arles_am_Abend1.jpeg/1024px-Van_Gogh_-_Terrasse_des_Caf%C3%A9s_an_der_Place_du_Forum_in_Arles_am_Abend1.jpeg)"><div id="page-header"><span class="pull-left"> <a id="site-name" href="../../../index.html">폭간의 기술블로그</a></span><i class="fa fa-bars toggle-menu pull-right" aria-hidden="true"></i><span class="pull-right menus">   <a class="site-page" href="/">Home</a><a class="site-page" href="/archives">Archives</a><a class="site-page" href="/tags">Tags</a><a class="site-page" href="/categories">Categories</a><a class="site-page" href="/privacy">Privacy</a><a class="site-page" href="/about">About</a><a class="site-page" href="/contact">Contact</a></span><span class="pull-right"><a class="site-page social-icon search"><i class="fa fa-search"></i><span> Search</span></a></span></div><div id="post-info"><div id="post-title">4장 처리율 제한 장치 설계</div><div id="post-meta"><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2023-01-26</time><span class="post-meta__separator">|</span><i class="fa fa-inbox post-meta__icon" aria-hidden="true"></i><a class="post-meta__categories" href="../../../categories/book/">book</a><span class="post-meta__separator">|</span><i class="fa fa-comment-o post-meta__icon" aria-hidden="true"></i><a href="#disqus_thread"><span class="disqus-comment-count" data-disqus-identifier="2023/01/2023-01-26-system_design_interview_4/"></span></a></div></div></div><div class="layout" id="content-inner"><article id="post"><div class="article-container" id="post-content"><h1 id="가상면접으로-배우는-대규모-시스템-설계-기초"><a href="#가상면접으로-배우는-대규모-시스템-설계-기초" class="headerlink" title="가상면접으로 배우는 대규모 시스템 설계 기초"></a>가상면접으로 배우는 대규모 시스템 설계 기초</h1><h2 id="4장-처리율-제한-장치-설계"><a href="#4장-처리율-제한-장치-설계" class="headerlink" title="4장 처리율 제한 장치 설계"></a>4장 처리율 제한 장치 설계</h2><h3 id="토큰-버킷-알고리즘"><a href="#토큰-버킷-알고리즘" class="headerlink" title="토큰 버킷 알고리즘"></a>토큰 버킷 알고리즘</h3><p>인자</p>
+<ul>
+<li>버킷 크기</li>
+<li>토큰 공급율</li>
+</ul>
+<p>장점</p>
+<ul>
+<li>구현이 쉽다</li>
+<li>메모리 사용 측면에서도 효율적이다.</li>
+<li>짧은 시간에 집중되는 트래픽도 처리가능하다</li>
+</ul>
+<p>단점</p>
+<ul>
+<li>버킷 크기와 토큰 공급률이라는 두개의 인자를 가지고 있는데 이값을 적절하게 튜닝하는게 어렵다.</li>
+</ul>
+<h3 id="누출-버킷-알고리즘"><a href="#누출-버킷-알고리즘" class="headerlink" title="누출 버킷 알고리즘"></a>누출 버킷 알고리즘</h3><p>토큰 버킷 알고리즘이랑 비슷하지만 요청 처리율이 고정되어 있다. 보통 큐로 많이 구현한다.</p>
+<p>인자</p>
+<ul>
+<li>버킷 크기</li>
+<li>처리율</li>
+</ul>
+<p>장점</p>
+<ul>
+<li>큐의 크기가 제한되어 있어 메모리 사용량 측면에서 효율적이다.</li>
+<li>고정된 처리율을 갖고 있기 때문에 안정적 출력이 필요한 경우에 적합하다</li>
+</ul>
+<p>단점</p>
+<ul>
+<li>단시간에 많은 트래픽이 몰리는 경우 큐에는 오래된 요청들이 쌓이게 되고 그요청들을 제때 처리 못하면 최신요청은 버려지게 된다.</li>
+<li>두개의 인자를 가지고 있는 데 이를 올바르게 튜닝하기 어렵다.</li>
+</ul>
+<h3 id="고정-원도-카운터-알고리즘"><a href="#고정-원도-카운터-알고리즘" class="headerlink" title="고정 원도 카운터 알고리즘"></a>고정 원도 카운터 알고리즘</h3><ul>
+<li>타임라인을 고정된 간격의 원도로 나누고 각 원도우 마다 카운터를 붙힌다.</li>
+<li>요청이 접수될 떄마다 카운터의 값은 1씩 증가한다.</li>
+<li>카운터의 값이 사전에 설정된 임계치에 도달하면 새로운 윈도우가 열릴때 까지 버려진다.</li>
+</ul>
+<p>장점</p>
+<ul>
+<li>메모리 효율이 좋다</li>
+<li>이해하기 쉽다</li>
+<li>원도가 닫히는 시점에 카운터를 초기화하는 방식은 특정한 트래픽 패턴을 처리하기 적합하다.</li>
+</ul>
+<p>단점</p>
+<ul>
+<li>원도 경계 부근에서 일시적으로 많은 트래픽이 몰려드는 경우 기대했던 시스템 처리 한도보다 많은 양의 요청을 처리한다.</li>
+</ul>
+<h3 id="이동-원도-로깅-알고리즘"><a href="#이동-원도-로깅-알고리즘" class="headerlink" title="이동 원도 로깅 알고리즘"></a>이동 원도 로깅 알고리즘</h3><p>고정 원도 카운터 알고리즘에 중대한 문제가 있는데 원도우 경계 부근에 트래픽이 집중 되는 경우 시스템에서 설정한 한도 보다 많은 요청을 처리하는것이다.</p>
+<p>이동 원도 로깅 알고리즘은 이 문제를 해결한다.</p>
+<ul>
+<li>이 알고리즘은 요청의 타임스템프를 추적한다. 타임스템프 데이터는 보통 레디스의 정렬 집합(sorted set) 같은 캐시에 저장한다.</li>
+<li>새 요청이 오면 만료된 타임스템프는 제거 한다. 만료된 타임스템프는 그값이 현재 원도우 시작시점보다 오래된 타임스템프를 말한다.</li>
+<li>새 요청의 타임스템프를 로그에 추가 한다.</li>
+<li>로그의 크기가 허용치보다 같거나 작으면 요청을 시스템에 전달한다 그렇지 않으면 요청은 버린다.</li>
+</ul>
+<p>장점</p>
+<ul>
+<li>이 알고리즘이 구현하는 처리율 제한 메커니즘은 아주 정교하다. 어느 순간의 원도를 보더라도 허용되는 요청의 개수는 시스템 처리한도를 넘지 않는다.</li>
+</ul>
+<p>단점</p>
+<ul>
+<li>이 알고리즘은 다량의 메모리를 사용하는데 거부된 요청의 타임 스템프도 보관하기 때문이다.</li>
+</ul>
+<h3 id="이동-원도-카운터-알고리즘"><a href="#이동-원도-카운터-알고리즘" class="headerlink" title="이동 원도 카운터 알고리즘"></a>이동 원도 카운터 알고리즘</h3><p>이동 원도 카운터 알고리즘은 고정 원도 카운터 알고리즘 과 이동 원도 로깅 알고리즘을 결합한 것이다.</p>
+<p>고정 원도우 카운터 알고리즘 처럼 원도우의 카운터를 추적하고 제한 하는데 현재 타임스템프 기반으로 추적하면 이전 요청의 가중치를 부여하여 트레픽 폭주를 완화 한다.</p>
+<p>장점</p>
+<ul>
+<li>이전 시간대의 평균 처리율에 따라 현재 원도의 상태를 계산하므로 짧은 시간에 몰리는 트래픽에도 잘대응한다.</li>
+<li>메모리 효율이 좋다.</li>
+</ul>
+<p>단점</p>
+<ul>
+<li>직전 시간대에 도착한 요청이 균등하게 분포되어 있다고 가정한 상태에서 추정치를 계산하기 때문에 다소 느슨하다.</li>
+</ul>
+<h3 id="분산-환경의-처리율-제한장치의-구현"><a href="#분산-환경의-처리율-제한장치의-구현" class="headerlink" title="분산 환경의 처리율 제한장치의 구현"></a>분산 환경의 처리율 제한장치의 구현</h3><ul>
+<li><p>경쟁조건(race condition)</p>
+<ul>
+<li>병행성이 심한 환경에서 경쟁 조건 이슈가 발생할수 있다.</li>
+<li>가장 널리 알려진 해결책은 락이다. 하지만 시스템 성능을 상당히 떨어뜨린다.</li>
+<li>락 대신 해결 방법 루아 스크립트, sorted set 사용</li>
+</ul>
+</li>
+<li><p>동기화(synchronization)</p>
+<ul>
+<li>처리율 제한장치를 여러대 쓸때 동기화 이슈가 발생<ul>
+<li>sticky session 을 활용해 같은 처리율 장치로 전달하는 방법도 있다</li>
+<li>다른 방법은 중앙집중식 데이터 저장소를 활용하는것이다.(ex. redis)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>경성(hard) 또는 연성(soft) 처리율 제한</p>
+<ul>
+<li>경성 처리율 제한 : 절대 임계치를 넘을수 없다</li>
+<li>연성 처리율 제한 : 잠시 동안은 임계치를 넘을수 있다.</li>
+</ul>
+</li>
+<li><p>다양한 계층에서의 처리율 제한</p>
+<ul>
+<li>iptables를 사용하면 ip에 처리율 제한을 걸수도 있다.<ul>
+<li>connlimit 모듈</li>
+<li>limit 모듈</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="참조"><a href="#참조" class="headerlink" title="참조"></a>참조</h1><hr>
+<ul>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="http://www.yes24.com/Product/Goods/102819435">가상 면접 사례로 배우는 대규모 시스템 설계 기초</a></li>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://spring.io/blog/2021/04/05/api-rate-limiting-with-spring-cloud-gateway">API Rate Limiting with Spring Cloud Gateway</a></li>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://en.wikipedia.org/wiki/Token_bucket">Token bucket</a></li>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://en.wikipedia.org/wiki/Leaky_bucket">Leaky bucket</a></li>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://konghq.com/blog/how-to-design-a-scalable-rate-limiting-algorithm">How to Design a Scalable Rate Limiting Algorithm with Kong API</a></li>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://doublem.org/api-gateway-basic/">API Gateway Throttling 구현</a></li>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://www.ietf.org/archive/id/draft-polli-ratelimit-headers-02.html">RateLimit Header Fields for HTTP</a></li>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://datatracker.ietf.org/doc/draft-ietf-httpapi-ratelimit-headers/">RateLimit header fields for HTTP datatracker</a></li>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://www.netfilter.org/projects/iptables/index.html">The netfilter.org “iptables” project</a></li>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://thelowedown.wordpress.com/2008/07/03/iptables-how-to-use-the-limits-module/">iptables: How to use the limits module</a></li>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://nginxstore.com/blog/kubernetes/microservices-march-protect-kubernetes-apis-with-rate-limiting/">자습서-NGINX Ingress Controller 속도 제한 설정</a></li>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://istio.io/latest/docs/tasks/policy-enforcement/rate-limit/">Enabling Rate Limits using Envoy</a></li>
+</ul>
+</div></article><div class="post-meta__tag-list"><a class="post-meta__tags" href="../../../tags/%EA%B0%80%EC%83%81-%EB%A9%B4%EC%A0%91-%EC%82%AC%EB%A1%80%EB%A1%9C-%EB%B0%B0%EC%9A%B0%EB%8A%94-%EB%8C%80%EA%B7%9C%EB%AA%A8-%EC%8B%9C%EC%8A%A4%ED%85%9C-%EC%84%A4%EA%B3%84-%EA%B8%B0%EC%B4%88/">가상 면접 사례로 배우는 대규모 시스템 설계 기초</a></div><nav id="pagination"><div class="prev-post pull-left"><a href="../2023-01-27-good_code_bad_code_1/"><i class="fa fa-chevron-left">  </i><span>CHAPTER 1 코드 품질</span></a></div><div class="next-post pull-right"><a href="../2023-01-20-system_design_interview_3/"><span>3장 시스템 설계 면접 공략법</span><i class="fa fa-chevron-right"></i></a></div></nav><div id="disqus_thread"></div><script>var unused = null;
+var disqus_config = function () {
+  this.page.url = 'https://sejoung.github.io/2023/01/2023-01-26-system_design_interview_4/';
+  this.page.identifier = '2023/01/2023-01-26-system_design_interview_4/';
+  this.page.title = '4장 처리율 제한 장치 설계';
+}
+var d = document, s = d.createElement('script');
+s.src = "https://" + 'kimsejoung' +".disqus.com/embed.js";
+s.setAttribute('data-timestamp', '' + +new Date());
+(d.head || d.body).appendChild(s);</script><script id="dsq-count-scr" src="https://kimsejoung.disqus.com/count.js" async></script></div></div><footer class="footer-bg" style="background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Van_Gogh_-_Terrasse_des_Caf%C3%A9s_an_der_Place_du_Forum_in_Arles_am_Abend1.jpeg/1024px-Van_Gogh_-_Terrasse_des_Caf%C3%A9s_an_der_Place_du_Forum_in_Arles_am_Abend1.jpeg)"><div class="layout" id="footer"><div class="copyright">&copy;2017 - 2026 By sejoung kim</div><div class="framework-info"><span>Driven - </span><a target="_blank" rel="external nofollow noopener noreferrer" href="http://hexo.io"><span>Hexo</span></a><span class="footer-separator">|</span><span>Theme - </span><a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/Molunerfinn/hexo-theme-melody"><span>Melody</span></a></div><div class="busuanzi"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><span id="busuanzi_container_page_pv"><i class="fa fa-file-o"></i><span id="busuanzi_value_page_pv"></span><span></span></span></div></div></footer><i class="fa fa-arrow-up" id="go-up" aria-hidden="true"></i><script src="../../../js/third-party/anime.min.js"></script><script src="../../../js/third-party/jquery.min.js"></script><script src="../../../js/third-party/jquery.fancybox.min.js"></script><script src="../../../js/third-party/velocity.min.js"></script><script src="../../../js/third-party/velocity.ui.min.js"></script><script src="../../../js/utils.js?version=1.7.0"></script><script src="../../../js/fancybox.js?version=1.7.0"></script><script src="../../../js/sidebar.js?version=1.7.0"></script><script src="../../../js/copy.js?version=1.7.0"></script><script src="../../../js/fireworks.js?version=1.7.0"></script><script src="../../../js/transition.js?version=1.7.0"></script><script src="../../../js/scroll.js?version=1.7.0"></script><script src="../../../js/head.js?version=1.7.0"></script><script src="../../../js/search/local-search.js"></script><script>if(/Android|webOS|iPhone|iPod|iPad|BlackBerry/i.test(navigator.userAgent)) {
+  $('#nav').addClass('is-mobile')
+  $('footer').addClass('is-mobile')
+  $('#top-container').addClass('is-mobile')
+}</script><div class="search-dialog" id="local-search"><div class="search-dialog__title" id="local-search-title">Local search</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="Search for Posts"></div></div></div><hr><div id="local-search-results"><div id="local-hits"></div><div id="local-stats"><div class="local-search-stats__hr" id="hr"><span>Powered by</span> <a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/wzpan/hexo-generator-search" style="color:#49B1F5;">hexo-generator-search</a></div></div></div><span class="search-close-button"><i class="fa fa-times"></i></span></div><div class="search-mask"></div></body></html>

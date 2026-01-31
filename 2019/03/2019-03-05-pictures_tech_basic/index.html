@@ -1,0 +1,87 @@
+<!DOCTYPE html><html lang="ko"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta name="description" content="영상 관련 기술의 기초"><meta name="keywords" content="영상 관련 기술의 기초"><meta name="author" content="sejoung kim"><meta name="copyright" content="sejoung kim"><title>영상 관련 기술의 기초 | 폭간의 기술블로그</title><link rel="shortcut icon" href="../../../my-favicon.ico"><link rel="stylesheet" href="../../../css/index.css?version=1.7.0"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css?version=1.7.0"><meta name="format-detection" content="telephone=no"><meta http-equiv="x-dns-prefetch-control" content="on"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4136060060870959"></script><script>(adsbygoogle = window.adsbygoogle || []).push({
+  google_ad_client: '',
+  enable_page_level_ads: 'true'
+});
+</script><script async src="https://www.googletagmanager.com/gtag/js?id=G-NVRTGLD8RZ"></script><script>window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-NVRTGLD8RZ');</script><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"We didn't find any results for the search: ${query}"}},
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  }
+} </script><meta name="generator" content="Hexo 5.4.2"></head><body><i class="fa fa-arrow-right" id="toggle-sidebar" aria-hidden="true"></i><div id="sidebar" data-display="true"><div class="toggle-sidebar-info text-center"><span data-toggle="Toggle article">Toggle site</span><hr></div><div class="sidebar-toc"><div class="sidebar-toc__title">Catalog</div><div class="sidebar-toc__progress"><span class="progress-notice">You've read</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar"></div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%EC%98%81%EC%83%81-%EA%B4%80%EB%A0%A8-%EA%B8%B0%EC%88%A0%EC%9D%98-%EA%B8%B0%EC%B4%88"><span class="toc-number">1.</span> <span class="toc-text">영상 관련 기술의 기초</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%EC%9D%B4%EB%AF%B8%EC%A7%80"><span class="toc-number">1.1.</span> <span class="toc-text">이미지</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%EB%8F%99%EC%98%81%EC%83%81"><span class="toc-number">1.2.</span> <span class="toc-text">동영상</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%EC%BD%94%EB%8D%B1"><span class="toc-number">1.2.1.</span> <span class="toc-text">코덱</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EC%BB%A8%ED%85%8C%EC%9D%B4%EB%84%88-%ED%8F%AC%EB%A7%B7-Digital-container-format"><span class="toc-number">1.2.2.</span> <span class="toc-text">컨테이너 포맷(Digital_container_format)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%ED%8A%B8%EB%9E%9C%EC%8A%A4%EC%BD%94%EB%94%A9-video-transcoding"><span class="toc-number">1.2.3.</span> <span class="toc-text">트랜스코딩(video-transcoding)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EC%98%81%EC%83%81-%EC%A0%84%EC%86%A1-%ED%94%84%EB%A1%9C%ED%86%A0%EC%BD%9C"><span class="toc-number">1.2.4.</span> <span class="toc-text">영상 전송 프로토콜</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EB%AF%B8%EB%94%94%EC%96%B4-%EC%84%9C%EB%B2%84"><span class="toc-number">1.2.5.</span> <span class="toc-text">미디어 서버</span></a></li></ol></li></ol></li></ol><li class="toc-item toc-level-1"><a class="toc-link" href="#%EC%B0%B8%EC%A1%B0"><span class="toc-number"></span> <span class="toc-text">참조</span></a></li></div></div><div class="author-info hide"><div class="author-info__avatar text-center"><img src="https://avatars0.githubusercontent.com/u/4936005?s=400&amp;u=a679b941fe377418e7e4efcf916c6a636d7178ee&amp;v=4"></div><div class="author-info__name text-center">sejoung kim</div><div class="author-info__description text-center">Java, Kotlin 등 백엔드 개발 기술과 소프트웨어 엔지니어링 학습 내용을 정리하는 기술 블로그입니다.</div><div class="follow-button"><a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/sejoung">Follow Me</a></div><hr><div class="author-info-articles"><a class="author-info-articles__archives article-meta" href="../../../archives"><span class="pull-left">Articles</span><span class="pull-right">869</span></a><a class="author-info-articles__tags article-meta" href="../../../tags"><span class="pull-left">Tags</span><span class="pull-right">913</span></a><a class="author-info-articles__categories article-meta" href="../../../categories"><span class="pull-left">Categories</span><span class="pull-right">81</span></a></div><hr><div class="author-info-links"><div class="author-info-links__title text-center">Links</div><a class="author-info-links__name text-center" target="_blank" rel="external nofollow noopener noreferrer" href="https://blog.naver.com/sanaes">naverblog</a><a class="author-info-links__name text-center" target="_blank" rel="external nofollow noopener noreferrer" href="https://www.linkedin.com/in/sanaes/">linkedin</a><a class="author-info-links__name text-center" target="_blank" rel="external nofollow noopener noreferrer" href="https://www.slideshare.net/sejoung">slideshare</a></div></div></div><div id="content-outer"><div id="top-container" style="background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Van_Gogh_-_Terrasse_des_Caf%C3%A9s_an_der_Place_du_Forum_in_Arles_am_Abend1.jpeg/1024px-Van_Gogh_-_Terrasse_des_Caf%C3%A9s_an_der_Place_du_Forum_in_Arles_am_Abend1.jpeg)"><div id="page-header"><span class="pull-left"> <a id="site-name" href="../../../index.html">폭간의 기술블로그</a></span><i class="fa fa-bars toggle-menu pull-right" aria-hidden="true"></i><span class="pull-right menus">   <a class="site-page" href="/">Home</a><a class="site-page" href="/archives">Archives</a><a class="site-page" href="/tags">Tags</a><a class="site-page" href="/categories">Categories</a><a class="site-page" href="/privacy">Privacy</a><a class="site-page" href="/about">About</a><a class="site-page" href="/contact">Contact</a></span><span class="pull-right"><a class="site-page social-icon search"><i class="fa fa-search"></i><span> Search</span></a></span></div><div id="post-info"><div id="post-title">영상 관련 기술의 기초</div><div id="post-meta"><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2019-03-05</time><span class="post-meta__separator">|</span><i class="fa fa-inbox post-meta__icon" aria-hidden="true"></i><a class="post-meta__categories" href="../../../categories/%EB%8F%99%EC%98%81%EC%83%81/">동영상</a><span class="post-meta__separator">|</span><i class="fa fa-comment-o post-meta__icon" aria-hidden="true"></i><a href="#disqus_thread"><span class="disqus-comment-count" data-disqus-identifier="2019/03/2019-03-05-pictures_tech_basic/"></span></a></div></div></div><div class="layout" id="content-inner"><article id="post"><div class="article-container" id="post-content"><h2 id="영상-관련-기술의-기초"><a href="#영상-관련-기술의-기초" class="headerlink" title="영상 관련 기술의 기초"></a>영상 관련 기술의 기초</h2><p>홍영훈 cto 님의 교육</p>
+<h3 id="이미지"><a href="#이미지" class="headerlink" title="이미지"></a>이미지</h3><p>점(pixel)들의 집합이다.</p>
+<h3 id="동영상"><a href="#동영상" class="headerlink" title="동영상"></a>동영상</h3><p>영상은 이미지들의 연속적 표현의 결과이고 우리가 아는 동영상은 영상과 오디오 데이터가 시간에 맞춰서 화면과 스피커로 출력되는 결과물이다.</p>
+<p>영상에서 각각의 이미지는 특정 시간대의 화면을 표현하게 되는데 이를 frame이라고 칭한다.<br>1초에 몇 개의 프레임이 있느냐는 초당 프레임(fps)이라고 부른다.</p>
+<p>rawdata로 영상을 생각하면 우리가 보통 사용하는 모니터가 1920*1080 인데 이 이미지 크기는 32비트 칼라 기준으로 약 8메가 바이트이고, 30fps 기준으로 1분에 15기가 바이트를 차지하게 된다.<br>우리 중 한사람만 이런 영상을 시청하는 것만으로도 회사 네트워크는 마비되고 정작 시청도 제대로 할 수 없다</p>
+<p>그래서 영상과 오디오 압축이 필수적이다.</p>
+<p>영상을 압축할때 모든 데이터를 다 압축을 하게 되면 데이터를 많이 사용하기 때문에 중간 중간 키프레임(영상의 모든 정보를 가지고 있는)을 두고 변경된 정보만 담게된다<br>보통 키프레임은 5~10초에 하나씩 만들게 되면 특수한 경우 1초 정도로 짧게 설정할수도 있다.</p>
+<p>ffmpeg을 다시 보니 키프레임을 셋팅하는 부분이 있다 알고 보는것이 좋은듯</p>
+<h4 id="코덱"><a href="#코덱" class="headerlink" title="코덱"></a>코덱</h4><p>동영상이나 소리 등을 인코딩 또는 디코딩 할 수 있는 그 알고리즘을 가리키는 용어로 자주 쓰임.</p>
+<p>동영상 코덱</p>
+<ul>
+<li><p>MPEG-4 ASP : 3ivx, DivX, FFmpeg MPEG-4, HDX4, Xvid 무료라서 오래전부터 영상파일 저장용으로 인기. </p>
+</li>
+<li><p>H.264&#x2F;MPEG-4 AVC : CoreAVC, HDX4, QuickTime H.264, x264	표준화된 코덱 중에서 압축율이 탁월. 대신 cpu 자원 많이 먹음. 대부분 웹브라우저에서 지원.</p>
+</li>
+<li><p>flv1 : 플래시에서 사용해서 유명해진 코덱. 표준이 아니라서 플래시에서만 사용.</p>
+</li>
+</ul>
+<p>오디오 코덱</p>
+<ul>
+<li><p>MP3 : 아마 가장 잘 알려짐.</p>
+</li>
+<li><p>AC3 : AC3는 오디오 코덱 코드(Audio Codec code) 3 이란 약자</p>
+</li>
+<li><p>AAC : AAC(Advanced Audio Coding, AAC, 표준문서ISO&#x2F;IEC 13818-7)는 디지털 오디오에서 쓰이는 표준적인 손실 데이터 압축방식.</p>
+</li>
+</ul>
+<h4 id="컨테이너-포맷-Digital-container-format"><a href="#컨테이너-포맷-Digital-container-format" class="headerlink" title="컨테이너 포맷(Digital_container_format)"></a>컨테이너 포맷(Digital_container_format)</h4><p>디지털 컨테이너 포멧이라고 해서 동영상, 이미지, 오디오들의 컨테이너 포멧이 있다.</p>
+<p>지금 여기서는 동영상 컨테이터 포멧(?) 비디오 파일 포멧으로 생각하면 될것 같다.</p>
+<h4 id="트랜스코딩-video-transcoding"><a href="#트랜스코딩-video-transcoding" class="headerlink" title="트랜스코딩(video-transcoding)"></a>트랜스코딩(video-transcoding)</h4><p>비디오 인코딩은 비디오 인코딩과 같은 하나의 디지털 인코딩 형식에서 다른 형식으로의 변환입니다. 여기에는 디지털 비디오의 세 가지 요소 (파일 형식, 비디오 및 오디오)를 동시에 변환하는 작업이 포함됩니다.</p>
+<h4 id="영상-전송-프로토콜"><a href="#영상-전송-프로토콜" class="headerlink" title="영상 전송 프로토콜"></a>영상 전송 프로토콜</h4><p>스트리밍 방식은 기존의 파일전송 프로토콜인 http, ftp 등도 이용 가능하지만 몇 가지 문제가 있다.</p>
+<p>첫번째 시청 시간과 무관하게 다운로드 진행되어 쓸데없이 트래픽을 유발할 수 있다.</p>
+<p>둘째 원하는 시간대로 스킵 할 수 없다.</p>
+<p>셋째 컨테이너 포맷(메타 헤더가 파일 끝에 있는 경우)에 따라서 스트리밍이 불가능할 수 있다.</p>
+<ul>
+<li><p>RTMP : 리얼 타임 메시징 프로토콜(Real Time Messaging Protocol, 흔히 줄여서 RTMP)은 어도비 시스템즈사의 독점 컴퓨터 통신 규약이다. 플래시에서 기본적으로 탑재한 프로토콜이라 플래시를 설치할 수 없는 웹브라우저에서는 지원이 불가능하다. 레이턴시가 약 2초</p>
+</li>
+<li><p>RTSP : 실시간 스트리밍 프로토콜(Real Time Streaming Protocol,RTSP)은 IETF가 1998년에 개발한 통신 규약이다. 비교적 오랜 역사를 가진 프로토콜로 CCTV등에 많이 사용된다. 레이턴시가 짧은 게 특징. 1초 이내.  표준 규약이라 web socket을 이용하면 일반적인 웹브라우저에서 사용이 가능하다. 다만 ios safari는 지원하지 않음.</p>
+</li>
+<li><p>HLS : http live streaming의 준말. Apple(iPhone, iPad 등) 에서 사용하는 표준 HTTP 기반 스트리밍 프로토콜이다. 프로토콜에서 스트리밍 데이터를 m3u8 의 확장자를 가진 재생목록 파일과 잘게 쪼개놓은 다수의 ts 파일들(동영상)을 HTTP 를 통해 전송하는 방식. HTTP로 전송되기 때문에 보안문제로부터 자유롭고, 네트워크 대역대에 맞춰서 Adaptive Bitrate Streaming 이 가능하다. 거의 모든 웹브라우저에서 지원하며 VOD인 경우는 일반 웹서버를 미디어 서버로 사용해도 된다. 최대의 약점은 latency. 보통 ts 파일이 최소 2초가량의 데이터를 담고 있고, 최소 3개파일이 존재해야 하므로 이론상 최소 latency가 6초. </p>
+</li>
+<li><p>WebRTC :  (Web Real-Time Communication)는 웹 브라우저 간에 플러그인의 도움 없이 서로 통신할 수 있도록 설계된 API이다. W3C에서 제시된 초안이며, 음성 통화, 영상 통화, P2P 파일 공유 등으로 활용될 수 있으며 서버를 하나의 peer로 사용하면 스트리밍 서비스가 가능한 것으로 알려져 있다.</p>
+</li>
+</ul>
+<h4 id="미디어-서버"><a href="#미디어-서버" class="headerlink" title="미디어 서버"></a>미디어 서버</h4><p>위의 스트리밍용 프로토콜을 지원하는 서버 소프트웨어들을 말한다.</p>
+<p>상용 미디어 서버로 가장 유명한 제품이 wowza이다. Wowza는 rtmp 프로토콜과 플래시를 개발한 어도비사에서 나온 개발자들이 만든 제품이다.</p>
+<h1 id="참조"><a href="#참조" class="headerlink" title="참조"></a>참조</h1><hr>
+<ul>
+<li><p><a target="_blank" rel="external nofollow noopener noreferrer" href="https://www.ffmpeg.org/">ffmpeg</a></p>
+</li>
+<li><p><a target="_blank" rel="external nofollow noopener noreferrer" href="https://en.wikipedia.org/wiki/Digital_container_format">Digital_container_format</a></p>
+</li>
+<li><p><a target="_blank" rel="external nofollow noopener noreferrer" href="https://en.wikipedia.org/wiki/Video_file_format">Video_file_format</a></p>
+</li>
+<li><p><a target="_blank" rel="external nofollow noopener noreferrer" href="https://en.wikipedia.org/wiki/Comparison_of_video_container_formats">Comparison_of_video_container_formats</a></p>
+</li>
+</ul>
+</div></article><div class="post-meta__tag-list"><a class="post-meta__tags" href="../../../tags/%EC%98%81%EC%83%81-%EA%B4%80%EB%A0%A8-%EA%B8%B0%EC%88%A0%EC%9D%98-%EA%B8%B0%EC%B4%88/">영상 관련 기술의 기초</a></div><nav id="pagination"><div class="prev-post pull-left"><a href="../2019-03-07-Item_60_Avoid_float_and_double_if_exact_answers_are_required/"><i class="fa fa-chevron-left">  </i><span>아이템 60. 정확한 답이 필요하면 float와 double 은 피하라 </span></a></div><div class="next-post pull-right"><a href="../../02/2019-02-27-Item_59_Know_and_use_the_libraries/"><span>아이템 59. 라이브러리를 익히고 사용하라.</span><i class="fa fa-chevron-right"></i></a></div></nav><div id="disqus_thread"></div><script>var unused = null;
+var disqus_config = function () {
+  this.page.url = 'https://sejoung.github.io/2019/03/2019-03-05-pictures_tech_basic/';
+  this.page.identifier = '2019/03/2019-03-05-pictures_tech_basic/';
+  this.page.title = '영상 관련 기술의 기초';
+}
+var d = document, s = d.createElement('script');
+s.src = "https://" + 'kimsejoung' +".disqus.com/embed.js";
+s.setAttribute('data-timestamp', '' + +new Date());
+(d.head || d.body).appendChild(s);</script><script id="dsq-count-scr" src="https://kimsejoung.disqus.com/count.js" async></script></div></div><footer class="footer-bg" style="background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Van_Gogh_-_Terrasse_des_Caf%C3%A9s_an_der_Place_du_Forum_in_Arles_am_Abend1.jpeg/1024px-Van_Gogh_-_Terrasse_des_Caf%C3%A9s_an_der_Place_du_Forum_in_Arles_am_Abend1.jpeg)"><div class="layout" id="footer"><div class="copyright">&copy;2017 - 2026 By sejoung kim</div><div class="framework-info"><span>Driven - </span><a target="_blank" rel="external nofollow noopener noreferrer" href="http://hexo.io"><span>Hexo</span></a><span class="footer-separator">|</span><span>Theme - </span><a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/Molunerfinn/hexo-theme-melody"><span>Melody</span></a></div><div class="busuanzi"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><span id="busuanzi_container_page_pv"><i class="fa fa-file-o"></i><span id="busuanzi_value_page_pv"></span><span></span></span></div></div></footer><i class="fa fa-arrow-up" id="go-up" aria-hidden="true"></i><script src="../../../js/third-party/anime.min.js"></script><script src="../../../js/third-party/jquery.min.js"></script><script src="../../../js/third-party/jquery.fancybox.min.js"></script><script src="../../../js/third-party/velocity.min.js"></script><script src="../../../js/third-party/velocity.ui.min.js"></script><script src="../../../js/utils.js?version=1.7.0"></script><script src="../../../js/fancybox.js?version=1.7.0"></script><script src="../../../js/sidebar.js?version=1.7.0"></script><script src="../../../js/copy.js?version=1.7.0"></script><script src="../../../js/fireworks.js?version=1.7.0"></script><script src="../../../js/transition.js?version=1.7.0"></script><script src="../../../js/scroll.js?version=1.7.0"></script><script src="../../../js/head.js?version=1.7.0"></script><script src="../../../js/search/local-search.js"></script><script>if(/Android|webOS|iPhone|iPod|iPad|BlackBerry/i.test(navigator.userAgent)) {
+  $('#nav').addClass('is-mobile')
+  $('footer').addClass('is-mobile')
+  $('#top-container').addClass('is-mobile')
+}</script><div class="search-dialog" id="local-search"><div class="search-dialog__title" id="local-search-title">Local search</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="Search for Posts"></div></div></div><hr><div id="local-search-results"><div id="local-hits"></div><div id="local-stats"><div class="local-search-stats__hr" id="hr"><span>Powered by</span> <a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/wzpan/hexo-generator-search" style="color:#49B1F5;">hexo-generator-search</a></div></div></div><span class="search-close-button"><i class="fa fa-times"></i></span></div><div class="search-mask"></div></body></html>

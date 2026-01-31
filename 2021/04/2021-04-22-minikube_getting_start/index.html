@@ -1,0 +1,103 @@
+<!DOCTYPE html><html lang="ko"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta name="description" content="minikube 시작하기"><meta name="keywords" content="k8s,Kubernetes,minikube"><meta name="author" content="sejoung kim"><meta name="copyright" content="sejoung kim"><title>minikube 시작하기 | 폭간의 기술블로그</title><link rel="shortcut icon" href="../../../my-favicon.ico"><link rel="stylesheet" href="../../../css/index.css?version=1.7.0"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css?version=1.7.0"><meta name="format-detection" content="telephone=no"><meta http-equiv="x-dns-prefetch-control" content="on"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4136060060870959"></script><script>(adsbygoogle = window.adsbygoogle || []).push({
+  google_ad_client: '',
+  enable_page_level_ads: 'true'
+});
+</script><script async src="https://www.googletagmanager.com/gtag/js?id=G-NVRTGLD8RZ"></script><script>window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-NVRTGLD8RZ');</script><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"We didn't find any results for the search: ${query}"}},
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  }
+} </script><meta name="generator" content="Hexo 5.4.2"></head><body><i class="fa fa-arrow-right" id="toggle-sidebar" aria-hidden="true"></i><div id="sidebar" data-display="true"><div class="toggle-sidebar-info text-center"><span data-toggle="Toggle article">Toggle site</span><hr></div><div class="sidebar-toc"><div class="sidebar-toc__title">Catalog</div><div class="sidebar-toc__progress"><span class="progress-notice">You've read</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar"></div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#minikube-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0"><span class="toc-number">1.</span> <span class="toc-text">minikube 시작하기</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%EC%A3%BC%EC%9A%94%EB%AA%A9%ED%91%9C"><span class="toc-number">1.1.</span> <span class="toc-text">주요목표</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%EB%AA%A9%ED%91%9C%ED%95%9C%EA%B2%83%EC%9D%B4-%EC%95%84%EB%8B%8C%EA%B2%83"><span class="toc-number">1.2.</span> <span class="toc-text">목표한것이 아닌것</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#minikube-%EC%8B%9C%EC%9E%91"><span class="toc-number">1.3.</span> <span class="toc-text">minikube 시작</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%ED%81%B4%EB%9F%AC%EC%8A%A4%ED%84%B0-%EC%8B%9C%EC%9E%91"><span class="toc-number">1.3.1.</span> <span class="toc-text">클러스터 시작</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#mac-os-%EC%97%90%EC%84%9C-%EC%8B%A4%ED%96%89"><span class="toc-number">1.3.2.</span> <span class="toc-text">mac os 에서 실행</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%ED%81%B4%EB%9F%AC%EC%8A%A4%ED%84%B0%EC%99%80-%EC%83%81%ED%98%B8%EC%9E%91%EC%9A%A9"><span class="toc-number">1.4.</span> <span class="toc-text">클러스터와 상호작용</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%EB%B0%B0%ED%8F%AC"><span class="toc-number">1.5.</span> <span class="toc-text">배포</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#LoadBalancer-%EB%B0%B0%ED%8F%AC"><span class="toc-number">1.5.1.</span> <span class="toc-text">LoadBalancer 배포</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%ED%81%B4%EB%9F%AC%EC%8A%A4%ED%84%B0-%EA%B4%80%EB%A6%AC"><span class="toc-number">1.6.</span> <span class="toc-text">클러스터 관리</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%EC%B0%B8%EA%B3%A0%EC%9E%90%EB%A3%8C"><span class="toc-number">2.</span> <span class="toc-text">참고자료</span></a></li></ol></div></div><div class="author-info hide"><div class="author-info__avatar text-center"><img src="https://avatars0.githubusercontent.com/u/4936005?s=400&amp;u=a679b941fe377418e7e4efcf916c6a636d7178ee&amp;v=4"></div><div class="author-info__name text-center">sejoung kim</div><div class="author-info__description text-center">Java, Kotlin 등 백엔드 개발 기술과 소프트웨어 엔지니어링 학습 내용을 정리하는 기술 블로그입니다.</div><div class="follow-button"><a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/sejoung">Follow Me</a></div><hr><div class="author-info-articles"><a class="author-info-articles__archives article-meta" href="../../../archives"><span class="pull-left">Articles</span><span class="pull-right">869</span></a><a class="author-info-articles__tags article-meta" href="../../../tags"><span class="pull-left">Tags</span><span class="pull-right">913</span></a><a class="author-info-articles__categories article-meta" href="../../../categories"><span class="pull-left">Categories</span><span class="pull-right">81</span></a></div><hr><div class="author-info-links"><div class="author-info-links__title text-center">Links</div><a class="author-info-links__name text-center" target="_blank" rel="external nofollow noopener noreferrer" href="https://blog.naver.com/sanaes">naverblog</a><a class="author-info-links__name text-center" target="_blank" rel="external nofollow noopener noreferrer" href="https://www.linkedin.com/in/sanaes/">linkedin</a><a class="author-info-links__name text-center" target="_blank" rel="external nofollow noopener noreferrer" href="https://www.slideshare.net/sejoung">slideshare</a></div></div></div><div id="content-outer"><div id="top-container" style="background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Van_Gogh_-_Terrasse_des_Caf%C3%A9s_an_der_Place_du_Forum_in_Arles_am_Abend1.jpeg/1024px-Van_Gogh_-_Terrasse_des_Caf%C3%A9s_an_der_Place_du_Forum_in_Arles_am_Abend1.jpeg)"><div id="page-header"><span class="pull-left"> <a id="site-name" href="../../../index.html">폭간의 기술블로그</a></span><i class="fa fa-bars toggle-menu pull-right" aria-hidden="true"></i><span class="pull-right menus">   <a class="site-page" href="/">Home</a><a class="site-page" href="/archives">Archives</a><a class="site-page" href="/tags">Tags</a><a class="site-page" href="/categories">Categories</a><a class="site-page" href="/privacy">Privacy</a><a class="site-page" href="/about">About</a><a class="site-page" href="/contact">Contact</a></span><span class="pull-right"><a class="site-page social-icon search"><i class="fa fa-search"></i><span> Search</span></a></span></div><div id="post-info"><div id="post-title">minikube 시작하기</div><div id="post-meta"><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2021-04-22</time><span class="post-meta__separator">|</span><i class="fa fa-inbox post-meta__icon" aria-hidden="true"></i><a class="post-meta__categories" href="../../../categories/Kubernetes/">Kubernetes</a><span class="post-meta__separator">|</span><i class="fa fa-comment-o post-meta__icon" aria-hidden="true"></i><a href="#disqus_thread"><span class="disqus-comment-count" data-disqus-identifier="2021/04/2021-04-22-minikube_getting_start/"></span></a></div></div></div><div class="layout" id="content-inner"><article id="post"><div class="article-container" id="post-content"><h1 id="minikube-시작하기"><a href="#minikube-시작하기" class="headerlink" title="minikube 시작하기"></a>minikube 시작하기</h1><h2 id="주요목표"><a href="#주요목표" class="headerlink" title="주요목표"></a>주요목표</h2><p>minikube의 기본 목표는 일상적인 개발 워크 플로 및 학습 목적을 위해 Kubernetes를 로컬에서 간단하게 실행하는 것입니다.<br>다음은 minikube의 기본 원칙입니다. 우선 순위는 다음과 같습니다.</p>
+<ul>
+<li>포용적이고 커뮤니티 중심</li>
+<li>사용자 친화적</li>
+<li>모든 Kubernetes 기능 지원</li>
+<li>크로스 플랫폼</li>
+<li>신뢰성</li>
+<li>고성능</li>
+<li>개발자 중심</li>
+</ul>
+<p>다음은 목표에 부합하는 몇 가지 특정 미니 쿠베 기능입니다.</p>
+<ul>
+<li>단일 명령 설정 및 해체 UX</li>
+<li>로컬 스토리지, 네트워킹, 자동 확장,로드 밸런싱 등을 지원합니다.</li>
+<li>운영 체제 전반에 걸친 통합 UX</li>
+<li>타사 소프트웨어에 대한 최소한의 종속성</li>
+<li>최소한의 리소스 오버 헤드</li>
+</ul>
+<h2 id="목표한것이-아닌것"><a href="#목표한것이-아닌것" class="headerlink" title="목표한것이 아닌것"></a>목표한것이 아닌것</h2><ul>
+<li>Kubernetes 프로덕션 배포 경험 단순화</li>
+<li>다양한 유형의 스토리지, 네트워킹 등과 같은 Kubernetes의 가능한 모든 배포 구성을 지원합니다.</li>
+</ul>
+<h2 id="minikube-시작"><a href="#minikube-시작" class="headerlink" title="minikube 시작"></a>minikube 시작</h2><p>minikube는 Kubernetes 용으로 쉽게 배우고 개발할 수 있도록하는 데 초점을 맞춘 로컬 Kubernetes입니다.</p>
+<p>필요한 것은 Docker (또는 유사하게 호환되는) 컨테이너 또는 가상 머신 환경 뿐이며 Kubernetes는 단일 명령으로 처리됩니다.</p>
+<h3 id="클러스터-시작"><a href="#클러스터-시작" class="headerlink" title="클러스터 시작"></a>클러스터 시작</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">minikube start</span><br></pre></td></tr></table></figure>
+
+<h3 id="mac-os-에서-실행"><a href="#mac-os-에서-실행" class="headerlink" title="mac os 에서 실행"></a>mac os 에서 실행</h3><p>HyperKit 으로 가상머신을 지정할 예정임</p>
+<p>HyperKit 은 경량 가상 머신 및 컨테이너 배포에 최적화 된 macOS 하이퍼 바이저 용 오픈 소스 하이퍼 바이저입니다.</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">minikube start --driver=hyperkit</span><br></pre></td></tr></table></figure>
+
+<p>하이퍼 킷을 기본 드라이버로 설정하려면 :</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">minikube config set driver hyperkit</span><br></pre></td></tr></table></figure>
+
+<h2 id="클러스터와-상호작용"><a href="#클러스터와-상호작용" class="headerlink" title="클러스터와 상호작용"></a>클러스터와 상호작용</h2><p>kubectl 명령을 통해서 나</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kubectl get po -A</span><br></pre></td></tr></table></figure>
+<p>아니면 minikube를 통해서 kubectl의 적절한 버전을 다운받을수 있다.</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">minikube kubectl -- get po -A</span><br></pre></td></tr></table></figure>
+<p>Kubernetes dashboard 확인은 </p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">minikube dashboard</span><br></pre></td></tr></table></figure>
+
+<p><code>http://127.0.0.1:62335/api/v1/namespaces/kubernetes-dashboard/services/http:kubernetes-dashboard:/proxy/#/overview?namespace=default</code> 접속 가능하다.</p>
+<h2 id="배포"><a href="#배포" class="headerlink" title="배포"></a>배포</h2><p>샘플 배포를 만들고 포트 8080에 노출합니다.</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">kubectl create deployment hello-minikube --image=k8s.gcr.io/echoserver:1.4</span><br><span class="line">kubectl expose deployment hello-minikube --type=NodePort --port=8080</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kubectl get services hello-minikube</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">minikube service hello-minikube</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kubectl port-forward service/hello-minikube 7080:8080</span><br></pre></td></tr></table></figure>
+
+<h3 id="LoadBalancer-배포"><a href="#LoadBalancer-배포" class="headerlink" title="LoadBalancer 배포"></a>LoadBalancer 배포</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">kubectl create deployment balanced --image=k8s.gcr.io/echoserver:1.4  </span><br><span class="line">kubectl expose deployment balanced --type=LoadBalancer --port=8080</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">minikube tunnel</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kubectl get services balanced</span><br></pre></td></tr></table></figure>
+
+<h2 id="클러스터-관리"><a href="#클러스터-관리" class="headerlink" title="클러스터 관리"></a>클러스터 관리</h2><p>배포 된 애플리케이션에 영향을주지 않고 Kubernetes 일시 중지 :</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">minikube pause</span><br></pre></td></tr></table></figure>
+<p>클러스터를 중지</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">minikube stop</span><br></pre></td></tr></table></figure>
+<p>기본 메모리 제한 늘리기 (다시 시작해야 함) :</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">minikube config set memory 16384</span><br></pre></td></tr></table></figure>
+<p>쉽게 설치할 수있는 Kubernetes 서비스 카탈로그를 찾기</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">minikube addons list</span><br></pre></td></tr></table></figure>
+<p>이전 Kubernetes 릴리스를 실행하는 두 번째 클러스터를 만들기</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">minikube start -p aged --kubernetes-version=v1.16.1</span><br></pre></td></tr></table></figure>
+<p>모든 minikube 클러스터를 삭제합니다.</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">minikube delete --all</span><br></pre></td></tr></table></figure>
+
+<h1 id="참고자료"><a href="#참고자료" class="headerlink" title="참고자료"></a>참고자료</h1><ul>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/kubernetes/minikube">minikube github</a></li>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://minikube.sigs.k8s.io/docs/">minikube docs</a></li>
+</ul>
+</div></article><div class="post-meta__tag-list"><a class="post-meta__tags" href="../../../tags/k8s/">k8s</a><a class="post-meta__tags" href="../../../tags/Kubernetes/">Kubernetes</a><a class="post-meta__tags" href="../../../tags/minikube/">minikube</a></div><nav id="pagination"><div class="prev-post pull-left"><a href="../2021-04-22-query_dsl_spring_boot_datajpatest/"><i class="fa fa-chevron-left">  </i><span>QuerydslRepositorySupport 상속 받은 클래스 @DataJpaTest 로 테스트 하기</span></a></div><div class="next-post pull-right"><a href="../2021-04-21-spring_boot_gradle_multi_modules/"><span>멀티 모듈로 @DataJpaTest 진행할때 오류</span><i class="fa fa-chevron-right"></i></a></div></nav><div id="disqus_thread"></div><script>var unused = null;
+var disqus_config = function () {
+  this.page.url = 'https://sejoung.github.io/2021/04/2021-04-22-minikube_getting_start/';
+  this.page.identifier = '2021/04/2021-04-22-minikube_getting_start/';
+  this.page.title = 'minikube 시작하기';
+}
+var d = document, s = d.createElement('script');
+s.src = "https://" + 'kimsejoung' +".disqus.com/embed.js";
+s.setAttribute('data-timestamp', '' + +new Date());
+(d.head || d.body).appendChild(s);</script><script id="dsq-count-scr" src="https://kimsejoung.disqus.com/count.js" async></script></div></div><footer class="footer-bg" style="background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Van_Gogh_-_Terrasse_des_Caf%C3%A9s_an_der_Place_du_Forum_in_Arles_am_Abend1.jpeg/1024px-Van_Gogh_-_Terrasse_des_Caf%C3%A9s_an_der_Place_du_Forum_in_Arles_am_Abend1.jpeg)"><div class="layout" id="footer"><div class="copyright">&copy;2017 - 2026 By sejoung kim</div><div class="framework-info"><span>Driven - </span><a target="_blank" rel="external nofollow noopener noreferrer" href="http://hexo.io"><span>Hexo</span></a><span class="footer-separator">|</span><span>Theme - </span><a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/Molunerfinn/hexo-theme-melody"><span>Melody</span></a></div><div class="busuanzi"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><span id="busuanzi_container_page_pv"><i class="fa fa-file-o"></i><span id="busuanzi_value_page_pv"></span><span></span></span></div></div></footer><i class="fa fa-arrow-up" id="go-up" aria-hidden="true"></i><script src="../../../js/third-party/anime.min.js"></script><script src="../../../js/third-party/jquery.min.js"></script><script src="../../../js/third-party/jquery.fancybox.min.js"></script><script src="../../../js/third-party/velocity.min.js"></script><script src="../../../js/third-party/velocity.ui.min.js"></script><script src="../../../js/utils.js?version=1.7.0"></script><script src="../../../js/fancybox.js?version=1.7.0"></script><script src="../../../js/sidebar.js?version=1.7.0"></script><script src="../../../js/copy.js?version=1.7.0"></script><script src="../../../js/fireworks.js?version=1.7.0"></script><script src="../../../js/transition.js?version=1.7.0"></script><script src="../../../js/scroll.js?version=1.7.0"></script><script src="../../../js/head.js?version=1.7.0"></script><script src="../../../js/search/local-search.js"></script><script>if(/Android|webOS|iPhone|iPod|iPad|BlackBerry/i.test(navigator.userAgent)) {
+  $('#nav').addClass('is-mobile')
+  $('footer').addClass('is-mobile')
+  $('#top-container').addClass('is-mobile')
+}</script><div class="search-dialog" id="local-search"><div class="search-dialog__title" id="local-search-title">Local search</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="Search for Posts"></div></div></div><hr><div id="local-search-results"><div id="local-hits"></div><div id="local-stats"><div class="local-search-stats__hr" id="hr"><span>Powered by</span> <a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/wzpan/hexo-generator-search" style="color:#49B1F5;">hexo-generator-search</a></div></div></div><span class="search-close-button"><i class="fa fa-times"></i></span></div><div class="search-mask"></div></body></html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html><html lang="ko"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta name="description" content="6장 키-값 저장소 설계"><meta name="keywords" content="가상 면접 사례로 배우는 대규모 시스템 설계 기초"><meta name="author" content="sejoung kim"><meta name="copyright" content="sejoung kim"><title>6장 키-값 저장소 설계 | 폭간의 기술블로그</title><link rel="shortcut icon" href="../../../my-favicon.ico"><link rel="stylesheet" href="../../../css/index.css?version=1.7.0"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css?version=1.7.0"><meta name="format-detection" content="telephone=no"><meta http-equiv="x-dns-prefetch-control" content="on"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4136060060870959"></script><script>(adsbygoogle = window.adsbygoogle || []).push({
+  google_ad_client: '',
+  enable_page_level_ads: 'true'
+});
+</script><script async src="https://www.googletagmanager.com/gtag/js?id=G-NVRTGLD8RZ"></script><script>window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-NVRTGLD8RZ');</script><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"We didn't find any results for the search: ${query}"}},
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  }
+} </script><meta name="generator" content="Hexo 5.4.2"></head><body><i class="fa fa-arrow-right" id="toggle-sidebar" aria-hidden="true"></i><div id="sidebar" data-display="true"><div class="toggle-sidebar-info text-center"><span data-toggle="Toggle article">Toggle site</span><hr></div><div class="sidebar-toc"><div class="sidebar-toc__title">Catalog</div><div class="sidebar-toc__progress"><span class="progress-notice">You've read</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar"></div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%EA%B0%80%EC%83%81%EB%A9%B4%EC%A0%91%EC%9C%BC%EB%A1%9C-%EB%B0%B0%EC%9A%B0%EB%8A%94-%EB%8C%80%EA%B7%9C%EB%AA%A8-%EC%8B%9C%EC%8A%A4%ED%85%9C-%EC%84%A4%EA%B3%84-%EA%B8%B0%EC%B4%88"><span class="toc-number">1.</span> <span class="toc-text">가상면접으로 배우는 대규모 시스템 설계 기초</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#6%EC%9E%A5-%ED%82%A4-%EA%B0%92-%EC%A0%80%EC%9E%A5%EC%86%8C-%EC%84%A4%EA%B3%84"><span class="toc-number">1.1.</span> <span class="toc-text">6장 키-값 저장소 설계</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#CAP-%EC%A0%95%EB%A6%AC"><span class="toc-number">1.1.1.</span> <span class="toc-text">CAP 정리</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%EC%B0%B8%EC%A1%B0"><span class="toc-number">2.</span> <span class="toc-text">참조</span></a></li></ol></div></div><div class="author-info hide"><div class="author-info__avatar text-center"><img src="https://avatars0.githubusercontent.com/u/4936005?s=400&amp;u=a679b941fe377418e7e4efcf916c6a636d7178ee&amp;v=4"></div><div class="author-info__name text-center">sejoung kim</div><div class="author-info__description text-center">Java, Kotlin 등 백엔드 개발 기술과 소프트웨어 엔지니어링 학습 내용을 정리하는 기술 블로그입니다.</div><div class="follow-button"><a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/sejoung">Follow Me</a></div><hr><div class="author-info-articles"><a class="author-info-articles__archives article-meta" href="../../../archives"><span class="pull-left">Articles</span><span class="pull-right">869</span></a><a class="author-info-articles__tags article-meta" href="../../../tags"><span class="pull-left">Tags</span><span class="pull-right">913</span></a><a class="author-info-articles__categories article-meta" href="../../../categories"><span class="pull-left">Categories</span><span class="pull-right">81</span></a></div><hr><div class="author-info-links"><div class="author-info-links__title text-center">Links</div><a class="author-info-links__name text-center" target="_blank" rel="external nofollow noopener noreferrer" href="https://blog.naver.com/sanaes">naverblog</a><a class="author-info-links__name text-center" target="_blank" rel="external nofollow noopener noreferrer" href="https://www.linkedin.com/in/sanaes/">linkedin</a><a class="author-info-links__name text-center" target="_blank" rel="external nofollow noopener noreferrer" href="https://www.slideshare.net/sejoung">slideshare</a></div></div></div><div id="content-outer"><div id="top-container" style="background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Van_Gogh_-_Terrasse_des_Caf%C3%A9s_an_der_Place_du_Forum_in_Arles_am_Abend1.jpeg/1024px-Van_Gogh_-_Terrasse_des_Caf%C3%A9s_an_der_Place_du_Forum_in_Arles_am_Abend1.jpeg)"><div id="page-header"><span class="pull-left"> <a id="site-name" href="../../../index.html">폭간의 기술블로그</a></span><i class="fa fa-bars toggle-menu pull-right" aria-hidden="true"></i><span class="pull-right menus">   <a class="site-page" href="/">Home</a><a class="site-page" href="/archives">Archives</a><a class="site-page" href="/tags">Tags</a><a class="site-page" href="/categories">Categories</a><a class="site-page" href="/privacy">Privacy</a><a class="site-page" href="/about">About</a><a class="site-page" href="/contact">Contact</a></span><span class="pull-right"><a class="site-page social-icon search"><i class="fa fa-search"></i><span> Search</span></a></span></div><div id="post-info"><div id="post-title">6장 키-값 저장소 설계</div><div id="post-meta"><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2023-01-29</time><span class="post-meta__separator">|</span><i class="fa fa-inbox post-meta__icon" aria-hidden="true"></i><a class="post-meta__categories" href="../../../categories/book/">book</a><span class="post-meta__separator">|</span><i class="fa fa-comment-o post-meta__icon" aria-hidden="true"></i><a href="#disqus_thread"><span class="disqus-comment-count" data-disqus-identifier="2023/01/2023-01-29-system_design_interview_6/"></span></a></div></div></div><div class="layout" id="content-inner"><article id="post"><div class="article-container" id="post-content"><h1 id="가상면접으로-배우는-대규모-시스템-설계-기초"><a href="#가상면접으로-배우는-대규모-시스템-설계-기초" class="headerlink" title="가상면접으로 배우는 대규모 시스템 설계 기초"></a>가상면접으로 배우는 대규모 시스템 설계 기초</h1><h2 id="6장-키-값-저장소-설계"><a href="#6장-키-값-저장소-설계" class="headerlink" title="6장 키-값 저장소 설계"></a>6장 키-값 저장소 설계</h2><p>키-값 저장소는 키-값 데이터베이스라고도 불리는 비관계형 데이터베이스다<br>키는 유일해야 되며 성능상의 이슈로 키는 짧을수록 좋다<br>값은 보통 무엇이 오던 상관하지 않는다</p>
+<p>분산 키-값 저장소는 분산 해시 테이블이라고도 불린다.</p>
+<h3 id="CAP-정리"><a href="#CAP-정리" class="headerlink" title="CAP 정리"></a>CAP 정리</h3><p>데이터 일관성(consistency), 가용성(availability), 파티션 감내(partition tolerance)라는 세가지 요구사항을 동시에 만족하는 분산 시스템을 설계 하는것은 불가능하다</p>
+<ul>
+<li>데이터 일관성 : 분산 시스템에 접속하는 모든 클라이언트는 어떤 노드에 접속했느냐에 관계없이 언제나 같은 데이터를 보게 된다</li>
+<li>가용성 : 분산 시스템에 접속하는 클라이언트는 일부 노드에 장애가 발생해도 항상 응답을 받아야 된다</li>
+<li>파티션 감내 : 파티션은 두 노드 사이에 통신 장애가 발생하였음을 의미한다. 파티션 감내는 네트워크에 파티션이 생겨도 시스템은 계속 동작해야 된다</li>
+</ul>
+<p>핵심 컴포넌트 </p>
+<ul>
+<li>데이터 파티션<ul>
+<li>데이터를 여러서버에 고르게 분산할 수 있는가</li>
+<li>노드가 추가되거나 삭제될 때 데이터의 이동을 최소화할 수 있는가</li>
+<li>안정해시가 적합한기술</li>
+</ul>
+</li>
+<li>데이터 다중화(replication)<ul>
+<li>높은 가용성과 안정성을 확보하기 위해서는 데이터를 N개 서버에 비동기적으로 다중화 필요가 있다.</li>
+<li>가상 노드를 사용할때도 물리서버의 중복 선택되지 않도록 해야 된다</li>
+<li>DR도 고려</li>
+</ul>
+</li>
+<li>일관성(consistency)<ul>
+<li>여러 노드에 다중화된 데이터는 적절히 동기화 해야 된다.</li>
+<li>정족수 합의(Quorum Consensus) 프로토콜을 사용하면 읽기&#x2F;쓰기 연산 모두에 일관성을 보장할수 있다</li>
+<li>N &#x3D; 사본 갯수</li>
+<li>W &#x3D; 쓰기 연산에 정족수</li>
+<li>R &#x3D; 읽기 연산에 대한 정족수</li>
+<li>R &#x3D; 1, W&#x3D;N : 빠른 읽기 연산에 최적화된 시스템</li>
+<li>W &#x3D; 1, R&#x3D;N : 빠른 쓰기 연산에 최적화된 시스템</li>
+<li>W + R &gt; N : 강한 일관성이 보장됨 (보통 N&#x3D;3, W&#x3D;R&#x3D;2)</li>
+<li>W + R &lt;&#x3D; N : 강한 일관성이 보장되지 않음</li>
+</ul>
+</li>
+<li>일관성 불일치 해소(inconsistency resolution)<ul>
+<li>강한 일관성 : 모든 읽기 연산은 가장 최근에 갱신된 결과를 반환한다.</li>
+<li>약한 일관성 : 읽기 연산은 가장 최근에 갱신된 결과를 반환하지 못한다.</li>
+<li>최종 일관성 : 약한 일관성의 한 형태로 갱신 결과가 결국에는 모든 사본에 반영되는 모델</li>
+<li>방법<ul>
+<li>데이터 버저닝 : 변경 될때 마다 데이터의 새로운 버전을 만드는것</li>
+<li>벡터 시계 : 서버:버전의 순서쌍을 데이터에 매단것<ul>
+<li>단점<ul>
+<li>충돌 감지 및 해소 로직이 클라이언트에 들어간다.</li>
+<li>서버:버전의 순서쌍이 굉장히 빨리 늘어난다.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>장애 처리<ul>
+<li>장애감지<ul>
+<li>모든 노드에 멀티캐스팅 채널을 구축하는것이 가장 손쉬운 방법, 서버가 많으면 비효율적</li>
+<li>가십 프로토콜 같은 분산형 장애 감지 솔루션을 채낵하는것이 효율적</li>
+</ul>
+</li>
+<li>장애해소<ul>
+<li>일시적 장애처리<ul>
+<li>엄격한 정족수 접근법을 쓰면 읽기와 쓰기 연산을 금지</li>
+<li>느슨한 정족수 접근법은 이 조건을 완화하여 가용성을 높인다<ul>
+<li>임시위탁 : 장애가 났을때 다른서버가 잠시 맡아 처리한다</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>영구적 장애처리<ul>
+<li>반 엔트로피 프로토콜 구현 사본 동기화</li>
+</ul>
+</li>
+<li>데이터 센터 장애처리</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="참조"><a href="#참조" class="headerlink" title="참조"></a>참조</h1><hr>
+<ul>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="http://www.yes24.com/Product/Goods/102819435">가상 면접 사례로 배우는 대규모 시스템 설계 기초</a></li>
+</ul>
+</div></article><div class="post-meta__tag-list"><a class="post-meta__tags" href="../../../tags/%EA%B0%80%EC%83%81-%EB%A9%B4%EC%A0%91-%EC%82%AC%EB%A1%80%EB%A1%9C-%EB%B0%B0%EC%9A%B0%EB%8A%94-%EB%8C%80%EA%B7%9C%EB%AA%A8-%EC%8B%9C%EC%8A%A4%ED%85%9C-%EC%84%A4%EA%B3%84-%EA%B8%B0%EC%B4%88/">가상 면접 사례로 배우는 대규모 시스템 설계 기초</a></div><nav id="pagination"><div class="prev-post pull-left"><a href="../2023-01-30-system_design_interview_7/"><i class="fa fa-chevron-left">  </i><span>7장 분산 시스템을 위한 유일 ID 생성기 설계</span></a></div><div class="next-post pull-right"><a href="../2023-01-29-system_design_interview_5/"><span>5장 안정 해시 설계</span><i class="fa fa-chevron-right"></i></a></div></nav><div id="disqus_thread"></div><script>var unused = null;
+var disqus_config = function () {
+  this.page.url = 'https://sejoung.github.io/2023/01/2023-01-29-system_design_interview_6/';
+  this.page.identifier = '2023/01/2023-01-29-system_design_interview_6/';
+  this.page.title = '6장 키-값 저장소 설계';
+}
+var d = document, s = d.createElement('script');
+s.src = "https://" + 'kimsejoung' +".disqus.com/embed.js";
+s.setAttribute('data-timestamp', '' + +new Date());
+(d.head || d.body).appendChild(s);</script><script id="dsq-count-scr" src="https://kimsejoung.disqus.com/count.js" async></script></div></div><footer class="footer-bg" style="background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Van_Gogh_-_Terrasse_des_Caf%C3%A9s_an_der_Place_du_Forum_in_Arles_am_Abend1.jpeg/1024px-Van_Gogh_-_Terrasse_des_Caf%C3%A9s_an_der_Place_du_Forum_in_Arles_am_Abend1.jpeg)"><div class="layout" id="footer"><div class="copyright">&copy;2017 - 2026 By sejoung kim</div><div class="framework-info"><span>Driven - </span><a target="_blank" rel="external nofollow noopener noreferrer" href="http://hexo.io"><span>Hexo</span></a><span class="footer-separator">|</span><span>Theme - </span><a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/Molunerfinn/hexo-theme-melody"><span>Melody</span></a></div><div class="busuanzi"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><span id="busuanzi_container_page_pv"><i class="fa fa-file-o"></i><span id="busuanzi_value_page_pv"></span><span></span></span></div></div></footer><i class="fa fa-arrow-up" id="go-up" aria-hidden="true"></i><script src="../../../js/third-party/anime.min.js"></script><script src="../../../js/third-party/jquery.min.js"></script><script src="../../../js/third-party/jquery.fancybox.min.js"></script><script src="../../../js/third-party/velocity.min.js"></script><script src="../../../js/third-party/velocity.ui.min.js"></script><script src="../../../js/utils.js?version=1.7.0"></script><script src="../../../js/fancybox.js?version=1.7.0"></script><script src="../../../js/sidebar.js?version=1.7.0"></script><script src="../../../js/copy.js?version=1.7.0"></script><script src="../../../js/fireworks.js?version=1.7.0"></script><script src="../../../js/transition.js?version=1.7.0"></script><script src="../../../js/scroll.js?version=1.7.0"></script><script src="../../../js/head.js?version=1.7.0"></script><script src="../../../js/search/local-search.js"></script><script>if(/Android|webOS|iPhone|iPod|iPad|BlackBerry/i.test(navigator.userAgent)) {
+  $('#nav').addClass('is-mobile')
+  $('footer').addClass('is-mobile')
+  $('#top-container').addClass('is-mobile')
+}</script><div class="search-dialog" id="local-search"><div class="search-dialog__title" id="local-search-title">Local search</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="Search for Posts"></div></div></div><hr><div id="local-search-results"><div id="local-hits"></div><div id="local-stats"><div class="local-search-stats__hr" id="hr"><span>Powered by</span> <a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/wzpan/hexo-generator-search" style="color:#49B1F5;">hexo-generator-search</a></div></div></div><span class="search-close-button"><i class="fa fa-times"></i></span></div><div class="search-mask"></div></body></html>

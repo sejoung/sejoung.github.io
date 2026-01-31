@@ -1,0 +1,113 @@
+<!DOCTYPE html><html lang="ko"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta name="description" content="Deep Learning-1"><meta name="keywords" content="Deep Learning"><meta name="author" content="sejoung kim"><meta name="copyright" content="sejoung kim"><title>Deep Learning-1 | 폭간의 기술블로그</title><link rel="shortcut icon" href="../../../my-favicon.ico"><link rel="stylesheet" href="../../../css/index.css?version=1.7.0"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css?version=1.7.0"><meta name="format-detection" content="telephone=no"><meta http-equiv="x-dns-prefetch-control" content="on"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4136060060870959"></script><script>(adsbygoogle = window.adsbygoogle || []).push({
+  google_ad_client: '',
+  enable_page_level_ads: 'true'
+});
+</script><script async src="https://www.googletagmanager.com/gtag/js?id=G-NVRTGLD8RZ"></script><script>window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-NVRTGLD8RZ');</script><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"We didn't find any results for the search: ${query}"}},
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  }
+} </script><meta name="generator" content="Hexo 5.4.2"></head><body><i class="fa fa-arrow-right" id="toggle-sidebar" aria-hidden="true"></i><div id="sidebar" data-display="true"><div class="toggle-sidebar-info text-center"><span data-toggle="Toggle article">Toggle site</span><hr></div><div class="sidebar-toc"><div class="sidebar-toc__title">Catalog</div><div class="sidebar-toc__progress"><span class="progress-notice">You've read</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar"></div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Deep-Learning-1"><span class="toc-number">1.</span> <span class="toc-text">Deep Learning 1</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Perceptron-MLP"><span class="toc-number">1.1.</span> <span class="toc-text">Perceptron, MLP</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CNN"><span class="toc-number">1.2.</span> <span class="toc-text">CNN</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Overfitting-Network-Initialization"><span class="toc-number">1.3.</span> <span class="toc-text">Overfitting, Network Initialization</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#AlexNet-LeNet-VGG"><span class="toc-number">1.4.</span> <span class="toc-text">AlexNet, LeNet, VGG</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#LeNet-5"><span class="toc-number">1.4.1.</span> <span class="toc-text">LeNet-5</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#VGG"><span class="toc-number">1.4.2.</span> <span class="toc-text">VGG</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ResNet"><span class="toc-number">1.5.</span> <span class="toc-text">ResNet</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%EC%B0%B8%EC%A1%B0"><span class="toc-number">2.</span> <span class="toc-text">참조</span></a></li></ol></div></div><div class="author-info hide"><div class="author-info__avatar text-center"><img src="https://avatars0.githubusercontent.com/u/4936005?s=400&amp;u=a679b941fe377418e7e4efcf916c6a636d7178ee&amp;v=4"></div><div class="author-info__name text-center">sejoung kim</div><div class="author-info__description text-center">Java, Kotlin 등 백엔드 개발 기술과 소프트웨어 엔지니어링 학습 내용을 정리하는 기술 블로그입니다.</div><div class="follow-button"><a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/sejoung">Follow Me</a></div><hr><div class="author-info-articles"><a class="author-info-articles__archives article-meta" href="../../../archives"><span class="pull-left">Articles</span><span class="pull-right">869</span></a><a class="author-info-articles__tags article-meta" href="../../../tags"><span class="pull-left">Tags</span><span class="pull-right">913</span></a><a class="author-info-articles__categories article-meta" href="../../../categories"><span class="pull-left">Categories</span><span class="pull-right">81</span></a></div><hr><div class="author-info-links"><div class="author-info-links__title text-center">Links</div><a class="author-info-links__name text-center" target="_blank" rel="external nofollow noopener noreferrer" href="https://blog.naver.com/sanaes">naverblog</a><a class="author-info-links__name text-center" target="_blank" rel="external nofollow noopener noreferrer" href="https://www.linkedin.com/in/sanaes/">linkedin</a><a class="author-info-links__name text-center" target="_blank" rel="external nofollow noopener noreferrer" href="https://www.slideshare.net/sejoung">slideshare</a></div></div></div><div id="content-outer"><div id="top-container" style="background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Van_Gogh_-_Terrasse_des_Caf%C3%A9s_an_der_Place_du_Forum_in_Arles_am_Abend1.jpeg/1024px-Van_Gogh_-_Terrasse_des_Caf%C3%A9s_an_der_Place_du_Forum_in_Arles_am_Abend1.jpeg)"><div id="page-header"><span class="pull-left"> <a id="site-name" href="../../../index.html">폭간의 기술블로그</a></span><i class="fa fa-bars toggle-menu pull-right" aria-hidden="true"></i><span class="pull-right menus">   <a class="site-page" href="/">Home</a><a class="site-page" href="/archives">Archives</a><a class="site-page" href="/tags">Tags</a><a class="site-page" href="/categories">Categories</a><a class="site-page" href="/privacy">Privacy</a><a class="site-page" href="/about">About</a><a class="site-page" href="/contact">Contact</a></span><span class="pull-right"><a class="site-page social-icon search"><i class="fa fa-search"></i><span> Search</span></a></span></div><div id="post-info"><div id="post-title">Deep Learning-1</div><div id="post-meta"><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2024-02-15</time><span class="post-meta__separator">|</span><i class="fa fa-inbox post-meta__icon" aria-hidden="true"></i><a class="post-meta__categories" href="../../../categories/Machine-Learning/">Machine Learning</a><span class="post-meta__separator">|</span><i class="fa fa-comment-o post-meta__icon" aria-hidden="true"></i><a href="#disqus_thread"><span class="disqus-comment-count" data-disqus-identifier="2024/02/2024-02-15-deep_learning_1/"></span></a></div></div></div><div class="layout" id="content-inner"><article id="post"><div class="article-container" id="post-content"><h1 id="Deep-Learning-1"><a href="#Deep-Learning-1" class="headerlink" title="Deep Learning 1"></a>Deep Learning 1</h1><h2 id="Perceptron-MLP"><a href="#Perceptron-MLP" class="headerlink" title="Perceptron, MLP"></a>Perceptron, MLP</h2><ul>
+<li><p>인공신경망의 기초 단위</p>
+</li>
+<li><p>activation function을 통해 입력값을 출력값으로 변환</p>
+<ul>
+<li>binary threshold function</li>
+<li>sigmoid function</li>
+<li>rectified linear unit (ReLU)</li>
+</ul>
+</li>
+<li><p>loss 값을 최소화하는 방향으로 가중치를 조정(학습)</p>
+<ul>
+<li>경사하강법(Gradient Descent)<ul>
+<li>로스를 가중치로 미분하면 0이 되는 지점을 찾아야 하는데, 이때 미분값이 0이 되는 지점을 찾는 것이 어려움. 이를 해결하기 위해 경사하강법을 사용함</li>
+</ul>
+</li>
+<li>역전파(Backpropagation)</li>
+</ul>
+</li>
+<li><p>momentum</p>
+<ul>
+<li>경사하강법의 단점을 보완하기 위해 사용</li>
+<li>로컬 미니멈에 빠지는 것을 방지하기 위해 관성을 사용</li>
+<li>관성을 사용하면 로컬 미니멈에 빠지지 않고 전역 미니멈으로 수렴할 수 있음</li>
+</ul>
+</li>
+</ul>
+<h2 id="CNN"><a href="#CNN" class="headerlink" title="CNN"></a>CNN</h2><ul>
+<li>Convolutional Neural Network</li>
+<li>이미지 인식에 주로 사용</li>
+</ul>
+<h2 id="Overfitting-Network-Initialization"><a href="#Overfitting-Network-Initialization" class="headerlink" title="Overfitting, Network Initialization"></a>Overfitting, Network Initialization</h2><ul>
+<li>Overfitting<ul>
+<li>학습 데이터에만 잘 맞는 모델을 만드는 것</li>
+<li>학습 데이터에만 잘 맞는 모델은 실제 데이터에 대해 잘 맞지 않을 수 있음</li>
+<li>해결 방법<ul>
+<li>early stopping <ul>
+<li>training loss와 validation loss를 비교하여 validation loss가 증가하기 시작하면 학습을 중단</li>
+</ul>
+</li>
+<li>드롭아웃(Dropout)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Network Weight Initialization<ul>
+<li>가중치 초기화</li>
+<li>가중치 초기화를 잘못하면 학습이 잘 되지 않을 수 있음</li>
+<li>Xavier initialization</li>
+<li>He initialization</li>
+</ul>
+</li>
+<li>Learning Rate<ul>
+<li>학습률</li>
+<li>학습률을 잘못 설정하면 학습이 잘 되지 않을 수 있음</li>
+<li>학습률을 잘 설정하면 학습이 빠르게 되고, 학습률을 잘못 설정하면 학습이 느리게 되거나 학습이 잘 되지 않을 수 있음</li>
+</ul>
+</li>
+</ul>
+<h2 id="AlexNet-LeNet-VGG"><a href="#AlexNet-LeNet-VGG" class="headerlink" title="AlexNet, LeNet, VGG"></a>AlexNet, LeNet, VGG</h2><p>AlexNet -&gt; ZFNet -&gt; VGGNet  -&gt; GoogLeNet -&gt; ResNet -&gt; DenseNet -&gt; SENet</p>
+<h3 id="LeNet-5"><a href="#LeNet-5" class="headerlink" title="LeNet-5"></a>LeNet-5</h3><ul>
+<li>1998년에 발표된 최초의 CNN</li>
+<li>Conv -&gt; polling -&gt; Conv -&gt; polling -&gt; FC -&gt; FC</li>
+</ul>
+<h3 id="VGG"><a href="#VGG" class="headerlink" title="VGG"></a>VGG</h3><ul>
+<li>하드웨어에 옵티마이저 잘되어 있다</li>
+</ul>
+<h2 id="ResNet"><a href="#ResNet" class="headerlink" title="ResNet"></a>ResNet</h2><ul>
+<li>ReLu activation</li>
+<li>Batch Normalization<ul>
+<li>Optimization Landscape를 좋게 만들어 줌</li>
+</ul>
+</li>
+<li>skip connection<ul>
+<li>gradient vanishing 문제를 해결하기 위해 사용</li>
+<li>입력값을 출력값에 더해주는 방법</li>
+</ul>
+</li>
+</ul>
+<h1 id="참조"><a href="#참조" class="headerlink" title="참조"></a>참조</h1><hr>
+<ul>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/ashutosh1919/explainable-cnn">Explainable CNNs</a></li>
+</ul>
+</div></article><div class="post-meta__tag-list"><a class="post-meta__tags" href="../../../tags/Deep-Learning/">Deep Learning</a></div><nav id="pagination"><div class="prev-post pull-left"><a href="../2024-02-16-Grokking_Simplicity_16/"><i class="fa fa-chevron-left">  </i><span>CHAPTER 16 타임라인 사이에 자원 공유하기</span></a></div><div class="next-post pull-right"><a href="../2024-02-15-Grokking_Simplicity_15/"><span>CHAPTER 15 타임라인 격리하기</span><i class="fa fa-chevron-right"></i></a></div></nav><div id="disqus_thread"></div><script>var unused = null;
+var disqus_config = function () {
+  this.page.url = 'https://sejoung.github.io/2024/02/2024-02-15-deep_learning_1/';
+  this.page.identifier = '2024/02/2024-02-15-deep_learning_1/';
+  this.page.title = 'Deep Learning-1';
+}
+var d = document, s = d.createElement('script');
+s.src = "https://" + 'kimsejoung' +".disqus.com/embed.js";
+s.setAttribute('data-timestamp', '' + +new Date());
+(d.head || d.body).appendChild(s);</script><script id="dsq-count-scr" src="https://kimsejoung.disqus.com/count.js" async></script></div></div><footer class="footer-bg" style="background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Van_Gogh_-_Terrasse_des_Caf%C3%A9s_an_der_Place_du_Forum_in_Arles_am_Abend1.jpeg/1024px-Van_Gogh_-_Terrasse_des_Caf%C3%A9s_an_der_Place_du_Forum_in_Arles_am_Abend1.jpeg)"><div class="layout" id="footer"><div class="copyright">&copy;2017 - 2026 By sejoung kim</div><div class="framework-info"><span>Driven - </span><a target="_blank" rel="external nofollow noopener noreferrer" href="http://hexo.io"><span>Hexo</span></a><span class="footer-separator">|</span><span>Theme - </span><a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/Molunerfinn/hexo-theme-melody"><span>Melody</span></a></div><div class="busuanzi"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><span id="busuanzi_container_page_pv"><i class="fa fa-file-o"></i><span id="busuanzi_value_page_pv"></span><span></span></span></div></div></footer><i class="fa fa-arrow-up" id="go-up" aria-hidden="true"></i><script src="../../../js/third-party/anime.min.js"></script><script src="../../../js/third-party/jquery.min.js"></script><script src="../../../js/third-party/jquery.fancybox.min.js"></script><script src="../../../js/third-party/velocity.min.js"></script><script src="../../../js/third-party/velocity.ui.min.js"></script><script src="../../../js/utils.js?version=1.7.0"></script><script src="../../../js/fancybox.js?version=1.7.0"></script><script src="../../../js/sidebar.js?version=1.7.0"></script><script src="../../../js/copy.js?version=1.7.0"></script><script src="../../../js/fireworks.js?version=1.7.0"></script><script src="../../../js/transition.js?version=1.7.0"></script><script src="../../../js/scroll.js?version=1.7.0"></script><script src="../../../js/head.js?version=1.7.0"></script><script src="../../../js/search/local-search.js"></script><script>if(/Android|webOS|iPhone|iPod|iPad|BlackBerry/i.test(navigator.userAgent)) {
+  $('#nav').addClass('is-mobile')
+  $('footer').addClass('is-mobile')
+  $('#top-container').addClass('is-mobile')
+}</script><div class="search-dialog" id="local-search"><div class="search-dialog__title" id="local-search-title">Local search</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="Search for Posts"></div></div></div><hr><div id="local-search-results"><div id="local-hits"></div><div id="local-stats"><div class="local-search-stats__hr" id="hr"><span>Powered by</span> <a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/wzpan/hexo-generator-search" style="color:#49B1F5;">hexo-generator-search</a></div></div></div><span class="search-close-button"><i class="fa fa-times"></i></span></div><div class="search-mask"></div></body></html>

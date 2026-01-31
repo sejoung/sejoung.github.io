@@ -1,0 +1,144 @@
+<!DOCTYPE html><html lang="ko"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta name="description" content="합성곱(Convolution)"><meta name="keywords" content="Convolution Neural Networks,합성곱(Convolution),CNN"><meta name="author" content="sejoung kim"><meta name="copyright" content="sejoung kim"><title>합성곱(Convolution) | 폭간의 기술블로그</title><link rel="shortcut icon" href="../../../my-favicon.ico"><link rel="stylesheet" href="../../../css/index.css?version=1.7.0"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css?version=1.7.0"><meta name="format-detection" content="telephone=no"><meta http-equiv="x-dns-prefetch-control" content="on"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4136060060870959"></script><script>(adsbygoogle = window.adsbygoogle || []).push({
+  google_ad_client: '',
+  enable_page_level_ads: 'true'
+});
+</script><script async src="https://www.googletagmanager.com/gtag/js?id=G-NVRTGLD8RZ"></script><script>window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-NVRTGLD8RZ');</script><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"We didn't find any results for the search: ${query}"}},
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  }
+} </script><meta name="generator" content="Hexo 5.4.2"></head><body><i class="fa fa-arrow-right" id="toggle-sidebar" aria-hidden="true"></i><div id="sidebar" data-display="true"><div class="toggle-sidebar-info text-center"><span data-toggle="Toggle article">Toggle site</span><hr></div><div class="sidebar-toc"><div class="sidebar-toc__title">Catalog</div><div class="sidebar-toc__progress"><span class="progress-notice">You've read</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar"></div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%ED%95%A9%EC%84%B1%EA%B3%B1-Convolution"><span class="toc-number">1.</span> <span class="toc-text">합성곱(Convolution)</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Padding"><span class="toc-number">1.1.</span> <span class="toc-text">Padding</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Stride"><span class="toc-number">1.2.</span> <span class="toc-text">Stride</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%ED%95%84%ED%84%B0"><span class="toc-number">1.3.</span> <span class="toc-text">필터</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Max-Pooling"><span class="toc-number">1.4.</span> <span class="toc-text">Max Pooling</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Fully-Connected-Layer"><span class="toc-number">1.5.</span> <span class="toc-text">Fully Connected Layer</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%EA%B8%B0%EC%9A%B8%EA%B8%B0-%EC%86%8C%EC%8B%A4-gradient-vanishing"><span class="toc-number">1.6.</span> <span class="toc-text">기울기 소실(gradient vanishing)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#YOLO-You-Only-Look-Once"><span class="toc-number">1.7.</span> <span class="toc-text">YOLO(You Only Look Once)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#YOLO-DeepSort"><span class="toc-number">1.8.</span> <span class="toc-text">YOLO + DeepSort</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#U-Net"><span class="toc-number">1.9.</span> <span class="toc-text">U-Net</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#pre-processing"><span class="toc-number">1.10.</span> <span class="toc-text">pre-processing</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%ED%81%B4%EB%9E%98%EC%8A%A4-%EB%B6%88%EA%B7%A0%ED%98%95-class-imbalance"><span class="toc-number">1.11.</span> <span class="toc-text">클래스 불균형(class imbalance)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%EA%B3%BC%EC%A0%81%ED%95%A9-overfitting"><span class="toc-number">1.12.</span> <span class="toc-text">과적합(overfitting)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%EC%9D%B4%EB%AF%B8%EC%A7%80-%EC%A6%9D%EA%B0%95-augmentation"><span class="toc-number">1.13.</span> <span class="toc-text">이미지 증강(augmentation)</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%EC%B0%B8%EC%A1%B0"><span class="toc-number">2.</span> <span class="toc-text">참조</span></a></li></ol></div></div><div class="author-info hide"><div class="author-info__avatar text-center"><img src="https://avatars0.githubusercontent.com/u/4936005?s=400&amp;u=a679b941fe377418e7e4efcf916c6a636d7178ee&amp;v=4"></div><div class="author-info__name text-center">sejoung kim</div><div class="author-info__description text-center">Java, Kotlin 등 백엔드 개발 기술과 소프트웨어 엔지니어링 학습 내용을 정리하는 기술 블로그입니다.</div><div class="follow-button"><a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/sejoung">Follow Me</a></div><hr><div class="author-info-articles"><a class="author-info-articles__archives article-meta" href="../../../archives"><span class="pull-left">Articles</span><span class="pull-right">869</span></a><a class="author-info-articles__tags article-meta" href="../../../tags"><span class="pull-left">Tags</span><span class="pull-right">913</span></a><a class="author-info-articles__categories article-meta" href="../../../categories"><span class="pull-left">Categories</span><span class="pull-right">81</span></a></div><hr><div class="author-info-links"><div class="author-info-links__title text-center">Links</div><a class="author-info-links__name text-center" target="_blank" rel="external nofollow noopener noreferrer" href="https://blog.naver.com/sanaes">naverblog</a><a class="author-info-links__name text-center" target="_blank" rel="external nofollow noopener noreferrer" href="https://www.linkedin.com/in/sanaes/">linkedin</a><a class="author-info-links__name text-center" target="_blank" rel="external nofollow noopener noreferrer" href="https://www.slideshare.net/sejoung">slideshare</a></div></div></div><div id="content-outer"><div id="top-container" style="background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Van_Gogh_-_Terrasse_des_Caf%C3%A9s_an_der_Place_du_Forum_in_Arles_am_Abend1.jpeg/1024px-Van_Gogh_-_Terrasse_des_Caf%C3%A9s_an_der_Place_du_Forum_in_Arles_am_Abend1.jpeg)"><div id="page-header"><span class="pull-left"> <a id="site-name" href="../../../index.html">폭간의 기술블로그</a></span><i class="fa fa-bars toggle-menu pull-right" aria-hidden="true"></i><span class="pull-right menus">   <a class="site-page" href="/">Home</a><a class="site-page" href="/archives">Archives</a><a class="site-page" href="/tags">Tags</a><a class="site-page" href="/categories">Categories</a><a class="site-page" href="/privacy">Privacy</a><a class="site-page" href="/about">About</a><a class="site-page" href="/contact">Contact</a></span><span class="pull-right"><a class="site-page social-icon search"><i class="fa fa-search"></i><span> Search</span></a></span></div><div id="post-info"><div id="post-title">합성곱(Convolution)</div><div id="post-meta"><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2024-02-07</time><span class="post-meta__separator">|</span><i class="fa fa-inbox post-meta__icon" aria-hidden="true"></i><a class="post-meta__categories" href="../../../categories/Machine-Learning/">Machine Learning</a><span class="post-meta__separator">|</span><i class="fa fa-comment-o post-meta__icon" aria-hidden="true"></i><a href="#disqus_thread"><span class="disqus-comment-count" data-disqus-identifier="2024/02/2024-02-07-convolution/"></span></a></div></div></div><div class="layout" id="content-inner"><article id="post"><div class="article-container" id="post-content"><h1 id="합성곱-Convolution"><a href="#합성곱-Convolution" class="headerlink" title="합성곱(Convolution)"></a>합성곱(Convolution)</h1><ul>
+<li>grayscale 0~255 사이의 값을 가지는 이미지를 사용한다.</li>
+<li>RGB 이미지는 channel이 3개</li>
+<li>필터 연산 : 이미지에 필터를 적용하는 연산 방법</li>
+<li>필터 : 3x3, 5x5, 7x7 등의 크기를 가지는 행렬</li>
+<li>연산 : weighted sum</li>
+</ul>
+<p>이미지 정보를 나열하면 지역적 특성이 사라져서 정보를 잃어버릴 수 있다.<br>Convolution을 사용하면 지역적 특성을 유지하면서 정보를 추출할 수 있다.</p>
+<h2 id="Padding"><a href="#Padding" class="headerlink" title="Padding"></a>Padding</h2><p>그냥 합성곱 연산을 하면 이미지의 크기가 줄어들게 된다. 이를 방지하기 위해 패딩을 사용한다.(주로 0으로 채움 zero padding)</p>
+<h2 id="Stride"><a href="#Stride" class="headerlink" title="Stride"></a>Stride</h2><p>합성곱 연산을 할 때 필터를 몇 칸씩 이동할지를 결정하는 값 최종 데이터가 줄어든다</p>
+<h2 id="필터"><a href="#필터" class="headerlink" title="필터"></a>필터</h2><ul>
+<li>feature map : 필터를 적용한 결과</li>
+<li>channel : 필터의 개수</li>
+</ul>
+<h2 id="Max-Pooling"><a href="#Max-Pooling" class="headerlink" title="Max Pooling"></a>Max Pooling</h2><ul>
+<li>feature map에서 가장 큰수만 남기고 없애는 연산</li>
+<li>파라미터수 감소 시키기 위해 사용</li>
+</ul>
+<h2 id="Fully-Connected-Layer"><a href="#Fully-Connected-Layer" class="headerlink" title="Fully Connected Layer"></a>Fully Connected Layer</h2><ul>
+<li>fully connected layer : 모든 뉴런이 연결되어 있는 층</li>
+<li>노드 갯수가 class의 갯수</li>
+</ul>
+<h2 id="기울기-소실-gradient-vanishing"><a href="#기울기-소실-gradient-vanishing" class="headerlink" title="기울기 소실(gradient vanishing)"></a>기울기 소실(gradient vanishing)</h2><ul>
+<li>학습이 진행될수록 gradient가 점점 작아져서 학습이 잘 되지 않는 문제</li>
+<li>ReLU를 사용하여 해결</li>
+<li>ReLU : 0보다 작은 값은 0으로, 0보다 큰 값은 그대로 출력하는 함수</li>
+<li>skip connection : 입력값을 출력값에 더해주는 방법</li>
+</ul>
+<h2 id="YOLO-You-Only-Look-Once"><a href="#YOLO-You-Only-Look-Once" class="headerlink" title="YOLO(You Only Look Once)"></a>YOLO(You Only Look Once)</h2><ul>
+<li>one stage object detection</li>
+<li>이미지를 그리드로 나누고 각 그리드에 대해 bounding box와 class를 예측하는 방법</li>
+</ul>
+<h2 id="YOLO-DeepSort"><a href="#YOLO-DeepSort" class="headerlink" title="YOLO + DeepSort"></a>YOLO + DeepSort</h2><ul>
+<li>YOLO로 객체를 인식하고 DeepSort로 객체를 추적하는 방법</li>
+<li>DeepSort : id switch, occlusion, missing detection 문제를 해결하기 위해 사용</li>
+<li>Deep: deep association metric learning</li>
+<li>SORT : Simple Online and Realtime Tracking<ul>
+<li>Kalman filter를 사용하여 객체를 추적하는 방법</li>
+<li>hungarian algorithm을 사용하여 객체를 매칭하는 방법</li>
+</ul>
+</li>
+</ul>
+<h2 id="U-Net"><a href="#U-Net" class="headerlink" title="U-Net"></a>U-Net</h2><ul>
+<li>이미지 분할을 위한 네트워크</li>
+<li>왼쪽 부분은 이미지를 줄이는 부분(contracting path, downsampling path)</li>
+<li>오른쪽 부분은 이미지를 복원하는 부분(expansive path, upsampling path)</li>
+<li>skip connection을 사용하여 이미지의 지역적 특성을 유지하면서 이미지를 복원한다.</li>
+</ul>
+<h2 id="pre-processing"><a href="#pre-processing" class="headerlink" title="pre-processing"></a>pre-processing</h2><ul>
+<li>resize : 이미지의 크기를 줄이거나 늘리는 작업(이미지의 크기를 통일시키기 위해 사용) resoultion이 다르면 학습이 잘 되지 않을 수 있다.</li>
+<li>color : 이미지의 색상을 변경하는 작업</li>
+<li>normalization : 이미지의 픽셀값을 0~1사이의 값으로 변경하는 작업, min-max scaling</li>
+</ul>
+<h2 id="클래스-불균형-class-imbalance"><a href="#클래스-불균형-class-imbalance" class="headerlink" title="클래스 불균형(class imbalance)"></a>클래스 불균형(class imbalance)</h2><ul>
+<li><p>클래스 간의 데이터의 갯수가 차이가 나는 경우</p>
+</li>
+<li><p>다양성이 작을 경우</p>
+</li>
+<li><p>over-sampling : 데이터의 갯수를 늘리는 방법(중복추출로 양을 늘림) 다양성이 충분하면 이것을 사용해도 된다</p>
+</li>
+<li><p>data augmentation : 이미지를 회전, 반전, 확대, 축소 등의 변형을 주어서 데이터의 다양성을 늘리는 방법</p>
+<ul>
+<li>epoch를 증가시킨다</li>
+<li>random rain 같은 트랜스퍼를 진행했을때 다른데도 같이 진행해줘야 된다</li>
+</ul>
+</li>
+<li><p>focal loss : 클래스 간의 데이터의 갯수가 차이가 나는 경우 사용하는 loss function</p>
+<ul>
+<li>데이터의 갯수가 적은 클래스에 가중치를 더 주는 방법</li>
+<li>데이터의 갯수가 많은 클래스에 가중치를 적게 주는 방법</li>
+</ul>
+</li>
+</ul>
+<h2 id="과적합-overfitting"><a href="#과적합-overfitting" class="headerlink" title="과적합(overfitting)"></a>과적합(overfitting)</h2><ul>
+<li>학습 데이터에 대해서는 정확도가 높지만, 테스트 데이터에 대해서는 정확도가 낮은 경우</li>
+<li>일반화 성능을 높히는것이 목적이다</li>
+<li>검증 손실이 증가하기 시작하면 학습을 중단한다</li>
+<li>일반화(regularization)항 추가<ul>
+<li>cost 계산시에 weight의 크기를 더해준다</li>
+</ul>
+</li>
+<li>앙상블(ensemble) : 여러 모델을 합쳐서 사용하는 방법<ul>
+<li>소프트 보팅(soft voting) : 각 모델의 예측값을 평균내어 사용하는 방법</li>
+</ul>
+</li>
+<li>dropout : 학습시에 랜덤하게 뉴런을 제거하는 방법<ul>
+<li>학습시에만 사용하고 예측시에는 사용하지 않는다</li>
+</ul>
+</li>
+</ul>
+<h2 id="이미지-증강-augmentation"><a href="#이미지-증강-augmentation" class="headerlink" title="이미지 증강(augmentation)"></a>이미지 증강(augmentation)</h2><ul>
+<li>transformation : 이미지를 회전, 반전, 확대, 축소 등의 변형을 주어서 데이터의 다양성을 늘리는 방법<ul>
+<li>flip : 이미지를 반전시키는 방법</li>
+<li>rotation : 이미지를 회전시키는 방법</li>
+<li>blur : 이미지를 흐리게 하는 방법</li>
+<li>hueSaturation : 이미지의 채도를 변경하는 방법</li>
+<li>gaussian noise : 이미지에 가우시안 노이즈를 추가하는 방법</li>
+<li>CoarseDropout : 이미지의 일부분을 제거하는 방법</li>
+<li>GrayScale : 이미지를 흑백으로 변경하는 방법</li>
+<li>Mixup : 이미지를 섞는 방법</li>
+<li>CutMix : 이미지를 잘라서 섞는 방법</li>
+<li>Mosiac : 이미지를 섞는 방법</li>
+<li>RandomErasing : 이미지의 일부분을 지우는 방법</li>
+<li>RandomRain : 이미지에 빗방울을 추가하는 방법</li>
+</ul>
+</li>
+</ul>
+<h1 id="참조"><a href="#참조" class="headerlink" title="참조"></a>참조</h1><hr>
+<ul>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://setosa.io/ev/image-kernels/">Image Kernels</a></li>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://neurohive.io/en/popular-networks/vgg16/">VGG16 – Convolutional Network for Classification and Detection</a></li>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://oi.readthedocs.io/en/latest/">Organize everything I know</a></li>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/darkpgmr/DarkLabel">DarkLabel</a></li>
+</ul>
+</div></article><div class="post-meta__tag-list"><a class="post-meta__tags" href="../../../tags/Convolution-Neural-Networks/">Convolution Neural Networks</a><a class="post-meta__tags" href="../../../tags/%ED%95%A9%EC%84%B1%EA%B3%B1-Convolution/">합성곱(Convolution)</a><a class="post-meta__tags" href="../../../tags/CNN/">CNN</a></div><nav id="pagination"><div class="prev-post pull-left"><a href="../2024-02-13-Grokking_Simplicity_13/"><i class="fa fa-chevron-left">  </i><span>CHAPTER 13 함수형 도구 체이닝</span></a></div><div class="next-post pull-right"><a href="../2024-02-07-Grokking_Simplicity_12/"><span>CHAPTER 12 함수형 반복</span><i class="fa fa-chevron-right"></i></a></div></nav><div id="disqus_thread"></div><script>var unused = null;
+var disqus_config = function () {
+  this.page.url = 'https://sejoung.github.io/2024/02/2024-02-07-convolution/';
+  this.page.identifier = '2024/02/2024-02-07-convolution/';
+  this.page.title = '합성곱(Convolution)';
+}
+var d = document, s = d.createElement('script');
+s.src = "https://" + 'kimsejoung' +".disqus.com/embed.js";
+s.setAttribute('data-timestamp', '' + +new Date());
+(d.head || d.body).appendChild(s);</script><script id="dsq-count-scr" src="https://kimsejoung.disqus.com/count.js" async></script></div></div><footer class="footer-bg" style="background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Van_Gogh_-_Terrasse_des_Caf%C3%A9s_an_der_Place_du_Forum_in_Arles_am_Abend1.jpeg/1024px-Van_Gogh_-_Terrasse_des_Caf%C3%A9s_an_der_Place_du_Forum_in_Arles_am_Abend1.jpeg)"><div class="layout" id="footer"><div class="copyright">&copy;2017 - 2026 By sejoung kim</div><div class="framework-info"><span>Driven - </span><a target="_blank" rel="external nofollow noopener noreferrer" href="http://hexo.io"><span>Hexo</span></a><span class="footer-separator">|</span><span>Theme - </span><a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/Molunerfinn/hexo-theme-melody"><span>Melody</span></a></div><div class="busuanzi"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><span id="busuanzi_container_page_pv"><i class="fa fa-file-o"></i><span id="busuanzi_value_page_pv"></span><span></span></span></div></div></footer><i class="fa fa-arrow-up" id="go-up" aria-hidden="true"></i><script src="../../../js/third-party/anime.min.js"></script><script src="../../../js/third-party/jquery.min.js"></script><script src="../../../js/third-party/jquery.fancybox.min.js"></script><script src="../../../js/third-party/velocity.min.js"></script><script src="../../../js/third-party/velocity.ui.min.js"></script><script src="../../../js/utils.js?version=1.7.0"></script><script src="../../../js/fancybox.js?version=1.7.0"></script><script src="../../../js/sidebar.js?version=1.7.0"></script><script src="../../../js/copy.js?version=1.7.0"></script><script src="../../../js/fireworks.js?version=1.7.0"></script><script src="../../../js/transition.js?version=1.7.0"></script><script src="../../../js/scroll.js?version=1.7.0"></script><script src="../../../js/head.js?version=1.7.0"></script><script src="../../../js/search/local-search.js"></script><script>if(/Android|webOS|iPhone|iPod|iPad|BlackBerry/i.test(navigator.userAgent)) {
+  $('#nav').addClass('is-mobile')
+  $('footer').addClass('is-mobile')
+  $('#top-container').addClass('is-mobile')
+}</script><div class="search-dialog" id="local-search"><div class="search-dialog__title" id="local-search-title">Local search</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="Search for Posts"></div></div></div><hr><div id="local-search-results"><div id="local-hits"></div><div id="local-stats"><div class="local-search-stats__hr" id="hr"><span>Powered by</span> <a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/wzpan/hexo-generator-search" style="color:#49B1F5;">hexo-generator-search</a></div></div></div><span class="search-close-button"><i class="fa fa-times"></i></span></div><div class="search-mask"></div></body></html>

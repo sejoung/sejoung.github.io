@@ -1,0 +1,104 @@
+<!DOCTYPE html><html lang="ko"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta name="description" content="Stable Diffusion 이해를 위한 자료 모음"><meta name="keywords" content="Diffusion,Stable Diffusion,스테이블 디퓨전"><meta name="author" content="sejoung kim"><meta name="copyright" content="sejoung kim"><title>Stable Diffusion 이해를 위한 자료 모음 | 폭간의 기술블로그</title><link rel="shortcut icon" href="../../../my-favicon.ico"><link rel="stylesheet" href="../../../css/index.css?version=1.7.0"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css?version=1.7.0"><meta name="format-detection" content="telephone=no"><meta http-equiv="x-dns-prefetch-control" content="on"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4136060060870959"></script><script>(adsbygoogle = window.adsbygoogle || []).push({
+  google_ad_client: '',
+  enable_page_level_ads: 'true'
+});
+</script><script async src="https://www.googletagmanager.com/gtag/js?id=G-NVRTGLD8RZ"></script><script>window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-NVRTGLD8RZ');</script><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"We didn't find any results for the search: ${query}"}},
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  }
+} </script><meta name="generator" content="Hexo 5.4.2"></head><body><i class="fa fa-arrow-right" id="toggle-sidebar" aria-hidden="true"></i><div id="sidebar" data-display="true"><div class="toggle-sidebar-info text-center"><span data-toggle="Toggle article">Toggle site</span><hr></div><div class="sidebar-toc"><div class="sidebar-toc__title">Catalog</div><div class="sidebar-toc__progress"><span class="progress-notice">You've read</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar"></div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Stable-Diffusion-%EC%9D%B4%ED%95%B4%EB%A5%BC-%EC%9C%84%ED%95%9C-%EC%9E%90%EB%A3%8C-%EB%AA%A8%EC%9D%8C"><span class="toc-number">1.</span> <span class="toc-text">Stable Diffusion 이해를 위한 자료 모음</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Diffusion-Model"><span class="toc-number">1.1.</span> <span class="toc-text">Diffusion Model</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Denoising-Diffusion-Probabilistic-Models-DDPM"><span class="toc-number">1.2.</span> <span class="toc-text">Denoising Diffusion Probabilistic Models (DDPM)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Denoising-Diffusion-Implicit-Models-DDIM"><span class="toc-number">1.3.</span> <span class="toc-text">Denoising Diffusion Implicit Models (DDIM)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#VariationalAutoEncoder-VAE"><span class="toc-number">1.4.</span> <span class="toc-text">VariationalAutoEncoder (VAE)</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%EC%B0%B8%EC%A1%B0"><span class="toc-number">2.</span> <span class="toc-text">참조</span></a></li></ol></div></div><div class="author-info hide"><div class="author-info__avatar text-center"><img src="https://avatars0.githubusercontent.com/u/4936005?s=400&amp;u=a679b941fe377418e7e4efcf916c6a636d7178ee&amp;v=4"></div><div class="author-info__name text-center">sejoung kim</div><div class="author-info__description text-center">Java, Kotlin 등 백엔드 개발 기술과 소프트웨어 엔지니어링 학습 내용을 정리하는 기술 블로그입니다.</div><div class="follow-button"><a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/sejoung">Follow Me</a></div><hr><div class="author-info-articles"><a class="author-info-articles__archives article-meta" href="../../../archives"><span class="pull-left">Articles</span><span class="pull-right">869</span></a><a class="author-info-articles__tags article-meta" href="../../../tags"><span class="pull-left">Tags</span><span class="pull-right">913</span></a><a class="author-info-articles__categories article-meta" href="../../../categories"><span class="pull-left">Categories</span><span class="pull-right">81</span></a></div><hr><div class="author-info-links"><div class="author-info-links__title text-center">Links</div><a class="author-info-links__name text-center" target="_blank" rel="external nofollow noopener noreferrer" href="https://blog.naver.com/sanaes">naverblog</a><a class="author-info-links__name text-center" target="_blank" rel="external nofollow noopener noreferrer" href="https://www.linkedin.com/in/sanaes/">linkedin</a><a class="author-info-links__name text-center" target="_blank" rel="external nofollow noopener noreferrer" href="https://www.slideshare.net/sejoung">slideshare</a></div></div></div><div id="content-outer"><div id="top-container" style="background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Van_Gogh_-_Terrasse_des_Caf%C3%A9s_an_der_Place_du_Forum_in_Arles_am_Abend1.jpeg/1024px-Van_Gogh_-_Terrasse_des_Caf%C3%A9s_an_der_Place_du_Forum_in_Arles_am_Abend1.jpeg)"><div id="page-header"><span class="pull-left"> <a id="site-name" href="../../../index.html">폭간의 기술블로그</a></span><i class="fa fa-bars toggle-menu pull-right" aria-hidden="true"></i><span class="pull-right menus">   <a class="site-page" href="/">Home</a><a class="site-page" href="/archives">Archives</a><a class="site-page" href="/tags">Tags</a><a class="site-page" href="/categories">Categories</a><a class="site-page" href="/privacy">Privacy</a><a class="site-page" href="/about">About</a><a class="site-page" href="/contact">Contact</a></span><span class="pull-right"><a class="site-page social-icon search"><i class="fa fa-search"></i><span> Search</span></a></span></div><div id="post-info"><div id="post-title">Stable Diffusion 이해를 위한 자료 모음</div><div id="post-meta"><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2023-10-31</time><span class="post-meta__separator">|</span><i class="fa fa-inbox post-meta__icon" aria-hidden="true"></i><a class="post-meta__categories" href="../../../categories/Machine-Learning/">Machine Learning</a><span class="post-meta__separator">|</span><i class="fa fa-comment-o post-meta__icon" aria-hidden="true"></i><a href="#disqus_thread"><span class="disqus-comment-count" data-disqus-identifier="2023/10/2023-10-31-Stable_Diffusion_link/"></span></a></div></div></div><div class="layout" id="content-inner"><article id="post"><div class="article-container" id="post-content"><h1 id="Stable-Diffusion-이해를-위한-자료-모음"><a href="#Stable-Diffusion-이해를-위한-자료-모음" class="headerlink" title="Stable Diffusion 이해를 위한 자료 모음"></a>Stable Diffusion 이해를 위한 자료 모음</h1><h2 id="Diffusion-Model"><a href="#Diffusion-Model" class="headerlink" title="Diffusion Model"></a>Diffusion Model</h2><p><a target="_blank" rel="external nofollow noopener noreferrer" href="https://arxiv.org/abs/1503.03585">https://arxiv.org/abs/1503.03585</a></p>
+<p>2015년 발표</p>
+<p><code>Diffusion(확산)은 액체나 기체에 다른 물질이 섞이고, 그것이 조금씩 번져가다가 마지막에는 일률적인 농도로 바뀌는 현상이다.</code> 위키피디아</p>
+<p><img src="https://mblogthumb-phinf.pstatic.net/20131015_167/todaudrhkwkd_13817975412967wfk3_JPEG/1.jpg?type=w2" alt="확산"></p>
+<p>물리의 확산 현상에 영감을 받아 모델을 설계</p>
+<p>가우시안 노이즈</p>
+<p>마르코프 체인(특정 상태의 확률은 오직 과거의 기인한다)</p>
+<p><img src="https://velog.velcdn.com/images/fermi99/post/364897c1-5d8f-4951-ab7e-128bfe699b95/image.png" alt="디퓨전모델"></p>
+<h2 id="Denoising-Diffusion-Probabilistic-Models-DDPM"><a href="#Denoising-Diffusion-Probabilistic-Models-DDPM" class="headerlink" title="Denoising Diffusion Probabilistic Models (DDPM)"></a>Denoising Diffusion Probabilistic Models (DDPM)</h2><p><a target="_blank" rel="external nofollow noopener noreferrer" href="https://arxiv.org/abs/2006.11239">https://arxiv.org/abs/2006.11239</a></p>
+<p>유넷을 활용 → 정답 상태를 유추</p>
+<p>정답만 유추 하기 때문에 좀더 간단해짐 → 노이즈 성분을 예측하니깐 조금 더 품질이 좋아짐</p>
+<p>해결 컨셉은 노이즈화 할때의 수식을 조금 다르게 수정</p>
+<p><code>문제점 : 너무 느리다 스텝이 1000 사용해야 됨(GAN 은 1번)</code></p>
+<h2 id="Denoising-Diffusion-Implicit-Models-DDIM"><a href="#Denoising-Diffusion-Implicit-Models-DDIM" class="headerlink" title="Denoising Diffusion Implicit Models (DDIM)"></a>Denoising Diffusion Implicit Models (DDIM)</h2><p><a target="_blank" rel="external nofollow noopener noreferrer" href="https://arxiv.org/abs/2010.02502">https://arxiv.org/abs/2010.02502</a></p>
+<p>아이디어 느리니깐 스템을 10, 20, 50 ,100 1000 으로 사용해도 크게 나빠지지 않는다.</p>
+<p><img src="https://user-images.githubusercontent.com/79881119/233402047-07361544-87f3-4d51-8d6f-718fab06dcfc.png" alt="DDIM"></p>
+<h2 id="VariationalAutoEncoder-VAE"><a href="#VariationalAutoEncoder-VAE" class="headerlink" title="VariationalAutoEncoder (VAE)"></a>VariationalAutoEncoder (VAE)</h2><ul>
+<li>supervised learning : 데이터와 라벨이 페어<ul>
+<li>classification</li>
+<li>object detection</li>
+<li>semantic segmentation</li>
+<li>image captioning</li>
+</ul>
+</li>
+<li>unsupervised learning : 데이터만 존재<ul>
+<li>clustering</li>
+<li>dimensionality reduction</li>
+<li>feature learning</li>
+<li>density estimation</li>
+</ul>
+</li>
+</ul>
+<p>이미지를 넣어서 차원이 작은 벡터를 나오면 이것으로 이미지를 만든다 </p>
+<p>explicit density estimation : 확률밀도함수를 직접적으로 구하는 방법</p>
+<p>implicit density estimation :  확률밀도함수를 직접적으로 구하지 않고, 확률밀도함수를 구하는 것을 목적으로 하지 않는 방법</p>
+<p>작은 차원에 피처만으로 이미지를 만들수 있다</p>
+<p>최대 가능도를 써서 트레이닝을 시킨다 </p>
+<p>문제는 계산을 할수가 없다 실제 값을 아는게 아니라 샘플링만 가능</p>
+<p><img src="https://miro.medium.com/v2/resize:fit:720/format:webp/1*_5GpdejeOvt61ew4aPtT_g.png"></p>
+<p><img src="https://github.com/CompVis/latent-diffusion/raw/main/assets/modelfigure.png" alt="LDM"></p>
+<ul>
+<li>denoising 과정에서 autoencoder를 사용</li>
+<li>denoising이 pixel space 가 아닌 latent space 에서 일어남(픽셀단위가 아니라 인코딩된 잠재공간 내에서 노이즈를 추가 제거)</li>
+<li>cross-attention layers를(transformer 아키텍처?) 도입함으로 다른 도메인 conditioning 을 같이 사용할수 있게됨 -&gt;</li>
+</ul>
+<h1 id="참조"><a href="#참조" class="headerlink" title="참조"></a>참조</h1><hr>
+<ul>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/CompVis/latent-diffusion">Latent Diffusion Models</a></li>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/CompVis/stable-diffusion">Stable Diffusion</a></li>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://ffighting.net/deep-learning-paper-review/diffusion-model/diffusion-model-basic/">Diffusion Model 설명 – 기초부터 응용까지</a></li>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://ffighting.net/deep-learning-paper-review/diffusion-model/stable-diffusion/">Stable Diffusion : High-Resolution Image Synthesis with Latent Diffusion Models</a></li>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://www.youtube.com/watch?v=AVvlDmhHgC4">GAN: Generative Adversarial Networks (꼼꼼한 딥러닝 논문 리뷰와 코드 실습)</a></li>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://www.youtube.com/watch?v=sSxdQq9CCx0">머신러닝&#x2F;딥러닝 강의 - 004 UNet 네트워크 구현하기</a></li>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://www.youtube.com/watch?reload=9&v=n_FDGMr4MxE">U-Net: Convolutional Networks for Biomedical Image Segmentation (MICCAI 2015)</a></li>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://www.youtube.com/watch?v=7fBQDaJkcSU">Stable Diffusion 논문 리뷰</a></li>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://laion.ai/">laion.ai</a></li>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://stability.ai/">stability.ai</a></li>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://www.youtube.com/watch?v=e2rFsn93o0U">불과 1년 만의 쾌거, 생성 모델 특집 - Diffusion Model 이 이루어낸 모든 것을 AI 전문가로부터 들어봅니다!</a></li>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://www.youtube.com/watch?v=WQuwkTKvUfg">요즘 핫한 생성모델 stable diffusion 찍먹해보기</a></li>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://www.youtube.com/watch?v=nthpXARTduk">guided diffusion에서 StableDiffusion, 그리고 Plug&amp;Play와 DiffStyle까지</a></li>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://dacon.io/codeshare/4652">가우시안 노이즈(Gaussian Noise)</a></li>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://www.youtube.com/watch?v=uFoGaIVHfoE">Diffusion Model 수학이 포함된 tutorial</a></li>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://drive.google.com/file/d/1u8EWfDvaJQGKKC4akQDy50kP-qF_MT09/view?pli=1">Diffusion Model 수학이 포함된 tutorial 발표자료</a></li>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://jang-inspiration.com/ddpm-2">[논문리뷰] DDPM: Denoising Diffusion Probabilistic Model</a></li>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://velog.io/@hanlyang0522/DDPM-Denoising-Diffusion-Probabilistic-Models-%EB%85%BC%EB%AC%B8-%EB%A6%AC%EB%B7%B0">DDPM: Denoising Diffusion Probabilistic Models 논문 리뷰</a></li>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://junia3.github.io/blog/ddim">DDIM(Denoising Diffusion Implicit Models) 이해하기</a></li>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://www.youtube.com/watch?v=zcEe78I_4TU">[DLD 2022] Denoising Diffusion Implicit Models</a></li>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://arxiv.org/abs/2010.02502">Denoising Diffusion Implicit Models</a></li>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://arxiv.org/abs/2006.11239">Denoising Diffusion Probabilistic Models</a></li>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://arxiv.org/abs/1503.03585">Deep Unsupervised Learning using Nonequilibrium Thermodynamics</a></li>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://pebpung.github.io/autoencoder/2021/09/11/Auto-Encoder-1.html">오토인코더(AutoEncoder)</a></li>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://www.youtube.com/watch?v=54hyK1J4wTc">[#32.Lec] AutoEncoder and Variational AutoEncoder - 딥러닝 홀로서기</a></li>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://bookdown.org/mathemedicine/Stat_book/probability-vs-likelihood.html">Chapter 2 확률(Probability) vs 가능도(Likelihood)</a></li>
+</ul>
+</div></article><div class="post-meta__tag-list"><a class="post-meta__tags" href="../../../tags/Diffusion/">Diffusion</a><a class="post-meta__tags" href="../../../tags/Stable-Diffusion/">Stable Diffusion</a><a class="post-meta__tags" href="../../../tags/%EC%8A%A4%ED%85%8C%EC%9D%B4%EB%B8%94-%EB%94%94%ED%93%A8%EC%A0%84/">스테이블 디퓨전</a></div><nav id="pagination"><div class="prev-post pull-left"><a href="../../11/2023-11-02-Designing_Data_Intensive_Applications_chapter1/"><i class="fa fa-chevron-left">  </i><span>01장: 신뢰할 수 있고 확장 가능하며 유지보수하기 쉬운 애플리케이션</span></a></div><div class="next-post pull-right"><a href="../2023-10-30-What_are_Diffusion_Models/"><span>Diffusion Models 이란</span><i class="fa fa-chevron-right"></i></a></div></nav><div id="disqus_thread"></div><script>var unused = null;
+var disqus_config = function () {
+  this.page.url = 'https://sejoung.github.io/2023/10/2023-10-31-Stable_Diffusion_link/';
+  this.page.identifier = '2023/10/2023-10-31-Stable_Diffusion_link/';
+  this.page.title = 'Stable Diffusion 이해를 위한 자료 모음';
+}
+var d = document, s = d.createElement('script');
+s.src = "https://" + 'kimsejoung' +".disqus.com/embed.js";
+s.setAttribute('data-timestamp', '' + +new Date());
+(d.head || d.body).appendChild(s);</script><script id="dsq-count-scr" src="https://kimsejoung.disqus.com/count.js" async></script></div></div><footer class="footer-bg" style="background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Van_Gogh_-_Terrasse_des_Caf%C3%A9s_an_der_Place_du_Forum_in_Arles_am_Abend1.jpeg/1024px-Van_Gogh_-_Terrasse_des_Caf%C3%A9s_an_der_Place_du_Forum_in_Arles_am_Abend1.jpeg)"><div class="layout" id="footer"><div class="copyright">&copy;2017 - 2026 By sejoung kim</div><div class="framework-info"><span>Driven - </span><a target="_blank" rel="external nofollow noopener noreferrer" href="http://hexo.io"><span>Hexo</span></a><span class="footer-separator">|</span><span>Theme - </span><a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/Molunerfinn/hexo-theme-melody"><span>Melody</span></a></div><div class="busuanzi"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><span id="busuanzi_container_page_pv"><i class="fa fa-file-o"></i><span id="busuanzi_value_page_pv"></span><span></span></span></div></div></footer><i class="fa fa-arrow-up" id="go-up" aria-hidden="true"></i><script src="../../../js/third-party/anime.min.js"></script><script src="../../../js/third-party/jquery.min.js"></script><script src="../../../js/third-party/jquery.fancybox.min.js"></script><script src="../../../js/third-party/velocity.min.js"></script><script src="../../../js/third-party/velocity.ui.min.js"></script><script src="../../../js/utils.js?version=1.7.0"></script><script src="../../../js/fancybox.js?version=1.7.0"></script><script src="../../../js/sidebar.js?version=1.7.0"></script><script src="../../../js/copy.js?version=1.7.0"></script><script src="../../../js/fireworks.js?version=1.7.0"></script><script src="../../../js/transition.js?version=1.7.0"></script><script src="../../../js/scroll.js?version=1.7.0"></script><script src="../../../js/head.js?version=1.7.0"></script><script src="../../../js/search/local-search.js"></script><script>if(/Android|webOS|iPhone|iPod|iPad|BlackBerry/i.test(navigator.userAgent)) {
+  $('#nav').addClass('is-mobile')
+  $('footer').addClass('is-mobile')
+  $('#top-container').addClass('is-mobile')
+}</script><div class="search-dialog" id="local-search"><div class="search-dialog__title" id="local-search-title">Local search</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="Search for Posts"></div></div></div><hr><div id="local-search-results"><div id="local-hits"></div><div id="local-stats"><div class="local-search-stats__hr" id="hr"><span>Powered by</span> <a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/wzpan/hexo-generator-search" style="color:#49B1F5;">hexo-generator-search</a></div></div></div><span class="search-close-button"><i class="fa fa-times"></i></span></div><div class="search-mask"></div></body></html>
