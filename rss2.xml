@@ -7,7 +7,7 @@
     <link>https://sejoung.github.io/</link>
     <atom:link href="/rss2.xml" rel="self" type="application/rss+xml"/>
     
-    <description>잘정리하자</description>
+    <description>Java, Kotlin 등 백엔드 개발 기술과 소프트웨어 엔지니어링 학습 내용을 정리하는 기술 블로그입니다.</description>
     <pubDate>Sat, 10 Jan 2026 06:21:00 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
