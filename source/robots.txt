@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: http://sejoung.github.io/sitemap.xml
+Sitemap: https://sejoung.github.io/sitemap.xml
