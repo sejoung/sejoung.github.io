@@ -5,6 +5,12 @@
     .copyright!= `&copy;${theme.since} - ${nowYear} By ${config.author}`
   else
     .copyright!= `&copy;${nowYear} By ${config.author}`
+  .footer-links
+    a(href='/privacy') Privacy
+    span.footer-separator |
+    a(href='/terms') Terms
+    span.footer-separator |
+    a(href='/contact') Contact
   .framework-info
     span= _p('footer.driven') + ' - '
     a(href='http://hexo.io')
