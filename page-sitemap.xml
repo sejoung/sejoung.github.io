@@ -10,8 +10,8 @@
     
     
     <url>
-        <loc>https://sejoung.github.io/privacy/</loc>
-        <lastmod>2026-01-31T13:49:37.673Z</lastmod>
+        <loc>https://sejoung.github.io/about/</loc>
+        <lastmod>2026-02-08T12:19:30.341Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
@@ -19,8 +19,17 @@
     
     
     <url>
-        <loc>https://sejoung.github.io/about/</loc>
-        <lastmod>2026-01-31T13:48:39.646Z</lastmod>
+        <loc>https://sejoung.github.io/terms/</loc>
+        <lastmod>2026-02-08T12:19:30.341Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    
+    
+    <url>
+        <loc>https://sejoung.github.io/privacy/</loc>
+        <lastmod>2026-01-31T13:49:37.673Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>

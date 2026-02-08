@@ -25,14 +25,6 @@
     </url>
 
     <url>
-        <loc>https://sejoung.github.io/2025/05/2025-05-16-nvidia_drive_update_ubuntu/</loc>
-        <lastmod>2026-01-10T06:04:44.095Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>https://sejoung.github.io/2025/05/2025-05-27-symlinks_windows/</loc>
         <lastmod>2026-01-10T06:04:44.095Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -146,14 +138,6 @@
 
     <url>
         <loc>https://sejoung.github.io/2023/10/2023-10-18-ubuntu_cuda_install/</loc>
-        <lastmod>2024-12-12T20:00:38.679Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://sejoung.github.io/2024/10/2024-10-11-train_lora_flux/</loc>
         <lastmod>2024-12-12T20:00:38.679Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -489,14 +473,6 @@
     </url>
 
     <url>
-        <loc>https://sejoung.github.io/2024/05/2024-05-10-LLM_link/</loc>
-        <lastmod>2024-05-13T13:18:00.897Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>https://sejoung.github.io/2024/05/2024-05-02-tidy_first_PART3/</loc>
         <lastmod>2024-05-09T12:31:09.181Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -538,14 +514,6 @@
 
     <url>
         <loc>https://sejoung.github.io/2024/03/2024-03-18-lora_tool/</loc>
-        <lastmod>2024-04-29T12:18:33.051Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://sejoung.github.io/2024/03/2024-03-11-Semantic_Matching/</loc>
         <lastmod>2024-04-29T12:18:33.051Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -977,14 +945,6 @@
     </url>
 
     <url>
-        <loc>https://sejoung.github.io/2024/01/2024-01-08-comfyui_examples/</loc>
-        <lastmod>2024-04-29T12:18:33.045Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>https://sejoung.github.io/2023/12/2023-12-27-five_lines_of_code_5/</loc>
         <lastmod>2024-04-29T12:18:33.044Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -1058,14 +1018,6 @@
 
     <url>
         <loc>https://sejoung.github.io/2023/12/2023-12-12-Designing_Data_Intensive_Applications_chapter11/</loc>
-        <lastmod>2024-04-29T12:18:33.043Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://sejoung.github.io/2023/12/2023-12-13-python_pyenv/</loc>
         <lastmod>2024-04-29T12:18:33.043Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -1321,22 +1273,6 @@
     </url>
 
     <url>
-        <loc>https://sejoung.github.io/2023/10/2023-10-17-gpu_monitoring/</loc>
-        <lastmod>2023-10-17T07:42:44.986Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://sejoung.github.io/2023/09/2023-09-22-startup/</loc>
-        <lastmod>2023-10-17T04:45:28.274Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>https://sejoung.github.io/2023/07/2023-07-17-terraform_command/</loc>
         <lastmod>2023-07-17T08:19:25.495Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -1347,14 +1283,6 @@
     <url>
         <loc>https://sejoung.github.io/2023/06/2023-06-14-mybatis_spring_boot_starter/</loc>
         <lastmod>2023-06-14T12:25:33.784Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://sejoung.github.io/2023/05/2023-05-29-OpenLens_update_stop/</loc>
-        <lastmod>2023-05-29T13:53:38.126Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -1385,14 +1313,6 @@
     </url>
 
     <url>
-        <loc>https://sejoung.github.io/2023/03/2023-03-27-effective_kotlin_item_52/</loc>
-        <lastmod>2023-03-27T12:48:11.181Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>https://sejoung.github.io/2023/03/2023-03-27-effective_kotlin_item_51/</loc>
         <lastmod>2023-03-27T12:45:28.434Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -1401,24 +1321,8 @@
     </url>
 
     <url>
-        <loc>https://sejoung.github.io/2023/03/2023-03-27-effective_kotlin_item_50/</loc>
-        <lastmod>2023-03-27T12:42:08.651Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>https://sejoung.github.io/2023/03/2023-03-27-effective_kotlin_item_49/</loc>
         <lastmod>2023-03-27T12:38:53.661Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://sejoung.github.io/2023/03/2023-03-27-effective_kotlin_item_48/</loc>
-        <lastmod>2023-03-27T12:23:55.287Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -1697,14 +1601,6 @@
     </url>
 
     <url>
-        <loc>https://sejoung.github.io/2023/01/2023-01-09-mysql_performance_tuning_HikariCP/</loc>
-        <lastmod>2023-01-09T09:11:13.234Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>https://sejoung.github.io/2023/01/2023-01-07-mysql_performance_tuning/</loc>
         <lastmod>2023-01-09T07:40:13.944Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -1969,14 +1865,6 @@
     </url>
 
     <url>
-        <loc>https://sejoung.github.io/2020/06/2020-06-30-Domains_Subdomains_and_Bounded_Contexts_4/</loc>
-        <lastmod>2022-12-30T02:26:20.390Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>https://sejoung.github.io/2020/07/2020-07-01-Context_Maps_1/</loc>
         <lastmod>2022-12-30T02:26:20.390Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -2146,14 +2034,6 @@
 
     <url>
         <loc>https://sejoung.github.io/2020/02/2020-02-20-thread_troubleshooting_linux_2/</loc>
-        <lastmod>2022-12-30T02:26:20.389Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://sejoung.github.io/2020/05/2020-05-07-mssql_like_brackets/</loc>
         <lastmod>2022-12-30T02:26:20.389Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -2393,14 +2273,6 @@
     </url>
 
     <url>
-        <loc>https://sejoung.github.io/2022/09/2022-09-16-effective_kotlin_item_25/</loc>
-        <lastmod>2022-10-29T00:43:30.774Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>https://sejoung.github.io/2022/09/2022-09-21-effective_kotlin_item_29/</loc>
         <lastmod>2022-10-29T00:43:30.774Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -2426,14 +2298,6 @@
 
     <url>
         <loc>https://sejoung.github.io/2022/09/2022-09-23-effective_kotlin_item_31/</loc>
-        <lastmod>2022-10-29T00:43:30.774Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://sejoung.github.io/2022/09/2022-09-26-effective_kotlin_item_32/</loc>
         <lastmod>2022-10-29T00:43:30.774Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -2545,14 +2409,6 @@
     </url>
 
     <url>
-        <loc>https://sejoung.github.io/2022/08/2022-08-24-effective_kotlin_item_13/</loc>
-        <lastmod>2022-10-29T00:43:30.773Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>https://sejoung.github.io/2022/09/2022-09-05-effective_kotlin_item_21/</loc>
         <lastmod>2022-10-29T00:43:30.773Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -2594,14 +2450,6 @@
 
     <url>
         <loc>https://sejoung.github.io/2022/08/2022-08-09-effective_kotlin_item_1/</loc>
-        <lastmod>2022-10-29T00:43:30.772Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://sejoung.github.io/2022/08/2022-08-09-effective_kotlin_item_2/</loc>
         <lastmod>2022-10-29T00:43:30.772Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -2705,22 +2553,6 @@
     </url>
 
     <url>
-        <loc>https://sejoung.github.io/2022/01/2022-01-03-dockerfile_java_opts/</loc>
-        <lastmod>2022-10-29T00:43:30.771Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://sejoung.github.io/2022/01/2022-01-03-kubernetes_apm_agent_install/</loc>
-        <lastmod>2022-10-29T00:43:30.771Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>https://sejoung.github.io/2022/01/2022-01-04-kafka_topic_clean_up_policy/</loc>
         <lastmod>2022-10-29T00:43:30.771Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -2769,14 +2601,6 @@
     </url>
 
     <url>
-        <loc>https://sejoung.github.io/2022/03/2022-03-11-git_rebase_user_change/</loc>
-        <lastmod>2022-10-29T00:43:30.771Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>https://sejoung.github.io/2021/05/2021-05-18-unit_test_best_practices/</loc>
         <lastmod>2022-10-29T00:43:30.770Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -2786,14 +2610,6 @@
 
     <url>
         <loc>https://sejoung.github.io/2021/06/2021-06-07-eks_kubectl_config/</loc>
-        <lastmod>2022-10-29T00:43:30.770Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://sejoung.github.io/2021/06/2021-06-21-ssh_config/</loc>
         <lastmod>2022-10-29T00:43:30.770Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -2825,14 +2641,6 @@
     </url>
 
     <url>
-        <loc>https://sejoung.github.io/2021/08/2021-08-02-bean_validation_message/</loc>
-        <lastmod>2022-10-29T00:43:30.770Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>https://sejoung.github.io/2021/08/2021-08-03-EC2_metadata/</loc>
         <lastmod>2022-10-29T00:43:30.770Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -2857,23 +2665,7 @@
     </url>
 
     <url>
-        <loc>https://sejoung.github.io/2021/08/2021-08-04-testcontainers_jdbc/</loc>
-        <lastmod>2022-10-29T00:43:30.770Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>https://sejoung.github.io/2021/07/2021-07-28-Active_Record/</loc>
-        <lastmod>2022-10-29T00:43:30.770Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://sejoung.github.io/2021/08/2021-08-10-aws_ecr/</loc>
         <lastmod>2022-10-29T00:43:30.770Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -3041,14 +2833,6 @@
     </url>
 
     <url>
-        <loc>https://sejoung.github.io/2021/02/2021-02-15-csharp_environmentvariable/</loc>
-        <lastmod>2022-10-29T00:43:30.768Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>https://sejoung.github.io/2020/11/2020-11-27-mybatis_one_to_many/</loc>
         <lastmod>2022-10-29T00:43:30.767Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -3153,14 +2937,6 @@
     </url>
 
     <url>
-        <loc>https://sejoung.github.io/2020/08/2020-08-27-spring_bind_request_params/</loc>
-        <lastmod>2022-10-29T00:43:30.766Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>https://sejoung.github.io/2020/09/2020-09-22-AWSCLI/</loc>
         <lastmod>2022-10-29T00:43:30.766Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -3241,14 +3017,6 @@
     </url>
 
     <url>
-        <loc>https://sejoung.github.io/2020/08/2020-08-03-rabbitmq_prometheus_port/</loc>
-        <lastmod>2022-10-29T00:43:30.765Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>https://sejoung.github.io/2020/08/2020-08-07-factory/</loc>
         <lastmod>2022-10-29T00:43:30.765Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -3297,14 +3065,6 @@
     </url>
 
     <url>
-        <loc>https://sejoung.github.io/2020/06/2020-06-02-rabbitmq_port/</loc>
-        <lastmod>2022-10-29T00:43:30.763Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>https://sejoung.github.io/2020/06/2020-06-18-mockMvc_mediaType_UTF8/</loc>
         <lastmod>2022-10-29T00:43:30.763Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -3323,22 +3083,6 @@
     <url>
         <loc>https://sejoung.github.io/2020/06/2020-06-24-intellij_JPA_cannot_resolve_table/</loc>
         <lastmod>2022-10-29T00:43:30.763Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://sejoung.github.io/2020/06/2020-06-26-java_windows_Setting_the_default_Java_character_encoding/</loc>
-        <lastmod>2022-10-29T00:43:30.763Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://sejoung.github.io/2020/04/2020-04-17-macos_startup/</loc>
-        <lastmod>2022-10-29T00:43:30.762Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -3409,14 +3153,6 @@
     </url>
 
     <url>
-        <loc>https://sejoung.github.io/2020/05/2020-05-20-windows_file_del_bat/</loc>
-        <lastmod>2022-10-29T00:43:30.762Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>https://sejoung.github.io/2020/02/2020-02-11-thread_troubleshooting_arthas/</loc>
         <lastmod>2022-10-29T00:43:30.761Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -3426,14 +3162,6 @@
 
     <url>
         <loc>https://sejoung.github.io/2020/02/2020-02-18-java_dev_c#/</loc>
-        <lastmod>2022-10-29T00:43:30.761Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://sejoung.github.io/2020/02/2020-02-21-Setting_Up_Tomcat_For_Remote_Debugging/</loc>
         <lastmod>2022-10-29T00:43:30.761Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -3521,31 +3249,7 @@
     </url>
 
     <url>
-        <loc>https://sejoung.github.io/2019/12/2019-12-11-Clean_Architecture_The_Web_Is_a_Detail/</loc>
-        <lastmod>2022-10-29T00:43:30.758Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://sejoung.github.io/2019/12/2019-12-12-Clean_Architecture_Frameworks_Are_Details/</loc>
-        <lastmod>2022-10-29T00:43:30.758Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>https://sejoung.github.io/2019/12/2019-12-10-RestTemplet_interceptors/</loc>
-        <lastmod>2022-10-29T00:43:30.758Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://sejoung.github.io/2019/12/2019-12-13-jmeter_callable_statement/</loc>
         <lastmod>2022-10-29T00:43:30.758Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -3633,22 +3337,6 @@
     </url>
 
     <url>
-        <loc>https://sejoung.github.io/2019/11/2019-11-29-Clean_Architecture_Layers_and_Boundaries/</loc>
-        <lastmod>2022-10-29T00:43:30.757Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://sejoung.github.io/2019/12/2019-12-04-Clean_Architecture_The_Main_Component/</loc>
-        <lastmod>2022-10-29T00:43:30.757Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>https://sejoung.github.io/2019/12/2019-12-09-Clean_Architecture_Clean_Embedded_Architecture/</loc>
         <lastmod>2022-10-29T00:43:30.757Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -3674,14 +3362,6 @@
 
     <url>
         <loc>https://sejoung.github.io/2019/12/2019-12-09-Clean_Architecture_The_Test_Boundary/</loc>
-        <lastmod>2022-10-29T00:43:30.757Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://sejoung.github.io/2019/12/2019-12-10-RestTemplet_POST_form/</loc>
         <lastmod>2022-10-29T00:43:30.757Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -3753,14 +3433,6 @@
     </url>
 
     <url>
-        <loc>https://sejoung.github.io/2019/11/2019-11-05-ASCIIDOCTOR_PDF/</loc>
-        <lastmod>2022-10-29T00:43:30.756Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>https://sejoung.github.io/2019/11/2019-11-19-Clean_Architecture_Business_Rules/</loc>
         <lastmod>2022-10-29T00:43:30.756Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -3818,14 +3490,6 @@
 
     <url>
         <loc>https://sejoung.github.io/2019/10/2019-10-16-Clean_Architecture_Paradigm_Overview/</loc>
-        <lastmod>2022-10-29T00:43:30.755Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://sejoung.github.io/2019/10/2019-10-14-Clean_Architecture_What_Is_Design_and_Architecture/</loc>
         <lastmod>2022-10-29T00:43:30.755Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -3985,14 +3649,6 @@
     </url>
 
     <url>
-        <loc>https://sejoung.github.io/2019/09/2019-09-20-java_instanceof/</loc>
-        <lastmod>2022-10-29T00:43:30.754Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>https://sejoung.github.io/2019/09/2019-09-17-jakarta-ee-8/</loc>
         <lastmod>2022-10-29T00:43:30.754Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -4041,14 +3697,6 @@
     </url>
 
     <url>
-        <loc>https://sejoung.github.io/2019/07/2019-07-25-intellij_themes/</loc>
-        <lastmod>2022-10-29T00:43:30.753Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>https://sejoung.github.io/2019/07/2019-07-26-spring_event/</loc>
         <lastmod>2022-10-29T00:43:30.753Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -4057,31 +3705,7 @@
     </url>
 
     <url>
-        <loc>https://sejoung.github.io/2019/07/2019-07-30-macos_pem_to_ppk/</loc>
-        <lastmod>2022-10-29T00:43:30.753Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://sejoung.github.io/2019/07/2019-07-31-mssql_file_search/</loc>
-        <lastmod>2022-10-29T00:43:30.753Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>https://sejoung.github.io/2019/08/2019-08-02-msa_qna/</loc>
-        <lastmod>2022-10-29T00:43:30.753Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://sejoung.github.io/2019/08/2019-08-06-systemd/</loc>
         <lastmod>2022-10-29T00:43:30.753Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -4105,14 +3729,6 @@
     </url>
 
     <url>
-        <loc>https://sejoung.github.io/2019/08/2019-08-09-windows_wc/</loc>
-        <lastmod>2022-10-29T00:43:30.753Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>https://sejoung.github.io/2019/08/2019-08-12-mssql_types-of-replication/</loc>
         <lastmod>2022-10-29T00:43:30.753Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -4121,23 +3737,7 @@
     </url>
 
     <url>
-        <loc>https://sejoung.github.io/2019/08/2019-08-19-kafka/</loc>
-        <lastmod>2022-10-29T00:43:30.753Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>https://sejoung.github.io/2019/08/2019-08-22-graphql/</loc>
-        <lastmod>2022-10-29T00:43:30.753Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://sejoung.github.io/2019/08/2019-08-13-spring_boot_jacoco/</loc>
         <lastmod>2022-10-29T00:43:30.753Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -4209,22 +3809,6 @@
     </url>
 
     <url>
-        <loc>https://sejoung.github.io/2019/07/2019-07-02-VisualVM_JDK_PATH/</loc>
-        <lastmod>2022-10-29T00:43:30.752Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://sejoung.github.io/2019/07/2019-07-02-java_dump/</loc>
-        <lastmod>2022-10-29T00:43:30.752Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>https://sejoung.github.io/2019/06/2019-06-27-tomcat_startmode/</loc>
         <lastmod>2022-10-29T00:43:30.752Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -4234,14 +3818,6 @@
 
     <url>
         <loc>https://sejoung.github.io/2019/07/2019-07-08-spring_kafka_sample/</loc>
-        <lastmod>2022-10-29T00:43:30.752Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://sejoung.github.io/2019/07/2019-07-05-MAC_Mojave_Error/</loc>
         <lastmod>2022-10-29T00:43:30.752Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -4314,22 +3890,6 @@
 
     <url>
         <loc>https://sejoung.github.io/2019/06/2019-06-07-HV000030_No_validator_could_be_found_for_constraint/</loc>
-        <lastmod>2022-10-29T00:43:30.751Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://sejoung.github.io/2019/06/2019-06-11-intellij_tomcat_resource_reload/</loc>
-        <lastmod>2022-10-29T00:43:30.751Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://sejoung.github.io/2019/06/2019-06-10-intellij_ECMA6_enable/</loc>
         <lastmod>2022-10-29T00:43:30.751Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -4505,22 +4065,6 @@
     </url>
 
     <url>
-        <loc>https://sejoung.github.io/2019/05/2019-05-15-intellij_auto-test/</loc>
-        <lastmod>2022-10-29T00:43:30.749Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://sejoung.github.io/2019/05/2019-05-14-windows_tomcat/</loc>
-        <lastmod>2022-10-29T00:43:30.749Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>https://sejoung.github.io/2019/05/2019-05-14-cleancode_Unit_Tests/</loc>
         <lastmod>2022-10-29T00:43:30.749Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -4530,14 +4074,6 @@
 
     <url>
         <loc>https://sejoung.github.io/2019/05/2019-05-15-cleancode_Classes/</loc>
-        <lastmod>2022-10-29T00:43:30.749Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://sejoung.github.io/2019/05/2019-05-16-intellij_junit/</loc>
         <lastmod>2022-10-29T00:43:30.749Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -4657,14 +4193,6 @@
     </url>
 
     <url>
-        <loc>https://sejoung.github.io/2019/04/2019-04-19-cleancode_function4/</loc>
-        <lastmod>2022-10-29T00:43:30.748Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>https://sejoung.github.io/2019/04/2019-04-29-spring_camp_2019/</loc>
         <lastmod>2022-10-29T00:43:30.748Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -4762,22 +4290,6 @@
 
     <url>
         <loc>https://sejoung.github.io/2019/04/2019-04-02-spring-web-reactive1/</loc>
-        <lastmod>2022-10-29T00:43:30.747Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://sejoung.github.io/2019/04/2019-04-03-Docker_run_mssql/</loc>
-        <lastmod>2022-10-29T00:43:30.747Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://sejoung.github.io/2019/04/2019-04-04-mssql_autoclose/</loc>
         <lastmod>2022-10-29T00:43:30.747Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -4969,14 +4481,6 @@
     </url>
 
     <url>
-        <loc>https://sejoung.github.io/2019/03/2019-03-22-Item_77_Don%E2%80%99t_ignore_exceptions/</loc>
-        <lastmod>2022-10-29T00:43:30.745Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>https://sejoung.github.io/2019/03/2019-03-15-Item_67_Optimize_judiciously/</loc>
         <lastmod>2022-10-29T00:43:30.744Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -5010,14 +4514,6 @@
 
     <url>
         <loc>https://sejoung.github.io/2019/03/2019-03-15-java_native_interface_intro/</loc>
-        <lastmod>2022-10-29T00:43:30.744Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://sejoung.github.io/2019/03/2019-03-19-Item_71_Avoid_unnecessary_use_of_checked_exceptions/</loc>
         <lastmod>2022-10-29T00:43:30.744Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -5218,14 +4714,6 @@
 
     <url>
         <loc>https://sejoung.github.io/2019/02/2019-02-20-Return_empty_collections_or_arrays,_not_nulls/</loc>
-        <lastmod>2022-10-29T00:43:30.741Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://sejoung.github.io/2019/02/2019-02-25-Minimize_the_scope_of_local_variables/</loc>
         <lastmod>2022-10-29T00:43:30.741Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -5513,14 +5001,6 @@
     </url>
 
     <url>
-        <loc>https://sejoung.github.io/2018/12/2018-12-28-redis_client/</loc>
-        <lastmod>2022-10-29T00:43:30.738Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>https://sejoung.github.io/2018/12/2018-12-31-2018_retrospect/</loc>
         <lastmod>2022-10-29T00:43:30.738Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -5530,14 +5010,6 @@
 
     <url>
         <loc>https://sejoung.github.io/2018/12/2018-12-31-Favor_generic_methods/</loc>
-        <lastmod>2022-10-29T00:43:30.738Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://sejoung.github.io/2018/12/2018-12-31-idea_javac_option/</loc>
         <lastmod>2022-10-29T00:43:30.738Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -5921,14 +5393,6 @@
     </url>
 
     <url>
-        <loc>https://sejoung.github.io/2018/10/2018-10-29-linux_java_home/</loc>
-        <lastmod>2022-10-29T00:43:30.734Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>https://sejoung.github.io/2018/10/2018-10-30-JEP_323/</loc>
         <lastmod>2022-10-29T00:43:30.734Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -6185,14 +5649,6 @@
     </url>
 
     <url>
-        <loc>https://sejoung.github.io/2018/05/2018-05-21-cohesion_(temporal%20cohesion)/</loc>
-        <lastmod>2022-10-29T00:43:30.731Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>https://sejoung.github.io/2018/06/2018-06-25-vagrant_redis/</loc>
         <lastmod>2022-10-29T00:43:30.731Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -6329,24 +5785,8 @@
     </url>
 
     <url>
-        <loc>https://sejoung.github.io/2018/05/2018-05-21-cohesion_(procedural%20cohesion)/</loc>
-        <lastmod>2022-10-29T00:43:30.730Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>https://sejoung.github.io/2018/05/2018-05-21-cohesion_(sequential%20cohesion)/</loc>
         <lastmod>2022-10-29T00:43:30.730Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://sejoung.github.io/2018/02/2018-02-23-jooq/</loc>
-        <lastmod>2022-10-29T00:43:30.729Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -6386,14 +5826,6 @@
 
     <url>
         <loc>https://sejoung.github.io/2018/03/2018-03-05-POP_part24/</loc>
-        <lastmod>2022-10-29T00:43:30.729Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://sejoung.github.io/2018/03/2018-03-24-GCE_TIMEZONE/</loc>
         <lastmod>2022-10-29T00:43:30.729Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -6793,23 +6225,7 @@
     </url>
 
     <url>
-        <loc>https://sejoung.github.io/2017/11/2017-11-01-scouter_apm_spring_boot/</loc>
-        <lastmod>2022-10-29T00:43:30.725Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>https://sejoung.github.io/2017/02/2017-02-15-dgding_lesson2/</loc>
-        <lastmod>2022-10-29T00:43:30.725Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://sejoung.github.io/2017/11/2017-11-07-geting_start_nodemcu/</loc>
         <lastmod>2022-10-29T00:43:30.725Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -6834,14 +6250,6 @@
 
     <url>
         <loc>https://sejoung.github.io/2017/11/2017-11-22-datalake/</loc>
-        <lastmod>2022-10-29T00:43:30.725Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://sejoung.github.io/2017/07/2017-07-21-dgding_lesson_javascript2/</loc>
         <lastmod>2022-10-29T00:43:30.725Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -6897,14 +6305,6 @@
     </url>
 
     <url>
-        <loc>https://sejoung.github.io/2016/08/2016-08-09-restapi-call-param/</loc>
-        <lastmod>2022-10-29T00:43:30.724Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>https://sejoung.github.io/2016/08/2016-08-09-jbpm-strategies/</loc>
         <lastmod>2022-10-29T00:43:30.724Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -6914,14 +6314,6 @@
 
     <url>
         <loc>https://sejoung.github.io/2016/08/2016-08-09-start-jbpms/</loc>
-        <lastmod>2022-10-29T00:43:30.724Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://sejoung.github.io/2016/08/2016-08-10-jbpm/</loc>
         <lastmod>2022-10-29T00:43:30.724Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
