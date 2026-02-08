@@ -4,8 +4,14 @@
 nav#nav(style=bg_img class=flag)
   include ../header.pug
   #site-info
-    #site-title= config.title 
-    #site-sub-title= theme['404Text'] || '404 Page Not Found'
+    #site-title= config.title
+    #site-sub-title= theme['404Text'] || '페이지를 찾을 수 없습니다'
+    #site-404-home
+      p 요청하신 페이지가 존재하지 않거나 이동되었습니다.
+      a(href='/') 홈으로 돌아가기
+      p.redirect-notice 5초 후 자동으로 홈으로 이동합니다.
+    script.
+      setTimeout(function() { window.location.href = '/'; }, 5000);
     if(theme.social)
       #site-social-icons
         each url, icon in theme.social

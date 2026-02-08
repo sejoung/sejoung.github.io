@@ -285,4 +285,3 @@ google_adsense:
     enable: true
     js: https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4136060060870959
     client: ca-pub-4136060060870959
-    enable_page_level_ads: true
