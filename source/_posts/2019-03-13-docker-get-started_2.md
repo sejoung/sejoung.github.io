@@ -290,7 +290,7 @@ C:\Users\ASUS\docker>docker run -p 4000:80 friendlyhello
 파이썬이 앱을 제공하고 있다는 메시지가 나타납니다 http://0.0.0.0:80. 
 하지만 그 메시지는 컨테이너 내부에서 들어 오는데, 컨테이너의 포트 80을 4000으로 매핑하여 올바른 URL을 작성했는지 알지 못합니다 
 
-http://localhost:4000로 브라우저로 접속하면 
+http://localhost:4000 로 브라우저로 접속하면 
 
 ```
 

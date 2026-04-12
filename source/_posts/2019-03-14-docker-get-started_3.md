@@ -178,7 +178,7 @@ b1128e43062c
 a659caef8af4
 
 ```
-curl -4 http://localhost:4000를 여러번 실행하거나 
+curl -4 http://localhost:4000 를 여러번 실행하거나 
 브라우저에서 http://localhost:4000 접속해 새로고침을 몇번 누릅니다.
 
 어느 쪽이든 컨테이너 ID가 변경되어로드 밸런싱을 시연합니다. 
