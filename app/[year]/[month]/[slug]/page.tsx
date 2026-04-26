@@ -10,6 +10,8 @@ import {
 } from '@/lib/posts';
 import { getProjectForPost } from '@/lib/projects';
 
+export const dynamicParams = false;
+
 export function generateStaticParams() {
   return getAllPosts().map((post) => ({
     year: post.year,

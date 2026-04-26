@@ -4,6 +4,8 @@ import { Pagination } from '@/components/Pagination';
 import { PostList } from '@/components/PostList';
 import { getAllPosts, paginatePosts, totalPages } from '@/lib/posts';
 
+export const dynamicParams = false;
+
 export function generateStaticParams() {
   const pages = totalPages(getAllPosts());
   return Array.from({ length: Math.max(0, pages - 1) }, (_, index) => ({

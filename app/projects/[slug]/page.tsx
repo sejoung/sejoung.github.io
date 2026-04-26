@@ -5,6 +5,8 @@ import { PostList } from '@/components/PostList';
 import { absoluteUrl } from '@/lib/posts';
 import { getAllProjects, getProjectBySlug, renderProject } from '@/lib/projects';
 
+export const dynamicParams = false;
+
 export function generateStaticParams() {
   return getAllProjects().map((project) => ({
     slug: project.slug,

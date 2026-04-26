@@ -3,6 +3,8 @@ import { notFound } from 'next/navigation';
 import { PostList } from '@/components/PostList';
 import { getTaxonomy, getTaxonomyItem } from '@/lib/posts';
 
+export const dynamicParams = false;
+
 export function generateStaticParams() {
   return getTaxonomy('categories').map((category) => ({
     category: category.name,
