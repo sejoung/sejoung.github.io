@@ -14,6 +14,7 @@ type ProjectFrontMatter = {
   impact?: string;
   stack?: string[] | string;
   relatedPosts?: string[];
+  relatedTags?: string[] | string;
   featured?: boolean;
   order?: number;
 };
@@ -27,6 +28,7 @@ export type Project = {
   impact: string;
   stack: string[];
   relatedPostSlugs: string[];
+  relatedTags: string[];
   featured: boolean;
   order: number;
   content: string;
@@ -85,6 +87,7 @@ export function getAllProjects() {
         impact: data.impact ? String(data.impact) : '',
         stack: normalizeList(data.stack),
         relatedPostSlugs: Array.isArray(data.relatedPosts) ? data.relatedPosts.map(String) : [],
+        relatedTags: normalizeList(data.relatedTags),
         featured: Boolean(data.featured),
         order: typeof data.order === 'number' ? data.order : 100,
         content: parsed.content.trim(),
@@ -108,7 +111,10 @@ export function getProjectBySlug(slug: string) {
 
 export function getPostsForProject(project: Project) {
   const slugs = new Set(project.relatedPostSlugs);
-  return getAllPosts().filter((post) => post.project === project.slug || slugs.has(post.slug));
+  const tags = new Set(project.relatedTags);
+  return getAllPosts().filter(
+    (post) => post.project === project.slug || slugs.has(post.slug) || post.tags.some((tag) => tags.has(tag)),
+  );
 }
 
 export function getProjectForPost(post: Post) {
