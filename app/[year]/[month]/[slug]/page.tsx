@@ -8,6 +8,7 @@ import {
   getPostByParams,
   renderPost,
 } from '@/lib/posts';
+import { getProjectForPost } from '@/lib/projects';
 
 export function generateStaticParams() {
   return getAllPosts().map((post) => ({
@@ -60,6 +61,7 @@ export default async function PostPage({
   }
 
   const rendered = await renderPost(post);
+  const relatedProject = getProjectForPost(post);
 
   return (
     <article className="article">
@@ -79,6 +81,12 @@ export default async function PostPage({
                 {tag}
               </Link>
             ))}
+          </div>
+        ) : null}
+        {relatedProject ? (
+          <div className="related-project">
+            <span>Related project</span>
+            <Link href={relatedProject.url}>{relatedProject.title}</Link>
           </div>
         ) : null}
       </header>

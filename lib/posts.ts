@@ -18,6 +18,7 @@ export type FrontMatter = {
   tags?: string[] | string;
   categories?: string[] | string;
   description?: string;
+  project?: string;
 };
 
 export type Post = {
@@ -34,6 +35,7 @@ export type Post = {
   readingMinutes: number;
   tags: string[];
   categories: string[];
+  project?: string;
 };
 
 export type RenderedPost = Post & {
@@ -148,6 +150,7 @@ export function getAllPosts() {
         readingMinutes: Math.max(1, Math.ceil(readingTime(content).minutes)),
         tags: normalizeList(data.tags),
         categories: normalizeList(data.categories),
+        project: data.project ? String(data.project) : undefined,
       } satisfies Post;
     })
     .sort(comparePosts);

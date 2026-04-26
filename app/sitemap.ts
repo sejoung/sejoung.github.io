@@ -1,5 +1,6 @@
 import type { MetadataRoute } from 'next';
 import { absoluteUrl, getAllPosts, getTaxonomy } from '@/lib/posts';
+import { getAllProjects } from '@/lib/projects';
 
 export const dynamic = 'force-static';
 
@@ -9,7 +10,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified: post.updated ?? post.date,
   }));
 
-  const staticRoutes = ['/', '/archives/', '/categories/', '/tags/', '/about/', '/contact/', '/terms/', '/privacy/'].map(
+  const projects = getAllProjects().map((project) => ({
+    url: absoluteUrl(project.url),
+    lastModified: new Date(),
+  }));
+
+  const staticRoutes = ['/', '/projects/', '/writing/', '/archives/', '/categories/', '/tags/', '/about/', '/contact/', '/terms/', '/privacy/'].map(
     (route) => ({
       url: absoluteUrl(route),
       lastModified: new Date(),
@@ -23,5 +29,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }),
   );
 
-  return [...staticRoutes, ...taxonomies, ...posts];
+  return [...staticRoutes, ...projects, ...taxonomies, ...posts];
 }

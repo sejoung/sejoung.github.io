@@ -1,0 +1,28 @@
+import type { Metadata } from 'next';
+import { Pagination } from '@/components/Pagination';
+import { PostList } from '@/components/PostList';
+import { getAllPosts, paginatePosts, totalPages } from '@/lib/posts';
+
+export const metadata: Metadata = {
+  title: 'Writing',
+  description: '기술 설명보다 문제 해결 과정을 중심으로 정리한 기록입니다.',
+  alternates: {
+    canonical: '/writing/',
+  },
+};
+
+export default function WritingPage() {
+  const posts = getAllPosts();
+
+  return (
+    <>
+      <section className="page-hero">
+        <p className="eyebrow">Writing</p>
+        <h1>문제 해결 기록</h1>
+        <p className="lead">기술 자체보다 어떤 문제를 왜 그렇게 풀었는지에 초점을 둡니다.</p>
+      </section>
+      <PostList posts={paginatePosts(posts, 1)} />
+      <Pagination currentPage={1} totalPages={totalPages(posts)} basePath="/writing" />
+    </>
+  );
+}

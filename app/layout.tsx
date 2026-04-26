@@ -5,10 +5,10 @@ import './globals.css';
 export const metadata: Metadata = {
   metadataBase: new URL('https://sejoung.github.io'),
   title: {
-    default: '폭간의 기술블로그',
-    template: '%s | 폭간의 기술블로그',
+    default: 'sejoung kim | System Archive',
+    template: '%s | sejoung kim',
   },
-  description: 'Java, Kotlin 등 백엔드 개발 기술과 소프트웨어 엔지니어링 학습 내용을 정리하는 기술 블로그입니다.',
+  description: '제작 과정을 시스템으로 바꾸는 백엔드 엔지니어의 문제 해결 아카이브입니다.',
 };
 
 export default function RootLayout({
@@ -23,18 +23,17 @@ export default function RootLayout({
           <header className="site-header">
             <div className="site-header-inner">
               <Link className="brand" href="/">
-                폭간의 기술블로그
+                sejoung.systems
               </Link>
               <nav className="nav" aria-label="Main navigation">
-                <Link href="/archives/">Archives</Link>
-                <Link href="/categories/">Categories</Link>
-                <Link href="/tags/">Tags</Link>
+                <Link href="/projects/">Projects</Link>
+                <Link href="/writing/">Writing</Link>
                 <Link href="/about/">About</Link>
               </nav>
             </div>
           </header>
           <main className="main">{children}</main>
-          <footer className="site-footer">© sejoung kim</footer>
+          <footer className="site-footer">제작 과정을 시스템으로 바꾸는 엔지니어 · sejoung kim</footer>
         </div>
       </body>
     </html>
