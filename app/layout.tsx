@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import { contactLinks } from '@/lib/about';
 import './globals.css';
 
 export const metadata: Metadata = {
@@ -33,8 +34,15 @@ export default function RootLayout({
             </div>
           </header>
           <main className="mx-auto w-[min(1180px,calc(100%_-_32px))] py-[52px] pb-[72px]">{children}</main>
-          <footer className="mx-auto w-[min(1180px,calc(100%_-_32px))] border-t border-[#26313d] py-7 text-sm text-[#93a1b2]">
-            제작 과정을 시스템으로 바꾸는 엔지니어 · sejoung kim
+          <footer className="mx-auto flex w-[min(1180px,calc(100%_-_32px))] flex-wrap items-center justify-between gap-3 border-t border-[#26313d] py-7 text-sm text-[#93a1b2]">
+            <span>제작 과정을 시스템으로 바꾸는 엔지니어 · sejoung kim</span>
+            <nav className="flex gap-3" aria-label="Contact links">
+              {contactLinks.map((item) => (
+                <a href={item.href} key={item.href} rel={item.external ? 'noreferrer' : undefined} target={item.external ? '_blank' : undefined}>
+                  {item.label}
+                </a>
+              ))}
+            </nav>
           </footer>
         </div>
       </body>

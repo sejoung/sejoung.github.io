@@ -1,34 +1,55 @@
 ---
-title: about
-date: 2026-01-31 22:32:45
+title: "About"
+headline: "제작 과정을 시스템으로 바꾸는 백엔드 엔지니어"
+intro: "복잡한 작업 흐름을 관찰하고, 반복되는 경계를 찾아, 운영 가능한 시스템과 도구로 정리합니다. 백엔드 시스템 설계 경험을 바탕으로 현재는 웹툰 제작 파이프라인과 자동화 도구를 만들고 있습니다."
+workTitle: "What I Work On"
+workSubtitle: "문제의 흐름을 구조로 바꿉니다."
+work:
+  - title: "Production Pipeline"
+    description: "웹툰 제작 과정에서 반복되는 작업, 에셋 관리, Unreal 기반 배경 흐름을 자동화합니다."
+  - title: "Backend Systems"
+    description: "Java, Kotlin, Spring 기반으로 도메인 경계, 데이터 흐름, 운영 조건을 설계합니다."
+  - title: "Tools & Open Source"
+    description: "작은 반복 비용을 줄이는 데스크톱 앱, 변환 도구, 분석 도구를 공개 가능한 형태로 만듭니다."
+thinkingTitle: "How I Think"
+thinkingSubtitle: "코드보다 먼저 작업의 모양을 봅니다."
+thinking:
+  - title: "Workflow first"
+    description: "기능 목록보다 입력, 출력, 상태, 실패 지점을 먼저 정리합니다."
+  - title: "Automate repeatable boundaries"
+    description: "사람이 반복해서 판단하거나 정리하는 지점을 도구와 파이프라인으로 옮깁니다."
+  - title: "Keep records connected"
+    description: "글, 프로젝트, 외부 작성물을 연결해 판단의 이력을 다시 찾을 수 있게 남깁니다."
+focusTitle: "Current Focus"
+focusSubtitle: "지금 집중하는 문제들"
+focus:
+  - "웹툰 제작 파이프라인과 자동화 도구"
+  - "Unreal 기반 배경 제작, 에셋 관리, 에디터 자동화"
+  - "AI 모델 학습과 운영 흐름의 재현성"
+  - "코드베이스와 로컬 개발 환경을 관찰하는 도구"
+proofTitle: "Selected Proof"
+proofSubtitle: "대표 작업과 기록"
+proof:
+  - label: "Webtoon Production Pipeline"
+    href: "/projects/webtoon-production-pipeline/"
+  - label: "Backend System Architecture"
+    href: "/projects/backend-system-architecture/"
+  - label: "Engineering Knowledge Base"
+    href: "/projects/engineering-knowledge-base/"
+  - label: "psd-to-webtoon-pdf"
+    href: "/projects/psd-to-webtoon-pdf/"
+  - label: "REALDRAW Tech Blog"
+    href: "https://tech.realdraw.ai/ko/blog/2025_07_11_intro-realdraw/"
+    external: true
+contactTitle: "Contact"
+contact: "기술, 제작 파이프라인, 자동화 도구에 관한 이야기는 이메일로 연락할 수 있습니다."
+contactLinks:
+  - label: "Email"
+    href: "mailto:sejoung@gmail.com"
+  - label: "LinkedIn"
+    href: "https://www.linkedin.com/in/sanaes"
+    external: true
+  - label: "GitHub"
+    href: "https://github.com/sejoung"
+    external: true
 ---
-
-## 소개
-
-안녕하세요, 백엔드 개발자 김세중입니다.
-이 블로그는 2016년부터 운영해 온 개인 기술 블로그로, 소프트웨어 개발 과정에서 겪은 경험과 학습 내용을 기록하고 공유하기 위해 만들었습니다.
-
-## 주요 분야
-
-주로 다루는 기술 분야는 다음과 같습니다.
-
-- **Java / Kotlin** — 백엔드 개발, Spring Framework, JVM 생태계
-- **소프트웨어 설계** — 클린 아키텍처, 디자인 패턴, 리팩터링
-- **단위 테스트** — 테스트 원칙과 패턴, TDD
-- **DevOps / 인프라** — Docker, Kubernetes, CI/CD, Linux
-- **Machine Learning** — Stable Diffusion, LoRA, LLM 활용
-
-## 콘텐츠 특징
-
-현재까지 약 800편 이상의 글을 작성했으며, 기술 서적 리뷰와 실무 적용기가 많은 비중을 차지합니다. 구글 엔지니어는 이렇게 일한다, 쏙쏙 들어오는 함수형 코딩, 디자인 패턴의 아름다움 등 다양한 기술 서적을 읽고 정리한 시리즈 글도 있습니다.
-
-게시되는 모든 콘텐츠는 개인적인 경험과 학습 내용을 바탕으로 작성되며, 정확한 정보를 제공하기 위해 지속적으로 업데이트하고 있습니다.
-
-## 연락처
-
-이 사이트에 대한 문의, 제안, 오류 제보 등은  
-아래 이메일을 통해 연락해 주시기 바랍니다.
-
-- 이메일: sejoung@gmail.com
-
-보내주신 문의는 확인 후 가능한 한 빠르게 답변드리겠습니다.

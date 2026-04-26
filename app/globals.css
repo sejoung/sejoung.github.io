@@ -376,6 +376,88 @@ h2 {
   color: var(--muted);
 }
 
+.about-page .section {
+  border-top: 1px solid var(--line);
+  padding-top: 32px;
+}
+
+.about-hero .lead {
+  width: min(760px, 100%);
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.42fr) minmax(0, 1fr);
+  gap: 28px;
+}
+
+.about-card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px;
+}
+
+.about-card {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--panel);
+  padding: 16px;
+}
+
+.about-card h3 {
+  margin: 0 0 8px;
+  font-size: 19px;
+}
+
+.about-card p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.about-list {
+  margin: 0;
+  padding-left: 1.2em;
+  color: var(--muted);
+}
+
+.about-list li + li {
+  margin-top: 10px;
+}
+
+.about-link-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 10px;
+}
+
+.about-link-grid a {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--panel);
+  padding: 12px 14px;
+  color: var(--foreground);
+  text-decoration: none;
+}
+
+.about-link-grid a:hover {
+  border-color: color-mix(in srgb, var(--accent) 60%, var(--line));
+}
+
+.about-contact {
+  display: grid;
+  gap: 16px;
+}
+
+.about-contact h2 {
+  width: min(760px, 100%);
+}
+
+.contact-link-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
 .article {
   width: min(800px, 100%);
   margin: 0 auto;
@@ -625,6 +707,7 @@ h2 {
   .stats,
   .post-row,
   .approach-grid,
+  .about-grid,
   .project-detail-grid,
   .section-heading,
   .tag-group {
