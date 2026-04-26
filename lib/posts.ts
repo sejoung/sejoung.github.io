@@ -48,6 +48,16 @@ export type StaticPage = {
   html: string;
 };
 
+type TaxonomyItem = {
+  name: string;
+  posts: Post[];
+};
+
+let allPostsCache: Post[] | undefined;
+let postByPathCache: Map<string, Post> | undefined;
+let taxonomyCache: Record<'tags' | 'categories', TaxonomyItem[]> | undefined;
+const staticPageCache = new Map<string, Promise<StaticPage | undefined>>();
+
 function normalizeList(value: FrontMatter['tags']) {
   if (!value) {
     return [];
@@ -99,10 +109,18 @@ function comparePosts(a: Post, b: Post) {
   return b.date.getTime() - a.date.getTime() || a.title.localeCompare(b.title);
 }
 
+function postKey(year: string, month: string, slug: string) {
+  return `${year}/${month}/${slug}`;
+}
+
 export function getAllPosts() {
+  if (allPostsCache) {
+    return allPostsCache;
+  }
+
   const filenames = fs.readdirSync(postsDirectory).filter((filename) => filename.endsWith('.md'));
 
-  return filenames
+  allPostsCache = filenames
     .map((filename) => {
       const filePath = path.join(postsDirectory, filename);
       const raw = fs.readFileSync(filePath, 'utf8');
@@ -133,10 +151,14 @@ export function getAllPosts() {
       } satisfies Post;
     })
     .sort(comparePosts);
+
+  postByPathCache = new Map(allPostsCache.map((post) => [postKey(post.year, post.month, post.slug), post]));
+  return allPostsCache;
 }
 
 export function getPostByParams(year: string, month: string, slug: string) {
-  return getAllPosts().find((post) => post.year === year && post.month === month && post.slug === slug);
+  getAllPosts();
+  return postByPathCache?.get(postKey(year, month, slug));
 }
 
 export async function renderPost(post: Post): Promise<RenderedPost> {
@@ -156,6 +178,10 @@ export function totalPages(posts: Post[]) {
 }
 
 export function getTaxonomy(kind: 'tags' | 'categories') {
+  if (taxonomyCache?.[kind]) {
+    return taxonomyCache[kind];
+  }
+
   const map = new Map<string, Post[]>();
 
   for (const post of getAllPosts()) {
@@ -166,9 +192,17 @@ export function getTaxonomy(kind: 'tags' | 'categories') {
     }
   }
 
-  return [...map.entries()]
+  const items = [...map.entries()]
     .map(([name, posts]) => ({ name, posts: posts.sort(comparePosts) }))
     .sort((a, b) => b.posts.length - a.posts.length || a.name.localeCompare(b.name));
+
+  taxonomyCache = {
+    tags: taxonomyCache?.tags ?? [],
+    categories: taxonomyCache?.categories ?? [],
+    [kind]: items,
+  };
+
+  return items;
 }
 
 export function getTaxonomyItem(kind: 'tags' | 'categories', name: string) {
@@ -176,6 +210,17 @@ export function getTaxonomyItem(kind: 'tags' | 'categories', name: string) {
 }
 
 export async function getStaticPage(slug: string): Promise<StaticPage | undefined> {
+  const cached = staticPageCache.get(slug);
+  if (cached) {
+    return cached;
+  }
+
+  const pagePromise = readStaticPage(slug);
+  staticPageCache.set(slug, pagePromise);
+  return pagePromise;
+}
+
+async function readStaticPage(slug: string): Promise<StaticPage | undefined> {
   const filePath = path.join(pagesDirectory, `${slug}.md`);
   if (!fs.existsSync(filePath)) {
     return undefined;
