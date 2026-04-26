@@ -8,7 +8,7 @@ import { getAllWriting, paginateWriting } from '@/lib/writing';
 export default function HomePage() {
   const writing = getAllWriting();
   const signalCount = getCuratedTagCount();
-  const featuredProjects = getFeaturedProjects();
+  const featuredProjects = getFeaturedProjects(3);
 
   return (
     <>

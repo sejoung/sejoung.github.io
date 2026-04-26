@@ -126,8 +126,9 @@ export function getAllProjects() {
   return projectsCache;
 }
 
-export function getFeaturedProjects() {
-  return getAllProjects().filter((project) => project.featured);
+export function getFeaturedProjects(limit?: number) {
+  const projects = getAllProjects().filter((project) => project.featured);
+  return typeof limit === 'number' ? projects.slice(0, limit) : projects;
 }
 
 export function getProjectBySlug(slug: string) {
