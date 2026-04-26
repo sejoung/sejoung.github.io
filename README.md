@@ -1,48 +1,21 @@
 # sejoung.github.io
 
+포스트는 `content/posts`에 저장한다.
 
-node 설치
-
-```
-brew install node
-
-```
-블로그 소스 프로젝트 
-
-```
-npm install hexo-cli -g
-
-npm install hexo-renderer-pug hexo-renderer-stylus
-
-npm install hexo-autonofollow --save
-
-npm install hexo-auto-canonical --save 
-
-npm install hexo-generator-seo-friendly-sitemap --save
-
-npm install hexo-generator-feed --save
-
-npm install hexo-deployer-git --save
-
-npm audit fix --force
-
-```
-파일제네레이터
-```
-hexo g
+```text
+content/posts/2026-04-26-my-new-post.md
 ```
 
-로컬테스트
-```
-hexo server
-```
-서버 반영
+파일명은 `YYYY-MM-DD-slug.md` 형식을 사용하고, URL은 기존 블로그 permalink와 동일하게 생성된다.
 
-```
-hexo g --d
+```text
+content/posts/2026-04-26-my-new-post.md
+=> /2026/04/my-new-post/
 ```
 
-https://hexo.io/ko/
+이미지는 `public/images`에 저장하고 본문에서는 `/images/example.png` 또는 기존 절대 URL로 참조한다.
 
-
-https://github.com/Molunerfinn/hexo-theme-melody
+```bash
+npm run dev
+npm run build
+```
