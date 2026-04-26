@@ -15,7 +15,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified: new Date(),
   }));
 
-  const staticRoutes = ['/', '/projects/', '/writing/', '/archives/', '/tags/', '/about/', '/contact/', '/terms/', '/privacy/'].map(
+  const staticRoutes = ['/', '/projects/', '/writing/', '/archives/', '/tags/', '/about/'].map(
     (route) => ({
       url: absoluteUrl(route),
       lastModified: new Date(),
