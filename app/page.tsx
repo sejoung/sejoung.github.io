@@ -15,12 +15,12 @@ export default function HomePage() {
     <>
       <section className="hero">
         <div>
-          <p className="eyebrow">System Archive</p>
-          <h1>제작 과정을 시스템으로 바꾸는 엔지니어</h1>
+          <p className="eyebrow">Systems & Pipelines</p>
+          <h1>백엔드 시스템과 제작 파이프라인을 설계해 온 엔지니어</h1>
           <p>
-            다양한 산업에서 백엔드 시스템을 설계해왔고, 지금은 웹툰 제작 파이프라인과
-            자동화 시스템을 만들고 있습니다. 이곳은 문제, 해결 방식, 결과를 연결해 기록하는
-            개인 아카이브입니다.
+            여러 산업에서 백엔드 시스템을 설계하고 운영해왔고, 지금은 웹툰 제작 과정의
+            반복 문제를 파이프라인과 자동화 도구로 정리하고 있습니다. 이곳은 문제, 해결 방식,
+            결과를 연결해 기록하는 개인 아카이브입니다.
           </p>
           <div className="hero-actions">
             <Link className="button primary" href="/projects/">
@@ -91,7 +91,7 @@ export default function HomePage() {
       <section className="section approach-grid">
         <div>
           <p className="eyebrow">Approach</p>
-          <h2>문제를 빠르게 코드로 옴기는것 보다 먼저 구조로 봅니다.</h2>
+          <h2>문제를 코드로 옮기기 전에 흐름과 경계를 먼저 봅니다.</h2>
         </div>
         <div className="approach-list">
           <div>

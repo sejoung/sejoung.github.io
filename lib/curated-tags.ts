@@ -19,7 +19,7 @@ type CuratedTagSpec = Omit<CuratedTagGroup, 'tags'> & {
 const curatedTagSpecs = [
   {
     title: 'Production Pipeline',
-    description: '웹툰 제작, Unreal, 에디터 자동화처럼 제작 과정을 시스템으로 바꾸는 기록',
+    description: '웹툰 제작, Unreal, 에디터 자동화처럼 제작 흐름을 파이프라인으로 정리한 기록',
     tags: ['unreal', '언리얼', 'python', 'Python', 'Stable Diffusion', 'LORA', 'Lora', 'CUDA'],
   },
   {

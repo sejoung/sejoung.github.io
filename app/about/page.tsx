@@ -4,7 +4,7 @@ import { getAboutPageData } from '@/lib/about';
 
 export const metadata: Metadata = {
   title: 'About',
-  description: '제작 과정을 시스템으로 바꾸는 백엔드 엔지니어 김세중의 작업 방식과 관심 영역입니다.',
+  description: '백엔드 시스템과 제작 파이프라인을 설계해 온 엔지니어 김세중의 작업 방식과 관심 영역입니다.',
   alternates: {
     canonical: '/about/',
   },
