@@ -133,10 +133,20 @@ h2 {
 }
 
 .stat {
+  display: block;
   border: 1px solid var(--line);
   background: var(--panel);
   border-radius: 8px;
   padding: 14px;
+  text-decoration: none;
+  transition:
+    border-color 140ms ease,
+    background 140ms ease;
+}
+
+.stat:hover {
+  border-color: color-mix(in srgb, var(--accent) 55%, var(--line));
+  background: var(--panel-strong);
 }
 
 .stat strong {

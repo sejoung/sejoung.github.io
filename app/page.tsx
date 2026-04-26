@@ -32,18 +32,18 @@ export default function HomePage() {
           </div>
         </div>
         <div className="stats" aria-label="Blog statistics">
-          <div className="stat">
+          <Link className="stat" href="/projects/">
             <strong>{featuredSystems.length + featuredOpenSource.length}</strong>
-            <span>Systems</span>
-          </div>
-          <div className="stat">
+            <span>Projects</span>
+          </Link>
+          <Link className="stat" href="/writing/">
             <strong>{writing.length}</strong>
             <span>Records</span>
-          </div>
-          <div className="stat">
+          </Link>
+          <Link className="stat" href="/tags/">
             <strong>{signalCount}</strong>
             <span>Signals</span>
-          </div>
+          </Link>
         </div>
       </section>
 
