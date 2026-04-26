@@ -3,10 +3,10 @@ import { PostList } from '@/components/PostList';
 import { ProjectCard } from '@/components/ProjectCard';
 import { getCuratedTagCount } from '@/lib/curated-tags';
 import { getFeaturedProjects } from '@/lib/projects';
-import { getAllPosts, paginatePosts } from '@/lib/posts';
+import { getAllWriting, paginateWriting } from '@/lib/writing';
 
 export default function HomePage() {
-  const posts = getAllPosts();
+  const writing = getAllWriting();
   const signalCount = getCuratedTagCount();
   const featuredProjects = getFeaturedProjects();
 
@@ -36,7 +36,7 @@ export default function HomePage() {
             <span>Systems</span>
           </div>
           <div className="stat">
-            <strong>{posts.length}</strong>
+            <strong>{writing.length}</strong>
             <span>Records</span>
           </div>
           <div className="stat">
@@ -65,13 +65,13 @@ export default function HomePage() {
           <h2>최근 문제 해결 기록</h2>
           <Link href="/writing/">All writing</Link>
         </div>
-        <PostList posts={paginatePosts(posts, 1)} />
+          <PostList posts={paginateWriting(writing, 1)} />
       </section>
 
       <section className="section approach-grid">
         <div>
           <p className="eyebrow">Approach</p>
-          <h2>문제를 코드보다 먼저 구조로 봅니다.</h2>
+          <h2>문제를 빠르게 코드로 옴기는것 보다 먼저 구조로 봅니다.</h2>
         </div>
         <div className="approach-list">
           <div>

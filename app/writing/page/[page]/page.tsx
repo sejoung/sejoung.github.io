@@ -2,12 +2,12 @@ import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { Pagination } from '@/components/Pagination';
 import { PostList } from '@/components/PostList';
-import { getAllPosts, paginatePosts, totalPages } from '@/lib/posts';
+import { getAllWriting, paginateWriting, totalWritingPages } from '@/lib/writing';
 
 export const dynamicParams = false;
 
 export function generateStaticParams() {
-  const pages = totalPages(getAllPosts());
+  const pages = totalWritingPages(getAllWriting());
   return Array.from({ length: Math.max(0, pages - 1) }, (_, index) => ({
     page: String(index + 2),
   }));
@@ -30,8 +30,8 @@ export async function generateMetadata({
 export default async function WritingPage({ params }: { params: Promise<{ page: string }> }) {
   const { page } = await params;
   const currentPage = Number(page);
-  const posts = getAllPosts();
-  const pages = totalPages(posts);
+  const writing = getAllWriting();
+  const pages = totalWritingPages(writing);
 
   if (!Number.isInteger(currentPage) || currentPage < 2 || currentPage > pages) {
     notFound();
@@ -44,7 +44,7 @@ export default async function WritingPage({ params }: { params: Promise<{ page: 
         <h1>문제 해결 기록</h1>
         <p className="lead">기술 자체보다 어떤 문제를 왜 그렇게 풀었는지에 초점을 둡니다.</p>
       </section>
-      <PostList posts={paginatePosts(posts, currentPage)} />
+      <PostList posts={paginateWriting(writing, currentPage)} />
       <Pagination currentPage={currentPage} totalPages={pages} basePath="/writing" />
     </>
   );

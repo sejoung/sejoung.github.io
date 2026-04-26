@@ -1,7 +1,12 @@
 import Link from 'next/link';
-import { formatDate, type Post } from '@/lib/posts';
+import { formatDate } from '@/lib/posts';
+import type { WritingItem } from '@/lib/writing';
 
-export function PostList({ posts }: { posts: Post[] }) {
+function isExternalWriting(item: WritingItem) {
+  return 'external' in item;
+}
+
+export function PostList({ posts }: { posts: WritingItem[] }) {
   return (
     <div className="post-list">
       {posts.map((post) => (
@@ -11,16 +16,28 @@ export function PostList({ posts }: { posts: Post[] }) {
           </time>
           <div>
             <h2>
-              <Link href={post.url}>{post.title}</Link>
+              {isExternalWriting(post) ? (
+                <a href={post.url} rel="noreferrer" target="_blank">
+                  {post.title}
+                </a>
+              ) : (
+                <Link href={post.url}>{post.title}</Link>
+              )}
             </h2>
             {post.excerpt ? <p className="lead">{post.excerpt}</p> : null}
-            <div className="meta">{post.readingMinutes} min read</div>
+            <div className="meta">{isExternalWriting(post) ? `${post.source} · External` : `${post.readingMinutes} min read`}</div>
             {post.tags.length > 0 ? (
               <div className="tags">
                 {post.tags.slice(0, 5).map((tag) => (
-                  <Link className="tag" href={`/tags/${encodeURIComponent(tag)}/`} key={tag}>
-                    {tag}
-                  </Link>
+                  isExternalWriting(post) ? (
+                    <span className="tag" key={tag}>
+                      {tag}
+                    </span>
+                  ) : (
+                    <Link className="tag" href={`/tags/${encodeURIComponent(tag)}/`} key={tag}>
+                      {tag}
+                    </Link>
+                  )
                 ))}
               </div>
             ) : null}

@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { Pagination } from '@/components/Pagination';
 import { PostList } from '@/components/PostList';
-import { getAllPosts, paginatePosts, totalPages } from '@/lib/posts';
+import { getAllWriting, paginateWriting, totalWritingPages } from '@/lib/writing';
 
 export const metadata: Metadata = {
   title: 'Writing',
@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 };
 
 export default function WritingPage() {
-  const posts = getAllPosts();
+  const writing = getAllWriting();
 
   return (
     <>
@@ -21,8 +21,8 @@ export default function WritingPage() {
         <h1>문제 해결 기록</h1>
         <p className="lead">기술 자체보다 어떤 문제를 왜 그렇게 풀었는지에 초점을 둡니다.</p>
       </section>
-      <PostList posts={paginatePosts(posts, 1)} />
-      <Pagination currentPage={1} totalPages={totalPages(posts)} basePath="/writing" />
+      <PostList posts={paginateWriting(writing, 1)} />
+      <Pagination currentPage={1} totalPages={totalWritingPages(writing)} basePath="/writing" />
     </>
   );
 }
