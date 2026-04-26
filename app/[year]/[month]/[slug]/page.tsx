@@ -72,10 +72,7 @@ export default async function PostPage({
           <time dateTime={rendered.date.toISOString()}>{formatDate(rendered.date)}</time>
         </p>
         <h1 className="article-title">{rendered.title}</h1>
-        <p className="meta">
-          {rendered.readingMinutes} min read
-          {rendered.categories.length > 0 ? ` · ${rendered.categories.join(', ')}` : ''}
-        </p>
+        <p className="meta">{rendered.readingMinutes} min read</p>
         {rendered.tags.length > 0 ? (
           <div className="tags">
             {rendered.tags.map((tag) => (

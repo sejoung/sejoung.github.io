@@ -15,14 +15,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified: new Date(),
   }));
 
-  const staticRoutes = ['/', '/projects/', '/writing/', '/archives/', '/categories/', '/tags/', '/about/', '/contact/', '/terms/', '/privacy/'].map(
+  const staticRoutes = ['/', '/projects/', '/writing/', '/archives/', '/tags/', '/about/', '/contact/', '/terms/', '/privacy/'].map(
     (route) => ({
       url: absoluteUrl(route),
       lastModified: new Date(),
     }),
   );
 
-  const taxonomies = [...getTaxonomy('tags').map((item) => `/tags/${encodeURIComponent(item.name)}/`), ...getTaxonomy('categories').map((item) => `/categories/${encodeURIComponent(item.name)}/`)].map(
+  const taxonomies = getTaxonomy('tags').map((item) => `/tags/${encodeURIComponent(item.name)}/`).map(
     (route) => ({
       url: absoluteUrl(route),
       lastModified: new Date(),

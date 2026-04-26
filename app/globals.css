@@ -126,7 +126,7 @@ h2 {
 
 .stats {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
   gap: 10px;
 }
 
@@ -395,6 +395,10 @@ h2 {
   margin-top: 24px;
 }
 
+.taxonomy-grid.compact {
+  margin-top: 0;
+}
+
 .taxonomy-link {
   display: flex;
   justify-content: space-between;
@@ -403,6 +407,28 @@ h2 {
   background: var(--panel);
   border-radius: 8px;
   padding: 12px 14px;
+}
+
+.tag-group-grid {
+  display: grid;
+  gap: 16px;
+  margin-top: 28px;
+}
+
+.tag-group {
+  display: grid;
+  grid-template-columns: minmax(220px, 0.42fr) minmax(0, 1fr);
+  gap: 20px;
+  border-top: 1px solid var(--line);
+  padding-top: 18px;
+}
+
+.tag-group h2 {
+  font-size: 24px;
+}
+
+.tag-group p {
+  color: var(--muted);
 }
 
 .project-detail-grid {
@@ -463,10 +489,12 @@ h2 {
   }
 
   .hero,
+  .stats,
   .post-row,
   .approach-grid,
   .project-detail-grid,
-  .section-heading {
+  .section-heading,
+  .tag-group {
     grid-template-columns: 1fr;
   }
 

@@ -1,13 +1,13 @@
 import Link from 'next/link';
 import { PostList } from '@/components/PostList';
 import { ProjectCard } from '@/components/ProjectCard';
+import { getCuratedTagCount } from '@/lib/curated-tags';
 import { getFeaturedProjects } from '@/lib/projects';
-import { getAllPosts, getTaxonomy, paginatePosts } from '@/lib/posts';
+import { getAllPosts, paginatePosts } from '@/lib/posts';
 
 export default function HomePage() {
   const posts = getAllPosts();
-  const tags = getTaxonomy('tags');
-  const categories = getTaxonomy('categories');
+  const signalCount = getCuratedTagCount();
   const featuredProjects = getFeaturedProjects();
 
   return (
@@ -40,11 +40,7 @@ export default function HomePage() {
             <span>Records</span>
           </div>
           <div className="stat">
-            <strong>{categories.length}</strong>
-            <span>Domains</span>
-          </div>
-          <div className="stat">
-            <strong>{tags.length}</strong>
+            <strong>{signalCount}</strong>
             <span>Signals</span>
           </div>
         </div>

@@ -16,7 +16,6 @@ export type FrontMatter = {
   updated?: string | Date;
   comments?: boolean;
   tags?: string[] | string;
-  categories?: string[] | string;
   description?: string;
   project?: string;
 };
@@ -34,7 +33,6 @@ export type Post = {
   content: string;
   readingMinutes: number;
   tags: string[];
-  categories: string[];
   project?: string;
 };
 
@@ -57,7 +55,7 @@ type TaxonomyItem = {
 
 let allPostsCache: Post[] | undefined;
 let postByPathCache: Map<string, Post> | undefined;
-let taxonomyCache: Record<'tags' | 'categories', TaxonomyItem[]> | undefined;
+let tagsCache: TaxonomyItem[] | undefined;
 const staticPageCache = new Map<string, Promise<StaticPage | undefined>>();
 
 function normalizeList(value: FrontMatter['tags']) {
@@ -149,7 +147,6 @@ export function getAllPosts() {
         content,
         readingMinutes: Math.max(1, Math.ceil(readingTime(content).minutes)),
         tags: normalizeList(data.tags),
-        categories: normalizeList(data.categories),
         project: data.project ? String(data.project) : undefined,
       } satisfies Post;
     })
@@ -180,15 +177,15 @@ export function totalPages(posts: Post[]) {
   return Math.max(1, Math.ceil(posts.length / postsPerPage));
 }
 
-export function getTaxonomy(kind: 'tags' | 'categories') {
-  if (taxonomyCache?.[kind]) {
-    return taxonomyCache[kind];
+export function getTaxonomy(kind: 'tags') {
+  if (tagsCache) {
+    return tagsCache;
   }
 
   const map = new Map<string, Post[]>();
 
   for (const post of getAllPosts()) {
-    for (const name of post[kind]) {
+    for (const name of post.tags) {
       const posts = map.get(name) ?? [];
       posts.push(post);
       map.set(name, posts);
@@ -199,16 +196,12 @@ export function getTaxonomy(kind: 'tags' | 'categories') {
     .map(([name, posts]) => ({ name, posts: posts.sort(comparePosts) }))
     .sort((a, b) => b.posts.length - a.posts.length || a.name.localeCompare(b.name));
 
-  taxonomyCache = {
-    tags: taxonomyCache?.tags ?? [],
-    categories: taxonomyCache?.categories ?? [],
-    [kind]: items,
-  };
+  tagsCache = items;
 
-  return items;
+  return tagsCache;
 }
 
-export function getTaxonomyItem(kind: 'tags' | 'categories', name: string) {
+export function getTaxonomyItem(kind: 'tags', name: string) {
   return getTaxonomy(kind).find((item) => item.name === name);
 }
 
