@@ -36,10 +36,25 @@ export function ProjectCard({ project }: { project: Project }) {
           ))}
         </div>
       ) : null}
-      {project.repository ? (
-        <a className="mt-3.5 self-start text-sm text-[#68d4c2] no-underline" href={project.repository} rel="noreferrer" target="_blank">
-          GitHub
-        </a>
+      {project.repository || project.links.length > 0 ? (
+        <div className="mt-3.5 flex flex-wrap gap-3">
+          {project.links.map((link) => (
+            <a
+              className="self-start text-sm text-[#68d4c2] no-underline"
+              href={link.href}
+              key={`${project.slug}-${link.href}`}
+              rel={link.external ? 'noreferrer' : undefined}
+              target={link.external ? '_blank' : undefined}
+            >
+              {link.label}
+            </a>
+          ))}
+          {project.repository ? (
+            <a className="self-start text-sm text-[#68d4c2] no-underline" href={project.repository} rel="noreferrer" target="_blank">
+              GitHub
+            </a>
+          ) : null}
+        </div>
       ) : null}
     </article>
   );

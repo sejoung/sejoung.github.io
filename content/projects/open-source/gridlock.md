@@ -7,6 +7,10 @@ solution: "Love2D와 Lua로 퍼즐 규칙, BFS 기반 힌트, 저장 시스템, 
 impact: "플레이 가능한 게임뿐 아니라 레벨 제작과 자동 업데이트, 멀티 플랫폼 빌드 흐름까지 포함한 작은 게임 시스템으로 정리했습니다."
 stack: ["Love2D", "Lua", "Game", "BFS", "GitHub Pages"]
 repository: "https://github.com/sejoung/Gridlock"
+links:
+  - label: "Play"
+    href: "https://sejoung.github.io/Gridlock/"
+    external: true
 featured: true
 order: 16
 ---

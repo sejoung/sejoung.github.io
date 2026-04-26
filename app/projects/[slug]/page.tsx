@@ -65,11 +65,24 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
             </span>
           ))}
         </div>
-        {rendered.repository ? (
+        {rendered.repository || rendered.links.length > 0 ? (
           <div className="hero-actions">
-            <a className="button primary" href={rendered.repository} rel="noreferrer" target="_blank">
-              View on GitHub
-            </a>
+            {rendered.links.map((link, index) => (
+              <a
+                className={index === 0 ? 'button primary' : 'button'}
+                href={link.href}
+                key={link.href}
+                rel={link.external ? 'noreferrer' : undefined}
+                target={link.external ? '_blank' : undefined}
+              >
+                {link.label}
+              </a>
+            ))}
+            {rendered.repository ? (
+              <a className={rendered.links.length > 0 ? 'button' : 'button primary'} href={rendered.repository} rel="noreferrer" target="_blank">
+                View on GitHub
+              </a>
+            ) : null}
           </div>
         ) : null}
       </header>

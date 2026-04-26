@@ -7,6 +7,10 @@ solution: "로컬 Git 저장소를 분석해 hotspots, ownership, activity, deli
 impact: "코드베이스와 팀 상태를 추측이 아니라 Git 히스토리 기반 신호로 확인하고, 리뷰나 개선 우선순위를 잡는 데 활용할 수 있습니다."
 stack: ["Tauri", "React", "TypeScript", "Rust", "Git"]
 repository: "https://github.com/sejoung/GitPulse"
+links:
+  - label: "Download"
+    href: "https://sejoung.github.io/GitPulse/"
+    external: true
 featured: true
 order: 14
 ---

@@ -7,6 +7,10 @@ solution: "AppKit 기반 스크롤/줌 코어와 SwiftUI 쉘을 조합해 단일
 impact: "폴더, CBZ, ZIP 기반 이미지 묶음을 빠르게 열고, 읽기 방향과 fit mode, 최근 항목과 진행 상태를 유지하는 집중형 뷰어 경험을 제공합니다."
 stack: ["macOS", "Swift", "SwiftUI", "AppKit", "ZIPFoundation"]
 repository: "https://github.com/sejoung/Panely"
+links:
+  - label: "Download"
+    href: "https://sejoung.github.io/Panely/"
+    external: true
 featured: true
 order: 12
 ---

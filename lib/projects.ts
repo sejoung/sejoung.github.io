@@ -15,10 +15,17 @@ type ProjectFrontMatter = {
   impact?: string;
   stack?: string[] | string;
   repository?: string;
+  links?: ProjectLink[];
   relatedPosts?: string[];
   relatedTags?: string[] | string;
   featured?: boolean;
   order?: number;
+};
+
+export type ProjectLink = {
+  label: string;
+  href: string;
+  external?: boolean;
 };
 
 export type Project = {
@@ -31,6 +38,7 @@ export type Project = {
   impact: string;
   stack: string[];
   repository?: string;
+  links: ProjectLink[];
   relatedPostSlugs: string[];
   relatedTags: string[];
   featured: boolean;
@@ -53,6 +61,20 @@ function normalizeList(value: string[] | string | undefined) {
   }
 
   return Array.isArray(value) ? value.map(String).filter(Boolean) : [String(value)].filter(Boolean);
+}
+
+function normalizeProjectLinks(value: ProjectFrontMatter['links']) {
+  if (!Array.isArray(value)) {
+    return [];
+  }
+
+  return value
+    .map((link) => ({
+      label: link?.label ? String(link.label) : '',
+      href: link?.href ? String(link.href) : '',
+      external: Boolean(link?.external),
+    }))
+    .filter((link) => link.label && link.href);
 }
 
 function slugFromFilename(filename: string) {
@@ -112,6 +134,7 @@ export function getAllProjects() {
         impact: data.impact ? String(data.impact) : '',
         stack: normalizeList(data.stack),
         repository: data.repository ? String(data.repository) : undefined,
+        links: normalizeProjectLinks(data.links),
         relatedPostSlugs: Array.isArray(data.relatedPosts) ? data.relatedPosts.map(String) : [],
         relatedTags: normalizeList(data.relatedTags),
         featured: Boolean(data.featured),

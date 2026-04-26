@@ -7,6 +7,10 @@ solution: "Tauri, React, Three.js, Rust를 조합해 FBX/GLB/OBJ 미리보기와
 impact: "3D 아티스트와 개발자가 에셋 상태를 빠르게 확인하고, 품질 문제를 공유 가능한 리포트로 남길 수 있게 합니다."
 stack: ["Tauri", "React", "TypeScript", "Three.js", "Rust"]
 repository: "https://github.com/sejoung/AssetBox"
+links:
+  - label: "Download"
+    href: "https://sejoung.github.io/AssetBox/"
+    external: true
 featured: true
 order: 13
 ---
