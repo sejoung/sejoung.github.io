@@ -7,6 +7,10 @@ solution: "Storage Access Framework로 폰트 폴더를 연결하고, 노트별 
 impact: "폰트를 설치 과정이 아니라 작성 흐름 안에서 바로 쓰고 비교할 수 있게 만들어 typography 중심의 노트 작성 경험을 제공합니다."
 stack: ["Android", "Kotlin", "Jetpack Compose", "Room", "DataStore"]
 repository: "https://github.com/sejoung/FontDrop"
+links:
+  - label: "Download"
+    href: "https://github.com/sejoung/FontDrop/releases"
+    external: true
 featured: true
 order: 11
 ---

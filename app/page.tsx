@@ -2,11 +2,12 @@ import Link from 'next/link';
 import { PostList } from '@/components/PostList';
 import { ProjectCard } from '@/components/ProjectCard';
 import { getCuratedTagCount } from '@/lib/curated-tags';
-import { getFeaturedProjects } from '@/lib/projects';
+import { getAllProjects, getFeaturedProjects } from '@/lib/projects';
 import { getAllWriting, paginateWriting } from '@/lib/writing';
 
 export default function HomePage() {
   const writing = getAllWriting();
+  const projects = getAllProjects();
   const signalCount = getCuratedTagCount();
   const featuredSystems = getFeaturedProjects({ type: 'system', limit: 3 });
   const featuredOpenSource = getFeaturedProjects({ type: 'open-source', limit: 3 });
@@ -33,7 +34,7 @@ export default function HomePage() {
         </div>
         <div className="stats" aria-label="Blog statistics">
           <Link className="stat" href="/projects/">
-            <strong>{featuredSystems.length + featuredOpenSource.length}</strong>
+            <strong>{projects.length}</strong>
             <span>Projects</span>
           </Link>
           <Link className="stat" href="/writing/">
