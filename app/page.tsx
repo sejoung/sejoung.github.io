@@ -8,7 +8,8 @@ import { getAllWriting, paginateWriting } from '@/lib/writing';
 export default function HomePage() {
   const writing = getAllWriting();
   const signalCount = getCuratedTagCount();
-  const featuredProjects = getFeaturedProjects(3);
+  const featuredSystems = getFeaturedProjects({ type: 'system', limit: 3 });
+  const featuredOpenSource = getFeaturedProjects({ type: 'open-source', limit: 3 });
 
   return (
     <>
@@ -32,7 +33,7 @@ export default function HomePage() {
         </div>
         <div className="stats" aria-label="Blog statistics">
           <div className="stat">
-            <strong>{featuredProjects.length}</strong>
+            <strong>{featuredSystems.length + featuredOpenSource.length}</strong>
             <span>Systems</span>
           </div>
           <div className="stat">
@@ -52,10 +53,29 @@ export default function HomePage() {
           <h2>프로젝트가 맥락을 만들고, 글이 증거가 됩니다.</h2>
           <Link href="/projects/">All projects</Link>
         </div>
-        <div className="project-grid">
-          {featuredProjects.map((project) => (
-            <ProjectCard project={project} key={project.slug} />
-          ))}
+        <div className="featured-project-groups">
+          <div className="featured-project-group">
+            <div className="featured-project-heading">
+              <h3>Systems</h3>
+              <Link href="/projects/">더 많은 시스템 보기</Link>
+            </div>
+            <div className="project-grid">
+              {featuredSystems.map((project) => (
+                <ProjectCard project={project} key={project.slug} />
+              ))}
+            </div>
+          </div>
+          <div className="featured-project-group">
+            <div className="featured-project-heading">
+              <h3>Open Source Tools</h3>
+              <Link href="/projects/">더 많은 도구 보기</Link>
+            </div>
+            <div className="project-grid">
+              {featuredOpenSource.map((project) => (
+                <ProjectCard project={project} key={project.slug} />
+              ))}
+            </div>
+          </div>
         </div>
       </section>
 

@@ -126,8 +126,20 @@ export function getAllProjects() {
   return projectsCache;
 }
 
-export function getFeaturedProjects(limit?: number) {
-  const projects = getAllProjects().filter((project) => project.featured);
+type FeaturedProjectOptions = {
+  type?: Project['type'];
+  limit?: number;
+};
+
+export function getFeaturedProjects(options: FeaturedProjectOptions = {}) {
+  const projects = getAllProjects().filter((project) => {
+    if (!project.featured) {
+      return false;
+    }
+
+    return options.type ? project.type === options.type : true;
+  });
+  const { limit } = options;
   return typeof limit === 'number' ? projects.slice(0, limit) : projects;
 }
 
