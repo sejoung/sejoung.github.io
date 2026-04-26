@@ -3,7 +3,7 @@ title: "About"
 headline: "백엔드 시스템과 제작 파이프라인을 설계해 온 엔지니어"
 intro: "여러 산업에서 백엔드 시스템을 설계하고 운영해왔고, 지금은 웹툰 제작 과정의 반복 문제를 파이프라인과 자동화 도구로 정리하고 있습니다."
 workTitle: "What I Work On"
-workSubtitle: "문제의 흐름을 구조로 바꿉니다."
+workSubtitle: "문제의 흐름을 구조로 정리합니다."
 work:
   - title: "Production Pipeline"
     description: "웹툰 제작 과정에서 반복되는 작업, 에셋 관리, Unreal 기반 배경 흐름을 자동화합니다."

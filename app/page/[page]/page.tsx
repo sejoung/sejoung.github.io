@@ -39,7 +39,8 @@ export default async function PostsPage({ params }: { params: Promise<{ page: st
 
   return (
     <>
-      <h1>Posts</h1>
+      <h1>Writing</h1>
+      <p className="lead">기록을 최신순으로 이어서 봅니다.</p>
       <PostList posts={paginatePosts(posts, currentPage)} />
       <Pagination currentPage={currentPage} totalPages={pages} />
     </>

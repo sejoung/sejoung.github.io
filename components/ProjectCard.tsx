@@ -19,7 +19,7 @@ export function ProjectCard({ project }: { project: Project }) {
           <dd className="mt-1">{project.problem}</dd>
         </div>
         <div className="border-t border-[#26313d] pt-3">
-          <dt className="text-xs font-extrabold uppercase tracking-[0.08em] text-[#68d4c2]">System</dt>
+          <dt className="text-xs font-extrabold uppercase tracking-[0.08em] text-[#68d4c2]">Approach</dt>
           <dd className="mt-1">{project.solution}</dd>
         </div>
         <div className="border-t border-[#26313d] pt-3">

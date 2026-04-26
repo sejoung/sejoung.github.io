@@ -80,7 +80,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
           <p>{rendered.problem}</p>
         </div>
         <div>
-          <h2>System</h2>
+          <h2>Approach</h2>
           <p>{rendered.solution}</p>
         </div>
         <div>
@@ -95,7 +95,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
         <section className="section">
           <div className="section-heading">
             <p className="eyebrow">Related Writing</p>
-            <h2>이 시스템과 연결된 기록</h2>
+            <h2>이 프로젝트와 연결된 기록</h2>
             <Link href="/writing/">All writing</Link>
           </div>
           <PostList posts={relatedWriting} />
