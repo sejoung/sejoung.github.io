@@ -8,11 +8,13 @@ const projectsDirectory = path.join(process.cwd(), 'content/projects');
 
 type ProjectFrontMatter = {
   title?: string;
+  type?: string;
   summary?: string;
   problem?: string;
   solution?: string;
   impact?: string;
   stack?: string[] | string;
+  repository?: string;
   relatedPosts?: string[];
   relatedTags?: string[] | string;
   featured?: boolean;
@@ -21,12 +23,14 @@ type ProjectFrontMatter = {
 
 export type Project = {
   title: string;
+  type: 'system' | 'open-source';
   slug: string;
   summary: string;
   problem: string;
   solution: string;
   impact: string;
   stack: string[];
+  repository?: string;
   relatedPostSlugs: string[];
   relatedTags: string[];
   featured: boolean;
@@ -52,7 +56,29 @@ function normalizeList(value: string[] | string | undefined) {
 }
 
 function slugFromFilename(filename: string) {
-  return filename.replace(/\.md$/, '');
+  return path.basename(filename).replace(/\.md$/, '');
+}
+
+function projectTypeFromPath(filePath: string, frontMatterType?: string): Project['type'] {
+  if (frontMatterType === 'open-source') {
+    return 'open-source';
+  }
+
+  const relativePath = path.relative(projectsDirectory, filePath);
+  const [section] = relativePath.split(path.sep);
+  return section === 'open-source' ? 'open-source' : 'system';
+}
+
+function readProjectFiles(directory: string): string[] {
+  return fs.readdirSync(directory, { withFileTypes: true }).flatMap((entry) => {
+    const entryPath = path.join(directory, entry.name);
+
+    if (entry.isDirectory()) {
+      return readProjectFiles(entryPath);
+    }
+
+    return entry.isFile() && entry.name.endsWith('.md') ? [entryPath] : [];
+  });
 }
 
 function compareProjects(a: Project, b: Project) {
@@ -70,22 +96,22 @@ export function getAllProjects() {
     return projectsCache;
   }
 
-  projectsCache = fs
-    .readdirSync(projectsDirectory)
-    .filter((filename) => filename.endsWith('.md'))
-    .map((filename) => {
-      const slug = slugFromFilename(filename);
-      const parsed = matter(fs.readFileSync(path.join(projectsDirectory, filename), 'utf8'));
+  projectsCache = readProjectFiles(projectsDirectory)
+    .map((filePath) => {
+      const slug = slugFromFilename(filePath);
+      const parsed = matter(fs.readFileSync(filePath, 'utf8'));
       const data = parsed.data as ProjectFrontMatter;
 
       return {
         title: data.title ? String(data.title) : slug,
+        type: projectTypeFromPath(filePath, data.type),
         slug,
         summary: data.summary ? String(data.summary) : '',
         problem: data.problem ? String(data.problem) : '',
         solution: data.solution ? String(data.solution) : '',
         impact: data.impact ? String(data.impact) : '',
         stack: normalizeList(data.stack),
+        repository: data.repository ? String(data.repository) : undefined,
         relatedPostSlugs: Array.isArray(data.relatedPosts) ? data.relatedPosts.map(String) : [],
         relatedTags: normalizeList(data.relatedTags),
         featured: Boolean(data.featured),

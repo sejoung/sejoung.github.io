@@ -2,10 +2,12 @@ import Link from 'next/link';
 import type { Project } from '@/lib/projects';
 
 export function ProjectCard({ project }: { project: Project }) {
+  const label = project.type === 'open-source' ? 'Open Source' : 'System';
+
   return (
     <article className="project-card">
       <div className="project-card-header">
-        <p className="eyebrow">System</p>
+        <p className="eyebrow">{label}</p>
         <h2>
           <Link href={project.url}>{project.title}</Link>
         </h2>
@@ -33,6 +35,11 @@ export function ProjectCard({ project }: { project: Project }) {
             </span>
           ))}
         </div>
+      ) : null}
+      {project.repository ? (
+        <a className="project-link" href={project.repository} rel="noreferrer" target="_blank">
+          GitHub
+        </a>
       ) : null}
     </article>
   );

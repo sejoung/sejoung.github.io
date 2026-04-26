@@ -55,7 +55,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
   return (
     <article className="article wide-article">
       <header className="article-header">
-        <p className="eyebrow">Project</p>
+        <p className="eyebrow">{rendered.type === 'open-source' ? 'Open Source Project' : 'Project'}</p>
         <h1 className="article-title">{rendered.title}</h1>
         <p className="lead">{rendered.summary}</p>
         <div className="tags">
@@ -65,6 +65,13 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
             </span>
           ))}
         </div>
+        {rendered.repository ? (
+          <div className="hero-actions">
+            <a className="button primary" href={rendered.repository} rel="noreferrer" target="_blank">
+              View on GitHub
+            </a>
+          </div>
+        ) : null}
       </header>
 
       <section className="project-detail-grid">

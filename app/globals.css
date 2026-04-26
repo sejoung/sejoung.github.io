@@ -271,6 +271,10 @@ h2 {
   padding: 18px;
 }
 
+.project-card .tags {
+  margin-top: auto;
+}
+
 .project-card-header h2 {
   font-size: 25px;
 }
@@ -282,6 +286,14 @@ h2 {
 .project-summary {
   color: var(--muted);
   margin: 14px 0 18px;
+}
+
+.project-link {
+  align-self: flex-start;
+  margin-top: 14px;
+  color: var(--accent);
+  font-size: 14px;
+  text-decoration: none;
 }
 
 .project-facts {
