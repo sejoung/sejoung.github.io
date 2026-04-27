@@ -15,7 +15,7 @@ export default function TagsPage() {
   return (
     <>
       <h1>Tags</h1>
-      <p className="lead">프로젝트와 문제 해결 기록을 설명하는 핵심 신호만 모았습니다.</p>
+      <p className="lead">프로젝트와 작업 노트를 설명하는 핵심 주제만 모았습니다.</p>
       <div className="tag-group-grid">
         {groups.map((group) => (
           <section className="tag-group" key={group.title}>

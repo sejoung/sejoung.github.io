@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     default: 'sejoung kim | Systems and Production Pipelines',
     template: '%s | sejoung kim',
   },
-  description: '백엔드 시스템과 제작 파이프라인을 설계해 온 엔지니어의 문제 해결 아카이브입니다.',
+  description: '백엔드/파이프라인 엔지니어 김세중의 작업 노트. 시스템 설계, 웹툰 제작 자동화, 운영 기록을 모았습니다.',
 };
 
 export default function RootLayout({
@@ -35,7 +35,7 @@ export default function RootLayout({
           </header>
           <main className="mx-auto w-[min(1180px,calc(100%_-_32px))] py-[52px] pb-[72px]">{children}</main>
           <footer className="mx-auto flex w-[min(1180px,calc(100%_-_32px))] flex-wrap items-center justify-between gap-3 border-t border-[#26313d] py-7 text-sm text-[#93a1b2]">
-            <span>백엔드 시스템과 제작 파이프라인을 설계해 온 엔지니어 · sejoung kim</span>
+            <span>시스템과 파이프라인을 설계하고 기록합니다 · sejoung kim</span>
             <nav className="flex gap-3" aria-label="Contact links">
               {contactLinks.map((item) => (
                 <a href={item.href} key={item.href} rel={item.external ? 'noreferrer' : undefined} target={item.external ? '_blank' : undefined}>

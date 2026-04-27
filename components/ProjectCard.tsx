@@ -5,7 +5,7 @@ export function ProjectCard({ project }: { project: Project }) {
   const label = project.type === 'open-source' ? 'Open Source' : 'System';
 
   return (
-    <article className="flex min-h-[420px] flex-col rounded-lg border border-[#26313d] bg-gradient-to-b from-[#151f2b] to-[#111821] p-[18px]">
+    <article className="flex h-full flex-col rounded-lg border border-[#26313d] bg-gradient-to-b from-[#151f2b] to-[#111821] p-[18px]">
       <div className="project-card-header">
         <p className="eyebrow">{label}</p>
         <h2 className="text-[25px] leading-tight">

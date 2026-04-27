@@ -43,7 +43,7 @@ export default function HomePage() {
           </Link>
           <Link className="stat" href="/tags/">
             <strong>{signalCount}</strong>
-            <span>Signals</span>
+            <span>Topics</span>
           </Link>
         </div>
       </section>
@@ -58,7 +58,7 @@ export default function HomePage() {
           <div className="featured-project-group">
             <div className="featured-project-heading">
               <h3>Systems</h3>
-              <Link href="/projects/">더 많은 시스템 보기</Link>
+              <Link href="/projects/">More Systems</Link>
             </div>
             <div className="project-grid">
               {featuredSystems.map((project) => (
@@ -69,7 +69,7 @@ export default function HomePage() {
           <div className="featured-project-group">
             <div className="featured-project-heading">
               <h3>Open Source Tools</h3>
-              <Link href="/projects/">더 많은 도구 보기</Link>
+              <Link href="/projects/">More Tools</Link>
             </div>
             <div className="project-grid">
               {featuredOpenSource.map((project) => (
@@ -83,7 +83,7 @@ export default function HomePage() {
       <section className="section">
         <div className="section-heading">
           <p className="eyebrow">Selected Writing</p>
-          <h2>최근 문제 해결 기록</h2>
+          <h2>최근 작업 노트</h2>
           <Link href="/writing/">All writing</Link>
         </div>
           <PostList posts={paginateWriting(writing, 1)} />
@@ -96,16 +96,16 @@ export default function HomePage() {
         </div>
         <div className="approach-list">
           <div>
-            <strong>Model the workflow</strong>
-            <span>작업 흐름과 상태를 먼저 모델링합니다.</span>
+            <strong>흐름을 먼저 모델링합니다</strong>
+            <span>기능 목록보다 입력·출력·상태·실패 지점을 먼저 정리합니다.</span>
           </div>
           <div>
-            <strong>Find repeatable boundaries</strong>
-            <span>반복 가능한 경계를 찾아 자동화 단위로 나눕니다.</span>
+            <strong>반복되는 경계를 찾습니다</strong>
+            <span>사람이 매번 판단하는 지점을 도구와 파이프라인으로 옮깁니다.</span>
           </div>
           <div>
-            <strong>Connect records to systems</strong>
-            <span>글을 프로젝트 맥락과 연결해 판단의 이력을 남깁니다.</span>
+            <strong>글과 시스템을 잇습니다</strong>
+            <span>작업 기록을 프로젝트 맥락과 연결해 판단의 이력을 남깁니다.</span>
           </div>
         </div>
       </section>

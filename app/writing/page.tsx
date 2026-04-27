@@ -5,7 +5,7 @@ import { getAllWriting, paginateWriting, totalWritingPages } from '@/lib/writing
 
 export const metadata: Metadata = {
   title: 'Writing',
-  description: '기술 설명보다 문제 해결 과정을 중심으로 정리한 기록입니다.',
+  description: '기술 자체보다 어떤 문제를 왜 그렇게 풀었는지에 초점을 둔 작업 노트입니다.',
   alternates: {
     canonical: '/writing/',
   },
@@ -18,7 +18,7 @@ export default function WritingPage() {
     <>
       <section className="page-hero">
         <p className="eyebrow">Writing</p>
-        <h1>문제 해결 기록</h1>
+        <h1>작업 노트</h1>
         <p className="lead">기술 자체보다 어떤 문제를 왜 그렇게 풀었는지에 초점을 둡니다.</p>
       </section>
       <PostList posts={paginateWriting(writing, 1)} />
