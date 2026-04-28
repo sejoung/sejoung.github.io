@@ -6,12 +6,10 @@ export function ProjectCard({ project }: { project: Project }) {
 
   return (
     <article className="flex h-full flex-col rounded-lg border border-[#26313d] bg-gradient-to-b from-[#151f2b] to-[#111821] p-[18px]">
-      <div className="project-card-header">
-        <p className="eyebrow">{label}</p>
-        <h2 className="text-[25px] leading-tight">
-          <Link className="no-underline" href={project.url}>{project.title}</Link>
-        </h2>
-      </div>
+      <p className="eyebrow">{label}</p>
+      <h2 className="text-[25px] leading-tight">
+        <Link className="no-underline" href={project.url}>{project.title}</Link>
+      </h2>
       <p className="my-4 text-[#93a1b2]">{project.summary}</p>
       <dl className="grid gap-3">
         <div className="border-t border-[#26313d] pt-3">
