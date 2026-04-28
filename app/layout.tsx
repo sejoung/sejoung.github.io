@@ -10,6 +10,24 @@ export const metadata: Metadata = {
     template: '%s | sejoung kim',
   },
   description: '백엔드/파이프라인 엔지니어 김세중의 작업 노트. 시스템 설계, 웹툰 제작 자동화, 운영 기록을 모았습니다.',
+  openGraph: {
+    type: 'website',
+    locale: 'ko_KR',
+    siteName: 'sejoung.systems',
+    url: 'https://sejoung.github.io',
+    title: 'sejoung kim | Systems and Production Pipelines',
+    description: '백엔드/파이프라인 엔지니어 김세중의 작업 노트. 시스템 설계, 웹툰 제작 자동화, 운영 기록을 모았습니다.',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'sejoung kim | Systems and Production Pipelines',
+    description: '백엔드/파이프라인 엔지니어 김세중의 작업 노트. 시스템 설계, 웹툰 제작 자동화, 운영 기록을 모았습니다.',
+  },
+  alternates: {
+    types: {
+      'application/rss+xml': '/rss2.xml',
+    },
+  },
 };
 
 export default function RootLayout({
@@ -29,6 +47,7 @@ export default function RootLayout({
               <nav className="flex gap-4 text-sm text-[#93a1b2] max-[760px]:flex-wrap" aria-label="Main navigation">
                 <Link href="/projects/">Projects</Link>
                 <Link href="/writing/">Writing</Link>
+                <Link href="/archives/">Archives</Link>
                 <Link href="/about/">About</Link>
               </nav>
             </div>

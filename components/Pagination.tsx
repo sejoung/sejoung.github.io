@@ -3,18 +3,14 @@ import Link from 'next/link';
 type PaginationProps = {
   currentPage: number;
   totalPages: number;
-  basePath?: string;
+  basePath: string;
 };
 
-function pageHref(page: number, basePath = '') {
-  if (basePath) {
-    return page === 1 ? `${basePath}/` : `${basePath}/page/${page}/`;
-  }
-
-  return page === 1 ? '/' : `/page/${page}/`;
+function pageHref(page: number, basePath: string) {
+  return page === 1 ? `${basePath}/` : `${basePath}/page/${page}/`;
 }
 
-export function Pagination({ currentPage, totalPages, basePath = '' }: PaginationProps) {
+export function Pagination({ currentPage, totalPages, basePath }: PaginationProps) {
   if (totalPages <= 1) {
     return null;
   }

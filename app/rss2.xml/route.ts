@@ -5,8 +5,8 @@ export const dynamic = 'force-static';
 
 export function GET() {
   const feed = new RSS({
-    title: '폭간의 기술블로그',
-    description: 'Java, Kotlin 등 백엔드 개발 기술과 소프트웨어 엔지니어링 학습 내용을 정리하는 기술 블로그입니다.',
+    title: 'sejoung kim · 작업 노트',
+    description: '백엔드 시스템과 제작 파이프라인을 설계해 온 엔지니어의 작업 노트. 시스템 설계, 웹툰 제작 자동화, 운영 기록을 모았습니다.',
     feed_url: `${siteUrl}/rss2.xml`,
     site_url: siteUrl,
     language: 'ko',

@@ -4,6 +4,7 @@ import { getCuratedTagGroups } from '@/lib/curated-tags';
 
 export const metadata: Metadata = {
   title: 'Tags',
+  description: '프로젝트와 작업 노트를 설명하는 핵심 주제만 큐레이션해 모았습니다.',
   alternates: {
     canonical: '/tags/',
   },
