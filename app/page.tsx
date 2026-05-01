@@ -50,8 +50,10 @@ export default function HomePage() {
 
       <section className="section">
         <div className="section-heading">
-          <p className="eyebrow">Featured Projects</p>
-          <h2>프로젝트가 맥락을 만들고, 글이 증거가 됩니다.</h2>
+          <div>
+            <p className="eyebrow">Featured Projects</p>
+            <h2>프로젝트가 맥락을 만들고, 글이 증거가 됩니다.</h2>
+          </div>
           <Link href="/projects/">All projects</Link>
         </div>
         <div className="featured-project-groups">
@@ -82,11 +84,13 @@ export default function HomePage() {
 
       <section className="section">
         <div className="section-heading">
-          <p className="eyebrow">Selected Writing</p>
-          <h2>최근 작업 노트</h2>
+          <div>
+            <p className="eyebrow">Selected Writing</p>
+            <h2>최근 작업 노트</h2>
+          </div>
           <Link href="/writing/">All writing</Link>
         </div>
-          <PostList posts={paginateWriting(writing, 1)} />
+        <PostList posts={paginateWriting(writing, 1)} />
       </section>
 
       <section className="section approach-grid">

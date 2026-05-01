@@ -136,7 +136,7 @@ h2 {
 .tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: 10px;
   margin-top: 12px;
 }
 
@@ -278,7 +278,7 @@ h2 {
 
 .about-card-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr));
   gap: 12px;
 }
 
@@ -311,7 +311,7 @@ h2 {
 
 .about-link-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr));
   gap: 10px;
 }
 
@@ -438,7 +438,7 @@ h2 {
   border-radius: 8px;
   background: var(--code);
   color: #f8f8f2;
-  font-size: 14px;
+  font-size: 15px;
   line-height: 1.65;
 }
 
@@ -472,6 +472,23 @@ h2 {
   border-collapse: collapse;
   font-size: 15px;
   line-height: 1.6;
+  background-image:
+    linear-gradient(to right, var(--background), var(--background)),
+    linear-gradient(to right, var(--background), var(--background)),
+    linear-gradient(to right, color-mix(in srgb, var(--background) 0%, transparent), color-mix(in srgb, var(--background) 90%, transparent)),
+    linear-gradient(to left, color-mix(in srgb, var(--background) 0%, transparent), color-mix(in srgb, var(--background) 90%, transparent));
+  background-position:
+    left center,
+    right center,
+    left center,
+    right center;
+  background-repeat: no-repeat;
+  background-size:
+    20px 100%,
+    20px 100%,
+    14px 100%,
+    14px 100%;
+  background-attachment: local, local, scroll, scroll;
 }
 
 .content th,
@@ -495,7 +512,7 @@ h2 {
 
 .taxonomy-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(210px, 100%), 1fr));
   gap: 10px;
   margin-top: 24px;
 }
@@ -584,5 +601,17 @@ h2 {
   .section-heading,
   .tag-group {
     grid-template-columns: 1fr;
+  }
+
+  .hero {
+    min-height: 0;
+  }
+
+  .section {
+    margin-top: 40px;
+  }
+
+  .content {
+    line-height: 1.7;
   }
 }

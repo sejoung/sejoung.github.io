@@ -107,8 +107,10 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
       {relatedWriting.length > 0 ? (
         <section className="section">
           <div className="section-heading">
-            <p className="eyebrow">Related Writing</p>
-            <h2>이 프로젝트와 연결된 기록</h2>
+            <div>
+              <p className="eyebrow">Related Writing</p>
+              <h2>이 프로젝트와 연결된 기록</h2>
+            </div>
             <Link href="/writing/">All writing</Link>
           </div>
           <PostList posts={relatedWriting} />

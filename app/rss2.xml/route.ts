@@ -5,7 +5,7 @@ export const dynamic = 'force-static';
 
 export function GET() {
   const feed = new RSS({
-    title: 'sejoung kim · 작업 노트',
+    title: 'beni kim · 김세중 · 작업 노트',
     description: '백엔드 시스템과 제작 파이프라인을 설계해 온 엔지니어의 작업 노트. 시스템 설계, 웹툰 제작 자동화, 운영 기록을 모았습니다.',
     feed_url: `${siteUrl}/rss2.xml`,
     site_url: siteUrl,
