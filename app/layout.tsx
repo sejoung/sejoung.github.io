@@ -40,7 +40,7 @@ export default function RootLayout({
       <body className="bg-[#0b0f14] text-[#e7edf3]">
         <div className="min-h-screen">
           <header className="sticky top-0 z-10 border-b border-[#26313d] bg-[#0b0f14]/90 backdrop-blur-md">
-            <div className="mx-auto flex min-h-16 w-[min(1180px,calc(100%_-_32px))] items-center justify-between gap-5 max-[760px]:flex-col max-[760px]:items-start max-[760px]:py-3.5">
+            <div className="mx-auto flex min-h-16 w-[min(1280px,calc(100%_-_32px))] items-center justify-between gap-5 max-[760px]:flex-col max-[760px]:items-start max-[760px]:py-3.5">
               <Link className="font-extrabold no-underline" href="/">
                 sejoung.systems
               </Link>
@@ -52,8 +52,8 @@ export default function RootLayout({
               </nav>
             </div>
           </header>
-          <main className="mx-auto w-[min(1180px,calc(100%_-_32px))] py-[52px] pb-[72px]">{children}</main>
-          <footer className="mx-auto flex w-[min(1180px,calc(100%_-_32px))] flex-wrap items-center justify-between gap-3 border-t border-[#26313d] py-7 text-sm text-[#93a1b2]">
+          <main className="mx-auto w-[min(1280px,calc(100%_-_32px))] py-[52px] pb-[72px]">{children}</main>
+          <footer className="mx-auto flex w-[min(1280px,calc(100%_-_32px))] flex-wrap items-center justify-between gap-3 border-t border-[#26313d] py-7 text-sm text-[#93a1b2]">
             <span>시스템과 파이프라인을 설계하고 기록합니다 · sejoung kim</span>
             <nav className="flex gap-3" aria-label="Contact links">
               {contactLinks.map((item) => (
