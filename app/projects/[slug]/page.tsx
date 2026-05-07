@@ -53,7 +53,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
   const relatedWriting = [...rendered.relatedPosts, ...getExternalWritingForProject(project.slug)].sort(compareWriting);
 
   return (
-    <article className="article wide-article">
+    <article className="article wide-article" data-pagefind-body>
       <header className="article-header">
         <p className="eyebrow">{rendered.type === 'open-source' ? 'Open Source Project' : 'Project'}</p>
         <h1 className="article-title">{rendered.title}</h1>

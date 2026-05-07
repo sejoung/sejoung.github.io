@@ -615,3 +615,231 @@ h2 {
     line-height: 1.7;
   }
 }
+
+.search-trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 36px;
+  padding: 6px 10px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--panel);
+  color: var(--muted);
+  font-family: inherit;
+  font-size: 13px;
+  cursor: pointer;
+  transition:
+    border-color 140ms ease,
+    color 140ms ease,
+    background 140ms ease;
+}
+
+.search-trigger:hover,
+.search-trigger:focus-visible {
+  border-color: color-mix(in srgb, var(--accent) 55%, var(--line));
+  background: var(--panel-strong);
+  color: var(--foreground);
+  outline: none;
+}
+
+.search-trigger-label {
+  font-size: 13px;
+}
+
+.search-trigger-kbd {
+  display: inline-flex;
+  align-items: center;
+  padding: 1px 6px;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  background: var(--panel-strong);
+  color: var(--muted);
+  font-family: inherit;
+  font-size: 11px;
+}
+
+.search-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: clamp(64px, 12dvh, 140px) 16px 16px;
+  padding-top: calc(clamp(64px, 12dvh, 140px) + env(safe-area-inset-top));
+  padding-bottom: calc(16px + env(safe-area-inset-bottom));
+}
+
+.search-overlay-backdrop {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  background: rgba(2, 5, 9, 0.72);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  cursor: default;
+}
+
+.search-modal {
+  position: relative;
+  z-index: 1;
+  width: min(640px, 100%);
+  max-height: min(72dvh, 640px);
+  display: flex;
+  flex-direction: column;
+  border: 1px solid color-mix(in srgb, var(--accent) 22%, var(--line));
+  border-radius: 14px;
+  background: var(--panel-strong);
+  box-shadow: 0 32px 80px rgba(0, 0, 0, 0.6);
+  overflow: hidden;
+}
+
+.search-modal-input-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--line);
+}
+
+.search-modal-input-icon {
+  color: var(--muted);
+  flex-shrink: 0;
+}
+
+.search-modal-input {
+  flex: 1;
+  min-width: 0;
+  border: 0;
+  background: transparent;
+  color: var(--foreground);
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 1.4;
+  outline: none;
+}
+
+.search-modal-input::placeholder {
+  color: var(--muted);
+}
+
+.search-modal-input::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.search-modal-close {
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--panel);
+  color: var(--muted);
+  font-family: inherit;
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  padding: 4px 8px;
+  cursor: pointer;
+}
+
+.search-modal-close:hover,
+.search-modal-close:focus-visible {
+  color: var(--foreground);
+  border-color: color-mix(in srgb, var(--accent) 50%, var(--line));
+  outline: none;
+}
+
+.search-modal-results {
+  overflow-y: auto;
+  padding: 8px;
+  -webkit-overflow-scrolling: touch;
+}
+
+.search-modal-empty {
+  margin: 0;
+  padding: 32px 12px;
+  text-align: center;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.search-modal-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 2px;
+}
+
+.search-modal-hit {
+  display: grid;
+  gap: 6px;
+  padding: 12px 14px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: var(--foreground);
+}
+
+.search-modal-hit.is-active,
+.search-modal-hit:hover,
+.search-modal-hit:focus-visible {
+  background: color-mix(in srgb, var(--accent-soft) 40%, var(--panel));
+  outline: none;
+}
+
+.search-modal-hit-title {
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 1.4;
+  overflow-wrap: anywhere;
+}
+
+.search-modal-hit-excerpt {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.search-modal-hit-excerpt mark {
+  background: color-mix(in srgb, var(--accent) 32%, transparent);
+  color: var(--foreground);
+  padding: 0 2px;
+  border-radius: 2px;
+}
+
+@media (max-width: 760px) {
+  .search-trigger {
+    min-width: 44px;
+    min-height: 44px;
+    padding: 0;
+    justify-content: center;
+  }
+
+  .search-trigger-label,
+  .search-trigger-kbd {
+    display: none;
+  }
+
+  .search-overlay {
+    padding: 0;
+    padding-top: env(safe-area-inset-top);
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+
+  .search-modal {
+    width: 100%;
+    height: 100dvh;
+    max-height: none;
+    border: 0;
+    border-radius: 0;
+  }
+}

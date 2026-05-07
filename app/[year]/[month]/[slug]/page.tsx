@@ -66,7 +66,7 @@ export default async function PostPage({
   const relatedProject = getProjectForPost(post);
 
   return (
-    <article className="article">
+    <article className="article" data-pagefind-body>
       <header className="article-header">
         <p className="eyebrow">
           <time dateTime={rendered.date.toISOString()}>{formatDate(rendered.date)}</time>
