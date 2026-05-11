@@ -80,7 +80,7 @@ function normalizeDate(value: FrontMatter['date'], fallback: Date) {
 }
 
 function postSlugFromFilename(filename: string) {
-  return filename.replace(/^\d{4}-\d{2}-\d{2}-/, '').replace(/\.md$/, '');
+  return filename.replace(/\.md$/, '');
 }
 
 function dateParts(date: Date) {
