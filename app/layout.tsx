@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from 'next';
 import Link from 'next/link';
+import { GoogleAnalytics } from '@next/third-parties/google';
 import { contactLinks } from '@/lib/about';
 import { SearchTrigger } from '@/components/SearchTrigger';
 import './globals.css';
@@ -74,6 +75,7 @@ export default function RootLayout({
             </nav>
           </footer>
         </div>
+        <GoogleAnalytics gaId="G-NVRTGLD8RZ" />
       </body>
     </html>
   );
