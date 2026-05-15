@@ -5,30 +5,30 @@ export function ProjectCard({ project }: { project: Project }) {
   const label = project.type === 'open-source' ? 'Open Source' : 'System';
 
   return (
-    <article className="flex h-full flex-col rounded-lg border border-[var(--line)] bg-gradient-to-b from-[var(--panel-strong)] to-[var(--panel)] p-[18px]">
-      <p className="eyebrow">{label}</p>
-      <h2 className="text-[25px] leading-tight">
+    <article className="flex h-full flex-col border-t border-[var(--line)] py-5">
+      <p className="mb-2 text-sm text-[var(--muted)]">{label}</p>
+      <h2 className="text-[23px] leading-tight">
         <Link className="no-underline" href={project.url}>{project.title}</Link>
       </h2>
       <p className="my-4 text-[var(--muted)]">{project.summary}</p>
-      <dl className="grid gap-3">
-        <div className="border-t border-[var(--line)] pt-3">
-          <dt className="text-xs font-extrabold uppercase tracking-[0.08em] text-[var(--accent)]">Problem</dt>
+      <dl className="grid gap-2.5 text-[15px] leading-relaxed">
+        <div>
+          <dt className="font-semibold text-[var(--foreground)]">문제</dt>
           <dd className="mt-1">{project.problem}</dd>
         </div>
-        <div className="border-t border-[var(--line)] pt-3">
-          <dt className="text-xs font-extrabold uppercase tracking-[0.08em] text-[var(--accent)]">Approach</dt>
+        <div>
+          <dt className="font-semibold text-[var(--foreground)]">접근</dt>
           <dd className="mt-1">{project.solution}</dd>
         </div>
-        <div className="border-t border-[var(--line)] pt-3">
-          <dt className="text-xs font-extrabold uppercase tracking-[0.08em] text-[var(--accent)]">Impact</dt>
+        <div>
+          <dt className="font-semibold text-[var(--foreground)]">결과</dt>
           <dd className="mt-1">{project.impact}</dd>
         </div>
       </dl>
       {project.stack.length > 0 ? (
         <div className="mt-auto flex flex-wrap gap-2 pt-4">
           {project.stack.map((item) => (
-            <span className="inline-flex min-h-7 items-center rounded-full bg-[var(--accent-soft)] px-2.5 py-0.5 text-[13px] text-[var(--accent)]" key={item}>
+            <span className="inline-flex min-h-7 items-center rounded-full border border-[var(--line)] px-2.5 py-0.5 text-[13px] text-[var(--muted)]" key={item}>
               {item}
             </span>
           ))}
