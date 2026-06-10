@@ -94,6 +94,18 @@ function postUrl(year: string, month: string, slug: string) {
   return `/${year}/${month}/${slug}/`;
 }
 
+// 옛 Jekyll 글 상당수가 본문 첫 줄에 front matter 제목과 동일한 H1을 중복으로 갖고 있다.
+// 페이지 헤더가 제목을 이미 렌더링하므로, 제목과 같은 첫 H1만 본문에서 걷어낸다.
+function stripLeadingTitleHeading(content: string, title: string) {
+  const match = content.match(/^#\s+(.+?)\s*(?:\n+|$)/);
+  if (!match) {
+    return content;
+  }
+
+  const normalize = (value: string) => value.replace(/\s+/g, '');
+  return normalize(match[1]) === normalize(title) ? content.slice(match[0].length) : content;
+}
+
 function excerptFrom(content: string) {
   return content
     .replace(/```[\s\S]*?```/g, ' ')
@@ -132,7 +144,7 @@ export function getAllPosts() {
       const { year, month } = dateParts(date);
       const slug = postSlugFromFilename(filename);
       const title = data.title ? String(data.title) : slug;
-      const content = parsed.content.trim();
+      const content = stripLeadingTitleHeading(parsed.content.trim(), title);
 
       return {
         title,

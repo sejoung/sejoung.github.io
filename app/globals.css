@@ -1,6 +1,7 @@
 @import "tailwindcss";
 
 :root {
+  color-scheme: dark;
   --background: #0b0f14;
   --foreground: #e7edf3;
   --muted: #93a1b2;
@@ -11,6 +12,23 @@
   --accent-soft: #172724;
   --code: #070a0f;
   --warning: #e4c46a;
+  --button-primary-text: #06221d;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color-scheme: light;
+    --background: #f7f9fb;
+    --foreground: #1d2733;
+    --muted: #5d6c7d;
+    --line: #d9e1e9;
+    --panel: #ffffff;
+    --panel-strong: #eaeff4;
+    --accent: #2e7c6c;
+    --accent-soft: #ddece8;
+    --warning: #8a6d12;
+    --button-primary-text: #f5faf8;
+  }
 }
 
 * {
@@ -43,7 +61,6 @@ img {
   grid-template-columns: minmax(0, 1fr) 360px;
   gap: 40px;
   align-items: center;
-  min-height: 420px;
   padding-bottom: 44px;
   border-bottom: 1px solid var(--line);
 }
@@ -127,10 +144,30 @@ h2 {
   font-size: 13px;
 }
 
+.post-list-title {
+  margin: 0 0 8px;
+  font-size: 24px;
+  line-height: 1.35;
+}
+
 .meta,
 .taxonomy-count {
   color: var(--muted);
   font-size: 14px;
+}
+
+.main-nav a {
+  text-decoration: none;
+}
+
+.main-nav a:hover,
+.main-nav a:focus-visible {
+  color: var(--foreground);
+}
+
+.main-nav a[aria-current='page'] {
+  color: var(--accent);
+  font-weight: 700;
 }
 
 .taxonomy-link,
@@ -174,7 +211,7 @@ h2 {
 .button.primary {
   border-color: color-mix(in srgb, var(--accent) 65%, var(--line));
   background: var(--accent);
-  color: #06221d;
+  color: var(--button-primary-text);
   font-weight: 800;
 }
 
@@ -889,10 +926,6 @@ h2 {
   .section-heading,
   .tag-group {
     grid-template-columns: 1fr;
-  }
-
-  .hero {
-    min-height: 0;
   }
 
   .section {

@@ -15,7 +15,7 @@ export function PostList({ posts }: { posts: WritingItem[] }) {
             {formatDate(post.date)}
           </time>
           <div>
-            <h2 className="mb-2 text-2xl leading-tight">
+            <h2 className="post-list-title">
               {isExternalWriting(post) ? (
                 <a className="no-underline" href={post.url} rel="noreferrer" target="_blank">
                   {post.title}

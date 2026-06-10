@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from 'next';
 import Link from 'next/link';
 import { GoogleAnalytics } from '@next/third-parties/google';
 import { contactLinks } from '@/lib/about';
+import { HeaderNav } from '@/components/HeaderNav';
 import { SearchTrigger } from '@/components/SearchTrigger';
 import 'pretendard/dist/web/variable/pretendardvariable-dynamic-subset.css';
 import './globals.css';
@@ -9,6 +10,10 @@ import './globals.css';
 export const viewport: Viewport = {
   width: 'device-width',
   initialScale: 1,
+  themeColor: [
+    { media: '(prefers-color-scheme: dark)', color: '#0b0f14' },
+    { media: '(prefers-color-scheme: light)', color: '#f7f9fb' },
+  ],
 };
 
 export const metadata: Metadata = {
@@ -52,15 +57,7 @@ export default function RootLayout({
               <Link className="font-extrabold no-underline" href="/">
                 beni kim · 김세중
               </Link>
-              <nav
-                className="flex gap-4 text-sm text-[var(--muted)] max-[760px]:order-3 max-[760px]:basis-full max-[760px]:flex-wrap"
-                aria-label="Main navigation"
-              >
-                <Link href="/projects/">Projects</Link>
-                <Link href="/writing/">Writing</Link>
-                <Link href="/archives/">Archives</Link>
-                <Link href="/about/">About</Link>
-              </nav>
+              <HeaderNav />
               <SearchTrigger />
             </div>
           </header>
