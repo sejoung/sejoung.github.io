@@ -4,6 +4,8 @@ import { GoogleAnalytics } from '@next/third-parties/google';
 import { contactLinks } from '@/lib/about';
 import { HeaderNav } from '@/components/HeaderNav';
 import { SearchTrigger } from '@/components/SearchTrigger';
+import { ThemeToggle } from '@/components/ThemeToggle';
+import { themeInitScript } from '@/lib/theme';
 import 'pretendard/dist/web/variable/pretendardvariable-dynamic-subset.css';
 import './globals.css';
 
@@ -51,6 +53,7 @@ export default function RootLayout({
   return (
     <html lang="ko">
       <body className="bg-[var(--background)] text-[var(--foreground)]">
+        <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
         <div className="min-h-screen">
           <header className="sticky top-0 z-10 border-b border-[var(--line)] bg-[color-mix(in_srgb,var(--background)_90%,transparent)] backdrop-blur-md">
             <div className="mx-auto flex min-h-16 w-[min(1280px,calc(100%_-_32px))] items-center justify-between gap-5 max-[760px]:flex-wrap max-[760px]:py-3.5">
@@ -58,7 +61,10 @@ export default function RootLayout({
                 beni kim · 김세중
               </Link>
               <HeaderNav />
-              <SearchTrigger />
+              <div className="flex items-center gap-2">
+                <ThemeToggle />
+                <SearchTrigger />
+              </div>
             </div>
           </header>
           <main className="mx-auto w-[min(1280px,calc(100%_-_32px))] py-[52px] pb-[72px]">{children}</main>

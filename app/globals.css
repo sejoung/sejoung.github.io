@@ -15,8 +15,10 @@
   --button-primary-text: #06221d;
 }
 
+/* 시스템이 라이트이고 사용자가 다크를 고정하지 않은 경우.
+   아래 :root[data-theme='light'] 블록과 값이 항상 같아야 한다. */
 @media (prefers-color-scheme: light) {
-  :root {
+  :root:not([data-theme='dark']) {
     color-scheme: light;
     --background: #f7f9fb;
     --foreground: #1d2733;
@@ -29,6 +31,21 @@
     --warning: #8a6d12;
     --button-primary-text: #f5faf8;
   }
+}
+
+/* 사용자가 라이트를 직접 선택한 경우 — 시스템 설정과 무관하게 적용 */
+:root[data-theme='light'] {
+  color-scheme: light;
+  --background: #f7f9fb;
+  --foreground: #1d2733;
+  --muted: #5d6c7d;
+  --line: #d9e1e9;
+  --panel: #ffffff;
+  --panel-strong: #eaeff4;
+  --accent: #2e7c6c;
+  --accent-soft: #ddece8;
+  --warning: #8a6d12;
+  --button-primary-text: #f5faf8;
 }
 
 * {
@@ -954,6 +971,38 @@ h2 {
     border-color 140ms ease,
     color 140ms ease,
     background 140ms ease;
+}
+
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 36px;
+  min-height: 36px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--panel);
+  color: var(--muted);
+  cursor: pointer;
+  transition:
+    border-color 140ms ease,
+    color 140ms ease,
+    background 140ms ease;
+}
+
+.theme-toggle:hover,
+.theme-toggle:focus-visible {
+  border-color: color-mix(in srgb, var(--accent) 55%, var(--line));
+  background: var(--panel-strong);
+  color: var(--foreground);
+  outline: none;
+}
+
+@media (max-width: 760px) {
+  .theme-toggle {
+    min-width: 44px;
+    min-height: 44px;
+  }
 }
 
 .search-trigger:hover,
