@@ -23,11 +23,11 @@ export default function HomePage() {
             오래 남길 만한 작업 기록과 기술 노트를 한곳에 모읍니다.
           </p>
           <div className="hero-actions">
-            <Link className="button primary" href="/projects/">
-              Projects
-            </Link>
-            <Link className="button" href="/writing/">
+            <Link className="button primary" href="/writing/">
               Writing
+            </Link>
+            <Link className="button" href="/projects/">
+              Projects
             </Link>
           </div>
         </div>
@@ -45,6 +45,17 @@ export default function HomePage() {
             <span>Topics</span>
           </Link>
         </div>
+      </section>
+
+      <section className="section">
+        <div className="section-heading">
+          <div>
+            <p className="eyebrow">Writing</p>
+            <h2>최근 작업 노트</h2>
+          </div>
+          <Link href="/writing/">전체 보기</Link>
+        </div>
+        <PostList posts={paginateWriting(writing, 1)} />
       </section>
 
       <section className="section">
@@ -79,17 +90,6 @@ export default function HomePage() {
             </div>
           </div>
         </div>
-      </section>
-
-      <section className="section">
-        <div className="section-heading">
-          <div>
-            <p className="eyebrow">Writing</p>
-            <h2>최근 작업 노트</h2>
-          </div>
-          <Link href="/writing/">전체 보기</Link>
-        </div>
-        <PostList posts={paginateWriting(writing, 1)} />
       </section>
 
       <section className="section approach-grid">
