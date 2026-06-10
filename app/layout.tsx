@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { GoogleAnalytics } from '@next/third-parties/google';
 import { contactLinks } from '@/lib/about';
 import { SearchTrigger } from '@/components/SearchTrigger';
+import 'pretendard/dist/web/variable/pretendardvariable-dynamic-subset.css';
 import './globals.css';
 
 export const viewport: Viewport = {

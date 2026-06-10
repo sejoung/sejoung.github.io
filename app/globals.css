@@ -21,7 +21,7 @@ body {
   margin: 0;
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif;
   line-height: 1.68;
   word-break: keep-all;
   overflow-wrap: break-word;
@@ -52,6 +52,15 @@ img {
   margin: 0 0 10px;
   color: var(--accent);
   font-size: 14px;
+  font-weight: 700;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-weight: 700;
 }
 
@@ -443,6 +452,17 @@ h2 {
   font-size: 20px;
 }
 
+.content h5 {
+  margin: 1.6em 0 0.5em;
+  font-size: 18px;
+}
+
+.content h6 {
+  margin: 1.6em 0 0.5em;
+  font-size: 17px;
+  color: var(--muted);
+}
+
 .content p,
 .content ul,
 .content ol,
@@ -480,7 +500,7 @@ h2 {
 }
 
 .content code {
-  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-family: ui-monospace, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
   font-size: 0.92em;
 }
 
@@ -565,6 +585,7 @@ h2 {
 .content img {
   display: block;
   margin: 1.6em auto;
+  border: 1px solid var(--line);
   border-radius: 8px;
 }
 
