@@ -161,6 +161,35 @@ export function getPostByParams(year: string, month: string, slug: string) {
   return postByPathCache?.get(postKey(year, month, slug));
 }
 
+export function getAdjacentPosts(post: Post) {
+  const posts = getAllPosts();
+  const index = posts.findIndex((item) => item.url === post.url);
+
+  return {
+    newer: index > 0 ? posts[index - 1] : undefined,
+    older: index >= 0 && index < posts.length - 1 ? posts[index + 1] : undefined,
+  };
+}
+
+export function getRelatedPosts(post: Post, limit = 3) {
+  if (post.tags.length === 0) {
+    return [];
+  }
+
+  const tagSet = new Set(post.tags);
+
+  return getAllPosts()
+    .filter((item) => item.url !== post.url)
+    .map((item) => ({
+      post: item,
+      score: item.tags.reduce((count, tag) => count + (tagSet.has(tag) ? 1 : 0), 0),
+    }))
+    .filter((item) => item.score > 0)
+    .sort((a, b) => b.score - a.score || b.post.date.getTime() - a.post.date.getTime())
+    .slice(0, limit)
+    .map((item) => item.post);
+}
+
 export async function renderPost(post: Post): Promise<RenderedPost> {
   return {
     ...post,
