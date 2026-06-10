@@ -38,6 +38,7 @@ jobs:
         uses: actions/upload-pages-artifact@v4
         with:
           path: out
+          retention-days: 1
 
   deploy:
     environment:
