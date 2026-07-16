@@ -36,9 +36,9 @@ export function ProjectCard({ project }: { project: Project }) {
       ) : null}
       {project.repository || project.links.length > 0 ? (
         <div className="mt-3.5 flex flex-wrap gap-3">
-          {project.links.map((link) => (
+          {project.links.map((link, index) => (
             <a
-              className="self-start text-sm text-[var(--accent)] no-underline"
+              className={index === 0 ? 'button primary self-start text-sm' : 'button self-start text-sm'}
               href={link.href}
               key={`${project.slug}-${link.href}`}
               rel={link.external ? 'noreferrer' : undefined}
@@ -48,7 +48,12 @@ export function ProjectCard({ project }: { project: Project }) {
             </a>
           ))}
           {project.repository ? (
-            <a className="self-start text-sm text-[var(--accent)] no-underline" href={project.repository} rel="noreferrer" target="_blank">
+            <a
+              className={project.links.length > 0 ? 'button self-start text-sm' : 'button primary self-start text-sm'}
+              href={project.repository}
+              rel="noreferrer"
+              target="_blank"
+            >
               GitHub
             </a>
           ) : null}
