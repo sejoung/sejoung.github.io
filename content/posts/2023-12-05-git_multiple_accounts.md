@@ -47,6 +47,11 @@ cat ~/.ssh/id_ed25519_beni.pub
 ## ssh config 설정
 
 ```shell
+vi ~/.ssh/config
+```
+
+
+```shell
 
 Host github.com
   HostName github.com
